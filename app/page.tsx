@@ -307,7 +307,7 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* About US section*/}
-              <section className="py-24 bg-[#0B0F1A] text-white">
+              <section className="py-12 bg-[#0B0F1A] text-white">
 
                 <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
 
@@ -648,7 +648,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                       </div>
                 </motion.section>
-                
+
               {/* SLIDING TEXT SECTION */}
               <section className="relative overflow-hidden py-12 bg-[#0B0F1A] border-t border-white/10">
 
