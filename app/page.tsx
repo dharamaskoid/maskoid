@@ -157,7 +157,7 @@ const formatNumber = (num: number, suffix: string) => {
     <main className="bg-[#0B0F1A] text-white">
 
               {/* HERO SECTION */}
-              <section className="relative min-h-[800px] md:min-h-[800px] flex items-center px-6 md:px-12 lg:px-24 py-16 md:py-0">
+              <section className="relative min-h-[800px] flex items-start md:items-center px-6 md:px-12 lg:px-24 pt-32 md:pt-0 pb-16">
 
                 <div className="container mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 
