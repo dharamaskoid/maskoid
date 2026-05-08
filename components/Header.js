@@ -119,34 +119,89 @@ export default function Header() {
       </div>
 
       {/* 🔥 ANIMATED MOBILE MENU */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-black/90 border-t border-white/10 px-6 py-6 space-y-5"
-          >
-            {["Home", "Services", "Projects", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`/${item === "Home" ? "" : item.toLowerCase()}`}
-                className="block text-lg hover:text-[#6EA8FF] transition"
-              >
-                {item}
-              </a>
-            ))}
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
-            <a
-              href="/contact"
-              className="block text-center bg-gradient-to-r from-[#2A4D9B] to-[#6EA8FF] py-3 rounded-full mt-4"
+const [openServices, setOpenServices] = useState(false);
+
+<AnimatePresence>
+  {open && (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden bg-black/90 border-t border-white/10 px-6 py-6 space-y-5"
+    >
+
+      {/* HOME */}
+      <a href="/" className="block text-lg hover:text-[#6EA8FF] transition">
+        Home
+      </a>
+
+      {/* 🔥 SERVICES (DESKTOP STYLE DROPDOWN) */}
+      <div className="relative">
+
+        <button
+          onClick={() => setOpenServices(!openServices)}
+          className="flex justify-between items-center w-full text-lg hover:text-[#6EA8FF] transition"
+        >
+          Services
+          <span className={`transition ${openServices ? "rotate-180" : ""}`}>
+            ▼
+          </span>
+        </button>
+
+        <AnimatePresence>
+          {openServices && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="mt-3 bg-white/5 border border-white/10 rounded-xl shadow-lg"
             >
-              Get Quote
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              {[
+                { name: "Social Media Marketing", link: "/services/social-media-marketing" },
+                { name: "SEO Service", link: "/services/seo-service" },
+                { name: "PPC Service", link: "/services/ppc-service" },
+                { name: "Web Design", link: "/services/web-design" },
+                { name: "Web Development", link: "/services/web-development" },
+              ].map((service, i) => (
+                <a
+                  key={i}
+                  href={service.link}
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition"
+                >
+                  {service.name}
+                </a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+      </div>
+
+      {/* PROJECTS */}
+      <a href="/projects" className="block text-lg hover:text-[#6EA8FF] transition">
+        Projects
+      </a>
+
+      {/* CONTACT */}
+      <a href="/contact" className="block text-lg hover:text-[#6EA8FF] transition">
+        Contact
+      </a>
+
+      {/* CTA */}
+      <a
+        href="/contact"
+        className="block text-center bg-gradient-to-r from-[#2A4D9B] to-[#6EA8FF] py-3 rounded-full mt-4"
+      >
+        Get Quote
+      </a>
+
+    </motion.div>
+  )}
+</AnimatePresence>
     </motion.header>
   );
 }
