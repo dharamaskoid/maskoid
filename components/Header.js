@@ -136,32 +136,16 @@ export default function Header() {
 
             {/* 🔥 SERVICES DROPDOWN */}
             <div>
-            <div className="flex justify-between items-center">
+              <button
+                onClick={() => setOpenServices(!openServices)}
+                className="flex justify-between items-center w-full text-lg hover:text-[#6EA8FF] transition"
+              >
+                Services
+                <span className={`transition ${openServices ? "rotate-180" : ""}`}>
+                  ▼
+                </span>
+              </button>
 
-                {/* 👉 SERVICES PAGE LINK */}
-                <a
-                  href="/services"
-                  className="text-lg hover:text-[#6EA8FF] transition"
-                >
-                  Services
-                </a>
-
-                {/* 👉 DROPDOWN TOGGLE BUTTON */}
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenServices(!openServices);
-                  }}
-                  className="text-white text-xl ml-2"
-                >
-                  <span className={`inline-block transition-transform duration-300 ${openServices ? "rotate-180" : ""}`}>
-                    ▼
-                  </span>
-                </button>
-
-              </div>
-
-              {/* 🔥 DROPDOWN */}
               <AnimatePresence>
                 {openServices && (
                   <motion.div
