@@ -183,7 +183,7 @@ const formatNumber = (num: number, suffix: string) => {
                       transition={{ duration: 0.8 }}
                       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
                     >
-                    <p className="px-5 py-2 rounded-lg hover:cursor-pointer text-sm border transition bg-white/5 text-gray-300 border-white/10 text-blue-400 uppercase tracking-widest text-sm">Growth-Driven Digital Agency</p>
+                    <p className="px-5 py-1 rounded-full hover:cursor-pointer text-sm border transition bg-white/5 text-blue-300 border-blue/10 text-blue-400 uppercase tracking-widest text-sm">Growth-Driven Digital Agency</p>
 
                       We Don’t Just Build Websites{" "}
                       <span className="text-blue-500">
