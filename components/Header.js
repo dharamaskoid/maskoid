@@ -119,6 +119,7 @@ export default function Header() {
       </div>
 
       {/* 🔥 ANIMATED MOBILE MENU */}
+      {/* 🔥 ANIMATED MOBILE MENU */}
       <AnimatePresence>
         {open && (
           <motion.div
