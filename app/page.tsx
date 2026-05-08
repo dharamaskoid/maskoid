@@ -405,7 +405,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                     <motion.span
                       variants={fadeUp}
-                      className="text-blue-400 uppercase text-sm font-medium"
+                      className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-300 uppercase tracking-wider hover:bg-blue-500/20 transition"
                     >
                       About Us
                     </motion.span>
