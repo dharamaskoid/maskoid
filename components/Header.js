@@ -25,7 +25,7 @@ export default function Header() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-xl transition-all duration-300
         ${scrolled 
-          ? "bg-black/70 shadow-lg border-b border-white/10" 
+          ? "bg-black/90 shadow-lg border-b border-white/10" 
           : "bg-black/40 border-b border-white/10"
         }`}
     >
