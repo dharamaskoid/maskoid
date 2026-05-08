@@ -138,6 +138,9 @@ export default function Header() {
             <a href="/" className="block text-lg hover:text-[#6EA8FF] transition">
               Home
             </a>
+            <a href="/about" className="text-lg hover:text-[#6EA8FF] transition">
+                About Us
+            </a>
 
             {/* 🔥 SERVICES DROPDOWN */}
             <div>
@@ -151,12 +154,7 @@ export default function Header() {
                   Services
                 </a>
 
-                <a
-                  href="/about"
-                  className="text-lg hover:text-[#6EA8FF] transition"
-                >
-                  About Us
-                </a>
+
 
                 {/* 👉 DROPDOWN TOGGLE */}
                 <button
