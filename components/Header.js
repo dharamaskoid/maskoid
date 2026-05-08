@@ -72,7 +72,7 @@ export default function Header() {
 
                 {/* 🔥 DROPDOWN (ONLY FOR SERVICES) */}
                 {isServices && (
-                  <div className="absolute left-0 top-full mt-2 w-64 bg-[#0B0F1A] border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+                  <div className="absolute left-0 top-full pt-2 w-64 bg-[#0B0F1A] border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
 
                     <ul className="py-3">
 
