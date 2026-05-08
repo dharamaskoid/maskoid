@@ -119,10 +119,7 @@ export default function Header() {
       </div>
 
       {/* 🔥 ANIMATED MOBILE MENU */}
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
-const [openServices, setOpenServices] = useState(false);
 
 <AnimatePresence>
   {open && (
