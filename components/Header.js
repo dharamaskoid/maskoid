@@ -58,11 +58,15 @@ export default function Header() {
                 {/* MAIN LINK */}
                 <a
                   href={`/${item === "Home" ? "" : item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="relative hover:text-white transition"
+                  className="relative flex items-center gap-1 hover:text-white transition group"
                 >
                   {item}
 
-                  {/* underline */}
+                  {/* 🔥 CLEAN CHEVRON */}
+                  {isServices && (
+                    <span className="ml-1 inline-block w-2 h-2 border-r border-b border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
+                  )}
+
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
                 </a>
 
