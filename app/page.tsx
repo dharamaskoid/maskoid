@@ -343,91 +343,147 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
               {/* About US section*/}
-              <section className="py-24 bg-[#0B0F1A] text-white">
+              const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7 },
+  },
+};
 
-                  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
-                    {/* LEFT IMAGE STACK (UPGRADED PREMIUM LAYOUT) */}
-                    <div className="relative">
+<section className="py-24 bg-[#0B0F1A] text-white">
 
-                      {/* Background Glow */}
-                      <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
+  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
 
-                      <div className="relative grid grid-cols-2 gap-4">
+    {/* LEFT IMAGE STACK */}
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      className="relative"
+    >
 
-                        
+      {/* Background Glow */}
+      <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
 
-                        {/* Small Left Image */}
-                        <img
-                          src="/images/about2.jpg"
-                          className="h-40 w-full object-cover rounded-2xl shadow-lg hover:scale-[1.03] transition"
-                        />
+      <div className="relative grid grid-cols-2 gap-4">
 
-                        {/* Small Right Image */}
-                        <img
-                          src="/images/about3.jpg"
-                          className="h-40 w-full object-cover rounded-2xl shadow-lg hover:scale-[1.03] transition"
-                        />
+        <motion.img
+          src="/images/about2.jpg"
+          className="h-40 w-full object-cover rounded-2xl shadow-lg"
+          whileHover={{ scale: 1.05 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        />
 
-                        {/* Large Image */}
-                        <img
-                          src="/images/about1.jpg"
-                          className="col-span-2 h-72 w-full object-cover rounded-2xl shadow-2xl hover:scale-[1.02] transition"
-                        />
+        <motion.img
+          src="/images/about3.jpg"
+          className="h-40 w-full object-cover rounded-2xl shadow-lg"
+          whileHover={{ scale: 1.05 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        />
 
-                      </div>
+        <motion.img
+          src="/images/about1.jpg"
+          className="col-span-2 h-72 w-full object-cover rounded-2xl shadow-2xl"
+          whileHover={{ scale: 1.03 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        />
 
-                      {/* Floating Badge 
-                      <div className="absolute -bottom-6 -right-6 bg-white text-black px-4 py-2 rounded-xl shadow-lg text-sm font-medium">
-                        🚀 10+ Years Experience
-                      </div>
-                        */}
-                    </div>
+      </div>
 
-                    {/* RIGHT CONTENT */}
-                    <div>
+    </motion.div>
 
-                      <span className="text-blue-400 text-sm font-medium">
-                        About Us
-                      </span>
+    {/* RIGHT CONTENT */}
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={stagger}
+    >
 
-                      <h2 className="text-4xl md:text-5xl font-bold mt-3 leading-tight">
-                        Crafting Digital Experiences That Drive{" "}
-                        <span className="text-blue-500">Growth & Revenue</span>
-                      </h2>
+      <motion.span
+        variants={fadeUp}
+        className="text-blue-400 text-sm font-medium"
+      >
+        About Us
+      </motion.span>
 
-                      <p className="text-gray-400 mt-6 text-lg">
-                        We help businesses build powerful digital systems — websites, SEO, and marketing strategies that turn visitors into paying customers.
-                      </p>
+      <motion.h2
+        variants={fadeUp}
+        className="text-4xl md:text-5xl font-bold mt-3 leading-tight"
+      >
+        Crafting Digital Experiences That Drive{" "}
+        <span className="text-blue-500">Growth & Revenue</span>
+      </motion.h2>
 
-                      {/* POINTS */}
-                      <ul className="mt-8 space-y-3 text-gray-300">
+      <motion.p
+        variants={fadeUp}
+        className="text-gray-400 mt-6 text-lg"
+      >
+        We help businesses build powerful digital systems — websites, SEO, and marketing strategies that turn visitors into paying customers.
+      </motion.p>
 
-                        <li>✔ High-converting website design</li>
-                        <li>✔ SEO & lead generation systems</li>
-                        <li>✔ Performance-focused marketing</li>
-                        <li>✔ Fast delivery & proven ROI</li>
+      {/* POINTS */}
+      <motion.ul
+        variants={stagger}
+        className="mt-8 space-y-3 text-gray-300"
+      >
+        {[
+          "High-converting website design",
+          "SEO & lead generation systems",
+          "Performance-focused marketing",
+          "Fast delivery & proven ROI",
+        ].map((item, i) => (
+          <motion.li key={i} variants={fadeUp}>
+            ✔ {item}
+          </motion.li>
+        ))}
+      </motion.ul>
 
-                      </ul>
+      {/* CTA */}
+      <motion.div
+        variants={fadeUp}
+        className="mt-8 flex gap-4"
+      >
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer rounded-lg"
+        >
+          Work With Us
+        </motion.button>
 
-                      {/* CTA */}
-                      <div className="mt-8 flex gap-4">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 border border-white/20 cursor-pointer rounded-lg hover:bg-white hover:text-black transition"
+        >
+          View Case Studies
+        </motion.button>
+      </motion.div>
 
-                        <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer rounded-lg hover:scale-105 transition">
-                          Work With Us
-                        </button>
+    </motion.div>
 
-                        <button className="px-6 py-3 border border-white/20  cursor-pointer rounded-lg hover:bg-white hover:text-black transition">
-                          View Case Studies
-                        </button>
+  </div>
 
-                      </div>
-
-                    </div>
-
-                  </div>
-
-              </section>
+</section>
 
               {/* ================= Service SECTION ================= */}
                 <motion.section
