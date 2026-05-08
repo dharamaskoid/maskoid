@@ -131,7 +131,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black/90 border-t border-white/10 px-6 py-6 space-y-5"
+            className="bg-black/90 border-t border-white/10 px-6 py-6 space-y-5"
           >
 
             {/* HOME */}
