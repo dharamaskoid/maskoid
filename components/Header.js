@@ -151,6 +151,13 @@ export default function Header() {
                   Services
                 </a>
 
+                <a
+                  href="/about"
+                  className="text-lg hover:text-[#6EA8FF] transition"
+                >
+                  About Us
+                </a>
+
                 {/* 👉 DROPDOWN TOGGLE */}
                 <button
                   onClick={(e) => {
