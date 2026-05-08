@@ -164,9 +164,7 @@ export default function Header() {
                   }}
                   className="text-white text-xl ml-2"
                 >
-                  <span className={`inline-block transition-transform duration-300 ${openServices ? "rotate-180" : ""}`}>
-                    ▼
-                  </span>
+                <span className="ml-2 inline-block w-3 h-3 border-r-2 border-b-2 border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
                 </button>
 
               </div>
