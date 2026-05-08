@@ -84,10 +84,10 @@ type CounterItem = {
 };
 
 const counterData: CounterItem[] = [
-    { value: 120, suffix: "+", label: "Digital Growth Systems Built"},
-    { value: 10, suffix: "+", label: "Years of Performance Marketing Experience"},
-    { value: 300, suffix: "+", label: "High-Converting Campaigns Delivered"},
-    { value: 98, suffix: "%", label: "Rating in your local City Network" },
+    { value: 1000, suffix: "+", label: "Growth Systems Built"},
+    { value: 10, suffix: "+", label: "Years Driving Results"},
+    { value: 300, suffix: "+", label: "Campaigns That Convert"},
+    { value: 98, suffix: "%", label: "Client Retention Rate" },
   ];
 
   
