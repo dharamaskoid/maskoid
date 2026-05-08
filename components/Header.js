@@ -45,19 +45,58 @@ export default function Header() {
         </a>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden md:flex gap-6 lg:gap-8 text-gray-300 text-base md:text-base lg:text-base font-normal">
-          {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item) => (
-            <a
-              key={item}
-              href={`/${item === "Home" ? "" : item.toLowerCase()}`}
-              className="relative group hover:text-white transition"
-            >
-              {item}
+        <nav className="hidden md:flex gap-6 lg:gap-8 text-gray-300 text-base font-normal">
 
-              {/* 🔥 Animated underline */}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          ))}
+          {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item) => {
+
+            const isServices = item === "Services";
+
+            return (
+              <div key={item} className="relative group">
+
+                {/* MAIN LINK */}
+                <a
+                  href={`/${item === "Home" ? "" : item.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="relative hover:text-white transition"
+                >
+                  {item}
+
+                  {/* underline */}
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                {/* 🔥 DROPDOWN (ONLY FOR SERVICES) */}
+                {isServices && (
+                  <div className="absolute left-0 top-full mt-4 w-64 bg-[#0B0F1A] border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+
+                    <ul className="py-3">
+
+                      {[
+                        { name: "Social Media Marketing", link: "/services/social-media-marketing" },
+                        { name: "SEO Service", link: "/services/seo-service" },
+                        { name: "PPC Service", link: "/services/ppc-service" },
+                        { name: "Web Design", link: "/services/web-design" },
+                        { name: "Web Development", link: "/services/web-development" },
+                      ].map((service, i) => (
+                        <li key={i}>
+                          <a
+                            href={service.link}
+                            className="block px-5 py-3 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition"
+                          >
+                            {service.name}
+                          </a>
+                        </li>
+                      ))}
+
+                    </ul>
+
+                  </div>
+                )}
+
+              </div>
+            );
+          })}
+
         </nav>
 
         {/* CTA */}
