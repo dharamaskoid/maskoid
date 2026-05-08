@@ -183,6 +183,8 @@ const formatNumber = (num: number, suffix: string) => {
                       transition={{ duration: 0.8 }}
                       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
                     >
+                    <p className="text-blue-400 uppercase tracking-widest text-sm">Growth-Driven Digital Agency</p>
+
                       We Don’t Just Build Websites{" "}
                       <span className="text-blue-500">
                         We Build Growth Systems
@@ -343,131 +345,129 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
               {/* About US section*/}
+              <section className="py-24 bg-[#0B0F1A] text-white">
 
+                <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
 
-<section className="py-24 bg-[#0B0F1A] text-white">
+                  {/* LEFT IMAGE STACK */}
+                  <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                    className="relative"
+                  >
 
-  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+                    {/* Background Glow */}
+                    <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
 
-    {/* LEFT IMAGE STACK */}
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      variants={fadeUp}
-      className="relative"
-    >
+                    <div className="relative grid grid-cols-2 gap-4">
 
-      {/* Background Glow */}
-      <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
+                      <motion.img
+                        src="/images/about2.jpg"
+                        className="h-40 w-full object-cover rounded-2xl shadow-lg"
+                        whileHover={{ scale: 1.05 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                      />
 
-      <div className="relative grid grid-cols-2 gap-4">
+                      <motion.img
+                        src="/images/about3.jpg"
+                        className="h-40 w-full object-cover rounded-2xl shadow-lg"
+                        whileHover={{ scale: 1.05 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                      />
 
-        <motion.img
-          src="/images/about2.jpg"
-          className="h-40 w-full object-cover rounded-2xl shadow-lg"
-          whileHover={{ scale: 1.05 }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        />
+                      <motion.img
+                        src="/images/about1.jpg"
+                        className="col-span-2 h-72 w-full object-cover rounded-2xl shadow-2xl"
+                        whileHover={{ scale: 1.03 }}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                      />
 
-        <motion.img
-          src="/images/about3.jpg"
-          className="h-40 w-full object-cover rounded-2xl shadow-lg"
-          whileHover={{ scale: 1.05 }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        />
+                    </div>
 
-        <motion.img
-          src="/images/about1.jpg"
-          className="col-span-2 h-72 w-full object-cover rounded-2xl shadow-2xl"
-          whileHover={{ scale: 1.03 }}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        />
+                  </motion.div>
 
-      </div>
+                  {/* RIGHT CONTENT */}
+                  <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    variants={stagger}
+                  >
 
-    </motion.div>
+                    <motion.span
+                      variants={fadeUp}
+                      className="text-blue-400 text-sm font-medium"
+                    >
+                      About Us
+                    </motion.span>
 
-    {/* RIGHT CONTENT */}
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      variants={stagger}
-    >
+                    <motion.h2
+                      variants={fadeUp}
+                      className="text-4xl md:text-5xl font-bold mt-3 leading-tight"
+                    >
+                      Crafting Digital Experiences That Drive{" "}
+                      <span className="text-blue-500">Growth & Revenue</span>
+                    </motion.h2>
 
-      <motion.span
-        variants={fadeUp}
-        className="text-blue-400 text-sm font-medium"
-      >
-        About Us
-      </motion.span>
+                    <motion.p
+                      variants={fadeUp}
+                      className="text-gray-400 mt-6 text-lg"
+                    >
+                      We help businesses build powerful digital systems — websites, SEO, and marketing strategies that turn visitors into paying customers.
+                    </motion.p>
 
-      <motion.h2
-        variants={fadeUp}
-        className="text-4xl md:text-5xl font-bold mt-3 leading-tight"
-      >
-        Crafting Digital Experiences That Drive{" "}
-        <span className="text-blue-500">Growth & Revenue</span>
-      </motion.h2>
+                    {/* POINTS */}
+                    <motion.ul
+                      variants={stagger}
+                      className="mt-8 space-y-3 text-gray-300"
+                    >
+                      {[
+                        "High-converting website design",
+                        "SEO & lead generation systems",
+                        "Performance-focused marketing",
+                        "Fast delivery & proven ROI",
+                      ].map((item, i) => (
+                        <motion.li key={i} variants={fadeUp}>
+                          ✔ {item}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
 
-      <motion.p
-        variants={fadeUp}
-        className="text-gray-400 mt-6 text-lg"
-      >
-        We help businesses build powerful digital systems — websites, SEO, and marketing strategies that turn visitors into paying customers.
-      </motion.p>
+                    {/* CTA */}
+                    <motion.div
+                      variants={fadeUp}
+                      className="mt-8 flex gap-4"
+                    >
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer rounded-lg"
+                      >
+                        Work With Us
+                      </motion.button>
 
-      {/* POINTS */}
-      <motion.ul
-        variants={stagger}
-        className="mt-8 space-y-3 text-gray-300"
-      >
-        {[
-          "High-converting website design",
-          "SEO & lead generation systems",
-          "Performance-focused marketing",
-          "Fast delivery & proven ROI",
-        ].map((item, i) => (
-          <motion.li key={i} variants={fadeUp}>
-            ✔ {item}
-          </motion.li>
-        ))}
-      </motion.ul>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 border border-white/20 cursor-pointer rounded-lg hover:bg-white hover:text-black transition"
+                      >
+                        View Case Studies
+                      </motion.button>
+                    </motion.div>
 
-      {/* CTA */}
-      <motion.div
-        variants={fadeUp}
-        className="mt-8 flex gap-4"
-      >
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer rounded-lg"
-        >
-          Work With Us
-        </motion.button>
+                  </motion.div>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-6 py-3 border border-white/20 cursor-pointer rounded-lg hover:bg-white hover:text-black transition"
-        >
-          View Case Studies
-        </motion.button>
-      </motion.div>
+                </div>
 
-    </motion.div>
-
-  </div>
-
-</section>
+              </section>
 
               {/* ================= Service SECTION ================= */}
                 <motion.section
