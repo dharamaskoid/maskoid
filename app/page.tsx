@@ -304,46 +304,7 @@ const formatNumber = (num: number, suffix: string) => {
                 </div>
               </section>
 
-              {/* SLIDING TEXT SECTION */}
-              <section className="relative overflow-hidden py-12 bg-[#0B0F1A] border-t border-white/10">
 
-                {/* LEFT FADE */}
-                <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0B0F1A] to-transparent z-10"></div>
-
-                {/* RIGHT FADE */}
-                <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0B0F1A] to-transparent z-10"></div>
-
-              <div className="whitespace-nowrap animate-marquee gap-16 text-2xl md:text-4xl font-semibold text-white/80">
-
-                  {[
-                      "Strategy",
-                      "Design",
-                      "Development",
-                      "Marketing",
-                      "Growth",
-                      "Performance"
-                  ]
-                    .concat([
-                      "Strategy",
-                      "Design",
-                      "Development",
-                      "Marketing",
-                      "Growth",
-                      "Performance"
-                      ])
-                    .map((item, i) => (
-                      <div key={i} className="flex items-center gap-6 hover:text-white transition">
-
-                        <span>{item}</span>
-
-                        {/* DOT */}
-                        <span className="w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
-
-                      </div>
-                    ))}
-
-                </div>
-              </section>
 
               {/* About US section*/}
               <section className="py-24 bg-[#0B0F1A] text-white">
@@ -687,7 +648,47 @@ const formatNumber = (num: number, suffix: string) => {
 
                       </div>
                 </motion.section>
+                
+              {/* SLIDING TEXT SECTION */}
+              <section className="relative overflow-hidden py-12 bg-[#0B0F1A] border-t border-white/10">
 
+                {/* LEFT FADE */}
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0B0F1A] to-transparent z-10"></div>
+
+                {/* RIGHT FADE */}
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0B0F1A] to-transparent z-10"></div>
+
+              <div className="whitespace-nowrap animate-marquee gap-16 text-2xl md:text-4xl font-semibold text-white/80">
+
+                  {[
+                      "Strategy",
+                      "Design",
+                      "Development",
+                      "Marketing",
+                      "Growth",
+                      "Performance"
+                  ]
+                    .concat([
+                      "Strategy",
+                      "Design",
+                      "Development",
+                      "Marketing",
+                      "Growth",
+                      "Performance"
+                      ])
+                    .map((item, i) => (
+                      <div key={i} className="flex items-center gap-6 hover:text-white transition">
+
+                        <span>{item}</span>
+
+                        {/* DOT */}
+                        <span className="w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
+
+                      </div>
+                    ))}
+
+                </div>
+              </section>
 
               {/* ================= COUNTER SECTION ================= */}
               <section
