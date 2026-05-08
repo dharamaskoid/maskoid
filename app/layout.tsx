@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Website Name",
+  title: "Maskoid Technologies",
   description: "Your website description",
 };
 
