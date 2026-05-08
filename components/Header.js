@@ -64,15 +64,15 @@ export default function Header() {
 
                   {/* 🔥 CLEAN CHEVRON */}
                   {isServices && (
-  <span className="ml-2 inline-block w-3 h-3 border-r-2 border-b-2 border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
-)}
+                    <span className="ml-2 inline-block w-3 h-3 border-r-2 border-b-2 border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
+                  )}
 
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
                 </a>
 
                 {/* 🔥 DROPDOWN (ONLY FOR SERVICES) */}
                 {isServices && (
-                  <div className="absolute left-0 top-full mt-4 w-64 bg-[#0B0F1A] border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+                  <div className="absolute left-0 top-full mt-2 w-64 bg-[#0B0F1A] border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
 
                     <ul className="py-3">
 
