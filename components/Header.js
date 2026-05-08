@@ -211,7 +211,7 @@ export default function Header() {
             {/* CTA */}
             <a
               href="/contact"
-              className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition text-white shadow-lg"
+              className="block px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition text-white shadow-lg"
             >
               Get Quote
             </a>
