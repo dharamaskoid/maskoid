@@ -305,7 +305,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
               {/* SLIDING TEXT SECTION */}
-              <section className="relative overflow-hidden py-12 bg-[#0B0F1A] border-t border-white/10">
+              <section className="relative overflow-hidden py-12 bg-[#928D87] border-t border-white/10">
 
                 {/* LEFT FADE */}
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0B0F1A] to-transparent z-10"></div>
@@ -346,7 +346,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
               {/* About US section*/}
-              <section className="py-24 bg-[#0B0F1A] text-white">
+              <section className="py-24 bg-[#928D87] text-white">
 
                 <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
 
@@ -692,7 +692,7 @@ const formatNumber = (num: number, suffix: string) => {
               {/* ================= COUNTER SECTION ================= */}
               <section
                   ref={sectionRef}
-                  className="relative py-12 bg-[#0B0F1A] text-white overflow-hidden z-20"
+                  className="relative py-12 bg-[#928D87] text-white overflow-hidden z-20"
                 >
 
                 {/* 🌌 MOVING BACKGROUND ELEMENTS */}
@@ -754,7 +754,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
         
               {/* 🚀 RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
-              <section className="relative py-28 bg-[#0B0F1A] text-white overflow-hidden">
+              <section className="relative py-28 bg-[#928D87] text-white overflow-hidden">
 
               {/* 🌊 BACKGROUND GLOW */}
               <div className="absolute inset-0 pointer-events-none">
@@ -926,7 +926,7 @@ const formatNumber = (num: number, suffix: string) => {
               <BrandMarquee />
 
               {/* contact */}
-              <section className="relative py-28 bg-[#0B0F1A] text-white overflow-hidden">
+              <section className="relative py-28 bg-[#928D87] text-white overflow-hidden">
 
                 {/* 🌊 BACKGROUND GLOW (same as projects section) */}
                 <div className="absolute inset-0 pointer-events-none">
