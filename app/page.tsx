@@ -343,23 +343,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
               {/* About US section*/}
-              const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7 },
-  },
-};
 
-const stagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
 
 <section className="py-24 bg-[#0B0F1A] text-white">
 
