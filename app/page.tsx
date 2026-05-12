@@ -407,130 +407,219 @@ const formatNumber = (num: number, suffix: string) => {
 
                 </div>
               </section>
+
+
               {/* About US section*/}
-              <section className="py-24 bg-[#0B0F1A] text-white">
+{/* ABOUT SECTION */}
+<section className="relative py-28 overflow-hidden bg-[#071120] text-white">
 
-                <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+  {/* BACKGROUND GLOW */}
+  <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-3xl rounded-full"></div>
 
-                  {/* LEFT IMAGE STACK */}
-                  <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                    className="relative"
-                  >
+  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#1e3a8a]/20 blur-3xl rounded-full"></div>
 
-                    {/* Background Glow */}
-                    <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
+  {/* GRID DOTS */}
+  <div className="absolute left-20 top-40 opacity-20">
+    <div className="grid grid-cols-6 gap-3">
+      {[...Array(36)].map((_, i) => (
+        <div
+          key={i}
+          className="w-1.5 h-1.5 rounded-full bg-[#4c74e6]"
+        />
+      ))}
+    </div>
+  </div>
 
-                    <div className="relative grid grid-cols-2 gap-4">
+  <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
 
-                      <motion.img
-                        src="/images/about2.jpg"
-                        className="h-40 w-full object-cover rounded-2xl shadow-lg"
-                        whileHover={{ scale: 1.05 }}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                      />
+    {/* LEFT SIDE */}
+    <motion.div
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className="relative"
+    >
 
-                      <motion.img
-                        src="/images/about3.jpg"
-                        className="h-40 w-full object-cover rounded-2xl shadow-lg"
-                        whileHover={{ scale: 1.05 }}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                      />
+      {/* TOP IMAGES */}
+      <div className="grid grid-cols-2 gap-4 mb-4">
 
-                      <motion.img
-                        src="/images/about1.jpg"
-                        className="col-span-2 h-72 w-full object-cover rounded-2xl shadow-2xl"
-                        whileHover={{ scale: 1.03 }}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                      />
+        <motion.img
+          src="/images/about2.jpg"
+          alt=""
+          className="h-44 w-full object-cover rounded-3xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+          whileHover={{ scale: 1.03 }}
+        />
 
-                    </div>
+        <motion.img
+          src="/images/about3.jpg"
+          alt=""
+          className="h-44 w-full object-cover rounded-3xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+          whileHover={{ scale: 1.03 }}
+        />
 
-                  </motion.div>
+      </div>
 
-                  {/* RIGHT CONTENT */}
-                  <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    variants={stagger}
-                  >
+      {/* MAIN IMAGE */}
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="relative"
+      >
+        <img
+          src="/images/about1.jpg"
+          alt=""
+          className="w-full h-[420px] object-cover rounded-[32px] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
+        />
+      </motion.div>
 
-                    <motion.span
-                      variants={fadeUp}
-                      className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-300 uppercase tracking-wider hover:bg-blue-500/20 transition"
-                    >
-                      About Us
-                    </motion.span>
+      {/* FLOATING CARD */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="absolute bottom-6 -left-6 bg-white rounded-3xl p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] max-w-[250px]"
+      >
 
-                    <motion.h2
-                      variants={fadeUp}
-                      className="text-4xl md:text-5xl font-bold mt-3 leading-tight"
-                    >
-                      Crafting Digital Experiences That Drive{" "}
-                      <span className="text-blue-500">Growth & Revenue</span>
-                    </motion.h2>
+        <div className="flex items-center gap-3">
 
-                    <motion.p
-                      variants={fadeUp}
-                      className="text-gray-400 mt-6 text-lg"
-                    >
-                      We help businesses build powerful digital systems — websites, SEO, and marketing strategies that turn visitors into paying customers.
-                    </motion.p>
+          <div className="w-14 h-14 rounded-2xl bg-[#eef4ff] flex items-center justify-center">
 
-                    {/* POINTS */}
-                    <motion.ul
-                      variants={stagger}
-                      className="mt-8 space-y-3 text-gray-300"
-                    >
-                      {[
-                        "High-converting website design",
-                        "SEO & lead generation systems",
-                        "Performance-focused marketing",
-                        "Fast delivery & proven ROI",
-                      ].map((item, i) => (
-                        <motion.li key={i} variants={fadeUp}>
-                          ✔ {item}
-                        </motion.li>
-                      ))}
-                    </motion.ul>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-7 h-7 text-[#2b4c9a]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 20h5V4H2v16h5m10 0v-6H7v6m10 0H7"
+              />
+            </svg>
 
-                    {/* CTA */}
-                    <motion.div
-                      variants={fadeUp}
-                      className="mt-8 flex gap-4"
-                    >
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer rounded-lg"
-                      >
-                        Work With Us
-                      </motion.button>
+          </div>
 
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 border border-white/20 cursor-pointer rounded-lg hover:bg-white hover:text-black transition"
-                      >
-                        View Case Studies
-                      </motion.button>
-                    </motion.div>
+          <div>
+            <h4 className="text-3xl font-bold text-[#1a2e5e]">
+              1000+
+            </h4>
 
-                  </motion.div>
+            <p className="text-sm font-semibold text-[#42526b]">
+              Projects Completed
+            </p>
+          </div>
 
-                </div>
+        </div>
 
-              </section>
+        <p className="text-[#6b7280] text-sm mt-4 leading-relaxed">
+          Delivering real business growth for brands worldwide.
+        </p>
+
+      </motion.div>
+
+    </motion.div>
+
+    {/* RIGHT SIDE */}
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+    >
+
+      {/* BADGE */}
+      <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
+        About Maskoid
+      </span>
+
+      {/* HEADING */}
+      <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+
+        Crafting Digital Experiences That Drive{" "}
+
+        <span className="text-[#3f6ee8]">
+          Growth & Revenue
+        </span>
+
+      </h2>
+
+      {/* DESCRIPTION */}
+      <p className="mt-6 text-lg leading-relaxed text-[#b7c2d8] max-w-xl">
+        We help healthcare clinics, local businesses, and growing brands build premium websites and marketing systems that drive measurable growth.
+      </p>
+
+      {/* FEATURES */}
+      <div className="mt-10 space-y-5">
+
+        {[
+          {
+            title: "Conversion-Focused Design",
+            desc: "We design websites that turn visitors into paying customers.",
+          },
+          {
+            title: "SEO & Performance Optimized",
+            desc: "Built for speed, search visibility, and long-term growth.",
+          },
+          {
+            title: "Trusted by Growing Businesses",
+            desc: "1000+ businesses trust us to grow their online presence.",
+          },
+          {
+            title: "Designed for Real Business Results",
+            desc: "Our strategies are built to deliver measurable ROI.",
+          },
+        ].map((item, i) => (
+
+          <div
+            key={i}
+            className="flex gap-4 group"
+          >
+
+            {/* ICON */}
+            <div className="w-14 h-14 rounded-2xl bg-[#102347] border border-[#1f3d84] flex items-center justify-center flex-shrink-0 group-hover:bg-[#16356b] transition">
+
+              <div className="w-6 h-6 rounded-full border-2 border-[#6ea8ff]"></div>
+
+            </div>
+
+            {/* CONTENT */}
+            <div>
+
+              <h4 className="text-xl font-semibold text-white">
+                {item.title}
+              </h4>
+
+              <p className="mt-1 text-[#b7c2d8] leading-relaxed">
+                {item.desc}
+              </p>
+
+            </div>
+
+          </div>
+
+        ))}
+
+      </div>
+
+      {/* BUTTONS */}
+      <div className="mt-10 flex flex-wrap gap-4">
+
+        <button className="px-8 py-4 rounded-2xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
+          Work With Us →
+        </button>
+
+        <button className="px-8 py-4 rounded-2xl border border-[#2b4c9a] bg-white/5 hover:bg-white/10 transition-all duration-300 font-semibold">
+          View Case Studies →
+        </button>
+
+      </div>
+
+    </motion.div>
+
+  </div>
+</section>
 
               {/* ================= Service SECTION ================= */}
                 <motion.section
