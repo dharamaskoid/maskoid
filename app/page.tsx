@@ -157,8 +157,11 @@ const formatNumber = (num: number, suffix: string) => {
     <main className="bg-[#0B0F1A] text-white">
 
               {/* HERO SECTION */}
-              <section className="relative min-h-[800px] flex items-start md:items-center px-6 md:px-12 lg:px-24 pt-32 md:pt-0">
+              <section className="relative overflow-hidden min-h-[800px] flex items-start md:items-center px-6 md:px-12 lg:px-24 pt-32 md:pt-0 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef4ff]">
+              {/* BACKGROUND GLOW */}
+              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/10 blur-3xl rounded-full"></div>
 
+              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#6ea8ff]/10 blur-3xl rounded-full"></div>
                 <div className="container mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 
                   {/* LEFT CONTENT */}
