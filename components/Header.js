@@ -117,9 +117,11 @@ export default function Header() {
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-[#2b4c9a] text-2xl"
+          className="md:hidden text-[#1a2e5e] w-11 h-11 flex items-center justify-center rounded-lg border border-[#dbe4ff] bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 hover:bg-[#f5f8ff]"
         >
-          ☰
+          <span className="text-2xl leading-none transition-all duration-300">
+            {open ? "✕" : "☰"}
+          </span>
         </button>
       </div>
 
