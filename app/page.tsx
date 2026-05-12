@@ -878,17 +878,18 @@ const formatNumber = (num: number, suffix: string) => {
               {/* 🌌 MOVING BACKGROUND ELEMENTS */} 
               <div className="absolute inset-0 overflow-hidden pointer-events-none z-0"> 
                 
-              {/* BIG BLUE DRIFT */} 
-              <div className="absolute w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-drift1"></div> 
-              
-              {/* PURPLE DRIFT */} 
-              <div className="absolute w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-3xl animate-drift2"></div> 
-              
-              {/* CYAN SMALL ORBIT */} 
-              <div className="absolute w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-2xl animate-drift3"></div> 
-              
-              {/* DOT GRID MOTION */} 
-              <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle,#3b82f6_1px,transparent_1px)] [background-size:40px_40px] animate-gridMove"></div>
+                {/* BIG BLUE DRIFT */} 
+                <div className="absolute w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-drift1"></div> 
+                
+                {/* PURPLE DRIFT */} 
+                <div className="absolute w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-3xl animate-drift2"></div> 
+                
+                {/* CYAN SMALL ORBIT */} 
+                <div className="absolute w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-2xl animate-drift3"></div> 
+                
+                {/* DOT GRID MOTION */} 
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle,#3b82f6_1px,transparent_1px)] [background-size:40px_40px] animate-gridMove"></div>
+              </div>
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
 
