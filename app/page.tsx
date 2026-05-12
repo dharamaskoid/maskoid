@@ -798,7 +798,7 @@ const formatNumber = (num: number, suffix: string) => {
                                   variants={fadeUp}
                                   whileHover={{ y: -8 }}
                                   transition={{ duration: 0.25 }}
-                                  className="group relative bg-white border border-[#e8ecf5] rounded-2xl p-6 h-full shadow-sm hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)] transition-all duration-300"
+                                  className="group relative bg-white border border-[#e8ecf5] rounded-2xl p-6 min-h-[250px] shadow-sm hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)] transition-all duration-300"
                                 >
 
                                   {/* TOP */}
