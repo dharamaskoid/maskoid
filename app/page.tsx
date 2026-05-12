@@ -900,7 +900,7 @@ const formatNumber = (num: number, suffix: string) => {
                       >
 
                         {/* ICON */}
-                        <div className="w-12 h-12 rounded-2xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] shadow-sm">
+                        <div className="w-16 h-16 rounded-2xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] shadow-sm">
 
                           {item.icon}
 
