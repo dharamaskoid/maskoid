@@ -972,20 +972,26 @@ const formatNumber = (num: number, suffix: string) => {
                 </div>
 
                 {/* 🔥 TABS */}
-                <div className="flex justify-center gap-4 mb-12">
+                 <div className="flex justify-center gap-4 mb-12 flex-wrap">
+
                   {["all", "web", "seo"].map((tab) => (
+
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`px-5 py-2 rounded-lg hover:cursor-pointer text-sm border transition ${
+                      className={`px-5 py-2 rounded-xl text-sm border transition-all duration-300 font-semibold ${
                         activeTab === tab
-                          ? "bg-blue-600 text-white border-blue-500"
-                          : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"
+                          ? "bg-[#2b4c9a] text-white border-[#2b4c9a] shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
+                          : "bg-white text-[#5b6475] border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white"
                       }`}
                     >
+
                       {tab.toUpperCase()}
+
                     </button>
+
                   ))}
+
                 </div>
 
                 {/* GRID */}
