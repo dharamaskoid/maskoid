@@ -449,7 +449,7 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* About US section*/}
-              <section className="relative py-28 overflow-hidden bg-[#071120] text-white">
+              <section className="relative py-28 overflow-hidden bg-[#1a2e5e] text-white">
 
                 {/* BACKGROUND GLOW */}
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-3xl rounded-full"></div>
