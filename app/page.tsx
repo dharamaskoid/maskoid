@@ -1236,7 +1236,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
 
                       {/* FORM CARD */}
-                      <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
 
 
 
