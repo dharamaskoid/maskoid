@@ -263,7 +263,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 rounded-lg cursor-pointer bg-gradient-to-r bg-[#2b4c9a] hover:bg-[#1f3d84] text-white shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
+                        className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-lg cursor-pointer bg-gradient-to-r bg-[#2b4c9a] hover:bg-[#1f3d84] text-white shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
                       >
                         Book Strategy Call
                       </motion.button>
@@ -271,7 +271,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm"
+                        className="inline-flex items-center gap-2 mt-8 px-6 py-3 cursor-pointer rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm"
                       >
                         View Work
                       </motion.button>
