@@ -219,7 +219,7 @@ export default function Footer() {
             <span className="text-gray-300">Email</span>
             <a
                 href="mailto:contact@maskoid.com"
-                className="text-[#FFFFFF]"
+                className="text-[#6EA8FF] hover:text-white"
             >
                 contact@maskoid.com
             </a>
