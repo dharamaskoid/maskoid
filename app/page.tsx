@@ -810,9 +810,9 @@ const formatNumber = (num: number, suffix: string) => {
                                     </div>
 
                                     {/* NUMBER */}
-                                    <span className="text-sm font-bold text-[#2b4c9a]">
+                                    {/*<span className="text-sm font-bold text-[#2b4c9a]">
                                       {item.num}
-                                    </span>
+                                    </span>*/}
 
                                   </div>
 
