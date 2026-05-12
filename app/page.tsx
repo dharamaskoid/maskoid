@@ -184,13 +184,13 @@ const formatNumber = (num: number, suffix: string) => {
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8 }}
-                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-[#1a2e5e]"
                     >
-               <div><p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-300 uppercase tracking-wider hover:bg-blue-500/20 transition">
+               <div><p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-[#dbe4ff] bg-white text-[#2b4c9a] shadow-sm uppercase tracking-wider hover:bg-blue-500/20 transition">
   Growth-Driven Digital Agency
 </p></div>
                       We Don’t Just Build Websites{" "}
-                      <span className="text-blue-500">
+                      <span className="text-[#2b4c9a]">
                         We Build Growth Systems
                       </span>
                     </motion.h1>
@@ -200,7 +200,7 @@ const formatNumber = (num: number, suffix: string) => {
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2, duration: 0.8 }}
-                      className="mt-5 md:mt-6 text-gray-400 text-base md:text-lg"
+                      className="mt-5 md:mt-6 text-slate-600 leading-relaxed text-base md:text-lg"
                     >
                       We design high-performance websites and execute data-driven digital marketing strategies that help businesses attract, engage, and convert more customers.
                     </motion.p>
@@ -216,7 +216,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 rounded-lg cursor-pointer bg-gradient-to-r from-blue-500 to-purple-600"
+                        className="px-6 py-3 rounded-lg cursor-pointer bg-gradient-to-r bg-[#2b4c9a] hover:bg-[#1f3d84] text-white shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
                       >
                         Book Strategy Call
                       </motion.button>
@@ -224,7 +224,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 rounded-lg border cursor-pointer border-gray-500 hover:bg-white hover:text-black transition"
+                        className="px-6 py-3 rounded-lg border cursor-pointer border border-[#dbe4ff] bg-white text-[#1a2e5e] hover:bg-[#f5f8ff] transition"
                       >
                         View Work
                       </motion.button>
