@@ -1196,15 +1196,18 @@ const formatNumber = (num: number, suffix: string) => {
               <BrandMarquee />
 
               {/* contact */}
-              <section className="relative py-32 bg-[#EEF2FF] text-white overflow-hidden">
+              <section className="relative py-32 bg-[#071120] text-white overflow-hidden">
 
-                {/* 🌌 BACKGROUND */}
+                {/* 🌌 PREMIUM BACKGROUND */}
                 <div className="absolute inset-0 pointer-events-none">
 
+                  {/* BLUE GLOW */}
                   <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-[140px] rounded-full"></div>
 
+                  {/* PURPLE GLOW */}
                   <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
 
+                  {/* GRID */}
                   <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
 
                 </div>
@@ -1214,57 +1217,83 @@ const formatNumber = (num: number, suffix: string) => {
                   {/* HEADER */}
                   <div className="text-center max-w-3xl mx-auto mb-20">
 
-                    <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase">
+                    <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
                       Contact Us
                     </p>
 
-                    <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight text-[#0b1b3a]">
+                    <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight">
+
                       Let’s Build Something{" "}
-                      <span className="text-[#4f7cff]">Amazing Together</span>
+
+                      <span className="text-[#6EA8FF]">
+                        Amazing Together
+                      </span>
+
                     </h2>
 
-                    <p className="mt-5 text-[#4b5b78] text-lg">
-                      Have a project in mind? Let’s create a premium digital experience designed for real business growth.
+                    <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
+                      Have a project in mind? Let’s create a premium digital experience
+                      designed to generate real business growth.
                     </p>
 
                   </div>
 
                   {/* MAIN GRID */}
-                  <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
 
                     {/* LEFT SIDE */}
                     <div className="relative">
 
-                      <div className="rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+                      {/* MAIN IMAGE */}
+                      <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
 
                         <img
                           src="/images/contact-main.jpg"
-                          alt="contact"
-                          className="w-full h-[520px] object-cover"
+                          alt=""
+                          className="w-full h-[600px] object-cover"
                         />
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-transparent to-transparent"></div>
+                        {/* DARK OVERLAY */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-[#071120]/30 to-transparent"></div>
 
                       </div>
 
-                      {/* FLOATING CARD (SAFE ON MOBILE) */}
-                      <div className="mt-6 lg:absolute lg:-bottom-10 lg:left-6 lg:right-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6">
+                      {/* FLOATING CARD */}
+                      <div className="absolute -bottom-10 left-6 right-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
 
                         <div className="flex items-center gap-4">
 
+                          {/* ICON */}
                           <div className="w-14 h-14 rounded-2xl bg-[#102347] border border-[#1f3d84] flex items-center justify-center">
-                            <svg className="w-7 h-7 text-[#6EA8FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8m-18 8h18V8H3v8z" />
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="w-7 h-7 text-[#6EA8FF]"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8m-18 8h18V8H3v8z"
+                              />
                             </svg>
+
                           </div>
 
+                          {/* TEXT */}
                           <div>
-                            <h4 className="text-lg font-semibold text-white">
+
+                            <h4 className="text-xl font-semibold text-white">
                               Quick Response Guaranteed
                             </h4>
-                            <p className="text-[#B7C2D8] text-sm">
+
+                            <p className="text-[#B7C2D8] text-sm mt-1">
                               We usually reply within a few hours.
                             </p>
+
                           </div>
 
                         </div>
@@ -1276,22 +1305,23 @@ const formatNumber = (num: number, suffix: string) => {
                     {/* RIGHT SIDE FORM */}
                     <div className="relative">
 
-                      {/* GLOW */}
+                      {/* FORM GLOW */}
                       <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
 
-                      <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl">
+                      {/* FORM CARD */}
+                      <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
 
                         <h3 className="text-3xl font-bold text-white">
                           Start Your Project
                         </h3>
 
                         <p className="mt-3 text-[#B7C2D8]">
-                          Fill out the form and we’ll connect with you soon.
+                          Fill out the form and let’s discuss your next big idea.
                         </p>
 
                         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
 
-                          {/* NAME + EMAIL */}
+                          {/* ROW */}
                           <div className="grid md:grid-cols-2 gap-5">
 
                             <input
@@ -1299,7 +1329,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Your Name"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
                               required
                             />
 
@@ -1308,13 +1338,13 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
                               required
                             />
 
                           </div>
 
-                          {/* PHONE + SUBJECT */}
+                          {/* ROW */}
                           <div className="grid md:grid-cols-2 gap-5">
 
                             <input
@@ -1322,7 +1352,8 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="Phone Number"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
+                              required
                             />
 
                             <input
@@ -1330,7 +1361,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.subject}
                               onChange={handleChange}
                               placeholder="Project Type"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
                             />
 
                           </div>
@@ -1342,7 +1373,7 @@ const formatNumber = (num: number, suffix: string) => {
                             onChange={handleChange}
                             rows={6}
                             placeholder="Tell us about your project..."
-                            className="w-full p-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff] resize-none"
+                            className="w-full p-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition resize-none"
                             required
                           />
 
@@ -1350,7 +1381,7 @@ const formatNumber = (num: number, suffix: string) => {
                           <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-14 rounded-2xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] font-semibold hover:scale-[1.02] transition"
+                            className="w-full h-14 rounded-2xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition-all duration-300 font-semibold shadow-[0_15px_40px_rgba(43,76,154,0.35)]"
                           >
                             {loading ? "Sending..." : "Send Message →"}
                           </button>
@@ -1365,8 +1396,9 @@ const formatNumber = (num: number, suffix: string) => {
 
                 </div>
 
-              </section>
-    </main>
+              </section>    
+
+</main>
   );
 }
 
