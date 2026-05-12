@@ -946,62 +946,80 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
         
               {/* 🚀 RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
-              <section className="relative py-28 bg-[#EEF2FF] text-white overflow-hidden">
+              <section className="relative py-28 bg-[#EEF2FF] overflow-hidden">
 
-              {/* 🌊 BACKGROUND GLOW */}
+              {/* 🌊 PREMIUM BACKGROUND */}
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
-                <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
+
+                {/* TOP LEFT GLOW */}
+                <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/10 blur-3xl rounded-full"></div>
+
+                {/* BOTTOM RIGHT GLOW */}
+                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#6ea8ff]/10 blur-3xl rounded-full"></div>
+
+                {/* GRID PATTERN */}
+                <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#2b4c9a_1px,transparent_1px)] [background-size:32px_32px]"></div>
+
               </div>
 
-              <div className="max-w-6xl mx-auto px-6">
+              <div className="max-w-6xl mx-auto px-6 relative z-10">
 
                 {/* HEADER */}
                 <div className="text-center mb-10">
-                  <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-300 uppercase tracking-wider hover:bg-blue-500/20 transition">
+
+                  <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-semibold border border-[#2b4c9a]/10 bg-[#2b4c9a]/5 text-[#2b4c9a] uppercase tracking-[0.2em]">
                     Recent Work
                   </p>
 
-                  <h2 className="text-4xl font-bold mt-3">
-                    Latest Completed <span className="text-blue-500">Projects</span>
+                  <h2 className="text-4xl font-bold mt-4 text-[#111827]">
+                    Latest Completed{" "}
+                    <span className="text-[#2b4c9a]">
+                      Projects
+                    </span>
                   </h2>
 
-                  <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+                  <p className="text-[#5b6475] mt-4 max-w-2xl mx-auto leading-relaxed">
                     We design and develop high-performance websites and marketing systems.
                   </p>
+
                 </div>
 
                 {/* 🔥 TABS */}
-                <div className="flex justify-center gap-4 mb-12">
+                <div className="flex justify-center gap-4 mb-12 flex-wrap">
+
                   {["all", "web", "seo"].map((tab) => (
+
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`px-5 py-2 rounded-lg hover:cursor-pointer text-sm border transition ${
+                      className={`px-5 py-2 rounded-xl text-sm border transition-all duration-300 font-semibold ${
                         activeTab === tab
-                          ? "bg-blue-600 text-white border-blue-500"
-                          : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"
+                          ? "bg-[#2b4c9a] text-white border-[#2b4c9a] shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
+                          : "bg-white text-[#5b6475] border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white"
                       }`}
                     >
+
                       {tab.toUpperCase()}
+
                     </button>
+
                   ))}
+
                 </div>
 
-                {/* GRID */}
-                {/* SLIDER WRAPPER */}
+                {/* SLIDER */}
                 <div className="relative">
 
-                  {/* CUSTOM NAVIGATION */}
+                  {/* NAVIGATION */}
                   <div className="absolute -top-20 right-0 flex gap-3 z-20">
 
-                    <button className="projects-prev w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#2b4c9a] transition flex items-center justify-center">
+                    <button className="projects-prev w-11 h-11 rounded-xl bg-white border border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a] shadow-sm">
 
                       <ChevronLeft size={20} />
 
                     </button>
 
-                    <button className="projects-next w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#2b4c9a] transition flex items-center justify-center">
+                    <button className="projects-next w-11 h-11 rounded-xl bg-white border border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a] shadow-sm">
 
                       <ChevronRight size={20} />
 
@@ -1039,36 +1057,38 @@ const formatNumber = (num: number, suffix: string) => {
                         <a
                           href="https://caterspoonmumbai.com/"
                           rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+                          className="group relative rounded-3xl overflow-hidden transition-all duration-500 block bg-white border border-[#dbe4ff] shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:shadow-[0_25px_60px_rgba(43,76,154,0.16)] hover:-translate-y-2"
                         >
 
-                          <div className="relative h-[320px] flex items-center justify-center">
+                          <div className="relative h-[320px] flex items-center justify-center bg-gradient-to-b from-[#f8fbff] to-[#eef2ff]">
 
                             <img
                               src="/images/caterspoon-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
                             />
 
                             <img
                               src="/images/caterspoon-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] transition-all duration-500 group-hover:scale-105"
                             />
 
                             <img
                               src="/images/caterspoon-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
                             />
 
                           </div>
 
                           <div className="p-6 text-center">
-                            <h3 className="text-xl font-semibold">
+
+                            <h3 className="text-xl font-bold text-[#111827]">
                               Cater Spoon Mumbai
                             </h3>
 
-                            <p className="text-gray-400 text-sm mt-2">
+                            <p className="text-[#5b6475] text-sm mt-2 leading-relaxed">
                               Luxury catering website with premium UI & SEO system.
                             </p>
+
                           </div>
 
                         </a>
@@ -1083,36 +1103,38 @@ const formatNumber = (num: number, suffix: string) => {
                         <a
                           href="https://pakhtoons.development-site.maskoid.net/"
                           rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+                          className="group relative rounded-3xl overflow-hidden transition-all duration-500 block bg-white border border-[#dbe4ff] shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:shadow-[0_25px_60px_rgba(43,76,154,0.16)] hover:-translate-y-2"
                         >
 
-                          <div className="relative h-[320px] flex items-center justify-center">
+                          <div className="relative h-[320px] flex items-center justify-center bg-gradient-to-b from-[#f8fbff] to-[#eef2ff]">
 
                             <img
                               src="/images/pakhtoons-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
                             />
 
                             <img
                               src="/images/pakhtoons-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] transition-all duration-500 group-hover:scale-105"
                             />
 
                             <img
                               src="/images/pakhtoons-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
                             />
 
                           </div>
 
                           <div className="p-6 text-center">
-                            <h3 className="text-xl font-semibold">
+
+                            <h3 className="text-xl font-bold text-[#111827]">
                               Pakhtoons
                             </h3>
 
-                            <p className="text-gray-400 text-sm mt-2">
+                            <p className="text-[#5b6475] text-sm mt-2 leading-relaxed">
                               SEO optimized business website with performance focus.
                             </p>
+
                           </div>
 
                         </a>
@@ -1127,36 +1149,38 @@ const formatNumber = (num: number, suffix: string) => {
                         <a
                           href="https://vayoraa.in/"
                           rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+                          className="group relative rounded-3xl overflow-hidden transition-all duration-500 block bg-white border border-[#dbe4ff] shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:shadow-[0_25px_60px_rgba(43,76,154,0.16)] hover:-translate-y-2"
                         >
 
-                          <div className="relative h-[320px] flex items-center justify-center">
+                          <div className="relative h-[320px] flex items-center justify-center bg-gradient-to-b from-[#f8fbff] to-[#eef2ff]">
 
                             <img
                               src="/images/Vayoraa-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
                             />
 
                             <img
                               src="/images/Vayoraa-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] transition-all duration-500 group-hover:scale-105"
                             />
 
                             <img
                               src="/images/Vayoraa-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-[#dbe4ff] opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
                             />
 
                           </div>
 
                           <div className="p-6 text-center">
-                            <h3 className="text-xl font-semibold">
+
+                            <h3 className="text-xl font-bold text-[#111827]">
                               Vayoraa
                             </h3>
 
-                            <p className="text-gray-400 text-sm mt-2">
+                            <p className="text-[#5b6475] text-sm mt-2 leading-relaxed">
                               Conversion-focused modern website with branding & SEO.
                             </p>
+
                           </div>
 
                         </a>
@@ -1167,20 +1191,26 @@ const formatNumber = (num: number, suffix: string) => {
                   </Swiper>
 
                 </div>
+
+                {/* BUTTON */}
+                <div className="text-center mt-14">
+
+                  <a
+                    href="/projects"
+                    className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-[#2b4c9a] text-white hover:bg-[#1f3d84] transition-all duration-300 shadow-[0_10px_40px_rgba(43,76,154,0.25)] font-semibold"
+                  >
+
+                    View More Projects
+
+                    <span className="text-lg">→</span>
+
+                  </a>
+
+                </div>
+
               </div>
-              <div className="text-center mt-14">
 
-                <a
-                  href="/projects"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 border border-white/10 text-white hover:bg-white/10 transition duration-300"
-                >
-                  View More Projects
-                  <span className="text-lg">→</span>
-                </a>
-
-              </div>
-              </section>
-
+            </section>
               {/* Testimonial */}
               <Testimonials />
 
