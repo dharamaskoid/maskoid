@@ -1238,13 +1238,7 @@ const formatNumber = (num: number, suffix: string) => {
                       {/* FORM CARD */}
                       <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
 
-                        <h3 className="text-3xl font-bold text-white">
-                          Start Your Project
-                        </h3>
 
-                        <p className="mt-3 text-[#B7C2D8]">
-                          Fill out the form and let’s discuss your next big idea.
-                        </p>
 
                         {/* FORM */}
                         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
