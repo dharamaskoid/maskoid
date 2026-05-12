@@ -679,7 +679,7 @@ const formatNumber = (num: number, suffix: string) => {
                         Work With Us →
                       </button>
 
-                      <button className="px-8 py-4 rounded-2xl border border-[#2b4c9a] bg-white/5 hover:bg-white/10 transition-all duration-300 font-semibold">
+                      <button className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm">
                         View Case Studies →
                       </button>
 
@@ -727,7 +727,7 @@ const formatNumber = (num: number, suffix: string) => {
                       </div>
 
                     </div>
-                      <div className="max-w-6xl mx-auto">
+                      <div className="max-w-6xl mx-auto px-6">
 
                         {/* ROW 1 - TITLE LEFT + CONTENT RIGHT */}
 
