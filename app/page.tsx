@@ -22,8 +22,11 @@ import {
   Search,
   Megaphone,
   Code2,
+  BriefcaseBusiness,
+  Wrench,
 } from "lucide-react";
 
+import type { ReactNode } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -98,14 +101,36 @@ type CounterItem = {
   value: number;
   suffix: string;
   label: string;
+  icon: ReactNode;
 };
 
 const counterData: CounterItem[] = [
-    { value: 1000, suffix: "+", label: "Growth Systems Built"},
-    { value: 10, suffix: "+", label: "Years Driving Results"},
-    { value: 300, suffix: "+", label: "Campaigns That Convert"},
-    { value: 98, suffix: "%", label: "Client Retention Rate" },
-  ];
+
+  {
+    value: 1000,
+    suffix: "+",
+    label: "Growth Systems Built",
+    icon: <BriefcaseBusiness size={22} strokeWidth={2} />,
+  },
+  {
+    value: 10,
+    suffix: "+",
+    label: "Years Driving Results",
+    icon: <Megaphone size={22} strokeWidth={2} />,
+  },
+  {
+    value: 300,
+    suffix: "+",
+    label: "Campaigns That Convert",
+    icon: <Users size={22} strokeWidth={2} />,
+  },
+  {
+    value: 98,
+    suffix: "%",
+    label: "Client Retention Rate",
+    icon: <BadgeCheck size={22} strokeWidth={2} />,
+  },
+];
 
   
 
@@ -846,59 +871,63 @@ const formatNumber = (num: number, suffix: string) => {
 
               {/* ================= COUNTER SECTION ================= */}
               <section
-                  ref={sectionRef}
-                  className="relative py-12 bg-[#0B0F1A] text-white overflow-hidden z-20"
-                >
+                ref={sectionRef}
+                className="relative py-10 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]"
+              >
 
-                {/* 🌌 MOVING BACKGROUND ELEMENTS */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-
-                  {/* BIG BLUE DRIFT */}
-                  <div className="absolute w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-drift1"></div>
-
-                  {/* PURPLE DRIFT */}
-                  <div className="absolute w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-3xl animate-drift2"></div>
-
-                  {/* CYAN SMALL ORBIT */}
-                  <div className="absolute w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-2xl animate-drift3"></div>
-
-                  {/* DOT GRID MOTION */}
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle,#3b82f6_1px,transparent_1px)] [background-size:40px_40px] animate-gridMove"></div>
-
+                {/* BACKGROUND DOTS */}
+                <div className="absolute left-0 top-0 h-full w-40 opacity-40">
+                  <div className="grid grid-cols-6 gap-2 p-6">
+                    {[...Array(36)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="w-1.5 h-1.5 rounded-full bg-[#2b4c9a]/40"
+                      />
+                    ))}
+                  </div>
                 </div>
 
-                <div className="max-w-6xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                  <div className="grid md:grid-cols-4 grid-cols-2 gap-10">
+                  <div className="grid md:grid-cols-4 grid-cols-2">
 
                     {counterData.map((item, i) => (
                       <div
                         key={i}
-                        className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg hover:border-blue-500 transition"
+                        className={`relative flex items-center gap-4 px-6 py-4
+                        ${i !== counterData.length - 1 ? "md:border-r border-[#dbe7ff]" : ""}
+                        `}
                       >
 
-                      
+                        {/* ICON */}
+                        <div className="w-12 h-12 rounded-2xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] shadow-sm">
 
-                        {/* 🔥 NUMBER */}
-                        <div className="text-6xl font-bold tracking-tight flex items-center justify-center items-end gap-1">
-                          <span>
-                            {formatNumber(counts[i], item.suffix)}
-                          </span>
-                          <span className="text-6xl text-white-400 text-center">
-                            {item.suffix}
-                          </span>
+                          {item.icon}
+
                         </div>
 
-                        {/* 🔥 LABEL */}
-                        <p className="text-sm text-gray-400 mt-3 uppercase tracking-wide text-center">
-                          {item.label}
-                        </p>
+                        {/* CONTENT */}
+                        <div>
 
-                        {/* 🔥 PROGRESS LINE */}
-                        <div className="absolute left-0 bottom-0 h-[3px] w-0 bg-blue-500 group-hover:w-full transition-all duration-700"></div>
+                          {/* NUMBER */}
+                          <div className="flex items-end gap-1 leading-none">
 
-                        {/* 🔥 GLOW EFFECT */}
-                        <div className="absolute inset-0 rounded-2xl bg-blue-500/0 group-hover:bg-blue-500/10 blur-xl transition"></div>
+                            <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a]">
+                              {formatNumber(counts[i], item.suffix)}
+                            </span>
+
+                            <span className="text-2xl font-bold text-[#2b4c9a]">
+                              {item.suffix}
+                            </span>
+
+                          </div>
+
+                          {/* LABEL */}
+                          <p className="mt-1 text-sm text-[#6b7280] font-medium">
+                            {item.label}
+                          </p>
+
+                        </div>
 
                       </div>
                     ))}
@@ -906,6 +935,7 @@ const formatNumber = (num: number, suffix: string) => {
                   </div>
 
                 </div>
+
               </section>
         
               {/* 🚀 RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
