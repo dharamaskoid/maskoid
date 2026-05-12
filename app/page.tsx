@@ -110,25 +110,25 @@ const counterData: CounterItem[] = [
     value: 1000,
     suffix: "+",
     label: "Growth Systems Built",
-    icon: <BriefcaseBusiness size={22} strokeWidth={2} />,
+    icon: <BriefcaseBusiness size={26} strokeWidth={2} />,
   },
   {
     value: 10,
     suffix: "+",
     label: "Years Driving Results",
-    icon: <Megaphone size={22} strokeWidth={2} />,
+    icon: <Megaphone size={26} strokeWidth={2} />,
   },
   {
     value: 300,
     suffix: "+",
     label: "Campaigns That Convert",
-    icon: <Users size={22} strokeWidth={2} />,
+    icon: <Users size={26} strokeWidth={2} />,
   },
   {
     value: 98,
     suffix: "%",
     label: "Client Retention Rate",
-    icon: <BadgeCheck size={22} strokeWidth={2} />,
+    icon: <BadgeCheck size={26} strokeWidth={2} />,
   },
 ];
 
