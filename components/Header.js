@@ -190,7 +190,7 @@ export default function Header() {
                       <a
                         key={i}
                         href={service.link}
-                        className="block text-base text-[#6EA8FF] hover:text-white transition"
+                        className="block text-base text-[#1a2e5e] hover:text-[#1a2e5e] transition"
                       >
                         {service.name}
                       </a>
