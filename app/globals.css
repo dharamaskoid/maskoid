@@ -149,3 +149,15 @@ body {
 .animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
+
+
+/*Footer animation*/
+@keyframes slowFloat {
+  0% { transform: translateY(0px); opacity: 0.4; }
+  50% { transform: translateY(20px); opacity: 0.7; }
+  100% { transform: translateY(0px); opacity: 0.4; }
+}
+
+.animate-slowFloat {
+  animation: slowFloat 8s ease-in-out infinite;
+}
