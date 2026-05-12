@@ -896,7 +896,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                  <div className="grid md:grid-cols-4 grid-cols-2">
+                  <div className="grid md:grid-cols-4 grid-cols-1">
 
                     {counterData.map((item, i) => (
                       <div
@@ -1175,7 +1175,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                 </div>
               </div>
-              <div className="text-center mt-14">
+              <div className="text-center">
 
                 <a
                   href="/projects"
