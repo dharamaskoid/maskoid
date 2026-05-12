@@ -589,7 +589,7 @@ const formatNumber = (num: number, suffix: string) => {
                   >
 
                     {/* BADGE */}
-                    <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
+                    <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase">
                       About Maskoid
                     </span>
 
@@ -727,7 +727,7 @@ const formatNumber = (num: number, suffix: string) => {
                       </div>
 
                     </div>
-                      <div className="max-w-6xl mx-auto px-6">
+                      <div className="max-w-6xl mx-auto">
 
                         {/* ROW 1 - TITLE LEFT + CONTENT RIGHT */}
 
@@ -945,10 +945,10 @@ const formatNumber = (num: number, suffix: string) => {
 
               </section>
         
-              {/* 🚀 RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
+              {/*  RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
               <section className="relative py-28 bg-[#EEF2FF] text-white overflow-hidden">
 
-              {/* 🌊 BACKGROUND GLOW */}
+              {/*  BACKGROUND GLOW */}
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
                 <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
