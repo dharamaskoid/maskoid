@@ -23,20 +23,11 @@ export default function Footer() {
       {/* 🌌 GRADIENT TOP BORDER */}
       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#2A4D9B] to-transparent"></div>
 
-
-        {/* 🌌 BACKGROUND */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
-          {/* LEFT SIDE ANIMATED LIGHT */}
-          <div className="absolute left-0 top-0 h-full w-[40%] bg-gradient-to-r from-[#2b4c9a]/20 via-[#4f7cff]/10 to-transparent blur-3xl animate-pulse"></div>
-
-          {/* RIGHT DARK GLOW (optional balance) */}
-          <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-purple-500/10 blur-[140px] rounded-full"></div>
-
-          {/* GRID */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
-
-        </div>
+      {/* 🌊 BACKGROUND GLOW */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-24 left-10 w-80 h-80 bg-[#2A4D9B]/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-0 right-10 w-80 h-80 bg-[#6EA8FF]/20 blur-3xl rounded-full"></div>
+      </div>
 
       {/* ✨ GLASS CONTAINER */}
       <motion.div
