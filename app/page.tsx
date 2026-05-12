@@ -13,6 +13,8 @@ import {
   Target,
   Rocket,
   LineChart,
+  ShieldCheck,
+  BadgeCheck,
 } from "lucide-react";
 
 
@@ -465,11 +467,13 @@ const formatNumber = (num: number, suffix: string) => {
         whileHover={{ scale: 1.02 }}
         className="relative"
       >
+
         <img
           src="/images/about1.jpg"
           alt=""
           className="w-full h-[420px] object-cover rounded-[32px] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
         />
+
       </motion.div>
 
       {/* FLOATING CARD */}
@@ -477,6 +481,7 @@ const formatNumber = (num: number, suffix: string) => {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
+        viewport={{ once: true }}
         className="absolute bottom-6 -left-6 bg-white rounded-3xl p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] max-w-[250px]"
       >
 
@@ -502,6 +507,7 @@ const formatNumber = (num: number, suffix: string) => {
           </div>
 
           <div>
+
             <h4 className="text-3xl font-bold text-[#1a2e5e]">
               1000+
             </h4>
@@ -509,6 +515,7 @@ const formatNumber = (num: number, suffix: string) => {
             <p className="text-sm font-semibold text-[#42526b]">
               Projects Completed
             </p>
+
           </div>
 
         </div>
@@ -555,32 +562,42 @@ const formatNumber = (num: number, suffix: string) => {
 
         {[
           {
+            icon: <ShieldCheck size={24} strokeWidth={2} />,
             title: "Conversion-Focused Design",
             desc: "We design websites that turn visitors into paying customers.",
           },
           {
+            icon: <BarChart3 size={24} strokeWidth={2} />,
             title: "SEO & Performance Optimized",
             desc: "Built for speed, search visibility, and long-term growth.",
           },
           {
+            icon: <BadgeCheck size={24} strokeWidth={2} />,
             title: "Trusted by Growing Businesses",
             desc: "1000+ businesses trust us to grow their online presence.",
           },
           {
+            icon: <Target size={24} strokeWidth={2} />,
             title: "Designed for Real Business Results",
             desc: "Our strategies are built to deliver measurable ROI.",
           },
         ].map((item, i) => (
 
-          <div
+          <motion.div
             key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+            viewport={{ once: true }}
             className="flex gap-4 group"
           >
 
             {/* ICON */}
-            <div className="w-14 h-14 rounded-2xl bg-[#102347] border border-[#1f3d84] flex items-center justify-center flex-shrink-0 group-hover:bg-[#16356b] transition">
+            <div className="w-14 h-14 rounded-2xl bg-[#102347] border border-[#1f3d84] flex items-center justify-center flex-shrink-0 group-hover:bg-[#16356b] transition-all duration-300">
 
-              <div className="w-6 h-6 rounded-full border-2 border-[#6ea8ff]"></div>
+              <div className="text-[#6ea8ff]">
+                {item.icon}
+              </div>
 
             </div>
 
@@ -597,7 +614,7 @@ const formatNumber = (num: number, suffix: string) => {
 
             </div>
 
-          </div>
+          </motion.div>
 
         ))}
 
@@ -619,6 +636,7 @@ const formatNumber = (num: number, suffix: string) => {
     </motion.div>
 
   </div>
+
 </section>
 
               {/* ================= Service SECTION ================= */}
