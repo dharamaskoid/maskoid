@@ -946,7 +946,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
         
               {/* 🚀 RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
-              <section className="relative py-28 bg-[#0B0F1A] text-white overflow-hidden">
+              <section className="relative py-28 bg-[#EEF2FF] text-white overflow-hidden">
 
               {/* 🌊 BACKGROUND GLOW */}
               <div className="absolute inset-0 pointer-events-none">
