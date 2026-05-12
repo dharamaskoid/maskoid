@@ -6,6 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Testimonials from "@/components/Testimonials";
 import BrandMarquee from "@/components/TrustSection";
+import {
+  Monitor,
+  BarChart3,
+  Users,
+  Target,
+  Rocket,
+  LineChart,
+} from "lucide-react";
 
 
 const fadeUp = {
@@ -308,91 +316,97 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
              {/* PREMIUM MARQUEE SECTION */}
-            <section className="relative overflow-hidden py-10 bg-gradient-to-r from-[#f8fbff] via-white to-[#eef4ff] border-y border-[#e5ecff]">
 
-              {/* LEFT FADE */}
-              <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f8fbff] to-transparent z-10"></div>
+              <section className="relative overflow-hidden py-5 bg-white border-y border-[#e5ecff]">
 
-              {/* RIGHT FADE */}
-              <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#f8fbff] to-transparent z-10"></div>
+                {/* LEFT FADE */}
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
 
-              {/* MARQUEE */}
-              <div className="flex whitespace-nowrap animate-marquee gap-6">
+                {/* RIGHT FADE */}
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
 
-                {[
-                  {
-                    icon: "🚀",
-                    text: "Growth-Focused Strategy",
-                  },
-                  {
-                    icon: "🎯",
-                    text: "Conversion Optimization",
-                  },
-                  {
-                    icon: "💻",
-                    text: "Premium Web Design",
-                  },
-                  {
-                    icon: "📈",
-                    text: "SEO & Lead Generation",
-                  },
-                  {
-                    icon: "⚡",
-                    text: "Performance Marketing",
-                  },
-                  {
-                    icon: "🏆",
-                    text: "Trusted Business Growth",
-                  },
-                ]
-                  .concat([
+                {/* MARQUEE */}
+                <div className="flex items-center whitespace-nowrap animate-marquee gap-10">
+
+                  {[
                     {
-                      icon: "🚀",
-                      text: "Growth-Focused Strategy",
+                      icon: <Monitor size={22} strokeWidth={2} />,
+                      text: "Web Design",
                     },
                     {
-                      icon: "🎯",
-                      text: "Conversion Optimization",
+                      icon: <BarChart3 size={22} strokeWidth={2} />,
+                      text: "SEO Growth",
                     },
                     {
-                      icon: "💻",
-                      text: "Premium Web Design",
+                      icon: <Users size={22} strokeWidth={2} />,
+                      text: "Lead Generation",
                     },
                     {
-                      icon: "📈",
-                      text: "SEO & Lead Generation",
+                      icon: <Target size={22} strokeWidth={2} />,
+                      text: "Conversion Design",
                     },
                     {
-                      icon: "⚡",
+                      icon: <Rocket size={22} strokeWidth={2} />,
                       text: "Performance Marketing",
                     },
                     {
-                      icon: "🏆",
-                      text: "Trusted Business Growth",
+                      icon: <LineChart size={22} strokeWidth={2} />,
+                      text: "Analytics & Reporting",
                     },
-                  ])
-                  .map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white border border-[#e5ecff] shadow-[0_10px_30px_rgba(43,76,154,0.08)] hover:-translate-y-1 transition-all duration-300"
-                    >
+                  ]
+                    .concat([
+                      {
+                        icon: <Monitor size={22} strokeWidth={2} />,
+                        text: "Web Design",
+                      },
+                      {
+                        icon: <BarChart3 size={22} strokeWidth={2} />,
+                        text: "SEO Growth",
+                      },
+                      {
+                        icon: <Users size={22} strokeWidth={2} />,
+                        text: "Lead Generation",
+                      },
+                      {
+                        icon: <Target size={22} strokeWidth={2} />,
+                        text: "Conversion Design",
+                      },
+                      {
+                        icon: <Rocket size={22} strokeWidth={2} />,
+                        text: "Performance Marketing",
+                      },
+                      {
+                        icon: <LineChart size={22} strokeWidth={2} />,
+                        text: "Analytics & Reporting",
+                      },
+                    ])
+                    .map((item, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-10"
+                      >
 
-                      {/* ICON */}
-                      <div className="w-10 h-10 rounded-full bg-[#f3f7ff] flex items-center justify-center text-lg">
-                        {item.icon}
+                        {/* ITEM */}
+                        <div className="flex items-center gap-3">
+
+                          <div className="text-[#4c74e6]">
+                            {item.icon}
+                          </div>
+
+                          <span className="text-[#1a2e5e] text-sm md:text-base font-semibold">
+                            {item.text}
+                          </span>
+
+                        </div>
+
+                        {/* SEPARATOR */}
+                        <div className="w-px h-6 bg-[#dbe4ff]"></div>
+
                       </div>
+                    ))}
 
-                      {/* TEXT */}
-                      <span className="text-[#1a2e5e] text-base md:text-lg font-semibold tracking-wide">
-                        {item.text}
-                      </span>
-
-                    </div>
-                  ))}
-
-              </div>
-</section>
-
+                </div>
+              </section>
               {/* About US section*/}
               <section className="py-24 bg-[#0B0F1A] text-white">
 
