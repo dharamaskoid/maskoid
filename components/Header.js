@@ -137,10 +137,10 @@ export default function Header() {
           >
 
             {/* HOME */}
-            <a href="/" className="block text-lg hover:text-[#6EA8FF] transition">
+            <a href="/" className="block text-lg text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Home
             </a>
-            <a href="/about" className="block text-lg hover:text-[#6EA8FF] transition">
+            <a href="/about" className="block text-lg text-[#1a2e5e] hover:text-[#6EA8FF] transition">
                 About Us
             </a>
 
@@ -151,7 +151,7 @@ export default function Header() {
                 {/* 👉 SAME AS DESKTOP (MAIN LINK) */}
                 <a
                   href="/services"
-                  className="text-lg hover:text-[#6EA8FF] transition"
+                  className="text-lg text-[#1a2e5e] hover:text-[#6EA8FF] transition"
                 >
                   Services
                 </a>
@@ -164,7 +164,7 @@ export default function Header() {
                     e.preventDefault();
                     setOpenServices(!openServices);
                   }}
-                  className="text-white text-xl ml-2"
+                  className="text-[#1a2e5e] text-xl ml-2"
                 >
                 <span className="ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
                 </button>
@@ -200,11 +200,11 @@ export default function Header() {
               </AnimatePresence>
             </div>
             {/* OTHER LINKS */}
-            <a href="/projects" className="block text-lg hover:text-[#6EA8FF] transition">
+            <a href="/projects" className="block text-lg text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Projects
             </a>
 
-            <a href="/contact" className="block text-lg hover:text-[#6EA8FF] transition">
+            <a href="/contact" className="block text-lg text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Contact
             </a>
 
