@@ -1233,10 +1233,10 @@ const formatNumber = (num: number, suffix: string) => {
                     <div className="relative">
 
                       {/* FORM GLOW */}
-                      <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
+                      <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
 
                       {/* FORM CARD */}
-                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-xl p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
 
 
 
@@ -1249,7 +1249,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Your Name"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
                               required
                             />
 
@@ -1258,7 +1258,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
                               required
                             />
                           </div>
@@ -1269,7 +1269,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="Phone Number"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
                               required
                             />
 
@@ -1278,7 +1278,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.subject}
                               onChange={handleChange}
                               placeholder="Project Type"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
                             />
                           </div>
 
@@ -1288,14 +1288,14 @@ const formatNumber = (num: number, suffix: string) => {
                             onChange={handleChange}
                             rows={6}
                             placeholder="Tell us about your project..."
-                            className="w-full p-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white resize-none"
+                            className="w-full p-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white resize-none"
                             required
                           />
 
                           <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-14 rounded-2xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
+                            className="w-full h-14 rounded-xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
                           >
                             {loading ? "Sending..." : "Send Message →"}
                           </button>
