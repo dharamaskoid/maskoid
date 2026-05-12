@@ -35,7 +35,7 @@ const logosRow2 = [
 
 const BrandMarquee = () => {
   return (
-    <section className="py-16 bg-[#EEF2FF] overflow-hidden">
+    <section className="py-16 bg-[#FFFFFF] overflow-hidden">
 
         <div className="max-w-6xl mx-auto px-6 text-center mb-12">
 
