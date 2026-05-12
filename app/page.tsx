@@ -275,7 +275,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                       {/* FLOATING CARD */}
                       <motion.div
-                        className="absolute bottom-0 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-left-10 md:bottom-5 flex items-center gap-3 bg-white backdrop-blur-lg rounded-xl md:rounded-2xl border border-white/20 p-3 md:p-4 shadow-lg"
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-left-10 md:bottom-5 flex items-center gap-3 bg-white/90 backdrop-blur-xl rounded-xl md:rounded-2xl border border-[#e5ecff] p-3 md:p-4 shadow-[0_20px_60px_rgba(43,76,154,0.12)]"
                         initial={{ y: 60, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
