@@ -1249,7 +1249,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Your Name"
-                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none [#1a2e5e]"
                               required
                             />
 
@@ -1258,7 +1258,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none [#1a2e5e]"
                               required
                             />
                           </div>
@@ -1269,7 +1269,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="Phone Number"
-                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none [#1a2e5e]"
                               required
                             />
 
@@ -1278,7 +1278,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.subject}
                               onChange={handleChange}
                               placeholder="Project Type"
-                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white"
+                              className="h-14 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none [#1a2e5e]"
                             />
                           </div>
 
@@ -1288,7 +1288,7 @@ const formatNumber = (num: number, suffix: string) => {
                             onChange={handleChange}
                             rows={6}
                             placeholder="Tell us about your project..."
-                            className="w-full p-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-white resize-none"
+                            className="w-full p-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none [#1a2e5e] resize-none"
                             required
                           />
 
