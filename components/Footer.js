@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#0B0F1A] text-white overflow-hidden">
+    <footer className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
       {/* 🌌 GRADIENT TOP BORDER */}
       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#2A4D9B] to-transparent"></div>
