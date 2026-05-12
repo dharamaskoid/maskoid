@@ -52,7 +52,7 @@ export default function Footer() {
               />
             </a>
 
-            <p className="text-gray-600 mt-5 text-sm leading-relaxed">
+            <p className="text-gray-300 mt-5 text-sm leading-relaxed">
               We build high-performance websites and digital growth systems that drive real business results.
             </p>
 
@@ -117,7 +117,7 @@ export default function Footer() {
           {/* LINKS */}
           <motion.div variants={fadeUp}>
             <h3 className="font-semibold mb-5 text-white">Quick Links</h3>
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-300 text-sm">
               {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item, i) => (
                 <li key={i}>
                   <a
@@ -135,7 +135,7 @@ export default function Footer() {
           {/* SERVICES */}
           <motion.div variants={fadeUp}>
             <h3 className="font-semibold mb-5 text-white">Services</h3>
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-300 text-sm">
               {["Social Media Marketing", "SEO Service", "PPC Service", "Web Design", "Web Development"].map((item, i) => (
                 <li
                 key={i}
@@ -155,7 +155,7 @@ export default function Footer() {
         <div className="space-y-3 text-sm">
 
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-500">USA</span>
+            <span className="text-gray-300">USA</span>
             <div className="text-right text-gray-300 space-x-2">
                 <a href="tel:+17867721488" className="hover:text-white">+1 786 772 1488</a>
                 <span className="text-gray-600">•</span>
@@ -164,21 +164,21 @@ export default function Footer() {
             </div>
 
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-500">Texas</span>
+            <span className="text-gray-300">Texas</span>
             <a href="tel:+18722034220" className="text-gray-300 hover:text-white">
                 +1 872 203 4220
             </a>
             </div>
 
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-500">Australia</span>
+            <span className="text-gray-300">Australia</span>
             <a href="tel:+61420201910" className="text-gray-300 hover:text-white">
                 +61 420 201 910
             </a>
             </div>
 
             <div className="flex items-start justify-between gap-2">
-            <span className="text-gray-500">Bahrain</span>
+            <span className="text-gray-300">Bahrain</span>
             <a href="tel:+97333232707" className="text-gray-300 hover:text-white">
                 +973 3323 2707
             </a>
@@ -193,7 +193,7 @@ export default function Footer() {
         <div className="space-y-3 text-sm">
 
             <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-500">India</span>
+            <span className="text-gray-300">India</span>
             <div className="text-right text-gray-300 space-x-2">
                 <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
                 <span className="text-gray-600">•</span>
@@ -202,21 +202,21 @@ export default function Footer() {
             </div>
 
             <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-500">Sales</span>
+            <span className="text-gray-300">Sales</span>
             <a href="tel:+919510566027" className="text-gray-300 hover:text-white">
                 951 056 6027
             </a>
             </div>
 
             <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-500">Careers</span>
+            <span className="text-gray-300">Careers</span>
             <a href="tel:+16479786476" className="text-gray-300 hover:text-white">
                 +1 647 978 6476
             </a>
             </div>
 
             <div className="flex justify-between">
-            <span className="text-gray-500">Email</span>
+            <span className="text-gray-300">Email</span>
             <a
                 href="mailto:contact@maskoid.com"
                 className="text-[#6EA8FF] hover:underline"
@@ -234,7 +234,7 @@ export default function Footer() {
         <div className="mt-14 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
         {/* BOTTOM */}
-        <div className="mt-6 flex justify-center items-center text-gray-500 text-sm text-center">
+        <div className="mt-6 flex justify-center items-center text-gray-300 text-sm text-center">
         <p>© {new Date().getFullYear()} Maskoid Technologies</p>
         </div>
 
