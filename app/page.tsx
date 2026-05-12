@@ -1198,205 +1198,174 @@ const formatNumber = (num: number, suffix: string) => {
               {/* contact */}
               <section className="relative py-32 bg-[#EEF2FF] text-white overflow-hidden">
 
-                {/* 🌌 PREMIUM BACKGROUND */}
-                <div className="absolute inset-0 pointer-events-none">
+  {/* 🌌 BACKGROUND */}
+  <div className="absolute inset-0 pointer-events-none">
 
-                  {/* BLUE GLOW */}
-                  <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-[140px] rounded-full"></div>
+    <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-[140px] rounded-full"></div>
 
-                  {/* PURPLE GLOW */}
-                  <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
 
-                  {/* GRID */}
-                  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
+    <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
 
-                </div>
+  </div>
 
-                <div className="max-w-7xl mx-auto bg-[#1a2e5e] px-6 relative z-10">
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                  {/* HEADER */}
-                  <div className="text-center max-w-3xl mx-auto mb-20">
+    {/* HEADER */}
+    <div className="text-center max-w-3xl mx-auto mb-20">
 
-                    <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
-                      Contact Us
-                    </p>
+      <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
+        Contact Us
+      </p>
 
-                    <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight">
+      <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight text-[#0b1b3a]">
+        Let’s Build Something{" "}
+        <span className="text-[#4f7cff]">Amazing Together</span>
+      </h2>
 
-                      Let’s Build Something{" "}
+      <p className="mt-5 text-[#4b5b78] text-lg">
+        Have a project in mind? Let’s create a premium digital experience designed for real business growth.
+      </p>
 
-                      <span className="text-[#6EA8FF]">
-                        Amazing Together
-                      </span>
+    </div>
 
-                    </h2>
+    {/* MAIN GRID */}
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-                    <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
-                      Have a project in mind? Let’s create a premium digital experience
-                      designed to generate real business growth.
-                    </p>
+      {/* LEFT SIDE */}
+      <div className="relative">
 
-                  </div>
+        <div className="rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
 
-                  {/* MAIN GRID */}
-                  <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
+          <img
+            src="/images/contact-main.jpg"
+            alt="contact"
+            className="w-full h-[520px] object-cover"
+          />
 
-                    {/* LEFT SIDE */}
-                    <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-transparent to-transparent"></div>
 
-                      {/* MAIN IMAGE */}
-                      <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+        </div>
 
-                        <img
-                          src="/images/contact-main.jpg"
-                          alt=""
-                          className="w-full h-[600px] object-cover"
-                        />
+        {/* FLOATING CARD (SAFE ON MOBILE) */}
+        <div className="mt-6 lg:absolute lg:-bottom-10 lg:left-6 lg:right-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6">
 
-                        {/* DARK OVERLAY */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-[#071120]/30 to-transparent"></div>
+          <div className="flex items-center gap-4">
 
-                      </div>
+            <div className="w-14 h-14 rounded-2xl bg-[#102347] border border-[#1f3d84] flex items-center justify-center">
+              <svg className="w-7 h-7 text-[#6EA8FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8m-18 8h18V8H3v8z" />
+              </svg>
+            </div>
 
-                      {/* FLOATING CARD */}
-                      <div className="absolute -bottom-10 left-6 right-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+            <div>
+              <h4 className="text-lg font-semibold text-white">
+                Quick Response Guaranteed
+              </h4>
+              <p className="text-[#B7C2D8] text-sm">
+                We usually reply within a few hours.
+              </p>
+            </div>
 
-                        <div className="flex items-center gap-4">
+          </div>
 
-                          {/* ICON */}
-                          <div className="w-14 h-14 rounded-2xl bg-[#102347] border border-[#1f3d84] flex items-center justify-center">
+        </div>
 
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="w-7 h-7 text-[#6EA8FF]"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8m-18 8h18V8H3v8z"
-                              />
-                            </svg>
+      </div>
 
-                          </div>
+      {/* RIGHT SIDE FORM */}
+      <div className="relative">
 
-                          {/* TEXT */}
-                          <div>
+        {/* GLOW */}
+        <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
 
-                            <h4 className="text-xl font-semibold text-white">
-                              Quick Response Guaranteed
-                            </h4>
+        <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl">
 
-                            <p className="text-[#B7C2D8] text-sm mt-1">
-                              We usually reply within a few hours.
-                            </p>
+          <h3 className="text-3xl font-bold text-white">
+            Start Your Project
+          </h3>
 
-                          </div>
+          <p className="mt-3 text-[#B7C2D8]">
+            Fill out the form and we’ll connect with you soon.
+          </p>
 
-                        </div>
+          <form onSubmit={handleSubmit} className="mt-8 space-y-5">
 
-                      </div>
+            {/* NAME + EMAIL */}
+            <div className="grid md:grid-cols-2 gap-5">
 
-                    </div>
+              <input
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+                required
+              />
 
-                    {/* RIGHT SIDE FORM */}
-                    <div className="relative">
+              <input
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+                required
+              />
 
-                      {/* FORM GLOW */}
-                      <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
+            </div>
 
-                      {/* FORM CARD */}
-                      <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+            {/* PHONE + SUBJECT */}
+            <div className="grid md:grid-cols-2 gap-5">
 
-                        <h3 className="text-3xl font-bold text-white">
-                          Start Your Project
-                        </h3>
+              <input
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+              />
 
-                        <p className="mt-3 text-[#B7C2D8]">
-                          Fill out the form and let’s discuss your next big idea.
-                        </p>
+              <input
+                name="subject"
+                value={form.subject}
+                onChange={handleChange}
+                placeholder="Project Type"
+                className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff]"
+              />
 
-                        <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+            </div>
 
-                          {/* ROW */}
-                          <div className="grid md:grid-cols-2 gap-5">
+            {/* MESSAGE */}
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              rows={6}
+              placeholder="Tell us about your project..."
+              className="w-full p-5 rounded-2xl bg-[#0d1729] border border-white/10 text-white placeholder:text-[#7c8ba1] outline-none focus:border-[#4f7cff] resize-none"
+              required
+            />
 
-                            <input
-                              name="name"
-                              value={form.name}
-                              onChange={handleChange}
-                              placeholder="Your Name"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
-                              required
-                            />
+            {/* BUTTON */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full h-14 rounded-2xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] font-semibold hover:scale-[1.02] transition"
+            >
+              {loading ? "Sending..." : "Send Message →"}
+            </button>
 
-                            <input
-                              name="email"
-                              value={form.email}
-                              onChange={handleChange}
-                              placeholder="Email Address"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
-                              required
-                            />
+          </form>
 
-                          </div>
+        </div>
 
-                          {/* ROW */}
-                          <div className="grid md:grid-cols-2 gap-5">
+      </div>
 
-                            <input
-                              name="phone"
-                              value={form.phone}
-                              onChange={handleChange}
-                              placeholder="Phone Number"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
-                              required
-                            />
+    </div>
 
-                            <input
-                              name="subject"
-                              value={form.subject}
-                              onChange={handleChange}
-                              placeholder="Project Type"
-                              className="h-14 px-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition"
-                            />
+  </div>
 
-                          </div>
-
-                          {/* MESSAGE */}
-                          <textarea
-                            name="message"
-                            value={form.message}
-                            onChange={handleChange}
-                            rows={6}
-                            placeholder="Tell us about your project..."
-                            className="w-full p-5 rounded-2xl bg-[#0d1729] border border-white/10 focus:border-[#2b4c9a] outline-none text-white placeholder:text-[#7c8ba1] transition resize-none"
-                            required
-                          />
-
-                          {/* BUTTON */}
-                          <button
-                            type="submit"
-                            disabled={loading}
-                            className="w-full h-14 rounded-2xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition-all duration-300 font-semibold shadow-[0_15px_40px_rgba(43,76,154,0.35)]"
-                          >
-                            {loading ? "Sending..." : "Send Message →"}
-                          </button>
-
-                        </form>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </section>
+</section>
     </main>
   );
 }
