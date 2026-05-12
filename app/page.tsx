@@ -743,7 +743,7 @@ const formatNumber = (num: number, suffix: string) => {
                               Services
                             </p>
 
-                            <h2 className="text-4xl md:text-3xl font-bold mt-5 leading-tight text-[#111827]">
+                            <h2 className="text-4xl md:text-3xl font-bold mt-5 leading-tight text-[#1a2e5e]">
 
                               We Build Digital Systems That{" "}
 
@@ -958,11 +958,14 @@ const formatNumber = (num: number, suffix: string) => {
 
                 {/* HEADER */}
                 <div className="text-center mb-10">
+                  <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider hover:bg-blue-500/20 transition">
+                      Recent Work
+                  </p>
                   <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-300 uppercase tracking-wider hover:bg-blue-500/20 transition">
                     Recent Work
                   </p>
 
-                  <h2 className="text-4xl font-bold mt-3">
+                  <h2 className="text-4xl font-bold text-[#1a2e5e] mt-3">
                     Latest Completed <span className="text-blue-500">Projects</span>
                   </h2>
 
