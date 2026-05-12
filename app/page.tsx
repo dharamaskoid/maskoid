@@ -885,7 +885,7 @@ const formatNumber = (num: number, suffix: string) => {
                 <div className="absolute w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-drift1"></div> 
                 
                 {/* PURPLE DRIFT */} 
-                <div className="absolute w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-3xl animate-drift2"></div> 
+                <div className="absolute w-[600px] h-[600px] bg-[#1a2e5e]-500/10 rounded-full blur-3xl animate-drift2"></div> 
                 
                 {/* CYAN SMALL ORBIT */} 
                 <div className="absolute w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-2xl animate-drift3"></div> 
