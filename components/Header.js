@@ -46,7 +46,7 @@ export default function Header() {
         </a>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden md:flex gap-6 lg:gap-8 text-[#1a2e5e] text-base font-normal">
+        <nav className="hidden md:flex gap-6 lg:gap-8 text-[#1a2e5e] text-base font-semibold">
 
           {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item) => {
 
@@ -86,7 +86,7 @@ export default function Header() {
                         <li key={i}>
                           <a
                             href={service.link}
-                            className="block px-5 py-3 text-base font-semibold text-[#42526b] hover:text-[#2b4c9a] hover:bg-[#f5f8ff] transition"
+                            className="block px-5 py-3 text-base text-[#42526b] hover:text-[#2b4c9a] hover:bg-[#f5f8ff] transition"
                           >
                             {service.name}
                           </a>
