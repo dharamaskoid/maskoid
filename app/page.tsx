@@ -669,7 +669,7 @@ const formatNumber = (num: number, suffix: string) => {
                       whileInView="show"
                       viewport={{ once: true, amount: 0.2 }}
                       variants={stagger}
-                      className="relative py-24 pb-40 bg-[#EEF2FF] text-black overflow-hidden"
+                      className="relative py-24 bg-[#EEF2FF] text-black overflow-hidden"
                     >
                     {/* 🌊 SEO WAVE BACKGROUND */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -705,7 +705,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                         <motion.div
                           variants={fadeUp}
-                          className="grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start mt-16"
+                          className="grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start"
                         >
 
                           {/* LEFT CONTENT */}
