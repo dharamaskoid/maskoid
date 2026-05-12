@@ -1201,7 +1201,7 @@ const formatNumber = (num: number, suffix: string) => {
                 {/* 🌌 BACKGROUND */}
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-[140px] rounded-full"></div>
-                  <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+                  <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1a2e5e]-500/10 blur-[140px] rounded-full"></div>
                   <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
                 </div>
 
