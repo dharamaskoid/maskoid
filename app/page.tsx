@@ -675,7 +675,7 @@ const formatNumber = (num: number, suffix: string) => {
                     {/* BUTTONS */}
                     <div className="mt-10 flex flex-wrap gap-4">
 
-                      <button className="px-8 py-4 rounded-2xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
+                      <button className="inline-flex items-center gap-2 mt-8 px-6 py-3 px-8 py-4 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
                         Work With Us →
                       </button>
 
