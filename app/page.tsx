@@ -236,7 +236,7 @@ const formatNumber = (num: number, suffix: string) => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.6 }}
-                      className="mt-5 md:mt-6 text-sm text-gray-300"
+                      className="mt-5 md:mt-6 text-sm text-slate-600 font-medium"
                     >
                       ✔ 120+ Projects • ✔ ROI-Focused • ✔ Fast Delivery
                     </motion.p>
@@ -268,7 +268,7 @@ const formatNumber = (num: number, suffix: string) => {
                             alt="Hero image"
                             width={900}
                             height={500}
-                            className="relative z-10 drop-shadow-2xl w-full h-auto"
+                            className="relative z-10 drop-shadow-[0_25px_60px_rgba(43,76,154,0.18)] w-full h-auto"
                           />
                         </motion.div>
                       </motion.div>
@@ -293,7 +293,7 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           <div className="flex items-center gap-1 text-xs md:text-sm mt-1">
-                            <span className="text-black font-semibold">4.7</span>
+                            <span className="text-[#1a2e5e] font-semibold">4.7</span>
                             <span className="text-gray-500">(107 Reviews)</span>
                           </div>
                         </div>
