@@ -64,7 +64,7 @@ export default function Header() {
 
                   {/* 🔥 CLEAN CHEVRON */}
                   {isServices && (
-                    <span className="ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-[#6b7aa5] rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
+                    <span className="ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-[#1a2e5e] rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-[#1a2e5e]"></span>
                   )}
 
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
