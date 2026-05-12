@@ -7,9 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import Testimonials from "@/components/Testimonials";
 import BrandMarquee from "@/components/TrustSection";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
+import "swiper/css/navigation";
 import {
   Monitor,
   BarChart3,
@@ -24,6 +25,8 @@ import {
   Code2,
   BriefcaseBusiness,
   Wrench,
+  ChevronLeft, 
+  ChevronRight,
 } from "lucide-react";
 
 import type { ReactNode } from "react";
@@ -116,7 +119,7 @@ const counterData: CounterItem[] = [
     value: 10,
     suffix: "+",
     label: "Years Driving Results",
-    icon: <Megaphone size={30} strokeWidth={2} />,
+    icon: <Wrench size={30} strokeWidth={2} />,
   },
   {
     value: 300,
@@ -986,114 +989,184 @@ const formatNumber = (num: number, suffix: string) => {
                 </div>
 
                 {/* GRID */}
-                <div className="grid md:grid-cols-3 gap-8">
+                {/* SLIDER WRAPPER */}
+<div className="relative">
 
-                  {/* ================= CATER SPOON ================= */}
-                  {(activeTab === "all" || activeTab === "web") && (
-                    <a
-                      href="https://caterspoonmumbai.com/"
-                      rel="noopener noreferrer"
-                      className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                    >
-                      <div className="relative h-[320px] flex items-center justify-center">
+  {/* CUSTOM NAVIGATION */}
+  <div className="absolute -top-20 right-0 flex gap-3 z-20">
 
-                        <img
-                          src="/images/caterspoon-about.png"
-                          className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                        />
+    <button className="projects-prev w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#2b4c9a] transition flex items-center justify-center">
 
-                        <img
-                          src="/images/caterspoon-home.png"
-                          className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                        />
+      <ChevronLeft size={20} />
 
-                        <img
-                          src="/images/caterspoon-contact.png"
-                          className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                        />
+    </button>
 
-                      </div>
+    <button className="projects-next w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#2b4c9a] transition flex items-center justify-center">
 
-                      <div className="p-6 text-center">
-                        <h3 className="text-xl font-semibold">Cater Spoon Mumbai</h3>
-                        <p className="text-gray-400 text-sm mt-2">
-                          Luxury catering website with premium UI & SEO system.
-                        </p>
-                      </div>
-                    </a>
-                  )}
+      <ChevronRight size={20} />
 
-                  {/* ================= PAKHTOONS ================= */}
-                  {(activeTab === "all" || activeTab === "seo") && (
-                    <a
-                      href="https://pakhtoons.development-site.maskoid.net/"
-                      rel="noopener noreferrer"
-                      className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                    >
-                      <div className="relative h-[320px] flex items-center justify-center">
+    </button>
 
-                        <img
-                          src="/images/pakhtoons-about.png"
-                          className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                        />
+  </div>
 
-                        <img
-                          src="/images/pakhtoons-home.png"
-                          className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                        />
+  <Swiper
+    modules={[Navigation, Autoplay]}
+    spaceBetween={30}
+    slidesPerView={1}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    navigation={{
+      prevEl: ".projects-prev",
+      nextEl: ".projects-next",
+    }}
+    breakpoints={{
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }}
+    className="projects-slider"
+  >
 
-                        <img
-                          src="/images/pakhtoons-contact.png"
-                          className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                        />
+    {/* ================= CATER SPOON ================= */}
+    {(activeTab === "all" || activeTab === "web") && (
+      <SwiperSlide>
 
-                      </div>
+        <a
+          href="https://caterspoonmumbai.com/"
+          rel="noopener noreferrer"
+          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+        >
 
-                      <div className="p-6 text-center">
-                        <h3 className="text-xl font-semibold">Pakhtoons</h3>
-                        <p className="text-gray-400 text-sm mt-2">
-                          SEO optimized business website with performance focus.
-                        </p>
-                      </div>
-                    </a>
-                  )}
+          <div className="relative h-[320px] flex items-center justify-center">
 
-                  {/* ================= VAYORAA ================= */}
-                  {(activeTab === "all" || activeTab === "web") && (
-                    <a
-                      href="https://vayoraa.in/"
-                      rel="noopener noreferrer"
-                      className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                    >
-                      <div className="relative h-[320px] flex items-center justify-center">
+            <img
+              src="/images/caterspoon-about.png"
+              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+            />
 
-                        <img
-                          src="/images/Vayoraa-about.png"
-                          className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                        />
+            <img
+              src="/images/caterspoon-home.png"
+              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+            />
 
-                        <img
-                          src="/images/Vayoraa-home.png"
-                          className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                        />
+            <img
+              src="/images/caterspoon-contact.png"
+              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+            />
 
-                        <img
-                          src="/images/Vayoraa-contact.png"
-                          className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                        />
+          </div>
 
-                      </div>
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold">
+              Cater Spoon Mumbai
+            </h3>
 
-                      <div className="p-6 text-center">
-                        <h3 className="text-xl font-semibold">Vayoraa</h3>
-                        <p className="text-gray-400 text-sm mt-2">
-                          Conversion-focused modern website with branding & SEO.
-                        </p>
-                      </div>
-                    </a>
-                  )}
+            <p className="text-gray-400 text-sm mt-2">
+              Luxury catering website with premium UI & SEO system.
+            </p>
+          </div>
 
-                </div>
+        </a>
+
+      </SwiperSlide>
+    )}
+
+    {/* ================= PAKHTOONS ================= */}
+    {(activeTab === "all" || activeTab === "seo") && (
+      <SwiperSlide>
+
+        <a
+          href="https://pakhtoons.development-site.maskoid.net/"
+          rel="noopener noreferrer"
+          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+        >
+
+          <div className="relative h-[320px] flex items-center justify-center">
+
+            <img
+              src="/images/pakhtoons-about.png"
+              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+            />
+
+            <img
+              src="/images/pakhtoons-home.png"
+              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+            />
+
+            <img
+              src="/images/pakhtoons-contact.png"
+              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+            />
+
+          </div>
+
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold">
+              Pakhtoons
+            </h3>
+
+            <p className="text-gray-400 text-sm mt-2">
+              SEO optimized business website with performance focus.
+            </p>
+          </div>
+
+        </a>
+
+      </SwiperSlide>
+    )}
+
+    {/* ================= VAYORAA ================= */}
+    {(activeTab === "all" || activeTab === "web") && (
+      <SwiperSlide>
+
+        <a
+          href="https://vayoraa.in/"
+          rel="noopener noreferrer"
+          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+        >
+
+          <div className="relative h-[320px] flex items-center justify-center">
+
+            <img
+              src="/images/Vayoraa-about.png"
+              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+            />
+
+            <img
+              src="/images/Vayoraa-home.png"
+              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+            />
+
+            <img
+              src="/images/Vayoraa-contact.png"
+              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+            />
+
+          </div>
+
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold">
+              Vayoraa
+            </h3>
+
+            <p className="text-gray-400 text-sm mt-2">
+              Conversion-focused modern website with branding & SEO.
+            </p>
+          </div>
+
+        </a>
+
+      </SwiperSlide>
+    )}
+
+  </Swiper>
+
+</div>
               </div>
               <div className="text-center mt-14">
 
