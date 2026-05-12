@@ -961,9 +961,7 @@ const formatNumber = (num: number, suffix: string) => {
                   <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider hover:bg-blue-500/20 transition">
                       Recent Work
                   </p>
-                  <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-300 uppercase tracking-wider hover:bg-blue-500/20 transition">
-                    Recent Work
-                  </p>
+
 
                   <h2 className="text-4xl font-bold text-[#1a2e5e] mt-3">
                     Latest Completed <span className="text-blue-500">Projects</span>
@@ -1071,7 +1069,7 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           <div className="p-6 text-center">
-                            <h3 className="text-xl font-semibold">
+                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
                               Cater Spoon Mumbai
                             </h3>
 
@@ -1115,7 +1113,7 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           <div className="p-6 text-center">
-                            <h3 className="text-xl font-semibold">
+                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
                               Pakhtoons
                             </h3>
 
@@ -1159,7 +1157,7 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           <div className="p-6 text-center">
-                            <h3 className="text-xl font-semibold">
+                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
                               Vayoraa
                             </h3>
 
@@ -1181,11 +1179,12 @@ const formatNumber = (num: number, suffix: string) => {
 
                 <a
                   href="/projects"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 border border-white/10 text-white hover:bg-white/10 transition duration-300"
+                  className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm"
                 >
                   View More Projects
                   <span className="text-lg">→</span>
                 </a>
+
 
               </div>
               </section>
