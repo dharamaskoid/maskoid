@@ -117,7 +117,7 @@ export default function Header() {
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-[#2b4c9a] text-2xl"
         >
           ☰
         </button>
@@ -209,7 +209,7 @@ export default function Header() {
             {/* CTA */}
             <a
               href="/contact"
-              className="block text-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition text-white shadow-lg"
+              className="block text-center px-8 py-3.5 rounded-lg bg-[#2b4c9a] hover:bg-[#1f3d84] hover:scale-105 transition text-white shadow-lg"
             >
               Get Quote
             </a>
