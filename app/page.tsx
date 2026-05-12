@@ -507,20 +507,11 @@ const formatNumber = (num: number, suffix: string) => {
                           {/* ICON */}
                           <div className="w-14 h-14 rounded-2xl bg-[#eef4ff] flex items-center justify-center">
 
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="w-7 h-7 text-[#2b4c9a]"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M17 20h5V4H2v16h5m10 0v-6H7v6m10 0H7"
-                              />
-                            </svg>
+                            <Users
+                              size={28}
+                              strokeWidth={2}
+                              className="text-[#2b4c9a]"
+                            />
 
                           </div>
 
