@@ -86,7 +86,7 @@ export default function Header() {
                         <li key={i}>
                           <a
                             href={service.link}
-                            className="block px-5 py-3 text-sm semibold text-[#42526b] hover:text-[#2b4c9a] hover:bg-[#f5f8ff] transition"
+                            className="block px-5 py-3 text-base font-semibold text-[#42526b] hover:text-[#2b4c9a] hover:bg-[#f5f8ff] transition"
                           >
                             {service.name}
                           </a>
@@ -137,10 +137,10 @@ export default function Header() {
           >
 
             {/* HOME */}
-            <a href="/" className="block text-base semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <a href="/" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Home
             </a>
-            <a href="/about" className="block text-base semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <a href="/about" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
                 About Us
             </a>
 
@@ -151,7 +151,7 @@ export default function Header() {
                 {/* 👉 SAME AS DESKTOP (MAIN LINK) */}
                 <a
                   href="/services"
-                  className="text-base semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
+                  className="text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
                 >
                   Services
                 </a>
@@ -200,11 +200,11 @@ export default function Header() {
               </AnimatePresence>
             </div>
             {/* OTHER LINKS */}
-            <a href="/projects" className="block text-base semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <a href="/projects" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Projects
             </a>
 
-            <a href="/contact" className="block text-base semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <a href="/contact" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Contact
             </a>
 
