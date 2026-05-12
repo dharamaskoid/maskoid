@@ -197,11 +197,13 @@ const formatNumber = (num: number, suffix: string) => {
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8 }}
-                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-[#1a2e5e]"
+                      className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-[#1a2e5e]"
                     >
-               <div><p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-[#dbe4ff] bg-white text-[#2b4c9a] shadow-sm uppercase tracking-wider hover:bg-blue-500/20 transition">
-  Growth-Driven Digital Agency
-</p></div>
+                    <div>
+                        <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-[#dbe4ff] bg-white text-[#2b4c9a] shadow-sm uppercase tracking-wider hover:bg-blue-500/20 transition">
+                          Growth-Driven Digital Agency
+                      </p>
+                    </div>
                       We Don’t Just Build Websites{" "}
                       <span className="text-[#2b4c9a]">
                         We Build Growth Systems
@@ -696,33 +698,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <div className="max-w-6xl mx-auto px-6">
 
                         {/* ROW 1 - TITLE LEFT + CONTENT RIGHT */}
-                        <motion.div
-                          variants={fadeUp}
-                          className="grid md:grid-cols-2 gap-16 items-end"
-                        >
 
-                          {/* LEFT - TITLE */}
-                          <div>
-                            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider hover:bg-blue-500/20 transition">
-                              Services
-                            </p>
-
-                            <h2 className="text-4xl md:text-3xl font-bold mt-3 leading-tight">
-                              We Build Digital Systems That <br />
-                              <span className="text-blue-600">Generate Growth & Revenue</span>
-                            </h2>
-                          </div>
-
-                          {/* RIGHT - DESCRIPTION */}
-                          <div className="text-gray-600">
-                            We help businesses grow using websites, SEO, ads, and performance marketing
-                            strategies designed to convert visitors into customers.
-                          </div>
-
-                        </motion.div>
-
-
-                        {/* ROW 2 - IMAGES LEFT + SERVICES RIGHT */}
                         <motion.div
                           variants={fadeUp}
                           className="grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start mt-16"
@@ -731,11 +707,11 @@ const formatNumber = (num: number, suffix: string) => {
                           {/* LEFT CONTENT */}
                           <div className="max-w-md">
 
-                            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider">
+                            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider hover:bg-blue-500/20 transition">
                               Services
                             </p>
 
-                            <h2 className="text-3xl md:text-4xl font-bold mt-5 leading-tight text-[#111827]">
+                            <h2 className="text-4xl md:text-3xl font-bold mt-5 leading-tight text-[#111827]">
 
                               We Build Digital Systems That{" "}
 
