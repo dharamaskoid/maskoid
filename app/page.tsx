@@ -742,7 +742,7 @@ const formatNumber = (num: number, suffix: string) => {
                           {/* RIGHT SERVICES GRID */}
                           <Swiper
                             modules={[Autoplay]}
-                            spaceBetween={20}
+                            spaceBetween={24}
                             slidesPerView={1}
                             autoplay={{
                               delay: 2500,
@@ -756,7 +756,7 @@ const formatNumber = (num: number, suffix: string) => {
                                 slidesPerView: 3,
                               },
                             }}
-                            className="pb-4"
+                            className="w-full"
                           >
 
                             {[
