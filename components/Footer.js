@@ -42,12 +42,8 @@ export default function Footer() {
           {/* BRAND */}
           <motion.div variants={fadeUp}>
             <a href="/" className="flex items-center">
-              <div className="relative px-4 py-2 rounded-2xl bg-[#0b1220] border border-white/10 overflow-hidden">
+              <div className="relative px-4 py-2 rounded-2xl overflow-hidden bg-gradient-to-br from-[#050914] via-[#071120] to-[#050914] border border-white/10">
 
-                {/* gradient glow background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-2xl opacity-60"></div>
-
-                {/* logo */}
                 <Image
                   src="/images/Maskoid-Logo.png"
                   alt="Logo"
