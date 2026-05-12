@@ -52,7 +52,7 @@ export default function Footer() {
               />
             </a>
 
-            <p className="text-gray-400 mt-5 text-sm leading-relaxed">
+            <p className="text-gray-600 mt-5 text-sm leading-relaxed">
               We build high-performance websites and digital growth systems that drive real business results.
             </p>
 
