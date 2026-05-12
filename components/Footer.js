@@ -42,18 +42,14 @@ export default function Footer() {
           {/* BRAND */}
           <motion.div variants={fadeUp}>
             <a href="/" className="flex items-center">
-              <div className="relative px-4 py-2 rounded-2xl overflow-hidden bg-gradient-to-br from-[#050914] via-[#071120] to-[#050914] border border-white/10">
-
-                <Image
-                  src="/images/Maskoid-Logo.png"
-                  alt="Logo"
-                  width={160}
-                  height={50}
-                  priority
-                  className="relative z-10 object-contain transition duration-300 hover:scale-110"
-                />
-
-              </div>
+              <Image
+                src="/images/Maskoid-Logo.png"
+                alt="Logo"
+                width={160}
+                height={50}
+                className="object-contain transition duration-300 hover:scale-110"
+                priority
+              />
             </a>
 
             <p className="text-gray-300 mt-5 text-sm leading-relaxed">
