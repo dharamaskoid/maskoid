@@ -15,6 +15,9 @@ import {
   LineChart,
   ShieldCheck,
   BadgeCheck,
+  Search,
+  Megaphone,
+  Code2,
 } from "lucide-react";
 
 
@@ -760,37 +763,37 @@ const formatNumber = (num: number, suffix: string) => {
                           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                             {[
-                              {
-                                num: "01",
-                                title: "Web Design",
-                                desc: "Beautiful, conversion-focused UI/UX designs.",
-                                icon: "🖥️",
-                              },
-                              {
-                                num: "02",
-                                title: "SEO Optimization",
-                                desc: "Rank higher on Google and drive organic traffic.",
-                                icon: "📈",
-                              },
-                              {
-                                num: "03",
-                                title: "PPC Advertising",
-                                desc: "High-converting ads that bring instant leads.",
-                                icon: "🎯",
-                              },
-                              {
-                                num: "04",
-                                title: "Social Media Marketing",
-                                desc: "Grow your brand and engage ideal customers.",
-                                icon: "📱",
-                              },
-                              {
-                                num: "05",
-                                title: "Web Development",
-                                desc: "Fast, scalable and SEO-friendly websites.",
-                                icon: "⚙️",
-                              },
-                            ].map((item, i) => (
+                            {
+                              num: "01",
+                              title: "Web Design",
+                              desc: "Beautiful, conversion-focused UI/UX designs.",
+                              icon: <Monitor size={24} strokeWidth={2} />,
+                            },
+                            {
+                              num: "02",
+                              title: "SEO Optimization",
+                              desc: "Rank higher on Google and drive organic traffic.",
+                              icon: <Search size={24} strokeWidth={2} />,
+                            },
+                            {
+                              num: "03",
+                              title: "PPC Advertising",
+                              desc: "High-converting ads that bring instant leads.",
+                              icon: <Target size={24} strokeWidth={2} />,
+                            },
+                            {
+                              num: "04",
+                              title: "Social Media Marketing",
+                              desc: "Grow your brand and engage ideal customers.",
+                              icon: <Megaphone size={24} strokeWidth={2} />,
+                            },
+                            {
+                              num: "05",
+                              title: "Web Development",
+                              desc: "Fast, scalable and SEO-friendly websites.",
+                              icon: <Code2 size={24} strokeWidth={2} />,
+                            },
+                          ].map((item, i) => (
 
                               <motion.div
                                 key={i}
@@ -804,7 +807,7 @@ const formatNumber = (num: number, suffix: string) => {
                                 <div className="flex items-start justify-between">
 
                                   {/* ICON */}
-                                  <div className="w-12 h-12 rounded-xl bg-[#eef4ff] flex items-center justify-center text-2xl">
+                                  <div className="w-12 h-12 rounded-xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300">
                                     {item.icon}
                                   </div>
 
