@@ -1196,7 +1196,7 @@ const formatNumber = (num: number, suffix: string) => {
               <BrandMarquee />
 
               {/* contact */}
-              <section className="relative py-32 bg-[#071120] text-white overflow-hidden">
+              <section className="relative py-32 bg-[#EEF2FF] text-white overflow-hidden">
 
                 {/* 🌌 BACKGROUND */}
                 <div className="absolute inset-0 pointer-events-none">
@@ -1205,7 +1205,7 @@ const formatNumber = (num: number, suffix: string) => {
                   <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="max-w-7xl mx-auto bg-[#1a2e5e] px-6 py-10 rounded-xl relative z-10">
 
                   {/* GRID */}
                   <div className="grid lg:grid-cols-2 gap-16 items-start">
