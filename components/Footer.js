@@ -141,7 +141,7 @@ export default function Footer() {
                 key={i}
                 className="group cursor-pointer"
                 >
-                <span className="inline-block group-hover:text-white text-gray-400">
+                <span className="inline-block group-hover:text-white text-gray-300">
                     {item}
                 </span>
                 </li>
