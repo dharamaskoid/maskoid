@@ -6,6 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Testimonials from "@/components/Testimonials";
 import BrandMarquee from "@/components/TrustSection";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 import {
   Monitor,
   BarChart3,
@@ -200,7 +204,7 @@ const formatNumber = (num: number, suffix: string) => {
                       className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-[#1a2e5e]"
                     >
                     <div>
-                        <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-[#dbe4ff] bg-white text-[#2b4c9a] shadow-sm uppercase tracking-wider hover:bg-blue-500/20 transition">
+                        <p className="inline-block w-auto px-5 py-1.5 mb-5 rounded-full text-xs font-medium border border-[#dbe4ff] bg-white text-[#2b4c9a] shadow-sm uppercase tracking-wider hover:bg-blue-500/20 transition">
                           Growth-Driven Digital Agency
                       </p>
                     </div>
@@ -736,82 +740,102 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           {/* RIGHT SERVICES GRID */}
-                          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                          <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            autoplay={{
+                              delay: 2500,
+                              disableOnInteraction: false,
+                            }}
+                            breakpoints={{
+                              640: {
+                                slidesPerView: 2,
+                              },
+                              1024: {
+                                slidesPerView: 3,
+                              },
+                            }}
+                            className="pb-4"
+                          >
 
                             {[
-                            {
-                              num: "01",
-                              title: "Web Design",
-                              desc: "Beautiful, conversion-focused UI/UX designs.",
-                              icon: <Monitor size={24} strokeWidth={2} />,
-                            },
-                            {
-                              num: "02",
-                              title: "SEO Optimization",
-                              desc: "Rank higher on Google and drive organic traffic.",
-                              icon: <Search size={24} strokeWidth={2} />,
-                            },
-                            {
-                              num: "03",
-                              title: "PPC Advertising",
-                              desc: "High-converting ads that bring instant leads.",
-                              icon: <Target size={24} strokeWidth={2} />,
-                            },
-                            {
-                              num: "04",
-                              title: "Social Media Marketing",
-                              desc: "Grow your brand and engage ideal customers.",
-                              icon: <Megaphone size={24} strokeWidth={2} />,
-                            },
-                            {
-                              num: "05",
-                              title: "Web Development",
-                              desc: "Fast, scalable and SEO-friendly websites.",
-                              icon: <Code2 size={24} strokeWidth={2} />,
-                            },
-                          ].map((item, i) => (
+                              {
+                                num: "01",
+                                title: "Web Design",
+                                desc: "Beautiful, conversion-focused UI/UX designs.",
+                                icon: <Monitor size={24} strokeWidth={2} />,
+                              },
+                              {
+                                num: "02",
+                                title: "SEO Optimization",
+                                desc: "Rank higher on Google and drive organic traffic.",
+                                icon: <Search size={24} strokeWidth={2} />,
+                              },
+                              {
+                                num: "03",
+                                title: "PPC Advertising",
+                                desc: "High-converting ads that bring instant leads.",
+                                icon: <Target size={24} strokeWidth={2} />,
+                              },
+                              {
+                                num: "04",
+                                title: "Social Media Marketing",
+                                desc: "Grow your brand and engage ideal customers.",
+                                icon: <Megaphone size={24} strokeWidth={2} />,
+                              },
+                              {
+                                num: "05",
+                                title: "Web Development",
+                                desc: "Fast, scalable and SEO-friendly websites.",
+                                icon: <Code2 size={24} strokeWidth={2} />,
+                              },
+                            ].map((item, i) => (
 
-                              <motion.div
-                                key={i}
-                                variants={fadeUp}
-                                whileHover={{ y: -6 }}
-                                transition={{ duration: 0.25 }}
-                                className="group relative bg-white border border-[#e8ecf5] rounded-2xl p-6 shadow-sm hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)] transition-all duration-300"
-                              >
+                              <SwiperSlide key={i}>
 
-                                {/* TOP */}
-                                <div className="flex items-start justify-between">
+                                <motion.div
+                                  variants={fadeUp}
+                                  whileHover={{ y: -8 }}
+                                  transition={{ duration: 0.25 }}
+                                  className="group relative bg-white border border-[#e8ecf5] rounded-2xl p-6 h-full shadow-sm hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)] transition-all duration-300"
+                                >
 
-                                  {/* ICON */}
-                                  <div className="w-12 h-12 rounded-xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300">
-                                    {item.icon}
+                                  {/* TOP */}
+                                  <div className="flex items-start justify-between">
+
+                                    {/* ICON */}
+                                    <div className="w-12 h-12 rounded-xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300">
+                                      {item.icon}
+                                    </div>
+
+                                    {/* NUMBER */}
+                                    <span className="text-sm font-bold text-[#2b4c9a]">
+                                      {item.num}
+                                    </span>
+
                                   </div>
 
-                                  {/* NUMBER */}
-                                  <span className="text-sm font-bold text-[#2b4c9a]">
-                                    {item.num}
-                                  </span>
+                                  {/* CONTENT */}
+                                  <div className="mt-5">
 
-                                </div>
+                                    <h3 className="text-lg font-bold text-[#111827] group-hover:text-[#2b4c9a] transition">
+                                      {item.title}
+                                    </h3>
 
-                                {/* CONTENT */}
-                                <div className="mt-5">
+                                    <p className="mt-2 text-sm leading-relaxed text-[#6b7280]">
+                                      {item.desc}
+                                    </p>
 
-                                  <h3 className="text-lg font-bold text-[#111827] group-hover:text-[#2b4c9a] transition">
-                                    {item.title}
-                                  </h3>
+                                  </div>
 
-                                  <p className="mt-2 text-sm leading-relaxed text-[#6b7280]">
-                                    {item.desc}
-                                  </p>
+                                </motion.div>
 
-                                </div>
-
-                              </motion.div>
+                              </SwiperSlide>
 
                             ))}
 
-                          </div>
+                          </Swiper>
 
                         </motion.div>
                                                 
