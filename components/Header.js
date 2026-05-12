@@ -24,10 +24,10 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-xl transition-all duration-300
-        ${scrolled 
-          ? "bg-black/90 shadow-lg border-b border-white/10" 
-          : "bg-black/40 border-b border-white/10"
-        }`}
+      ${scrolled
+        ? "bg-white/90 backdrop-blur-xl shadow-[0_8px_30px_rgba(43,76,154,0.08)] border-b border-[#dbe4ff]"
+        : "bg-white/70 backdrop-blur-xl border-b border-[#e9efff]"
+      }`}
     >
       
       {/* 🔥 INCREASED HEIGHT */}
@@ -46,7 +46,7 @@ export default function Header() {
         </a>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden md:flex gap-6 lg:gap-8 text-gray-300 text-base font-normal">
+        <nav className="hidden md:flex gap-6 lg:gap-8 text-[#1a2e5e] text-base font-normal">
 
           {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item) => {
 
@@ -58,13 +58,13 @@ export default function Header() {
                 {/* MAIN LINK */}
                 <a
                   href={`/${item === "Home" ? "" : item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="relative flex items-center gap-1 hover:text-white transition group"
+                  className="relative flex items-center gap-1 hover:text-[#2b4c9a] transition group"
                 >
                   {item}
 
                   {/* 🔥 CLEAN CHEVRON */}
                   {isServices && (
-                    <span className="ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
+                    <span className="ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-[#6b7aa5] rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
                   )}
 
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
@@ -72,7 +72,7 @@ export default function Header() {
 
                 {/* 🔥 DROPDOWN (ONLY FOR SERVICES) */}
                 {isServices && (
-                  <div className="absolute left-0 top-full mt-1 w-64 bg-[#0B0F1A] border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+                  <div className="absolute left-0 top-full mt-1 w-64 bg-white/95 border border-[#e5ecff] shadow-[0_20px_50px_rgba(43,76,154,0.12)] backdrop-blur-xl rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
 
                     <ul className="py-3">
 
@@ -86,7 +86,7 @@ export default function Header() {
                         <li key={i}>
                           <a
                             href={service.link}
-                            className="block px-5 py-3 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition"
+                            className="block px-5 py-3 text-sm text-[#42526b] hover:text-[#2b4c9a] hover:bg-[#f5f8ff] transition"
                           >
                             {service.name}
                           </a>
@@ -108,7 +108,7 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href="/contact"
-            className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition text-white shadow-lg"
+            className="px-8 py-3.5 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 text-white shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
           >
             Get Quote
           </a>
@@ -131,7 +131,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-black/90 border-t border-white/10 px-6 py-6 space-y-5"
+            className="bg-white/95 backdrop-blur-xl border-t border-white/10 px-6 py-6 space-y-5"
           >
 
             {/* HOME */}
