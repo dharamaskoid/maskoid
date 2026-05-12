@@ -1295,7 +1295,7 @@ const formatNumber = (num: number, suffix: string) => {
                           <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-12 rounded-xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
+                            className="w-full h-12 cursor-pointer rounded-xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
                           >
                             {loading ? "Sending..." : "Send Message →"}
                           </button>
