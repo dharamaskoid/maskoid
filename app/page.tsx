@@ -692,7 +692,7 @@ const formatNumber = (num: number, suffix: string) => {
               {/* ================= COUNTER SECTION ================= */}
               <section
                   ref={sectionRef}
-                  className="relative py-12 bg-[#928D87] text-white overflow-hidden z-20"
+                  className="relative py-12 bg-[#0B0F1A] text-white overflow-hidden z-20"
                 >
 
                 {/* 🌌 MOVING BACKGROUND ELEMENTS */}
