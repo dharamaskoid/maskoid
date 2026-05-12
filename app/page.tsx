@@ -271,7 +271,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 rounded-lg border cursor-pointer border border-[#dbe4ff] bg-white text-[#1a2e5e] hover:bg-[#f5f8ff] transition"
+                        className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm"
                       >
                         View Work
                       </motion.button>
@@ -675,11 +675,11 @@ const formatNumber = (num: number, suffix: string) => {
                     {/* BUTTONS */}
                     <div className="mt-10 flex flex-wrap gap-4">
 
-                      <button className="inline-flex items-center gap-2 mt-8 px-6 py-3 px-8 py-4 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
+                      <button className="inline-flex cursor-pointer items-center gap-2 mt-8 px-6 py-3 px-8 py-4 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
                         Work With Us →
                       </button>
 
-                      <button className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm">
+                      <button className="inline-flex cursor-pointer items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm">
                         View Case Studies →
                       </button>
 
