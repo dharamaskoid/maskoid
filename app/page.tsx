@@ -540,7 +540,7 @@ const formatNumber = (num: number, suffix: string) => {
                         </div>
 
                         <p className="text-[#6b7280] text-sm mt-4 leading-relaxed">
-                          Delivering measurable growth and premium digital experiences worldwide.
+                          Delivering real business growth for brands worldwide.
                         </p>
 
                         {/* BOTTOM LINE */}
