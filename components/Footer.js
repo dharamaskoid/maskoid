@@ -42,21 +42,14 @@ export default function Footer() {
           {/* BRAND */}
           <motion.div variants={fadeUp}>
             <a href="/" className="flex items-center">
-              <div className="relative p-3 rounded-2xl bg-[#0b1220] border border-white/10">
-
-                {/* subtle depth (not glow, just separation) */}
-                <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
-
-                <Image
-                  src="/images/Maskoid-Logo.png"
-                  alt="Logo"
-                  width={160}
-                  height={50}
-                  priority
-                  className="relative z-10 object-contain"
-                />
-
-              </div>
+              <Image
+                src="/images/Maskoid-Logo.png"
+                alt="Logo"
+                width={160}
+                height={50}
+                className="object-contain transition duration-300 hover:scale-110"
+                priority
+              />
             </a>
 
             <p className="text-gray-300 mt-5 text-sm leading-relaxed">
