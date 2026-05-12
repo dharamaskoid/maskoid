@@ -1214,7 +1214,7 @@ const formatNumber = (num: number, suffix: string) => {
                   {/* HEADER */}
                   <div className="text-center max-w-3xl mx-auto mb-20">
 
-                    <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
+                    <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase">
                       Contact Us
                     </p>
 
