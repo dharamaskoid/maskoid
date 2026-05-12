@@ -1236,12 +1236,12 @@ const formatNumber = (num: number, suffix: string) => {
                       <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
 
                       {/* FORM CARD */}
-                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-xl p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-xl px-8 md:px-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
 
 
 
                         {/* FORM */}
-                        <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                        <form onSubmit={handleSubmit} className="mt-8 mb-8 space-y-5">
 
                           <div className="grid md:grid-cols-2 gap-5">
                             <input
