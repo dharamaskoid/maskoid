@@ -307,46 +307,91 @@ const formatNumber = (num: number, suffix: string) => {
                 </div>
               </section>
 
-              {/* SLIDING TEXT SECTION */}
-              <section className="relative overflow-hidden py-12 bg-[#0B0F1A] border-t border-white/10">
+             {/* PREMIUM MARQUEE SECTION */}
+            <section className="relative overflow-hidden py-10 bg-gradient-to-r from-[#f8fbff] via-white to-[#eef4ff] border-y border-[#e5ecff]">
 
-                {/* LEFT FADE */}
-                <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0B0F1A] to-transparent z-10"></div>
+              {/* LEFT FADE */}
+              <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f8fbff] to-transparent z-10"></div>
 
-                {/* RIGHT FADE */}
-                <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0B0F1A] to-transparent z-10"></div>
+              {/* RIGHT FADE */}
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#f8fbff] to-transparent z-10"></div>
 
-              <div className="whitespace-nowrap animate-marquee gap-16 text-2xl md:text-4xl font-semibold text-white/80">
+              {/* MARQUEE */}
+              <div className="flex whitespace-nowrap animate-marquee gap-6">
 
-                  {[
-                      "Strategy",
-                      "Design",
-                      "Development",
-                      "Marketing",
-                      "Growth",
-                      "Performance"
-                  ]
-                    .concat([
-                      "Strategy",
-                      "Design",
-                      "Development",
-                      "Marketing",
-                      "Growth",
-                      "Performance"
-                      ])
-                    .map((item, i) => (
-                      <div key={i} className="flex items-center gap-6 hover:text-white transition">
+                {[
+                  {
+                    icon: "🚀",
+                    text: "Growth-Focused Strategy",
+                  },
+                  {
+                    icon: "🎯",
+                    text: "Conversion Optimization",
+                  },
+                  {
+                    icon: "💻",
+                    text: "Premium Web Design",
+                  },
+                  {
+                    icon: "📈",
+                    text: "SEO & Lead Generation",
+                  },
+                  {
+                    icon: "⚡",
+                    text: "Performance Marketing",
+                  },
+                  {
+                    icon: "🏆",
+                    text: "Trusted Business Growth",
+                  },
+                ]
+                  .concat([
+                    {
+                      icon: "🚀",
+                      text: "Growth-Focused Strategy",
+                    },
+                    {
+                      icon: "🎯",
+                      text: "Conversion Optimization",
+                    },
+                    {
+                      icon: "💻",
+                      text: "Premium Web Design",
+                    },
+                    {
+                      icon: "📈",
+                      text: "SEO & Lead Generation",
+                    },
+                    {
+                      icon: "⚡",
+                      text: "Performance Marketing",
+                    },
+                    {
+                      icon: "🏆",
+                      text: "Trusted Business Growth",
+                    },
+                  ])
+                  .map((item, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white border border-[#e5ecff] shadow-[0_10px_30px_rgba(43,76,154,0.08)] hover:-translate-y-1 transition-all duration-300"
+                    >
 
-                        <span>{item}</span>
-
-                        {/* DOT */}
-                        <span className="w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
-
+                      {/* ICON */}
+                      <div className="w-10 h-10 rounded-full bg-[#f3f7ff] flex items-center justify-center text-lg">
+                        {item.icon}
                       </div>
-                    ))}
 
-                </div>
-              </section>
+                      {/* TEXT */}
+                      <span className="text-[#1a2e5e] text-base md:text-lg font-semibold tracking-wide">
+                        {item.text}
+                      </span>
+
+                    </div>
+                  ))}
+
+              </div>
+</section>
 
               {/* About US section*/}
               <section className="py-24 bg-[#0B0F1A] text-white">
