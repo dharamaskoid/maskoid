@@ -722,155 +722,123 @@ const formatNumber = (num: number, suffix: string) => {
                         {/* ROW 2 - IMAGES LEFT + SERVICES RIGHT */}
                         <motion.div
                           variants={fadeUp}
-                          className="grid md:grid-cols-2 gap-16 items-center mt-20"
+                          className="grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start mt-16"
                         >
 
-                          {/* LEFT SIDE - IMAGES */}
-                          <motion.div
-                            
-                            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                            className="relative flex justify-center h-[450px]"
-                          >
+                          {/* LEFT CONTENT */}
+                          <div className="max-w-md">
 
-                            {/* IMAGE 1 - TOP RIGHT (BACK) */}
-                            <motion.div
-                              whileHover={{ scale: 1.05, rotate: 2 }}
-                              className="absolute top-0 right-0 w-80 h-60 rounded-2xl overflow-hidden shadow-xl z-0"
+                            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider">
+                              Services
+                            </p>
+
+                            <h2 className="text-3xl md:text-4xl font-bold mt-5 leading-tight text-[#111827]">
+
+                              We Build Digital Systems That{" "}
+
+                              <span className="text-[#2b4c9a]">
+                                Generate Growth & Revenue
+                              </span>
+
+                            </h2>
+
+                            <p className="mt-6 text-[#5b6475] leading-relaxed">
+                              We help businesses grow using websites, SEO, ads, and performance marketing strategies designed to convert visitors into customers.
+                            </p>
+
+                            {/* BUTTON */}
+                            <a
+                              href="/services"
+                              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm"
                             >
-                              <Image
-                                src="/images/seo.jpg"
-                                alt="service"
-                                fill
-                                className="object-cover"
-                              />
-                            </motion.div>
+                              Explore All Services →
+                            </a>
 
-                            {/* IMAGE 2 - BOTTOM LEFT (FRONT) */}
-                            <motion.div
-                              whileHover={{ scale: 1.05 }}
-                              className="absolute bottom-0 left-0 w-90 h-[280px] rounded-2xl overflow-hidden shadow-2xl z-10"
-                            >
-                              <Image
-                                src="/images/web-design.jpg"
-                                alt="service"
-                                fill
-                                className="object-cover"
-                              />
-                            </motion.div>
-                            {/* BADGE */} 
-                            <div className="absolute bottom-2 right-0 bg-blue-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-2 z-11">
-                              🚀 <span className="font-semibold">ROI Driven Growth</span> 
-                              </div>
+                          </div>
 
-                          </motion.div>
-
-
-                          {/* RIGHT SIDE - SERVICES */}
-                          <motion.div variants={stagger} className="mt-2 space-y-6">
+                          {/* RIGHT SERVICES GRID */}
+                          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                             {[
                               {
                                 num: "01",
-                                title: "Social Media Marketing",
-                                desc: "Grow your brand with targeted social media campaigns.",
-                                img: "/images/social-media.jpg",
-                                link: "/services/social-media-marketing",
+                                title: "Web Design",
+                                desc: "Beautiful, conversion-focused UI/UX designs.",
+                                icon: "🖥️",
                               },
                               {
                                 num: "02",
                                 title: "SEO Optimization",
-                                desc: "Rank higher on Google and get organic traffic daily.",
-                                img: "/images/seo.jpg",
-                                link: "/services/seo",
+                                desc: "Rank higher on Google and drive organic traffic.",
+                                icon: "📈",
                               },
                               {
                                 num: "03",
                                 title: "PPC Advertising",
-                                desc: "High-converting ads that bring instant leads & sales.",
-                                img: "/images/ppc.jpg",
-                                link: "/services/social-media-marketing",
+                                desc: "High-converting ads that bring instant leads.",
+                                icon: "🎯",
                               },
                               {
                                 num: "04",
-                                title: "Web Design",
-                                desc: "Modern, clean and conversion-focused UI/UX designs.",
-                                img: "/images/web-design.jpg",
-                                link: "/services/web-design",
+                                title: "Social Media Marketing",
+                                desc: "Grow your brand and engage ideal customers.",
+                                icon: "📱",
                               },
                               {
                                 num: "05",
                                 title: "Web Development",
-                                desc: "Fast, scalable and SEO-friendly website development.",
-                                img: "/images/web-dev.jpg",
-                                link: "/services/web-development",
+                                desc: "Fast, scalable and SEO-friendly websites.",
+                                icon: "⚙️",
                               },
                             ].map((item, i) => (
+
                               <motion.div
                                 key={i}
                                 variants={fadeUp}
-                                whileHover={{ x: 10 }}
-                                className="flex gap-6 items-start group cursor-pointer"
+                                whileHover={{ y: -6 }}
+                                transition={{ duration: 0.25 }}
+                                className="group relative bg-white border border-[#e8ecf5] rounded-2xl p-6 shadow-sm hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)] transition-all duration-300"
                               >
 
-                                {/* NUMBER */}
-                                <div className="text-blue-600 font-bold w-10">
-                                  {item.num}
-                                </div>
+                                {/* TOP */}
+                                <div className="flex items-start justify-between">
 
-                                {/* LINE */}
-                                <div className="w-px h-10 bg-gray-300 group-hover:bg-blue-500 transition" />
-
-                                {/* CONTENT */}
-                                <div>
-                                  <h3 className="font-semibold text-lg group-hover:text-blue-600 transition">
-                                    {item.title}
-                                  </h3>
-                                  <p className="text-gray-500 text-sm mt-1">
-                                    {item.desc}
-                                  </p>
-                                </div>
-                              
-                                {/* 🔥 IMAGE + BUTTON SIDE BY SIDE */}
-                                <div className="absolute left-full top-0 flex items-center gap-3 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition duration-300 z-50">
-
-                                  <div className="relative w-52 h-36 rounded-xl overflow-hidden bg-transparent">
-
-                                    {/* WIPE REVEAL IMAGE */}
-                                    <div className="absolute inset-0 
-                                      [clip-path:inset(0_100%_0_0)] 
-                                      group-hover:[clip-path:inset(0_0%_0_0)] 
-                                      transition-all duration-1200 ease-in-out">
-
-                                      <Image
-                                        src={item.img}
-                                        alt={item.title}
-                                        fill
-                                        className="object-cover"
-                                      />
-
-                                    </div>
-
+                                  {/* ICON */}
+                                  <div className="w-12 h-12 rounded-xl bg-[#eef4ff] flex items-center justify-center text-2xl">
+                                    {item.icon}
                                   </div>
 
-                                  {/* 🔥 BUTTON ON RIGHT */}
-                                  <a
-                                  href={item.link}
-                                  className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full shadow-lg hover:scale-110 transition"
-                                >
-                                  ➜
-                                </a>
+                                  {/* NUMBER */}
+                                  <span className="text-sm font-bold text-[#2b4c9a]">
+                                    {item.num}
+                                  </span>
+
+                                </div>
+
+                                {/* CONTENT */}
+                                <div className="mt-5">
+
+                                  <h3 className="text-lg font-bold text-[#111827] group-hover:text-[#2b4c9a] transition">
+                                    {item.title}
+                                  </h3>
+
+                                  <p className="mt-2 text-sm leading-relaxed text-[#6b7280]">
+                                    {item.desc}
+                                  </p>
 
                                 </div>
 
                               </motion.div>
+
                             ))}
 
-                          </motion.div>
+                          </div>
 
                         </motion.div>
+                                                
 
-                      </div>
-                </motion.section>
+                    </div>
+                  </motion.section>
 
 
               {/* ================= COUNTER SECTION ================= */}
