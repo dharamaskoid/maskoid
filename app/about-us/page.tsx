@@ -60,7 +60,7 @@ export default function AboutUsPage() {
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-24 lg:py-32 relative z-10">
+        <div className="container mx-auto px-6 py-24 lg:py-32 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* LEFT */}
             <div>
@@ -77,30 +77,6 @@ export default function AboutUsPage() {
                 We are a digital growth agency helping businesses scale using premium websites, SEO systems, paid marketing, and performance-driven strategies.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <button className="px-7 py-4 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
-                  Work With Us →
-                </button>
-
-                <button className="px-7 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white hover:text-[#071120] transition-all duration-300 font-semibold backdrop-blur-xl">
-                  View Projects
-                </button>
-              </div>
-
-              {/* STATS */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-14">
-                {[
-                  ["10+", "Years Experience"],
-                  ["300+", "Happy Clients"],
-                  ["1000+", "Projects Completed"],
-                  ["24/7", "Support Available"],
-                ].map((item, i) => (
-                  <div key={i}>
-                    <h3 className="text-2xl font-bold text-white">{item[0]}</h3>
-                    <p className="text-sm text-[#B7C2D8] mt-1">{item[1]}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* RIGHT */}
@@ -111,7 +87,7 @@ export default function AboutUsPage() {
                 <img
                   src="/images/about-banner.jpg"
                   alt="About"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[450px] object-cover"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-transparent to-transparent"></div>
