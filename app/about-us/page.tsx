@@ -60,7 +60,7 @@ export default function AboutUsPage() {
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
         </div>
 
-        <div className="container mx-auto px-6 py-24 lg:py-32 relative z-10">
+        <div className="container mx-auto px-6 py-14 lg:py-32 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* LEFT */}
             <div>
