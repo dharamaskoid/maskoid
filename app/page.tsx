@@ -991,27 +991,45 @@ const formatNumber = (num: number, suffix: string) => {
                 {/* SLIDER WRAPPER */}
                 <div className="relative">
 
-                    {/* OUTSIDE NAVIGATION */}
-                    <div className="absolute inset-y-0 -left-6 -right-6 flex items-center justify-between z-30 pointer-events-none">
+                  {/* CUSTOM NAVIGATION */}
+                  <div className="absolute inset-y-0 -left-6 -right-6 flex items-center justify-between z-30 pointer-events-none">
 
-                      <button className="projects-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
-                        <ChevronLeft size={20} />
-                      </button>
+                    <button className="projects-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
 
-                      <button className="projects-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
-                        <ChevronRight size={20} />
-                      </button>
+                      <ChevronLeft size={20} />
 
-                    </div>
+                    </button>
 
-                    <Swiper
-                      modules={[Navigation, Autoplay]}
-                      navigation={{
-                        prevEl: ".projects-prev",
-                        nextEl: ".projects-next",
-                      }}
-                      className="projects-slider"
-                    >
+                    <button className="projects-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
+
+                      <ChevronRight size={20} />
+
+                    </button>
+
+                  </div>
+
+                  <Swiper
+                    modules={[Navigation, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    autoplay={{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }}
+                    navigation={{
+                      prevEl: ".projects-prev",
+                      nextEl: ".projects-next",
+                    }}
+                    breakpoints={{
+                      768: {
+                        slidesPerView: 2,
+                      },
+                      1024: {
+                        slidesPerView: 3,
+                      },
+                    }}
+                    className="projects-slider !overflow-visible"
+                  >
 
                     {/* ================= CATER SPOON ================= */}
                     {(activeTab === "all" || activeTab === "web") && (
