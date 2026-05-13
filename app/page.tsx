@@ -594,7 +594,7 @@ const formatNumber = (num: number, suffix: string) => {
                     </span>
 
                     {/* HEADING */}
-                    <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+                    <h2 className="mt-6 text-4xl md:text-4xl font-bold leading-tight tracking-tight">
 
                       Crafting Digital Experiences That Drive{" "}
 
@@ -743,7 +743,7 @@ const formatNumber = (num: number, suffix: string) => {
                               Services
                             </p>
 
-                            <h2 className="text-4xl md:text-3xl font-bold mt-5 leading-tight text-[#1a2e5e]">
+                            <h2 className="text-4xl md:text-4xl font-bold mt-5 leading-tight text-[#1a2e5e]">
 
                               We Build Digital Systems That{" "}
 
