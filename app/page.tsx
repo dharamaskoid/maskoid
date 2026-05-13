@@ -203,7 +203,8 @@ const formatNumber = (num: number, suffix: string) => {
     <main className="bg-[#0B0F1A] text-white pt-[81.5px] lg:pt-[81.5px]">
 
               {/* HERO SECTION */}
-              <section className="relative overflow-hidden min-h-[750px] flex items-start md:items-center px-6 md:px-12 lg:px-24 pt-32 md:pt-0 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef4ff]">
+              <section className="relative overflow-hidden flex items-center px-6 md:px-12 lg:px-24 py-12 md:py-16 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef4ff]">
+
               {/* BACKGROUND GLOW */}
               <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/10 blur-3xl rounded-full"></div>
 
