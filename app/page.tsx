@@ -768,25 +768,24 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           {/* RIGHT SERVICES GRID */}
-                            <Swiper
-                              modules={[Autoplay, Navigation]}
-                              navigation={true}
-                              spaceBetween={24}
-                              slidesPerView={1}
-                              autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: false,
-                              }}
-                              breakpoints={{
-                                640: {
-                                  slidesPerView: 2,
-                                },
-                                1024: {
-                                  slidesPerView: 3,
-                                },
-                              }}
-                              className="servicesSwiper w-full"
-                            >
+                          <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={24}
+                            slidesPerView={1}
+                            autoplay={{
+                              delay: 2500,
+                              disableOnInteraction: false,
+                            }}
+                            breakpoints={{
+                              640: {
+                                slidesPerView: 2,
+                              },
+                              1024: {
+                                slidesPerView: 3,
+                              },
+                            }}
+                            className="w-full"
+                          >
 
                             {[
                               {
