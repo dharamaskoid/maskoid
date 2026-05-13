@@ -258,14 +258,14 @@ const formatNumber = (num: number, suffix: string) => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4, duration: 0.8 }}
-                      className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4 w-full"
+                      className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center md:justify-start items-center sm:items-start gap-4"
                     >
 
                       {/* PRIMARY BUTTON */}
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl cursor-pointer bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300 w-full sm:w-auto"
+                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl cursor-pointer bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300"
                       >
                         Book Strategy Call
                       </motion.button>
@@ -274,7 +274,7 @@ const formatNumber = (num: number, suffix: string) => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm cursor-pointer w-full sm:w-auto"
+                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm cursor-pointer"
                       >
                         View Work
                       </motion.button>
