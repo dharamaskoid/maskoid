@@ -141,7 +141,7 @@ export default function Header() {
             <Link href="/" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Home
             </Link>
-            <Link href="/about" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <Link href="/about-us" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
                 About Us
             </Link>
 
