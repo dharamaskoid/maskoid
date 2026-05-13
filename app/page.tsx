@@ -258,7 +258,7 @@ const formatNumber = (num: number, suffix: string) => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4, duration: 0.8 }}
-                      className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center md:justify-start items-center sm:items-start gap-4"
+                      className="mt-6 md:mt-8 flex flex-row flex-wrap justify-center md:justify-start gap-4"
                     >
 
                       {/* PRIMARY BUTTON */}
