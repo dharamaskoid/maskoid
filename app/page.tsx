@@ -930,7 +930,7 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           {/* LABEL */}
-                          <p className="mt-1 text-sm text-[#6b7280] font-medium">
+                          <p className="mt-1 text-sm text-[#5b6475] font-medium">
                             {item.label}
                           </p>
 
@@ -967,7 +967,7 @@ const formatNumber = (num: number, suffix: string) => {
                     Latest Completed <span className="text-blue-500">Projects</span>
                   </h2>
 
-                  <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+                  <p className="text-[#5b6475] mt-4 max-w-2xl mx-auto">
                     We design and develop high-performance websites and marketing systems.
                   </p>
                 </div>
@@ -1073,7 +1073,7 @@ const formatNumber = (num: number, suffix: string) => {
                               Cater Spoon Mumbai
                             </h3>
 
-                            <p className="text-gray-400 text-sm mt-2">
+                            <p className="text-[#5b6475] text-sm mt-2">
                               Luxury catering website with premium UI & SEO system.
                             </p>
                           </div>
@@ -1117,7 +1117,7 @@ const formatNumber = (num: number, suffix: string) => {
                               Pakhtoons
                             </h3>
 
-                            <p className="text-gray-400 text-sm mt-2">
+                            <p className="text-[#5b6475] text-sm mt-2">
                               SEO optimized business website with performance focus.
                             </p>
                           </div>
@@ -1161,7 +1161,7 @@ const formatNumber = (num: number, suffix: string) => {
                               Vayoraa
                             </h3>
 
-                            <p className="text-gray-400 text-sm mt-2">
+                            <p className="text-[#5b6475] text-sm mt-2">
                               Conversion-focused modern website with branding & SEO.
                             </p>
                           </div>

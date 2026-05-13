@@ -49,7 +49,7 @@ const BrandMarquee = () => {
                 Powering Growth for <span className="text-blue-500">Modern Businesses</span>
             </h2>
 
-            <p className="text-gray-500 mt-4 max-w-xl mx-auto animate-titleSub">
+            <p className="text-[#5b6475] mt-4 max-w-xl mx-auto animate-titleSub">
                 We help companies scale with high-performing digital systems.
             </p>
 
