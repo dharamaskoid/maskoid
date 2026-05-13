@@ -200,7 +200,7 @@ const formatNumber = (num: number, suffix: string) => {
 
 
   return (
-    <main className="bg-[#0B0F1A] text-white">
+    <main className="bg-[#0B0F1A] text-white pt-[81.5px] lg:pt-[81.5px]">
 
               {/* HERO SECTION */}
               <section className="relative overflow-hidden min-h-[750px] flex items-start md:items-center px-6 md:px-12 lg:px-24 pt-32 md:pt-0 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef4ff]">
