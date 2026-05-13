@@ -1010,7 +1010,7 @@ const formatNumber = (num: number, suffix: string) => {
                         prevEl: ".projects-prev",
                         nextEl: ".projects-next",
                       }}
-                      className="projects-slider !overflow-visible"
+                      className="projects-slider"
                     >
 
                     {/* ================= CATER SPOON ================= */}
