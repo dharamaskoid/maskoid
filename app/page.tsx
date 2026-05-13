@@ -1215,10 +1215,9 @@ const formatNumber = (num: number, suffix: string) => {
 
                 <a
                   href="/projects"
-                  className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm"
+                  className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-[#2b4c9a] hover:bg-white hover:text-[#2b4c9a] transition-all duration-300 text-white font-semibold shadow-sm"
                 >
                   View More Projects
-                  <span className="text-lg">→</span>
                 </a>
 
 
