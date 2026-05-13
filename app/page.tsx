@@ -791,7 +791,7 @@ const formatNumber = (num: number, suffix: string) => {
                               }}
                               loop={true}
                               grabCursor={true}
-                              className="servicesSwiper w-full !pb-20"
+                              className="servicesSwiper w-full !py-20 "
                             >
 
                             {[
