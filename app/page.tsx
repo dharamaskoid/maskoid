@@ -763,7 +763,7 @@ const formatNumber = (num: number, suffix: string) => {
                               href="/services"
                               className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-[#2b4c9a] hover:bg-white hover:text-[#2b4c9a] transition-all duration-300 text-white font-semibold shadow-sm"
                             >
-                              Explore All Services →
+                              Explore All Services
                             </a>
 
                           </div>
