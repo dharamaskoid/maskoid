@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Testimonials from "@/components/Testimonials";
 import BrandMarquee from "@/components/TrustSection";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
