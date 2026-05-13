@@ -676,16 +676,16 @@ const formatNumber = (num: number, suffix: string) => {
                     </div>
 
                     {/* BUTTONS */}
-                    <div className="mt-10 flex flex-row flex-wrap justify-center md:justify-start gap-4">
+                    <div className="mt-10 flex flex-nowrap justify-center md:justify-start gap-3 sm:gap-4">
 
                       {/* PRIMARY BUTTON */}
-                      <button className="inline-flex cursor-pointer items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#2b4c9a] text-white hover:bg-white hover:text-[#2b4c9a] border border-transparent hover:border-[#2b4c9a]/20 transition-all duration-300 font-semibold shadow-[0_10px_40px_rgba(43,76,154,0.35)]">
-                        Work With Us
+                      <button className="inline-flex cursor-pointer items-center justify-center gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-xl bg-[#2b4c9a] text-white hover:bg-white hover:text-[#2b4c9a] border border-transparent hover:border-[#2b4c9a]/20 transition-all duration-300 font-semibold text-sm sm:text-base shadow-[0_10px_40px_rgba(43,76,154,0.35)] whitespace-nowrap">
+                        Work With Us →
                       </button>
 
                       {/* SECONDARY BUTTON */}
-                      <button className="inline-flex cursor-pointer items-center justify-center gap-2 px-6 py-4 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm">
-                        View Case Studies
+                      <button className="inline-flex cursor-pointer items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold text-sm sm:text-base shadow-sm whitespace-nowrap">
+                        View Case Studies →
                       </button>
 
                     </div>
