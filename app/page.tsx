@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Testimonials from "@/components/Testimonials";
 import BrandMarquee from "@/components/TrustSection";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import {
   Monitor,
   BarChart3,
@@ -768,24 +769,29 @@ const formatNumber = (num: number, suffix: string) => {
                           </div>
 
                           {/* RIGHT SERVICES GRID */}
-                          <Swiper
-                            modules={[Autoplay]}
-                            spaceBetween={24}
-                            slidesPerView={1}
-                            autoplay={{
-                              delay: 2500,
-                              disableOnInteraction: false,
-                            }}
-                            breakpoints={{
-                              640: {
-                                slidesPerView: 2,
-                              },
-                              1024: {
-                                slidesPerView: 3,
-                              },
-                            }}
-                            className="w-full"
-                          >
+                            <Swiper
+                              modules={[Autoplay, Pagination]}
+                              pagination={{
+                                clickable: true,
+                              }}
+                              spaceBetween={24}
+                              slidesPerView={1}
+                              autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                              }}
+                              breakpoints={{
+                                640: {
+                                  slidesPerView: 2,
+                                },
+                                1024: {
+                                  slidesPerView: 3,
+                                },
+                              }}
+                              loop={true}
+                              grabCursor={true}
+                              className="servicesSwiper w-full pb-14"
+                            >
 
                             {[
                               {

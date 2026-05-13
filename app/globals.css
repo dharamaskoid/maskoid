@@ -151,3 +151,23 @@ body {
 }
 
 
+/* PAGINATION WRAPPER */
+.servicesSwiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+/* DOT */
+.servicesSwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #c7d2fe;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.servicesSwiper .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #2b4c9a;
+}
