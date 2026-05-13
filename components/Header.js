@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Header() {
       <div className="container mx-auto px-6 py-5 md:py-6 flex items-center justify-between">
 
         {/* LOGO */}
-        <a href="/" className="flex items-center">
+        <link href="/" className="flex items-center">
           <Image
             src="/images/Maskoid-Logo.png"
             alt="Logo"
@@ -43,7 +44,7 @@ export default function Header() {
             className="object-contain transition hover:scale-105"
             priority
           />
-        </a>
+        </link>
 
         {/* DESKTOP MENU */}
         <nav className="hidden md:flex gap-6 lg:gap-8 text-[#1a2e5e] text-base font-semibold">
@@ -56,7 +57,7 @@ export default function Header() {
               <div key={item} className="relative group">
 
                 {/* MAIN LINK */}
-                <a
+                <link
                   href={`/${item === "Home" ? "" : item.toLowerCase().replace(/\s+/g, "-")}`}
                   className="relative flex items-center gap-1 hover:text-[#2b4c9a] transition group"
                 >
@@ -68,7 +69,7 @@ export default function Header() {
                   )}
 
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2A4D9B] transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </link>
 
                 {/* 🔥 DROPDOWN (ONLY FOR SERVICES) */}
                 {isServices && (
@@ -84,12 +85,12 @@ export default function Header() {
                         { name: "Web Development", link: "/services/web-development" },
                       ].map((service, i) => (
                         <li key={i}>
-                          <a
+                          <link
                             href={service.link}
                             className="block px-5 py-3 text-base text-[#42526b] hover:text-[#2b4c9a] hover:bg-[#f5f8ff] transition"
                           >
                             {service.name}
-                          </a>
+                          </link>
                         </li>
                       ))}
 
@@ -106,12 +107,12 @@ export default function Header() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <a
+          <link
             href="/contact"
             className="px-8 py-3.5 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] transition-all duration-300 text-white shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
           >
             Get Quote
-          </a>
+          </link>
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -137,24 +138,24 @@ export default function Header() {
           >
 
             {/* HOME */}
-            <a href="/" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <link href="/" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Home
-            </a>
-            <a href="/about" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            </link>
+            <link href="/about" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
                 About Us
-            </a>
+            </link>
 
             {/* 🔥 SERVICES DROPDOWN */}
             <div>
               <div className="flex justify-between items-center">
 
                 {/* 👉 SAME AS DESKTOP (MAIN LINK) */}
-                <a
+                <link
                   href="/services"
                   className="text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
                 >
                   Services
-                </a>
+                </link>
 
 
 
@@ -187,34 +188,34 @@ export default function Header() {
                       { name: "Web Design", link: "/services/web-design" },
                       { name: "Web Development", link: "/services/web-development" },
                     ].map((service, i) => (
-                      <a
+                      <link
                         key={i}
                         href={service.link}
                         className="block text-base text-[#1a2e5e] hover:text-white transition"
                       >
                         {service.name}
-                      </a>
+                      </link>
                     ))}
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
             {/* OTHER LINKS */}
-            <a href="/projects" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <link href="/projects" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Projects
-            </a>
+            </link>
 
-            <a href="/contact" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+            <link href="/contact" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Contact
-            </a>
+            </link>
 
             {/* CTA */}
-            <a
+            <link
               href="/contact"
               className="block text-center px-8 py-3.5 rounded-lg bg-[#2b4c9a] hover:bg-[#1f3d84] hover:scale-105 transition text-white shadow-lg"
             >
               Get Quote
-            </a>
+            </link>
 
           </motion.div>
         )}
