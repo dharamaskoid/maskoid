@@ -31,7 +31,7 @@ export default function Testimonials() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
 
             {/* TITLE */}
-            <h2 className="text-3xl md:text-5xl font-bold text-white">
+            <h2 className="text-4xl md:text-4xl font-bold text-white">
               What Our <span className="text-[#6EA8FF]">Clients Say</span>
             </h2>
 
