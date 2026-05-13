@@ -988,20 +988,19 @@ const formatNumber = (num: number, suffix: string) => {
 
                 </div>
 
-                {/* GRID */}
                 {/* SLIDER WRAPPER */}
                 <div className="relative">
 
                   {/* CUSTOM NAVIGATION */}
-                  <div className="absolute -top-20 right-0 flex gap-3 z-20">
+                  <div className="absolute inset-y-0 -left-6 -right-6 flex items-center justify-between z-30 pointer-events-none">
 
-                    <button className="projects-prev w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#2b4c9a] transition flex items-center justify-center">
+                    <button className="projects-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
 
                       <ChevronLeft size={20} />
 
                     </button>
 
-                    <button className="projects-next w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#2b4c9a] transition flex items-center justify-center">
+                    <button className="projects-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
 
                       <ChevronRight size={20} />
 
