@@ -151,3 +151,46 @@ body {
 }
 
 
+/* SWIPER NAVIGATION */
+.servicesSwiper .swiper-button-prev,
+.servicesSwiper .swiper-button-next {
+  width: 46px;
+  height: 46px;
+  border-radius: 9999px;
+  background: white;
+  border: 1px solid #dbe7ff;
+  box-shadow: 0 10px 30px rgba(43, 76, 154, 0.12);
+  color: #2b4c9a;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.servicesSwiper .swiper-button-prev:hover,
+.servicesSwiper .swiper-button-next:hover {
+  background: #2b4c9a;
+  color: white;
+}
+
+/* ICON SIZE */
+.servicesSwiper .swiper-button-prev::after,
+.servicesSwiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* VERTICALLY CENTER */
+.servicesSwiper .swiper-button-prev,
+.servicesSwiper .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* LEFT POSITION */
+.servicesSwiper .swiper-button-prev {
+  left: -22px;
+}
+
+/* RIGHT POSITION */
+.servicesSwiper .swiper-button-next {
+  right: -22px;
+}
