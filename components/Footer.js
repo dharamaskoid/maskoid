@@ -116,7 +116,7 @@ export default function Footer() {
 
           {/* LINKS */}
           <motion.div variants={fadeUp}>
-            <h3 className="font-semibold mb-5 text-white">Quick Links</h3>
+            <h3 className="font-semibold mb-5 text-white uppercase">Quick Links</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
               {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item, i) => (
                 <li key={i}>
@@ -134,7 +134,7 @@ export default function Footer() {
 
           {/* SERVICES */}
           <motion.div variants={fadeUp}>
-            <h3 className="font-semibold mb-5 text-white">Services</h3>
+            <h3 className="font-semibold mb-5 text-white uppercase">Services</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
               {["Social Media Marketing", "SEO Service", "PPC Service", "Web Design", "Web Development"].map((item, i) => (
                 <li
@@ -150,12 +150,12 @@ export default function Footer() {
           </motion.div>
 
         <motion.div variants={fadeUp}>
-        <h3 className="font-semibold mb-4 text-white">Get in Touch</h3>
+        <h3 className="font-semibold mb-4 text-white uppercase">Get in Touch</h3>
 
         <div className="space-y-3 text-sm">
 
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-300">USA</span>
+            <span className="text-gray-300 font-bold">USA</span>
             <div className="text-right text-gray-300 space-x-2">
                 <a href="tel:+17867721488" className="hover:text-white">+1 786 772 1488</a>
                 <span className="text-gray-600">•</span>
@@ -164,21 +164,21 @@ export default function Footer() {
             </div>
 
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-300">Texas</span>
+            <span className="text-gray-300 font-bold">Texas</span>
             <a href="tel:+18722034220" className="text-gray-300 hover:text-white">
                 +1 872 203 4220
             </a>
             </div>
 
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-300">Australia</span>
+            <span className="text-gray-300 font-bold">Australia</span>
             <a href="tel:+61420201910" className="text-gray-300 hover:text-white">
                 +61 420 201 910
             </a>
             </div>
 
             <div className="flex items-start justify-between gap-2">
-            <span className="text-gray-300">Bahrain</span>
+            <span className="text-gray-300 font-bold">Bahrain</span>
             <a href="tel:+97333232707" className="text-gray-300 hover:text-white">
                 +973 3323 2707
             </a>
@@ -188,12 +188,12 @@ export default function Footer() {
         </motion.div>
 
         <motion.div variants={fadeUp}>
-        <h3 className="font-semibold mb-4 text-white">Contact</h3>
+        <h3 className="font-semibold mb-4 text-white uppercase">Contact</h3>
 
         <div className="space-y-3 text-sm">
 
             <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300">India</span>
+            <span className="text-gray-300 font-bold">India</span>
             <div className="text-right text-gray-300 space-x-2">
                 <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
                 <span className="text-gray-600">•</span>
@@ -202,14 +202,14 @@ export default function Footer() {
             </div>
 
             <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300">Sales</span>
+            <span className="text-gray-300 font-bold">Sales</span>
             <a href="tel:+919510566027" className="text-gray-300 hover:text-white">
                 951 056 6027
             </a>
             </div>
 
             <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300">Careers</span>
+            <span className="text-gray-300 font-bold">Careers</span>
             <a href="tel:+16479786476" className="text-gray-300 hover:text-white">
                 +1 647 978 6476
             </a>
