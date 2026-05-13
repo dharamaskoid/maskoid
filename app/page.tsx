@@ -1235,7 +1235,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Your Name"
-                              className="h-12 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
                               required
                             />
 
@@ -1244,7 +1244,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="h-12 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
                               required
                             />
                           </div>
@@ -1255,7 +1255,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="Phone Number"
-                              className="h-12 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
                               required
                             />
 
@@ -1264,7 +1264,7 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.subject}
                               onChange={handleChange}
                               placeholder="Project Type"
-                              className="h-12 px-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
                             />
                           </div>
 
@@ -1272,16 +1272,16 @@ const formatNumber = (num: number, suffix: string) => {
                             name="message"
                             value={form.message}
                             onChange={handleChange}
-                            rows={3}
+                            rows={2}
                             placeholder="Tell us about your project..."
-                            className="w-full p-5 rounded-xl bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e] resize-none"
+                            className="w-full p-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e] resize-none"
                             required
                           />
 
                           <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-12 cursor-pointer rounded-xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
+                            className="w-full h-10 cursor-pointer rounded-lg bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
                           >
                             {loading ? "Sending..." : "Send Message →"}
                           </button>
