@@ -776,6 +776,7 @@ const formatNumber = (num: number, suffix: string) => {
                               }}
                               spaceBetween={24}
                               slidesPerView={1}
+                              centeredSlides={false}
                               autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
@@ -790,7 +791,7 @@ const formatNumber = (num: number, suffix: string) => {
                               }}
                               loop={true}
                               grabCursor={true}
-                              className="servicesSwiper w-full pb-14"
+                              className="servicesSwiper w-full !pb-20"
                             >
 
                             {[
@@ -836,7 +837,7 @@ const formatNumber = (num: number, suffix: string) => {
                                 >
 
                                   {/* TOP */}
-                                  <div className="flex items-start justify-between">
+                                  <div className="flex items-center justify-between">
 
                                     {/* ICON */}
                                     <div className="w-12 h-12 rounded-xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300">
