@@ -44,10 +44,10 @@ const BrandMarquee = () => {
             </p>
             
             {/* TITLE */}
-            <h2 className="text-4xl md:text-4xl font-bold text-white">
-              Powering Growth for Modern Businesses <span className="text-[#6EA8FF]">Modern Businesses</span>
-            </h2>
 
+            <h2 className="text-4xl md:text-4xl font-bold text-[#1a2e5e] mt-3 animate-titleMain">
+                Powering Growth for <span className="text-blue-500">Modern Businesses</span>
+            </h2>
 
             <p className="text-gray-500 mt-4 max-w-xl mx-auto animate-titleSub">
                 We help companies scale with high-performing digital systems.
