@@ -1163,6 +1163,50 @@ const formatNumber = (num: number, suffix: string) => {
                       </SwiperSlide>
                     )}
 
+                    {/* ================= VAYORAA ================= */}
+                    {(activeTab === "all" || activeTab === "web") && (
+                      <SwiperSlide>
+
+                        <a
+                          href="https://vayoraa.in/"
+                          rel="noopener noreferrer"
+                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+                        >
+
+                          <div className="relative h-[320px] flex items-center justify-center">
+
+                            <img
+                              src="/images/Vayoraa-about.png"
+                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+                            />
+
+                            <img
+                              src="/images/Vayoraa-home.png"
+                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+                            />
+
+                            <img
+                              src="/images/Vayoraa-contact.png"
+                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+                            />
+
+                          </div>
+
+                          <div className="p-6 text-center">
+                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
+                              Vayoraa
+                            </h3>
+
+                            <p className="text-[#5b6475] text-sm mt-2">
+                              Conversion-focused modern website with branding & SEO.
+                            </p>
+                          </div>
+
+                        </a>
+
+                      </SwiperSlide>
+                    )}
+
                   </Swiper>
 
                 </div>
