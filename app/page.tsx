@@ -734,7 +734,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                         <motion.div
                           variants={fadeUp}
-                          className="grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start"
+                          className="grid lg:grid-cols-[1fr_1.4fr] gap-14 items-center"
                         >
 
                           {/* LEFT CONTENT */}
@@ -837,7 +837,7 @@ const formatNumber = (num: number, suffix: string) => {
                                 >
 
                                   {/* TOP */}
-                                  <div className="flex items-center justify-between">
+                                  <div className="flex items-start justify-between">
 
                                     {/* ICON */}
                                     <div className="w-12 h-12 rounded-xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300">
