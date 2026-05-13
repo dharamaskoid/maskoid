@@ -1217,7 +1217,7 @@ const formatNumber = (num: number, suffix: string) => {
                         Contact Us
                       </p>
 
-                      <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight">
+                      <h2 className="mt-6 text-4xl md:text-4xl font-bold leading-tight">
                         Let’s Build Something{" "}
                         <span className="text-[#6EA8FF]">Amazing Together</span>
                       </h2>
