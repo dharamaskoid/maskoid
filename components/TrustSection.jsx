@@ -42,10 +42,12 @@ const BrandMarquee = () => {
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider hover:bg-blue-500/20 transition">
                 Trusted by brands
             </p>
-
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-gray-900 animate-titleMain">
-                Powering Growth for Modern Businesses
+            
+            {/* TITLE */}
+            <h2 className="text-4xl md:text-4xl font-bold text-white">
+              Powering Growth for Modern Businesses <span className="text-[#6EA8FF]">Modern Businesses</span>
             </h2>
+
 
             <p className="text-gray-500 mt-4 max-w-xl mx-auto animate-titleSub">
                 We help companies scale with high-performing digital systems.
