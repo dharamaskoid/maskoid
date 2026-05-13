@@ -43,7 +43,7 @@ export default function Footer() {
           <motion.div variants={fadeUp}>
             <a href="/" className="flex items-center">
               <Image
-                src="/images/Maskoid-Logo.png"
+                src="/images/Maskoid-Logofooter.png"
                 alt="Logo"
                 width={160}
                 height={50}
