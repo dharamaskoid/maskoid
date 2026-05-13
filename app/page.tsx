@@ -428,11 +428,11 @@ const formatNumber = (num: number, suffix: string) => {
                         {/* ITEM */}
                         <div className="flex items-center gap-3">
 
-                          <div className="text-[#4c74e6]">
+                          <div className="text-[#2b4c9a]">
                             {item.icon}
                           </div>
 
-                          <span className="text-[#1a2e5e] text-sm md:text-base font-semibold">
+                          <span className="text-[#2b4c9a] text-sm md:text-base font-semibold">
                             {item.text}
                           </span>
 
