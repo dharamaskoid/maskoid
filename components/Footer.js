@@ -216,7 +216,7 @@ export default function Footer() {
             </div>
 
             <div className="flex justify-between">
-            <span className="text-gray-300">Email</span>
+            <span className="text-gray-300 font-bold">Email</span>
             <a
                 href="mailto:contact@maskoid.com"
                 className="text-[#6EA8FF] hover:text-white"
