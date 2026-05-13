@@ -51,7 +51,7 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <main className="bg-white overflow-hidden text-[#111827] pt-24 lg:pt-28">
+    <main className="bg-white overflow-hidden text-[#111827] pt-[81.5px] lg:pt-[81.5px]">
       {/* HERO SECTION */}
       <section className="relative bg-[#071120] text-white overflow-hidden">
         {/* BACKGROUND */}
