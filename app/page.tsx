@@ -1028,7 +1028,7 @@ const formatNumber = (num: number, suffix: string) => {
                         slidesPerView: 3,
                       },
                     }}
-                    className="projects-slider !overflow-visible"
+                    className="projects-slider"
                   >
 
                     {/* ================= CATER SPOON ================= */}
