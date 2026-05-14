@@ -436,7 +436,7 @@ const formatNumber = (num: number, suffix: string) => {
                             {item.icon}
                           </div>
 
-                          <span className="text-[#2b4c9a] text-sm md:text-base font-semibold">
+                          <span className="text-[#2b4c9a] text-2xl md:text-2xl font-semibold">
                             {item.text}
                           </span>
 
