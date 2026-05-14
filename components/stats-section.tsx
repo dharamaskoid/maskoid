@@ -110,6 +110,7 @@ const formatNumber = (num: number, suffix: string) => {
   return (
           <section
           ref={sectionRef}
+          
                 className="relative py-10 px-6 bg-[#EEF4FF] overflow-hidden z-20"
               >
 

@@ -29,7 +29,9 @@ export default function OurStorySection() {
           {/* Right Content - Cards - 60% */}
           <div className="w-full lg:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Our Mission */}
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-sm shadow-[0_10px_40px_rgba(59,89,152,0.08)] 
+hover:shadow-[0_20px_60px_rgba(59,89,152,0.16)] 
+transition-all duration-300">
               <div className="mb-4">
                 <svg
                   width="48"
@@ -58,7 +60,9 @@ export default function OurStorySection() {
             </div>
 
             {/* Our Vision */}
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-sm shadow-[0_10px_40px_rgba(59,89,152,0.08)] 
+hover:shadow-[0_20px_60px_rgba(59,89,152,0.16)] 
+transition-all duration-300">
               <div className="mb-4">
                 <svg
                   width="48"
@@ -81,7 +85,9 @@ export default function OurStorySection() {
             </div>
 
             {/* Our Approach */}
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-sm shadow-[0_10px_40px_rgba(59,89,152,0.08)] 
+hover:shadow-[0_20px_60px_rgba(59,89,152,0.16)] 
+transition-all duration-300">
               <div className="mb-4">
                 <svg
                   width="48"
