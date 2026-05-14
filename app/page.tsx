@@ -593,7 +593,7 @@ const formatNumber = (num: number, suffix: string) => {
                   >
 
                     {/* BADGE */}
-                    <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#3B82F6] text-xs font-semibold uppercase">
+                    <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase">
                       About Maskoid
                     </span>
 
@@ -602,7 +602,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                       Crafting Digital Experiences That Drive{" "}
 
-                      <span className="text-[#3B82F6]">
+                      <span className="text-[#3f6ee8]">
                         Growth & Revenue
                       </span>
 
