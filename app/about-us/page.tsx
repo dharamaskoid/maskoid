@@ -168,7 +168,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* VALUES */}
-      <section className="py-24 bg-[#f8fbff]">
+      <section className="py-24 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="inline-flex px-4 py-1 rounded-full bg-[#eef4ff] text-[#2b4c9a] text-xs font-semibold uppercase tracking-wider">
             Our Values
