@@ -22,7 +22,7 @@ export default function CTASection() {
             </p>
             
             <button 
-              className="bg-white text-gray-900 hover:bg-gray-100 rounded-xl px-8 py-6 text-base font-semibold"
+              className="bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold"
             >
               Start Your Project
             </button>
