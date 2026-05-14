@@ -17,16 +17,15 @@ export default function CTASection() {
     },
   };
 
-  const float = {
-    animate: {
-      y: [0, -10, 0],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
+const float = {
+  animate: {
+    y: [0, -10, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
     },
-  };
+  },
+};
 
   return (
     <section className="bg-[#EEF4FF] py-16 px-6 md:px-8 lg:px-16 overflow-hidden">
