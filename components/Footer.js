@@ -154,6 +154,15 @@ export default function Footer() {
 
         <div className="space-y-3 text-sm">
 
+            <div className="flex justify-between border-b border-white/5 pb-2">
+            <span className="text-gray-300 font-bold">India</span>
+            <div className="text-right text-gray-300 space-x-2">
+                <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
+                <span className="text-gray-600">•</span>
+                <a href="tel:+919898292466" className="hover:text-white">989 829 2466</a>
+            </div>
+            </div>
+
             <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
             <span className="text-gray-300 font-bold">USA</span>
             <div className="text-right text-gray-300 space-x-2">
@@ -161,77 +170,6 @@ export default function Footer() {
                 <span className="text-gray-600">•</span>
                 <a href="tel:+17869612992" className="hover:text-white">961 2992</a>
             </div>
-            </div>
-
-            <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">India</span>
-            <div className="text-right text-gray-300 space-x-2">
-                <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
-                <span className="text-gray-600">•</span>
-                <a href="tel:+919898292466" className="hover:text-white">989 829 2466</a>
-            </div>
-            </div>
-
-                        <div className="flex justify-between">
-            <span className="text-gray-300 font-bold">Email</span>
-            <a
-                href="mailto:contact@maskoid.com"
-                className="text-[#6EA8FF] hover:text-white"
-            >
-                contact@maskoid.com
-            </a>
-            </div>
-
-            <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">Texas</span>
-            <a href="tel:+18722034220" className="text-gray-300 hover:text-white">
-                +1 872 203 4220
-            </a>
-            </div>
-
-            <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">Australia</span>
-            <a href="tel:+61420201910" className="text-gray-300 hover:text-white">
-                +61 420 201 910
-            </a>
-            </div>
-
-            <div className="flex items-start justify-between gap-2">
-            <span className="text-gray-300 font-bold">Bahrain</span>
-            <a href="tel:+97333232707" className="text-gray-300 hover:text-white">
-                +973 3323 2707
-            </a>
-            </div>
-
-        </div>
-        </motion.div>
-
-        <motion.div variants={fadeUp}>
-        <h3 className="font-semibold mb-4 text-white uppercase">Contact</h3>
-
-        <div className="space-y-3 text-sm">
-
-            <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">India</span>
-            <div className="text-right text-gray-300 space-x-2">
-                <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
-                <span className="text-gray-600">•</span>
-                <a href="tel:+919898292466" className="hover:text-white">989 829 2466</a>
-            </div>
-            </div>
-
-            <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">Sales</span>
-            <a href="tel:+919510566027" className="text-gray-300 hover:text-white">
-                951 056 6027
-            </a>
-            </div>
-
-            <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">Careers</span>
-            <a href="tel:+16479786476" className="text-gray-300 hover:text-white">
-                +1 647 978 6476
-            </a>
             </div>
 
             <div className="flex justify-between">
@@ -242,10 +180,11 @@ export default function Footer() {
             >
                 contact@maskoid.com
             </a>
-            </div>
+            </div>        
 
         </div>
         </motion.div>
+
 
         </div>
 
