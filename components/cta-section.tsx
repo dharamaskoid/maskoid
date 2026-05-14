@@ -24,12 +24,12 @@ export default function CTASection() {
               Have a project in mind? Let&apos;s create a digital experience that drives growth and sets your business apart.
             </p>
             
-            <Button 
+            <button 
               className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-8 py-6 text-base font-semibold"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </button>
           </div>
 
           {/* Right Content - Dashboard Mockup */}
