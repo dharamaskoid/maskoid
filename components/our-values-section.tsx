@@ -10,31 +10,31 @@ import {
 export default function OurValuesSection() {
  const values = [
   {
-    icon: <ShieldCheck className="text-[#3B82F6] size={30} strokeWidth={2}" />,
+    icon: <ShieldCheck className="text-[#3B82F6] size={50} strokeWidth={2}" />,
     title: "Integrity",
     description:
       "We believe in honesty, transparency, and building real relationships.",
   },
   {
-    icon: <Rocket className="text-[#3B82F6] size={30} strokeWidth={2}" />,
+    icon: <Rocket className="text-[#3B82F6] size={50} strokeWidth={2}" />,
     title: "Performance",
     description:
       "We focus on measurable results and long-term growth.",
   },
   {
-    icon: < Lightbulb className="text-[#3B82F6] size={30} strokeWidth={2}" />,
+    icon: < Lightbulb className="text-[#3B82F6] size={50} strokeWidth={2}" />,
     title: "Innovation",
     description:
       "We stay ahead with creative ideas and modern technology.",
   },
   {
-    icon: <Users className="text-[#3B82F6] size={30} strokeWidth={2}" />,
+    icon: <Users className="text-[#3B82F6] size={50} strokeWidth={2}" />,
     title: "Partnership",
     description:
       "We grow when our clients grow.",
   },
   {
-    icon: <Target className="text-[#3B82F6] size={30} strokeWidth={2}" />,
+    icon: <Target className="text-[#3B82F6] size={50} strokeWidth={2}" />,
     title: "Accountability",
     description:
       "We stay committed and deliver on promises.",
