@@ -4,14 +4,14 @@ import {
   FiZap,
   FiUsers,
   FiTarget,
-  FiDiamond,
 } from "react-icons/fi";
+import { PiDiamondBold } from "react-icons/pi";
 
 
 export default function OurValuesSection() {
  const values = [
   {
-    icon: <FiDiamond className="text-[#3B82F6] text-[42px]" />,
+    icon: <PiDiamondBold className="text-[#3B82F6] text-[42px]" />,
     title: "Integrity",
     description:
       "We believe in honesty, transparency, and building real relationships.",
