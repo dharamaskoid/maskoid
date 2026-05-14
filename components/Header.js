@@ -108,50 +108,53 @@ export default function Header() {
         {/* CTA */}
         <div className="hidden md:block">
           <Link
-            href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20discuss%20my%20project."
+            href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
             target="_blank"
-            className="group relative"
+            className="group relative inline-flex items-center"
           >
 
             {/* Glow */}
-            <div className="absolute inset-0 rounded-2xl bg-[#2b4c9a]/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+            <div className="absolute inset-0 rounded-full bg-[#2b4c9a]/30 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-            {/* Button */}
+            {/* Main Button */}
             <div
               className="
-              relative flex items-center gap-3
-              px-6 py-3
-              rounded-2xl
+              relative flex items-center gap-4
+              px-3 py-3 pr-5
+              rounded-full
               border border-[#dbe4ff]
-              bg-gradient-to-r from-[#2b4c9a] to-[#3b5fc7]
-              text-white
-              shadow-[0_10px_30px_rgba(43,76,154,0.25)]
-              hover:shadow-[0_20px_40px_rgba(43,76,154,0.35)]
-              hover:scale-[1.03]
+              bg-white
+              shadow-[0_10px_35px_rgba(43,76,154,0.12)]
+              hover:shadow-[0_20px_45px_rgba(43,76,154,0.18)]
+              hover:-translate-y-[2px]
               transition-all duration-300
             "
             >
 
-              {/* Animated Dot */}
-              <div className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/70 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+              {/* Left Circle */}
+              <div
+                className="
+                w-11 h-11 rounded-full
+                bg-gradient-to-br from-[#2b4c9a] to-[#3b82f6]
+                flex items-center justify-center
+                shadow-lg
+              "
+              >
+                <span className="text-white text-lg">↗</span>
               </div>
 
               {/* Text */}
               <div className="flex flex-col leading-tight">
 
-                <span className="text-[10px] uppercase tracking-[2px] text-blue-100">
-                  Instant Connect
+                <span className="text-[11px] uppercase tracking-[2px] text-[#6b7aa6]">
+                  Instant WhatsApp Connect
                 </span>
 
-                <span className="text-sm font-semibold">
-                  Chat on WhatsApp
+                <span className="text-[15px] font-semibold text-[#1a2e5e]">
+                  Let’s Grow Your Brand
                 </span>
 
               </div>
-
-              {/* Arrow */}
 
             </div>
           </Link>
