@@ -84,7 +84,7 @@ export default function OurValuesSection() {
         {/* Values Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {values.map((value, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center md:border-r border-[#dbe7ff]">
               <div className="flex justify-center mb-4">
                 {value.icon}
               </div>
