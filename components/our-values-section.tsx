@@ -1,44 +1,43 @@
 import {
-  FiShield,
-  FiTrendingUp,
-  FiZap,
-  FiUsers,
-  FiTarget,
-} from "react-icons/fi";
-import { PiDiamondBold } from "react-icons/pi";
+  PiDiamondThin,
+  PiRocketLaunchThin,
+  PiLightbulbThin,
+  PiUsersThreeThin,
+  PiTargetThin,
+} from "react-icons/pi";
 
 
 export default function OurValuesSection() {
  const values = [
   {
-    icon: <PiDiamondBold className="text-[#3B82F6] text-[42px]" />,
+    icon: <PiDiamondThin className="text-[#3B82F6] text-[44px]" />,
     title: "Integrity",
     description:
       "We believe in honesty, transparency, and building real relationships.",
   },
   {
-    icon: <FiTrendingUp className="text-[#3B82F6] text-[42px]" />,
+    icon: <PiRocketLaunchThin className="text-[#3B82F6] text-[44px]" />,
     title: "Performance",
     description:
       "We focus on measurable results and long-term growth.",
   },
   {
-    icon: <FiZap className="text-[#3B82F6] text-[42px]" />,
+    icon: <PiLightbulbThin className="text-[#3B82F6] text-[44px]" />,
     title: "Innovation",
     description:
-      "We stay ahead with creative ideas, smart strategies, and modern technology.",
+      "We stay ahead with creative ideas and modern technology.",
   },
   {
-    icon: <FiUsers className="text-[#3B82F6] text-[42px]" />,
+    icon: <PiUsersThreeThin className="text-[#3B82F6] text-[44px]" />,
     title: "Partnership",
     description:
-      "We grow when our clients grow. Your success is our success.",
+      "We grow when our clients grow.",
   },
   {
-    icon: <FiTarget className="text-[#3B82F6] text-[42px]" />,
+    icon: <PiTargetThin className="text-[#3B82F6] text-[44px]" />,
     title: "Accountability",
     description:
-      "We take ownership, stay committed, and deliver on our promises.",
+      "We stay committed and deliver on promises.",
   },
 ];
 
