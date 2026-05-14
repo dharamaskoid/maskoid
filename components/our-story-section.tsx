@@ -5,12 +5,7 @@ export default function OurStorySection() {
          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Left Content - 40% */}
           <div className="w-full lg:w-[40%] space-y-6">
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-semibold tracking-widest text-[#3b5998]">
-                OUR STORY
-              </span>
-              <div className="w-12 h-[2px] bg-[#3b5998]"></div>
-            </div>
+
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
               OUR STORY
             </p>

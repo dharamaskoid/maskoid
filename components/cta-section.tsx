@@ -8,13 +8,10 @@ export default function CTASection() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-6">
-            <div className="flex items-center gap-3">
-              <span className="text-blue-400 text-sm font-semibold tracking-wider uppercase">
-                Let&apos;s Grow Together
-              </span>
-              <span className="h-px w-12 bg-blue-400"></span>
-            </div>
-            
+
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
+              Let&apos;s Grow Together
+            </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Let&apos;s Build Something{" "}
               <span className="text-blue-400">Amazing</span> Together
