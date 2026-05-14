@@ -360,7 +360,7 @@ const formatNumber = (num: number, suffix: string) => {
 
              {/* PREMIUM MARQUEE SECTION */}
 
-              <section className="relative overflow-hidden py-5 bg-white border-y border-[#e5ecff]">
+              <section className="relative overflow-hidden py-10 bg-white border-y border-[#e5ecff]">
 
                 {/* LEFT FADE */}
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
