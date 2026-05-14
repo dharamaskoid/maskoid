@@ -962,7 +962,7 @@ const formatNumber = (num: number, suffix: string) => {
 
 
                   <h2 className="text-4xl font-bold text-[#1a2e5e] mt-3">
-                    Latest Completed <span className="text-blue-500">Projects</span>
+                    Latest Completed <span className="text-[#2b4c9a]">Projects</span>
                   </h2>
 
                   <p className="text-[#5b6475] mt-4 max-w-2xl mx-auto">
