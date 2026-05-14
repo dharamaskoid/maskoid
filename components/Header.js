@@ -146,9 +146,6 @@ export default function Header() {
               {/* Text */}
               <div className="flex flex-col leading-tight">
 
-                <span className="text-[11px] uppercase tracking-[2px] text-[#6b7aa6]">
-                  Instant WhatsApp Connect
-                </span>
 
                 <span className="text-[15px] font-semibold text-[#1a2e5e]">
                   Let’s Grow Your Brand
