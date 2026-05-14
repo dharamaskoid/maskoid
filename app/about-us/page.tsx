@@ -51,9 +51,9 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <main className="bg-white overflow-hidden text-[#1a2e5e] pt-[81.5px] lg:pt-[81.5px]">
+    <main className="bg-white overflow-hidden text-[#111827] pt-[81.5px] lg:pt-[81.5px]">
       {/* HERO SECTION */}
-      <section className="relative bg-[#071120] text-white overflow-hidden">
+      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
         {/* BACKGROUND */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
