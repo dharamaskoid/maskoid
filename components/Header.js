@@ -32,7 +32,7 @@ export default function Header() {
     >
       
       {/* 🔥 INCREASED HEIGHT */}
-      <div className="container mx-auto px-6 py-5 md:py-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 py-4 md:py-5 flex items-center justify-between">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center">
