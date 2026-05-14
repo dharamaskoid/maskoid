@@ -115,9 +115,9 @@ export default function OurValuesSection() {
             </p>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-            The Principles That Drive Everything{" "}
-            <span className="text-blue-500">We Do</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+            The Principles That {" "}
+            <span className="text-[#2b4c9a]">Drive Everything</span> We Do
           </h2>
         </motion.div>
 

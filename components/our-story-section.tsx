@@ -10,10 +10,10 @@ export default function OurStorySection() {
               OUR STORY
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               We Started With A Simple Idea
               <br />
-              To Drive <span className="text-[#3b5998]">Real Growth</span>
+              To Drive <span className="text-[#2b4c9a]">Real Growth</span>
             </h2>
 
             <p className="text-gray-600 leading-relaxed">
