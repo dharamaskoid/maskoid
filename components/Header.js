@@ -112,7 +112,7 @@ export default function Header() {
             target="_blank"
             className="
               group inline-flex items-center gap-3
-              px-6 h-[52px]
+              px-6 h-[48px]
               rounded-xl
               bg-[#2b4c9a]
               hover:bg-[#1f3d84]
