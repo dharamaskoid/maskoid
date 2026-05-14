@@ -108,7 +108,7 @@ export default function Header() {
         {/* CTA */}
         <div className="hidden md:block">
           <Link
-            href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
+            href="https://wa.me/91917574084008?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
             target="_blank"
             className="
               group inline-flex items-center gap-3
@@ -245,7 +245,7 @@ export default function Header() {
 
               {/* CTA */}
               <Link
-              href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
+              href="https://wa.me/917574084008?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
               target="_blank"
               className="
                 group inline-flex items-center gap-3
