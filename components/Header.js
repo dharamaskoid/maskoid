@@ -106,47 +106,48 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-<div className="hidden md:block">
-  <Link
-    href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
-    target="_blank"
-    className="
-      group relative inline-flex items-center gap-3
-      px-6 py-3
-      rounded-full
-      bg-gradient-to-r from-[#2b4c9a] to-[#3b5fc7]
-      text-white
-      shadow-[0_10px_30px_rgba(43,76,154,0.22)]
-      hover:shadow-[0_18px_40px_rgba(43,76,154,0.30)]
-      hover:scale-[1.03]
-      transition-all duration-300
-    "
-  >
+        <div className="hidden md:block">
+          <Link
+            href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
+            target="_blank"
+            className="
+              group inline-flex items-center gap-3
+              px-6 h-[52px]
+              rounded-xl
+              bg-[#2b4c9a]
+              hover:bg-[#1f3d84]
+              text-white
+              shadow-[0_10px_30px_rgba(43,76,154,0.25)]
+              hover:shadow-[0_18px_40px_rgba(43,76,154,0.35)]
+              hover:-translate-y-[2px]
+              transition-all duration-300
+            "
+          >
 
-    {/* ICON */}
-    <div className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center border border-white/10">
-      <svg
-        className="w-4 h-4 text-white"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M7 17L17 7M17 7H9M17 7V15"
-        />
-      </svg>
-    </div>
+            {/* ICON */}
+            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center border border-white/10">
+              <svg
+                className="w-4 h-4 text-white group-hover:translate-x-[2px] transition duration-300"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7 17L17 7M17 7H9M17 7V15"
+                />
+              </svg>
+            </div>
 
-    {/* TEXT */}
-    <span className="text-sm font-semibold tracking-[0.2px]">
-      Let’s Scale Your Brand
-    </span>
+            {/* TEXT */}
+            <span className="text-sm font-semibold tracking-[0.2px] whitespace-nowrap">
+              Let’s Scale Your Brand
+            </span>
 
-  </Link>
-</div>
+          </Link>
+        </div>
 
         {/* MOBILE MENU BUTTON */}
         <button
