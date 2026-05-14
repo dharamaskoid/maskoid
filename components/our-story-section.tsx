@@ -163,7 +163,7 @@ export default function OurStorySection() {
                 <div className="w-10 h-[2px] bg-[#3b5998] mb-4 rounded-full"></div>
 
                 {/* DESCRIPTION */}
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {card.description}
                 </p>
 
