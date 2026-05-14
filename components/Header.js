@@ -106,63 +106,59 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-          <div className="hidden md:block">
-            <Link
-              href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20discuss%20my%20project."
-              target="_blank"
-              className="group relative overflow-hidden"
+        <div className="hidden md:block">
+          <Link
+            href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20discuss%20my%20project."
+            target="_blank"
+            className="group relative"
+          >
+
+            {/* Glow */}
+            <div className="absolute inset-0 rounded-2xl bg-[#2b4c9a]/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            {/* Button */}
+            <div
+              className="
+              relative flex items-center gap-3
+              px-6 py-3
+              rounded-2xl
+              border border-[#dbe4ff]
+              bg-gradient-to-r from-[#2b4c9a] to-[#3b5fc7]
+              text-white
+              shadow-[0_10px_30px_rgba(43,76,154,0.25)]
+              hover:shadow-[0_20px_40px_rgba(43,76,154,0.35)]
+              hover:scale-[1.03]
+              transition-all duration-300
+            "
             >
-              
-              {/* Glow Background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#25D366] to-[#128C7E] opacity-90 blur-xl group-hover:blur-2xl transition duration-500"></div>
 
-              {/* Button */}
-              <div
-                className="
-                relative flex items-center gap-3
-                px-6 py-3
-                rounded-2xl
-                bg-white/10 backdrop-blur-xl
-                border border-white/20
-                shadow-[0_8px_32px_rgba(37,211,102,0.25)]
-                hover:scale-[1.04]
-                transition-all duration-300
-              "
-              >
-
-                {/* Live Pulse Dot */}
-                <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </div>
-
-                {/* WhatsApp Icon */}
-                <svg
-                  className="w-5 h-5 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M20.52 3.48A11.75 11.75 0 0 0 12.04 0C5.8 0 .74 5.06.74 11.3c0 2.11.55 4.17 1.6 6L0 24l6.93-2.28a11.28 11.28 0 0 0 5.11 1.24h.01c6.24 0 11.3-5.06 11.3-11.3 0-3.01-1.17-5.84-3.29-7.98z" />
-                </svg>
-
-                {/* Text */}
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[11px] uppercase tracking-[2px] text-green-200">
-                    Instant Connect
-                  </span>
-
-                  <span className="text-sm font-semibold text-white">
-                    Chat on WhatsApp
-                  </span>
-                </div>
-
-                {/* Arrow */}
-                <div className="ml-1 transform group-hover:translate-x-1 transition duration-300 text-white">
-                  →
-                </div>
+              {/* Animated Dot */}
+              <div className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/70 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
               </div>
-            </Link>
-          </div>
+
+              {/* Text */}
+              <div className="flex flex-col leading-tight">
+
+                <span className="text-[10px] uppercase tracking-[2px] text-blue-100">
+                  Instant Connect
+                </span>
+
+                <span className="text-sm font-semibold">
+                  Chat on WhatsApp
+                </span>
+
+              </div>
+
+              {/* Arrow */}
+              <div className="transform group-hover:translate-x-1 transition duration-300 text-lg">
+                →
+              </div>
+
+            </div>
+          </Link>
+        </div>
 
         {/* MOBILE MENU BUTTON */}
         <button
