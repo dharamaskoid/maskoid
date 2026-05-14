@@ -1359,6 +1359,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
 
 </main>
-  );
+ 
+);
 }
 
