@@ -108,77 +108,43 @@ export default function Header() {
         {/* CTA */}
 <div className="hidden md:block">
   <Link
-    href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20scale%20my%20brand."
+    href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
     target="_blank"
-    className="group relative inline-flex items-center"
+    className="
+      group relative inline-flex items-center gap-3
+      px-6 py-3
+      rounded-full
+      bg-gradient-to-r from-[#2b4c9a] to-[#3b5fc7]
+      text-white
+      shadow-[0_10px_30px_rgba(43,76,154,0.22)]
+      hover:shadow-[0_18px_40px_rgba(43,76,154,0.30)]
+      hover:scale-[1.03]
+      transition-all duration-300
+    "
   >
 
-    {/* PREMIUM OUTER GLOW */}
-    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#2b4c9a]/30 to-[#6EA8FF]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-
-    {/* MAIN BUTTON */}
-    <div
-      className="
-      relative overflow-hidden
-      flex items-center gap-4
-      px-4 py-3 pr-6
-      rounded-full
-      border border-white/60
-      bg-white/90 backdrop-blur-2xl
-      shadow-[0_12px_35px_rgba(43,76,154,0.14)]
-      hover:shadow-[0_20px_60px_rgba(43,76,154,0.24)]
-      hover:-translate-y-[2px]
-      transition-all duration-500
-    "
-    >
-
-      {/* SHINE EFFECT */}
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent transition duration-1000"></div>
-
-      {/* ICON */}
-      <div
-        className="
-        relative z-10
-        w-11 h-11 rounded-full
-        bg-gradient-to-br from-[#2b4c9a] to-[#4B7BFF]
-        flex items-center justify-center
-        shadow-[0_10px_25px_rgba(43,76,154,0.35)]
-      "
+    {/* ICON */}
+    <div className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center border border-white/10">
+      <svg
+        className="w-4 h-4 text-white"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        viewBox="0 0 24 24"
       >
-
-        {/* LIVE DOT */}
-        <span className="absolute top-0.5 right-0.5 w-3 h-3 bg-green-400 border-2 border-white rounded-full"></span>
-
-        {/* ARROW ICON */}
-        <svg
-          className="w-5 h-5 text-white"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M7 17L17 7M17 7H9M17 7V15"
-          />
-        </svg>
-      </div>
-
-      {/* TEXT */}
-      <div className="relative z-10 flex flex-col leading-tight">
-
-        <span className="text-[10px] uppercase tracking-[2px] text-[#7C8DB5] font-semibold">
-          Instant WhatsApp Connect
-        </span>
-
-        <span className="text-[15px] font-semibold text-[#1A2E5E]">
-          Let’s Scale Your Brand
-        </span>
-
-      </div>
-
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M7 17L17 7M17 7H9M17 7V15"
+        />
+      </svg>
     </div>
+
+    {/* TEXT */}
+    <span className="text-sm font-semibold tracking-[0.2px]">
+      Let’s Scale Your Brand
+    </span>
+
   </Link>
 </div>
 
