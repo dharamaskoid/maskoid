@@ -5,11 +5,11 @@ export default function OurStorySection() {
          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Left Content - 40% */}
           <div className="w-full lg:w-[40%] space-y-6">
-            <div className="w-full lg:w-1/2 space-y-6">
+            
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
               OUR STORY
             </p>
-            </div>
+
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] leading-tight">
               We Started With A Simple Idea
               <br />
