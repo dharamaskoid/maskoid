@@ -373,53 +373,53 @@ const formatNumber = (num: number, suffix: string) => {
 
                   {[
                     {
-                      icon: <Monitor size={22} strokeWidth={2} />,
+                      icon: <Monitor size={30} strokeWidth={2} />,
                       text: "Web Design",
                     },
                     {
-                      icon: <BarChart3 size={22} strokeWidth={2} />,
+                      icon: <BarChart3 size={30} strokeWidth={2} />,
                       text: "SEO Growth",
                     },
                     {
-                      icon: <Users size={22} strokeWidth={2} />,
+                      icon: <Users size={30} strokeWidth={2} />,
                       text: "Lead Generation",
                     },
                     {
-                      icon: <Target size={22} strokeWidth={2} />,
+                      icon: <Target size={30} strokeWidth={2} />,
                       text: "Conversion Design",
                     },
                     {
-                      icon: <Rocket size={22} strokeWidth={2} />,
+                      icon: <Rocket size={30} strokeWidth={2} />,
                       text: "Performance Marketing",
                     },
                     {
-                      icon: <LineChart size={22} strokeWidth={2} />,
+                      icon: <LineChart size={30} strokeWidth={2} />,
                       text: "Analytics & Reporting",
                     },
                   ]
                     .concat([
                       {
-                        icon: <Monitor size={22} strokeWidth={2} />,
+                        icon: <Monitor size={30} strokeWidth={2} />,
                         text: "Web Design",
                       },
                       {
-                        icon: <BarChart3 size={22} strokeWidth={2} />,
+                        icon: <BarChart3 size={30} strokeWidth={2} />,
                         text: "SEO Growth",
                       },
                       {
-                        icon: <Users size={22} strokeWidth={2} />,
+                        icon: <Users size={30} strokeWidth={2} />,
                         text: "Lead Generation",
                       },
                       {
-                        icon: <Target size={22} strokeWidth={2} />,
+                        icon: <Target size={30} strokeWidth={2} />,
                         text: "Conversion Design",
                       },
                       {
-                        icon: <Rocket size={22} strokeWidth={2} />,
+                        icon: <Rocket size={30} strokeWidth={2} />,
                         text: "Performance Marketing",
                       },
                       {
-                        icon: <LineChart size={22} strokeWidth={2} />,
+                        icon: <LineChart size={30} strokeWidth={2} />,
                         text: "Analytics & Reporting",
                       },
                     ])
