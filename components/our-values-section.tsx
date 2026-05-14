@@ -1,40 +1,40 @@
 import {
-  PiDiamondThin,
-  PiRocketLaunchThin,
-  PiLightbulbThin,
-  PiUsersThreeThin,
-  PiTargetThin,
-} from "react-icons/pi";
+  Users,
+  Target,
+  Rocket,
+  Lightbulb,
+  ShieldCheck,
+} from "lucide-react";
 
 
 export default function OurValuesSection() {
  const values = [
   {
-    icon: <PiDiamondThin className="text-[#3B82F6] text-[44px]" />,
+    icon: <ShieldCheck className="text-[#3B82F6] text-[44px]" />,
     title: "Integrity",
     description:
       "We believe in honesty, transparency, and building real relationships.",
   },
   {
-    icon: <PiRocketLaunchThin className="text-[#3B82F6] text-[44px]" />,
+    icon: <Rocket className="text-[#3B82F6] text-[44px]" />,
     title: "Performance",
     description:
       "We focus on measurable results and long-term growth.",
   },
   {
-    icon: <PiLightbulbThin className="text-[#3B82F6] text-[44px]" />,
+    icon: < Lightbulb className="text-[#3B82F6] text-[44px]" />,
     title: "Innovation",
     description:
       "We stay ahead with creative ideas and modern technology.",
   },
   {
-    icon: <PiUsersThreeThin className="text-[#3B82F6] text-[44px]" />,
+    icon: <Users className="text-[#3B82F6] text-[44px]" />,
     title: "Partnership",
     description:
       "We grow when our clients grow.",
   },
   {
-    icon: <PiTargetThin className="text-[#3B82F6] text-[44px]" />,
+    icon: <Target className="text-[#3B82F6] text-[44px]" />,
     title: "Accountability",
     description:
       "We stay committed and deliver on promises.",
