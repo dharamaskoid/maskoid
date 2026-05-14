@@ -12,7 +12,7 @@ export default function CTASection() {
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
               Let&apos;s Grow Together
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
               Let&apos;s Build Something{" "}
               <span className="text-blue-400">Amazing</span> Together
             </h2>
@@ -22,10 +22,9 @@ export default function CTASection() {
             </p>
             
             <button 
-              className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-8 py-6 text-base font-semibold"
+              className="bg-white text-gray-900 hover:bg-gray-100 rounded-xl px-8 py-6 text-base font-semibold"
             >
               Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
 
