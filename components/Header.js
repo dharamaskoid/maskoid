@@ -211,39 +211,22 @@ export default function Header() {
 
             {/* CTA */}
             <Link
-              href="/contact"
-              className="block text-center px-8 py-3.5 rounded-lg bg-[#2b4c9a] hover:bg-[#1f3d84] hover:scale-105 transition text-white shadow-lg"
-            >
-              Get Quote
-            </Link>
-
-            <a
-              href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20need%20a%20quote"
-              target="_blank"
-              className="fixed bottom-24 right-6 z-50">
-
-              <div className="relative">
-                
-                {/* Pulse ring */}
-                <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-40"></span>
-
-                {/* Button */}
-                <div className="relative w-14 h-14 rounded-full bg-gradient-to-r from-[#25D366] to-[#128C7E] flex items-center justify-center shadow-xl hover:scale-110 transition">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.52 3.48A11.75 11.75 0 0 0 12.04 0C5.8 0 .74 5.06.74 11.3c0 2.11.55 4.17 1.6 6L0 24l6.93-2.28a11.28 11.28 0 0 0 5.11 1.24c6.24 0 11.3-5.06 11.3-11.3 0-3.01-1.17-5.84-3.29-7.98z"/>
-                  </svg>
-                </div>
-              </div>
-            </a>
-
-            <Link
-              href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20need%20a%20quote"
+              href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20a%20quote%20for%20my%20project"
               target="_blank"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white transition"
+              className="hidden md:flex items-center gap-2 px-7 py-3.5 rounded-xl text-white
+              bg-gradient-to-r from-[#25D366] to-[#128C7E]
+              shadow-[0_10px_30px_rgba(37,211,102,0.25)]
+              hover:shadow-[0_20px_50px_rgba(37,211,102,0.35)]
+              transition-all duration-300 hover:scale-[1.05]"
             >
-              {hover ? "💬 Chat on WhatsApp" : "Get Quote"}
+              {/* WhatsApp Icon */}
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.52 3.48A11.75 11.75 0 0 0 12.04 0C5.8 0 .74 5.06.74 11.3c0 2.11.55 4.17 1.6 6L0 24l6.93-2.28a11.28 11.28 0 0 0 5.11 1.24c6.24 0 11.3-5.06 11.3-11.3 0-3.01-1.17-5.84-3.29-7.98z"/>
+              </svg>
+
+              {hover ? "💬 Chat Now" : "Get Quote"}
             </Link>
 
           </motion.div>
