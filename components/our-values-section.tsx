@@ -83,16 +83,28 @@ export default function OurValuesSection() {
 
         {/* Values Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {values.map((value, index) => (
-            <div key={index} className="text-center">
-              <div className="flex justify-center mb-4">
-                {value.icon}
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className={`text-center relative px-4
+                ${index !== values.length - 1 ? "lg:border-r lg:border-[#dbe7ff]" : ""}
+                `}
+              >
+                <div className="flex justify-center mb-4">
+                  {value.icon}
+                </div>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {value.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {value.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+          
       </div>
     </section>
   )
