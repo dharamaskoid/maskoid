@@ -1,4 +1,7 @@
 import OurStorySection from "@/components/our-story-section"
+import OurValuesSection from "@/components/our-values-section"
+import StatsSection from "@/components/stats-section"
+import CTASection from "@/components/cta-section"
 
 export default function AboutUsPage() {
   const values = [
@@ -102,6 +105,12 @@ export default function AboutUsPage() {
       {/* STORY SECTION */}
 
       <OurStorySection />
+
+      <OurValuesSection />
+
+      <StatsSection />
+
+      <CTASection />
 
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
