@@ -13,7 +13,7 @@ const values = [
     icon: (
       <ShieldCheck
         className="text-[#2b4c9a]"
-        size={30}
+        size={40}
         strokeWidth={2}
       />
     ),
@@ -25,7 +25,7 @@ const values = [
     icon: (
       <Rocket
         className="text-[#2b4c9a]"
-        size={30}
+        size={40}
         strokeWidth={2}
       />
     ),
@@ -37,7 +37,7 @@ const values = [
     icon: (
       <Lightbulb
         className="text-[#2b4c9a]"
-        size={30}
+        size={40}
         strokeWidth={2}
       />
     ),
@@ -49,7 +49,7 @@ const values = [
     icon: (
       <Users
         className="text-[#2b4c9a]"
-        size={30}
+        size={40}
         strokeWidth={2}
       />
     ),
@@ -61,7 +61,7 @@ const values = [
     icon: (
       <Target
         className="text-[#2b4c9a]"
-        size={30}
+        size={40}
         strokeWidth={2}
       />
     ),
