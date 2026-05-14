@@ -26,8 +26,6 @@ export default function OurStorySection() {
               From SEO and paid ads to web design and performance marketing, we build everything in-house with strategy, creativity, and data.
             </p>
 
-
-
           </div>
 
           {/* Right Content - Cards */}
