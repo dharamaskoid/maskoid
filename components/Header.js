@@ -245,7 +245,6 @@ export default function Header() {
 
             {/* CTA */}
             <Link
-<Link
             href="https://wa.me/91XXXXXXXXXX?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
             target="_blank"
             className="
@@ -260,7 +259,7 @@ export default function Header() {
               hover:-translate-y-[2px]
               transition-all duration-300
             "
-          >
+            >
 
             {/* ICON */}
             <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center border border-white/10">
