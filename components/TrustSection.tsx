@@ -39,7 +39,7 @@ const BrandMarquee = () => {
 
         <div className="max-w-6xl mx-auto px-6 text-center mb-12">
 
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-blue-400 uppercase tracking-wider hover:bg-blue-500/20 transition">
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
                 Trusted by brands
             </p>
             
