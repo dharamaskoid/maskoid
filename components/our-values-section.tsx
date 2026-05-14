@@ -4,13 +4,14 @@ import {
   FiZap,
   FiUsers,
   FiTarget,
+  FiDiamond,
 } from "react-icons/fi";
 
 
 export default function OurValuesSection() {
  const values = [
   {
-    icon: <FiShield className="text-[#3B82F6] text-[42px]" />,
+    icon: <FiDiamond className="text-[#3B82F6] text-[42px]" />,
     title: "Integrity",
     description:
       "We believe in honesty, transparency, and building real relationships.",
