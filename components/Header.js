@@ -9,7 +9,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openServices, setOpenServices] = useState(false);
-  const [hover, setHover] = useState(false);
+
 
   // 🔥 Detect scroll (for shadow effect)
   useEffect(() => {
@@ -127,15 +127,7 @@ export default function Header() {
                   </div>
                 </a>
 
-                <Link
-                  href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20need%20a%20quote"
-                  target="_blank"
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                  className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white transition"
-                >
-                  {hover ? "💬 Chat on WhatsApp" : "Get Quote"}
-                </Link>
+
         </div>
 
         {/* MOBILE MENU BUTTON */}
