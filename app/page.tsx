@@ -1236,60 +1236,63 @@ const formatNumber = (num: number, suffix: string) => {
               <BrandMarquee />
 
               {/* contact */}
-              <section className="relative py-16 px-6 bg-[#EEF2FF] text-white overflow-hidden">
+              <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#EEF2FF] overflow-hidden">
 
                 {/* 🌌 BACKGROUND */}
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-[140px] rounded-full"></div>
-                  <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1a2e5e]-500/10 blur-[140px] rounded-full"></div>
+                  <div className="absolute -top-40 left-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#2b4c9a]/20 blur-[120px] rounded-full"></div>
+
+                  <div className="absolute bottom-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#1a2e5e]/10 blur-[120px] rounded-full"></div>
+
                   <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
                 </div>
 
-                <div className="max-w-7xl mx-auto bg-[#1a2e5e] px-6 py-10 rounded-xl relative z-10">
+                <div className="max-w-7xl mx-auto bg-[#0B1F4D] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14 rounded-2xl relative z-10 overflow-hidden">
 
                   {/* GRID */}
-                  <div className="grid lg:grid-cols-2 gap-16 items-start">
+                  <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-                    {/* LEFT SIDE (TITLE SECTION) */}
-                    <div>
+                    {/* LEFT SIDE */}
+                    <div className="text-center lg:text-left">
 
-                      <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-xs font-semibold uppercase tracking-[0.2em]">
+                      <p className="inline-flex items-center px-4 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em]">
                         Contact Us
                       </p>
 
-                      <h2 className="mt-6 text-4xl md:text-4xl font-bold leading-tight">
+                      <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
                         Let’s Build Something{" "}
-                        <span className="text-[#6EA8FF]">Amazing Together</span>
+                        <span className="text-[#6EA8FF] block sm:inline">
+                          Amazing Together
+                        </span>
                       </h2>
 
-                      <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed max-w-md">
+                      <p className="mt-5 text-[#B7C2D8] text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
                         Have a project in mind? Let’s create a premium digital experience
                         designed to generate real business growth.
                       </p>
 
                     </div>
 
-                    {/* RIGHT SIDE (FORM + CONTENT) */}
-                    <div className="relative">
+                    {/* RIGHT SIDE */}
+                    <div className="relative w-full">
 
                       {/* FORM GLOW */}
-                      <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-[#2b4c9a]/30 to-purple-500/20 blur-xl"></div>
+                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/20 blur-xl"></div>
 
                       {/* FORM CARD */}
-                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-xl px-8 md:px-10 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-2xl p-5 sm:p-7 lg:p-8 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
 
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
 
+                          {/* INPUTS */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
 
-                        {/* FORM */}
-                        <form onSubmit={handleSubmit} className="mt-8 mb-8 space-y-5">
-
-                          <div className="grid md:grid-cols-2 gap-5">
                             <input
                               name="name"
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Your Name"
-                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
                               required
                             />
 
@@ -1298,18 +1301,21 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
                               required
                             />
+
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-5">
+                          {/* INPUTS */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
                             <input
                               name="phone"
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="Phone Number"
-                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
                               required
                             />
 
@@ -1318,24 +1324,27 @@ const formatNumber = (num: number, suffix: string) => {
                               value={form.subject}
                               onChange={handleChange}
                               placeholder="Project Type"
-                              className="h-10 px-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e]"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
                             />
+
                           </div>
 
+                          {/* TEXTAREA */}
                           <textarea
                             name="message"
                             value={form.message}
                             onChange={handleChange}
-                            rows={2}
+                            rows={4}
                             placeholder="Tell us about your project..."
-                            className="w-full p-5 rounded-lg bg-[#ffffff] border border-white/10 focus:border-[#2b4c9a] outline-none text-[#1a2e5e] resize-none"
+                            className="w-full p-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] resize-none text-sm sm:text-base"
                             required
                           />
 
+                          {/* BUTTON */}
                           <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-10 cursor-pointer rounded-lg bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition font-semibold"
+                            className="w-full h-11 sm:h-12 cursor-pointer rounded-lg bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition-all duration-300 font-semibold text-sm sm:text-base text-white shadow-lg"
                           >
                             {loading ? "Sending..." : "Send Message →"}
                           </button>
@@ -1347,7 +1356,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                   </div>
                 </div>
-              </section>    
+              </section>
 
 </main>
   );
