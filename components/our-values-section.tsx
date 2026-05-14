@@ -72,7 +72,7 @@ const values = [
 ];
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#f8f9fb]">
+    <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#EEF2FF]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
