@@ -1236,7 +1236,7 @@ const formatNumber = (num: number, suffix: string) => {
               <BrandMarquee />
 
               {/* contact */}
-              <section className="relative py-16 bg-[#EEF2FF] text-white overflow-hidden">
+              <section className="relative py-16 px-6 bg-[#EEF2FF] text-white overflow-hidden">
 
                 {/* 🌌 BACKGROUND */}
                 <div className="absolute inset-0 pointer-events-none">

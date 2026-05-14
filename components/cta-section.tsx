@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function CTASection() {
   return (
-    <section className="bg-[#EEF4FF] py-16 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section className="bg-[#EEF4FF] py-16 px-6 md:px-8 lg:px-16 overflow-hidden">
       <div className="container rounded-xl px-16 py-16 bg-[linear-gradient(90deg,#021B5B_0%,#032B8C_50%,#0B46D8_100%)] mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content */}
