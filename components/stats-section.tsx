@@ -113,7 +113,7 @@ const formatNumber = (num: number, suffix: string) => {
                 className="relative py-10 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]"
               >
 
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="container bg-[#1a2e5e] rounded-xl mx-auto px-6 py-6 relative z-10">
 
                   <div className="grid md:grid-cols-4 grid-cols-1">
 
