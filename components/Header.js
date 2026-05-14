@@ -113,42 +113,67 @@ export default function Header() {
             className="group relative inline-flex items-center"
           >
 
-            {/* Glow */}
-            <div className="absolute inset-0 rounded-full bg-[#2b4c9a]/30 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+            {/* PREMIUM GLOW */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#2b4c9a]/40 to-[#6EA8FF]/30 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-            {/* Main Button */}
+            {/* BUTTON */}
             <div
               className="
-              relative flex items-center gap-4
-              px-3 py-3 pr-5
+              relative overflow-hidden
+              flex items-center gap-4
+              px-3 py-3 pr-6
               rounded-full
-              border border-[#dbe4ff]
-              bg-white
-              shadow-[0_10px_35px_rgba(43,76,154,0.12)]
-              hover:shadow-[0_20px_45px_rgba(43,76,154,0.18)]
+              border border-white/60
+              bg-white/90 backdrop-blur-2xl
+              shadow-[0_12px_40px_rgba(43,76,154,0.12)]
+              hover:shadow-[0_20px_60px_rgba(43,76,154,0.22)]
               hover:-translate-y-[2px]
-              transition-all duration-300
+              transition-all duration-500
             "
             >
 
-              {/* Left Circle */}
+              {/* SHINE EFFECT */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+
+              {/* ICON CIRCLE */}
               <div
                 className="
-                w-11 h-11 rounded-full
-                bg-gradient-to-br from-[#2b4c9a] to-[#3b82f6]
+                relative z-10
+                w-12 h-12 rounded-full
+                bg-gradient-to-br from-[#2b4c9a] to-[#6EA8FF]
                 flex items-center justify-center
-                shadow-lg
+                shadow-[0_8px_20px_rgba(43,76,154,0.35)]
               "
               >
-                <span className="text-white text-lg">↗</span>
+
+                {/* LIVE DOT */}
+                <span className="absolute top-1 right-1 w-3 h-3 bg-green-400 border-2 border-white rounded-full"></span>
+
+                {/* ARROW */}
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 17L17 7M17 7H9M17 7V15"
+                  />
+                </svg>
               </div>
 
-              {/* Text */}
-              <div className="flex flex-col leading-tight">
+              {/* TEXT */}
+              <div className="relative z-10 flex flex-col leading-tight">
 
+                <span className="text-[10px] uppercase tracking-[2.5px] text-[#7C8DB5] font-semibold">
+                  Instant Connect
+                </span>
 
-                <span className="text-[15px] font-semibold text-[#1a2e5e]">
-                  Let’s Grow Your Brand
+                <span className="text-[15px] font-semibold text-[#1A2E5E]">
+                  Let’s Scale Your Brand
                 </span>
 
               </div>
