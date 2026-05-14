@@ -138,18 +138,18 @@ const formatNumber = (num: number, suffix: string) => {
                           {/* NUMBER */}
                           <div className="flex items-end gap-1 leading-none">
 
-                            <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a]">
+                            <span className="text-3xl md:text-4xl font-bold text-[#ffffff]">
                               {formatNumber(counts[i], item.suffix)}
                             </span>
 
-                            <span className="text-2xl font-bold text-[#2b4c9a]">
+                            <span className="text-2xl font-bold text-[#ffffff]">
                               {item.suffix}
                             </span>
 
                           </div>
 
                           {/* LABEL */}
-                          <p className="mt-1 text-sm text-[#5b6475] font-medium">
+                          <p className="mt-1 text-sm text-[#ffffff] font-medium">
                             {item.label}
                           </p>
 
