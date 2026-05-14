@@ -1,7 +1,7 @@
 export default function OurStorySection() {
   return (
     <section className="bg-[#f8f9fb] py-16 px-6 md:px-12 lg:px-20">
-      <div className="Container mx-auto">
+      <div className="container mx-auto">
          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Left Content - 40% */}
           <div className="w-full lg:w-[40%] space-y-6">
