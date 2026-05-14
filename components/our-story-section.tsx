@@ -26,23 +26,8 @@ export default function OurStorySection() {
               From SEO and paid ads to web design and performance marketing, we build everything in-house with strategy, creativity, and data.
             </p>
 
-            <button className="mt-4 bg-[#3b5998] hover:bg-[#2d4373] text-white font-medium px-8 py-3 rounded-full inline-flex items-center gap-2 transition-colors">
-              {"Let's Work Together"}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </button>
+
+
           </div>
 
           {/* Right Content - Cards */}
