@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 export default function CTASection() {
   return (
     <section className="bg-[#EEF4FF] py-16 px-4 md:px-8 lg:px-16 overflow-hidden">
-      <div className="container rounded-lg px-6 py-16 bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] mx-auto">
+      <div className="container rounded-lg px-16 py-16 bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-6">
