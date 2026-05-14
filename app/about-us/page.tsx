@@ -1,3 +1,5 @@
+import OurStorySection from "@/components/our-story-section"
+
 export default function AboutUsPage() {
   const values = [
     {
@@ -98,6 +100,9 @@ export default function AboutUsPage() {
       </section>
 
       {/* STORY SECTION */}
+
+      <OurStorySection />
+
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
