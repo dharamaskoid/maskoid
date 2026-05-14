@@ -152,9 +152,6 @@ export default function Header() {
               </div>
 
               {/* Arrow */}
-              <div className="transform group-hover:translate-x-1 transition duration-300 text-lg">
-                →
-              </div>
 
             </div>
           </Link>
