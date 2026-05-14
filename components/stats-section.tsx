@@ -121,12 +121,12 @@ const formatNumber = (num: number, suffix: string) => {
                       <div
                         key={i}
                         className={`relative flex items-center gap-4 px-6 py-4
-                        ${i !== counterData.length - 1 ? "md:border-r border-[#dbe7ff]" : ""}
+                        ${i !== counterData.length - 1 ? "md:border-r border-[#4a5f89]" : ""}
                         `}
                       >
 
                         {/* ICON */}
-                        <div className="w-16 h-16 rounded-2xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] shadow-sm">
+                        <div className="w-16 h-16 rounded-2xl bg-[#eef4ff] border border-[#4a5f89] flex items-center justify-center text-[#2b4c9a] shadow-sm">
 
                           {item.icon}
 
