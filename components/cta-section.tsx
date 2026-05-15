@@ -68,7 +68,7 @@ const float = {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
-              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-7 py-3.5 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
+              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
             >
               Start Your Project
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

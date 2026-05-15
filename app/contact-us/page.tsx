@@ -181,7 +181,7 @@ export default function ContactPage() {
                   className="w-full p-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a] resize-none"
                 ></textarea>
 
-                <button className="group w-full h-14 rounded-xl bg-[#2b4c9a] text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all duration-300 shadow-[0_20px_40px_rgba(59,130,246,0.25)]">
+                <button className="group w-full px-6 py-3 rounded-xl bg-[#2b4c9a] text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all duration-300 shadow-[0_20px_40px_rgba(59,130,246,0.25)]">
                   Send Message
                 </button>
 
