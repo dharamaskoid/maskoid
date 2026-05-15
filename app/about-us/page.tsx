@@ -2,6 +2,7 @@ import OurStorySection from "@/components/our-story-section"
 import OurValuesSection from "@/components/our-values-section"
 import StatsSection from "@/components/stats-section"
 import CTASection from "@/components/cta-section"
+import { motion } from "framer-motion";
 
 export default function AboutUsPage() {
 
@@ -9,45 +10,191 @@ export default function AboutUsPage() {
     <main className="bg-white overflow-hidden text-[#111827] pt-[81.5px] lg:pt-[81.5px]">
       {/* HERO SECTION */}
       <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
-        {/* BACKGROUND */}
+      
+        {/* PREMIUM BACKGROUND */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+          
+          {/* Glow Effects */}
+          <motion.div
+            animate={{
+              scale: [1, 1.15, 1],
+              opacity: [0.4, 0.7, 0.4],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"
+          />
+
+          <motion.div
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"
+          />
+
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:32px_32px]" />
         </div>
 
-        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
+        <div className="container mx-auto px-6 py-14 lg:py-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* LEFT */}
-            <div>
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
+            
+            {/* LEFT CONTENT */}
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              {/* Badge */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-xl"
+              >
                 About Us
-              </p>
+              </motion.p>
 
-              <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
+              {/* Heading */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35, duration: 0.8 }}
+                viewport={{ once: true }}
+                className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight"
+              >
                 The Story Behind <br />
-                <span className="text-[#6EA8FF]">Maskoid</span>
-              </h1>
+                <span className="text-[#6EA8FF]">
+                  Maskoid
+                </span>
+              </motion.h1>
 
-              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We are a digital growth agency helping businesses scale using premium websites, SEO systems, paid marketing, and performance-driven strategies.
-              </p>
+              {/* Paragraph */}
+              <motion.p
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                viewport={{ once: true }}
+                className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl"
+              >
+                We are a digital growth agency helping businesses scale using
+                premium websites, SEO systems, paid marketing, and
+                performance-driven strategies.
+              </motion.p>
 
-            </div>
+              {/* Bottom Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                viewport={{ once: true }}
+                className="mt-10 flex flex-wrap gap-6"
+              >
+                <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur-xl">
+                  <h3 className="text-2xl font-bold text-[#6EA8FF]">120+</h3>
+                  <p className="text-sm text-[#B7C2D8]">Projects Delivered</p>
+                </div>
 
-            {/* RIGHT */}
-            <div className="relative">
-              <div className="absolute -inset-3 bg-gradient-to-r from-[#2b4c9a]/40 to-blue-500/10 blur-2xl rounded-[32px]"></div>
+                <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur-xl">
+                  <h3 className="text-2xl font-bold text-[#6EA8FF]">98%</h3>
+                  <p className="text-sm text-[#B7C2D8]">Client Satisfaction</p>
+                </div>
+              </motion.div>
+            </motion.div>
 
-              <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+            {/* RIGHT IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              {/* Glow Behind Image */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.04, 1],
+                  rotate: [0, 1, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -inset-3 bg-gradient-to-r from-[#2b4c9a]/40 to-blue-500/10 blur-2xl rounded-[32px]"
+              />
+
+              {/* Floating Dots */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-6 -right-6 w-24 h-24 opacity-30"
+              >
+                <div className="grid grid-cols-4 gap-2">
+                  {[...Array(16)].map((_, i) => (
+                    <span
+                      key={i}
+                      className="w-1.5 h-1.5 rounded-full bg-[#6EA8FF]"
+                    />
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Image Card */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.01,
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: "easeOut",
+                }}
+                className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
+              >
                 <img
                   src="/images/about-us-banner.jpg"
                   alt="About"
                   className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[450px] object-cover"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-transparent to-transparent"></div>
-              </div>
-            </div>
+                {/* Premium Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071120]/80 via-transparent to-transparent" />
+
+                {/* Floating Glass Card */}
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4"
+                >
+                  <p className="text-sm text-[#B7C2D8]">
+                    Growth Focused Agency
+                  </p>
+                  <h4 className="text-xl font-semibold mt-1">
+                    Premium Digital Solutions
+                  </h4>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
