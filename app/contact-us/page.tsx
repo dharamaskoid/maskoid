@@ -75,36 +75,109 @@ export default function ContactPage() {
 
             </motion.div>
 
-            {/* RIGHT */}
+            {/* RIGHT SIDE */}
             <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              className="relative"
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="relative flex justify-center lg:justify-end"
             >
 
-              {/* GLOW */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
+            {/* BACKGROUND GRADIENT SHAPES */}
+            <div className="absolute inset-0 flex items-center justify-center">
 
-              {/* IMAGE */}
-              <motion.div
-                animate={{ y: [0, -12, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
+                {/* MAIN SOFT BLOB */}
+                <motion.div
+                animate={{
+                    scale: [1, 1.08, 1],
+                    opacity: [0.7, 1, 0.7],
                 }}
-                className="relative overflow-hidden rounded-[32px]"
-              >
-
-                <img
-                src="/images/contact-us-banner(1).png"
-                alt="Contact"
-                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
+                transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute w-[420px] h-[420px] bg-gradient-to-br from-[#3B82F6]/20 via-[#6EA8FF]/10 to-transparent rounded-full blur-3xl"
                 />
 
-              </motion.div>
+                {/* TOP RIGHT LIGHT */}
+                <motion.div
+                animate={{
+                    y: [-10, 10, -10],
+                }}
+                transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute top-10 right-10 w-[220px] h-[220px] bg-[#6EA8FF]/20 rounded-full blur-3xl"
+                />
 
+                {/* BOTTOM LEFT LIGHT */}
+                <motion.div
+                animate={{
+                    x: [-8, 8, -8],
+                }}
+                transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute bottom-10 left-10 w-[180px] h-[180px] bg-[#2b4c9a]/30 rounded-full blur-3xl"
+                />
+
+                {/* DOTTED PATTERN */}
+                <motion.div
+                animate={{
+                    opacity: [0.15, 0.35, 0.15],
+                }}
+                transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute top-16 right-0 w-32 h-32 opacity-20"
+                >
+                <div className="w-full h-full bg-[radial-gradient(#6EA8FF_1.5px,transparent_1.5px)] [background-size:12px_12px]"></div>
+                </motion.div>
+
+                {/* CURVE LINE */}
+                <motion.div
+                animate={{
+                    rotate: [0, 8, 0],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute bottom-14 right-8 w-40 h-40 border border-dashed border-[#6EA8FF]/30 rounded-full"
+                />
+            </div>
+
+            {/* IMAGE */}
+            <motion.div
+                animate={{
+                y: [0, -14, 0],
+                rotate: [0, 1.5, 0, -1.5, 0],
+                }}
+                transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+                }}
+                whileHover={{
+                scale: 1.03,
+                }}
+                className="relative z-10"
+            >
+                <img
+                src="/images/contact-envelope.png"
+                alt="Contact Illustration"
+                className="w-full max-w-[500px] object-contain drop-shadow-[0_30px_80px_rgba(37,99,235,0.35)]"
+                />
+            </motion.div>
             </motion.div>
 
           </div>
