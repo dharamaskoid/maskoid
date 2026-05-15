@@ -10,7 +10,6 @@ import {
   Users,
   Target,
   Clock3,
-  ArrowRight,
 } from "lucide-react";
 
 
@@ -293,7 +292,7 @@ export default function ContactPage() {
               text: "Your data is 100% safe and confidential.",
             },
             {
-              icon: <ArrowRight size={30} />,
+              icon: <Target size={30} />,
               title: "Results Driven",
               text: "We focus on strategies that deliver results.",
             },
