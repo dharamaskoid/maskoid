@@ -83,7 +83,7 @@ const float = {
           >
 
                 <img
-                src="/images/about-cta.png"
+                src="/images/about-cta1.png"
                 alt="Contact"
                 className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
