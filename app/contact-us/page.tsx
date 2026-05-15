@@ -84,42 +84,7 @@ export default function ContactPage() {
 
               {/* GLOW */}
               <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
-                {/* UNSTRUCTURED PURPLE SHAPES */}
-                <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-                {/* SHAPE 1 */}
-                <div
-                    className="
-                    absolute
-                    top-0
-                    right-0
-                    w-[340px]
-                    h-[280px]
-                    bg-[#8B5CF6]/18
-                    blur-[70px]
-                    rounded-[58%_42%_63%_37%/40%_55%_45%_60%]
-                    rotate-[-18deg]
-                    animate-float-slow
-                    "
-                ></div>
-
-                {/* SHAPE 2 */}
-                <div
-                    className="
-                    absolute
-                    bottom-6
-                    left-8
-                    w-[220px]
-                    h-[180px]
-                    bg-[#A855F7]/14
-                    blur-[65px]
-                    rounded-[39%_61%_52%_48%/58%_42%_58%_42%]
-                    rotate-[22deg]
-                    animate-float-reverse
-                    "
-                ></div>
-
-                </div>
               {/* IMAGE */}
               <motion.div
                 animate={{ y: [0, -12, 0] }}
