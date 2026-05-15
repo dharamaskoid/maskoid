@@ -303,11 +303,11 @@ export default function ContactPage() {
                   <ShieldCheck size={26} />
                 </div>
 
-                <h3 className="mt-5 text-xl font-bold text-[#102347]">
+                <h3 className="mt-5 text-xl font-bold text-[#FFFFFF]">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-[#5B6475] leading-relaxed">
+                <p className="mt-3 text-gray-300 leading-relaxed">
                   {item.text}
                 </p>
 
