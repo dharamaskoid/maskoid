@@ -97,6 +97,28 @@ export default function AboutUsPage() {
                       </div>
                     </div>
                   </div>
+                  <style jsx>{`
+        @keyframes gradient-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+          25% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+          50% { transform: translateY(-40px) translateX(-10px); opacity: 0.3; }
+          75% { transform: translateY(-20px) translateX(15px); opacity: 0.6; }
+        }
+        .animate-float {
+          animation: float 10s ease-in-out infinite;
+        }
+        @keyframes shine {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+        .animate-shine {
+          animation: shine 3s ease-in-out infinite;
+        }
+      `}</style>
           </div>
         
       </section>
