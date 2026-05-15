@@ -43,7 +43,7 @@ export default function ContactPage() {
 
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-16 py-20 lg:py-24">
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
