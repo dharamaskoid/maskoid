@@ -53,7 +53,7 @@ export default function ContactPage() {
               animate="show"
             >
 
-              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
                 Contact Us
               </p>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-[#3B82F6] text-xs font-semibold uppercase">
                 Send Us A Message
               </p>
 
@@ -198,7 +198,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-[#3B82F6] text-xs font-semibold uppercase">
                 Contact Information
               </p>
 
