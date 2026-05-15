@@ -353,16 +353,16 @@ export default function ContactPage() {
           >
 
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-              Let&apos;s Grow Together
+              Ready to Start?
             </p>
 
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
-              Let&apos;s Build Something{" "}
-              <span className="text-blue-400">Amazing</span> Together
+              Let&apos;s Grow {" "}
+              <span className="text-blue-400">Your Business</span> Together
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
-              Have a project in mind? Let&apos;s create a digital experience that drives growth and sets your business apart.
+              Book a free consultation call with our experts and take the first step towards dgital success.
             </p>
 
             <motion.button
