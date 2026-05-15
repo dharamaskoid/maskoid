@@ -1,10 +1,30 @@
+"use client"
+
 import OurStorySection from "@/components/our-story-section"
 import OurValuesSection from "@/components/our-values-section"
 import StatsSection from "@/components/stats-section"
 import CTASection from "@/components/cta-section"
+import { useEffect, useState, useRef } from "react"
 
 export default function AboutUsPage() {
 
+  const [isVisible, setIsVisible] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect()
+      setMousePosition({
+        x: (e.clientX - rect.left) / rect.width,
+        y: (e.clientY - rect.top) / rect.height,
+      })
+    }
+  }
   return (
     <main className="bg-white overflow-hidden text-[#111827] pt-[81.5px] lg:pt-[81.5px]">
       {/* HERO SECTION */}
@@ -35,21 +55,50 @@ export default function AboutUsPage() {
             </div>
 
             {/* RIGHT */}
-            <div className="relative">
-              <div className="absolute -inset-3 bg-gradient-to-r from-[#2b4c9a]/40 to-blue-500/10 blur-2xl rounded-[32px]"></div>
+            {/* RIGHT IMAGE - 55% */}
+                    <div className="relative w-full lg:w-[55%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
+                      {/* Image Container */}
+                      <div 
+                        className={`relative h-[350px] lg:h-full transition-all duration-1000 delay-300 ${
+                          isVisible ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                        }`}
+                      >
+                        <img
+                          src="/images/about-us-banner.jpg"
+                          alt="About Maskoid - Our Team"
+                          className="w-full h-full object-cover"
+                        />
+                        
+                        {/* Gradient Overlays */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/50 to-transparent lg:via-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent lg:hidden" />
+                        
+                        {/* Animated Shine Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-shine" />
+                      </div>
 
-              <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
-                <img
-                  src="/images/about-banner.jpg"
-                  alt="About"
-                  className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[450px] object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071120] via-transparent to-transparent"></div>
-              </div>
-            </div>
+                      {/* Floating Experience Badge */}
+                      <div 
+                        className={`absolute bottom-8 left-8 lg:bottom-12 lg:left-12 z-20 transition-all duration-1000 delay-700 ${
+                          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                        }`}
+                      >
+                        <div className="bg-white rounded-2xl p-5 shadow-2xl flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+                          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
+                            <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <div className="text-3xl font-bold text-gray-900">10+</div>
+                            <div className="text-sm text-gray-500">Years of Experience</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
           </div>
-        </div>
+        
       </section>
 
       {/* STORY SECTION */}
