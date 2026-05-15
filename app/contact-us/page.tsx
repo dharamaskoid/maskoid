@@ -24,7 +24,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-[#EEF4FF] overflow-hidden">
+    <main className="bg-[#EEF4FF] overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
       {/* ================================================= */}
       {/* HERO SECTION */}
