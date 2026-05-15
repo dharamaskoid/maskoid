@@ -98,9 +98,9 @@ export default function ContactPage() {
               >
 
                 <img
-                  src="/images/contact-us-banner(1).png"
-                  alt="Contact"
-                  className="w-full h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] object-cover"
+                src="/images/contact-us-banner(1).png"
+                alt="Contact"
+                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
 
               </motion.div>
