@@ -396,7 +396,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* RIGHT SIDE - CONTENT */}
-                <div className="px-8 md:px-12 py-10 lg:py-14">
+                <div className="px-8">
 
                 {/* TAG */}
                 <p className="inline-flex px-4 py-1.5 rounded-full bg-blue-500/10 text-[#2563EB] text-xs font-semibold uppercase tracking-[0.2em]">
