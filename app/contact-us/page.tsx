@@ -374,23 +374,34 @@ export default function ContactPage() {
             variants={fadeUp}
             className="w-full lg:w-1/2 relative"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
-            >
-              Book a Free Call
+            {/* BUTTONS */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4, duration: 0.8 }}
+                      className="mt-6 md:mt-8 flex flex-row flex-wrap justify-center md:justify-start gap-4"
+                    >
 
-            </motion.button>
+                      {/* PRIMARY BUTTON */}
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl cursor-pointer bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300"
+                      >
+                        Book a Free Call
+                      </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
-            >
-              View Our Work
+                      {/* SECONDARY BUTTON */}
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm cursor-pointer"
+                      >
+                        View Our Work
+                      </motion.button>
 
-            </motion.button>
+                    </motion.div>
+            
           
           </motion.div>
         </div>
