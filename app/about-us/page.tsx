@@ -122,7 +122,7 @@ export default function AboutUsPage() {
                 <img
                   src="/images/about-us-banner.jpg"
                   alt="About"
-                  className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-cover"
+                  className="w-full h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] object-cover"
                 />
 
                 {/* Premium Overlay */}
