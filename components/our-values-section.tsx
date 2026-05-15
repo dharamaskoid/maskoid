@@ -162,7 +162,7 @@ export default function OurValuesSection() {
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {value.description}
               </p>
             </motion.div>
