@@ -102,7 +102,7 @@ export default function ContactPage() {
             {/* IMAGE */}
             <div className="relative z-10">
                 <img
-                src="/images/contact-envelope.png"
+                src="/images/contact-us-banner(1).png"
                 alt="Contact"
                 className="w-full max-w-[500px] object-contain animate-float drop-shadow-[0_30px_80px_rgba(37,99,235,0.35)]"
                 />
