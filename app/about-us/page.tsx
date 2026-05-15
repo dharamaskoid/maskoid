@@ -47,7 +47,7 @@ export default function AboutUsPage() {
           <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:32px_32px]" />
         </div>
 
-        <div className="container mx-auto px-6 py-14 lg:py-16 relative z-10">
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* LEFT CONTENT */}
@@ -155,7 +155,7 @@ export default function AboutUsPage() {
                 <img
                   src="/images/about-us-banner.jpg"
                   alt="About"
-                  className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[450px] object-cover"
+                  className="w-full h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] object-cover"
                 />
 
                 {/* Premium Overlay */}
