@@ -30,7 +30,7 @@ export default function ContactPage() {
       {/* HERO SECTION */}
       {/* ================================================= */}
 
-      <section className="relative bg-[#06142E] text-white overflow-hidden">
+      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
         {/* BACKGROUND */}
         <div className="absolute inset-0 pointer-events-none">
