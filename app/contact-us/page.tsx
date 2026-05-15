@@ -365,14 +365,7 @@ export default function ContactPage() {
               Book a free consultation call with our experts and take the first step towards dgital success.
             </p>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
-            >
-              Start Your Project
 
-            </motion.button>
 
           </motion.div>
 
@@ -381,7 +374,23 @@ export default function ContactPage() {
             variants={fadeUp}
             className="w-full lg:w-1/2 relative"
           >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.96 }}
+              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
+            >
+              Book a Free Call
 
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.96 }}
+              className="group bg-white text-[#2b4c9a] hover:bg-gray-100 rounded-xl px-6 py-3 text-base font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
+            >
+              View Our Work
+
+            </motion.button>
           
           </motion.div>
         </div>
