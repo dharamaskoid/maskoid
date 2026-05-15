@@ -58,7 +58,7 @@ export default function ContactPage() {
                 Contact Us
               </p>
 
-              <h1 className="mt-7 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
+              <h1 className="mt-7 text-4xl md:text-4xl xl:text-4xl font-bold leading-tight">
                 Let’s Build Something
                 <span className="block text-[#6EA8FF]">
                   Amazing Together
