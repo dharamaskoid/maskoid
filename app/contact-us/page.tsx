@@ -181,7 +181,7 @@ export default function ContactPage() {
                   className="w-full p-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a] resize-none"
                 ></textarea>
 
-                <button className="group w-full h-14 rounded-xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all duration-300 shadow-[0_20px_40px_rgba(59,130,246,0.25)]">
+                <button className="group w-full h-14 rounded-xl bg-[#2b4c9a] text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all duration-300 shadow-[0_20px_40px_rgba(59,130,246,0.25)]">
                   Send Message
                 </button>
 
@@ -238,7 +238,7 @@ export default function ContactPage() {
 
                     <div className="flex items-start gap-5">
 
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] flex items-center justify-center text-white shadow-lg">
+                      <div className="w-14 h-14 rounded-xl bg-[#2b4c9a] flex items-center justify-center text-white shadow-lg">
                         <item.icon size={24} />
                       </div>
 
@@ -299,7 +299,7 @@ export default function ContactPage() {
                 className="text-center"
               >
 
-                <div className="w-16 h-16 rounded-2xl mx-auto bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] flex items-center justify-center text-white shadow-lg">
+                <div className="w-16 h-16 rounded-xl mx-auto bg-[#2b4c9a] flex items-center justify-center text-white shadow-lg">
                   <ShieldCheck size={26} />
                 </div>
 
