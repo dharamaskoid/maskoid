@@ -300,7 +300,7 @@ export default function ContactPage() {
               >
 
                 <div className="w-16 h-16 rounded-xl mx-auto bg-white flex items-center justify-center text-[#1a2e5e] shadow-lg">
-                  <ShieldCheck size={26} />
+                  <ShieldCheck size={30} />
                 </div>
 
                 <h3 className="mt-5 text-xl font-bold text-[#FFFFFF]">
