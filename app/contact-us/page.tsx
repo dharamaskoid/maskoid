@@ -98,7 +98,7 @@ export default function ContactPage() {
               >
 
                 <img
-                  src="/images/contact-us-banner.png"
+                  src="/images/contact-us-banner(1).png"
                   alt="Contact"
                   className="w-full h-auto object-cover"
                 />
