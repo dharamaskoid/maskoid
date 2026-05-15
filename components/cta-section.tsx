@@ -56,7 +56,7 @@ const float = {
               Let&apos;s Grow Together
             </p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
               Let&apos;s Build Something{" "}
               <span className="text-blue-400">Amazing</span> Together
             </h2>
