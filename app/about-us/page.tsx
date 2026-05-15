@@ -161,23 +161,7 @@ export default function AboutUsPage() {
                 {/* Premium Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071120]/80 via-transparent to-transparent" />
 
-                {/* Floating Glass Card */}
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4"
-                >
-                  <p className="text-sm text-[#B7C2D8]">
-                    Growth Focused Agency
-                  </p>
-                  <h4 className="text-xl font-semibold mt-1">
-                    Premium Digital Solutions
-                  </h4>
-                </motion.div>
+
               </motion.div>
             </motion.div>
           </div>
