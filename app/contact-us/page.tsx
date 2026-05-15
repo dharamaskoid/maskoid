@@ -293,7 +293,7 @@ export default function ContactPage() {
               text: "Your data is 100% safe and confidential.",
             },
             {
-              icon: <Target size={30} />,
+              icon: <ArrowRight size={30} />,
               title: "Results Driven",
               text: "We focus on strategies that deliver results.",
             },
