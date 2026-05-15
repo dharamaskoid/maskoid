@@ -239,8 +239,8 @@ export default function Header() {
               Projects
             </Link>
 
-            <Link href="/contact" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
-              Contact
+            <Link href="/contact-us" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+              Contact Us
             </Link>
 
               {/* CTA */}
