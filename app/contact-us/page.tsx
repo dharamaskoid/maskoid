@@ -182,20 +182,9 @@ export default function ContactPage() {
                 ></textarea>
 
                 <button className="group w-full h-14 rounded-xl bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all duration-300 shadow-[0_20px_40px_rgba(59,130,246,0.25)]">
-
                   Send Message
-
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition"
-                  />
-
                 </button>
 
-                <div className="flex items-center gap-2 text-sm text-[#5B6475]">
-                  <ShieldCheck size={16} />
-                  Your information is safe with us. We don’t share your data.
-                </div>
 
               </form>
 
