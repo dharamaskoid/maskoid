@@ -12,40 +12,7 @@ export default function AboutUsPage() {
     <main className="bg-white overflow-hidden text-[#111827] pt-[81.5px] lg:pt-[81.5px]">
       {/* HERO SECTION */}
       <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
-      
-        {/* PREMIUM BACKGROUND */}
-        <div className="absolute inset-0 pointer-events-none">
-          
-          {/* Glow Effects */}
-          <motion.div
-            animate={{
-              scale: [1, 1.15, 1],
-              opacity: [0.4, 0.7, 0.4],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"
-          />
 
-          <motion.div
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"
-          />
-
-          {/* Grid Pattern */}
-          <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:32px_32px]" />
-        </div>
 
         <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
