@@ -100,7 +100,7 @@ export default function ContactPage() {
                 <img
                   src="/images/contact-us-banner(1).png"
                   alt="Contact"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] object-cover"
                 />
 
               </motion.div>
