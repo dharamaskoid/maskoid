@@ -43,7 +43,7 @@ export default function ContactPage() {
 
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 lg:py-24">
+        <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-16 py-20 lg:py-24">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -117,7 +117,7 @@ export default function ContactPage() {
 
       <section className="py-20 px-6 md:px-10 lg:px-16">
 
-        <div className="max-w-7xl mx-auto">
+        <div className="container mx-auto">
 
           <div className="grid lg:grid-cols-2 gap-16">
 
@@ -283,7 +283,7 @@ export default function ContactPage() {
 
       <section className="pb-20 px-6 md:px-10 lg:px-16">
 
-        <div className="max-w-7xl mx-auto bg-white rounded-[32px] border border-[#dbe7ff] p-10">
+        <div className="container mx-auto bg-white rounded-[32px] border border-[#dbe7ff] p-10">
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
