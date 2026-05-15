@@ -1,3 +1,5 @@
+"use client";
+
 import OurStorySection from "@/components/our-story-section"
 import OurValuesSection from "@/components/our-values-section"
 import StatsSection from "@/components/stats-section"
