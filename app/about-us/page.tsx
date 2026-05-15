@@ -95,24 +95,7 @@ export default function AboutUsPage() {
                 performance-driven strategies.
               </motion.p>
 
-              {/* Bottom Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="mt-10 flex flex-wrap gap-6"
-              >
-                <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur-xl">
-                  <h3 className="text-2xl font-bold text-[#6EA8FF]">120+</h3>
-                  <p className="text-sm text-[#B7C2D8]">Projects Delivered</p>
-                </div>
 
-                <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur-xl">
-                  <h3 className="text-2xl font-bold text-[#6EA8FF]">98%</h3>
-                  <p className="text-sm text-[#B7C2D8]">Client Satisfaction</p>
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* RIGHT IMAGE */}
