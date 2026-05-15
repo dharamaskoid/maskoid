@@ -40,7 +40,7 @@ export default function AboutUsPage() {
 
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
                 <img
-                  src="/images/about-banner.jpg"
+                  src="/images/about-us-banner.jpg"
                   alt="About"
                   className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[450px] object-cover"
                 />
