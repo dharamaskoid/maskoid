@@ -271,7 +271,7 @@ export default function ContactPage() {
 
       <section className="pb-20 px-6 md:px-10 lg:px-16">
 
-        <div className="container mx-auto bg-white rounded-[32px] border border-[#dbe7ff] p-10">
+        <div className="container mx-auto bg-[#1a2e5e] rounded-2xl border border-[#dbe7ff] p-10">
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -299,7 +299,7 @@ export default function ContactPage() {
                 className="text-center"
               >
 
-                <div className="w-16 h-16 rounded-xl mx-auto bg-[#2b4c9a] flex items-center justify-center text-white shadow-lg">
+                <div className="w-16 h-16 rounded-xl mx-auto bg-white flex items-center justify-center text-[#1a2e5e] shadow-lg">
                   <ShieldCheck size={26} />
                 </div>
 
