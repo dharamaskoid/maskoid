@@ -75,39 +75,37 @@ export default function ContactPage() {
 
             </motion.div>
 
-            {/* RIGHT SIDE */}
-            <div className="relative flex justify-center lg:justify-end">
+            {/* RIGHT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              className="relative"
+            >
 
-            {/* BACKGROUND DESIGN */}
-            <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+              {/* GLOW */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
 
-                {/* BIG BLUR SHAPE */}
-                <div className="absolute w-[420px] h-[420px] rounded-[45%] bg-gradient-to-br from-[#6EA8FF]/20 via-[#3B82F6]/10 to-transparent blur-3xl animate-pulse"></div>
+              {/* IMAGE */}
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative overflow-hidden rounded-[32px]"
+              >
 
-                {/* LIGHT SHAPE */}
-                <div className="absolute top-6 right-10 w-[260px] h-[260px] rounded-[45%] bg-[#6EA8FF]/10 blur-[80px]"></div>
-
-                {/* BOTTOM GLOW */}
-                <div className="absolute bottom-0 left-10 w-[220px] h-[220px] bg-[#2563EB]/20 rounded-full blur-[90px]"></div>
-
-                {/* DOTTED GRID */}
-                <div className="absolute top-14 right-4 opacity-25">
-                <div className="w-28 h-28 bg-[radial-gradient(#6EA8FF_1.5px,transparent_1.5px)] [background-size:12px_12px]"></div>
-                </div>
-
-                {/* DASHED CURVE */}
-                <div className="absolute bottom-10 right-8 w-40 h-40 border border-dashed border-[#6EA8FF]/40 rounded-full animate-spin-slow"></div>
-            </div>
-
-            {/* IMAGE */}
-            <div className="relative z-10">
                 <img
                 src="/images/contact-us-banner(1).png"
                 alt="Contact"
-                className="w-full max-w-[500px] object-contain animate-float drop-shadow-[0_30px_80px_rgba(37,99,235,0.35)]"
+                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
-            </div>
-            </div>
+
+              </motion.div>
+
+            </motion.div>
 
           </div>
         </div>
