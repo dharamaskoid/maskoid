@@ -328,7 +328,7 @@ export default function ContactPage() {
     </section>
 
         {/* MAP SECTION */}
-        <section className="bg-[#EEF4FF] py-10">
+       {/* <section className="bg-[#EEF4FF] py-10">
 
         <div className="container mx-auto overflow-hidden rounded-2xl border border-[#dbe7ff] shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
 
@@ -345,7 +345,7 @@ export default function ContactPage() {
 
         </div>
 
-        </section>
+        </section>*/}
 
         <section className="bg-[#EEF4FF] px-6 md:px-10 lg:px-16 py-10">
           <div className="bg-white rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(43,76,154,0.08)]"></div>
