@@ -349,122 +349,119 @@ export default function ContactPage() {
 
         <section className="bg-[#EEF4FF] px-6 md:px-10 lg:px-16 pb-20">
 
-        <div className="container mx-auto">
+          <div className="container mx-auto">
 
-            <div className="grid lg:grid-cols-[70%_30%] items-center">
+              <div className="grid lg:grid-cols-[70%_30%] items-center">
 
-                {/* LEFT SIDE - MAP */}
-                <div className="relative h-full">
+                  {/* LEFT SIDE - MAP */}
+                  <div className="relative h-full">
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6267.920822954264!2d73.17486261049172!3d22.307488551278368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778925243270!5m2!1sen!2sin"
-                width="100%" 
-                height="450" 
-                style={{border:0}} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full"
-                >
-                </iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6267.920822954264!2d73.17486261049172!3d22.307488551278368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778925243270!5m2!1sen!2sin"
+                  width="100%" 
+                  height="450" 
+                  style={{border:0}} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full"
+                  >
+                  </iframe>
 
-                {/* LOCATION PIN */}
-                <div className="absolute top-[42%] left-[48%]">
+                  {/* LOCATION PIN */}
+                  <div className="absolute top-[42%] left-[48%]">
 
-                    {/* PING */}
-                    <span className="absolute inset-0 w-10 h-10 rounded-full bg-blue-500/30 animate-ping"></span>
+                      {/* PING */}
+                      <span className="absolute inset-0 w-10 h-10 rounded-full bg-blue-500/30 animate-ping"></span>
 
-                    {/* PIN */}
-                    <div className="relative w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
+                      {/* PIN */}
+                      <div className="relative w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
 
-                    <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                    >
-                        <path
-                        d="M12 21C12 21 19 13.5 19 8.5C19 4.63401 15.866 1.5 12 1.5C8.13401 1.5 5 4.63401 5 8.5C5 13.5 12 21 12 21Z"
-                        fill="white"
-                        />
-                    </svg>
+                      <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                      >
+                          <path
+                          d="M12 21C12 21 19 13.5 19 8.5C19 4.63401 15.866 1.5 12 1.5C8.13401 1.5 5 4.63401 5 8.5C5 13.5 12 21 12 21Z"
+                          fill="white"
+                          />
+                      </svg>
 
-                    </div>
+                      </div>
 
-                </div>
-                </div>
+                  </div>
+                  </div>
 
-                {/* RIGHT SIDE - CONTENT */}
-                <div className="px-8">
+                  {/* RIGHT SIDE - CONTENT */}
+                  <div className="px-8">
 
-                {/* TAG */}
-                <p className="inline-flex px-4 py-1.5 rounded-full bg-blue-500/10 text-[#2563EB] text-xs font-semibold uppercase tracking-[0.2em]">
-                    Our Location
-                </p>
+                  {/* TAG */}
+                  <p className="inline-flex px-4 py-1.5 rounded-full bg-blue-500/10 text-[#2563EB] text-xs font-semibold uppercase tracking-[0.2em]">
+                      Our Location
+                  </p>
 
-                {/* HEADING */}
-                <h2 className="mt-5 text-3xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                    Visit Our <span className="text-[#2563EB]">Office</span>
-                </h2>
+                  {/* HEADING */}
+                  <h2 className="mt-5 text-3xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                      Visit Our <span className="text-[#2563EB]">Office</span>
+                  </h2>
 
-                {/* DESCRIPTION */}
-                <p className="mt-5 text-gray-600 text-lg leading-relaxed">
-                    We'd love to meet you in person! Feel free to visit our office
-                    for a coffee and a chat about your project.
-                </p>
+                  {/* DESCRIPTION */}
+                  <p className="mt-5 text-gray-600 text-lg leading-relaxed">
+                      We'd love to meet you in person! Feel free to visit our office
+                      for a coffee and a chat about your project.
+                  </p>
 
-                {/* FEATURES */}
-                <div className="mt-8 space-y-5">
+                  {/* FEATURES */}
+                  <div className="mt-8 space-y-5">
 
-                    {[
-                    "Easy to reach location",
-                    "Modern & comfortable workspace",
-                    "Parking available",
-                    "Near metro station",
-                    ].map((item, index) => (
-                    <div
-                        key={index}
-                        className="flex items-center gap-4"
-                    >
+                      {[
+                      "Easy to reach location",
+                      "Modern & comfortable workspace",
+                      "Parking available",
+                      "Near metro station",
+                      ].map((item, index) => (
+                      <div
+                          key={index}
+                          className="flex items-center gap-4"
+                      >
 
-                        {/* ICON */}
-                        <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0">
+                          {/* ICON */}
+                          <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0">
 
-                        <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                        >
-                            <path
-                            d="M20 6L9 17L4 12"
-                            stroke="white"
-                            strokeWidth="3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            />
-                        </svg>
+                          <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                          >
+                              <path
+                              d="M20 6L9 17L4 12"
+                              stroke="white"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              />
+                          </svg>
 
-                        </div>
+                          </div>
 
-                        <p className="text-gray-700 font-medium">
-                        {item}
-                        </p>
+                          <p className="text-gray-700 font-medium">
+                          {item}
+                          </p>
 
-                    </div>
-                    ))}
+                      </div>
+                      ))}
 
-                </div>
+                  </div>
 
-                </div>
+                  </div>
+
+              </div>
 
             </div>
 
-            </div>
-
-        </div>
-
-        </section>
-        
+        </section>       
 
     </main>
   );
