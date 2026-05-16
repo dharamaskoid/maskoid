@@ -358,16 +358,16 @@ export default function ContactPage() {
                 {/* LEFT SIDE - MAP */}
                 <div className="relative h-full">
 
-                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117421.67139215356!2d72.45714186361182!3d23.020497753422073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f66b0d1b93%3A0x3c0d3bdbfbb27417!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.8083482773155!2d73.17764471280411!3d22.30701129980705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778924152449!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style={{border:0}} 
+                allowFullScreen 
+                loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full"
-                ></iframe>
+                >
+                </iframe>
 
                 {/* LOCATION PIN */}
                 <div className="absolute top-[42%] left-[48%]">
