@@ -358,7 +358,7 @@ export default function ContactPage() {
                 {/* LEFT SIDE - MAP */}
                 <div className="relative h-full">
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.8083482773155!2d73.17764471280411!3d22.30701129980705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778924152449!5m2!1sen!2sin" 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.243175321748!2d73.1786017!3d22.306641199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778924457870!5m2!1sen!2sin"
                 width="100%" 
                 height="450" 
                 style={{border:0}} 
