@@ -351,8 +351,6 @@ export default function ContactPage() {
 
         <div className="container mx-auto">
 
-            <div className="bg-white rounded-3xl overflow-hidden border border-[#dbe7ff] shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
-
             <div className="grid lg:grid-cols-[70%_30%] items-center">
 
                 {/* LEFT SIDE - MAP */}
