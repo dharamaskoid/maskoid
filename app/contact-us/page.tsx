@@ -348,7 +348,7 @@ export default function ContactPage() {
         </section>
 
         <section className="bg-[#EEF4FF] px-6 md:px-10 lg:px-16 pb-20">
-
+          <div className="bg-white rounded-3xl overflow-hidden border border-[#dbe7ff] shadow-[0_20px_60px_rgba(43,76,154,0.08)]"></div>
           <div className="container mx-auto">
 
               <div className="grid lg:grid-cols-[70%_30%] items-center">
@@ -356,41 +356,18 @@ export default function ContactPage() {
                   {/* LEFT SIDE - MAP */}
                   <div className="relative h-full">
 
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6267.920822954264!2d73.17486261049172!3d22.307488551278368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778925243270!5m2!1sen!2sin"
-                  width="100%" 
-                  height="450" 
-                  style={{border:0}} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full"
-                  >
-                  </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6267.920822954264!2d73.17486261049172!3d22.307488551278368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778925243270!5m2!1sen!2sin"
+                    width="100%" 
+                    height="450" 
+                    style={{border:0}} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full"
+                    >
+                    </iframe>
 
-                  {/* LOCATION PIN */}
-                  <div className="absolute top-[42%] left-[48%]">
 
-                      {/* PING */}
-                      <span className="absolute inset-0 w-10 h-10 rounded-full bg-blue-500/30 animate-ping"></span>
-
-                      {/* PIN */}
-                      <div className="relative w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
-
-                      <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                      >
-                          <path
-                          d="M12 21C12 21 19 13.5 19 8.5C19 4.63401 15.866 1.5 12 1.5C8.13401 1.5 5 4.63401 5 8.5C5 13.5 12 21 12 21Z"
-                          fill="white"
-                          />
-                      </svg>
-
-                      </div>
-
-                  </div>
                   </div>
 
                   {/* RIGHT SIDE - CONTENT */}
