@@ -347,8 +347,8 @@ export default function ContactPage() {
 
         </section>
 
-        <section className="bg-[#EEF4FF] px-6 md:px-10 lg:px-16 pb-20">
-          <div className="bg-white rounded-3xl overflow-hidden border border-[#dbe7ff] shadow-[0_20px_60px_rgba(43,76,154,0.08)]"></div>
+        <section className="bg-[#EEF4FF] px-6 md:px-10 lg:px-16 py-10">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(43,76,154,0.08)]"></div>
           <div className="container mx-auto">
 
               <div className="grid lg:grid-cols-[70%_30%] items-center">
