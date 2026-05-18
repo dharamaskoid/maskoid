@@ -914,7 +914,7 @@ export default function WebDevelopmentPage() {
                   <div className="
                     relative z-10
                     w-20 h-20
-                    rounded-2xl
+                    rounded-xl
                     bg-[#EEF4FF]
                     flex items-center justify-center
                     group-hover:scale-110
@@ -923,8 +923,8 @@ export default function WebDevelopmentPage() {
 
                   <div className="relative z-10
                         w-20 h-20
-                        rounded-2xl
-                        bg-[#EEF4FF]
+                        rounded-xl
+                        bg-[#2b4c9a]
                         flex items-center justify-center
                         group-hover:bg-[#2b4c9a]
                         transition-all duration-500">
