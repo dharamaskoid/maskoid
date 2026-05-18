@@ -345,8 +345,9 @@ export default function WebDevelopmentPage() {
             className="text-center max-w-3xl mx-auto"
           >
 
-            <p className="text-[#3B82F6] text-sm font-semibold uppercase tracking-[0.25em]">
-              Our Solutions
+
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
+                Our Solutions
             </p>
 
             <h2 className="mt-4 text-3xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
