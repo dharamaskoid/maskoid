@@ -136,10 +136,10 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto px-6">
 
           {/* SLIDER WRAPPER */}
-          <div className="relative">
+          <div className="container mx-auto px-6 relative">
 
             {/* CUSTOM NAVIGATION */}
-            <div className="absolute top-1/2 -translate-y-1/2 -left-16 -right-16 flex items-center justify-between z-30 pointer-events-none">
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
 
               {/* PREVIOUS */}
               <button className="logos-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
@@ -159,7 +159,7 @@ export default function WebDevelopmentPage() {
 
             {/* SWIPER */}
             <Swiper
-              className="px-6"
+              className="px-14"
               modules={[Autoplay, Navigation]}
               navigation={{
                 prevEl: ".logos-prev",
