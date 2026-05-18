@@ -6,7 +6,6 @@ export default function ServicePage({
 }: {
   params: { slug: string };
 }) {
-
   if (params.slug === "web-development") {
     return <WebDevelopmentPage />;
   }
