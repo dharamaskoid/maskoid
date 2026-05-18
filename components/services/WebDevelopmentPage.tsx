@@ -587,7 +587,7 @@ export default function WebDevelopmentPage() {
               href="/contact-us"
               className="
                 group inline-flex items-center gap-3
-                px-8 py-4 rounded-xl
+                px-6 py-3 rounded-xl
                 bg-[#2b4c9a] hover:bg-[#1f3d84]
                 text-white font-semibold
                 hover:-translate-y-1
