@@ -24,6 +24,8 @@ import {
   Database,
   ChevronDown,
   Waypoints,
+  Atom,
+  Server, 
 } from "lucide-react";
 
 const solutions = [
@@ -856,30 +858,30 @@ export default function WebDevelopmentPage() {
             >
 
               {[
-                {
-                  name: "React",
-                  icon: "/images/tech/react.png",
-                },
-                {
-                  name: "Next.js",
-                  icon: "/images/tech/nextjs.png",
-                },
-                {
-                  name: "Node.js",
-                  icon: "/images/tech/nodejs.png",
-                },
-                {
-                  name: "TypeScript",
-                  icon: "/images/tech/typescript.png",
-                },
-                {
-                  name: "Laravel",
-                  icon: "/images/tech/laravel.png",
-                },
-                {
-                  name: "WordPress",
-                  icon: "/images/tech/wordpress.png",
-                },
+                  {
+                    name: "React",
+                    icon: <Atom size={42} />,
+                  },
+                  {
+                    name: "Next.js",
+                    icon: <Layers3 size={42} />,
+                  },
+                  {
+                    name: "Node.js",
+                    icon: <Server size={42} />,
+                  },
+                  {
+                    name: "TypeScript",
+                    icon: <Code2 size={42} />,
+                  },
+                  {
+                    name: "Laravel",
+                    icon: <Database size={42} />,
+                  },
+                  {
+                    name: "WordPress",
+                    icon: <Globe size={42} />,
+                  },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -919,11 +921,15 @@ export default function WebDevelopmentPage() {
                     transition-transform duration-500
                   ">
 
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className="w-12 h-12 object-contain"
-                    />
+                  <div className="relative z-10
+                        w-20 h-20
+                        rounded-2xl
+                        bg-[#EEF4FF]
+                        flex items-center justify-center
+                        group-hover:bg-[#2b4c9a]
+                        transition-all duration-500">
+                    {item.icon}
+                  </div>
 
                   </div>
 
