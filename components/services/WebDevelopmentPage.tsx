@@ -637,7 +637,7 @@ export default function WebDevelopmentPage() {
 
             <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Web Development 
-              <span className="text-[#2b4c9a]">Process</span>
+              <span className="text-[#2b4c9a]"> Process</span>
             </h2>
 
             <p className="mt-5 text-gray-500 text-lg leading-relaxed">
