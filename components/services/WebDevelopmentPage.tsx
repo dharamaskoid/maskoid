@@ -139,12 +139,12 @@ export default function WebDevelopmentPage() {
           animation: marquee 22s linear infinite;
         }
       `}</style>
-      
+
       <section className="py-12 bg-white border-y border-[#dbe7ff]">
 
         <div className="container mx-auto px-6 md:px-10 lg:px-16">
 
-          <div className="max-w-5xl mx-auto overflow-hidden">
+          <div className="mx-auto overflow-hidden">
 
             <div className="flex items-center gap-14 w-max animate-marquee">
 
