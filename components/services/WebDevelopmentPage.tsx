@@ -588,8 +588,7 @@ export default function WebDevelopmentPage() {
               className="
                 group inline-flex items-center gap-3
                 px-8 py-4 rounded-xl
-                bg-[#2563EB]
-                hover:bg-[#1D4ED8]
+                bg-[#2b4c9a] hover:bg-[#1f3d84]
                 text-white font-semibold
                 shadow-[0_15px_40px_rgba(37,99,235,0.35)]
                 hover:shadow-[0_20px_60px_rgba(37,99,235,0.45)]
