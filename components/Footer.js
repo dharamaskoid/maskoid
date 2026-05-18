@@ -133,21 +133,33 @@ export default function Footer() {
           </motion.div>
 
           {/* SERVICES */}
-          <motion.div variants={fadeUp}>
-            <h3 className="font-semibold mb-5 text-white uppercase">Services</h3>
-            <ul className="space-y-3 text-gray-300 text-sm">
-              {["Social Media Marketing", "SEO Service", "PPC Service", "Web Design", "Web Development"].map((item, i) => (
-                <li
-                key={i}
-                className="group cursor-pointer"
-                >
-                <span className="inline-block group-hover:text-white text-gray-300">
-                    {item}
-                </span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+
+            <motion.div variants={fadeUp}>
+              <h3 className="font-semibold mb-5 text-white uppercase">Services</h3>
+
+              <ul className="space-y-3 text-gray-300 text-sm">
+
+                {[
+                  { name: "Social Media Marketing", link: "/services/social-media-marketing" },
+                  { name: "SEO Service", link: "/services/seo-service" },
+                  { name: "PPC Service", link: "/services/ppc-service" },
+                  { name: "Web Design", link: "/services/web-design" },
+                  { name: "Web Development", link: "/services/web-development" },
+                ].map((item, i) => (
+                  <li key={i} className="group">
+
+                    <Link
+                      href={item.link}
+                      className="inline-block text-gray-300 hover:text-white transition"
+                    >
+                      {item.name}
+                    </Link>
+
+                  </li>
+                ))}
+
+              </ul>
+            </motion.div>
 
         <motion.div variants={fadeUp}>
         <h3 className="font-semibold mb-4 text-white uppercase">Get in Touch</h3>
