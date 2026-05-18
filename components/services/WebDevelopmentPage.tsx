@@ -347,8 +347,9 @@ export default function WebDevelopmentPage() {
                 Our Solutions
             </p>
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Web Development Solutions
+            <h2 className="mt-4 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Web Development 
+                   <span className="text-[#2b4c9a]"> Solutions</span>
             </h2>
 
             <p className="mt-5 text-gray-500 text-lg leading-relaxed">
@@ -470,8 +471,9 @@ export default function WebDevelopmentPage() {
               Why Choose Us
             </p>
 
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-white leading-tight">
-              Features of Our Web Development Services
+            <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white leading-tight">
+              Features of Our 
+              <span className="jsx-1d499fd48ad2ca04 text-[#6EA8FF]">Web Development</span>Services
             </h2>
 
             <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
