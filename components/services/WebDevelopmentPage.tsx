@@ -152,7 +152,7 @@ export default function WebDevelopmentPage() {
             modules={[Autoplay]}
             loop={true}
             speed={3000}
-            spaceBetween={40}
+            spaceBetween={20}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
