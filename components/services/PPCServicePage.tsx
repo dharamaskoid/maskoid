@@ -1,326 +1,299 @@
 "use client";
 
-import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  Search,
+  Target,
+  MousePointerClick,
+  BarChart3,
+  Megaphone,
+  TrendingUp,
+  ShieldCheck,
+  Rocket,
+  Globe,
+  Layers3,
+  Code2,
+  PenTool,
+  Database,
+} from "lucide-react";
 
-/* ---------------- ANIMATION VARIANTS ---------------- */
-const container: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const fadeUp: Variants = {
+/* ANIMATIONS (same system as your Web page) */
+const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6 },
   },
 };
 
-const fadeIn: Variants = {
-  hidden: { opacity: 0 },
+const stagger = {
+  hidden: {},
   show: {
-    opacity: 1,
-    transition: { duration: 0.8 },
+    transition: { staggerChildren: 0.12 },
   },
 };
+
+/* DATA */
+const solutions = [
+  {
+    icon: <Target size={34} />,
+    title: "Google Ads Campaigns",
+    text: "High-converting search & display campaigns for instant leads.",
+  },
+  {
+    icon: <MousePointerClick size={34} />,
+    title: "Meta Ads (Facebook/Instagram)",
+    text: "Targeted social campaigns that increase engagement & sales.",
+  },
+  {
+    icon: <BarChart3 size={34} />,
+    title: "Conversion Tracking",
+    text: "Track every click, lead, and conversion with precision analytics.",
+  },
+  {
+    icon: <Megaphone size={34} />,
+    title: "Ad Copy Optimization",
+    text: "High-performing ad creatives that improve CTR & ROI.",
+  },
+  {
+    icon: <TrendingUp size={34} />,
+    title: "ROI Optimization",
+    text: "Continuous optimization to reduce cost per lead.",
+  },
+];
 
 export default function PPCServicePage() {
   return (
-    <main className="bg-[#0b0f1a] text-white overflow-hidden">
+    <main className="bg-white overflow-hidden pt-[81.5px]">
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center text-center px-6 bg-gradient-to-b from-[#0b0f1a] to-[#111a2e]">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="max-w-4xl"
-        >
-          <motion.h1
-            variants={fadeUp}
-            className="text-4xl md:text-6xl font-bold leading-tight"
-          >
-            High-Performance PPC That Drives Real ROI
-          </motion.h1>
+      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
-          <motion.p
-            variants={fadeUp}
-            className="mt-6 text-gray-300 text-base md:text-lg"
-          >
-            Scale your business with data-driven Google Ads & Meta Ads strategies built for conversions.
-          </motion.p>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#6EA8FF]/10 blur-[120px] rounded-full"></div>
+        </div>
 
-          <motion.div
-            variants={fadeUp}
-            className="mt-8 flex flex-col md:flex-row gap-4 justify-center"
-          >
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl transition">
-              Get Free Audit
-            </button>
-            <button className="px-6 py-3 border border-gray-500 rounded-xl hover:bg-white hover:text-black transition">
-              View Case Studies
-            </button>
-          </motion.div>
-        </motion.div>
+        <div className="container mx-auto px-6 py-16 relative z-10">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+            >
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs uppercase">
+                PPC Advertising Service
+              </p>
+
+              <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-tight">
+                High-Converting PPC Campaigns
+                <span className="block text-[#6EA8FF]">
+                  That Drive ROI
+                </span>
+              </h1>
+
+              <p className="mt-6 text-[#B7C2D8] text-lg max-w-xl">
+                We create data-driven PPC strategies that generate leads,
+                increase sales, and maximize return on ad spend.
+              </p>
+
+              <div className="mt-8 flex gap-4">
+                <button className="px-6 py-3 bg-[#2b4c9a] hover:bg-[#1f3d84] rounded-xl">
+                  Get Free Audit
+                </button>
+
+                <button className="px-6 py-3 border border-white/20 rounded-xl hover:bg-white hover:text-black transition">
+                  View Case Study
+                </button>
+              </div>
+            </motion.div>
+
+            {/* RIGHT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              className="relative"
+            >
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-transparent blur-3xl rounded-full"></div>
+
+              <motion.img
+                src="/images/ppc.png"
+                alt="PPC"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="relative w-full max-w-md mx-auto"
+              />
+            </motion.div>
+
+          </div>
+        </div>
       </section>
 
-      {/* LOGO SECTION */}
-      <motion.section
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={container}
-        className="py-12 bg-[#0f172a] border-y border-gray-800 text-center"
-      >
-        <motion.p variants={fadeUp} className="text-gray-400 mb-6">
-          Trusted by Growing Businesses
-        </motion.p>
+      {/* LOGO STRIP */}
+      <section className="py-12 bg-white border-y border-gray-200">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-gray-500 mb-6">Trusted Advertising Partners</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-6 opacity-70 px-6">
-          {["Google", "Meta", "Shopify", "Amazon", "HubSpot", "WordPress"].map(
-            (logo, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                className="text-gray-300 font-semibold"
-              >
-                {logo}
-              </motion.div>
-            )
-          )}
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-6 opacity-70">
+            {["Google Ads", "Meta", "Shopify", "Amazon", "HubSpot", "Analytics"].map(
+              (item, i) => (
+                <div key={i} className="font-semibold text-gray-600">
+                  {item}
+                </div>
+              )
+            )}
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* WHAT WE OFFER */}
       <section className="py-20 px-6">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={container}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold">
+        <div className="container mx-auto text-center">
+
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-4xl font-bold text-[#1a2e5e]">
             What We Offer
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-gray-400 mt-3">
-            Complete PPC management solutions
-          </motion.p>
-
           <div className="grid md:grid-cols-3 gap-8 mt-12">
+
             {[
               "Google Ads Management",
               "Meta Ads Campaigns",
-              "Landing Page Optimization",
               "Keyword Research",
-              "Conversion Tracking",
-              "Remarketing Ads",
+              "Landing Page Optimization",
+              "Retargeting Ads",
+              "Performance Tracking",
             ].map((item, i) => (
               <motion.div
                 key={i}
-                variants={fadeUp}
-                whileHover={{ scale: 1.05 }}
-                className="p-6 bg-[#111a2e] rounded-2xl transition"
+                whileHover={{ y: -10 }}
+                className="p-8 border rounded-2xl bg-white shadow-sm"
               >
-                <h3 className="text-xl font-semibold">{item}</h3>
-                <p className="text-gray-400 mt-2 text-sm">
-                  ROI-focused PPC execution for maximum conversions.
+                <h3 className="text-xl font-semibold text-[#1a2e5e]">
+                  {item}
+                </h3>
+                <p className="text-gray-500 mt-3 text-sm">
+                  Performance-driven PPC execution for better ROI.
                 </p>
               </motion.div>
             ))}
+
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* OUR SOLUTION */}
-      <section className="py-20 px-6 bg-[#0f172a]">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={container}
-          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center"
-        >
-          <motion.div variants={fadeUp}>
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Our PPC Strategy
+      <section className="py-20 bg-[#EEF2FF]">
+
+        <div className="container mx-auto px-6 text-center">
+
+          <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
+            <h2 className="text-4xl font-bold text-[#1a2e5e]">
+              Our PPC Solutions
             </h2>
-
-            <p className="text-gray-400 mt-4">
-              We optimize every click using smart bidding, audience targeting, and continuous testing.
+            <p className="text-gray-500 mt-4">
+              We optimize campaigns for maximum conversions & ROI.
             </p>
-
-            <ul className="mt-6 space-y-3 text-gray-300">
-              <li>✔ Advanced targeting system</li>
-              <li>✔ AI-driven bidding strategies</li>
-              <li>✔ A/B tested ad creatives</li>
-              <li>✔ Conversion-focused optimization</li>
-            </ul>
           </motion.div>
 
-          <motion.div
-            variants={fadeIn}
-            className="h-72 bg-[#111a2e] rounded-2xl flex items-center justify-center text-gray-400"
-          >
-            Ad Performance Dashboard
-          </motion.div>
-        </motion.div>
+          <div className="grid md:grid-cols-5 gap-6 mt-14">
+
+            {solutions.map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10 }}
+                className="p-6 bg-white rounded-2xl shadow-sm"
+              >
+                <div className="text-[#2b4c9a]">{item.icon}</div>
+                <h3 className="mt-4 font-semibold text-[#1a2e5e]">
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm mt-2">{item.text}</p>
+              </motion.div>
+            ))}
+
+          </div>
+        </div>
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 px-6">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={container}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold">
+      <section className="py-20 bg-[#1a2e5e] text-white">
+
+        <div className="container mx-auto px-6 text-center">
+
+          <motion.h2 className="text-4xl font-bold">
             Why Choose Us
           </motion.h2>
 
           <div className="grid md:grid-cols-4 gap-6 mt-12">
+
             {[
               "ROI Focused",
               "Certified Experts",
-              "Transparent Reporting",
+              "Transparent Reports",
               "24/7 Support",
             ].map((item, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                whileHover={{ y: -8 }}
-                className="p-6 bg-[#111a2e] rounded-xl"
-              >
+              <div key={i} className="p-6 bg-white/10 rounded-xl">
                 {item}
-              </motion.div>
+              </div>
             ))}
+
           </div>
-        </motion.div>
+
+        </div>
       </section>
 
       {/* PROCESS */}
-      <section className="py-20 px-6 bg-[#0f172a]">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={container}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold">
+      <section className="py-20 px-6">
+
+        <div className="container mx-auto text-center">
+
+          <h2 className="text-4xl font-bold text-[#1a2e5e]">
             Our Process
-          </motion.h2>
+          </h2>
 
           <div className="grid md:grid-cols-5 gap-6 mt-12">
+
             {["Research", "Strategy", "Setup", "Optimize", "Scale"].map(
               (step, i) => (
-                <motion.div
+                <div
                   key={i}
-                  variants={fadeUp}
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-[#111a2e] rounded-xl"
+                  className="p-4 bg-white border rounded-xl"
                 >
                   {step}
-                </motion.div>
+                </div>
               )
             )}
+
           </div>
-        </motion.div>
+
+        </div>
       </section>
 
-      {/* TECHNOLOGIES */}
-      <section className="py-20 px-6">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={container}
-          className="max-w-6xl mx-auto text-center"
+      {/* CTA */}
+      <section className="py-24 bg-[#1a2e5e] text-white text-center">
+
+        <h2 className="text-4xl font-bold">
+          Ready to Grow Your Business?
+        </h2>
+
+        <p className="text-[#B7C2D8] mt-4">
+          Let’s build a high-performance PPC campaign for you.
+        </p>
+
+        <Link
+          href="/contact-us"
+          className="mt-8 inline-block px-6 py-3 bg-white text-[#1a2e5e] rounded-xl font-semibold"
         >
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold">
-            Technologies We Use
-          </motion.h2>
+          Start Your Project
+        </Link>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
-            {[
-              "Google Ads",
-              "Meta Ads",
-              "Google Analytics",
-              "Tag Manager",
-              "SEMrush",
-              "Ahrefs",
-            ].map((tech, i) => (
-              <motion.span
-                key={i}
-                variants={fadeUp}
-                whileHover={{ scale: 1.1 }}
-                className="px-4 py-2 bg-[#111a2e] rounded-full text-sm text-gray-300"
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
-      {/* GET IN TOUCH */}
-      <section className="py-24 px-6 bg-gradient-to-t from-[#0b0f1a] to-[#111a2e]">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={container}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold">
-            Get In Touch
-          </motion.h2>
-
-          <motion.p variants={fadeUp} className="text-gray-400 mt-3">
-            Let’s build high-converting PPC campaigns for your business.
-          </motion.p>
-
-          <motion.form variants={container} className="mt-10 grid gap-4">
-            <motion.input
-              variants={fadeUp}
-              type="text"
-              placeholder="Your Name"
-              className="p-3 rounded-lg bg-[#0b0f1a] border border-gray-700"
-            />
-
-            <motion.input
-              variants={fadeUp}
-              type="email"
-              placeholder="Email Address"
-              className="p-3 rounded-lg bg-[#0b0f1a] border border-gray-700"
-            />
-
-            <motion.textarea
-              variants={fadeUp}
-              rows={4}
-              placeholder="Your Message"
-              className="p-3 rounded-lg bg-[#0b0f1a] border border-gray-700"
-            />
-
-            <motion.button
-              variants={fadeUp}
-              whileHover={{ scale: 1.05 }}
-              className="bg-blue-600 hover:bg-blue-700 py-3 rounded-xl transition"
-            >
-              Send Message
-            </motion.button>
-          </motion.form>
-        </motion.div>
       </section>
 
     </main>
