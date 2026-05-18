@@ -153,7 +153,7 @@ export default function WebDevelopmentPage() {
               >
 
                 <img
-                src="/images/contact-us-banner(1).png"
+                src="/images/webdev.png"
                 alt="Contact"
                 className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
@@ -466,7 +466,7 @@ export default function WebDevelopmentPage() {
             className="text-center max-w-4xl mx-auto"
           >
 
-            <p className="text-[#6EA8FF] text-sm font-semibold uppercase tracking-[0.25em]">
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
               Why Choose Us
             </p>
 
@@ -629,7 +629,7 @@ export default function WebDevelopmentPage() {
             className="text-center max-w-3xl mx-auto"
           >
 
-            <p className="text-[#3B82F6] text-sm font-semibold uppercase tracking-[0.25em]">
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
               Our Process
             </p>
 
