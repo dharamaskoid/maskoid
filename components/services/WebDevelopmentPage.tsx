@@ -151,12 +151,12 @@ export default function WebDevelopmentPage() {
               {[...logos, ...logos].map((logo, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-center min-w-[140px]"
+                  className="flex items-center justify-center"
                 >
                   <img
                     src={logo}
                     alt="brand"
-                    className="h-12 md:h-14 object-contain opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                    className="h-14 md:h-16 object-contain opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300"
                   />
                 </div>
               ))}
