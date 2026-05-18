@@ -39,7 +39,7 @@ export default function SEOServicePage() {
 
       {/* HERO SECTION */}
       {/* ================= HERO SECTION (SAME STRUCTURE) ================= */}
-      <section className="relative min-h-[800px] flex items-center px-6 py-16 bg-[#1a2e5e] text-white overflow-hidden">
+      <section className="relative flex items-center px-6 py-16 bg-[#1a2e5e] text-white overflow-hidden">
 
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
