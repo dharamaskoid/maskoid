@@ -2,6 +2,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import "swiper/css/navigation";
+import "swiper/css";
 
 import {
   Search,
@@ -12,8 +18,6 @@ import {
   ShieldCheck,
   Rocket,
   LineChart,
-  CheckCircle2,
-  ArrowRight,
   ChevronRight,
   Activity,
   Database,
@@ -34,6 +38,18 @@ const fadeUp = {
 };
 
 export default function SEOServicePage() {
+    const logos = [
+    "/images/Client-1-1.png",
+    "/images/Client-1-2.png",
+    "/images/Client-1-3.png",
+    "/images/Client-1-5.png",
+    "/images/Client-1-6.png",
+    "/images/Client-1-7.png",
+    "/images/Client-1-11.png",
+    "/images/Client-1-12.png",
+    "/images/Client-1-13.png",
+    "/images/Client-1-14.png",
+    ];
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
@@ -77,6 +93,87 @@ export default function SEOServicePage() {
           </motion.div>
 
         </div>
+      </section>
+
+      {/* CLIENT LOGOS */}
+
+      <section className="py-16 bg-white border-y border-[#dbe7ff]">
+
+        <div className="container mx-auto px-6">
+
+          {/* SLIDER WRAPPER */}
+          <div className="container mx-auto px-6 relative">
+
+            {/* CUSTOM NAVIGATION */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
+
+              {/* PREVIOUS */}
+              <button className="logos-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
+
+                <ChevronLeft size={20} />
+
+              </button>
+
+              {/* NEXT */}
+              <button className="logos-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
+
+                <ChevronRight size={20} />
+
+              </button>
+
+            </div>
+
+            {/* SWIPER */}
+            <Swiper
+              className="px-14"
+              modules={[Autoplay, Navigation]}
+              navigation={{
+                prevEl: ".logos-prev",
+                nextEl: ".logos-next",
+              }}
+              loop={true}
+              speed={2000}
+              spaceBetween={10}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                },
+                640: {
+                  slidesPerView: 4,
+                },
+                1024: {
+                  slidesPerView: 7,
+                },
+              }}
+            >
+
+              {logos.map((logo, i) => (
+                <SwiperSlide key={i}>
+
+                  <div className="flex items-center justify-center h-16">
+
+                    <img
+                      src={logo}
+                      alt="brand"
+                      className="h-14 md:h-16 object-contain transition duration-300"
+                    />
+
+                  </div>
+
+                </SwiperSlide>
+              ))}
+
+            </Swiper>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* SERVICES */}

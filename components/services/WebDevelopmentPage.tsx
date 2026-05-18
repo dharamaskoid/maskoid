@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css";
 import {
   ArrowRight,
-  CheckCircle2,
   Globe,
   MonitorSmartphone,
   Search,
@@ -19,10 +18,8 @@ import {
   ShieldCheck,
   Rocket,
   Code2,
-  BarChart3,
   PenTool,
   Database,
-  ChevronDown,
   Waypoints,
   Atom,
   Server, 
