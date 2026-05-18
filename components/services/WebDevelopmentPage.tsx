@@ -173,7 +173,7 @@ export default function WebDevelopmentPage() {
             {logos.map((logo, i) => (
               <SwiperSlide key={i}>
 
-                <div className="flex items-center justify-center h-24">
+                <div className="flex items-center justify-center">
 
                   <img
                     src={logo}
