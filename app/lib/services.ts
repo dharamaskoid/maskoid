@@ -1,53 +1,41 @@
 export const services = [
   {
-    id: 1,
     slug: "web-development",
-
     title: "Web Development",
-
-    shortDescription:
-      "High-performance websites and web applications.",
-
     description:
-      "We build premium scalable websites using modern technologies.",
-
-    image: "/images/service-web.jpg",
-
-    icon: "Code2",
-
-    category: "Development",
-
-    features: [
-      "Custom Websites",
-      "E-Commerce",
-      "CMS Development",
-      "API Integration"
-    ]
+      "Premium high-performance websites built for growth, speed, and conversions.",
+    image: "/images/services/web-development.jpg",
   },
 
   {
-    id: 2,
-    slug: "seo-growth",
-
-    title: "SEO Growth",
-
-    shortDescription:
-      "Grow visibility and organic traffic.",
-
+    slug: "web-design",
+    title: "Web Design",
     description:
-      "Complete SEO systems focused on rankings and leads.",
+      "Modern UI/UX website design services crafted for premium digital experiences.",
+    image: "/images/services/web-design.jpg",
+  },
 
-    image: "/images/service-seo.jpg",
+  {
+    slug: "seo-growth",
+    title: "SEO Growth",
+    description:
+      "Increase rankings, organic traffic, and long-term search visibility.",
+    image: "/images/services/seo-growth.jpg",
+  },
 
-    icon: "Search",
+  {
+    slug: "performance-marketing",
+    title: "Performance Marketing",
+    description:
+      "ROI-focused paid marketing campaigns designed to scale your business faster.",
+    image: "/images/services/performance-marketing.jpg",
+  },
 
-    category: "Marketing",
-
-    features: [
-      "Technical SEO",
-      "On-Page SEO",
-      "Keyword Research",
-      "Link Building"
-    ]
-  }
+  {
+    slug: "social-media-marketing",
+    title: "Social Media Marketing",
+    description:
+      "Strategic social media campaigns that build engagement, reach, and brand growth.",
+    image: "/images/services/social-media-marketing.jpg",
+  },
 ];
