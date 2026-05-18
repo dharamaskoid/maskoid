@@ -293,7 +293,7 @@ export default function WebDevelopmentPage() {
               className="relative"
             >
 
-              <Image
+              <img
                 src="/images/web-design-laptop.jpg"
                 alt=""
                 width={700}
