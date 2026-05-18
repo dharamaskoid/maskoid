@@ -264,10 +264,6 @@ export default function SEOServicePage() {
             >
               Start SEO Project
 
-              <ChevronRight
-                size={18}
-                className="group-hover:translate-x-1 transition"
-              />
 
             </Link>
 
