@@ -146,7 +146,7 @@ export default function WebDevelopmentPage() {
 
       <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
-         <div className="max-w-5xl mx-auto px-6">
+         <div className="container mx-auto px-6">
 
           <Swiper
             modules={[Autoplay]}
