@@ -1,12 +1,15 @@
 import { notFound } from "next/navigation";
 import WebDevelopmentPage from "@/components/services/WebDevelopmentPage";
 
-export default function ServicePage({
+export default async function ServicePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  if (params.slug === "web-development") {
+
+  const { slug } = await params;
+
+  if (slug === "web-development") {
     return <WebDevelopmentPage />;
   }
 
