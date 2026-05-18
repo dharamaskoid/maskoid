@@ -159,6 +159,7 @@ export default function WebDevelopmentPage() {
 
             {/* SWIPER */}
             <Swiper
+              className="px-14"
               modules={[Autoplay, Navigation]}
               navigation={{
                 prevEl: ".logos-prev",
