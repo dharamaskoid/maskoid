@@ -323,7 +323,7 @@ export default function WebDevelopmentPage() {
 
             
       {/* Our Solution */}
-      <section className="py-24 px-6 bg-[#F5F8FF] relative overflow-hidden">
+      <section className="py-24 bg-[#F5F8FF] relative overflow-hidden">
 
         {/* BACKGROUND GLOW */}
         <div className="absolute inset-0 pointer-events-none">
@@ -334,7 +334,7 @@ export default function WebDevelopmentPage() {
 
         </div>
 
-        <div className="container mx-auto relative z-10">
+        <div className="container px-6 mx-auto relative z-10">
 
           {/* HEADER */}
           <motion.div
