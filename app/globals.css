@@ -177,14 +177,22 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 16px !important;
-  height: 16px !important;
+  width: 20px !important;
+  height: 20px !important;
   border-radius: 9999px;
   background: white;
   border: 1px solid #dbe7ff;
   box-shadow: 0 10px 30px rgba(43, 76, 154, 0.08);
   color: #2b4c9a !important;
   transition: all 0.3s ease;
+}
+/* SVG ICON */
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #2b4c9a;
 }
 
 .swiper-button-prev:hover,
@@ -193,8 +201,7 @@ body {
   color: white !important;
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 20px !important;
-  font-weight: 700;
+.swiper-button-prev:hover svg,
+.swiper-button-next:hover svg {
+  color: white;
 }
