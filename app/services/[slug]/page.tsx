@@ -16,14 +16,7 @@ export default function ServicePage({ params }: Props) {
     case "web-development":
       return <WebDevelopmentPage />;
 
-    case "web-design":
-      return <WebDesignPage />;
 
-    case "seo-growth":
-      return <SeoPage />;
-
-    case "performance-marketing":
-      return <MarketingPage />;
 
     default:
       notFound();
