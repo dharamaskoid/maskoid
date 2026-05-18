@@ -152,7 +152,7 @@ export default function WebDevelopmentPage() {
             modules={[Autoplay]}
             loop={true}
             speed={3000}
-            spaceBetween={20}
+            spaceBetween={10}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
@@ -173,7 +173,7 @@ export default function WebDevelopmentPage() {
             {logos.map((logo, i) => (
               <SwiperSlide key={i}>
 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-16">
 
                   <img
                     src={logo}
