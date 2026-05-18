@@ -953,7 +953,7 @@ export default function WebDevelopmentPage() {
       {/* CTA */}
       <section className="pb-24 px-6 md:px-10 lg:px-16">
 
-        <div className="container mx-auto bg-[#1a2e5e] rounded-[36px] p-10 md:p-16 relative overflow-hidden">
+        <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
 
           {/* BG */}
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full"></div>
