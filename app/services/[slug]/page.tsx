@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import WebDevelopmentPage from "@/components/services/WebDevelopmentPage";
 import SEOServicePage from "@/components/services/SEOServicePage";
+import PPCServicePage from "@/components/services/PPCServicePage";
 
 export default async function ServicePage({
   params,
@@ -15,6 +16,10 @@ export default async function ServicePage({
 
   if (slug === "seo-service") {
     return <SEOServicePage />;
+  }
+
+    if (slug === "ppc-service") {
+    return <PPCServicePage />;
   }
 
   return notFound();
