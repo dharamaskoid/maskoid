@@ -647,7 +647,7 @@ export default function WebDevelopmentPage() {
           </motion.div>
 
           {/* PROCESS STEPS */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-20 mt-20 relative">
 
             {[
               {
