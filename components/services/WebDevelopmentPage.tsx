@@ -166,7 +166,7 @@ export default function WebDevelopmentPage() {
                 slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 5,
+                slidesPerView: 7,
               },
             }}
           >
