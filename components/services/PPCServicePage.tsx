@@ -9,23 +9,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css/navigation";
 import "swiper/css";
 import {
-  ArrowRight,
-  CheckCircle2,
-  Globe,
-  MonitorSmartphone,
-  Search,
-  ShoppingCart,
-  Layers3,
-  ShieldCheck,
   Rocket,
-  Code2,
   BarChart3,
-  PenTool,
-  Database,
-  ChevronDown,
-  Waypoints,
-  Atom,
-  Server,
   Target,
   MousePointerClick,
   Megaphone,
