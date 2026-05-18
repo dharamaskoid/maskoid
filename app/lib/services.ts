@@ -1,10 +1,26 @@
 export const services = [
   {
-    slug: "web-development",
-    title: "Web Development",
+    slug: "social-media-marketing",
+    title: "Social Media Marketing",
     description:
-      "Premium high-performance websites built for growth, speed, and conversions.",
-    image: "/images/services/web-development.jpg",
+      "Strategic social media campaigns that build engagement, reach, and brand growth.",
+    image: "/images/services/social-media-marketing.jpg",
+  },
+
+  {
+    slug: "seo-service",
+    title: "SEO Service",
+    description:
+      "Increase rankings, organic traffic, and long-term search visibility.",
+    image: "/images/services/seo-service.jpg",
+  },
+
+  {
+    slug: "ppc-service",
+    title: "PPC Service",
+    description:
+      "ROI-focused paid marketing campaigns designed to scale your business faster.",
+    image: "/images/services/ppc-service.jpg",
   },
 
   {
@@ -16,26 +32,10 @@ export const services = [
   },
 
   {
-    slug: "seo-growth",
-    title: "SEO Growth",
+    slug: "web-development",
+    title: "Web Development",
     description:
-      "Increase rankings, organic traffic, and long-term search visibility.",
-    image: "/images/services/seo-growth.jpg",
-  },
-
-  {
-    slug: "performance-marketing",
-    title: "Performance Marketing",
-    description:
-      "ROI-focused paid marketing campaigns designed to scale your business faster.",
-    image: "/images/services/performance-marketing.jpg",
-  },
-
-  {
-    slug: "social-media-marketing",
-    title: "Social Media Marketing",
-    description:
-      "Strategic social media campaigns that build engagement, reach, and brand growth.",
-    image: "/images/services/social-media-marketing.jpg",
+      "Premium high-performance websites built for growth, speed, and conversions.",
+    image: "/images/services/web-development.jpg",
   },
 ];
