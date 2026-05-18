@@ -151,7 +151,7 @@ export default function WebDevelopmentPage() {
           <Swiper
             modules={[Autoplay]}
             loop={true}
-            speed={1000}
+            speed={3000}
             spaceBetween={40}
             autoplay={{
               delay: 0,
@@ -178,7 +178,7 @@ export default function WebDevelopmentPage() {
                   <img
                     src={logo}
                     alt="brand"
-                    className="h-14 md:h-16 object-contain opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300"
+                    className="h-14 md:h-16 object-contain opacity-70 transition duration-300"
                   />
 
                 </div>
