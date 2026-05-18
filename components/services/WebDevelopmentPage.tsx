@@ -1016,55 +1016,7 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-24 bg-white px-6 md:px-10 lg:px-16">
-
-        <div className="container mx-auto">
-
-          <div className="grid lg:grid-cols-2 gap-16">
-
-            {/* LEFT */}
-            <div>
-
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                FAQ
-              </p>
-
-              <h2 className="mt-6 text-4xl font-bold text-[#1a2e5e] leading-tight">
-                Frequently Asked Questions
-              </h2>
-
-            </div>
-
-            {/* RIGHT */}
-            <div className="space-y-5">
-
-              {[
-                "How long does a website take?",
-                "Do you provide SEO?",
-                "Will my website be responsive?",
-                "Can you redesign my website?",
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-[#EEF4FF] rounded-2xl px-6 py-5 flex items-center justify-between"
-                >
-
-                  <h3 className="font-semibold text-[#1a2e5e]">
-                    {item}
-                  </h3>
-
-                  <ChevronDown className="w-5 h-5 text-[#2b4c9a]" />
-
-                </div>
-              ))}
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+      
 
       {/* CTA */}
       <section className="pb-24 px-6 md:px-10 lg:px-16">
@@ -1091,10 +1043,10 @@ export default function WebDevelopmentPage() {
 
             <Link
               href="/contact-us"
-              className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300 whitespace-nowrap"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300 whitespace-nowrap"
             >
               Start Your Project
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
+             
             </Link>
 
           </div>
