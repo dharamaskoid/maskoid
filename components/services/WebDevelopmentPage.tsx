@@ -473,7 +473,7 @@ export default function WebDevelopmentPage() {
 
             <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white leading-tight">
               Features of Our 
-              <span className="jsx-1d499fd48ad2ca04 text-[#6EA8FF]">Web Development</span>Services
+              <span className="jsx-1d499fd48ad2ca04 text-[#6EA8FF]"> Web Development</span> Services
             </h2>
 
             <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
@@ -635,8 +635,9 @@ export default function WebDevelopmentPage() {
               Our Process
             </p>
 
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Web Development Process
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Web Development 
+              <span className="text-[#2b4c9a]">Process</span>
             </h2>
 
             <p className="mt-5 text-gray-500 text-lg leading-relaxed">
@@ -740,7 +741,7 @@ export default function WebDevelopmentPage() {
 
                 {/* ARROW LINE */}
                 {index !== 3 && (
-                  <div className="hidden lg:flex absolute top-1/2 -right-10 z-20 items-center">
+                  <div className="hidden lg:flex absolute top-1/2 -right-14 z-20 items-center">
 
                     <div className="w-12 border-t-2 border-dashed border-[#c8d8ff]"></div>
 
