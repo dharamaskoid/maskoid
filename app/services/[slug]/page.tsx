@@ -13,6 +13,9 @@ export default function ServicePage({ params }: Props) {
 
   switch (params.slug) {
 
+    case "web-development":
+      return <WebDevelopmentPage />;
+
     case "web-design":
       return <WebDesignPage />;
 
@@ -21,9 +24,6 @@ export default function ServicePage({ params }: Props) {
 
     case "performance-marketing":
       return <MarketingPage />;
-
-    case "web-development":
-      return <WebDevelopmentPage />;
 
     default:
       notFound();
