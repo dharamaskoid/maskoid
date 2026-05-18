@@ -249,7 +249,7 @@ export default function WebDevelopmentPage() {
 
       {/* SERVICES */}
       
-      <section className="py-24 px-6 md:px-10 lg:px-16">
+      <section className="py-16 px-6 md:px-10 lg:px-16">
 
         <div className="container mx-auto">
 
@@ -323,7 +323,7 @@ export default function WebDevelopmentPage() {
 
             
       {/* Our Solution */}
-      <section className="py-24 bg-[#EEF2FF] relative overflow-hidden">
+      <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
 
         {/* BACKGROUND GLOW */}
           <div className="absolute inset-0 pointer-events-none">
@@ -438,6 +438,325 @@ export default function WebDevelopmentPage() {
 
         </div>
       </section>
+
+
+      {/* WHY CHOOSE US */}
+
+      <section className="relative py-16 overflow-hidden bg-[#1a2e5e]">
+
+        {/* BACKGROUND GLOW */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        </div>
+
+        <div className="container px-6 mx-auto relative z-10">
+
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-4xl mx-auto"
+          >
+
+            <p className="text-[#6EA8FF] text-sm font-semibold uppercase tracking-[0.25em]">
+              Why Choose Us
+            </p>
+
+            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-white leading-tight">
+              Features of Our Web Development Services
+            </h2>
+
+            <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
+              We follow industry best practices and use modern technologies
+              to build websites that are not only beautiful but also
+              high-performing.
+            </p>
+
+          </motion.div>
+
+          {/* FEATURES */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+
+            {[
+              {
+                icon: <Search size={30} />,
+                title: "Performance & SEO Optimized",
+                text: "We build lightning-fast websites optimized for search engines to help you rank higher and attract the right audience.",
+              },
+
+              {
+                icon: <ShieldCheck size={30} />,
+                title: "Secure & Scalable",
+                text: "Security and scalability are at the core of our development process to ensure your website grows with your business.",
+              },
+
+              {
+                icon: <Code2 size={30} />,
+                title: "Clean & Modern Code",
+                text: "We follow best coding standards to deliver clean, maintainable, and future-ready solutions.",
+              },
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.15 }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="
+                  group
+                  relative
+                  bg-white/5
+                  border border-white/10
+                  backdrop-blur-xl
+                  rounded-[28px]
+                  p-8
+                  overflow-hidden
+                  hover:border-[#3B82F6]/30
+                  hover:bg-white/[0.07]
+                  transition-all duration-500
+                "
+              >
+
+                {/* GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute -top-10 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                </div>
+
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 4,
+                  }}
+                  className="
+                    relative z-10
+                    w-20 h-20
+                    rounded-2xl
+                    bg-white/10
+                    border border-white/10
+                    text-[#6EA8FF]
+                    flex items-center justify-center
+                  "
+                >
+                  {item.icon}
+                </motion.div>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-7 text-2xl font-bold text-white leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* TEXT */}
+                <p className="relative z-10 mt-5 text-[#B7C2D8] leading-relaxed">
+                  {item.text}
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+          {/* BUTTON */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="flex justify-center mt-16"
+          >
+
+            <Link
+              href="/contact-us"
+              className="
+                group inline-flex items-center gap-3
+                px-8 py-4 rounded-xl
+                bg-[#2563EB]
+                hover:bg-[#1D4ED8]
+                text-white font-semibold
+                shadow-[0_15px_40px_rgba(37,99,235,0.35)]
+                hover:shadow-[0_20px_60px_rgba(37,99,235,0.45)]
+                hover:-translate-y-1
+                transition-all duration-300
+              "
+            >
+              Discuss Your Project
+
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition duration-300" />
+            </Link>
+
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* OUR PROCESS */}
+
+      <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+
+        {/* BG SHAPES */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+
+        </div>
+
+        <div className="container px-6 mx-auto relative z-10">
+
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+
+            <p className="text-[#3B82F6] text-sm font-semibold uppercase tracking-[0.25em]">
+              Our Process
+            </p>
+
+            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              Web Development Process
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              Our proven process ensures your project is delivered on time,
+              on budget, and exceeds expectations.
+            </p>
+
+          </motion.div>
+
+          {/* PROCESS STEPS */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 relative">
+
+            {[
+              {
+                step: "01",
+                title: "Discovery & Planning",
+                icon: <Search size={26} />,
+                text: "We understand your goals, audience, and requirements to create a solid plan.",
+              },
+
+              {
+                step: "02",
+                title: "Design & Prototyping",
+                icon: <PenTool size={26} />,
+                text: "We design intuitive UI/UX prototypes that align with your brand and users.",
+              },
+
+              {
+                step: "03",
+                title: "Development",
+                icon: <MonitorSmartphone size={26} />,
+                text: "Our developers build scalable, secure, and high-performance solutions.",
+              },
+
+              {
+                step: "04",
+                title: "Testing & Launch",
+                icon: <Rocket size={26} />,
+                text: "We test thoroughly and launch your website with full support.",
+              },
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.12 }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="
+                  relative
+                  bg-white
+                  border border-[#e8efff]
+                  rounded-[30px]
+                  p-8
+                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
+                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
+                  transition-all duration-500
+                "
+              >
+
+                {/* STEP NUMBER */}
+                <div className="
+                  absolute top-6 right-6
+                  text-6xl font-bold
+                  text-[#EEF4FF]
+                ">
+                  {item.step}
+                </div>
+
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  className="
+                    relative z-10
+                    w-16 h-16
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                  "
+                >
+                  {item.icon}
+                </motion.div>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* TEXT */}
+                <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
+                  {item.text}
+                </p>
+
+                {/* ARROW LINE */}
+                {index !== 3 && (
+                  <div className="hidden lg:flex absolute top-1/2 -right-10 z-20 items-center">
+
+                    <div className="w-12 border-t-2 border-dashed border-[#c8d8ff]"></div>
+
+                    <ArrowRight className="w-5 h-5 text-[#3B82F6]" />
+
+                  </div>
+                )}
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+
 
       {/* FEATURES */}
       <section className="relative bg-[#1a2e5e] py-24 overflow-hidden">
