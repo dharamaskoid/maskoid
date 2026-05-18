@@ -68,6 +68,15 @@ const fadeUp = {
   },
 };
 
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
 
 export default function WebDevelopmentPage() {
 
@@ -756,65 +765,177 @@ export default function WebDevelopmentPage() {
 
 
 
-      {/* FEATURES */}
-      <section className="relative bg-[#1a2e5e] py-24 overflow-hidden">
+      {/* Technologies we use */}
+      <section className="relative py-20 md:py-24 bg-white overflow-hidden">
 
-        {/* BG */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[140px] rounded-full"></div>
+        {/* BACKGROUND */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          {/* LEFT GLOW */}
+          <div className="absolute -top-20 -left-20 w-[350px] md:w-[450px] h-[350px] md:h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+          {/* RIGHT GLOW */}
+          <div className="absolute bottom-0 right-0 w-[300px] md:w-[420px] h-[300px] md:h-[420px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+
+          {/* GRID */}
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
         </div>
 
         <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
 
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Why Businesses Choose
-              <span className="text-[#6EA8FF]"> Maskoid</span>
-            </h2>
+            {/* LEFT CONTENT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
 
-          </div>
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                Technologies We Use
+              </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+                Modern Technologies
+                <span className="text-[#2b4c9a]"> For Modern Solutions</span>
+              </h2>
 
-            {[
-              {
-                icon: <Search size={28} />,
-                title: "SEO Ready",
-              },
-              {
-                icon: <ShieldCheck size={28} />,
-                title: "Secure",
-              },
-              {
-                icon: <Rocket size={28} />,
-                title: "Fast Performance",
-              },
-              {
-                icon: <BarChart3 size={28} />,
-                title: "Conversion Focused",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl"
-              >
+              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+                We leverage cutting-edge frameworks and technologies
+                to build fast, scalable, secure, and future-ready
+                digital experiences.
+              </p>
 
-                <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-[#6EA8FF]">
-                  {item.icon}
-                </div>
+              {/* STATS */}
+              <div className="grid grid-cols-2 gap-5 mt-10">
 
-                <h3 className="mt-6 text-2xl font-bold text-white">
-                  {item.title}
-                </h3>
+                {[
+                  ["10+", "Technologies"],
+                  ["100%", "Scalable Solutions"],
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.3 }}
+                    className="
+                      bg-white
+                      border border-[#dbe7ff]
+                      rounded-3xl
+                      p-6
+                      shadow-[0_10px_40px_rgba(43,76,154,0.06)]
+                      hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)]
+                      transition-all duration-500
+                    "
+                  >
 
-                <p className="mt-4 text-[#B7C2D8] leading-relaxed">
-                  High-end development focused on real business growth.
-                </p>
+                    <h3 className="text-3xl font-bold text-[#1a2e5e]">
+                      {item[0]}
+                    </h3>
+
+                    <p className="mt-2 text-gray-600">
+                      {item[1]}
+                    </p>
+
+                  </motion.div>
+                ))}
 
               </div>
-            ))}
+
+            </motion.div>
+
+            {/* RIGHT GRID */}
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6"
+            >
+
+              {[
+                {
+                  name: "React",
+                  icon: "/images/tech/react.png",
+                },
+                {
+                  name: "Next.js",
+                  icon: "/images/tech/nextjs.png",
+                },
+                {
+                  name: "Node.js",
+                  icon: "/images/tech/nodejs.png",
+                },
+                {
+                  name: "TypeScript",
+                  icon: "/images/tech/typescript.png",
+                },
+                {
+                  name: "Laravel",
+                  icon: "/images/tech/laravel.png",
+                },
+                {
+                  name: "WordPress",
+                  icon: "/images/tech/wordpress.png",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{
+                    y: -10,
+                    scale: 1.03,
+                  }}
+                  transition={{ duration: 0.35 }}
+                  className="
+                    group relative
+                    bg-white
+                    border border-[#dbe7ff]
+                    rounded-[28px]
+                    p-6 md:p-8
+                    flex flex-col items-center justify-center
+                    overflow-hidden
+                    shadow-[0_10px_40px_rgba(43,76,154,0.05)]
+                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                    transition-all duration-500
+                  "
+                >
+
+                  {/* TOP LIGHT */}
+                  <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500">
+                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full"></div>
+                  </div>
+
+                  {/* ICON WRAPPER */}
+                  <div className="
+                    relative z-10
+                    w-20 h-20
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    flex items-center justify-center
+                    group-hover:scale-110
+                    transition-transform duration-500
+                  ">
+
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      className="w-12 h-12 object-contain"
+                    />
+
+                  </div>
+
+                  {/* NAME */}
+                  <h3 className="relative z-10 mt-5 text-lg md:text-xl font-semibold text-[#1a2e5e] text-center">
+                    {item.name}
+                  </h3>
+
+                </motion.div>
+              ))}
+
+            </motion.div>
 
           </div>
 
