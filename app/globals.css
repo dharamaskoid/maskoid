@@ -177,8 +177,8 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 20px !important;
-  height: 20px !important;
+  width: 16px !important;
+  height: 16px !important;
   border-radius: 9999px;
   background: white;
   border: 1px solid #dbe7ff;
@@ -195,6 +195,6 @@ body {
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-size: 16px !important;
+  font-size: 20px !important;
   font-weight: 700;
 }
