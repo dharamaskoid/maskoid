@@ -137,6 +137,7 @@ export default function WebDevelopmentPage() {
 
           <Swiper
             modules={[Autoplay, Navigation]}
+            navigation={true}
             loop={true}
             speed={3000}
             spaceBetween={10}
