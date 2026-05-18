@@ -32,14 +32,6 @@ const fadeUp = {
   },
 };
 
-const stagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
 
 /* PPC SOLUTIONS DATA */
 const solutions = [
