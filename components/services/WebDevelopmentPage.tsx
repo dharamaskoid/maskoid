@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -20,130 +20,93 @@ import {
 } from "lucide-react";
 
 export default function WebDevelopmentPage() {
+    const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7 },
+    },
+  };
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
       {/* HERO SECTION */}
-      <section className="relative bg-[#1a2e5e] overflow-hidden text-white">
+      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
         {/* BACKGROUND */}
-        <div className="absolute inset-0">
-          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-blue-500/20 blur-[140px] rounded-full"></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/20 blur-[140px] rounded-full"></div>
+        <div className="absolute inset-0 pointer-events-none">
 
-          <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:30px_30px]"></div>
+          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+
+
         </div>
 
-        <div className="container mx-auto px-6 md:px-10 lg:px-16 py-20 lg:py-28 relative z-10">
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT */}
-            <div>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+            >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
                 Web Development Service
               </p>
 
               <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
                 Premium Websites That
-                <span className="text-[#6EA8FF]"> Drive Growth</span>
+                <span className="block text-[#6EA8FF]">
+                  Drive Growth
+                </span>
               </h1>
 
               <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We build modern high-converting websites focused on SEO,
-                performance, premium UI/UX, and long-term business growth.
+                We build modern high-converting websites focused on SEO, performance, premium UI/UX, and long-term business growth.
               </p>
 
-              {/* BUTTONS */}
-              <div className="flex flex-wrap gap-4 mt-10">
 
-                <Link
-                  href="/contact-us"
-                  className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300"
-                >
-                  Get Free Consultation
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
-                </Link>
 
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300"
-                >
-                  View Portfolio
-                </Link>
-
-              </div>
-
-              {/* STATS */}
-              <div className="grid grid-cols-3 gap-6 mt-12">
-
-                {[
-                  ["250+", "Projects"],
-                  ["98%", "Success Rate"],
-                  ["10+", "Years Experience"],
-                ].map((item, index) => (
-                  <div key={index}>
-                    <h3 className="text-3xl font-bold text-white">
-                      {item[0]}
-                    </h3>
-
-                    <p className="text-[#B7C2D8] mt-2">
-                      {item[1]}
-                    </p>
-                  </div>
-                ))}
-
-              </div>
-
-            </div>
+            </motion.div>
 
             {/* RIGHT */}
-            <div className="relative flex justify-center">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              className="relative"
+            >
 
               {/* GLOW */}
-              <div className="absolute w-[450px] h-[450px] bg-gradient-to-br from-[#3B82F6]/20 via-[#6EA8FF]/10 to-transparent rounded-full blur-3xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
 
-              {/* DASHBOARD */}
-              <div className="relative bg-white/10 border border-white/10 backdrop-blur-2xl rounded-[32px] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+              {/* IMAGE */}
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative overflow-hidden rounded-[32px]"
+              >
 
-                <Image
-                  src="/images/web-dev-dashboard.png"
-                  alt="Dashboard"
-                  width={700}
-                  height={500}
-                  className="rounded-2xl"
+                <img
+                src="/images/contact-us-banner(1).png"
+                alt="Contact"
+                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
 
-                {/* FLOATING CARD */}
-                <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-5 shadow-2xl hidden md:block">
+              </motion.div>
 
-                  <div className="flex items-center gap-4">
-
-                    <div className="w-14 h-14 rounded-xl bg-[#EEF4FF] flex items-center justify-center text-[#2b4c9a]">
-                      <Rocket size={28} />
-                    </div>
-
-                    <div>
-                      <h4 className="text-[#1a2e5e] font-bold text-lg">
-                        +320%
-                      </h4>
-
-                      <p className="text-gray-500 text-sm">
-                        Business Growth
-                      </p>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
+            </motion.div>
 
           </div>
-
         </div>
       </section>
 
