@@ -171,3 +171,30 @@ body {
   border-radius: 999px;
   background: #1a2e5e;
 }
+
+
+/*services slider*/
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 9999px;
+  background: white;
+  border: 1px solid #dbe7ff;
+  box-shadow: 0 10px 30px rgba(43, 76, 154, 0.08);
+  color: #2b4c9a !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #2b4c9a;
+  color: white !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 14px !important;
+  font-weight: 700;
+}
