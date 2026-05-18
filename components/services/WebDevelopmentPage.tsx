@@ -914,17 +914,19 @@ export default function WebDevelopmentPage() {
                   <div className="
                     relative z-10
                     w-20 h-20
-                    rounded-xl
+                    rounded-2xl
                     bg-[#EEF4FF]
                     flex items-center justify-center
-                    group-hover:scale-110
-                    transition-transform duration-500
+                    text-[#2b4c9a]
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
                   ">
 
                   <div className="relative z-10
                         w-20 h-20
                         rounded-xl
-                        bg-[#2b4c9a]
+                        bg-[#EEF4FF]
                         flex items-center justify-center
                         group-hover:bg-[#2b4c9a]
                         transition-all duration-500">
