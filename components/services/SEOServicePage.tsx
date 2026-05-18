@@ -80,7 +80,7 @@ export default function SEOServicePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
 
         <div className="container mx-auto px-6">
 
@@ -155,7 +155,7 @@ export default function SEOServicePage() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="relative py-20 overflow-hidden bg-[#EEF2FF]">
+      <section className="relative py-16 overflow-hidden bg-[#EEF2FF]">
 
         {/* BACKGROUND */}
         <div className="absolute inset-0 pointer-events-none">
@@ -235,7 +235,7 @@ export default function SEOServicePage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 pt-10 px-6 md:px-10 lg:px-16">
+      <section className="py-16 px-6">
 
         <div className="container mx-auto bg-[#1a2e5e] rounded-[32px] p-10 md:p-16 relative overflow-hidden">
 
