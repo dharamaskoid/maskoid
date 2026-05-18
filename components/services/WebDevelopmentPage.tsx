@@ -142,7 +142,7 @@ export default function WebDevelopmentPage() {
 
       <section className="py-12 bg-white border-y border-[#dbe7ff]">
 
-        <div className="container mx-auto px-6 md:px-10 lg:px-16">
+        <div className="container mx-auto px-6">
 
           <div className="mx-auto overflow-hidden">
 
