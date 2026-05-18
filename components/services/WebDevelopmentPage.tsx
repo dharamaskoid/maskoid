@@ -21,7 +21,7 @@ import {
 
 export default function WebDevelopmentPage() {
   return (
-    <main className="bg-[#EEF4FF] overflow-hidden text-[#111827]">
+    <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
       {/* HERO SECTION */}
       <section className="relative bg-[#1a2e5e] overflow-hidden text-white">
