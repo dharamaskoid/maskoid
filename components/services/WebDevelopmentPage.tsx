@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
+import "swiper/css/navigation";
 import "swiper/css";
 import {
   ArrowRight,
@@ -129,27 +130,13 @@ export default function WebDevelopmentPage() {
 
       {/* CLIENT LOGOS */}
 
-       <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-marquee {
-          animation: marquee 22s linear infinite;
-        }
-      `}</style>
 
       <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
-         <div className="container mx-auto px-6">
+         <div className="container mx-auto px-14 relative">
 
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay, Navigation]}
             loop={true}
             speed={3000}
             spaceBetween={10}
