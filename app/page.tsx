@@ -453,7 +453,7 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* About US section*/}
-              <section className="relative py-28 overflow-hidden bg-[#1a2e5e] text-white">
+              <section className="relative py-16 overflow-hidden bg-[#1a2e5e] text-white">
 
                 {/* BACKGROUND GLOW */}
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-3xl rounded-full"></div>
@@ -703,7 +703,7 @@ const formatNumber = (num: number, suffix: string) => {
                       whileInView="show"
                       viewport={{ once: true, amount: 0.2 }}
                       variants={stagger}
-                      className="relative py-24 bg-[#EEF2FF] text-black overflow-hidden"
+                      className="relative py-16 bg-[#EEF2FF] text-black overflow-hidden"
                     >
                     {/* 🌊 SEO WAVE BACKGROUND */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -885,12 +885,7 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* ================= COUNTER SECTION ================= */}
-              <section
-                ref={sectionRef}
-                className="relative py-10 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]"
-              >
-
-
+              <section ref={sectionRef} className="relative py-16 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]">
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
 
@@ -944,7 +939,7 @@ const formatNumber = (num: number, suffix: string) => {
               </section>
         
               {/*  RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
-              <section className="relative py-28 bg-[#EEF2FF] text-white overflow-hidden">
+              <section className="relative py-16 bg-[#EEF2FF] text-white overflow-hidden">
 
               {/*  BACKGROUND GLOW */}
               <div className="absolute inset-0 pointer-events-none">

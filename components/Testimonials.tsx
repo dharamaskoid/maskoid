@@ -7,7 +7,7 @@ import "swiper/css";
 
 export default function Testimonials() {
   return (
-        <section className="relative bg-[#1a2e5e] py-28 px-6 overflow-hidden">
+        <section className="relative bg-[#1a2e5e] py-16 px-6 overflow-hidden">
 
           {/* 🌊 PREMIUM BACKGROUND */}
           <div className="absolute inset-0 pointer-events-none">
