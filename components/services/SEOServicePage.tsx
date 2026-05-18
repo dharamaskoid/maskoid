@@ -38,132 +38,43 @@ export default function SEOServicePage() {
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
       {/* HERO SECTION */}
-      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
+      {/* ================= HERO SECTION (SAME STRUCTURE) ================= */}
+      <section className="relative min-h-[800px] flex items-center px-6 py-16 bg-[#1a2e5e] text-white overflow-hidden">
 
-        {/* BACKGROUND */}
         <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-
+          <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-0 right-20 w-96 h-96 bg-[#2b4c9a]/20 blur-3xl rounded-full"></div>
         </div>
 
-        <div className="container mx-auto px-6 py-12 lg:py-16 relative z-10">
+        <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div variants={fadeUp} initial="hidden" animate="show">
 
-            {/* LEFT */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-            >
+            <p className="inline-block px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs uppercase">
+              SEO Service
+            </p>
 
-              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
-                SEO Service
-              </p>
+            <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
+              Rank Higher
+              <span className="block text-[#6EA8FF]">Grow Faster</span>
+            </h1>
 
-              <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-                Rank Higher &
-                <span className="block text-[#6EA8FF]">
-                  Grow Faster
-                </span>
-              </h1>
+            <p className="mt-6 text-[#B7C2D8] max-w-xl">
+              We deliver powerful SEO strategies focused on ranking, traffic, and conversions.
+            </p>
 
-              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We help businesses dominate search rankings with strategic SEO,
-                technical optimization, content growth, and data-driven campaigns.
-              </p>
+          </motion.div>
 
-              {/* FEATURES */}
-              <div className="mt-8 grid sm:grid-cols-2 gap-4">
-
-                {[
-                  "SEO Optimized Strategy",
-                  "Technical SEO",
-                  "Keyword Research",
-                  "Google Ranking Growth",
-                ].map((item, i) => (
-
-                  <div
-                    key={i}
-                    className="flex items-center gap-3"
-                  >
-
-                    <CheckCircle2
-                      size={20}
-                      className="text-[#6EA8FF]"
-                    />
-
-                    <span className="text-[#dbe7ff]">
-                      {item}
-                    </span>
-
-                  </div>
-                ))}
-
-              </div>
-
-              {/* BUTTONS */}
-              <div className="mt-10 flex flex-wrap gap-4">
-
-                <Link
-                  href="/contact-us"
-                  className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold transition-all duration-300"
-                >
-                  Get Started
-
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition"
-                  />
-
-                </Link>
-
-                <Link
-                  href="/portfolio"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-semibold transition-all duration-300"
-                >
-                  View Results
-                </Link>
-
-              </div>
-
-            </motion.div>
-
-            {/* RIGHT */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              className="relative"
-            >
-
-              {/* GLOW */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
-
-              <motion.div
-                animate={{ y: [0, -12, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative overflow-hidden rounded-[32px]"
-              >
-
-                <img
-                  src="/images/seo-banner.png"
-                  alt="SEO Service"
-                  className="h-[250px] sm:h-[350px] md:h-[380px] w-auto max-w-full object-contain"
-                />
-
-              </motion.div>
-
-            </motion.div>
-
-          </div>
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 4, repeat: Infinity }}
+            className="relative"
+          >
+            <img
+              src="/images/seo.png"
+              className="w-full max-w-md mx-auto"
+            />
+          </motion.div>
 
         </div>
       </section>
