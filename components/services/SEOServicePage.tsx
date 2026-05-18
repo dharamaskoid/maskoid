@@ -18,7 +18,6 @@ import {
   ShieldCheck,
   Rocket,
   LineChart,
-  ChevronRight,
   Activity,
   Database,
 } from "lucide-react";
