@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 import {
   ArrowRight,
   CheckCircle2,
@@ -140,29 +144,49 @@ export default function WebDevelopmentPage() {
         }
       `}</style>
 
-      <section className="py-12 bg-white border-y border-[#dbe7ff]">
+      <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
-        <div className="container mx-auto px-6">
+         <div className="max-w-5xl mx-auto px-6">
 
-          <div className="mx-auto overflow-hidden">
+          <Swiper
+            modules={[Autoplay]}
+            loop={true}
+            speed={1000}
+            spaceBetween={40}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+              },
+              640: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
+          >
+            {logos.map((logo, i) => (
+              <SwiperSlide key={i}>
 
-            <div className="flex items-center gap-14 w-max animate-marquee">
+                <div className="flex items-center justify-center h-24">
 
-              {[...logos, ...logos].map((logo, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-center"
-                >
                   <img
                     src={logo}
                     alt="brand"
-                    className="h-14 md:h-16 object-contain opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                    className="h-14 md:h-16 object-contain opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300"
                   />
-                </div>
-              ))}
 
-            </div>
-          </div>
+                </div>
+
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
         </div>
 
       </section>
