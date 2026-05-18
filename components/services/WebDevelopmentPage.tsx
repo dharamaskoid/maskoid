@@ -736,7 +736,7 @@ export default function WebDevelopmentPage() {
 
                 {/* ARROW LINE */}
                 {index !== 3 && (
-                  <div className="hidden lg:flex absolute top-1/2 -right-10 z-20 items-center">
+                  <div className="hidden lg:flex absolute top-1/2 -right-20 z-20 items-center">
 
                     <div className="w-12 border-t-2 border-dashed border-[#c8d8ff]"></div>
 
