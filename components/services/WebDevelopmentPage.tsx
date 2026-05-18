@@ -23,17 +23,54 @@ import {
   PenTool,
   Database,
   ChevronDown,
+  Waypoints,
 } from "lucide-react";
 
-export default function WebDevelopmentPage() {
-    const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7 },
+const solutions = [
+  {
+    icon: <MonitorSmartphone size={34} />,
+    title: "Custom Websites",
+    text: "Tailored websites designed to reflect your brand and engage your audience.",
+  },
+  {
+    icon: <ShoppingCart size={34} />,
+    title: "E-Commerce",
+    text: "Powerful online stores that drive sales and customer satisfaction.",
+  },
+  {
+    icon: <Layers3 size={34} />,
+    title: "Web Applications",
+    text: "Scalable web applications that streamline processes and boost productivity.",
+  },
+  {
+    icon: <Database size={34} />,
+    title: "CMS Solutions",
+    text: "Easy-to-manage CMS websites that give you full control.",
+  },
+  {
+    icon: <Waypoints size={34} />,
+    title: "API Development",
+    text: "Secure and reliable APIs to connect your systems seamlessly.",
+  },
+];
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
     },
-  };
+  },
+};
+
+
+export default function WebDevelopmentPage() {
+
 
   const logos = [
   "/images/Client-1-1.png",
@@ -277,6 +314,126 @@ export default function WebDevelopmentPage() {
                 </p>
 
               </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+            
+      {/* Our Solution */}
+      <section className="py-24 px-6 bg-[#F5F8FF] relative overflow-hidden">
+
+        {/* BACKGROUND GLOW */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/5 blur-[140px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+        </div>
+
+        <div className="container mx-auto relative z-10">
+
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+
+            <p className="text-[#3B82F6] text-sm font-semibold uppercase tracking-[0.25em]">
+              Our Solutions
+            </p>
+
+            <h2 className="mt-4 text-3xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              Web Development Solutions
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              We combine creativity with technology to deliver solutions that are
+              fast, scalable, secure, and built to perform.
+            </p>
+
+          </motion.div>
+
+          {/* CARDS */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+
+            {solutions.map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{
+                  y: -12,
+                }}
+                className="
+                  group relative
+                  bg-white
+                  border border-[#e8efff]
+                  rounded-[28px]
+                  p-8
+                  text-center
+                  overflow-hidden
+                  shadow-[0_10px_30px_rgba(43,76,154,0.04)]
+                  hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)]
+                  transition-all duration-500
+                "
+              >
+
+                {/* TOP GRADIENT LINE */}
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+                </div>
+
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 4,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 200,
+                  }}
+                  className="
+                    relative z-10
+                    w-20 h-20 mx-auto rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    shadow-inner
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
+                  "
+                >
+                  {item.icon}
+                </motion.div>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-7 text-xl font-bold text-[#1a2e5e]">
+                  {item.title}
+                </h3>
+
+                {/* TEXT */}
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
+                  {item.text}
+                </p>
+
+              </motion.div>
+
             ))}
 
           </div>
