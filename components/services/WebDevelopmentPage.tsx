@@ -28,6 +28,19 @@ export default function WebDevelopmentPage() {
       transition: { duration: 0.7 },
     },
   };
+
+  const logos = [
+  "/images/Client-1-1.png",
+  "/images/Client-1-2.png",
+  "/images/Client-1-3.png",
+  "/images/Client-1-5.png",
+  "/images/Client-1-6.png",
+  "/images/Client-1-7.png",
+  "/images/Client-1-11.png",
+  "/images/Client-1-12.png",
+  "/images/Client-1-13.png",
+  "/images/Client-1-14.png",
+];
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
@@ -111,31 +124,47 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* CLIENT LOGOS */}
+
+       <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 22s linear infinite;
+        }
+      `}</style>
+      
       <section className="py-12 bg-white border-y border-[#dbe7ff]">
 
         <div className="container mx-auto px-6 md:px-10 lg:px-16">
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-70">
+          <div className="max-w-5xl mx-auto overflow-hidden">
 
-            {[
-              "Google",
-              "Shopify",
-              "WordPress",
-              "Meta",
-              "HubSpot",
-              "Stripe",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center text-2xl font-bold text-[#1a2e5e]"
-              >
-                {item}
-              </div>
-            ))}
+            <div className="flex items-center gap-14 w-max animate-marquee">
 
+              {[...logos, ...logos].map((logo, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-center min-w-[140px]"
+                >
+                  <img
+                    src={logo}
+                    alt="brand"
+                    className="h-12 md:h-14 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                  />
+                </div>
+              ))}
+
+            </div>
           </div>
-
         </div>
+
       </section>
 
       {/* SERVICES */}
