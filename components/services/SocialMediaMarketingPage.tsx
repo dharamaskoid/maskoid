@@ -287,15 +287,15 @@ export default function SocialMediaMarketingPage() {
 
             {[
               {
-                icon: <Instagram size={34} />,
+                icon: <FaInstagram size={34} />,
                 title: "Instagram Growth",
               },
               {
-                icon: <Facebook size={34} />,
+                icon: <FaFacebookF size={34} />,
                 title: "Facebook Ads",
               },
               {
-                icon: <Youtube size={34} />,
+                icon: <FaYoutube size={34} />,
                 title: "YouTube Marketing",
               },
               {
