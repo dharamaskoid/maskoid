@@ -672,7 +672,7 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* TECHNOLOGIES */}
-      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+      <section className="relative py-16 bg-white overflow-hidden">
 
         <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
 
