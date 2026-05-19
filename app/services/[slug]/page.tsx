@@ -22,5 +22,9 @@ export default async function ServicePage({
     return <PPCServicePage />;
   }
 
+    if (slug === "ppc-service") {
+    return <PPCServicePage />;
+  }
+
   return notFound();
 }

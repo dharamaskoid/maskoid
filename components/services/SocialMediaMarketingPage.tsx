@@ -663,19 +663,19 @@ export default function SocialMediaMarketingPage() {
               {[
                 {
                   name: "Instagram",
-                  icon: <Instagram size={42} />,
+                  icon: <FaInstagram size={42} />,
                 },
                 {
                   name: "Facebook",
-                  icon: <Facebook size={42} />,
+                  icon: <FaFacebookF size={42} />,
                 },
                 {
                   name: "LinkedIn",
-                  icon: <Linkedin size={42} />,
+                  icon: <FaLinkedinIn size={42} />,
                 },
                 {
                   name: "YouTube",
-                  icon: <Youtube size={42} />,
+                  icon: <FaYoutube size={42} />,
                 },
                 {
                   name: "WhatsApp",
