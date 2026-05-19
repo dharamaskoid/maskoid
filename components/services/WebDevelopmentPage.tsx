@@ -1047,7 +1047,7 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 px-6 md:px-10 lg:px-16 overflow-hidden">
+      <section className="py-16 px-6 overflow-hidden">
 
         <motion.div
           initial={{ opacity: 0, y: 60 }}
