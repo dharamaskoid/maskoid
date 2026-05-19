@@ -1000,7 +1000,7 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-            {/* CTA */}
+      {/* CTA */}
       <section className="pb-24 px-6 md:px-10 lg:px-16 overflow-hidden">
 
         <motion.div
@@ -1098,7 +1098,7 @@ export default function WebDevelopmentPage() {
                   overflow-hidden
                   rounded-2xl
                   bg-white
-                  px-7 py-4
+                  px-6 py-3
                   font-semibold
                   text-[#1a2e5e]
                   shadow-[0_10px_40px_rgba(255,255,255,0.12)]
@@ -1124,7 +1124,7 @@ export default function WebDevelopmentPage() {
                   whileHover={{ x: 4 }}
                   className="relative z-10"
                 >
-                  <ArrowRight size={18} />
+                 
                 </motion.div>
 
               </Link>
