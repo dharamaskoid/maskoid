@@ -9,6 +9,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+
 import {
   ArrowRight,
   ChevronLeft,
@@ -27,10 +28,10 @@ import {
   Smartphone,
   Camera,
   MessageCircle,
-  Instagram,
-  Facebook,
-  Youtube,
-  Linkedin,
+  InstagramIcon,
+  FacebookIcon,
+  YoutubeIcon,
+  LinkedinIcon,
 } from "lucide-react";
 
 const fadeUp = {
@@ -58,22 +59,22 @@ const stagger = {
 
 const solutions = [
   {
-    icon: <Instagram size={34} />,
+    icon: <InstagramIcon size={34} />,
     title: "Instagram Marketing",
     text: "Build a strong Instagram presence with engaging content and growth strategies.",
   },
   {
-    icon: <Facebook size={34} />,
+    icon: <FacebookIcon size={34} />,
     title: "Facebook Marketing",
     text: "Reach your audience effectively through targeted Facebook campaigns.",
   },
   {
-    icon: <Youtube size={34} />,
+    icon: <YoutubeIcon size={34} />,
     title: "YouTube Marketing",
     text: "Grow your brand visibility through high-performing video marketing.",
   },
   {
-    icon: <Linkedin size={34} />,
+    icon: <LinkedinIcon size={34} />,
     title: "LinkedIn Marketing",
     text: "Generate B2B leads and establish authority on LinkedIn.",
   },
