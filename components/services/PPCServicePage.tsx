@@ -736,7 +736,6 @@ export default function PPCServicePage() {
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300 whitespace-nowrap"
               >
                 Start PPC Campaign
-                <ArrowRight size={18} />
               </Link>
 
             </div>
