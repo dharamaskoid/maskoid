@@ -16,6 +16,7 @@ import {
   MousePointerClick,
   Megaphone,
   TrendingUp,
+  Users,
 } from "lucide-react";
 
 /* ANIMATION (UNCHANGED) */
