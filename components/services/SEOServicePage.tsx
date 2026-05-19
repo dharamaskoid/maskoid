@@ -2,25 +2,32 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import "swiper/css/navigation";
 import "swiper/css";
+import "swiper/css/navigation";
 
 import {
+  ChevronLeft,
+  ChevronRight,
+  ArrowRight,
   Search,
-  TrendingUp,
-  BarChart3,
   Globe,
-  Target,
-  ShieldCheck,
+  BarChart3,
+  TrendingUp,
+  Users,
   Rocket,
+  ShieldCheck,
   LineChart,
-  Activity,
+  Target,
+  Layers3,
+  MonitorSmartphone,
+  PenTool,
+  Atom,
   Database,
+  Code2,
+  Server,
 } from "lucide-react";
 
 const fadeUp = {
@@ -37,8 +44,45 @@ const fadeUp = {
   },
 };
 
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const solutions = [
+  {
+    icon: <Search size={34} />,
+    title: "Keyword Research",
+    text: "Strategic keyword targeting to attract high-intent traffic.",
+  },
+  {
+    icon: <TrendingUp size={34} />,
+    title: "On-Page SEO",
+    text: "Optimized website structure, content, and metadata for rankings.",
+  },
+  {
+    icon: <Globe size={34} />,
+    title: "Technical SEO",
+    text: "Improve speed, crawlability, indexing, and website health.",
+  },
+  {
+    icon: <BarChart3 size={34} />,
+    title: "SEO Audits",
+    text: "Detailed SEO audits to identify growth opportunities.",
+  },
+  {
+    icon: <Users size={34} />,
+    title: "Local SEO",
+    text: "Increase visibility for local searches and Google rankings.",
+  },
+];
+
 export default function SEOServicePage() {
-    const logos = [
+  const logos = [
     "/images/Client-1-1.png",
     "/images/Client-1-2.png",
     "/images/Client-1-3.png",
@@ -49,276 +93,479 @@ export default function SEOServicePage() {
     "/images/Client-1-12.png",
     "/images/Client-1-13.png",
     "/images/Client-1-14.png",
-    ];
+  ];
 
-    const prevRef = useRef<HTMLButtonElement | null>(null);
-    const nextRef = useRef<HTMLButtonElement | null>(null);
   return (
-    <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
+    <main className="bg-white overflow-hidden pt-[81.5px]">
 
-      {/* HERO SECTION */}
-      {/* ================= HERO SECTION (SAME STRUCTURE) ================= */}
-      <section className="relative flex items-center px-6 py-16 bg-[#1a2e5e] text-white overflow-hidden">
+      {/* HERO */}
+      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
-          <div className="absolute bottom-0 right-20 w-96 h-96 bg-[#2b4c9a]/20 blur-3xl rounded-full"></div>
+
+          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
 
-          <motion.div variants={fadeUp} initial="hidden" animate="show">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <p className="inline-block px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs uppercase">
-              SEO Service
-            </p>
+            {/* LEFT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+            >
 
-            <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-              Rank Higher
-              <span className="block text-[#6EA8FF]">Grow Faster</span>
-            </h1>
+              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
+                SEO Service
+              </p>
 
-            <p className="mt-6 text-[#B7C2D8] max-w-xl">
-              We deliver powerful SEO strategies focused on ranking, traffic, and conversions.
-            </p>
+              <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
+                Rank Higher &
+                <span className="block text-[#6EA8FF]">
+                  Grow Organically
+                </span>
+              </h1>
 
-          </motion.div>
+              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
+                We help businesses dominate search results with data-driven SEO strategies focused on traffic, visibility, and conversions.
+              </p>
 
-          <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="relative"
-          >
-            <img
-              src="/images/seo.png"
-              className="w-full max-w-md mx-auto"
-            />
-          </motion.div>
+            </motion.div>
+
+            {/* RIGHT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              className="relative"
+            >
+
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
+
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative overflow-hidden rounded-[32px]"
+              >
+
+                <img
+                  src="/images/seo.png"
+                  alt="SEO"
+                  className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
+                />
+
+              </motion.div>
+
+            </motion.div>
+
+          </div>
 
         </div>
       </section>
 
       {/* CLIENT LOGOS */}
-        <section className="py-16 bg-white border-y border-[#dbe7ff]">
-            <div className="container mx-auto px-6 relative">
+      <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
-                {/* NAV BUTTONS */}
-                <button
-                className="client-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition"
-                >
-                <ChevronLeft size={20} />
-                </button>
+        <div className="container mx-auto px-6 relative">
 
-                <button
-                className="client-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition"
-                >
-                <ChevronRight size={20} />
-                </button>
+          <button className="seo-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition">
+            <ChevronLeft size={20} />
+          </button>
 
-                {/* SWIPER */}
-                <Swiper
-                modules={[Autoplay, Navigation]}
-                className="px-14"
-                loop={true}
-                speed={800}
-                spaceBetween={20}
+          <button className="seo-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition">
+            <ChevronRight size={20} />
+          </button>
 
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                }}
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            className="px-14"
+            loop={true}
+            speed={800}
+            spaceBetween={20}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            navigation={{
+              prevEl: ".seo-prev",
+              nextEl: ".seo-next",
+            }}
+            breakpoints={{
+              320: { slidesPerView: 2 },
+              640: { slidesPerView: 4 },
+              1024: { slidesPerView: 7 },
+            }}
+          >
 
-                navigation={{
-                    prevEl: ".client-prev",
-                    nextEl: ".client-next",
-                }}
+            {logos.map((logo, i) => (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-16">
+                  <img
+                    src={logo}
+                    alt="client logo"
+                    className="h-14 md:h-16 object-contain transition"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
 
-                breakpoints={{
-                    320: { slidesPerView: 2 },
-                    640: { slidesPerView: 4 },
-                    1024: { slidesPerView: 7 },
-                }}
-                >
+          </Swiper>
 
-                {logos.map((logo, i) => (
-                    <SwiperSlide key={i}>
-                    <div className="flex items-center justify-center h-16">
-                        <img
-                        src={logo}
-                        alt="client logo"
-                        className="h-14 md:h-16 object-contain transition"
-                        />
-                    </div>
-                    </SwiperSlide>
-                ))}
+        </div>
 
-                </Swiper>
-
-            </div>
-        </section>
+      </section>
 
       {/* SERVICES */}
-      <section className="py-16 bg-white">
+      <section className="py-16 px-6 md:px-10 lg:px-16">
 
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
 
-          {/* HEADER */}
           <div className="text-center max-w-3xl mx-auto">
 
             <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-              SEO Services
+              Our SEO Services
             </p>
 
             <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Complete SEO Solutions
-              <span className="text-[#2b4c9a]"> For Business Growth</span>
+              Powerful SEO Solutions For
+              <span className="text-[#2b4c9a]"> Business Growth</span>
             </h2>
 
           </div>
 
-          {/* GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
 
             {[
               {
-                icon: <Search size={34} />,
+                icon: <Search size={30} />,
                 title: "Keyword Research",
               },
               {
-                icon: <Globe size={34} />,
+                icon: <TrendingUp size={30} />,
                 title: "On-Page SEO",
               },
               {
-                icon: <Database size={34} />,
+                icon: <Globe size={30} />,
                 title: "Technical SEO",
               },
               {
-                icon: <TrendingUp size={34} />,
-                title: "SEO Strategy",
+                icon: <BarChart3 size={30} />,
+                title: "SEO Audit",
               },
               {
-                icon: <BarChart3 size={34} />,
-                title: "Analytics & Reports",
+                icon: <Users size={30} />,
+                title: "Local SEO",
               },
               {
-                icon: <Rocket size={34} />,
-                title: "Growth Optimization",
-              },
-            ].map((item, index) => (
-
-              <div
-                key={index}
-                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
-              >
-
-                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                  {item.icon}
-                </div>
-
-                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
-                  {item.title}
-                </h3>
-
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  Advanced SEO strategies designed to improve rankings,
-                  visibility, and long-term growth.
-                </p>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US */}
-      <section className="relative py-16 overflow-hidden bg-[#EEF2FF]">
-
-        {/* BACKGROUND */}
-        <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
-
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-
-          <div className="text-center max-w-3xl mx-auto">
-
-            <p className="inline-block px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-              Why Choose Us
-            </p>
-
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              SEO That Delivers
-              <span className="text-[#2b4c9a]"> Real Results</span>
-            </h2>
-
-          </div>
-
-          {/* CARDS */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-
-            {[
-              {
-                icon: <LineChart size={30} />,
-                title: "Ranking Growth",
-              },
-              {
-                icon: <Target size={30} />,
-                title: "Targeted Traffic",
-              },
-              {
-                icon: <ShieldCheck size={30} />,
-                title: "White Hat SEO",
-              },
-              {
-                icon: <Activity size={30} />,
-                title: "Performance Tracking",
+                icon: <Rocket size={30} />,
+                title: "Growth Strategy",
               },
             ].map((item, index) => (
 
               <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
                 whileHover={{
                   y: -10,
                 }}
-                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)] transition-all duration-500"
+                className="group relative overflow-hidden rounded-[28px] border border-[#dbe7ff] bg-white p-6 shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)] transition-all duration-500"
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
-
-                  {item.icon}
-
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
+                  {item.icon}
+                </div>
+
+                <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  We focus on sustainable SEO strategies that help businesses
-                  achieve measurable digital growth.
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
+                  Premium SEO strategies focused on visibility, rankings, and conversions.
                 </p>
 
               </motion.div>
+
             ))}
 
           </div>
 
         </div>
+
+      </section>
+
+      {/* OUR SOLUTIONS */}
+      <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
+
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
+        </div>
+
+        <div className="container px-6 mx-auto relative z-10">
+
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider">
+              SEO Solutions
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold text-[#1a2e5e]">
+              Results Driven
+              <span className="text-[#2b4c9a]"> SEO Services</span>
+            </h2>
+
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+
+            {solutions.map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -12 }}
+                className="group relative bg-white border border-[#e8efff] rounded-[28px] p-8 text-center overflow-hidden shadow-[0_10px_30px_rgba(43,76,154,0.04)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
+              >
+
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+
+                <div className="w-20 h-20 mx-auto rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-7 text-xl font-bold text-[#1a2e5e]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-gray-500 leading-relaxed text-[15px]">
+                  {item.text}
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="relative py-16 overflow-hidden bg-[#1a2e5e]">
+
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+        </div>
+
+        <div className="container px-6 mx-auto relative z-10">
+
+          <div className="text-center max-w-4xl mx-auto">
+
+            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider">
+              Why Choose Us
+            </p>
+
+            <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white">
+              Features of Our
+              <span className="text-[#6EA8FF]"> SEO Services</span>
+            </h2>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+
+            {[
+              {
+                icon: <Target size={30} />,
+                title: "Targeted SEO Strategy",
+                text: "SEO strategies tailored to your audience and business goals.",
+              },
+              {
+                icon: <LineChart size={30} />,
+                title: "Performance Tracking",
+                text: "Detailed reporting and analytics to measure SEO growth.",
+              },
+              {
+                icon: <ShieldCheck size={30} />,
+                title: "Long-Term Growth",
+                text: "Sustainable SEO techniques that improve rankings over time.",
+              },
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.15 }}
+                whileHover={{ y: -10 }}
+                className="group relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[28px] p-8 overflow-hidden hover:border-[#3B82F6]/30 transition-all duration-500"
+              >
+
+                <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/10 text-[#6EA8FF] flex items-center justify-center">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-7 text-2xl font-bold text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-5 text-[#B7C2D8] leading-relaxed">
+                  {item.text}
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* TECHNOLOGIES */}
+      <section className="relative py-20 md:py-24 bg-white overflow-hidden">
+
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute -top-20 -left-20 w-[350px] md:w-[450px] h-[350px] md:h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[300px] md:w-[420px] h-[300px] md:h-[420px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+
+        </div>
+
+        <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+            {/* LEFT */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                SEO Tools & Platforms
+              </p>
+
+              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+                Modern SEO
+                <span className="text-[#2b4c9a]"> Technologies</span>
+              </h2>
+
+              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+                We use advanced SEO tools and analytics platforms to maximize rankings and organic traffic.
+              </p>
+
+            </motion.div>
+
+            {/* RIGHT */}
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6"
+            >
+
+              {[
+                {
+                  name: "Google Analytics",
+                  icon: <BarChart3 size={42} />,
+                },
+                {
+                  name: "Google Search Console",
+                  icon: <Search size={42} />,
+                },
+                {
+                  name: "Ahrefs",
+                  icon: <TrendingUp size={42} />,
+                },
+                {
+                  name: "SEMrush",
+                  icon: <Globe size={42} />,
+                },
+                {
+                  name: "Technical SEO",
+                  icon: <Code2 size={42} />,
+                },
+                {
+                  name: "Content Strategy",
+                  icon: <PenTool size={42} />,
+                },
+              ].map((item, index) => (
+
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{
+                    y: -10,
+                    scale: 1.03,
+                  }}
+                  className="group relative bg-white border border-[#dbe7ff] rounded-[28px] p-6 md:p-8 flex flex-col items-center justify-center overflow-hidden shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)] transition-all duration-500"
+                >
+
+                  <div className="w-20 h-20 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
+                    {item.icon}
+                  </div>
+
+                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-[#1a2e5e] text-center">
+                    {item.name}
+                  </h3>
+
+                </motion.div>
+
+              ))}
+
+            </motion.div>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6">
+      <section className="pb-24 px-6 md:px-10 lg:px-16">
 
-        <div className="container mx-auto bg-[#1a2e5e] rounded-[32px] p-10 md:p-16 relative overflow-hidden">
+        <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
 
-          {/* BG */}
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
@@ -331,8 +578,7 @@ export default function SEOServicePage() {
               </h2>
 
               <p className="mt-5 text-[#B7C2D8] text-lg max-w-2xl">
-                Let’s create an SEO strategy that increases traffic,
-                rankings, and conversions.
+                Let’s create a powerful SEO strategy that drives organic traffic and business growth.
               </p>
 
             </div>
@@ -342,13 +588,13 @@ export default function SEOServicePage() {
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300 whitespace-nowrap"
             >
               Start SEO Project
-
-
+              <ArrowRight size={18} />
             </Link>
 
           </div>
 
         </div>
+
       </section>
 
     </main>
