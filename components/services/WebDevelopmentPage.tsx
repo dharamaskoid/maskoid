@@ -239,12 +239,19 @@ export default function WebDevelopmentPage() {
 
             </div>
         </section>
-
-      {/* SERVICES */}
       
-      <section className="py-16 px-6 md:px-10 lg:px-16">
+      {/* SERVICES */}
+      <section className="relative py-16 px-6 overflow-hidden">
 
-        <div className="container mx-auto">
+        {/* BG PATTERN */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        {/* GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+
+        <div className="container mx-auto relative z-10">
 
           {/* HEADER */}
           <div className="text-center max-w-3xl mx-auto">
@@ -253,7 +260,7 @@ export default function WebDevelopmentPage() {
               Our Services
             </p>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Web Development Solutions For
               <span className="text-[#2b4c9a]"> Modern Businesses</span>
             </h2>
@@ -261,57 +268,112 @@ export default function WebDevelopmentPage() {
           </div>
 
           {/* GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
 
             {[
               {
-                icon: <Globe size={34} />,
+                icon: <Globe size={30} />,
                 title: "Business Websites",
               },
               {
-                icon: <ShoppingCart size={34} />,
+                icon: <ShoppingCart size={30} />,
                 title: "E-Commerce",
               },
               {
-                icon: <MonitorSmartphone size={34} />,
+                icon: <MonitorSmartphone size={30} />,
                 title: "Responsive Design",
               },
               {
-                icon: <Code2 size={34} />,
+                icon: <Code2 size={30} />,
                 title: "Custom Development",
               },
               {
-                icon: <Search size={34} />,
+                icon: <Search size={30} />,
                 title: "SEO Optimized",
               },
               {
-                icon: <Rocket size={34} />,
+                icon: <Rocket size={30} />,
                 title: "Performance Focused",
               },
             ].map((item, index) => (
-              <div
+
+              <motion.div
                 key={index}
-                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.08,
+                }}
+                whileHover={{
+                  y: -12,
+                  scale: 1.02,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[28px]
+                  border border-[#dbe7ff]
+                  bg-white
+                  p-6
+                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
+                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
+                  transition-all duration-500
+                "
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                  {item.icon}
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 220,
+                  }}
+                  className="
+                    relative z-10
+                    w-16 h-16
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
+                  "
+                >
+                  {item.icon}
+                </motion.div>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-gray-600 leading-relaxed">
+                {/* TEXT */}
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
                   Premium scalable digital solutions tailored for your business goals.
                 </p>
 
-              </div>
+              </motion.div>
+
             ))}
 
           </div>
 
         </div>
+
       </section>
 
             
