@@ -672,7 +672,7 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* TECHNOLOGIES */}
-      <section className="relative py-20 md:py-24 bg-white overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
 
         <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
 
@@ -769,7 +769,7 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 px-6 md:px-10 lg:px-16">
+      <section className="py-16 px-6">
 
         <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
 
