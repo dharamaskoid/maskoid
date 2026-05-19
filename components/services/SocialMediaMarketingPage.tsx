@@ -247,139 +247,69 @@ export default function SocialMediaMarketingPage() {
         </section>
 
       {/* SERVICES */}
-      <section className="relative py-16 px-6 overflow-hidden">
+      <section className="py-16 px-6 md:px-10 lg:px-16">
 
-        {/* BG PATTERN */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        <div className="container mx-auto">
 
-        {/* GLOW */}
-        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-pink-500/5 blur-[100px] rounded-full"></div>
+          <div className="text-center max-w-3xl mx-auto">
 
-        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#ff4fa1]/10 blur-[100px] rounded-full"></div>
-
-        <div className="container mx-auto relative z-10">
-
-          {/* HEADER */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center max-w-3xl mx-auto"
-          >
-
-            <p className="inline-flex px-5 py-2 rounded-full bg-pink-500/10 text-pink-600 text-xs font-semibold uppercase tracking-[0.2em]">
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
               Our Services
             </p>
 
-            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
               Social Media Marketing
-              <span className="text-pink-600"> Services</span>
+              <span className="text-[#2b4c9a]"> Services</span>
             </h2>
 
-          </motion.div>
+          </div>
 
-          {/* GRID */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
             {[
               {
-                icon: <FaInstagram size={30} />,
+                icon: <FaInstagram size={34} />,
                 title: "Instagram Growth",
               },
               {
-                icon: <FaFacebookF size={30} />,
+                icon: <FaFacebookF size={34} />,
                 title: "Facebook Ads",
               },
               {
-                icon: <FaYoutube size={30} />,
+                icon: <FaYoutube size={34} />,
                 title: "YouTube Marketing",
               },
               {
-                icon: <Camera size={30} />,
+                icon: <Camera size={34} />,
                 title: "Content Creation",
               },
               {
-                icon: <BarChart3 size={30} />,
+                icon: <BarChart3 size={34} />,
                 title: "Analytics & Reporting",
               },
               {
-                icon: <TrendingUp size={30} />,
+                icon: <TrendingUp size={34} />,
                 title: "Lead Generation",
               },
             ].map((item, index) => (
-
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
-                }}
-                whileHover={{
-                  y: -12,
-                  scale: 1.02,
-                }}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[28px]
-                  border border-[#ffd9ec]
-                  bg-white
-                  p-8
-                  shadow-[0_10px_40px_rgba(255,79,161,0.06)]
-                  hover:shadow-[0_25px_60px_rgba(255,79,161,0.16)]
-                  transition-all duration-500
-                "
+                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
               >
 
-                {/* HOVER GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                  <div className="absolute -top-20 right-0 w-40 h-40 bg-pink-500/10 blur-3xl rounded-full"></div>
-
+                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                  {item.icon}
                 </div>
 
-                {/* ICON */}
-                <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 220,
-                  }}
-                  className="
-                    relative z-10
-                    w-16 h-16
-                    rounded-2xl
-                    bg-pink-50
-                    text-pink-600
-                    flex items-center justify-center
-                    group-hover:bg-pink-600
-                    group-hover:text-white
-                    transition-all duration-500
-                  "
-                >
-                  {item.icon}
-                </motion.div>
-
-                {/* TITLE */}
-                <h3 className="relative z-10 mt-6 text-2xl font-bold text-[#1a2e5e] leading-snug">
+                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
                   {item.title}
                 </h3>
 
-                {/* TEXT */}
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
-                  Premium social media marketing solutions tailored for brand visibility, engagement, and business growth.
+                <p className="mt-4 text-gray-600 leading-relaxed">
+                  Premium social media solutions tailored for business growth.
                 </p>
 
-              </motion.div>
-
+              </div>
             ))}
 
           </div>
