@@ -745,38 +745,6 @@ export default function PPCServicePage() {
 
         </section>
 
-      {/* CTA */}
-      <section className="pb-24 px-6 md:px-10 lg:px-16">
-
-        <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
-
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
-
-            <div>
-
-              <h2 className="text-4xl font-bold text-white">
-                Ready To Grow Your Business?
-              </h2>
-
-              <p className="mt-5 text-[#B7C2D8]">
-                Let’s run high-converting PPC campaigns for your brand.
-              </p>
-
-            </div>
-
-            <Link
-              href="/contact-us"
-              className="px-6 py-3 bg-white text-[#1a2e5e] rounded-xl font-semibold"
-            >
-              Start Your Project
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
-
     </main>
   );
 }
