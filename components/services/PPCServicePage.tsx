@@ -222,7 +222,7 @@ export default function PPCServicePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="relative py-20 px-6 md:px-10 lg:px-16 overflow-hidden">
+      <section className="relative py-16 px-6 overflow-hidden">
 
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
@@ -234,7 +234,7 @@ export default function PPCServicePage() {
               Our PPC Services
             </p>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Powerful PPC Solutions For
               <span className="text-[#2b4c9a]"> Modern Businesses</span>
             </h2>
@@ -391,7 +391,7 @@ export default function PPCServicePage() {
                 Why Choose Us
               </p>
 
-              <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white">
+              <h2 className="mt-5 text-4xl md:text-4xl font-bold text-white">
                 Features of Our
                 <span className="text-[#6EA8FF]"> PPC Services</span>
               </h2>
@@ -605,7 +605,7 @@ export default function PPCServicePage() {
 
 
         {/* TECHNOLOGIES */}
-        <section className="relative py-20 md:py-24 bg-white overflow-hidden">
+        <section className="relative py-16 bg-white overflow-hidden">
 
           <div className="absolute inset-0 pointer-events-none">
 
@@ -631,7 +631,7 @@ export default function PPCServicePage() {
                   PPC Tools & Platforms
                 </p>
 
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
                   Advanced PPC
                   <span className="text-[#2b4c9a]"> Technologies</span>
                 </h2>
@@ -710,7 +710,7 @@ export default function PPCServicePage() {
 
 
         {/* CTA */}
-        <section className="pb-24 px-6 md:px-10 lg:px-16">
+        <section className="py-16 px-6">
 
           <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
 
@@ -720,7 +720,7 @@ export default function PPCServicePage() {
 
               <div>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h2 className="text-4xl md:text-4xl font-bold text-white leading-tight">
                   Ready To Scale
                   <span className="text-[#6EA8FF]"> Your Campaigns?</span>
                 </h2>
