@@ -241,77 +241,164 @@ export default function WebDevelopmentPage() {
         </section>
 
       {/* SERVICES */}
-      
-      <section className="py-16 px-6 md:px-10 lg:px-16">
+      <section className="relative py-16 px-6 md:px-10 lg:px-16 overflow-hidden bg-white">
 
-        <div className="container mx-auto">
+        {/* BACKGROUND */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/5 blur-[120px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[320px] h-[320px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+        </div>
+
+        <div className="container mx-auto relative z-10">
 
           {/* HEADER */}
-          <div className="text-center max-w-3xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
 
-            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
               Our Services
             </p>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Web Development Solutions For
-              <span className="text-[#2b4c9a]"> Modern Businesses</span>
+            <h2 className="mt-5 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              Web Development Solutions
+              <span className="block text-[#2b4c9a]">
+                For Modern Businesses
+              </span>
             </h2>
 
-          </div>
+          </motion.div>
 
-          {/* GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          {/* SERVICES GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-14">
 
             {[
               {
-                icon: <Globe size={34} />,
+                icon: <Globe size={30} />,
                 title: "Business Websites",
+                number: "01",
               },
               {
-                icon: <ShoppingCart size={34} />,
+                icon: <ShoppingCart size={30} />,
                 title: "E-Commerce",
+                number: "02",
               },
               {
-                icon: <MonitorSmartphone size={34} />,
+                icon: <MonitorSmartphone size={30} />,
                 title: "Responsive Design",
+                number: "03",
               },
               {
-                icon: <Code2 size={34} />,
+                icon: <Code2 size={30} />,
                 title: "Custom Development",
+                number: "04",
               },
               {
-                icon: <Search size={34} />,
+                icon: <Search size={30} />,
                 title: "SEO Optimized",
+                number: "05",
               },
               {
-                icon: <Rocket size={34} />,
+                icon: <Rocket size={30} />,
                 title: "Performance Focused",
+                number: "06",
               },
             ].map((item, index) => (
-              <div
+
+              <motion.div
                 key={index}
-                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[30px]
+                  border border-[#dbe7ff]
+                  bg-white
+                  p-7
+                  shadow-[0_10px_30px_rgba(43,76,154,0.05)]
+                  hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                  hover:border-[#2b4c9a]/20
+                  transition-all duration-500
+                "
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                  {item.icon}
+                {/* TOP LINE */}
+                <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] group-hover:w-full transition-all duration-500"></div>
+
+                {/* GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute -top-10 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                {/* NUMBER */}
+                <div className="absolute top-5 right-5 text-5xl font-bold text-[#EEF4FF] group-hover:text-[#d9e5ff] transition-all duration-500">
+                  {item.number}
+                </div>
+
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 200,
+                  }}
+                  className="
+                    relative z-10
+                    w-14 h-14
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
+                  "
+                >
+                  {item.icon}
+                </motion.div>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-6 text-2xl font-bold text-[#1a2e5e] leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-gray-600 leading-relaxed">
+                {/* TEXT */}
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
                   Premium scalable digital solutions tailored for your business goals.
                 </p>
 
-              </div>
+              </motion.div>
+
             ))}
 
           </div>
 
         </div>
+
       </section>
 
             
