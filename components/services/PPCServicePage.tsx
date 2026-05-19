@@ -77,6 +77,9 @@ export default function PPCServicePage() {
     "/images/Client-1-13.png",
     "/images/Client-1-14.png",
   ];
+  
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
