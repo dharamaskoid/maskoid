@@ -94,6 +94,7 @@ export default function WebDevelopmentPage() {
   "/images/Client-1-14.png",
 ];
 
+
  const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
@@ -181,76 +182,85 @@ export default function WebDevelopmentPage() {
 
       {/* CLIENT LOGOS */}
 
+      {/* CLIENT LOGOS */}
       <section className="py-16 bg-white border-y border-[#dbe7ff]">
-      <div className="container mx-auto px-6 relative">
 
-        {/* NAV BUTTONS */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
+        <div className="container mx-auto px-6 relative">
 
-          <button
-            ref={prevRef}
-            className="w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] pointer-events-auto hover:bg-[#2b4c9a] hover:text-white transition"
+          {/* NAV BUTTONS */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
+
+            <button
+              ref={prevRef}
+              className="w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] pointer-events-auto hover:bg-[#2b4c9a] hover:text-white transition"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <button
+              ref={nextRef}
+              className="w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] pointer-events-auto hover:bg-[#2b4c9a] hover:text-white transition"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+          </div>
+
+          {/* SWIPER */}
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            className="px-14"
+            loop={true}
+            speed={2000}
+            spaceBetween={20}
+
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+
+            onInit={(swiper) => {
+
+              // @ts-ignore
+              swiper.params.navigation.prevEl = prevRef.current;
+
+              // @ts-ignore
+              swiper.params.navigation.nextEl = nextRef.current;
+
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+
+            breakpoints={{
+              320: { slidesPerView: 2 },
+              640: { slidesPerView: 4 },
+              1024: { slidesPerView: 7 },
+            }}
           >
-            <ChevronLeft size={20} />
-          </button>
 
-          <button
-            ref={nextRef}
-            className="w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] pointer-events-auto hover:bg-[#2b4c9a] hover:text-white transition"
-          >
-            <ChevronRight size={20} />
-          </button>
+            {logos.map((logo, i) => (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-16">
+                  <img
+                    src={logo}
+                    alt="client logo"
+                    className="h-14 md:h-16 object-contain grayscale hover:grayscale-0 transition"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+
+          </Swiper>
 
         </div>
 
-        {/* SWIPER */}
-        <Swiper
-          className="px-14"
-          modules={[Autoplay, Navigation]}
-          loop={true}
-          speed={2000}
-          spaceBetween={20}
-
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true, // ✅ hover stop
-          }}
-
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-
-          onBeforeInit={(swiper) => {
-            // ✅ fix navigation refs timing issue
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }}
-
-          breakpoints={{
-            320: { slidesPerView: 2 },
-            640: { slidesPerView: 4 },
-            1024: { slidesPerView: 7 },
-          }}
-        >
-
-          {logos.map((logo, i) => (
-            <SwiperSlide key={i}>
-              <div className="flex items-center justify-center h-16">
-                <img
-                  src={logo}
-                  alt="client logo"
-                  className="h-14 md:h-16 object-contain grayscale hover:grayscale-0 transition"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-
-        </Swiper>
-
-      </div>
-    </section>
+      </section>
 
       {/* SERVICES */}
       
