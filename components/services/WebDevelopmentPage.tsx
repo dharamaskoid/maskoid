@@ -240,428 +240,407 @@ export default function WebDevelopmentPage() {
             </div>
         </section>
       
-      {/* SERVICES */}
-      <section className="relative py-16 px-6 overflow-hidden">
+          {/* OUR SERVICES */}
+        <section className="relative overflow-hidden bg-white py-16 md:py-20">
 
-        {/* BG PATTERN */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+          {/* BG LIGHT */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full"></div>
 
-        {/* GLOW */}
-        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+          <div className="container mx-auto px-6 relative z-10">
 
-        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+            <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-        <div className="container mx-auto relative z-10">
-
-            {/* HEADER */}
+              {/* LEFT */}
               <motion.div
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="text-center max-w-3xl mx-auto"
               >
 
-                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                  Core Services
+                <p className="inline-flex px-5 py-2 rounded-full bg-[#EEF4FF] border border-[#dbe7ff] text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                  Our Services
                 </p>
 
-                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                  Premium Digital Experiences
-                  <span className="text-[#2b4c9a]"> Built For Growth</span>
+                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#071739] leading-tight">
+                  Creative Solutions
+                  <span className="block text-[#3B82F6]">
+                    For Modern Brands
+                  </span>
                 </h2>
 
-              </motion.div>
-
-          {/* GRID */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
-
-            {[
-              {
-                icon: <Globe size={30} />,
-                title: "Business Websites",
-              },
-              {
-                icon: <ShoppingCart size={30} />,
-                title: "E-Commerce",
-              },
-              {
-                icon: <MonitorSmartphone size={30} />,
-                title: "Responsive Design",
-              },
-              {
-                icon: <Code2 size={30} />,
-                title: "Custom Development",
-              },
-              {
-                icon: <Search size={30} />,
-                title: "SEO Optimized",
-              },
-              {
-                icon: <Rocket size={30} />,
-                title: "Performance Focused",
-              },
-            ].map((item, index) => (
-
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
-                }}
-                whileHover={{
-                  y: -12,
-                  scale: 1.02,
-                }}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[28px]
-                  border border-[#dbe7ff]
-                  bg-white
-                  p-6
-                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
-                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
-                "
-              >
-
-                {/* HOVER GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-                </div>
-
-                {/* ICON */}
-                <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 220,
-                  }}
-                  className="
-                    relative z-10
-                    w-16 h-16
-                    rounded-2xl
-                    bg-[#EEF4FF]
-                    text-[#2b4c9a]
-                    flex items-center justify-center
-                    group-hover:bg-[#2b4c9a]
-                    group-hover:text-white
-                    transition-all duration-500
-                  "
-                >
-                  {item.icon}
-                </motion.div>
-
-                {/* TITLE */}
-                <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
-                  {item.title}
-                </h3>
-
-                {/* TEXT */}
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
-                  Premium scalable digital solutions tailored for your business goals.
+                <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+                  We create fast, scalable, and result-driven digital
+                  experiences for modern businesses.
                 </p>
 
+                {/* PLANT IMAGE */}
+                <motion.div
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="mt-16"
+                >
+
+                  <img
+                    src="/images/plant.png"
+                    alt="Plant"
+                    className="w-[220px] object-contain"
+                  />
+
+                </motion.div>
+
               </motion.div>
 
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-            
-      {/* Our Solution */}
-      <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
-
-        {/* BACKGROUND GLOW */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
-          </div>
-
-        <div className="container px-6 mx-auto relative z-10">
-
-          {/* HEADER */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center max-w-3xl mx-auto"
-          >
-
-
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-                Our Solutions
-            </p>
-
-            <h2 className="mt-4 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              Web Development 
-                   <span className="text-[#2b4c9a]"> Solutions</span>
-            </h2>
-
-            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-              We combine creativity with technology to deliver solutions that are
-              fast, scalable, secure, and built to perform.
-            </p>
-
-          </motion.div>
-
-          {/* CARDS */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
-
-            {solutions.map((item, index) => (
-
+              {/* RIGHT */}
               <motion.div
-                key={index}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{
-                  y: -12,
-                }}
-                className="
-                  group relative
-                  bg-white
-                  border border-[#e8efff]
-                  rounded-[28px]
-                  p-8
-                  text-center
-                  overflow-hidden
-                  shadow-[0_10px_30px_rgba(43,76,154,0.04)]
-                  hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
-                "
+                className="relative"
               >
 
-                {/* TOP GRADIENT LINE */}
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-                {/* HOVER GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-                </div>
-
-                {/* ICON */}
+                {/* CENTER CARD */}
                 <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 4,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 200,
-                  }}
-                  className="
-                    relative z-10
-                    w-20 h-20 mx-auto rounded-2xl
-                    bg-[#EEF4FF]
-                    text-[#2b4c9a]
-                    flex items-center justify-center
-                    shadow-inner
-                    group-hover:bg-[#2b4c9a]
-                    group-hover:text-white
-                    transition-all duration-500
-                  "
+                  whileHover={{ y: -10 }}
+                  className="relative z-20 mx-auto w-[280px] md:w-[320px] rounded-[38px] overflow-hidden bg-[#0B1D51] border border-white/10 shadow-[0_30px_80px_rgba(43,76,154,0.25)]"
                 >
-                  {item.icon}
+
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.25),transparent_70%)]"></div>
+
+                  <div className="relative z-10 p-10">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-white flex items-center justify-center">
+                      <Code2 size={34} />
+                    </div>
+
+                    <h3 className="mt-8 text-3xl font-bold text-white leading-snug">
+                      Custom
+                      <span className="block">
+                        Development
+                      </span>
+                    </h3>
+
+                    <p className="mt-5 text-[#B7C2D8] leading-relaxed">
+                      Tailored solutions built with modern technologies for unique business needs.
+                    </p>
+
+                  </div>
+
                 </motion.div>
 
-                {/* TITLE */}
-                <h3 className="relative z-10 mt-7 text-xl font-bold text-[#1a2e5e]">
-                  {item.title}
-                </h3>
+                {/* FLOATING CARDS */}
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                  }}
+                  className="absolute top-0 right-0 rotate-[10deg]"
+                >
 
-                {/* TEXT */}
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
-                  {item.text}
-                </p>
+                  <div className="w-[220px] rounded-[32px] bg-white border border-[#dbe7ff] p-8 shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
+
+                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                      <ShoppingCart size={28} />
+                    </div>
+
+                    <h3 className="mt-6 text-2xl font-bold text-[#071739]">
+                      E-Commerce
+                    </h3>
+
+                    <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                      Powerful online stores that drive sales and customer engagement.
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                  }}
+                  className="absolute bottom-0 left-0 -rotate-[10deg]"
+                >
+
+                  <div className="w-[220px] rounded-[32px] bg-white border border-[#dbe7ff] p-8 shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
+
+                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                      <Globe size={28} />
+                    </div>
+
+                    <h3 className="mt-6 text-2xl font-bold text-[#071739]">
+                      Business
+                      Websites
+                    </h3>
+
+                    <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                      Modern websites tailored for your business growth and branding.
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                  }}
+                  className="absolute bottom-10 right-0 rotate-[8deg]"
+                >
+
+                  <div className="w-[220px] rounded-[32px] bg-white border border-[#dbe7ff] p-8 shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
+
+                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                      <Rocket size={28} />
+                    </div>
+
+                    <h3 className="mt-6 text-2xl font-bold text-[#071739]">
+                      Performance
+                      Focused
+                    </h3>
+
+                    <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                      Optimized digital products focused on speed and conversions.
+                    </p>
+
+                  </div>
+
+                </motion.div>
 
               </motion.div>
 
-            ))}
+            </div>
 
           </div>
 
-        </div>
-      </section>
+        </section>
 
+        {/* OUR SOLUTIONS */}
+        <section className="relative overflow-hidden bg-[#F8FAFF] py-16 md:py-20">
 
-      {/* WHY CHOOSE US */}
+          <div className="container mx-auto px-6 relative z-10">
 
-      <section className="relative py-16 overflow-hidden bg-[#1a2e5e]">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-        {/* BACKGROUND GLOW */}
-        <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
-
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
-
-        </div>
-
-        <div className="container px-6 mx-auto relative z-10">
-
-          {/* HEADER */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center max-w-4xl mx-auto"
-          >
-
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-              Why Choose Us
-            </p>
-
-            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-white leading-tight">
-              Features of Our 
-              <span className="jsx-1d499fd48ad2ca04 text-[#6EA8FF]"> Web Development</span> Services
-            </h2>
-
-            <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
-              We follow industry best practices and use modern technologies
-              to build websites that are not only beautiful but also
-              high-performing.
-            </p>
-
-          </motion.div>
-
-          {/* FEATURES */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-
-            {[
-              {
-                icon: <Search size={30} />,
-                title: "Performance & SEO Optimized",
-                text: "We build lightning-fast websites optimized for search engines to help you rank higher and attract the right audience.",
-              },
-
-              {
-                icon: <ShieldCheck size={30} />,
-                title: "Secure & Scalable",
-                text: "Security and scalability are at the core of our development process to ensure your website grows with your business.",
-              },
-
-              {
-                icon: <Code2 size={30} />,
-                title: "Clean & Modern Code",
-                text: "We follow best coding standards to deliver clean, maintainable, and future-ready solutions.",
-              },
-            ].map((item, index) => (
-
+              {/* LEFT */}
               <motion.div
-                key={index}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                transition={{ delay: index * 0.15 }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="
-                  group
-                  relative
-                  bg-white/5
-                  border border-white/10
-                  backdrop-blur-xl
-                  rounded-[28px]
-                  p-8
-                  overflow-hidden
-                  hover:border-[#3B82F6]/30
-                  hover:bg-white/[0.07]
-                  transition-all duration-500
-                "
               >
 
-                {/* GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                  <div className="absolute -top-10 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-                </div>
-
-                {/* ICON */}
-                <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 4,
-                  }}
-                  className="
-                    relative z-10
-                    w-20 h-20
-                    rounded-2xl
-                    bg-white/10
-                    border border-white/10
-                    text-[#6EA8FF]
-                    flex items-center justify-center
-                  "
-                >
-                  {item.icon}
-                </motion.div>
-
-                {/* TITLE */}
-                <h3 className="relative z-10 mt-7 text-2xl font-bold text-white leading-snug">
-                  {item.title}
-                </h3>
-
-                {/* TEXT */}
-                <p className="relative z-10 mt-5 text-[#B7C2D8] leading-relaxed">
-                  {item.text}
+                <p className="inline-flex px-5 py-2 rounded-full bg-white border border-[#dbe7ff] text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                  Our Solutions
                 </p>
+
+                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#071739] leading-tight">
+                  Digital Solutions That
+                  <span className="block text-[#3B82F6]">
+                    Create Real Impact
+                  </span>
+                </h2>
+
+                <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+                  We combine creativity with technology to build
+                  scalable and future-ready solutions.
+                </p>
+
+                <motion.img
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                  }}
+                  src="/images/monitor.png"
+                  alt="Monitor"
+                  className="mt-16 w-full max-w-[420px]"
+                />
 
               </motion.div>
 
-            ))}
+              {/* RIGHT */}
+              <div className="space-y-5">
+
+                {[
+                  {
+                    icon: <Globe size={24} />,
+                    title: "Custom Websites",
+                    text: "Premium websites optimized for user experience.",
+                    image: "/images/ui-1.jpg",
+                  },
+                  {
+                    icon: <ShoppingCart size={24} />,
+                    title: "E-Commerce",
+                    text: "Scalable online stores for modern brands.",
+                    image: "/images/ui-2.jpg",
+                  },
+                  {
+                    icon: <Code2 size={24} />,
+                    title: "Web Applications",
+                    text: "Advanced web apps with scalable architecture.",
+                    image: "/images/ui-3.jpg",
+                  },
+                ].map((item, index) => (
+
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.12,
+                    }}
+                    whileHover={{
+                      x: 8,
+                    }}
+                    className="group bg-white rounded-[28px] border border-[#dbe7ff] p-5 flex items-center gap-5 shadow-[0_20px_60px_rgba(43,76,154,0.06)]"
+                  >
+
+                    <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shrink-0">
+                      {item.icon}
+                    </div>
+
+                    <div className="flex-1">
+
+                      <h3 className="text-xl font-bold text-[#071739]">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-2 text-gray-500 text-sm leading-relaxed">
+                        {item.text}
+                      </p>
+
+                    </div>
+
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="hidden md:block w-[120px] rounded-2xl border border-[#dbe7ff]"
+                    />
+
+                  </motion.div>
+
+                ))}
+
+              </div>
+
+            </div>
 
           </div>
 
-          {/* BUTTON */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex justify-center mt-16"
-          >
+        </section>
 
-            <Link
-              href="/contact-us"
-              className="
-                group inline-flex items-center gap-3
-                px-6 py-3 rounded-xl
-                bg-[#2b4c9a] hover:bg-[#1f3d84]
-                text-white font-semibold
-                hover:-translate-y-1
-                transition-all duration-300
-              "
+        {/* WHY CHOOSE US */}
+        <section className="relative overflow-hidden bg-[#071739] py-16 md:py-20">
+
+          {/* GLOW */}
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
+
+          <div className="container mx-auto px-6 relative z-10">
+
+            {/* HEADER */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              className="text-center max-w-3xl mx-auto"
             >
-              Discuss Your Project
-            </Link>
 
-          </motion.div>
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
+                Why Choose Us
+              </p>
 
-        </div>
-      </section>
+              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
+                We Build Websites
+                <span className="block text-[#6EA8FF]">
+                  That Work For You
+                </span>
+              </h2>
+
+            </motion.div>
+
+            {/* STATS */}
+            <div className="grid md:grid-cols-3 gap-8 mt-20">
+
+              {[
+                {
+                  icon: <Layers3 size={32} />,
+                  value: "98%",
+                  label: "Client Satisfaction",
+                },
+                {
+                  icon: <ShieldCheck size={32} />,
+                  value: "120+",
+                  label: "Projects Delivered",
+                },
+                {
+                  icon: <Code2 size={32} />,
+                  value: "10+",
+                  label: "Modern Technologies",
+                },
+              ].map((item, index) => (
+
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.12,
+                  }}
+                  whileHover={{
+                    y: -10,
+                  }}
+                  className="group relative overflow-hidden rounded-[34px] bg-white/5 border border-white/10 backdrop-blur-xl p-10"
+                >
+
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+                  </div>
+
+                  <div className="relative z-10">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center">
+                      {item.icon}
+                    </div>
+
+                    <h3 className="mt-8 text-5xl font-bold text-white">
+                      {item.value}
+                    </h3>
+
+                    <p className="mt-4 text-[#B7C2D8] text-lg">
+                      {item.label}
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        </section>
 
       {/* OUR PROCESS */}
 
