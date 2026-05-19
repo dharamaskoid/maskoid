@@ -185,68 +185,41 @@ export default function SocialMediaMarketingPage() {
       </section>
 
 
+
       {/* CLIENT LOGOS */}
-      <section className="py-16 bg-white border-y border-[#dbe7ff]">
+        <section className="py-16 bg-white border-y border-[#dbe7ff]">
+            <div className="container mx-auto px-6 relative">
 
-        <div className="container mx-auto px-6 relative">
-
-            {/* NAV BUTTONS */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
-
-            <button
-                ref={prevRef}
-                className="w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] pointer-events-auto hover:bg-[#2b4c9a] hover:text-white transition"
-            >
+                {/* NAV BUTTONS */}
+                <button
+                className="client-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition"
+                >
                 <ChevronLeft size={20} />
-            </button>
+                </button>
 
-            <button
-                ref={nextRef}
-                className="w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] pointer-events-auto hover:bg-[#2b4c9a] hover:text-white transition"
-            >
+                <button
+                className="client-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition"
+                >
                 <ChevronRight size={20} />
-            </button>
+                </button>
 
-            </div>
-
-            {/* SWIPER */}
-            <Swiper
+                {/* SWIPER */}
+                <Swiper
                 modules={[Autoplay, Navigation]}
                 className="px-14"
                 loop={true}
-                speed={2000}
+                speed={800}
                 spaceBetween={20}
 
                 autoplay={{
-                    delay: 0,
+                    delay: 2500,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
 
                 navigation={{
-                    prevEl: prevRef.current,
-                    nextEl: nextRef.current,
-                }}
-
-                onBeforeInit={(swiper: any) => {
-                    swiper.params.navigation.prevEl = prevRef.current;
-                    swiper.params.navigation.nextEl = nextRef.current;
-                }}
-
-                onSwiper={(swiper) => {
-                    setTimeout(() => {
-                    if (
-                        swiper.params.navigation &&
-                        typeof swiper.params.navigation !== "boolean"
-                    ) {
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
-
-                        swiper.navigation.destroy();
-                        swiper.navigation.init();
-                        swiper.navigation.update();
-                    }
-                    });
+                    prevEl: ".client-prev",
+                    nextEl: ".client-next",
                 }}
 
                 breakpoints={{
@@ -255,6 +228,7 @@ export default function SocialMediaMarketingPage() {
                     1024: { slidesPerView: 7 },
                 }}
                 >
+
                 {logos.map((logo, i) => (
                     <SwiperSlide key={i}>
                     <div className="flex items-center justify-center h-16">
@@ -266,11 +240,11 @@ export default function SocialMediaMarketingPage() {
                     </div>
                     </SwiperSlide>
                 ))}
+
                 </Swiper>
 
-        </div>
-
-      </section>
+            </div>
+        </section>
 
       {/* SERVICES */}
       <section className="py-16 px-6 md:px-10 lg:px-16">
