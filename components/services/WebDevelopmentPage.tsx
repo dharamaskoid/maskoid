@@ -254,7 +254,13 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto relative z-10">
 
             {/* HEADER */}
-              <div className="text-center max-w-3xl mx-auto">
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="text-center max-w-3xl mx-auto"
+              >
 
                 <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
                   Core Services
@@ -265,7 +271,7 @@ export default function WebDevelopmentPage() {
                   <span className="text-[#2b4c9a]"> Built For Growth</span>
                 </h2>
 
-              </div>
+              </motion.div>
 
           {/* GRID */}
           <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
