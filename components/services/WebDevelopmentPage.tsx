@@ -24,6 +24,7 @@ import {
   Waypoints,
   Atom,
   Server, 
+  LineChart
 } from "lucide-react";
 
 const solutions = [
