@@ -240,196 +240,123 @@ export default function WebDevelopmentPage() {
             </div>
         </section>
 
-      {/* SERVICES */}
-      <section className="relative py-14 px-6 md:px-10 lg:px-16 overflow-hidden bg-white">
+      {/* SERVICES GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-14">
 
-        {/* BACKGROUND */}
-        <div className="absolute inset-0 pointer-events-none">
+        {[
+          {
+            icon: <Globe size={30} />,
+            title: "Business Websites",
+            text: "Professional corporate websites designed to build trust and grow your brand online.",
+            number: "01",
+          },
+          {
+            icon: <ShoppingCart size={30} />,
+            title: "E-Commerce Stores",
+            text: "High-converting online stores with seamless shopping experiences and secure payments.",
+            number: "02",
+          },
+          {
+            icon: <MonitorSmartphone size={30} />,
+            title: "Responsive Design",
+            text: "Pixel-perfect responsive layouts optimized for mobile, tablet, and desktop devices.",
+            number: "03",
+          },
+          {
+            icon: <Code2 size={30} />,
+            title: "Custom Development",
+            text: "Tailored web applications and custom solutions built around your business needs.",
+            number: "04",
+          },
+          {
+            icon: <Search size={30} />,
+            title: "SEO Optimized",
+            text: "Technical SEO architecture focused on rankings, speed, and long-term visibility.",
+            number: "05",
+          },
+          {
+            icon: <Rocket size={30} />,
+            title: "Performance Focused",
+            text: "Lightning-fast websites engineered for smooth experiences and better conversions.",
+            number: "06",
+          },
+        ].map((item, index) => (
 
-          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
-
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:26px_26px]"></div>
-
-        </div>
-
-        <div className="container mx-auto relative z-10">
-
-          {/* HEADER */}
           <motion.div
+            key={index}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="text-center max-w-3xl mx-auto"
+            transition={{ delay: index * 0.08 }}
+            whileHover={{ y: -8 }}
+            className="
+              group
+              relative
+              overflow-hidden
+              rounded-[28px]
+              border border-[#dbe7ff]
+              bg-white
+              p-7
+              hover:border-[#2b4c9a]/20
+              hover:shadow-[0_25px_70px_rgba(43,76,154,0.12)]
+              transition-all duration-500
+            "
           >
 
-            <p className="inline-flex items-center px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-              Our Services
-            </p>
+            {/* TOP GRADIENT */}
+            <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] group-hover:w-full transition-all duration-500"></div>
 
-            <h2 className="mt-5 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Premium Web Solutions
-              <span className="block text-[#2b4c9a]">
-                Built For Growth
-              </span>
-            </h2>
+            {/* HOVER GLOW */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+              <div className="absolute -top-10 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+            </div>
 
-            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-              We create modern, scalable, and conversion-focused digital experiences
-              tailored for ambitious brands.
+            {/* NUMBER */}
+            <div className="absolute top-5 right-5 text-5xl font-bold text-[#EEF4FF] group-hover:text-[#dbe7ff] transition-all duration-500">
+              {item.number}
+            </div>
+
+            {/* ICON */}
+            <motion.div
+              whileHover={{
+                scale: 1.08,
+                rotate: 4,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 200,
+              }}
+              className="
+                relative z-10
+                w-14 h-14
+                rounded-2xl
+                bg-[#EEF4FF]
+                text-[#2b4c9a]
+                flex items-center justify-center
+                group-hover:bg-[#2b4c9a]
+                group-hover:text-white
+                transition-all duration-500
+              "
+            >
+              {item.icon}
+            </motion.div>
+
+            {/* TITLE */}
+            <h3 className="relative z-10 mt-6 text-2xl font-bold text-[#1a2e5e]">
+              {item.title}
+            </h3>
+
+            {/* TEXT */}
+            <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
+              {item.text}
             </p>
 
           </motion.div>
 
-          {/* SERVICES GRID */}
-          <div className="grid lg:grid-cols-2 gap-6 mt-14">
+        ))}
 
-            {[
-              {
-                icon: <Globe size={34} />,
-                title: "Business Websites",
-                text: "Professional corporate websites designed to build trust and grow your brand online.",
-                number: "01",
-              },
-              {
-                icon: <ShoppingCart size={34} />,
-                title: "E-Commerce Stores",
-                text: "High-converting online stores with seamless shopping experiences and secure payments.",
-                number: "02",
-              },
-              {
-                icon: <MonitorSmartphone size={34} />,
-                title: "Responsive Design",
-                text: "Pixel-perfect responsive layouts optimized for mobile, tablet, and desktop devices.",
-                number: "03",
-              },
-              {
-                icon: <Code2 size={34} />,
-                title: "Custom Development",
-                text: "Tailored web applications and custom solutions built around your business needs.",
-                number: "04",
-              },
-              {
-                icon: <Search size={34} />,
-                title: "SEO Optimized",
-                text: "Technical SEO architecture focused on rankings, speed, and long-term visibility.",
-                number: "05",
-              },
-              {
-                icon: <Rocket size={34} />,
-                title: "Performance Focused",
-                text: "Lightning-fast websites engineered for smooth experiences and better conversions.",
-                number: "06",
-              },
-            ].map((item, index) => (
-
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.08 }}
-                whileHover={{ y: -8 }}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[32px]
-                  border border-[#dbe7ff]
-                  bg-white/80
-                  backdrop-blur-xl
-                  p-7
-                  md:p-8
-                  hover:border-[#2b4c9a]/20
-                  hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
-                "
-              >
-
-                {/* HOVER GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                  <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-                </div>
-
-                {/* TOP BAR */}
-                <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] group-hover:w-full transition-all duration-500"></div>
-
-                <div className="relative z-10 flex items-start justify-between gap-6">
-
-                  {/* LEFT */}
-                  <div>
-
-                    {/* ICON */}
-                    <motion.div
-                      whileHover={{
-                        scale: 1.08,
-                        rotate: 4,
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 200,
-                      }}
-                      className="
-                        w-16 h-16
-                        rounded-2xl
-                        bg-[#EEF4FF]
-                        text-[#2b4c9a]
-                        flex items-center justify-center
-                        group-hover:bg-[#2b4c9a]
-                        group-hover:text-white
-                        transition-all duration-500
-                      "
-                    >
-                      {item.icon}
-                    </motion.div>
-
-                    {/* TITLE */}
-                    <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
-                      {item.title}
-                    </h3>
-
-                    {/* TEXT */}
-                    <p className="mt-4 text-gray-500 leading-relaxed max-w-md">
-                      {item.text}
-                    </p>
-
-                  </div>
-
-                  {/* NUMBER */}
-                  <div className="text-6xl font-bold text-[#EEF4FF] leading-none group-hover:text-[#dfe9ff] transition-all duration-500">
-                    {item.number}
-                  </div>
-
-                </div>
-
-                {/* BOTTOM LINK */}
-                <div className="relative z-10 mt-7 flex items-center gap-2 text-[#2b4c9a] font-semibold">
-
-                  <span className="group-hover:translate-x-1 transition duration-300">
-                    Learn More
-                  </span>
-
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition duration-300"
-                  />
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
+      </div>
 
             
       {/* Our Solution */}
