@@ -28,11 +28,15 @@ import {
   Smartphone,
   Camera,
   MessageCircle,
-  InstagramIcon,
-  FacebookIcon,
-  YoutubeIcon,
-  LinkedinIcon,
+
 } from "lucide-react";
+
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const fadeUp = {
   hidden: {
@@ -59,22 +63,22 @@ const stagger = {
 
 const solutions = [
   {
-    icon: <InstagramIcon size={34} />,
+    icon: <FaInstagram size={34} />,
     title: "Instagram Marketing",
     text: "Build a strong Instagram presence with engaging content and growth strategies.",
   },
   {
-    icon: <FacebookIcon size={34} />,
+    icon: <FaFacebookF size={34} />,
     title: "Facebook Marketing",
     text: "Reach your audience effectively through targeted Facebook campaigns.",
   },
   {
-    icon: <YoutubeIcon size={34} />,
+    icon: <FaYoutube size={34} />,
     title: "YouTube Marketing",
     text: "Grow your brand visibility through high-performing video marketing.",
   },
   {
-    icon: <LinkedinIcon size={34} />,
+    icon: <FaLinkedinIn size={34} />,
     title: "LinkedIn Marketing",
     text: "Generate B2B leads and establish authority on LinkedIn.",
   },
