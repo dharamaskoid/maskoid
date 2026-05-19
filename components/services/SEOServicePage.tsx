@@ -499,6 +499,175 @@ export default function SEOServicePage() {
 
       </section>
 
+      {/* OUR SEO PROCESS */}
+      <section className="relative py-20 bg-[#EEF2FF] overflow-hidden">
+
+        {/* BG EFFECTS */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        </div>
+
+        <div className="container px-6 mx-auto relative z-10">
+
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+
+            <p className="inline-block px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+              SEO Process
+            </p>
+
+            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              Our Proven
+              <span className="text-[#2b4c9a]"> SEO Workflow</span>
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              We follow a strategic SEO process designed to improve rankings,
+              increase traffic, and maximize long-term growth.
+            </p>
+
+          </motion.div>
+
+          {/* PROCESS GRID */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 relative">
+
+            {[
+              {
+                step: "01",
+                title: "SEO Audit",
+                icon: <Search size={26} />,
+                text: "Complete website analysis to identify SEO issues and opportunities.",
+              },
+
+              {
+                step: "02",
+                title: "Keyword Strategy",
+                icon: <Target size={26} />,
+                text: "Research and target high-converting keywords for your business.",
+              },
+
+              {
+                step: "03",
+                title: "Optimization",
+                icon: <TrendingUp size={26} />,
+                text: "Optimize technical SEO, content, and website performance.",
+              },
+
+              {
+                step: "04",
+                title: "Growth & Reporting",
+                icon: <BarChart3 size={26} />,
+                text: "Track rankings, traffic, and continuously improve performance.",
+              },
+
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                }}
+                whileHover={{
+                  y: -12,
+                }}
+                className="
+                  group
+                  relative
+                  bg-white
+                  border border-[#dbe7ff]
+                  rounded-[32px]
+                  p-8
+                  overflow-hidden
+                  shadow-[0_15px_40px_rgba(43,76,154,0.06)]
+                  hover:shadow-[0_35px_80px_rgba(43,76,154,0.15)]
+                  transition-all duration-500
+                "
+              >
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                </div>
+
+                {/* STEP NUMBER */}
+                <div className="absolute top-5 right-6 text-6xl font-bold text-[#EEF4FF] group-hover:text-[#dbe7ff] transition duration-500">
+                  {item.step}
+                </div>
+
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 220,
+                  }}
+                  className="
+                    relative z-10
+                    w-16 h-16
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
+                  "
+                >
+                  {item.icon}
+                </motion.div>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* TEXT */}
+                <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
+                  {item.text}
+                </p>
+
+                {/* CONNECTOR */}
+                {index !== 3 && (
+                  <div className="hidden lg:flex absolute top-1/2 -right-10 z-20 items-center">
+
+                    <div className="w-8 border-t-2 border-dashed border-[#bfd3ff]"></div>
+
+                    <ArrowRight className="w-5 h-5 text-[#3B82F6]" />
+
+                  </div>
+                )}
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* TECHNOLOGIES */}
       <section className="relative py-20 md:py-24 bg-white overflow-hidden">
 
