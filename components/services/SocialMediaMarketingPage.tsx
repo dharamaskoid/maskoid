@@ -274,7 +274,7 @@ export default function SocialMediaMarketingPage() {
 
             <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
                 Social Media Marketing
-                <span className="text-[#2b4c9a]"> Solutions</span>
+                <span className="text-[#2b4c9a]"> Services</span>
             </h2>
 
             </motion.div>
