@@ -1096,7 +1096,7 @@ export default function WebDevelopmentPage() {
                   items-center
                   gap-3
                   overflow-hidden
-                  rounded-2xl
+                  rounded-xl
                   bg-white
                   px-6 py-3
                   font-semibold
