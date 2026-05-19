@@ -1120,13 +1120,6 @@ export default function WebDevelopmentPage() {
                   Start Your Project
                 </span>
 
-                <motion.div
-                  whileHover={{ x: 4 }}
-                  className="relative z-10"
-                >
-                 
-                </motion.div>
-
               </Link>
 
             </motion.div>
