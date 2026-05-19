@@ -76,7 +76,16 @@ const stagger = {
     },
   },
 };
-
+const technologies = [
+  { name: "Next.js", icon: "/tech/nextjs.svg" },
+  { name: "React", icon: "/tech/react.svg" },
+  { name: "TypeScript", icon: "/tech/typescript.svg" },
+  { name: "Tailwind CSS", icon: "/tech/tailwind.svg" },
+  { name: "Node.js", icon: "/tech/nodejs.svg" },
+  { name: "MongoDB", icon: "/tech/mongodb.svg" },
+  { name: "Firebase", icon: "/tech/firebase.svg" },
+  { name: "Framer Motion", icon: "/tech/framer.svg" },
+];
 
 export default function WebDevelopmentPage() {
 
@@ -797,253 +806,62 @@ export default function WebDevelopmentPage() {
 
 
       {/* TECHNOLOGIES WE USE */}
-      <section className="relative overflow-hidden bg-[#071739] py-16 md:py-20">
-
-        {/* BG GLOW */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
-
-        {/* GRID PATTERN */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
-
-        <div className="container mx-auto px-6 relative z-10">
-
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-            {/* LEFT CONTENT */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
-
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
-                Technologies We Use
-              </p>
-
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
-                Modern Technologies For
-                <span className="block text-[#6EA8FF]">
-                  Modern Solutions
-                </span>
-              </h2>
-
-              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We leverage cutting-edge frameworks and technologies
-                to build scalable, secure, and future-ready websites.
-              </p>
-
-              {/* STATS */}
-              <div className="grid grid-cols-2 gap-5 mt-12 max-w-md">
-
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="rounded-[24px] border border-white/10 bg-white/5 backdrop-blur-xl p-6"
-                >
-
-                  <h3 className="text-4xl font-bold text-white">
-                    10+
-                  </h3>
-
-                  <p className="mt-2 text-[#B7C2D8]">
-                    Technologies
-                  </p>
-
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="rounded-[24px] border border-white/10 bg-white/5 backdrop-blur-xl p-6"
-                >
-
-                  <h3 className="text-4xl font-bold text-white">
-                    100%
-                  </h3>
-
-                  <p className="mt-2 text-[#B7C2D8]">
-                    Scalable Solutions
-                  </p>
-
-                </motion.div>
-
-              </div>
-
-            </motion.div>
-
-            {/* RIGHT TECHNOLOGY STACK */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="relative flex items-center justify-center"
-            >
-
-              {/* CENTER GLOW */}
-              <div className="absolute w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-              {/* MAIN CONTAINER */}
-              <div className="relative w-full max-w-[620px] h-[420px] flex items-center justify-center">
-
-                {/* CENTER CORE */}
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="relative z-20 w-[180px] h-[180px] rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] flex items-center justify-center shadow-[0_0_80px_rgba(37,99,235,0.45)]"
-                >
-
-                  <div className="text-center">
-
-                    <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center mx-auto">
-
-                      <Atom size={42} className="text-white" />
-
-                    </div>
-
-                    <h3 className="mt-5 text-2xl font-bold text-white">
-                      Tech Stack
-                    </h3>
-
-                  </div>
-
-                </motion.div>
-
-                {/* TOP */}
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                  }}
-                  className="absolute top-0 left-1/2 -translate-x-1/2"
-                >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Atom size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      React
-                    </h3>
-
-                  </div>
-
-                </motion.div>
-
-                {/* LEFT */}
-                <motion.div
-                  animate={{ x: [0, -8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute left-0 top-1/2 -translate-y-1/2"
-                >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Layers3 size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      Next.js
-                    </h3>
-
-                  </div>
-
-                </motion.div>
-
-                {/* RIGHT */}
-                <motion.div
-                  animate={{ x: [0, 8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute right-0 top-1/2 -translate-y-1/2"
-                >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Code2 size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      Tailwind CSS
-                    </h3>
-
-                  </div>
-
-                </motion.div>
-
-                {/* BOTTOM LEFT */}
-                <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{
-                    duration: 4.5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute bottom-0 left-20"
-                >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Database size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      MongoDB
-                    </h3>
-
-                  </div>
-
-                </motion.div>
-
-                {/* BOTTOM RIGHT */}
-                <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute bottom-0 right-20"
-                >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Server size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      Node.js
-                    </h3>
-
-                  </div>
-
-                </motion.div>
-
-              </div>
-
-            </motion.div>
-
-          </div>
-
+      <section className="relative py-24 bg-[#0b0f1a] text-white overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600 rounded-full blur-[160px]" />
         </div>
 
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Technologies We Use
+            </h2>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              We build scalable, high-performance digital products using modern
+              technologies trusted by global companies.
+            </p>
+          </motion.div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {technologies.map((tech, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className="group relative bg-[#111827] border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center cursor-pointer overflow-hidden"
+              >
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition" />
+
+                {/* Icon */}
+                <div className="w-14 h-14 flex items-center justify-center mb-4 relative z-10">
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                {/* Name */}
+                <h3 className="text-sm font-medium text-gray-200 relative z-10">
+                  {tech.name}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
