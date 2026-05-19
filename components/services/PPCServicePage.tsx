@@ -168,54 +168,54 @@ export default function PPCServicePage() {
         </div>
       </section>
 
-      {/* CLIENT LOGO SECTION */}
+      {/* CLIENT LOGOS */}
       <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative">
 
-          <div className="container mx-auto px-6 relative">
+          <button className="seo-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300">
+            <ChevronLeft size={20} />
+          </button>
 
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
+          <button className="seo-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300">
+            <ChevronRight size={20} />
+          </button>
 
-              <button className="logos-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a]">
-                <ChevronLeft size={20} />
-              </button>
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            className="px-14"
+            loop={true}
+            speed={800}
+            spaceBetween={20}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            navigation={{
+              prevEl: ".seo-prev",
+              nextEl: ".seo-next",
+            }}
+            breakpoints={{
+              320: { slidesPerView: 2 },
+              640: { slidesPerView: 4 },
+              1024: { slidesPerView: 7 },
+            }}
+          >
 
-              <button className="logos-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a]">
-                <ChevronRight size={20} />
-              </button>
+            {logos.map((logo, i) => (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-16">
+                  <img
+                    src={logo}
+                    alt="client logo"
+                    className="h-14 md:h-16 object-contain hover:scale-110 transition duration-300"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
 
-            </div>
-
-            <Swiper
-              className="px-14"
-              modules={[Autoplay, Navigation]}
-              navigation={{
-                prevEl: ".logos-prev",
-                nextEl: ".logos-next",
-              }}
-              loop
-              speed={2000}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                320: { slidesPerView: 2 },
-                640: { slidesPerView: 4 },
-                1024: { slidesPerView: 7 },
-              }}
-            >
-
-              {logos.map((logo, i) => (
-                <SwiperSlide key={i}>
-                  <img src={logo} className="h-14 mx-auto object-contain" />
-                </SwiperSlide>
-              ))}
-
-            </Swiper>
-
-          </div>
+          </Swiper>
 
         </div>
 
