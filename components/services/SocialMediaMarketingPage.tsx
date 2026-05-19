@@ -211,55 +211,62 @@ export default function SocialMediaMarketingPage() {
 
             {/* SWIPER */}
             <Swiper
-            modules={[Autoplay, Navigation]}
-            className="px-14"
-            loop={true}
-            speed={2000}
-            spaceBetween={20}
+                modules={[Autoplay, Navigation]}
+                className="px-14"
+                loop={true}
+                speed={2000}
+                spaceBetween={20}
 
-            autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            }}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }}
 
-            navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
-            }}
+                navigation={{
+                    prevEl: prevRef.current,
+                    nextEl: nextRef.current,
+                }}
 
-            onInit={(swiper) => {
+                onBeforeInit={(swiper: any) => {
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
+                }}
 
-                // @ts-ignore
-                swiper.params.navigation.prevEl = prevRef.current;
+                onSwiper={(swiper) => {
+                    setTimeout(() => {
+                    if (
+                        swiper.params.navigation &&
+                        typeof swiper.params.navigation !== "boolean"
+                    ) {
+                        swiper.params.navigation.prevEl = prevRef.current;
+                        swiper.params.navigation.nextEl = nextRef.current;
 
-                // @ts-ignore
-                swiper.params.navigation.nextEl = nextRef.current;
+                        swiper.navigation.destroy();
+                        swiper.navigation.init();
+                        swiper.navigation.update();
+                    }
+                    });
+                }}
 
-                swiper.navigation.init();
-                swiper.navigation.update();
-            }}
-
-            breakpoints={{
-                320: { slidesPerView: 2 },
-                640: { slidesPerView: 4 },
-                1024: { slidesPerView: 7 },
-            }}
-            >
-
-            {logos.map((logo, i) => (
-                <SwiperSlide key={i}>
-                <div className="flex items-center justify-center h-16">
-                    <img
-                    src={logo}
-                    alt="client logo"
-                    className="h-14 md:h-16 object-contain transition"
-                    />
-                </div>
-                </SwiperSlide>
-            ))}
-
-            </Swiper>
+                breakpoints={{
+                    320: { slidesPerView: 2 },
+                    640: { slidesPerView: 4 },
+                    1024: { slidesPerView: 7 },
+                }}
+                >
+                {logos.map((logo, i) => (
+                    <SwiperSlide key={i}>
+                    <div className="flex items-center justify-center h-16">
+                        <img
+                        src={logo}
+                        alt="client logo"
+                        className="h-14 md:h-16 object-contain transition"
+                        />
+                    </div>
+                    </SwiperSlide>
+                ))}
+                </Swiper>
 
         </div>
 
