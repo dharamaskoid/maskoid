@@ -835,41 +835,7 @@ export default function WebDevelopmentPage() {
                 to build scalable, secure, and future-ready websites.
               </p>
 
-              {/* STATS */}
-              <div className="grid grid-cols-2 gap-5 mt-12 max-w-md">
-
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="rounded-[24px] border border-white/10 bg-white/5 backdrop-blur-xl p-6"
-                >
-
-                  <h3 className="text-4xl font-bold text-white">
-                    10+
-                  </h3>
-
-                  <p className="mt-2 text-[#B7C2D8]">
-                    Technologies
-                  </p>
-
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="rounded-[24px] border border-white/10 bg-white/5 backdrop-blur-xl p-6"
-                >
-
-                  <h3 className="text-4xl font-bold text-white">
-                    100%
-                  </h3>
-
-                  <p className="mt-2 text-[#B7C2D8]">
-                    Scalable Solutions
-                  </p>
-
-                </motion.div>
-
-              </div>
-
+              
             </motion.div>
 
             {/* RIGHT TECHNOLOGY STACK */}
