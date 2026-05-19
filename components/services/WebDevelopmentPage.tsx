@@ -526,7 +526,7 @@ export default function WebDevelopmentPage() {
               Why Choose Us
             </p>
 
-            <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white leading-tight">
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-white leading-tight">
               Features of Our 
               <span className="jsx-1d499fd48ad2ca04 text-[#6EA8FF]"> Web Development</span> Services
             </h2>
@@ -844,7 +844,7 @@ export default function WebDevelopmentPage() {
                 Technologies We Use
               </p>
 
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
                 Modern Technologies
                 <span className="text-[#2b4c9a]"> For Modern Solutions</span>
               </h2>
@@ -994,40 +994,141 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="pb-24 px-6 md:px-10 lg:px-16">
+            {/* CTA */}
+      <section className="pb-24 px-6 md:px-10 lg:px-16 overflow-hidden">
 
-        <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="
+            container mx-auto
+            relative
+            rounded-[32px]
+            p-10 md:p-16
+            bg-[#1a2e5e]
+            overflow-hidden
+            border border-white/10
+            shadow-[0_30px_100px_rgba(26,46,94,0.35)]
+          "
+        >
 
-          {/* BG */}
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+          {/* GRID PATTERN */}
+          <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:26px_26px]"></div>
+
+          {/* TOP GLOW */}
+          <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+
+          {/* RIGHT GLOW */}
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#4f7cff]/20 blur-[120px] rounded-full"></div>
+
+          {/* FLOATING LIGHT */}
+          <motion.div
+            animate={{
+              y: [0, -20, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="
+              absolute
+              top-10 right-20
+              w-32 h-32
+              bg-blue-400/10
+              blur-3xl
+              rounded-full
+            "
+          />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
 
+            {/* LEFT */}
             <div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-4xl md:text-4xl font-bold text-white leading-tight"
+              >
                 Ready To Grow
                 <span className="text-[#6EA8FF]"> Your Business?</span>
-              </h2>
+              </motion.h2>
 
-              <p className="mt-5 text-[#B7C2D8] text-lg max-w-2xl">
-                Let’s build a premium digital experience designed for conversions and growth.
-              </p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="mt-5 text-[#B7C2D8] text-lg max-w-2xl leading-relaxed"
+              >
+                Let’s build a premium digital experience designed for conversions and long-term growth.
+              </motion.p>
 
             </div>
 
-            <Link
-              href="/contact-us"
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300 whitespace-nowrap"
+            {/* BUTTON */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
             >
-              Start Your Project
-             
-            </Link>
+
+              <Link
+                href="/contact-us"
+                className="
+                  group
+                  relative
+                  inline-flex
+                  items-center
+                  gap-3
+                  overflow-hidden
+                  rounded-2xl
+                  bg-white
+                  px-7 py-4
+                  font-semibold
+                  text-[#1a2e5e]
+                  shadow-[0_10px_40px_rgba(255,255,255,0.12)]
+                  transition-all
+                  duration-500
+                  hover:-translate-y-1
+                  hover:shadow-[0_20px_60px_rgba(255,255,255,0.18)]
+                "
+              >
+
+                {/* BUTTON GLOW */}
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <span className="absolute -left-10 top-0 h-full w-20 rotate-12 bg-[#6EA8FF]/30 blur-2xl"></span>
+
+                </span>
+
+                <span className="relative z-10">
+                  Start Your Project
+                </span>
+
+                <motion.div
+                  whileHover={{ x: 4 }}
+                  className="relative z-10"
+                >
+                  <ArrowRight size={18} />
+                </motion.div>
+
+              </Link>
+
+            </motion.div>
 
           </div>
 
-        </div>
+        </motion.div>
+
       </section>
 
     </main>
