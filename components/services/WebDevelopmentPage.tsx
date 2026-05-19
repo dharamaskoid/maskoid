@@ -242,21 +242,9 @@ export default function WebDevelopmentPage() {
 
       {/* SERVICES */}
       
-      {/* SERVICES */}
-      <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
+      <section className="py-16 px-6 md:px-10 lg:px-16">
 
-        {/* BACKGROUND */}
-        <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
-
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:26px_26px]"></div>
-
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto">
 
           {/* HEADER */}
           <div className="text-center max-w-3xl mx-auto">
@@ -266,134 +254,66 @@ export default function WebDevelopmentPage() {
             </p>
 
             <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Premium Digital
-              <span className="text-[#2b4c9a]"> Services</span>
+              Web Development Solutions For
+              <span className="text-[#2b4c9a]"> Modern Businesses</span>
             </h2>
-
-            <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-              Modern digital solutions crafted for performance,
-              scalability, and long-term business growth.
-            </p>
 
           </div>
 
-          {/* SERVICES GRID */}
-          <div className="grid lg:grid-cols-3 gap-8 mt-20">
+          {/* GRID */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
             {[
               {
                 icon: <Globe size={34} />,
                 title: "Business Websites",
-                text: "Modern premium websites designed to elevate your brand presence.",
               },
               {
                 icon: <ShoppingCart size={34} />,
-                title: "E-Commerce Solutions",
-                text: "Scalable online stores optimized for conversions and sales growth.",
-                featured: true,
-              },
-              {
-                icon: <Search size={34} />,
-                title: "SEO Optimization",
-                text: "High-performance websites built to rank higher in search engines.",
-              },
-              {
-                icon: <Code2 size={34} />,
-                title: "Custom Development",
-                text: "Tailored scalable solutions built with modern technologies.",
+                title: "E-Commerce",
               },
               {
                 icon: <MonitorSmartphone size={34} />,
                 title: "Responsive Design",
-                text: "Pixel-perfect experiences across desktop, tablet, and mobile.",
+              },
+              {
+                icon: <Code2 size={34} />,
+                title: "Custom Development",
+              },
+              {
+                icon: <Search size={34} />,
+                title: "SEO Optimized",
               },
               {
                 icon: <Rocket size={34} />,
                 title: "Performance Focused",
-                text: "Fast-loading websites engineered for premium user experience.",
               },
             ].map((item, index) => (
-
               <div
                 key={index}
-                className={`
-                  group relative overflow-hidden rounded-[32px] p-10
-                  transition-all duration-500 hover:-translate-y-2
-                  ${
-                    item.featured
-                      ? "bg-[#1a2e5e] text-white shadow-[0_30px_80px_rgba(26,46,94,0.35)] scale-[1.03]"
-                      : "bg-white/80 backdrop-blur-xl border border-white/40 text-[#1a2e5e] shadow-[0_20px_60px_rgba(43,76,154,0.08)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]"
-                  }
-                `}
+                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
               >
 
-                {/* GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                  <div className={`
-                    absolute -top-20 right-0 w-52 h-52 blur-3xl rounded-full
-                    ${item.featured ? "bg-blue-500/20" : "bg-blue-500/10"}
-                  `}></div>
-
-                </div>
-
-                {/* ICON */}
-                <div
-                  className={`
-                    relative z-10 w-20 h-20 rounded-3xl flex items-center justify-center
-                    transition-all duration-500
-                    ${
-                      item.featured
-                        ? "bg-white/10 text-white"
-                        : "bg-[#EEF4FF] text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white"
-                    }
-                  `}
-                >
+                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                   {item.icon}
                 </div>
 
-                {/* TITLE */}
-                <h3 className="relative z-10 mt-8 text-3xl font-bold leading-snug">
+                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
                   {item.title}
                 </h3>
 
-                {/* TEXT */}
-                <p
-                  className={`
-                    relative z-10 mt-5 leading-relaxed text-lg
-                    ${item.featured ? "text-[#B7C2D8]" : "text-gray-600"}
-                  `}
-                >
-                  {item.text}
+                <p className="mt-4 text-gray-600 leading-relaxed">
+                  Premium scalable digital solutions tailored for your business goals.
                 </p>
 
-                {/* BUTTON */}
-                <div className="relative z-10 mt-8">
-
-                  <button
-                    className={`
-                      inline-flex items-center gap-2 font-semibold transition-all
-                      ${
-                        item.featured
-                          ? "text-white"
-                          : "text-[#2b4c9a] group-hover:gap-3"
-                      }
-                    `}
-                  >
-                    Learn More
-                    <ArrowRight size={18} />
-                  </button>
-
-                </div>
-
               </div>
-
             ))}
 
           </div>
 
         </div>
       </section>
+
             
       {/* Our Solution */}
       <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
