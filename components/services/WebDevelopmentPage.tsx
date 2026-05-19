@@ -250,7 +250,7 @@ export default function WebDevelopmentPage() {
                   <img
                     src={logo}
                     alt="client logo"
-                    className="h-14 md:h-16 object-contain grayscale hover:grayscale-0 transition"
+                    className="h-14 md:h-16 object-contain transition"
                   />
                 </div>
               </SwiperSlide>

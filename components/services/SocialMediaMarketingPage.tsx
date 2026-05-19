@@ -185,8 +185,8 @@ export default function SocialMediaMarketingPage() {
       </section>
 
 
-        {/* CLIENT LOGOS */}
-        <section className="py-16 bg-white border-y border-[#dbe7ff]">
+      {/* CLIENT LOGOS */}
+      <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
         <div className="container mx-auto px-6 relative">
 
@@ -253,7 +253,7 @@ export default function SocialMediaMarketingPage() {
                     <img
                     src={logo}
                     alt="client logo"
-                    className="h-14 md:h-16 object-contain grayscale hover:grayscale-0 transition"
+                    className="h-14 md:h-16 object-contain transition"
                     />
                 </div>
                 </SwiperSlide>
@@ -263,7 +263,7 @@ export default function SocialMediaMarketingPage() {
 
         </div>
 
-        </section>
+      </section>
 
       {/* SERVICES */}
       <section className="py-16 px-6 md:px-10 lg:px-16">
