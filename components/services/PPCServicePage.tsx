@@ -2,35 +2,23 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import "swiper/css";
 import "swiper/css/navigation";
-
+import "swiper/css";
 import {
-  ChevronLeft,
-  ChevronRight,
-  ArrowRight,
+  Rocket,
+  BarChart3,
   Target,
   MousePointerClick,
-  TrendingUp,
-  BarChart3,
-  Users,
-  Rocket,
-  ShieldCheck,
-  Search,
-  Globe,
-  LineChart,
-  Layers3,
-  MonitorSmartphone,
-  PenTool,
-  DollarSign,
   Megaphone,
-  PieChart,
-  Activity,
+  TrendingUp,
 } from "lucide-react";
 
+/* ANIMATION (UNCHANGED) */
 const fadeUp = {
   hidden: {
     opacity: 0,
@@ -40,49 +28,43 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.7,
+      duration: 0.6,
     },
   },
 };
 
-const stagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
 
+/* PPC SOLUTIONS DATA */
 const solutions = [
   {
     icon: <Target size={34} />,
-    title: "Google Ads",
-    text: "High-converting Google Ads campaigns for maximum ROI.",
+    title: "Google Ads Campaigns",
+    text: "High-converting search ads that generate instant leads and sales.",
   },
   {
     icon: <MousePointerClick size={34} />,
-    title: "Search Campaigns",
-    text: "Target customers actively searching for your services.",
-  },
-  {
-    icon: <Megaphone size={34} />,
-    title: "Display Ads",
-    text: "Build strong brand awareness with visual ad campaigns.",
+    title: "Meta Ads Management",
+    text: "Facebook & Instagram ads optimized for conversions and ROI.",
   },
   {
     icon: <BarChart3 size={34} />,
-    title: "Performance Tracking",
-    text: "Detailed analytics and campaign optimization strategies.",
+    title: "Conversion Tracking",
+    text: "Track every click, lead, and sale with advanced analytics setup.",
+  },
+  {
+    icon: <Megaphone size={34} />,
+    title: "Ad Copy Optimization",
+    text: "High-performing creatives that improve CTR and reduce CPC.",
   },
   {
     icon: <TrendingUp size={34} />,
-    title: "Conversion Growth",
-    text: "Scale your leads and revenue with smart PPC campaigns.",
+    title: "ROI Optimization",
+    text: "Continuous campaign optimization to maximize return on ad spend.",
   },
 ];
 
 export default function PPCServicePage() {
+
   const logos = [
     "/images/Client-1-1.png",
     "/images/Client-1-2.png",
@@ -95,47 +77,41 @@ export default function PPCServicePage() {
     "/images/Client-1-13.png",
     "/images/Client-1-14.png",
   ];
+  
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
 
   return (
-    <main className="bg-white overflow-hidden pt-[81.5px]">
+    <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
-      {/* HERO */}
+      {/* HERO SECTION */}
       <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
         <div className="absolute inset-0 pointer-events-none">
-
           <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
-
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
-
         </div>
 
-        <div className="container mx-auto px-6 py-12 lg:py-14 relative z-10">
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-            >
+            <motion.div variants={fadeUp} initial="hidden" animate="show">
 
-              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
-                PPC Service
+              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
+                PPC Advertising Service
               </p>
 
               <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-                Drive Instant Traffic &
+                High-Converting PPC Campaigns
                 <span className="block text-[#6EA8FF]">
-                  Generate More Leads
+                  That Drive ROI
                 </span>
               </h1>
 
               <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We create high-performing PPC campaigns focused on conversions, ROI, lead generation, and scalable business growth.
+                We create data-driven PPC campaigns that generate instant leads, sales, and maximum ROI for your business.
               </p>
 
             </motion.div>
@@ -161,9 +137,9 @@ export default function PPCServicePage() {
               >
 
                 <img
-                  src="/images/ppc.png"
-                  alt="PPC"
-                  className="h-[220px] sm:h-[360px] md:h-[340px] lg:h-[360px] w-auto max-w-full object-contain"
+                  src="/images/webdev.png"
+                  alt="PPC Service"
+                  className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
 
               </motion.div>
@@ -173,63 +149,62 @@ export default function PPCServicePage() {
           </div>
 
         </div>
-
       </section>
 
-      {/* CLIENT LOGOS */}
+      {/* CLIENT LOGO SECTION */}
       <section className="py-16 bg-white border-y border-[#dbe7ff]">
 
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto px-6">
 
-          <button className="ppc-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300">
-            <ChevronLeft size={20} />
-          </button>
+          <div className="container mx-auto px-6 relative">
 
-          <button className="ppc-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300">
-            <ChevronRight size={20} />
-          </button>
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex items-center justify-between z-30 pointer-events-none">
 
-          <Swiper
-            modules={[Autoplay, Navigation]}
-            className="px-14"
-            loop={true}
-            speed={800}
-            spaceBetween={20}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            navigation={{
-              prevEl: ".ppc-prev",
-              nextEl: ".ppc-next",
-            }}
-            breakpoints={{
-              320: { slidesPerView: 2 },
-              640: { slidesPerView: 4 },
-              1024: { slidesPerView: 7 },
-            }}
-          >
+              <button className="logos-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a]">
+                <ChevronLeft size={20} />
+              </button>
 
-            {logos.map((logo, i) => (
-              <SwiperSlide key={i}>
-                <div className="flex items-center justify-center h-16">
-                  <img
-                    src={logo}
-                    alt="client logo"
-                    className="h-14 md:h-16 object-contain hover:scale-110 transition duration-300"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
+              <button className="logos-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a]">
+                <ChevronRight size={20} />
+              </button>
 
-          </Swiper>
+            </div>
+
+            <Swiper
+              className="px-14"
+              modules={[Autoplay, Navigation]}
+              navigation={{
+                prevEl: ".logos-prev",
+                nextEl: ".logos-next",
+              }}
+              loop
+              speed={2000}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                320: { slidesPerView: 2 },
+                640: { slidesPerView: 4 },
+                1024: { slidesPerView: 7 },
+              }}
+            >
+
+              {logos.map((logo, i) => (
+                <SwiperSlide key={i}>
+                  <img src={logo} className="h-14 mx-auto object-contain" />
+                </SwiperSlide>
+              ))}
+
+            </Swiper>
+
+          </div>
 
         </div>
 
       </section>
 
-      {/* SERVICES */}
+{/* SERVICES */}
       <section className="relative py-20 px-6 md:px-10 lg:px-16 overflow-hidden">
 
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
@@ -332,34 +307,20 @@ export default function PPCServicePage() {
 
       </section>
 
-      {/* OUR SOLUTIONS */}
-      <section className="relative py-20 bg-[#EEF2FF] overflow-hidden">
-
-        <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-          <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
-
-        </div>
+      {/* OUR SOLUTION */}
+      <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
 
         <div className="container px-6 mx-auto relative z-10">
 
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
 
-            <p className="inline-block px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-              PPC Solutions
+            <p className="inline-block px-5 py-1.5 rounded-full text-xs font-medium bg-blue-500/10 text-[#3B82F6] uppercase">
+              Our PPC Solutions
             </p>
 
-            <h2 className="mt-5 text-4xl md:text-5xl font-bold text-[#1a2e5e]">
-              Results Driven
-              <span className="text-[#2b4c9a]"> PPC Services</span>
+            <h2 className="mt-4 text-4xl font-bold text-[#1a2e5e]">
+              PPC Strategy
+              <span className="text-[#2b4c9a]"> Solutions</span>
             </h2>
 
           </motion.div>
@@ -367,51 +328,25 @@ export default function PPCServicePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
 
             {solutions.map((item, index) => (
-
               <motion.div
                 key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
                 variants={fadeUp}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{
-                  y: -12,
-                  scale: 1.02,
-                }}
-                className="group relative bg-white border border-[#e8efff] rounded-[28px] p-8 text-center overflow-hidden shadow-[0_10px_30px_rgba(43,76,154,0.04)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
+                whileHover={{ y: -12 }}
+                className="bg-white p-8 rounded-[28px] border border-[#e8efff] text-center"
               >
-
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+                <div className="text-[#2b4c9a] flex justify-center">
+                  {item.icon}
                 </div>
 
-                <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 4,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 220,
-                  }}
-                  className="relative z-10 w-20 h-20 mx-auto rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
-                >
-                  {item.icon}
-                </motion.div>
-
-                <h3 className="relative z-10 mt-7 text-xl font-bold text-[#1a2e5e]">
+                <h3 className="mt-6 text-xl font-bold text-[#1a2e5e]">
                   {item.title}
                 </h3>
 
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
+                <p className="mt-4 text-gray-500 text-sm">
                   {item.text}
                 </p>
 
               </motion.div>
-
             ))}
 
           </div>
@@ -419,6 +354,39 @@ export default function PPCServicePage() {
         </div>
 
       </section>
+
+      {/* CTA */}
+      <section className="pb-24 px-6 md:px-10 lg:px-16">
+
+        <div className="container mx-auto bg-[#1a2e5e] rounded-xl p-10 md:p-16 relative overflow-hidden">
+
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+            <div>
+
+              <h2 className="text-4xl font-bold text-white">
+                Ready To Grow Your Business?
+              </h2>
+
+              <p className="mt-5 text-[#B7C2D8]">
+                Let’s run high-converting PPC campaigns for your brand.
+              </p>
+
+            </div>
+
+            <Link
+              href="/contact-us"
+              className="px-6 py-3 bg-white text-[#1a2e5e] rounded-xl font-semibold"
+            >
+              Start Your Project
+            </Link>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
   );
 }
