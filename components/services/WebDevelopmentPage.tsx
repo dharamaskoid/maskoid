@@ -796,187 +796,254 @@ export default function WebDevelopmentPage() {
 
 
 
-      {/* Technologies we use */}
-      <section className="relative py-20 md:py-24 bg-white overflow-hidden">
+      {/* TECHNOLOGIES WE USE */}
+      <section className="relative overflow-hidden bg-[#071739] py-16 md:py-20">
 
-        {/* BACKGROUND */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
 
-          {/* LEFT GLOW */}
-          <div className="absolute -top-20 -left-20 w-[350px] md:w-[450px] h-[350px] md:h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
 
-          {/* RIGHT GLOW */}
-          <div className="absolute bottom-0 right-0 w-[300px] md:w-[420px] h-[300px] md:h-[420px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+        {/* GRID PATTERN */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-          {/* GRID */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        <div className="container mx-auto px-6 relative z-10">
 
-        </div>
-
-        <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
-
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT CONTENT */}
             <motion.div
-              variants={fadeUp}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
+              variants={fadeUp}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
                 Technologies We Use
               </p>
 
-              <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                Modern Technologies
-                <span className="text-[#2b4c9a]"> For Modern Solutions</span>
+              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
+                Modern Technologies For
+                <span className="block text-[#6EA8FF]">
+                  Modern Solutions
+                </span>
               </h2>
 
-              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
                 We leverage cutting-edge frameworks and technologies
-                to build fast, scalable, secure, and future-ready
-                digital experiences.
+                to build scalable, secure, and future-ready websites.
               </p>
 
               {/* STATS */}
-              <div className="grid grid-cols-2 gap-5 mt-10">
+              <div className="grid grid-cols-2 gap-5 mt-12 max-w-md">
 
-                {[
-                  ["10+", "Technologies"],
-                  ["100%", "Scalable Solutions"],
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -6 }}
-                    transition={{ duration: 0.3 }}
-                    className="
-                      bg-white
-                      border border-[#dbe7ff]
-                      rounded-3xl
-                      p-6
-                      shadow-[0_10px_40px_rgba(43,76,154,0.06)]
-                      hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)]
-                      transition-all duration-500
-                    "
-                  >
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="rounded-[24px] border border-white/10 bg-white/5 backdrop-blur-xl p-6"
+                >
 
-                    <h3 className="text-3xl font-bold text-[#1a2e5e]">
-                      {item[0]}
-                    </h3>
+                  <h3 className="text-4xl font-bold text-white">
+                    10+
+                  </h3>
 
-                    <p className="mt-2 text-gray-600">
-                      {item[1]}
-                    </p>
+                  <p className="mt-2 text-[#B7C2D8]">
+                    Technologies
+                  </p>
 
-                  </motion.div>
-                ))}
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="rounded-[24px] border border-white/10 bg-white/5 backdrop-blur-xl p-6"
+                >
+
+                  <h3 className="text-4xl font-bold text-white">
+                    100%
+                  </h3>
+
+                  <p className="mt-2 text-[#B7C2D8]">
+                    Scalable Solutions
+                  </p>
+
+                </motion.div>
 
               </div>
 
             </motion.div>
 
-            {/* RIGHT GRID */}
+            {/* RIGHT TECHNOLOGY STACK */}
             <motion.div
-              variants={stagger}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6"
+              variants={fadeUp}
+              className="relative flex items-center justify-center"
             >
 
-              {[
-                  {
-                    name: "React",
-                    icon: <Atom size={42} />,
-                  },
-                  {
-                    name: "Next.js",
-                    icon: <Layers3 size={42} />,
-                  },
-                  {
-                    name: "Node.js",
-                    icon: <Server size={42} />,
-                  },
-                  {
-                    name: "TypeScript",
-                    icon: <Code2 size={42} />,
-                  },
-                  {
-                    name: "Laravel",
-                    icon: <Database size={42} />,
-                  },
-                  {
-                    name: "WordPress",
-                    icon: <Globe size={42} />,
-                  },
-              ].map((item, index) => (
+              {/* CENTER GLOW */}
+              <div className="absolute w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+              {/* MAIN CONTAINER */}
+              <div className="relative w-full max-w-[620px] h-[420px] flex items-center justify-center">
+
+                {/* CENTER CORE */}
                 <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  whileHover={{
-                    y: -10,
-                    scale: 1.03,
+                  animate={{
+                    y: [0, -10, 0],
                   }}
-                  transition={{ duration: 0.35 }}
-                  className="
-                    group relative
-                    bg-white
-                    border border-[#dbe7ff]
-                    rounded-[28px]
-                    p-6 md:p-8
-                    flex flex-col items-center justify-center
-                    overflow-hidden
-                    shadow-[0_10px_40px_rgba(43,76,154,0.05)]
-                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
-                    transition-all duration-500
-                  "
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="relative z-20 w-[180px] h-[180px] rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] flex items-center justify-center shadow-[0_0_80px_rgba(37,99,235,0.45)]"
                 >
 
-                  {/* TOP LIGHT */}
-                  <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500">
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full"></div>
-                  </div>
+                  <div className="text-center">
 
-                  {/* ICON WRAPPER */}
-                  <div className="
-                    relative z-10
-                    w-20 h-20
-                    rounded-2xl
-                    bg-[#EEF4FF]
-                    flex items-center justify-center
-                    text-[#2b4c9a]
-                    group-hover:bg-[#2b4c9a]
-                    group-hover:text-white
-                    transition-all duration-500
-                  ">
+                    <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center mx-auto">
 
-                  <div className="relative z-10
-                        w-20 h-20
-                        rounded-xl
-                        bg-[#EEF4FF]
-                        flex items-center justify-center
-                        group-hover:bg-[#2b4c9a]
-                        transition-all duration-500">
-                    {item.icon}
-                  </div>
+                      <Atom size={42} className="text-white" />
+
+                    </div>
+
+                    <h3 className="mt-5 text-2xl font-bold text-white">
+                      Tech Stack
+                    </h3>
 
                   </div>
-
-                  {/* NAME */}
-                  <h3 className="relative z-10 mt-5 text-lg md:text-xl font-semibold text-[#1a2e5e] text-center">
-                    {item.name}
-                  </h3>
 
                 </motion.div>
-              ))}
+
+                {/* TOP */}
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                  }}
+                  className="absolute top-0 left-1/2 -translate-x-1/2"
+                >
+
+                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
+                      <Atom size={34} />
+                    </div>
+
+                    <h3 className="mt-5 text-xl font-semibold text-white">
+                      React
+                    </h3>
+
+                  </div>
+
+                </motion.div>
+
+                {/* LEFT */}
+                <motion.div
+                  animate={{ x: [0, -8, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                  }}
+                  className="absolute left-0 top-1/2 -translate-y-1/2"
+                >
+
+                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
+                      <Layers3 size={34} />
+                    </div>
+
+                    <h3 className="mt-5 text-xl font-semibold text-white">
+                      Next.js
+                    </h3>
+
+                  </div>
+
+                </motion.div>
+
+                {/* RIGHT */}
+                <motion.div
+                  animate={{ x: [0, 8, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                  }}
+                  className="absolute right-0 top-1/2 -translate-y-1/2"
+                >
+
+                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
+                      <Code2 size={34} />
+                    </div>
+
+                    <h3 className="mt-5 text-xl font-semibold text-white">
+                      Tailwind CSS
+                    </h3>
+
+                  </div>
+
+                </motion.div>
+
+                {/* BOTTOM LEFT */}
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                  }}
+                  className="absolute bottom-0 left-20"
+                >
+
+                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
+                      <Database size={34} />
+                    </div>
+
+                    <h3 className="mt-5 text-xl font-semibold text-white">
+                      MongoDB
+                    </h3>
+
+                  </div>
+
+                </motion.div>
+
+                {/* BOTTOM RIGHT */}
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                  }}
+                  className="absolute bottom-0 right-20"
+                >
+
+                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
+                      <Server size={34} />
+                    </div>
+
+                    <h3 className="mt-5 text-xl font-semibold text-white">
+                      Node.js
+                    </h3>
+
+                  </div>
+
+                </motion.div>
+
+              </div>
 
             </motion.div>
 
           </div>
 
         </div>
+
       </section>
 
       {/* CTA */}
