@@ -242,9 +242,15 @@ export default function WebDevelopmentPage() {
 
       {/* SERVICES */}
       
-      <section className="py-16 px-6 md:px-10 lg:px-16">
+      <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
 
-        <div className="container mx-auto">
+        {/* BG GLOW */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
 
           {/* HEADER */}
           <div className="text-center max-w-3xl mx-auto">
@@ -254,60 +260,131 @@ export default function WebDevelopmentPage() {
             </p>
 
             <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Web Development Solutions For
-              <span className="text-[#2b4c9a]"> Modern Businesses</span>
+              Premium Digital
+              <span className="text-[#2b4c9a]"> Solutions</span>
             </h2>
+
+            <p className="mt-5 text-gray-600 text-lg">
+              High-converting solutions designed for modern brands and scalable growth.
+            </p>
 
           </div>
 
-          {/* GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          {/* BENTO GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 auto-rows-[260px]">
 
-            {[
-              {
-                icon: <Globe size={34} />,
-                title: "Business Websites",
-              },
-              {
-                icon: <ShoppingCart size={34} />,
-                title: "E-Commerce",
-              },
-              {
-                icon: <MonitorSmartphone size={34} />,
-                title: "Responsive Design",
-              },
-              {
-                icon: <Code2 size={34} />,
-                title: "Custom Development",
-              },
-              {
-                icon: <Search size={34} />,
-                title: "SEO Optimized",
-              },
-              {
-                icon: <Rocket size={34} />,
-                title: "Performance Focused",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-[28px] p-8 border border-[#dbe7ff] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
-              >
+            {/* LARGE CARD */}
+            <div className="lg:col-span-2 lg:row-span-2 rounded-[32px] bg-[#1a2e5e] p-10 text-white relative overflow-hidden group">
 
-                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                  {item.icon}
+              <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+
+              <div className="relative z-10">
+
+                <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-xl flex items-center justify-center">
+                  <Globe size={42} />
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
-                  {item.title}
+                <h3 className="mt-10 text-4xl font-bold leading-tight">
+                  Website
+                  Development
                 </h3>
 
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  Premium scalable digital solutions tailored for your business goals.
+                <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-md">
+                  Premium websites focused on conversions, SEO,
+                  performance, and luxury user experience.
                 </p>
 
               </div>
-            ))}
+
+            </div>
+
+            {/* CARD */}
+            <div className="rounded-[28px] bg-white/70 backdrop-blur-xl border border-white/40 p-8 shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:-translate-y-2 transition-all duration-500">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                <ShoppingCart size={30} />
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                E-Commerce
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                High-converting online stores for scalable brands.
+              </p>
+
+            </div>
+
+            {/* CARD */}
+            <div className="rounded-[28px] bg-white/70 backdrop-blur-xl border border-white/40 p-8 shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:-translate-y-2 transition-all duration-500">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                <Rocket size={30} />
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                SEO Optimized
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                Built for performance, ranking, and speed.
+              </p>
+
+            </div>
+
+            {/* WIDE CARD */}
+            <div className="lg:col-span-2 rounded-[28px] bg-gradient-to-r from-[#2b4c9a] to-[#3B82F6] p-8 text-white flex items-center justify-between overflow-hidden relative">
+
+              <div>
+
+                <h3 className="text-3xl font-bold">
+                  Modern UI/UX Experience
+                </h3>
+
+                <p className="mt-4 text-white/80 max-w-xl">
+                  Smooth animations, premium layouts, and modern interactions
+                  designed to impress users.
+                </p>
+
+              </div>
+
+              <MonitorSmartphone size={90} className="opacity-20" />
+
+            </div>
+
+            {/* CARD */}
+            <div className="rounded-[28px] bg-white/70 backdrop-blur-xl border border-white/40 p-8 shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:-translate-y-2 transition-all duration-500">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                <Code2 size={30} />
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                Custom Code
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                Tailored scalable architecture for your business.
+              </p>
+
+            </div>
+
+            {/* CARD */}
+            <div className="rounded-[28px] bg-white/70 backdrop-blur-xl border border-white/40 p-8 shadow-[0_10px_40px_rgba(43,76,154,0.08)] hover:-translate-y-2 transition-all duration-500">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                <ShieldCheck size={30} />
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
+                Secure Systems
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                Enterprise-grade security and scalable infrastructure.
+              </p>
+
+            </div>
 
           </div>
 
