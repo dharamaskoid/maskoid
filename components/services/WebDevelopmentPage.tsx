@@ -436,7 +436,12 @@ export default function WebDevelopmentPage() {
               <clipPath id="mask-business" clipPathUnits="objectBoundingBox">
                 <path d="M 0.22,0.15 Q 0.30,0.12 0.75,0.25 Q 0.90,0.30 0.88,0.55 Q 0.85,0.85 0.52,0.98 Q 0.38,1.00 0.15,0.72 Q 0.02,0.55 0.08,0.30 Z" />
               </clipPath>
-              
+              <div 
+                className="bg-white p-6 shadow-xl" 
+                style={{ clipPath: 'polygon(15% 0%, 85% 0%, 100% 25%, 100% 75%, 85% 100%, 15% 100%, 0% 75%, 0% 25%)' }}
+              >
+                {/* Card Content */}
+              </div>
               {/* Card 2: Custom Development - Broad, wide centered premium shield container */}
               <clipPath id="mask-custom-dev" clipPathUnits="objectBoundingBox">
                 <path d="M 0.40,0.03 Q 0.65,-0.03 0.92,0.08 Q 0.99,0.12 0.96,0.40 Q 0.92,0.75 0.68,0.95 Q 0.50,1.00 0.15,0.84 Q 0.00,0.76 0.02,0.42 Q 0.04,0.12 0.40,0.03 Z" />
