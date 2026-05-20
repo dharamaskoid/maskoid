@@ -759,7 +759,7 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/*why choose us demo */}
+      {/* WHY CHOOSE US */}
       <section className="relative w-full bg-[#1a2e5e] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
       
       {/* BACKGROUND DECORATIVE GLOWS & PURPLE VECTOR SWIRL TRAIL */}
@@ -877,105 +877,6 @@ export default function WebDevelopmentPage() {
       </div>
     </section>
 
-      {/* WHY CHOOSE US */}
-        <section className="relative overflow-hidden bg-[#071739] py-16 md:py-20">
-
-          {/* GLOW */}
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
-
-          <div className="container mx-auto px-6 relative z-10">
-
-            {/* HEADER */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="text-center max-w-3xl mx-auto"
-            >
-
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
-                Why Choose Us
-              </p>
-
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
-                We Build Websites
-                <span className="block text-[#6EA8FF]">
-                  That Work For You
-                </span>
-              </h2>
-
-            </motion.div>
-
-            {/* STATS */}
-            <div className="grid md:grid-cols-3 gap-8 mt-20">
-
-              {[
-                {
-                  icon: <Layers3 size={32} />,
-                  value: "98%",
-                  label: "Client Satisfaction",
-                },
-                {
-                  icon: <ShieldCheck size={32} />,
-                  value: "120+",
-                  label: "Projects Delivered",
-                },
-                {
-                  icon: <Code2 size={32} />,
-                  value: "10+",
-                  label: "Modern Technologies",
-                },
-              ].map((item, index) => (
-
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.7,
-                    delay: index * 0.12,
-                  }}
-                  whileHover={{
-                    y: -10,
-                  }}
-                  className="group relative overflow-hidden rounded-[34px] bg-white/5 border border-white/10 backdrop-blur-xl p-10"
-                >
-
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full"></div>
-
-                  </div>
-
-                  <div className="relative z-10">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center">
-                      {item.icon}
-                    </div>
-
-                    <h3 className="mt-8 text-5xl font-bold text-white">
-                      {item.value}
-                    </h3>
-
-                    <p className="mt-4 text-[#B7C2D8] text-lg">
-                      {item.label}
-                    </p>
-
-                  </div>
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </section>
 
       {/* OUR PROCESS */}
       <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
