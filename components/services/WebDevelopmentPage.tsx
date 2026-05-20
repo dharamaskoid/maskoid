@@ -802,7 +802,14 @@ export default function WebDevelopmentPage() {
       <section className="relative overflow-hidden bg-[#0B0827] py-16 md:py-20 text-white font-sans">
         
         <div className="container mx-auto px-6 relative z-10">
-          
+              {/* Ambient Decorative Orbit Graphics */}
+              <div className="relative mt-16 w-full max-w-[420px] h-[220px] hidden md:block opacity-40 pointer-events-none">
+                <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-15deg] scale-110"></div>
+                <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-10deg]"></div>
+                <div className="absolute inset-10 border border-blue-500/20 rounded-[50%] rotate-[-5deg] scale-90"></div>
+                <div className="absolute top-1/4 left-1/3 w-48 h-48 bg-blue-600/30 blur-[80px] rounded-full"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-600/20 blur-[80px] rounded-full"></div>
+              </div>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* LEFT */}
@@ -828,14 +835,7 @@ export default function WebDevelopmentPage() {
                 fast, scalable, and future-ready websites.
               </p>
 
-              {/* Ambient Decorative Orbit Graphics */}
-              <div className="relative mt-16 w-full max-w-[420px] h-[220px] hidden md:block opacity-40 pointer-events-none">
-                <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-15deg] scale-110"></div>
-                <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-10deg]"></div>
-                <div className="absolute inset-10 border border-blue-500/20 rounded-[50%] rotate-[-5deg] scale-90"></div>
-                <div className="absolute top-1/4 left-1/3 w-48 h-48 bg-blue-600/30 blur-[80px] rounded-full"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-600/20 blur-[80px] rounded-full"></div>
-              </div>
+
             </motion.div>
 
             {/* RIGHT */}
