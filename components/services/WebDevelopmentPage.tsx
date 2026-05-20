@@ -713,8 +713,7 @@ export default function WebDevelopmentPage() {
             </motion.p>
 
             <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              A Simple Process To <br />
-              Deliver
+              A Simple Process To Deliver
               <span className="text-[#2b4c9a]"> Exceptional Results</span>
             </h2>
 
