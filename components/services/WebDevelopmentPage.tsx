@@ -760,7 +760,7 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/*why choose us demo */}
-      <section className="relative w-full bg-[#03010A] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
+      <section className="relative w-full bg-[#1a2e5e] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
       
       {/* BACKGROUND DECORATIVE GLOWS & PURPLE VECTOR SWIRL TRAIL */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
