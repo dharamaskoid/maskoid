@@ -849,7 +849,7 @@ export default function WebDevelopmentPage() {
               <span className="
                   absolute top-6 right-6
                   text-6xl font-bold
-                  text-[#EEF4FF]
+                  text-[#1a2e5e]
                 ">01</span>
               <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">Discovery & Planning</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
