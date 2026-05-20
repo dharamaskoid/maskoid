@@ -468,7 +468,7 @@ export default function WebDevelopmentPage() {
               {/* Universal Asymmetrical 6-Sided Polygon Shape applied to replicate the image layout exactly */}
               <style dangerouslySetInnerHTML={{__html: `
                 .geometric-hex-card {
-                  clip-path: polygon(412,130,418,118,643,62,724,21,816,50,825,78,804,239,797,248,731,258,652,194,638,74);
+                  clip-path: polygon(15% 0%, 85% 2%, 100% 75%, 75% 100%, 0% 88%, 5% 18%);
                 }
                 .hero-hex-card {
                   clip-path: polygon(12% 0%, 88% 5%, 100% 80%, 72% 100%, 0% 85%, 6% 12%);
