@@ -799,7 +799,7 @@ export default function WebDevelopmentPage() {
 
 
       {/* TECHNOLOGIES WE USE */}
-      <section className="relative w-full min-h-[500px] bg-[#0B0827] text-white overflow-hidden py-20 px-6 md:px-16 font-sans flex items-center">
+      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-20 px-6 flex items-center">
       
         <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
           
@@ -820,17 +820,30 @@ export default function WebDevelopmentPage() {
           </div>
 
           {/* LEFT COLUMN: Content */}
-          <div className="max-w-xl z-10 flex flex-col space-y-5 text-left w-full lg:w-1/2">
-            <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-indigo-300 bg-indigo-950/40 border border-indigo-800/30 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
-              Technologies We Use
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-100 leading-[1.15]">
-              Modern Technologies For <br /> Modern Solutions
-            </h2>
-            <p className="text-sm md:text-base text-slate-400 max-w-md font-light leading-relaxed">
-              We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
-            </p>
-          </div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+
+                <p className="inline-flex px-5 py-2 rounded-full bg-white border border-[#dbe7ff] text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                  Technologies We Use
+                </p>
+
+                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#071739] leading-tight">
+                  Modern Technologies For
+                  <span className="block text-[#3B82F6]">
+                    Modern Solutions
+                  </span>
+                </h2>
+
+                <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+                  We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
+                </p>
+
+              </motion.div>          
 
           {/* RIGHT COLUMN: Precise Staggered Cards (Perfect Design Match) */}
           <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
