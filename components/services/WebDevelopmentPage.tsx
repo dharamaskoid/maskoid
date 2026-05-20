@@ -26,15 +26,7 @@ import {
   Server, 
 } from "lucide-react";
 
-// Sample icons data matching your image layout
-const techIcons = [
-  { name: 'React', icon: '⚛️', gridPos: 'md:col-start-1 md:row-start-1' },
-  { name: 'Next.js', icon: 'N', gridPos: 'md:col-start-3 md:row-start-1' },
-  { name: 'TypeScript', icon: 'TS', gridPos: 'md:col-start-5 md:row-start-1' },
-  { name: 'Node.js', icon: '⬢', gridPos: 'md:col-start-2 md:row-start-2' },
-  { name: 'Tailwind CSS', icon: '≈', gridPos: 'md:col-start-4 md:row-start-2' },
-  { name: 'MongoDB', icon: '🍃', gridPos: 'md:col-start-6 md:row-start-2' },
-];
+
 
 const solutions = [
   {
@@ -809,55 +801,85 @@ export default function WebDevelopmentPage() {
       {/* TECHNOLOGIES WE USE */}
       <section className="relative w-full min-h-[400px] bg-[#0B0827] text-white overflow-hidden py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between font-sans">
       
-        {/* Background Decorative Rings / Orbits */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[400px] opacity-40 pointer-events-none">
-          <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-15deg] scale-110"></div>
-          <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-10deg]"></div>
-          <div className="absolute inset-10 border border-blue-500/20 rounded-[50%] rotate-[-5deg] scale-90"></div>
-          {/* Glowing Ambient Lights */}
-          <div className="absolute top-1/4 left-1/3 w-48 h-48 bg-blue-600/30 blur-[80px] rounded-full"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-600/20 blur-[80px] rounded-full"></div>
-          {/* Tiny Sparkles */}
-          <div className="absolute top-12 left-12 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_8px_#c084fc]"></div>
-          <div className="absolute bottom-20 left-1/2 w-1 h-1 bg-blue-400 rounded-full animate-pulse shadow-[0_0_6px_#60a5fa]"></div>
-          <div className="absolute top-1/3 right-12 w-2 h-2 bg-indigo-400 rounded-full animate-pulse shadow-[0_0_10px_#818cf8]"></div>
-        </div>
-
-        {/* Left Content Column */}
-        <div className="max-w-xl z-10 flex flex-col space-y-4 text-left">
-          <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-indigo-400 bg-indigo-950/50 border border-indigo-800/40 px-3 py-1 rounded-full w-fit">
-            Technologies We Use
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-100 leading-tight">
-            Modern Technologies For <br className="hidden md:inline" /> Modern Solutions
-          </h2>
-          <p className="text-sm md:text-base text-slate-400 max-w-md font-light leading-relaxed">
-            We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
-          </p>
-        </div>
-
-        {/* Right Grid Column (Staggered Floating Cards) */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-4 gap-y-5 mt-12 md:mt-0 z-10 w-full md:w-auto pr-0 md:pr-12">
-          {techIcons.map((tech, idx) => (
-            <div
-              key={idx}
-              className={`flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] ${tech.gridPos}`}
-            >
-              {/* Icon Wrapper */}
-              <div className="flex items-center justify-center w-7 h-7 text-lg font-bold rounded-md">
-                {tech.name === 'React' && <span className="text-cyan-400 font-normal animate-[spin_10s_linear_infinite]">{tech.icon}</span>}
-                {tech.name === 'Next.js' && <span className="text-white bg-black px-1 rounded-sm text-xs font-black">{tech.icon}</span>}
-                {tech.name === 'TypeScript' && <span className="text-white bg-[#3178C6] text-[10px] px-1 rounded-sm font-bold">{tech.icon}</span>}
-                {tech.name === 'Node.js' && <span className="text-green-500 font-normal">{tech.icon}</span>}
-                {tech.name === 'Tailwind CSS' && <span className="text-sky-400 font-bold">{tech.icon}</span>}
-                {tech.name === 'MongoDB' && <span className="text-emerald-500 font-normal">{tech.icon}</span>}
-              </div>
-              {/* Label */}
-              <span className="text-sm font-medium text-slate-200 tracking-wide">{tech.name}</span>
+          <div className="container px-6 mx-auto relative z-10">  
+            {/* Background Decorative Rings / Orbits */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[400px] opacity-40 pointer-events-none">
+              <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-15deg] scale-110"></div>
+              <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-10deg]"></div>
+              <div className="absolute inset-10 border border-blue-500/20 rounded-[50%] rotate-[-5deg] scale-90"></div>
+              <div className="absolute top-1/4 left-1/3 w-48 h-48 bg-blue-600/30 blur-[80px] rounded-full"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-600/20 blur-[80px] rounded-full"></div>
+              <div className="absolute top-12 left-12 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_8px_#c084fc]"></div>
+              <div className="absolute bottom-20 left-1/2 w-1 h-1 bg-blue-400 rounded-full animate-pulse shadow-[0_0_6px_#60a5fa]"></div>
+              <div className="absolute top-1/3 right-12 w-2 h-2 bg-indigo-400 rounded-full animate-pulse shadow-[0_0_10px_#818cf8]"></div>
             </div>
-          ))}
-        </div>
 
+            {/* Left Content Column */}
+            <div className="max-w-xl z-10 flex flex-col space-y-4 text-left">
+              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-indigo-400 bg-indigo-950/50 border border-indigo-800/40 px-3 py-1 rounded-full w-fit">
+                Technologies We Use
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-100 leading-tight">
+                Modern Technologies For <br className="hidden md:inline" /> Modern Solutions
+              </h2>
+              <p className="text-sm md:text-base text-slate-400 max-w-md font-light leading-relaxed">
+                We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
+              </p>
+            </div>
+
+            {/* Right Grid Column (Hardcoded Cards Layout) */}
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-x-4 gap-y-5 mt-12 md:mt-0 z-10 w-full md:w-auto pr-0 md:pr-12">
+              
+              {/* Row 1, Card 1: React */}
+              <div className="flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] md:col-start-1 md:row-start-1">
+                <div className="flex items-center justify-center w-7 h-7 text-cyan-400">
+                  <Atom size={22} strokeWidth={2} className="animate-[spin_12s_linear_infinite]" />
+                </div>
+                <span className="text-sm font-medium text-slate-200 tracking-wide">React</span>
+              </div>
+
+              {/* Row 1, Card 2: Next.js */}
+              <div className="flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] md:col-start-3 md:row-start-1">
+                <div className="flex items-center justify-center w-7 h-7 text-white">
+                  <Code2 size={22} strokeWidth={2} />
+                </div>
+                <span className="text-sm font-medium text-slate-200 tracking-wide">Next.js</span>
+              </div>
+
+              {/* Row 1, Card 3: TypeScript */}
+              <div className="flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] md:col-start-5 md:row-start-1">
+                <div className="flex items-center justify-center w-7 h-7 text-blue-400">
+                  <Layers3 size={22} strokeWidth={2} />
+                </div>
+                <span className="text-sm font-medium text-slate-200 tracking-wide">TypeScript</span>
+              </div>
+
+              {/* Row 2, Card 1: Node.js */}
+              <div className="flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] md:col-start-2 md:row-start-2">
+                <div className="flex items-center justify-center w-7 h-7 text-green-400">
+                  <Server size={22} strokeWidth={2} />
+                </div>
+                <span className="text-sm font-medium text-slate-200 tracking-wide">Node.js</span>
+              </div>
+
+              {/* Row 2, Card 2: Tailwind CSS */}
+              <div className="flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] md:col-start-4 md:row-start-2">
+                <div className="flex items-center justify-center w-7 h-7 text-sky-400">
+                  <PenTool size={22} strokeWidth={2} />
+                </div>
+                <span className="text-sm font-medium text-slate-200 tracking-wide">Tailwind CSS</span>
+              </div>
+
+              {/* Row 2, Card 3: MongoDB */}
+              <div className="flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] md:col-start-6 md:row-start-2">
+                <div className="flex items-center justify-center w-7 h-7 text-emerald-500">
+                  <Database size={22} strokeWidth={2} />
+                </div>
+                <span className="text-sm font-medium text-slate-200 tracking-wide">MongoDB</span>
+              </div>
+
+            </div>
+          </div>   
       </section>
 
       {/* CTA */}
