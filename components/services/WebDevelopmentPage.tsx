@@ -841,94 +841,180 @@ export default function WebDevelopmentPage() {
 
             {/* RIGHT TECHNOLOGY STACK */}
             <motion.div
-              initial="hidden"
-              whileInView="show"
+              initial={{ opacity: 0, x: 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              variants={fadeUp}
               className="relative flex items-center justify-center"
             >
 
-              {/* BACKGROUND GLOW */}
-              <div className="absolute w-[480px] h-[480px] bg-blue-500/10 blur-[140px] rounded-full" />
+              {/* MAIN GLOW */}
+              <div className="absolute w-[520px] h-[520px] rounded-full bg-blue-500/10 blur-[140px]" />
 
-              {/* MAIN WRAPPER */}
-              <div className="relative w-full max-w-[620px] h-[440px] flex items-center justify-center">
+              {/* GRID WRAPPER */}
+              <div className="relative w-[620px] h-[620px] flex items-center justify-center">
 
-                {/* CENTER CORE */}
+                {/* CENTER CARD */}
                 <motion.div
-                  animate={{ y: [0, -12, 0] }}
+                  animate={{
+                    y: [0, -12, 0],
+                  }}
                   transition={{
-                    duration: 6,
+                    duration: 5,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="relative z-20 w-[190px] h-[190px] rounded-full 
-                  bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#1E40AF]
-                  flex items-center justify-center 
-                  shadow-[0_0_90px_rgba(37,99,235,0.55)] border border-white/10"
+                  className="absolute z-20"
                 >
-                  <div className="text-center">
+                  <div
+                    className="
+                    w-[220px] h-[220px]
+                    rounded-[42px]
+                    bg-gradient-to-br from-[#2563EB] to-[#1D4ED8]
+                    border border-white/10
+                    backdrop-blur-2xl
+                    flex flex-col items-center justify-center
+                    shadow-[0_0_80px_rgba(37,99,235,0.45)]
+                  "
+                  >
 
-                    <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-xl 
-                    border border-white/10 flex items-center justify-center mx-auto">
-
-                      <Atom size={42} className="text-white" />
-
+                    <div
+                      className="
+                      w-24 h-24
+                      rounded-[28px]
+                      bg-white/10
+                      border border-white/10
+                      backdrop-blur-xl
+                      flex items-center justify-center
+                    "
+                    >
+                      <Atom size={48} className="text-white" />
                     </div>
 
-                    <h3 className="mt-5 text-2xl font-bold text-white tracking-wide">
+                    <h3 className="mt-6 text-[28px] font-bold text-white">
                       Tech Stack
                     </h3>
 
                   </div>
                 </motion.div>
 
-                {/* TOP */}
+                {/* TOP CARD */}
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute top-0 left-1/2 -translate-x-1/2"
                 >
-                  <TechCard icon={<Atom size={34} />} title="React" />
+
+                  <div className="tech-card">
+
+                    <div className="tech-icon">
+                      <Atom size={34} />
+                    </div>
+
+                    <h3>React</h3>
+
+                  </div>
+
                 </motion.div>
 
-                {/* LEFT */}
+                {/* LEFT CARD */}
                 <motion.div
                   animate={{ x: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute left-0 top-1/2 -translate-y-1/2"
                 >
-                  <TechCard icon={<Layers3 size={34} />} title="Next.js" />
+
+                  <div className="tech-card">
+
+                    <div className="tech-icon">
+                      <Layers3 size={34} />
+                    </div>
+
+                    <h3>Next.js</h3>
+
+                  </div>
+
                 </motion.div>
 
-                {/* RIGHT */}
+                {/* RIGHT CARD */}
                 <motion.div
                   animate={{ x: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute right-0 top-1/2 -translate-y-1/2"
                 >
-                  <TechCard icon={<Code2 size={34} />} title="Tailwind CSS" />
+
+                  <div className="tech-card">
+
+                    <div className="tech-icon">
+                      <Code2 size={34} />
+                    </div>
+
+                    <h3>Tailwind CSS</h3>
+
+                  </div>
+
                 </motion.div>
 
                 {/* BOTTOM LEFT */}
                 <motion.div
                   animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute bottom-6 left-14"
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute bottom-8 left-16"
                 >
-                  <TechCard icon={<Database size={34} />} title="MongoDB" />
+
+                  <div className="tech-card">
+
+                    <div className="tech-icon">
+                      <Database size={34} />
+                    </div>
+
+                    <h3>MongoDB</h3>
+
+                  </div>
+
                 </motion.div>
 
                 {/* BOTTOM RIGHT */}
                 <motion.div
                   animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute bottom-6 right-14"
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute bottom-8 right-16"
                 >
-                  <TechCard icon={<Server size={34} />} title="Node.js" />
+
+                  <div className="tech-card">
+
+                    <div className="tech-icon">
+                      <Server size={34} />
+                    </div>
+
+                    <h3>Node.js</h3>
+
+                  </div>
+
                 </motion.div>
 
               </div>
+
             </motion.div>
           </div>
         </div>
