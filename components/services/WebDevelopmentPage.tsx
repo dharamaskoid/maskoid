@@ -796,7 +796,7 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#F8FAFF] py-20 px-6 md:px-16 overflow-hidden font-sans">
+      <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
         <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
           
           {/* LEFT COLUMN: Content */}
@@ -847,7 +847,7 @@ export default function WebDevelopmentPage() {
               <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                 <Search size={30} strokeWidth={2.5} />
               </div>
-              <span className="text-xl font-bold text-[#2b4c9a]">01</span>
+              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">01</span>
               <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Discovery & Planning</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
                 We understand your goals, audience, and requirements to create a solid plan.
@@ -859,7 +859,7 @@ export default function WebDevelopmentPage() {
               <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                 <PenTool size={30} strokeWidth={2.5} className="rotate-90" />
               </div>
-              <span className="text-xl font-bold text-[#2b4c9a]">02</span>
+              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">02</span>
               <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Design & Prototyping</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
                 We design intuitive UI/UX prototypes that align with your brand and users.
@@ -871,7 +871,7 @@ export default function WebDevelopmentPage() {
               <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                 <Code2 size={30} strokeWidth={2.5} />
               </div>
-              <span className="text-xl font-bold text-[#2b4c9a]">03</span>
+              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">03</span>
               <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Development</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
                 Our developers build scalable, secure, and high-performance solutions.
@@ -883,7 +883,7 @@ export default function WebDevelopmentPage() {
               <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                 <Rocket size={30} strokeWidth={2.5} />
               </div>
-              <span className="text-xl font-bold text-[#2b4c9a]">04</span>
+              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">04</span>
               <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Testing & Launch</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
                 We test thoroughly and launch your website with full support.
