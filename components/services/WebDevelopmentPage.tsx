@@ -442,73 +442,74 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-    <section className="relative w-full bg-gradient-to-b from-[#FAF9FE] to-[#F3F5FC] py-24 px-6 md:px-16 font-sans overflow-hidden">
-      
-      {/* Soft Light Blur Accents in Background */}
-      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
+      <section className="relative bg-[#EEF2FF] py-16 px-6 overflow-hidden">
+        
+        {/* Soft Light Blur Accents in Background */}
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-      <div className="container mx-auto relative z-10 max-w-5xl">
+        <div className="container mx-auto relative z-10 max-w-5xl">
 
-        {/* HEADER */}
-        <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        className="text-center max-w-3xl mx-auto"
-        >
-          <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
-            Our Solutions
-          </p>
-          <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-            Digital Solutions That
-            <span className="text-[#2b4c9a]"> Create Real Impact</span>
-          </h2>
+          {/* HEADER */}
+          <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="text-center max-w-3xl mx-auto"
+          >
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
+              Our Solutions
+            </p>
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Digital Solutions That
+              <span className="text-[#2b4c9a]"> Create Real Impact</span>
+            </h2>
 
-          <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-           We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
-          </p>
-        </motion.div>
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+            We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
+            </p>
+          </motion.div>
 
 
-        {/* CONTENT ROW LIST LAYOUT (No Boxes) */}
-        <div className="flex flex-col w-full border-t border-gray-200/60">
-          {solution.map((item, index) => (
-            <div 
-              key={index}
-              className="group flex flex-col md:flex-row items-start md:items-center justify-between py-7 border-b border-gray-200/60 transition-all duration-300 hover:px-4 cursor-pointer"
-            >
-              {/* Left Block: Icon & Title */}
-              <div className="flex items-center gap-6 md:w-1/3 shrink-0">
-                <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                  {item.icon}
+          {/* CONTENT ROW LIST LAYOUT (No Boxes) */}
+          <div className="flex flex-col w-full border-t border-gray-200/60">
+            {solution.map((item, index) => (
+              <div 
+                key={index}
+                className="group flex flex-col md:flex-row items-start md:items-center justify-between py-7 border-b border-gray-200/60 transition-all duration-300 hover:px-4 cursor-pointer"
+              >
+                {/* Left Block: Icon & Title */}
+                <div className="flex items-center gap-6 md:w-1/3 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
                 </div>
-                <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-              </div>
 
-              {/* Middle Block: Description Paragraph */}
-              <div className="flex-1 mt-3 md:mt-0 md:px-8">
-                <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed max-w-2xl">
-                  {item.desc}
-                </p>
-              </div>
-
-              {/* Right Block: Minimalist Action Link Indicator */}
-              <div className="mt-4 md:mt-0 shrink-0 self-end md:self-center">
-                <div className="w-8 h-8 rounded-full border border-gray-200 group-hover:border-blue-600 text-gray-400 group-hover:text-blue-600 flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
-                  <ArrowUpRight size={16} strokeWidth={2.5} />
+                {/* Middle Block: Description Paragraph */}
+                <div className="flex-1 mt-3 md:mt-0 md:px-8">
+                  <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed max-w-2xl">
+                    {item.desc}
+                  </p>
                 </div>
-              </div>
 
-            </div>
-          ))}
+                {/* Right Block: Minimalist Action Link Indicator */}
+                <div className="mt-4 md:mt-0 shrink-0 self-end md:self-center">
+                  <div className="w-8 h-8 rounded-full border border-gray-200 group-hover:border-blue-600 text-gray-400 group-hover:text-blue-600 flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
+                    <ArrowUpRight size={16} strokeWidth={2.5} />
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
         </div>
+      </section>
 
-      </div>
-    </section>
       {/* OUR SOLUTIONS */}
         <section className="relative overflow-hidden bg-[#F8FAFF] py-16 md:py-20">
 
