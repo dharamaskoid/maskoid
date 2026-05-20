@@ -885,201 +885,165 @@ export default function WebDevelopmentPage() {
               className="relative flex items-center justify-center mt-16 lg:mt-0"
             >
 
-              {/* MAIN GLOW */}
+              {/* BG GLOW */}
               <div className="absolute w-[500px] h-[500px] bg-[#4f7cff]/20 blur-[140px] rounded-full"></div>
 
-              {/* RING */}
+              {/* CENTER IMAGE */}
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 40,
-                  repeat: Infinity,
-                  ease: "linear",
+                animate={{
+                  y: [0, -12, 0],
                 }}
-                className="relative w-[620px] h-[620px] flex items-center justify-center"
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative z-20"
               >
 
-                {/* OUTER BORDER */}
-                <div className="absolute inset-0 rounded-full border border-[#4f7cff]/20"></div>
+                <img
+                  src="/images/tech-laptop.png"
+                  alt="Technology"
+                  className="w-[280px] md:w-[360px] drop-shadow-[0_30px_80px_rgba(79,124,255,0.35)]"
+                />
 
-                <div className="absolute inset-12 rounded-full border border-dashed border-[#4f7cff]/20"></div>
+              </motion.div>
 
-                {/* CENTER IMAGE */}
-                <motion.div
-                  animate={{
-                    y: [0, -12, 0],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="relative z-20"
-                >
+              {/* TOP */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="absolute top-0 left-1/2 -translate-x-1/2 z-30"
+              >
 
-                  <img
-                    src="/images/tech-laptop.png"
-                    alt="Technology"
-                    className="w-[300px] md:w-[360px] drop-shadow-[0_30px_80px_rgba(79,124,255,0.35)]"
-                  />
+                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[210px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
 
-                </motion.div>
-
-                {/* TOP CENTER */}
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute top-0 left-1/2 -translate-x-1/2"
-                >
-
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] px-6 py-5 w-[180px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                      <Atom size={30} />
-                    </div>
-
-                    <h3 className="mt-4 text-white font-semibold text-lg">
-                      React
-                    </h3>
-
+                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
+                    <Atom size={28} />
                   </div>
 
-                </motion.div>
+                  <h3 className="text-white font-semibold text-lg">
+                    React
+                  </h3>
 
-                {/* RIGHT TOP */}
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute top-24 right-0"
-                >
+                </div>
 
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] px-6 py-5 w-[180px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              </motion.div>
 
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                      <Layers3 size={30} />
-                    </div>
+              {/* RIGHT TOP */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="absolute top-24 right-0 z-30"
+              >
 
-                    <h3 className="mt-4 text-white font-semibold text-lg">
-                      Next.js
-                    </h3>
+                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[220px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
 
+                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
+                    <Layers3 size={28} />
                   </div>
 
-                </motion.div>
+                  <h3 className="text-white font-semibold text-lg">
+                    Next.js
+                  </h3>
 
-                {/* RIGHT BOTTOM */}
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute bottom-24 right-4"
-                >
+                </div>
 
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] px-6 py-5 w-[180px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              </motion.div>
 
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                      <Code2 size={30} />
-                    </div>
+              {/* RIGHT BOTTOM */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="absolute bottom-24 right-0 z-30"
+              >
 
-                    <h3 className="mt-4 text-white font-semibold text-lg">
-                      TypeScript
-                    </h3>
+                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[240px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
 
+                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
+                    <Code2 size={28} />
                   </div>
 
-                </motion.div>
+                  <h3 className="text-white font-semibold text-lg">
+                    TypeScript
+                  </h3>
 
-                {/* BOTTOM CENTER */}
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2"
-                >
+                </div>
 
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] px-6 py-5 w-[180px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              </motion.div>
 
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                      <Server size={30} />
-                    </div>
+              {/* BOTTOM */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30"
+              >
 
-                    <h3 className="mt-4 text-white font-semibold text-lg">
-                      Node.js
-                    </h3>
+                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[220px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
 
+                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
+                    <Server size={28} />
                   </div>
 
-                </motion.div>
+                  <h3 className="text-white font-semibold text-lg">
+                    Node.js
+                  </h3>
 
-                {/* LEFT BOTTOM */}
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute bottom-24 left-4"
-                >
+                </div>
 
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] px-6 py-5 w-[180px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              </motion.div>
 
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                      <Database size={30} />
-                    </div>
+              {/* LEFT BOTTOM */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="absolute bottom-24 left-0 z-30"
+              >
 
-                    <h3 className="mt-4 text-white font-semibold text-lg">
-                      MongoDB
-                    </h3>
+                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[230px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
 
+                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
+                    <Database size={28} />
                   </div>
 
-                </motion.div>
+                  <h3 className="text-white font-semibold text-lg">
+                    MongoDB
+                  </h3>
 
-                {/* LEFT TOP */}
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute top-24 left-0"
-                >
+                </div>
 
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] px-6 py-5 w-[180px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              </motion.div>
 
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                      <MonitorSmartphone size={30} />
-                    </div>
+              {/* LEFT TOP */}
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="absolute top-24 left-0 z-30"
+              >
 
-                    <h3 className="mt-4 text-white font-semibold text-lg">
-                      Tailwind CSS
-                    </h3>
+                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[250px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
 
+                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
+                    <MonitorSmartphone size={28} />
                   </div>
 
-                </motion.div>
+                  <h3 className="text-white font-semibold text-lg">
+                    Tailwind CSS
+                  </h3>
+
+                </div>
 
               </motion.div>
 
