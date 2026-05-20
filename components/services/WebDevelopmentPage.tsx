@@ -843,15 +843,11 @@ export default function WebDevelopmentPage() {
 
             {/* STEP 1: Discover */}
             <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
-              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#3B82F6] shadow-[0_10px_30px_rgba(59,130,246,0.08)] border border-slate-100/80 mb-5 relative group hover:scale-105 transition-transform duration-300">
-                <Search size={22} strokeWidth={2.5} />
+              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                <Search size={30} strokeWidth={2.5} />
               </div>
-              <span className="
-                  absolute top-6 right-6
-                  text-6xl font-bold
-                  text-[#1a2e5e]
-                ">01</span>
-              <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">Discovery & Planning</h3>
+              <span className="text-xl font-bold text-[#2b4c9a]">01</span>
+              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Discovery & Planning</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
                 We understand your goals, audience, and requirements to create a solid plan.
               </p>
