@@ -24,6 +24,9 @@ import {
   Waypoints,
   Atom,
   Server, 
+  Award, 
+  Terminal,
+  Layers,
 } from "lucide-react";
 
 
@@ -78,7 +81,38 @@ const stagger = {
     },
   },
 };
-
+const solutionsList = [
+  {
+    icon: <Globe size={20} />,
+    title: "Custom Websites",
+    desc: "Tailored websites designed to reflect your brand and engage your audience.",
+    img: "/images/web-ui-1.jpg"
+  },
+  {
+    icon: <ShoppingCart size={20} />,
+    title: "E-Commerce",
+    desc: "Powerful online stores that drive sales and customer satisfaction.",
+    img: "/images/web-ui-2.jpg"
+  },
+  {
+    icon: <Layers size={20} />,
+    title: "Web Applications",
+    desc: "Scalable web applications that streamline processes and boost productivity.",
+    img: "/images/web-ui-3.jpg"
+  },
+  {
+    icon: <Code2 size={20} />,
+    title: "API Development",
+    desc: "Secure and reliable APIs to connect your systems seamlessly.",
+    img: "/images/web-ui-4.jpg"
+  },
+  {
+    icon: <Server size={20} />,
+    title: "CMS Solutions",
+    desc: "Easy-to-manage CMS websites that give you full control.",
+    img: "/images/web-ui-5.jpg"
+  }
+];
 
 export default function WebDevelopmentPage() {
 
@@ -651,6 +685,172 @@ export default function WebDevelopmentPage() {
 
           </div>
 
+        </section>
+
+      {/*demo for solution */}  
+      <section className="relative w-full bg-[#FAFAFC] py-20 px-6 md:px-16 font-sans overflow-hidden">
+      
+        {/* Hand-drawn Purple Loop Arrow Indicator Decoration */}
+        <div className="absolute left-[38%] bottom-[12%] z-0 pointer-events-none opacity-80 hidden lg:block">
+          <svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://w3.org">
+            <path d="M2,45 C40,-10 70,80 50,75 C30,70 45,20 110,40 M95,25 L112,42 L90,55" stroke="#818CF8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 1" />
+          </svg>
+        </div>
+
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          
+          {/* LEFT COLUMN: Main Typography & Desktop Monitor Asset */}
+          <div className="lg:col-span-5 flex flex-col space-y-6 text-left w-full">
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#3B82F6] bg-white border border-[#E4E9F7] px-4 py-1.5 rounded-full w-fit shadow-sm">
+              Our Solutions
+            </span>
+            <h2 className="text-4xl md:text-[45px] font-bold tracking-tight text-[#071739] leading-[1.15]">
+              Digital Solutions That <br />
+              <span className="text-[#3B82F6]">Create Real Impact</span>
+            </h2>
+            <p className="text-sm md:text-base text-gray-500 max-w-md font-light leading-relaxed">
+              We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
+            </p>
+            
+            {/* Main Desktop Monitor Showcase Device Asset */}
+            <div className="pt-8 w-full max-w-[480px]">
+              <img 
+                src="/images/hero-monitor.png" 
+                alt="Digital Solution Mockup Showcase Viewport" 
+                className="w-full h-auto drop-shadow-[0_30px_50px_rgba(7,23,57,0.12)]"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: Interactive Skewed Service List Cards */}
+          <div className="lg:col-span-7 w-full flex flex-col space-y-4">
+            {solutionsList.map((item, index) => (
+              <div 
+                key={index}
+                style={{ clipPath: 'polygon(0% 0%, 96% 0%, 100% 100%, 4% 100%)' }}
+                className="group bg-white border-y border-[#EAEFFB] hover:border-blue-500/30 transition-all duration-300 py-3.5 pl-10 pr-8 flex items-center justify-between gap-6 shadow-[0_4px_25px_rgba(0,0,0,0.01)] hover:shadow-[0_15px_35px_rgba(59,130,246,0.06)] cursor-pointer"
+              >
+                {/* Left Details block */}
+                <div className="flex items-center gap-5 flex-1">
+                  <div className="w-12 h-12 rounded-xl bg-[#F0F4FF] text-[#3B82F6] flex items-center justify-center shrink-0 shadow-inner">
+                    {item.icon}
+                  </div>
+                  <div className="max-w-xs md:max-w-sm">
+                    <h3 className="text-base font-bold text-[#071739] mb-0.5 tracking-tight">{item.title}</h3>
+                    <p className="text-[11px] text-gray-400 font-light leading-normal">{item.desc}</p>
+                  </div>
+                </div>
+
+                {/* Right Interface Snapshot Image Frame & Action Trigger */}
+                <div className="flex items-center gap-6 shrink-0">
+                  <div className="hidden sm:block w-32 h-16 rounded-lg overflow-hidden border border-slate-100 shadow-sm relative">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-blue-900/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-slate-50 group-hover:bg-[#3B82F6] text-slate-400 group-hover:text-white flex items-center justify-center transition-colors shadow-sm">
+                    <ChevronRight size={16} strokeWidth={2.5} />
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/*why choose us demo */}
+       <section className="relative w-full min-h-[550px] bg-[#03010A] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
+          
+          {/* Background Decorative Abstract Vector Swirl Stream Paths */}
+          <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
+            <svg className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[300px]" viewBox="0 0 500 300" fill="none" xmlns="http://w3.org">
+              <path d="M-50,250 C150,180 250,320 450,150" stroke="#4F46E5" strokeWidth="1.5" opacity="0.3" strokeDasharray="6 6" />
+              <path d="M-20,220 C180,140 220,290 420,120" stroke="#818CF8" strokeWidth="1" opacity="0.2" />
+            </svg>
+            <div className="absolute bottom-1/4 right-[-10%] w-72 h-72 bg-purple-900/10 blur-[120px] rounded-full"></div>
+          </div>
+
+          <div className="container mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full">
+            
+            {/* LEFT COLUMN: Content Info Summary */}
+            <div className="lg:col-span-4 flex flex-col space-y-6 text-left w-full">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-indigo-400 bg-indigo-950/30 border border-indigo-900/30 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
+                Why Choose Us
+              </span>
+              <h2 className="text-4xl md:text-[42px] font-bold tracking-tight text-slate-100 leading-[1.2]">
+                We Build Websites <br />
+                <span className="text-indigo-400">That Work For You</span>
+              </h2>
+              <p className="text-sm text-slate-400 max-w-sm font-light leading-relaxed">
+                We follow industry best practices and use modern technologies to build websites that are not only beautiful but also high-performing.
+              </p>
+              <div className="pt-4">
+                <button className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 text-white font-medium text-xs tracking-wide px-6 py-3.5 rounded-xl shadow-[0_10px_25px_rgba(79,70,229,0.25)]">
+                  Let's Work Together
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: 3 Parallel Skewed Stat Cards Layout */}
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 w-full pt-6 lg:pt-0">
+              
+              {/* Custom Parallel Trapezoidal Angle Mask Rule */}
+              <style dangerouslySetInnerHTML={{__html: `
+                .parallel-card-skew {
+                  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+                }
+                @media (max-width: 768px) {
+                  .parallel-card-skew { clip-path: none; border-radius: 24px; }
+                }
+              `}} />
+
+              {/* CARD 1: Client Satisfaction */}
+              <div 
+                className="parallel-card-skew bg-[#0E0B1E]/80 backdrop-blur-md border border-slate-800/80 hover:border-indigo-500/40 transition-all duration-300 p-8 pt-12 min-h-[300px] flex flex-col justify-start text-left group shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              >
+                <div className="w-11 h-11 rounded-xl bg-indigo-950/60 border border-indigo-800/30 text-indigo-400 flex items-center justify-center mb-6 shadow-inner">
+                  <Award size={20} />
+                </div>
+                <h3 className="text-4xl font-extrabold text-slate-100 tracking-tight mb-1">98%</h3>
+                <h4 className="text-xs font-bold text-slate-300 tracking-wide uppercase mb-3">Client Satisfaction</h4>
+                <p className="text-[11px] text-slate-400 font-light leading-relaxed">We focus on delivering results that exceed expectations.</p>
+              </div>
+
+              {/* CARD 2: Projects Delivered */}
+              <div 
+                className="parallel-card-skew bg-[#0E0B1E]/80 backdrop-blur-md border border-slate-800/80 hover:border-indigo-500/40 transition-all duration-300 p-8 pt-12 min-h-[300px] flex flex-col justify-start text-left group shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              >
+                <div className="w-11 h-11 rounded-xl bg-indigo-950/60 border border-indigo-800/30 text-indigo-400 flex items-center justify-center mb-6 shadow-inner">
+                  <ShieldCheck size={20} />
+                </div>
+                <h3 className="text-4xl font-extrabold text-slate-100 tracking-tight mb-1">120+</h3>
+                <h4 className="text-xs font-bold text-slate-300 tracking-wide uppercase mb-3">Projects Delivered</h4>
+                <p className="text-[11px] text-slate-400 font-light leading-relaxed">Successfully completed projects across various industries.</p>
+              </div>
+
+              {/* CARD 3: Years Experience */}
+              <div 
+                className="parallel-card-skew bg-[#0E0B1E]/80 backdrop-blur-md border border-slate-800/80 hover:border-indigo-500/40 transition-all duration-300 p-8 pt-12 min-h-[300px] flex flex-col justify-start text-left group shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative"
+              >
+                {/* Corner Decorative Vector Sparkle Star Flare */}
+                <div className="absolute top-4 right-8 text-indigo-400 opacity-80 animate-pulse hidden md:block">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                    <path d="M12,0 L14,10 L24,12 L14,14 L12,24 L10,14 L0,12 L10,10 Z" fill="currentColor" className="drop-shadow-[0_0_8px_#818CF8]" />
+                  </svg>
+                </div>
+
+                <div className="w-11 h-11 rounded-xl bg-indigo-950/60 border border-indigo-800/30 text-indigo-400 flex items-center justify-center mb-6 shadow-inner">
+                  <Terminal size={19} />
+                </div>
+                <h3 className="text-4xl font-extrabold text-slate-100 tracking-tight mb-1">10+</h3>
+                <h4 className="text-xs font-bold text-slate-300 tracking-wide uppercase mb-3">Years Experience</h4>
+                <p className="text-[11px] text-slate-400 font-light leading-relaxed">Delivering high-quality digital solutions with proven expertise.</p>
+              </div>
+
+            </div>
+          </div>
         </section>
 
       {/* WHY CHOOSE US */}
