@@ -558,8 +558,6 @@ export default function WebDevelopmentPage() {
             className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/20 blur-[100px] rounded-full"
           />
 
-          <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
-
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
