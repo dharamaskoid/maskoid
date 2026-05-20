@@ -33,34 +33,6 @@ import {
 
 
 
-const solutions = [
-  {
-    icon: <MonitorSmartphone size={34} />,
-    title: "Custom Websites",
-    text: "Tailored websites designed to reflect your brand and engage your audience.",
-  },
-  {
-    icon: <ShoppingCart size={34} />,
-    title: "E-Commerce",
-    text: "Powerful online stores that drive sales and customer satisfaction.",
-  },
-  {
-    icon: <Layers3 size={34} />,
-    title: "Web Applications",
-    text: "Scalable web applications that streamline processes and boost productivity.",
-  },
-  {
-    icon: <Database size={34} />,
-    title: "CMS Solutions",
-    text: "Easy-to-manage CMS websites that give you full control.",
-  },
-  {
-    icon: <Waypoints size={34} />,
-    title: "API Development",
-    text: "Secure and reliable APIs to connect your systems seamlessly.",
-  },
-];
-
 const fadeUp = {
   hidden: {
     opacity: 0,
@@ -83,38 +55,7 @@ const stagger = {
     },
   },
 };
-const solutionsList = [
-  {
-    icon: <Globe size={20} />,
-    title: "Custom Websites",
-    desc: "Tailored websites designed to reflect your brand and engage your audience.",
-    img: "/images/web-ui-1.jpg"
-  },
-  {
-    icon: <ShoppingCart size={20} />,
-    title: "E-Commerce",
-    desc: "Powerful online stores that drive sales and customer satisfaction.",
-    img: "/images/web-ui-2.jpg"
-  },
-  {
-    icon: <Layers size={20} />,
-    title: "Web Applications",
-    desc: "Scalable web applications that streamline processes and boost productivity.",
-    img: "/images/web-ui-3.jpg"
-  },
-  {
-    icon: <Code2 size={20} />,
-    title: "API Development",
-    desc: "Secure and reliable APIs to connect your systems seamlessly.",
-    img: "/images/web-ui-4.jpg"
-  },
-  {
-    icon: <Server size={20} />,
-    title: "CMS Solutions",
-    desc: "Easy-to-manage CMS websites that give you full control.",
-    img: "/images/web-ui-5.jpg"
-  }
-];
+
 const solution = [
   {
     icon: <MonitorSmartphone size={22} />,
@@ -524,7 +465,6 @@ export default function WebDevelopmentPage() {
 
         </div>
       </section>
-
 
       {/* WHY CHOOSE US */}
       <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
