@@ -428,7 +428,7 @@ export default function WebDevelopmentPage() {
                       {item.icon}
                     </div>
                     <div className="space-y-1.5 flex-1">
-                      <h3 className="text-lg font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
+                      <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-gray-500 font-light leading-relaxed">
@@ -450,7 +450,7 @@ export default function WebDevelopmentPage() {
                       {item.icon}
                     </div>
                     <div className="space-y-1.5 flex-1">
-                      <h3 className="text-lg font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
+                      <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-gray-500 font-light leading-relaxed">
