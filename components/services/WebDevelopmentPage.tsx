@@ -431,7 +431,7 @@ export default function WebDevelopmentPage() {
                       <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
+                      <p className="text-gray-500 font-light leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
