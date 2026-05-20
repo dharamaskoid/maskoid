@@ -328,16 +328,12 @@ export default function WebDevelopmentPage() {
                 "
               >
 
-
                 {/* HOVER GLOW */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
-
                   <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
 
-
                 </div>
-
 
                 {/* ICON */}
                 <motion.div
@@ -364,12 +360,10 @@ export default function WebDevelopmentPage() {
                   {item.icon}
                 </motion.div>
 
-
                 {/* TITLE */}
                 <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
                   {item.title}
                 </h3>
-
 
                 {/* TEXT */}
                 <p className="relative z-10 mt-4 text-gray-500 leading-relaxed">
