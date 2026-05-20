@@ -440,7 +440,11 @@ export default function WebDevelopmentPage() {
                 className="bg-white p-6 shadow-xl" 
                 style={{ clipPath: 'polygon(15% 0%, 85% 0%, 100% 25%, 100% 75%, 85% 100%, 15% 100%, 0% 75%, 0% 25%)' }}
               >
-                {/* Card Content */}
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <Globe size={20} strokeWidth={2.5} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Business Websites</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
               </div>
               {/* Card 2: Custom Development - Broad, wide centered premium shield container */}
               <clipPath id="mask-custom-dev" clipPathUnits="objectBoundingBox">
