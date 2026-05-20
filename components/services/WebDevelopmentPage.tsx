@@ -474,32 +474,53 @@ export default function WebDevelopmentPage() {
 
 
           {/* CONTENT ROW LIST LAYOUT (No Boxes, 2 Columns per item, No Arrows) */}
-          <div className="flex flex-col w-full border-t border-gray-200/60">
-            {solution.map((item, index) => (
-              <div 
-                key={index}
-                className="group grid grid-cols-1 md:grid-cols-2 items-start md:items-center py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-4 md:gap-8"
-              >
-                {/* COLUMN 1: Icon & Title */}
-                <div className="flex items-center gap-6 text-left">
-                  <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
-                    {item.icon}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
+              
+              {/* LEFT COLUMN: Contains the First 3 Items */}
+              <div className="flex flex-col w-full border-t border-gray-200/60">
+                {solution.slice(0, 3).map((item, index) => (
+                  <div 
+                    key={index}
+                    className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
+                      {item.icon}
+                    </div>
+                    <div className="space-y-1.5 flex-1">
+                      <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
-                    {item.title}
-                  </h3>
-                </div>
-
-                {/* COLUMN 2: Description Paragraph */}
-                <div className="text-left">
-                  <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-
+                ))}
               </div>
-            ))}
-          </div>
+
+              {/* RIGHT COLUMN: Contains the Remaining 2 Items */}
+              <div className="flex flex-col w-full md:border-t border-gray-200/60 mt-0">
+                {solution.slice(3, 5).map((item, index) => (
+                  <div 
+                    key={index}
+                    className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
+                      {item.icon}
+                    </div>
+                    <div className="space-y-1.5 flex-1">
+                      <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
 
         </div>
       </section>
