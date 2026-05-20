@@ -532,11 +532,33 @@ export default function WebDevelopmentPage() {
         {/* BG EFFECTS */}
         <div className="absolute inset-0 pointer-events-none">
 
-          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+          <motion.div
+            animate={{
+              scale: [1, 1.15, 1],
+              opacity: [0.15, 0.3, 0.15],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[100px] rounded-full"
+          />
 
-          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+          <motion.div
+            animate={{
+              scale: [1.1, 1, 1.1],
+              opacity: [0.2, 0.35, 0.2],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/20 blur-[100px] rounded-full"
+          />
 
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+          <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
         </div>
 
@@ -552,16 +574,16 @@ export default function WebDevelopmentPage() {
               variants={fadeUp}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-xl">
                 Why Choose Us
               </p>
 
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
                 Trusted Digital Partner
-                <span className="text-[#2b4c9a]"> For Modern Brands</span>
+                <span className="text-[#6EA8FF]"> For Modern Brands</span>
               </h2>
 
-              <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
                 We create premium digital experiences with modern technologies,
                 performance-driven strategies, and scalable solutions designed
                 for business growth.
@@ -605,42 +627,51 @@ export default function WebDevelopmentPage() {
                   key={index}
                   variants={fadeUp}
                   whileHover={{
-                    x: 10,
+                    x: 12,
                   }}
                   transition={{
-                    duration: 0.3,
+                    duration: 0.35,
                   }}
-                  className="group flex items-start gap-6 pb-8 border-b border-[#dbe7ff]"
+                  className="group flex items-start gap-6 pb-8 border-b border-white/10"
                 >
 
                   {/* NUMBER */}
                   <div className="flex-shrink-0">
 
-                    <div className="w-16 h-16 rounded-2xl bg-white border border-[#dbe7ff] shadow-[0_10px_30px_rgba(43,76,154,0.06)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500">
+                    <motion.div
+                      whileHover={{
+                        scale: 1.08,
+                        rotate: 4,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 220,
+                      }}
+                      className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500"
+                    >
 
-                      <span className="text-xl font-bold text-[#2b4c9a] group-hover:text-white transition-all duration-500">
+                      <span className="text-xl font-bold text-[#6EA8FF] group-hover:text-white transition-all duration-500">
                         {item.number}
                       </span>
 
-                    </div>
+                    </motion.div>
 
                   </div>
 
                   {/* CONTENT */}
                   <div>
 
-                    <h3 className="text-2xl font-bold text-[#1a2e5e]">
+                    <h3 className="text-2xl font-bold text-white">
                       {item.title}
                     </h3>
 
-                    <p className="mt-3 text-gray-500 leading-relaxed">
+                    <p className="mt-3 text-[#B7C2D8] leading-relaxed">
                       {item.text}
                     </p>
 
                   </div>
 
                 </motion.div>
-
 
               ))}
 
@@ -650,7 +681,7 @@ export default function WebDevelopmentPage() {
 
         </div>
 
-      </section>          
+      </section>      
 
       {/* OUR PROCESS */}
       <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
