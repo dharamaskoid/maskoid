@@ -799,7 +799,7 @@ export default function WebDevelopmentPage() {
 
 
       {/* TECHNOLOGIES WE USE */}
-      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-20 px-6 flex items-center">
+      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 px-6 flex items-center">
       
         <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
           
