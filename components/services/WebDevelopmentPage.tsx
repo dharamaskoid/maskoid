@@ -495,7 +495,16 @@ export default function WebDevelopmentPage() {
 
             {/* 3. RIGHT COLUMN: PIXEL-PERFECT INTERLOCKING HARDCODED CLUSTER */}
             <div className="lg:col-span-8 relative w-full h-[850px] sm:h-[720px] lg:h-[680px] mt-12 lg:mt-0 flex flex-wrap lg:block justify-center gap-4">
-     
+              <div 
+                className="bg-white p-6 shadow-xl" 
+                style={{ clipPath: 'polygon(412,130,418,118,643,62,724,21,816,50,825,78,804,239,797,248,731,258,652,194,638,74)' }}
+              >
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <Globe size={20} strokeWidth={2.5} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Business Websites</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
+              </div>
               {/* CARD 1: Business Websites (Bottom Left) */}
               <div 
                 style={{ clipPath: 'url(#mask-business)' }}
