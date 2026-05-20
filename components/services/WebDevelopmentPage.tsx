@@ -278,189 +278,151 @@ export default function WebDevelopmentPage() {
         </section>
       
       {/* OUR SERVICES */}
-        <section className="relative overflow-hidden bg-white py-16 md:py-20">
-
-          {/* BG LIGHT */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full"></div>
-
-          <div className="container mx-auto px-6 relative z-10">
-
-            <div className="grid lg:grid-cols-2 gap-14 items-center">
-
-              {/* LEFT */}
+      <section className="relative py-16 px-6 overflow-hidden">
+        {/* BG PATTERN */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        {/* GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+        <div className="container mx-auto relative z-10">
+            {/* HEADER */}
               <motion.div
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
+                className="text-center max-w-3xl mx-auto"
               >
-
-                <p className="inline-flex px-5 py-2 rounded-full bg-[#EEF4FF] border border-[#dbe7ff] text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                  Our Services
+                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                  Core Services
                 </p>
-
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#071739] leading-tight">
-                  Creative Solutions
-                  <span className="block text-[#3B82F6]">
-                    For Modern Brands
-                  </span>
+                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                  Premium Digital Experiences
+                  <span className="text-[#2b4c9a]"> Built For Growth</span>
                 </h2>
-
-                <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
-                  We create fast, scalable, and result-driven digital
-                  experiences for modern businesses.
-                </p>
-
-                {/* PLANT IMAGE */}
-                <motion.div
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="mt-16"
-                >
-
-                  <img
-                    src="/images/plant.png"
-                    alt="Plant"
-                    className="w-[220px] object-contain"
-                  />
-
-                </motion.div>
-
               </motion.div>
 
-              {/* RIGHT */}
+          {/* GRID */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
+
+            {[
+              {
+                icon: <Globe size={30} />,
+                title: "Business Websites",
+              },
+              {
+                icon: <ShoppingCart size={30} />,
+                title: "E-Commerce",
+              },
+              {
+                icon: <MonitorSmartphone size={30} />,
+                title: "Responsive Design",
+              },
+              {
+                icon: <Code2 size={30} />,
+                title: "Custom Development",
+              },
+              {
+                icon: <Search size={30} />,
+                title: "SEO Optimized",
+              },
+              {
+                icon: <Rocket size={30} />,
+                title: "Performance Focused",
+              },
+            ].map((item, index) => (
+
+
               <motion.div
-                initial="hidden"
-                whileInView="show"
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                variants={fadeUp}
-                className="relative"
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.08,
+                }}
+                whileHover={{
+                  y: -12,
+                  scale: 1.02,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[28px]
+                  border border-[#dbe7ff]
+                  bg-white
+                  p-6
+                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
+                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
+                  transition-all duration-500
+                "
               >
 
-                {/* CENTER CARD */}
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+
+                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+
+                </div>
+
+
+                {/* ICON */}
                 <motion.div
-                  whileHover={{ y: -10 }}
-                  className="relative z-20 mx-auto w-[280px] md:w-[320px] rounded-[38px] overflow-hidden bg-[#0B1D51] border border-white/10 shadow-[0_30px_80px_rgba(43,76,154,0.25)]"
-                >
-
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.25),transparent_70%)]"></div>
-
-                  <div className="relative z-10 p-10">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-white flex items-center justify-center">
-                      <Code2 size={34} />
-                    </div>
-
-                    <h3 className="mt-8 text-3xl font-bold text-white leading-snug">
-                      Custom
-                      <span className="block">
-                        Development
-                      </span>
-                    </h3>
-
-                    <p className="mt-5 text-[#B7C2D8] leading-relaxed">
-                      Tailored solutions built with modern technologies for unique business needs.
-                    </p>
-
-                  </div>
-
-                </motion.div>
-
-                {/* FLOATING CARDS */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
                   }}
-                  className="absolute top-0 right-0 rotate-[10deg]"
-                >
-
-                  <div className="w-[220px] rounded-[32px] bg-white border border-[#dbe7ff] p-8 shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
-
-                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                      <ShoppingCart size={28} />
-                    </div>
-
-                    <h3 className="mt-6 text-2xl font-bold text-[#071739]">
-                      E-Commerce
-                    </h3>
-
-                    <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                      Powerful online stores that drive sales and customer engagement.
-                    </p>
-
-                  </div>
-
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
                   transition={{
-                    duration: 5,
-                    repeat: Infinity,
+                    type: "spring",
+                    stiffness: 220,
                   }}
-                  className="absolute bottom-0 left-0 -rotate-[10deg]"
+                  className="
+                    relative z-10
+                    w-16 h-16
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
+                  "
                 >
-
-                  <div className="w-[220px] rounded-[32px] bg-white border border-[#dbe7ff] p-8 shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
-
-                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                      <Globe size={28} />
-                    </div>
-
-                    <h3 className="mt-6 text-2xl font-bold text-[#071739]">
-                      Business
-                      Websites
-                    </h3>
-
-                    <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                      Modern websites tailored for your business growth and branding.
-                    </p>
-
-                  </div>
-
+                  {item.icon}
                 </motion.div>
 
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 4.5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute bottom-10 right-0 rotate-[8deg]"
-                >
 
-                  <div className="w-[220px] rounded-[32px] bg-white border border-[#dbe7ff] p-8 shadow-[0_20px_60px_rgba(43,76,154,0.08)]">
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
+                  {item.title}
+                </h3>
 
-                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                      <Rocket size={28} />
-                    </div>
 
-                    <h3 className="mt-6 text-2xl font-bold text-[#071739]">
-                      Performance
-                      Focused
-                    </h3>
+                {/* TEXT */}
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
+                  Premium scalable digital solutions tailored for your business goals.
+                </p>
 
-                    <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                      Optimized digital products focused on speed and conversions.
-                    </p>
-
-                  </div>
-
-                </motion.div>
 
               </motion.div>
 
-            </div>
+
+            ))}
+
 
           </div>
 
-        </section>
+
+        </div>
+
+
+      </section>
+
 
       {/* OUR SOLUTIONS */}
         <section className="relative overflow-hidden bg-[#F8FAFF] py-16 md:py-20">
