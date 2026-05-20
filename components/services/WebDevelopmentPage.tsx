@@ -27,6 +27,7 @@ import {
   Award, 
   Terminal,
   Layers,
+  Shield,
 } from "lucide-react";
 
 
