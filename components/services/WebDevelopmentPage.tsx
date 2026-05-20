@@ -418,7 +418,7 @@ export default function WebDevelopmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
               
               {/* LEFT COLUMN: Contains the First 3 Items */}
-              <div className="flex flex-col w-full border-t border-gray-200/60">
+              <div className="flex flex-col w-full">
                 {solution.slice(0, 3).map((item, index) => (
                   <div 
                     key={index}
@@ -440,7 +440,7 @@ export default function WebDevelopmentPage() {
               </div>
 
               {/* RIGHT COLUMN: Contains the Remaining 2 Items */}
-              <div className="flex flex-col w-full md:border-t border-gray-200/60 mt-0">
+              <div className="flex flex-col w-full mt-0">
                 {solution.slice(3, 5).map((item, index) => (
                   <div 
                     key={index}
