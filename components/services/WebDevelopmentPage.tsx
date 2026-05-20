@@ -1001,14 +1001,12 @@ export default function WebDevelopmentPage() {
                   relative
                   overflow-hidden
                   flex items-center gap-3
-                  bg-[#0A0520]/80
+                  bg-[#1a2e5e]
                   backdrop-blur-xl
                   border border-slate-800/80
-                  hover:border-indigo-500/40
                   rounded-xl
                   px-5 py-3.5
                   w-40 h-14
-                  shadow-[0_4px_25px_rgba(0,0,0,0.5)]
                   transition-all duration-500
                   ${item.position}
                 `}
