@@ -806,6 +806,7 @@ export default function WebDevelopmentPage() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
+            className="max-w-md"
           >
 
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
