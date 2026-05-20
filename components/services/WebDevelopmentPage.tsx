@@ -29,6 +29,7 @@ import {
   Layers,
   Shield,
   ArrowUpRight,
+  TrendingUp,
 } from "lucide-react";
 
 
@@ -443,91 +444,133 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* OUR SOLUTIONS */}      
-      <section className="relative bg-[#F8FAFF] py-16 px-6 overflow-hidden">
-        
-        {/* Soft Light Blur Accents in Background */}
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <section className="relative w-full bg-[#050214] text-white py-24 px-6 md:px-16 font-sans overflow-hidden">
+      
+          {/* Aurora Liquid Gradient Noise Backdrops */}
+          <div className="absolute inset-0 pointer-events-none z-0 opacity-40">
+            <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-blue-600/20 via-indigo-600/10 to-transparent blur-[140px] rounded-full"></div>
+            <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-purple-600/15 via-pink-600/10 to-transparent blur-[120px] rounded-full"></div>
+          </div>
 
-        <div className="container mx-auto relative z-10 max-w-5xl">
-
-          {/* HEADER */}
-          <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="text-center max-w-3xl mx-auto"
-          >
-            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
-              Our Solutions
-            </p>
-            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              Digital Solutions That
-              <span className="text-[#2b4c9a]"> Create Real Impact</span>
-            </h2>
-
-            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-            We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
-            </p>
-          </motion.div>
-
-
-          {/* CONTENT LAYOUT: Row 1 (3 Solutions) / Row 2 (2 Solutions) */}
-          <div className="w-full flex flex-col space-y-8 lg:space-y-12">
+          <div className="container mx-auto relative z-10 w-full max-w-7xl">
             
-            {/* ROW 1: Contains the First 3 Items */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
-              {solution.slice(0, 3).map((item, index) => (
-                <div 
-                  key={index}
-                  className="group flex flex-col items-start p-6 bg-white/50 backdrop-blur-sm border border-gray-200/60 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_15px_30px_rgba(59,130,246,0.04)] cursor-pointer text-left h-full"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-[#F0F4FF] text-blue-600 flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 mb-4 shadow-inner">
-                    {item.icon}
-                  </div>
-                  <div className="space-y-2 flex-1">
-                    <h3 className="text-base font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            {/* ASYMMETRIC HEADER SYSTEM */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+              <div className="lg:col-span-7 flex flex-col space-y-4 text-left">
+                <span className="text-[10px] uppercase tracking-[0.3em] font-extrabold text-indigo-400 bg-indigo-950/40 border border-indigo-900/40 px-4 py-1.5 rounded-full w-fit backdrop-blur-md shadow-lg">
+                  Our Services Suite
+                </span>
+                <h2 className="text-4xl md:text-[50px] font-black tracking-tight leading-[1.1] text-slate-100">
+                  Web Architecture <br />
+                  Built to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Dominate Markets</span>
+                </h2>
+              </div>
+              <div className="lg:col-span-5 text-left lg:text-right pb-2">
+                <p className="text-sm md:text-base text-slate-400 font-light leading-relaxed max-w-md lg:ml-auto">
+                  We replace common box templates with data-engineered system frameworks designed to elevate scaling limits and drive high conversions.
+                </p>
+              </div>
             </div>
 
-            {/* ROW 2: Contains the Remaining 2 Items (Centered horizontally on desktop) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full lg:justify-center">
+            {/* PREMIUM BENTO GRID ECOSYSTEM */}
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-6 auto-rows-[230px]">
               
-              {/* Transparent spacer token layer to offset grid for true horizontal centering on desktop */}
-              <div className="hidden lg:block pointer-events-none" />
-
-              {solution.slice(3, 5).map((item, index) => (
-                <div 
-                  key={index}
-                  className="group flex flex-col items-start p-6 bg-white/50 backdrop-blur-sm border border-gray-200/60 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_15px_30px_rgba(59,130,246,0.04)] cursor-pointer text-left h-full"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-[#F0F4FF] text-blue-600 flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 mb-4 shadow-inner">
-                    {item.icon}
+              {/* CARD 1: Custom Websites (Long Horizontal Grid Span) */}
+              <div className="lg:col-span-7 row-span-2 bg-gradient-to-br from-[#120B2E] via-[#090518] to-[#04020A] border border-slate-800/80 hover:border-blue-500/40 rounded-[32px] p-8 flex flex-col justify-between group transition-all duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.4)] relative overflow-hidden">
+                <div className="flex justify-between items-start">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-950/60 border border-blue-800/40 text-blue-400 flex items-center justify-center shadow-inner">
+                    <MonitorSmartphone size={22} />
                   </div>
-                  <div className="space-y-2 flex-1">
-                    <h3 className="text-base font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
+                  <span className="text-[10px] uppercase font-mono tracking-widest text-slate-500 bg-slate-900/50 px-3 py-1 rounded-md border border-slate-800/40">Core Suite</span>
                 </div>
-              ))}
+
+                {/* Micro UI: Predictive Optimization Curve Graph */}
+                <div className="my-4 h-24 flex items-end gap-2 border-b border-slate-800/60 pb-2 relative">
+                  <div className="w-full bg-slate-800/20 h-[30%] rounded-md group-hover:bg-blue-600/20 transition-all duration-700"></div>
+                  <div className="w-full bg-slate-800/40 h-[45%] rounded-md group-hover:bg-blue-600/30 transition-all duration-700"></div>
+                  <div className="w-full bg-blue-500/20 h-[65%] rounded-md group-hover:h-[80%] transition-all duration-700 relative">
+                    <div className="absolute top-[-25px] left-1/2 -translate-x-1/2 text-[9px] font-mono text-blue-400 bg-blue-950 px-1.5 py-0.5 rounded border border-blue-800/40 opacity-0 group-hover:opacity-100 transition-opacity">+98%</div>
+                  </div>
+                  <div className="w-full bg-gradient-to-t from-blue-600 to-indigo-500 h-[75%] rounded-md group-hover:h-[95%] transition-all duration-700 shadow-[0_0_15px_rgba(59,130,246,0.4)]"></div>
+                </div>
+
+                <div className="text-left">
+                  <h3 className="text-xl font-bold text-slate-100 tracking-tight mb-2 group-hover:text-blue-400 transition-colors">Custom Websites</h3>
+                  <p className="text-xs md:text-sm text-slate-400 font-light leading-relaxed max-w-xl">
+                    Tailored web layouts designed to reflect your premium brand identity. We construct semantic interface code engineered for accessibility and search visibility.
+                  </p>
+                </div>
+              </div>
+
+              {/* CARD 2: E-Commerce (Vertical Tall Block Showcase) */}
+              <div className="lg:col-span-5 row-span-2 bg-gradient-to-b from-[#180A2B] via-[#0C0517] to-[#04020B] border border-slate-800/80 hover:border-purple-500/40 rounded-[32px] p-8 flex flex-col justify-between group transition-all duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.4)] relative overflow-hidden">
+                
+                {/* Micro UI: Multi-layer Checkout Data Indicators */}
+                <div className="relative w-full h-32 overflow-hidden rounded-2xl bg-black/40 border border-slate-900/60 p-4 flex items-center justify-center">
+                  <div className="absolute left-4 top-4 bg-[#1e113a] border border-purple-900/40 p-2.5 rounded-xl flex items-center gap-2 rotate-[-6deg] shadow-lg group-hover:rotate-[-2deg] transition-transform duration-500">
+                    <TrendingUp size={12} className="text-purple-400" />
+                    <span className="text-[10px] font-mono font-bold text-slate-200">Conversion Max</span>
+                  </div>
+                  <div className="w-14 h-14 rounded-full border border-dashed border-purple-500/30 flex items-center justify-center animate-spin" style={{ animationDuration: '15s' }}></div>
+                </div>
+
+                <div className="text-left mt-6">
+                  <div className="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-800/40 text-purple-400 flex items-center justify-center mb-6 shadow-inner group-hover:text-purple-300 transition-colors">
+                    <ShoppingCart size={22} />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-100 tracking-tight mb-2 group-hover:text-purple-300 transition-colors">E-Commerce Ecosystems</h3>
+                  <p className="text-xs md:text-sm text-slate-400 font-light leading-relaxed">
+                    Powerful online stores focused on lightning checkout flows. We use unified database storage matrices to maintain absolute inventory integrity across global regional networks.
+                  </p>
+                </div>
+              </div>
+
+              {/* CARD 3: Web Applications (Compact Box) */}
+              <div className="lg:col-span-4 row-span-1 bg-gradient-to-br from-[#0B122E] via-[#050918] to-[#02040B] border border-slate-800/80 hover:border-indigo-500/40 rounded-[32px] p-6 flex flex-col justify-between group transition-all duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.4)] cursor-pointer">
+                <div className="flex justify-between items-center">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-950/60 border border-indigo-800/40 text-indigo-400 flex items-center justify-center shadow-inner">
+                    <Layers size={18} />
+                  </div>
+                  <ArrowUpRight size={16} className="text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
+                <div className="text-left mt-2">
+                  <h3 className="text-base font-bold text-slate-100 tracking-tight mb-1">Web Applications</h3>
+                  <p className="text-[11px] text-slate-400 font-light leading-relaxed">Advanced enterprise applications architecture engineered to scale computing metrics effortlessly.</p>
+                </div>
+              </div>
+
+              {/* CARD 4: CMS Solutions (Compact Box) */}
+              <div className="lg:col-span-4 row-span-1 bg-gradient-to-br from-[#120B2E] via-[#090518] to-[#04020A] border border-slate-800/80 hover:border-blue-500/40 rounded-[32px] p-6 flex flex-col justify-between group transition-all duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.4)] cursor-pointer">
+                <div className="flex justify-between items-center">
+                  <div className="w-10 h-10 rounded-xl bg-blue-950/60 border border-blue-800/40 text-blue-400 flex items-center justify-center shadow-inner">
+                    <Database size={18} />
+                  </div>
+                  <span className="text-[9px] font-mono text-blue-400 font-bold bg-blue-950/50 px-2 py-0.5 rounded border border-blue-900/30">Headless</span>
+                </div>
+                <div className="text-left mt-2">
+                  <h3 className="text-base font-bold text-slate-100 tracking-tight mb-1">CMS Solutions</h3>
+                  <p className="text-[11px] text-slate-400 font-light leading-relaxed">Custom administrative frameworks providing rapid content modifications without breaking system builds.</p>
+                </div>
+              </div>
+
+              {/* CARD 5: API Development (Compact Box) */}
+              <div className="lg:col-span-4 row-span-1 bg-gradient-to-br from-[#1A0A22] via-[#0D0512] to-[#05020A] border border-slate-800/80 hover:border-purple-500/40 rounded-[32px] p-6 flex flex-col justify-between group transition-all duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.4)] cursor-pointer">
+                <div className="flex justify-between items-center">
+                  <div className="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-800/40 text-purple-400 flex items-center justify-center shadow-inner">
+                    <Code2 size={18} />
+                  </div>
+                  <Shield size={14} className="text-purple-400/70" />
+                </div>
+                <div className="text-left mt-2">
+                  <h3 className="text-base font-bold text-slate-100 tracking-tight mb-1">API Development</h3>
+                  <p className="text-[11px] text-slate-400 font-light leading-relaxed">Restful security configurations constructed to exchange platform dataset operations instantly.</p>
+                </div>
+              </div>
+
             </div>
 
           </div>
-
-        </div>
-      </section>
+        </section>
 
       {/* WHY CHOOSE US */}
       <section className="relative w-full min-h-[600px] bg-[#020410] text-white overflow-hidden py-20 px-6 md:px-16 font-sans flex items-center">
