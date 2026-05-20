@@ -10,25 +10,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import {
-  ArrowRight,
   Globe,
   MonitorSmartphone,
   Search,
   ShoppingCart,
   Layers3,
-  ShieldCheck,
   Rocket,
   Code2,
   PenTool,
   Database,
-  Waypoints,
   Atom,
   Server, 
-  Award, 
-  Terminal,
   Layers,
-  Shield,
-  ArrowUpRight,
 } from "lucide-react";
 
 
@@ -278,26 +271,32 @@ export default function WebDevelopmentPage() {
               {
                 icon: <Globe size={30} />,
                 title: "Business Websites",
+                text: "Custom business websites designed to strengthen your online presence and drive customer engagement.",
               },
               {
                 icon: <ShoppingCart size={30} />,
                 title: "E-Commerce",
+                text: "Scalable eCommerce solutions with secure payments, seamless shopping experiences, and high conversions.",
               },
               {
                 icon: <MonitorSmartphone size={30} />,
                 title: "Responsive Design",
+                text: "Mobile-first responsive designs optimized for flawless experiences across all devices and screen sizes.",
               },
               {
                 icon: <Code2 size={30} />,
                 title: "Custom Development",
+                text: "Tailored web applications and advanced functionalities built specifically for your business workflows.",
               },
               {
                 icon: <Search size={30} />,
                 title: "SEO Optimized",
+                text: "Performance-focused websites optimized for search engines to improve rankings and organic visibility.",
               },
               {
                 icon: <Rocket size={30} />,
                 title: "Performance Focused",
+                text: "Fast-loading, scalable, and secure web solutions engineered for speed, growth, and user satisfaction.",
               },
             ].map((item, index) => (
 
@@ -373,8 +372,8 @@ export default function WebDevelopmentPage() {
 
 
                 {/* TEXT */}
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
-                  Premium scalable digital solutions tailored for your business goals.
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed">
+                  {item.text}
                 </p>
 
               </motion.div>
