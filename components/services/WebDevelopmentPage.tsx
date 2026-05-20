@@ -58,27 +58,27 @@ const stagger = {
 
 const solution = [
   {
-    icon: <MonitorSmartphone size={22} />,
+    icon: <MonitorSmartphone size={30} />,
     title: "Custom Websites",
     desc: "Tailored websites designed to reflect your brand identity and engage your targeted audience seamlessly.",
   },
   {
-    icon: <ShoppingCart size={22} />,
+    icon: <ShoppingCart size={30} />,
     title: "E-Commerce",
     desc: "Powerful, high-conversion online stores built to optimize sales workflows and drive customer satisfaction.",
   },
   {
-    icon: <Layers size={22} />,
+    icon: <Layers size={30} />,
     title: "Web Applications",
     desc: "Scalable enterprise web applications designed to streamline internal processes and boost productivity.",
   },
   {
-    icon: <Database size={22} />,
+    icon: <Database size={30} />,
     title: "CMS Solutions",
     desc: "Easy-to-manage, customizable content management websites that grant you complete operational control.",
   },
   {
-    icon: <Code2 size={22} />,
+    icon: <Code2 size={30} />,
     title: "API Development",
     desc: "Secure, highly reliable, and optimized APIs built to connect your distinct software systems flawlessly.",
   }
@@ -424,11 +424,11 @@ export default function WebDevelopmentPage() {
                     key={index}
                     className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
                       {item.icon}
                     </div>
                     <div className="space-y-1.5 flex-1">
-                      <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
