@@ -427,110 +427,147 @@ export default function WebDevelopmentPage() {
 
         </section>
 
-        <section className="relative w-full min-h-[900px] bg-[#05020c] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
+        <section className="relative w-full min-h-[1000px] lg:min-h-[850px] bg-[#060311] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
       
-          {/* Background Orbits & Soft Ambient Glows */}
-          <div className="absolute inset-0 pointer-events-none opacity-30">
-            <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-dashed border-indigo-500/10 rounded-full hidden xl:block"></div>
-            <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[#1a0b45]/30 blur-[140px] rounded-full"></div>
-            <div className="absolute bottom-12 right-12 w-[450px] h-[450px] bg-[#230d4b]/20 blur-[120px] rounded-full"></div>
+          {/* 1. SVG DEFS: UNIQUE ASYMMETRICAL GEOMETRIC CLIP PATHS */}
+          <svg className="absolute w-0 h-0" width="0" height="0">
+            <defs>
+              {/* Card 1: Business Websites - Skewed heavily down and elongated towards bottom-right */}
+              <clipPath id="mask-business" clipPathUnits="objectBoundingBox">
+                <path d="M 0.22,0.15 Q 0.30,0.12 0.75,0.25 Q 0.90,0.30 0.88,0.55 Q 0.85,0.85 0.52,0.98 Q 0.38,1.00 0.15,0.72 Q 0.02,0.55 0.08,0.30 Z" />
+              </clipPath>
+              
+              {/* Card 2: Custom Development - Broad, wide centered premium shield container */}
+              <clipPath id="mask-custom-dev" clipPathUnits="objectBoundingBox">
+                <path d="M 0.40,0.03 Q 0.65,-0.03 0.92,0.08 Q 0.99,0.12 0.96,0.40 Q 0.92,0.75 0.68,0.95 Q 0.50,1.00 0.15,0.84 Q 0.00,0.76 0.02,0.42 Q 0.04,0.12 0.40,0.03 Z" />
+              </clipPath>
+              
+              {/* Card 3: E-Commerce - Tall asymmetrical pentagonal shape stretching upward */}
+              <clipPath id="mask-ecommerce" clipPathUnits="objectBoundingBox">
+                <path d="M 0.15,0.22 Q 0.50,0.00 0.80,0.14 Q 0.98,0.22 0.94,0.48 Q 0.90,0.80 0.68,0.96 Q 0.45,1.00 0.18,0.88 Q 0.00,0.80 0.04,0.50 Z" />
+              </clipPath>
+              
+              {/* Card 4: SEO Optimized - Flat, diamond-skewed downward horizontal baseline wrapper */}
+              <clipPath id="mask-seo" clipPathUnits="objectBoundingBox">
+                <path d="M 0.12,0.18 Q 0.55,0.10 0.84,0.20 Q 0.98,0.25 0.92,0.55 Q 0.85,0.90 0.60,0.98 Q 0.40,1.00 0.10,0.78 Q -0.05,0.60 0.12,0.18 Z" />
+              </clipPath>
+              
+              {/* Card 5: Performance Focused - Rightward heavy dynamic dynamic shield layout */}
+              <clipPath id="mask-performance" clipPathUnits="objectBoundingBox">
+                <path d="M 0.22,0.12 Q 0.60,0.22 0.85,0.26 Q 0.99,0.28 0.96,0.55 Q 0.92,0.88 0.62,0.98 Q 0.44,1.00 0.18,0.75 Q 0.02,0.60 0.08,0.32 Z" />
+              </clipPath>
+              
+              {/* Card 6: Responsive Design - Horizontally wide polygonal layout path */}
+              <clipPath id="mask-responsive" clipPathUnits="objectBoundingBox">
+                <path d="M 0.14,0.15 Q 0.52,0.28 0.85,0.32 Q 0.99,0.34 0.94,0.62 Q 0.88,0.94 0.58,0.98 Q 0.38,1.00 0.10,0.74 Q -0.04,0.55 0.14,0.15 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          {/* Background Graphic Elements & Ambient Orbits */}
+          <div className="absolute inset-0 pointer-events-none opacity-30 z-0">
+            <div className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-[850px] h-[850px] border border-dashed border-indigo-500/10 rounded-full hidden xl:block"></div>
+            <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[#1d0e4e]/20 blur-[150px] rounded-full"></div>
+            <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#281156]/15 blur-[130px] rounded-full"></div>
+            <div className="absolute top-20 right-1/3 text-purple-500/30 text-xs font-mono">▲</div>
+            <div className="absolute bottom-20 right-1/2 text-indigo-500/20 text-sm font-mono">▲</div>
           </div>
 
           <div className="container mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
             
-            {/* LEFT COLUMN: Header Content */}
-            <div className="lg:col-span-4 flex flex-col space-y-6 text-left w-full">
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-indigo-400 bg-indigo-950/40 border border-indigo-900/40 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
+            {/* 2. LEFT COLUMN: TYPOGRAPHY AND CONTENT */}
+            <div className="lg:col-span-4 flex flex-col space-y-5 text-left w-full self-center">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-indigo-400 bg-indigo-950/40 border border-indigo-900/30 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
                 Our Services
               </span>
               <h2 className="text-4xl md:text-[46px] font-bold tracking-tight text-slate-100 leading-[1.2]">
                 Creative Solutions <br />
-                For <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-blue-400 to-indigo-400">Modern Brands</span>
+                For <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-blue-400 to-sky-400">Modern Brands</span>
               </h2>
               <div className="relative pb-6 max-w-sm">
                 <p className="text-sm md:text-base text-slate-400 font-light leading-relaxed">
                   We create fast, scalable, and result-driven websites tailored to your business needs.
                 </p>
-                {/* Custom Painted Purple Underline */}
-                <div className="absolute bottom-0 left-0 w-44 h-[3px] bg-gradient-to-r from-purple-500 via-indigo-500 to-transparent opacity-80 blur-[0.5px] rounded-full"></div>
+                {/* Painted Neon Purple Underline Glow Effect */}
+                <div className="absolute bottom-0 left-0 w-44 h-[3px] bg-gradient-to-r from-purple-600 via-indigo-500 to-transparent opacity-90 blur-[0.8px] rounded-full"></div>
               </div>
             </div>
 
-            {/* RIGHT COLUMN: Pixel-Perfect Interlocking Asymmetrical Organic Cluster */}
-            <div className="lg:col-span-8 relative w-full h-[660px] mt-16 lg:mt-0 flex flex-wrap lg:block justify-center gap-6">
+            {/* 3. RIGHT COLUMN: PIXEL-PERFECT INTERLOCKING HARDCODED CLUSTER */}
+            <div className="lg:col-span-8 relative w-full h-[850px] sm:h-[720px] lg:h-[680px] mt-12 lg:mt-0 flex flex-wrap lg:block justify-center gap-4">
 
               {/* CARD 1: Business Websites (Bottom Left) */}
               <div 
-                style={{ borderRadius: '42% 58% 35% 65% / 45% 45% 55% 55%' }}
-                className="bg-white text-slate-800 p-8 pt-12 w-[225px] h-[230px] flex flex-col justify-start lg:absolute lg:top-[300px] lg:left-[0px] z-10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+                style={{ clipPath: 'url(#mask-business)' }}
+                className="bg-white text-slate-800 p-8 pt-14 w-[240px] h-[255px] flex flex-col justify-start lg:absolute lg:top-[310px] lg:left-[0px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
-                <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
-                  <Globe size={18} strokeWidth={2.5} />
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <Globe size={20} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-2">Business Websites</h4>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Business Websites</h4>
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
               </div>
 
-              {/* CARD 2: Custom Development (Large Deep-Purple Center Feature Card) */}
+              {/* CARD 2: Custom Development (Large Premium Centerpiece Card) */}
               <div 
-                style={{ borderRadius: '48% 52% 40% 60% / 40% 55% 45% 60%' }}
-                className="bg-gradient-to-b from-[#231253] via-[#0f072f] to-[#060315] border border-purple-500/20 shadow-[0_0_50px_rgba(147,51,234,0.22)] p-9 pt-14 w-[310px] h-[350px] flex flex-col justify-between group cursor-pointer lg:absolute lg:top-[60px] lg:left-[170px] z-30 transition-all duration-300 hover:-translate-y-1.5"
+                style={{ clipPath: 'url(#mask-custom-dev)' }}
+                className="bg-gradient-to-br from-[#231254] via-[#0f0831] to-[#060316] border border-purple-500/30 shadow-[0_0_60px_rgba(147,51,234,0.25)] p-9 pt-14 w-[335px] h-[375px] flex flex-col justify-between group cursor-pointer lg:absolute lg:top-[70px] lg:left-[170px] z-30 transition-all duration-300 hover:-translate-y-1.5"
               >
                 <div>
                   <div className="text-indigo-400 mb-5 font-mono text-2xl font-bold opacity-90">&lt;/&gt;</div>
                   <h3 className="text-xl font-bold text-slate-100 leading-snug mb-3">Custom<br />Development</h3>
                   <p className="text-xs text-slate-400 leading-relaxed font-light pr-4">Tailored solutions built with modern technologies for unique business needs.</p>
                 </div>
-                <div className="w-8 h-8 rounded-full border border-slate-800 group-hover:border-indigo-400 text-slate-500 group-hover:text-indigo-300 flex items-center justify-center transition-colors self-start mt-4">
+                <div className="w-8 h-8 rounded-full border border-slate-700 group-hover:border-indigo-400 text-slate-400 group-hover:text-indigo-300 flex items-center justify-center transition-colors self-start mt-4">
                   <ArrowRight size={14} />
                 </div>
               </div>
 
-              {/* CARD 3: E-Commerce (Top Center Overlapping Above Central Card) */}
+              {/* CARD 3: E-Commerce (Top Center Overlay) */}
               <div 
-                style={{ borderRadius: '55% 45% 45% 55% / 40% 40% 60% 60%' }}
-                className="bg-white text-slate-800 p-8 pt-12 w-[225px] h-[230px] flex flex-col justify-start lg:absolute lg:top-[-40px] lg:left-[420px] z-10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+                style={{ clipPath: 'url(#mask-ecommerce)' }}
+                className="bg-white text-slate-800 p-8 pt-14 w-[240px] h-[255px] flex flex-col justify-start lg:absolute lg:top-[-45px] lg:left-[430px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
-                <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
-                  <ShoppingCart size={18} strokeWidth={2.5} />
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <ShoppingCart size={20} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-2">E-Commerce</h4>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">E-Commerce</h4>
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Powerful online stores that drive sales and customer satisfaction.</p>
               </div>
 
-              {/* CARD 4: SEO Optimized (Bottom Center Layout Nested Under Center Card) */}
+              {/* CARD 4: SEO Optimized (Bottom Center Layout Tucked Behind Hero) */}
               <div 
-                style={{ borderRadius: '40% 60% 50% 50% / 55% 45% 55% 45%' }}
-                className="bg-white text-slate-800 p-8 pt-12 w-[225px] h-[230px] flex flex-col justify-start lg:absolute lg:top-[380px] lg:left-[350px] z-20 shadow-[0_25px_60px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+                style={{ clipPath: 'url(#mask-seo)' }}
+                className="bg-white text-slate-800 p-8 pt-14 w-[240px] h-[255px] flex flex-col justify-start lg:absolute lg:top-[380px] lg:left-[360px] z-20 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
-                <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
-                  <Search size={18} strokeWidth={2.5} />
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <Search size={20} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-2">SEO Optimized</h4>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">SEO Optimized</h4>
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Built with best SEO practices to rank higher on search.</p>
               </div>
 
-              {/* CARD 5: Performance Focused (Bottom Right Position Corner) */}
+              {/* CARD 5: Performance Focused (Bottom Right) */}
               <div 
-                style={{ borderRadius: '45% 55% 60% 40% / 40% 60% 40% 60%' }}
-                className="bg-white text-slate-800 p-8 pt-12 w-[225px] h-[230px] flex flex-col justify-start lg:absolute lg:top-[320px] lg:left-[590px] z-10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+                style={{ clipPath: 'url(#mask-performance)' }}
+                className="bg-white text-slate-800 p-8 pt-14 w-[240px] h-[255px] flex flex-col justify-start lg:absolute lg:top-[320px] lg:left-[615px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
-                <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
-                  <Rocket size={18} strokeWidth={2.5} />
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <Rocket size={20} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-2">Performance Focused</h4>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Performance Focused</h4>
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Lightning-fast websites optimized for speed and performance.</p>
               </div>
 
-              {/* CARD 6: Responsive Design (Far Right Upper Hanging Position) */}
+              {/* CARD 6: Responsive Design (Far Right Upper Position) */}
               <div 
-                style={{ borderRadius: '50% 50% 40% 60% / 45% 35% 65% 55%' }}
-                className="bg-white text-slate-800 p-8 pt-12 w-[225px] h-[230px] flex flex-col justify-start lg:absolute lg:top-[50px] lg:left-[640px] z-10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+                style={{ clipPath: 'url(#mask-responsive)' }}
+                className="bg-white text-slate-800 p-8 pt-14 w-[240px] h-[255px] flex flex-col justify-start lg:absolute lg:top-[45px] lg:left-[675px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
-                <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
-                  <MonitorSmartphone size={18} strokeWidth={2.5} />
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                  <MonitorSmartphone size={20} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-2">Responsive Design</h4>
+                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Responsive Design</h4>
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Seamless experiences across all devices and screen sizes.</p>
               </div>
 
