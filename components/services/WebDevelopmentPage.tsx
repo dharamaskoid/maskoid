@@ -798,17 +798,21 @@ export default function WebDevelopmentPage() {
 
 
       {/* TECHNOLOGIES WE USE */}
-      <section className="relative overflow-hidden bg-[#071739] py-16 md:py-20">
+      {/* TECHNOLOGIES WE USE */}
+      <section className="relative py-24 overflow-hidden bg-[#050816]">
 
-        {/* BG GLOW */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+        {/* BG EFFECTS */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#4f7cff]/20 blur-[140px] rounded-full"></div>
 
-        {/* GRID PATTERN */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
+          <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#7c3aed]/20 blur-[140px] rounded-full"></div>
 
-        <div className="container mx-auto px-6 relative z-10">
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:26px_26px]"></div>
+
+        </div>
+
+        <div className="container px-6 mx-auto relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -820,23 +824,57 @@ export default function WebDevelopmentPage() {
               variants={fadeUp}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em]">
+              <p className="inline-flex items-center px-5 py-2 rounded-full border border-[#4f7cff]/20 bg-[#4f7cff]/10 text-[#7EA6FF] text-xs font-semibold uppercase tracking-[0.25em]">
                 Technologies We Use
               </p>
 
               <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
                 Modern Technologies For
-                <span className="block text-[#6EA8FF]">
+                <span className="block text-[#7EA6FF]">
                   Modern Solutions
                 </span>
               </h2>
 
-              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We leverage cutting-edge frameworks and technologies
-                to build scalable, secure, and future-ready websites.
+              <p className="mt-6 text-[#A8B3CF] text-lg leading-relaxed max-w-xl">
+                We leverage cutting-edge frameworks and technologies to build scalable,
+                secure, and future-ready digital products.
               </p>
 
-              
+              {/* STATS */}
+              <div className="grid grid-cols-2 gap-5 mt-10">
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[24px] p-6"
+                >
+
+                  <h3 className="text-4xl font-bold text-white">
+                    10+
+                  </h3>
+
+                  <p className="mt-2 text-[#A8B3CF]">
+                    Modern Technologies
+                  </p>
+
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[24px] p-6"
+                >
+
+                  <h3 className="text-4xl font-bold text-white">
+                    100%
+                  </h3>
+
+                  <p className="mt-2 text-[#A8B3CF]">
+                    Scalable Solutions
+                  </p>
+
+                </motion.div>
+
+              </div>
+
             </motion.div>
 
             {/* RIGHT TECHNOLOGY STACK */}
@@ -848,90 +886,132 @@ export default function WebDevelopmentPage() {
               className="relative flex items-center justify-center"
             >
 
-              {/* BACKGROUND GLOW */}
-              <div className="absolute w-[480px] h-[480px] bg-blue-500/10 blur-[140px] rounded-full" />
+              {/* CENTER GLOW */}
+              <div className="absolute w-[420px] h-[420px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
-              {/* MAIN WRAPPER */}
-              <div className="relative w-full max-w-[620px] h-[440px] flex items-center justify-center">
+              {/* OUTER RING */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 40,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="relative w-[520px] h-[520px] flex items-center justify-center"
+              >
 
-                {/* CENTER CORE */}
+                <div className="absolute inset-0 rounded-full border border-[#4f7cff]/20"></div>
+
+                {/* FLOATING LINE */}
+                <div className="absolute inset-10 rounded-full border border-dashed border-[#4f7cff]/20"></div>
+
+                {/* CENTER IMAGE */}
                 <motion.div
-                  animate={{ y: [0, -12, 0] }}
+                  animate={{
+                    y: [0, -12, 0],
+                  }}
                   transition={{
-                    duration: 6,
+                    duration: 5,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="relative z-20 w-[190px] h-[190px] rounded-full 
-                  bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#1E40AF]
-                  flex items-center justify-center 
-                  shadow-[0_0_90px_rgba(37,99,235,0.55)] border border-white/10"
+                  className="relative z-20"
                 >
-                  <div className="text-center">
 
-                    <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-xl 
-                    border border-white/10 flex items-center justify-center mx-auto">
+                  <img
+                    src="/images/tech-laptop.png"
+                    alt="Technologies"
+                    className="w-[280px] md:w-[340px] drop-shadow-[0_30px_80px_rgba(79,124,255,0.35)]"
+                  />
 
-                      <Atom size={42} className="text-white" />
+                </motion.div>
+
+                {/* TECH CARDS */}
+                {[
+                  {
+                    name: "React",
+                    icon: <Atom size={28} />,
+                    className: "top-0 left-1/2 -translate-x-1/2",
+                  },
+                  {
+                    name: "Next.js",
+                    icon: <Layers3 size={28} />,
+                    className: "top-20 right-0",
+                  },
+                  {
+                    name: "TypeScript",
+                    icon: <Code2 size={28} />,
+                    className: "bottom-24 right-4",
+                  },
+                  {
+                    name: "Node.js",
+                    icon: <Server size={28} />,
+                    className: "bottom-0 left-1/2 -translate-x-1/2",
+                  },
+                  {
+                    name: "MongoDB",
+                    icon: <Database size={28} />,
+                    className: "bottom-24 left-4",
+                  },
+                  {
+                    name: "Tailwind",
+                    icon: <MonitorSmartphone size={28} />,
+                    className: "top-20 left-0",
+                  },
+                ].map((item, index) => (
+
+                  <motion.div
+                    key={index}
+                    animate={{
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      duration: 3 + index,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    whileHover={{
+                      scale: 1.08,
+                    }}
+                    className={`
+                      absolute
+                      ${item.className}
+                      group
+                      bg-white/5
+                      backdrop-blur-xl
+                      border border-white/10
+                      rounded-[26px]
+                      px-6 py-5
+                      w-[150px]
+                      text-center
+                      shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+                      hover:border-[#4f7cff]/40
+                      transition-all duration-500
+                    `}
+                  >
+
+                    <div className="w-14 h-14 mx-auto rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center group-hover:bg-[#4f7cff] group-hover:text-white transition-all duration-500">
+
+                      {item.icon}
 
                     </div>
 
-                    <h3 className="mt-5 text-2xl font-bold text-white tracking-wide">
-                      Tech Stack
+                    <h3 className="mt-4 text-white font-semibold text-lg">
+                      {item.name}
                     </h3>
 
-                  </div>
-                </motion.div>
+                  </motion.div>
 
-                {/* TOP */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-0 left-1/2 -translate-x-1/2"
-                >
-                  <TechCard icon={<Atom size={34} />} title="React" />
-                </motion.div>
+                ))}
 
-                {/* LEFT */}
-                <motion.div
-                  animate={{ x: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute left-0 top-1/2 -translate-y-1/2"
-                >
-                  <TechCard icon={<Layers3 size={34} />} title="Next.js" />
-                </motion.div>
+              </motion.div>
 
-                {/* RIGHT */}
-                <motion.div
-                  animate={{ x: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute right-0 top-1/2 -translate-y-1/2"
-                >
-                  <TechCard icon={<Code2 size={34} />} title="Tailwind CSS" />
-                </motion.div>
-
-                {/* BOTTOM LEFT */}
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute bottom-6 left-14"
-                >
-                  <TechCard icon={<Database size={34} />} title="MongoDB" />
-                </motion.div>
-
-                {/* BOTTOM RIGHT */}
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute bottom-6 right-14"
-                >
-                  <TechCard icon={<Server size={34} />} title="Node.js" />
-                </motion.div>
-
-              </div>
             </motion.div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* CTA */}
