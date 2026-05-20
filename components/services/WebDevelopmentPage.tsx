@@ -473,58 +473,54 @@ export default function WebDevelopmentPage() {
           </motion.div>
 
 
-          {/* CONTENT LAYOUT: Row 1 (3 Solutions) / Row 2 (2 Solutions) */}
-        <div className="w-full flex flex-col space-y-8 lg:space-y-12">
-          
-          {/* ROW 1: Contains the First 3 Items */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
-            {solution.slice(0, 3).map((item, index) => (
-              <div 
-                key={index}
-                className="group flex flex-col items-start p-6 bg-white/50 backdrop-blur-sm border border-gray-200/60 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_15px_30px_rgba(59,130,246,0.04)] cursor-pointer text-left h-full"
-              >
-                <div className="w-11 h-11 rounded-xl bg-[#F0F4FF] text-blue-600 flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 mb-4 shadow-inner">
-                  {item.icon}
-                </div>
-                <div className="space-y-2 flex-1">
-                  <h3 className="text-base font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
+          {/* CONTENT ROW LIST LAYOUT (No Boxes, 2 Columns per item, No Arrows) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
+              
+              {/* LEFT COLUMN: Contains the First 3 Items */}
+              <div className="flex flex-col w-full border-t border-gray-200/60">
+                {solution.slice(0, 3).map((item, index) => (
+                  <div 
+                    key={index}
+                    className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
+                      {item.icon}
+                    </div>
+                    <div className="space-y-1.5 flex-1">
+                      <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          {/* ROW 2: Contains the Remaining 2 Items (Centered horizontally on desktop) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full lg:justify-center">
-            
-            {/* Transparent spacer token layer to offset grid for true horizontal centering on desktop */}
-            <div className="hidden lg:block pointer-events-none" />
-
-            {solution.slice(3, 5).map((item, index) => (
-              <div 
-                key={index}
-                className="group flex flex-col items-start p-6 bg-white/50 backdrop-blur-sm border border-gray-200/60 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_15px_30px_rgba(59,130,246,0.04)] cursor-pointer text-left h-full"
-              >
-                <div className="w-11 h-11 rounded-xl bg-[#F0F4FF] text-blue-600 flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 mb-4 shadow-inner">
-                  {item.icon}
-                </div>
-                <div className="space-y-2 flex-1">
-                  <h3 className="text-base font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
+              {/* RIGHT COLUMN: Contains the Remaining 2 Items */}
+              <div className="flex flex-col w-full md:border-t border-gray-200/60 mt-0">
+                {solution.slice(3, 5).map((item, index) => (
+                  <div 
+                    key={index}
+                    className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
+                      {item.icon}
+                    </div>
+                    <div className="space-y-1.5 flex-1">
+                      <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-        </div>
+            </div>
 
         </div>
       </section>
