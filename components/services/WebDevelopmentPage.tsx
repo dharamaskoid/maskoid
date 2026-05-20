@@ -804,14 +804,14 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
           
           {/* Background Decorative Rings / Orbits (Matches your image backdrop) */}
-          <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[850px] h-[450px] opacity-50 pointer-events-none z-0 hidden lg:block">
+          <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block">
             <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
             <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-7deg]"></div>
             <div className="absolute inset-12 border border-blue-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
             
             {/* Ambient Purple/Blue Blurred Light Visuals */}
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/20 blur-[100px] rounded-full"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-purple-600/15 blur-[100px] rounded-full"></div>
+            <div className="absolute top-1/4 left-1/4 w-44 h-44 bg-blue-600/20 blur-[70px] rounded-full"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-44 h-44 bg-purple-600/15 blur-[70px] rounded-full"></div>
             
             {/* Glowing Lens Flare Stars */}
             <div className="absolute top-1/3 left-6 w-2 h-2 bg-purple-300 rounded-full animate-pulse shadow-[0_0_12px_#c084fc]"></div>
