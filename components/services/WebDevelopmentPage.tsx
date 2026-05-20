@@ -654,6 +654,130 @@ export default function WebDevelopmentPage() {
           </div>
       </section>
 
+      {/* WHY CHOOSE US */}
+      <section className="relative py-20 bg-[#F8FAFF] overflow-hidden">
+
+        {/* BG EFFECTS */}
+        <div className="absolute inset-0 pointer-events-none">
+
+          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT CONTENT */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
+
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                Why Choose Us
+              </p>
+
+              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+                Trusted Digital Partner
+                <span className="text-[#2b4c9a]"> For Modern Brands</span>
+              </h2>
+
+              <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+                We create premium digital experiences with modern technologies,
+                performance-driven strategies, and scalable solutions designed
+                for business growth.
+              </p>
+
+            </motion.div>
+
+            {/* RIGHT POINTS */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="space-y-8"
+            >
+
+              {[
+                {
+                  number: "01",
+                  title: "Custom Strategy & Planning",
+                  text: "Every project is carefully planned to align with your business goals and audience needs.",
+                },
+                {
+                  number: "02",
+                  title: "Modern UI/UX Experience",
+                  text: "We craft premium interfaces focused on engagement, responsiveness, and conversions.",
+                },
+                {
+                  number: "03",
+                  title: "High Performance Development",
+                  text: "Fast, scalable, and SEO-friendly development using modern frameworks and technologies.",
+                },
+                {
+                  number: "04",
+                  title: "Long-Term Support & Growth",
+                  text: "Continuous optimization, maintenance, and growth strategies for long-term success.",
+                },
+              ].map((item, index) => (
+
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{
+                    x: 10,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                  }}
+                  className="group flex items-start gap-6 pb-8 border-b border-[#dbe7ff]"
+                >
+
+                  {/* NUMBER */}
+                  <div className="flex-shrink-0">
+
+                    <div className="w-16 h-16 rounded-2xl bg-white border border-[#dbe7ff] shadow-[0_10px_30px_rgba(43,76,154,0.06)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500">
+
+                      <span className="text-xl font-bold text-[#2b4c9a] group-hover:text-white transition-all duration-500">
+                        {item.number}
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                  {/* CONTENT */}
+                  <div>
+
+                    <h3 className="text-2xl font-bold text-[#1a2e5e]">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-gray-500 leading-relaxed">
+                      {item.text}
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </motion.div>
+
+          </div>
+
+        </div>
+
+      </section>          
 
       {/* OUR PROCESS */}
       <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
