@@ -429,22 +429,34 @@ export default function WebDevelopmentPage() {
 
         <section className="relative w-full min-h-[950px] lg:min-h-[850px] bg-[#060311] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
       
-          {/* Background Orbits & Ambient Glows */}
+          {/* SVG Definitions for Asymmetrical Rounded Masks */}
+          <svg className="absolute w-0 h-0" width="0" height="0">
+            <defs>
+              {/* Card Mask Shape: Soft 5-sided Asymmetric Shield Path */}
+              <clipPath id="asymmetric-shield" clipPathUnits="objectBoundingBox">
+                <path d="M 0.15,0.02 
+                        C 0.45,-0.01, 0.55,-0.01, 0.85,0.04 
+                        C 0.95,0.06, 1,0.15, 0.99,0.35 
+                        C 0.98,0.65, 0.95,0.82, 0.80,0.96 
+                        C 0.72,1, 0.65,0.98, 0.45,0.88 
+                        C 0.20,0.76, 0.08,0.70, 0.03,0.55 
+                        C -0.02,0.35, -0.01,0.12, 0.15,0.02 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          {/* Background Graphics & Orbits */}
           <div className="absolute inset-0 pointer-events-none opacity-40">
             <div className="absolute top-12 left-1/3 w-3 h-3 border-l border-b border-indigo-500/30 rotate-45"></div>
             <div className="absolute bottom-16 left-1/2 w-4 h-4 border-t border-r border-purple-500/20 -rotate-12"></div>
-            
-            {/* Large Decorative Dotted Background Loop Trace */}
             <div className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-[850px] h-[850px] border border-dashed border-indigo-500/10 rounded-full hidden xl:block"></div>
-            
-            {/* Dynamic Light Blurs */}
             <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[#1d0e4e]/20 blur-[150px] rounded-full"></div>
             <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#281156]/15 blur-[130px] rounded-full"></div>
           </div>
 
           <div className="container mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
             
-            {/* LEFT COLUMN: Typography Content */}
+            {/* LEFT COLUMN: Content Header */}
             <div className="lg:col-span-4 flex flex-col space-y-5 text-left w-full self-center">
               <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-indigo-400 bg-indigo-950/40 border border-indigo-900/30 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
                 Our Services
@@ -457,26 +469,18 @@ export default function WebDevelopmentPage() {
                 <p className="text-sm md:text-base text-slate-400 font-light leading-relaxed">
                   We create fast, scalable, and result-driven websites tailored to your business needs.
                 </p>
-                {/* Custom Painted Neon Splash Underline Effect */}
                 <div className="absolute bottom-0 left-0 w-44 h-[3px] bg-gradient-to-r from-purple-500 via-indigo-500 to-transparent opacity-80 blur-[0.5px] rounded-full"></div>
               </div>
             </div>
 
-            {/* RIGHT COLUMN: Precise Interlocking Hex-Asymmetric Cluster Layout */}
-            <div className="lg:col-span-8 relative w-full h-[700px] lg:h-[650px] mt-12 lg:mt-0 flex flex-wrap lg:block justify-center gap-6">
-              
-              {/* Universal Asymmetrical 6-Sided Polygon Shape applied to replicate the image layout exactly */}
-              <style dangerouslySetInnerHTML={{__html: `
-                .geometric-hex-card {
-                  clip-path: polygon(15% 0%, 85% 2%, 100% 75%, 75% 100%, 0% 88%, 5% 18%);
-                }
-                .hero-hex-card {
-                  clip-path: polygon(12% 0%, 88% 5%, 100% 80%, 72% 100%, 0% 85%, 6% 12%);
-                }
-              `}} />
+            {/* RIGHT COLUMN: Precise Clustered Cards with Soft Asymmetric Vectors */}
+            <div className="lg:col-span-8 relative w-full h-[680px] mt-12 lg:mt-0 flex flex-wrap lg:block justify-center gap-6">
 
-              {/* CARD 1: Business Websites (Bottom Left Position) */}
-              <div className="geometric-hex-card bg-white text-slate-800 p-6 pt-8 w-[215px] h-[235px] flex flex-col justify-start lg:absolute lg:top-[310px] lg:left-[0px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              {/* CARD 1: Business Websites (Bottom Left) */}
+              <div 
+                style={{ clipPath: 'url(#asymmetric-shield)' }}
+                className="bg-white text-slate-800 p-7 pt-10 w-[220px] h-[240px] flex flex-col justify-start lg:absolute lg:top-[300px] lg:left-[0px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+              >
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
                   <Globe size={20} strokeWidth={2.5} />
                 </div>
@@ -484,20 +488,26 @@ export default function WebDevelopmentPage() {
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
               </div>
 
-              {/* CARD 2: Custom Development (Large Deep Gradient Feature Center Card) */}
-              <div className="hero-hex-card bg-gradient-to-br from-[#231254] via-[#0f0831] to-[#060316] border border-purple-500/30 shadow-[0_0_50px_rgba(147,51,234,0.22)] p-8 pt-10 w-[310px] h-[350px] flex flex-col justify-between group cursor-pointer lg:absolute lg:top-[70px] lg:left-[170px] z-30 transition-transform duration-300 hover:-translate-y-1">
+              {/* CARD 2: Custom Development (Large Focal Dark Center Card) */}
+              <div 
+                style={{ clipPath: 'url(#asymmetric-shield)' }}
+                className="bg-gradient-to-b from-[#28155d] via-[#100835] to-[#060317] border border-purple-500/20 shadow-[0_0_55px_rgba(147,51,234,0.25)] p-9 pt-12 w-[315px] h-[360px] flex flex-col justify-between group cursor-pointer lg:absolute lg:top-[50px] lg:left-[170px] z-30 transition-transform duration-300 hover:-translate-y-1.5"
+              >
                 <div>
                   <div className="text-indigo-400 mb-6 font-mono text-2xl font-bold opacity-90">&lt;/&gt;</div>
                   <h3 className="text-xl font-bold text-slate-100 leading-snug mb-3">Custom<br />Development</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed font-light pr-2">Tailored solutions built with modern technologies for unique business needs.</p>
+                  <p className="text-xs text-slate-400 leading-relaxed font-light pr-4">Tailored solutions built with modern technologies for unique business needs.</p>
                 </div>
-                <div className="w-8 h-8 rounded-full border border-slate-700 group-hover:border-indigo-400 text-slate-500 group-hover:text-indigo-300 flex items-center justify-center transition-colors self-start mt-4">
+                <div className="w-8 h-8 rounded-full border border-slate-800 group-hover:border-indigo-400 text-slate-500 group-hover:text-indigo-300 flex items-center justify-center transition-colors self-start mt-4">
                   <ArrowRight size={14} />
                 </div>
               </div>
 
-              {/* CARD 3: E-Commerce (Top Center Stacked Right Above Hero) */}
-              <div className="geometric-hex-card bg-white text-slate-800 p-6 pt-8 w-[215px] h-[235px] flex flex-col justify-start lg:absolute lg:top-[-45px] lg:left-[430px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              {/* CARD 3: E-Commerce (Top Center Overlapping Above Central Card) */}
+              <div 
+                style={{ clipPath: 'url(#asymmetric-shield)' }}
+                className="bg-white text-slate-800 p-7 pt-10 w-[220px] h-[240px] flex flex-col justify-start lg:absolute lg:top-[-60px] lg:left-[430px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+              >
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
                   <ShoppingCart size={20} strokeWidth={2.5} />
                 </div>
@@ -505,8 +515,11 @@ export default function WebDevelopmentPage() {
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Powerful online stores that drive sales and customer satisfaction.</p>
               </div>
 
-              {/* CARD 4: SEO Optimized (Bottom Center Layout Tucked Right Under Hero) */}
-              <div className="geometric-hex-card bg-white text-slate-800 p-6 pt-8 w-[215px] h-[235px] flex flex-col justify-start lg:absolute lg:top-[380px] lg:left-[360px] z-20 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              {/* CARD 4: SEO Optimized (Bottom Center Layout Nested Under Center Card) */}
+              <div 
+                style={{ clipPath: 'url(#asymmetric-shield)' }}
+                className="bg-white text-slate-800 p-7 pt-10 w-[220px] h-[240px] flex flex-col justify-start lg:absolute lg:top-[370px] lg:left-[360px] z-20 shadow-[0_25px_50px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+              >
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
                   <Search size={20} strokeWidth={2.5} />
                 </div>
@@ -515,7 +528,10 @@ export default function WebDevelopmentPage() {
               </div>
 
               {/* CARD 5: Performance Focused (Bottom Right Position Corner) */}
-              <div className="geometric-hex-card bg-white text-slate-800 p-6 pt-8 w-[215px] h-[235px] flex flex-col justify-start lg:absolute lg:top-[320px] lg:left-[615px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              <div 
+                style={{ clipPath: 'url(#asymmetric-shield)' }}
+                className="bg-white text-slate-800 p-7 pt-10 w-[220px] h-[240px] flex flex-col justify-start lg:absolute lg:top-[310px] lg:left-[610px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+              >
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
                   <Rocket size={20} strokeWidth={2.5} />
                 </div>
@@ -523,8 +539,11 @@ export default function WebDevelopmentPage() {
                 <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Lightning-fast websites optimized for speed and performance.</p>
               </div>
 
-              {/* CARD 6: Responsive Design (Far Right Upper Hanging Position) */}
-              <div className="geometric-hex-card bg-white text-slate-800 p-6 pt-8 w-[215px] h-[235px] flex flex-col justify-start lg:absolute lg:top-[45px] lg:left-[675px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              {/* CARD 6: Responsive Design (Far Right Hanging Position) */}
+              <div 
+                style={{ clipPath: 'url(#asymmetric-shield)' }}
+                className="bg-white text-slate-800 p-7 pt-10 w-[220px] h-[240px] flex flex-col justify-start lg:absolute lg:top-[40px] lg:left-[670px] z-10 shadow-[0_25px_50px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:-translate-y-1.5"
+              >
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100/50">
                   <MonitorSmartphone size={20} strokeWidth={2.5} />
                 </div>
@@ -535,7 +554,6 @@ export default function WebDevelopmentPage() {
             </div>
           </div>
         </section>
-
       {/* OUR SOLUTIONS */}
         <section className="relative overflow-hidden bg-[#F8FAFF] py-16 md:py-20">
 
