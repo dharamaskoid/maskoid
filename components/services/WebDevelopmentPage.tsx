@@ -24,6 +24,7 @@ import {
   Waypoints,
   Atom,
   Server, 
+  TechCard,
 } from "lucide-react";
 
 const solutions = [
@@ -847,169 +848,90 @@ export default function WebDevelopmentPage() {
               className="relative flex items-center justify-center"
             >
 
-              {/* CENTER GLOW */}
-              <div className="absolute w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+              {/* BACKGROUND GLOW */}
+              <div className="absolute w-[480px] h-[480px] bg-blue-500/10 blur-[140px] rounded-full" />
 
-              {/* MAIN CONTAINER */}
-              <div className="relative w-full max-w-[620px] h-[420px] flex items-center justify-center">
+              {/* MAIN WRAPPER */}
+              <div className="relative w-full max-w-[620px] h-[440px] flex items-center justify-center">
 
                 {/* CENTER CORE */}
                 <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                  }}
+                  animate={{ y: [0, -12, 0] }}
                   transition={{
-                    duration: 5,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="relative z-20 w-[180px] h-[180px] rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] flex items-center justify-center shadow-[0_0_80px_rgba(37,99,235,0.45)]"
+                  className="relative z-20 w-[190px] h-[190px] rounded-full 
+                  bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#1E40AF]
+                  flex items-center justify-center 
+                  shadow-[0_0_90px_rgba(37,99,235,0.55)] border border-white/10"
                 >
-
                   <div className="text-center">
 
-                    <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center mx-auto">
+                    <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-xl 
+                    border border-white/10 flex items-center justify-center mx-auto">
 
                       <Atom size={42} className="text-white" />
 
                     </div>
 
-                    <h3 className="mt-5 text-2xl font-bold text-white">
+                    <h3 className="mt-5 text-2xl font-bold text-white tracking-wide">
                       Tech Stack
                     </h3>
 
                   </div>
-
                 </motion.div>
 
                 {/* TOP */}
                 <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                  }}
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-0 left-1/2 -translate-x-1/2"
                 >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Atom size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      React
-                    </h3>
-
-                  </div>
-
+                  <TechCard icon={<Atom size={34} />} title="React" />
                 </motion.div>
 
                 {/* LEFT */}
                 <motion.div
-                  animate={{ x: [0, -8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
+                  animate={{ x: [0, -10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute left-0 top-1/2 -translate-y-1/2"
                 >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Layers3 size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      Next.js
-                    </h3>
-
-                  </div>
-
+                  <TechCard icon={<Layers3 size={34} />} title="Next.js" />
                 </motion.div>
 
                 {/* RIGHT */}
                 <motion.div
-                  animate={{ x: [0, 8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
+                  animate={{ x: [0, 10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute right-0 top-1/2 -translate-y-1/2"
                 >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Code2 size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      Tailwind CSS
-                    </h3>
-
-                  </div>
-
+                  <TechCard icon={<Code2 size={34} />} title="Tailwind CSS" />
                 </motion.div>
 
                 {/* BOTTOM LEFT */}
                 <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{
-                    duration: 4.5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute bottom-0 left-20"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute bottom-6 left-14"
                 >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Database size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      MongoDB
-                    </h3>
-
-                  </div>
-
+                  <TechCard icon={<Database size={34} />} title="MongoDB" />
                 </motion.div>
 
                 {/* BOTTOM RIGHT */}
                 <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
-                  className="absolute bottom-0 right-20"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute bottom-6 right-14"
                 >
-
-                  <div className="w-[170px] rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl p-6 text-center">
-
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#6EA8FF] flex items-center justify-center mx-auto">
-                      <Server size={34} />
-                    </div>
-
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      Node.js
-                    </h3>
-
-                  </div>
-
+                  <TechCard icon={<Server size={34} />} title="Node.js" />
                 </motion.div>
 
               </div>
-
             </motion.div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* CTA */}
