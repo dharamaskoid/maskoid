@@ -321,7 +321,7 @@ export default function WebDevelopmentPage() {
                 variants={fadeUp}
                 className="text-center max-w-3xl mx-auto"
               >
-                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
                   Core Services
                 </p>
                 <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
@@ -449,19 +449,28 @@ export default function WebDevelopmentPage() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
       <div className="container mx-auto relative z-10 max-w-5xl">
-        
-        {/* HEADER BLOCK */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20 space-y-4">
-          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-blue-600 bg-white border border-blue-100 px-4 py-1.5 rounded-full w-fit shadow-sm">
+
+        {/* HEADER */}
+        <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        className="text-center max-w-3xl mx-auto"
+        >
+          <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
             Our Solutions
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold tracking-tight text-[#071739] leading-tight">
-            Web Development <span className="text-blue-600">Solutions</span>
-          </h2>
-          <p className="text-xs md:text-sm text-gray-500 leading-relaxed max-w-2xl font-light">
-            We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
           </p>
-        </div>
+          <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+            Digital Solutions That
+            <span className="text-[#2b4c9a]"> Create Real Impact</span>
+          </h2>
+
+          <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+           We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
+          </p>
+        </motion.div>
+
 
         {/* CONTENT ROW LIST LAYOUT (No Boxes) */}
         <div className="flex flex-col w-full border-t border-gray-200/60">
