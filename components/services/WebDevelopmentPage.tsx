@@ -645,7 +645,6 @@ export default function WebDevelopmentPage() {
         </section>
 
       {/* OUR PROCESS */}
-
       <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
 
         {/* BG GLOW */}
@@ -837,119 +836,244 @@ export default function WebDevelopmentPage() {
 
       {/* TECHNOLOGIES WE USE */}
       <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 px-6 flex items-center">
-      
+
+        {/* BG GRID */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
+
         <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
           
-          {/* Background Decorative Rings / Orbits (Matches your image backdrop) */}
-          <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block">
-            <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
-            <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-7deg]"></div>
-            <div className="absolute inset-12 border border-blue-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
-            
-            {/* Ambient Purple/Blue Blurred Light Visuals */}
-            <div className="absolute top-1/4 left-1/4 w-44 h-44 bg-blue-600/20 blur-[70px] rounded-full"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-44 h-44 bg-purple-600/15 blur-[70px] rounded-full"></div>
-            
-            {/* Glowing Lens Flare Stars */}
-            <div className="absolute top-1/3 left-6 w-2 h-2 bg-purple-300 rounded-full animate-pulse shadow-[0_0_12px_#c084fc]"></div>
-            <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse shadow-[0_0_8px_#60a5fa]"></div>
-            <div className="absolute top-1/2 right-12 w-2.5 h-2.5 bg-indigo-400 rounded-full animate-pulse shadow-[0_0_14px_#818cf8]"></div>
-          </div>
+          {/* Background Decorative Rings */}
+          <motion.div
+            animate={{
+              rotate: [0, 3, 0],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block"
+          >
 
-          {/* LEFT COLUMN: Content */}
+            <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
+
+            <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-7deg]"></div>
+
+            <div className="absolute inset-12 border border-blue-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
+
+            {/* Ambient Lights */}
+            <motion.div
+              animate={{
+                scale: [1, 1.15, 1],
+                opacity: [0.4, 0.7, 0.4],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/4 left-1/4 w-44 h-44 bg-blue-600/20 blur-[70px] rounded-full"
+            ></motion.div>
+
+            <motion.div
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+              }}
+              className="absolute bottom-1/4 right-1/3 w-44 h-44 bg-purple-600/15 blur-[70px] rounded-full"
+            ></motion.div>
+
+            {/* FLOATING STARS */}
+            <motion.div
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.4, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/3 left-6 w-2 h-2 bg-purple-300 rounded-full shadow-[0_0_12px_#c084fc]"
+            ></motion.div>
+
+            <motion.div
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+              }}
+              className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full shadow-[0_0_8px_#60a5fa]"
+            ></motion.div>
+
+            <motion.div
+              animate={{
+                opacity: [0.5, 1, 0.5],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/2 right-12 w-2.5 h-2.5 bg-indigo-400 rounded-full shadow-[0_0_14px_#818cf8]"
+            ></motion.div>
+
+          </motion.div>
+
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="relative z-10"
+          >
+
+            <motion.p
+              whileHover={{
+                scale: 1.05,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+            >
+              Technologies We Use
+            </motion.p>
+
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Modern Technologies For
+              <span className="text-[#2b4c9a]"> Modern Solutions</span>
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed max-w-xl">
+              We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
+            </p>
+
+          </motion.div>
+
+          {/* RIGHT TECHNOLOGY STACK */}
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
+
+            {[
+              {
+                icon: (
+                  <Atom
+                    size={22}
+                    strokeWidth={2}
+                    className="animate-[spin_15s_linear_infinite]"
+                  />
+                ),
+                title: "React",
+                color: "text-cyan-400",
+                position: "md:col-start-1 md:row-start-1",
+              },
+              {
+                icon: <Code2 size={21} strokeWidth={2.5} />,
+                title: "Next.js",
+                color: "text-white",
+                position: "md:col-start-3 md:row-start-1",
+              },
+              {
+                icon: <Layers3 size={21} strokeWidth={2} />,
+                title: "TypeScript",
+                color: "text-blue-400",
+                position: "md:col-start-5 md:row-start-1",
+              },
+              {
+                icon: <Server size={21} strokeWidth={2} />,
+                title: "Node.js",
+                color: "text-green-400",
+                position: "md:col-start-2 md:row-start-2",
+              },
+              {
+                icon: <PenTool size={21} strokeWidth={2} />,
+                title: "Tailwind CSS",
+                color: "text-sky-400",
+                position: "md:col-start-4 md:row-start-2",
+              },
+              {
+                icon: <Database size={21} strokeWidth={2} />,
+                title: "MongoDB",
+                color: "text-emerald-500",
+                position: "md:col-start-6 md:row-start-2",
+              },
+            ].map((item, index) => (
 
               <motion.div
-                initial="hidden"
-                whileInView="show"
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
                 viewport={{ once: true }}
-                variants={fadeUp}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className={`
+                  group
+                  relative
+                  overflow-hidden
+                  flex items-center gap-3
+                  bg-[#0A0520]/80
+                  backdrop-blur-xl
+                  border border-slate-800/80
+                  hover:border-indigo-500/40
+                  rounded-xl
+                  px-5 py-3.5
+                  w-40 h-14
+                  shadow-[0_4px_25px_rgba(0,0,0,0.5)]
+                  transition-all duration-500
+                  ${item.position}
+                `}
               >
-                <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-                  Technologies We Use
-                </p>
 
-                <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                  Modern Technologies For
-                  <span className="text-[#2b4c9a]"> Modern Solutions</span>
-                </h2>
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
-                <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-                  We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
-                </p>
+                  <div className="absolute -top-10 right-0 w-24 h-24 bg-indigo-500/20 blur-3xl rounded-full"></div>
 
-              </motion.div>          
+                </div>
 
-          {/* RIGHT COLUMN: Precise Staggered Cards (Perfect Design Match) */}
-          <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
-            
-            {/* Card 1: React (Row 1, Pos 1) */}
-            <motion.div 
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-1 md:row-start-1"
-            >
-              <div className="flex items-center justify-center w-6 h-6 text-cyan-400 shrink-0">
-                <Atom size={22} strokeWidth={2} className="animate-[spin_15s_linear_infinite]" />
-              </div>
-              <span className="text-sm font-medium text-slate-200 tracking-wide">React</span>
-            </motion.div>
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.15,
+                  }}
+                  className={`relative z-10 flex items-center justify-center w-6 h-6 shrink-0 ${item.color}`}
+                >
+                  {item.icon}
+                </motion.div>
 
-            {/* Card 2: Next.js (Row 1, Pos 2 Offset) */}
-            <motion.div 
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-3 md:row-start-1"
-            >
-              <div className="flex items-center justify-center w-6 h-6 text-white shrink-0">
-                <Code2 size={21} strokeWidth={2.5} />
-              </div>
-              <span className="text-sm font-medium text-slate-200 tracking-wide">Next.js</span>
-            </motion.div>
+                {/* TEXT */}
+                <span className="relative z-10 text-sm font-medium text-slate-200 tracking-wide">
+                  {item.title}
+                </span>
 
-            {/* Card 3: TypeScript (Row 1, Pos 3 Offset) */}
-            <motion.div 
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-5 md:row-start-1"
-            >
-              <div className="flex items-center justify-center w-6 h-6 text-blue-400 shrink-0">
-                <Layers3 size={21} strokeWidth={2} />
-              </div>
-              <span className="text-sm font-medium text-slate-200 tracking-wide">TypeScript</span>
-            </motion.div>
+              </motion.div>
 
-            {/* Card 4: Node.js (Row 2, Pos 1 Staggered) */}
-            <motion.div 
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-2 md:row-start-2"
-            >
-              <div className="flex items-center justify-center w-6 h-6 text-green-400 shrink-0">
-                <Server size={21} strokeWidth={2} />
-              </div>
-              <span className="text-sm font-medium text-slate-200 tracking-wide">Node.js</span>
-            </motion.div>
-
-            {/* Card 5: Tailwind CSS (Row 2, Pos 2 Staggered) */}
-            <motion.div 
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-4 md:row-start-2"
-            >
-              <div className="flex items-center justify-center w-6 h-6 text-sky-400 shrink-0">
-                <PenTool size={21} strokeWidth={2} />
-              </div>
-              <span className="text-sm font-medium text-slate-200 tracking-wide">Tailwind CSS</span>
-            </motion.div>
-
-            {/* Card 6: MongoDB (Row 2, Pos 3 Staggered) */}
-            <motion.div 
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-6 md:row-start-2"
-            >
-              <div className="flex items-center justify-center w-6 h-6 text-emerald-500 shrink-0">
-                <Database size={21} strokeWidth={2} />
-              </div>
-              <span className="text-sm font-medium text-slate-200 tracking-wide">MongoDB</span>
-            </motion.div>
+            ))}
 
           </div>
-        </div>   
+
+        </div>
+
       </section>
 
       {/* CTA */}
