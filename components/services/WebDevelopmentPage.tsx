@@ -709,23 +709,23 @@ export default function WebDevelopmentPage() {
               {[
                 {
                   number: "01",
-                  title: "Custom Strategy & Planning",
-                  text: "Every project is carefully planned to align with your business goals and audience needs.",
+                  title: "Proven Industry Experience",
+                  text: "With 13+ years of expertise, Maskoid Technology delivers high-performance digital solutions tailored to diverse business industries and growth goals.",
                 },
                 {
                   number: "02",
-                  title: "Modern UI/UX Experience",
-                  text: "We craft premium interfaces focused on engagement, responsiveness, and conversions.",
+                  title: "Agile & Adaptive Approach",
+                  text: "Our agile methodology ensures faster delivery, flexibility, and continuous improvements aligned with evolving market trends and business needs.",
                 },
                 {
                   number: "03",
-                  title: "High Performance Development",
-                  text: "Fast, scalable, and SEO-friendly development using modern frameworks and technologies.",
+                  title: "End-to-End Development",
+                  text: "From planning and UI/UX design to deployment and long-term support, we manage the complete web development lifecycle seamlessly.",
                 },
                 {
                   number: "04",
-                  title: "Long-Term Support & Growth",
-                  text: "Continuous optimization, maintenance, and growth strategies for long-term success.",
+                  title: "Expert Team & Modern Technologies",
+                  text: "Our skilled developers and designers leverage cutting-edge frameworks and scalable technologies to build future-ready digital experiences.",
                 },
               ].map((item, index) => (
 
@@ -768,6 +768,7 @@ export default function WebDevelopmentPage() {
                   </div>
 
                 </motion.div>
+
 
               ))}
 
