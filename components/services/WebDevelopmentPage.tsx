@@ -859,9 +859,9 @@ export default function WebDevelopmentPage() {
                 <PenTool size={30} strokeWidth={2.5} className="rotate-90" />
               </div>
               <span className="text-xl font-bold text-[#2b4c9a]">02</span>
-              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Design</h3>
+              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Design & Prototyping</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                We create wireframes and designs focused on user experience.
+                We design intuitive UI/UX prototypes that align with your brand and users.
               </p>
             </div>
 
@@ -871,9 +871,9 @@ export default function WebDevelopmentPage() {
                 <Code2 size={30} strokeWidth={2.5} />
               </div>
               <span className="text-xl font-bold text-[#2b4c9a]">03</span>
-              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Develop</h3>
+              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Development</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                Our team builds fast, secure, and scalable solutions.
+                Our developers build scalable, secure, and high-performance solutions.
               </p>
             </div>
 
@@ -883,9 +883,9 @@ export default function WebDevelopmentPage() {
                 <Rocket size={30} strokeWidth={2.5} />
               </div>
               <span className="text-xl font-bold text-[#2b4c9a]">04</span>
-              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Launch</h3>
+              <h3 className="relative z-10 mt-2 text-2xl font-bold text-[#1a2e5e] leading-snug">Testing & Launch</h3>
               <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                We test, optimize, and launch your website with support.
+                We test thoroughly and launch your website with full support.
               </p>
             </div>
 
