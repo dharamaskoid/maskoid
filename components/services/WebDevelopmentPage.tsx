@@ -436,16 +436,7 @@ export default function WebDevelopmentPage() {
               <clipPath id="mask-business" clipPathUnits="objectBoundingBox">
                 <path d="M 0.22,0.15 Q 0.30,0.12 0.75,0.25 Q 0.90,0.30 0.88,0.55 Q 0.85,0.85 0.52,0.98 Q 0.38,1.00 0.15,0.72 Q 0.02,0.55 0.08,0.30 Z" />
               </clipPath>
-              <div 
-                className="bg-white p-6 shadow-xl" 
-                style={{ clipPath: 'polygon(15% 0%, 85% 0%, 100% 25%, 100% 75%, 85% 100%, 15% 100%, 0% 75%, 0% 25%)' }}
-              >
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
-                  <Globe size={20} strokeWidth={2.5} />
-                </div>
-                <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Business Websites</h4>
-                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
-              </div>
+          
               {/* Card 2: Custom Development - Broad, wide centered premium shield container */}
               <clipPath id="mask-custom-dev" clipPathUnits="objectBoundingBox">
                 <path d="M 0.40,0.03 Q 0.65,-0.03 0.92,0.08 Q 0.99,0.12 0.96,0.40 Q 0.92,0.75 0.68,0.95 Q 0.50,1.00 0.15,0.84 Q 0.00,0.76 0.02,0.42 Q 0.04,0.12 0.40,0.03 Z" />
@@ -504,7 +495,16 @@ export default function WebDevelopmentPage() {
 
             {/* 3. RIGHT COLUMN: PIXEL-PERFECT INTERLOCKING HARDCODED CLUSTER */}
             <div className="lg:col-span-8 relative w-full h-[850px] sm:h-[720px] lg:h-[680px] mt-12 lg:mt-0 flex flex-wrap lg:block justify-center gap-4">
-
+                <div 
+                  className="bg-white p-6 shadow-xl" 
+                  style={{ clipPath: 'polygon(15% 0%, 85% 0%, 100% 25%, 100% 75%, 85% 100%, 15% 100%, 0% 75%, 0% 25%)' }}
+                >
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 border border-blue-100/40">
+                    <Globe size={20} strokeWidth={2.5} />
+                  </div>
+                  <h4 className="text-sm font-bold text-[#071739] tracking-tight mb-1.5">Business Websites</h4>
+                  <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
+                </div>
               {/* CARD 1: Business Websites (Bottom Left) */}
               <div 
                 style={{ clipPath: 'url(#mask-business)' }}
