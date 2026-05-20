@@ -242,7 +242,7 @@ export default function WebDevelopmentPage() {
             </div>
         </section>
       
-          {/* OUR SERVICES */}
+      {/* OUR SERVICES */}
         <section className="relative overflow-hidden bg-white py-16 md:py-20">
 
           {/* BG LIGHT */}
@@ -427,7 +427,134 @@ export default function WebDevelopmentPage() {
 
         </section>
 
-        {/* OUR SOLUTIONS */}
+        <section className="relative w-full min-h-[750px] bg-[#090514] text-white overflow-hidden py-24 px-6 md:px-16 font-sans flex items-center">
+      
+          {/* Background Subtle Floating Triangle Shapes & Glows */}
+          <div className="absolute inset-0 pointer-events-none opacity-40">
+            <div className="absolute top-12 left-1/3 w-3 h-3 border-l border-b border-indigo-500/40 rotate-45"></div>
+            <div className="absolute bottom-16 left-1/2 w-4 h-4 border-t border-r border-purple-500/30 -rotate-12"></div>
+            <div className="absolute top-1/3 right-10 w-3 h-3 border-r border-b border-blue-500/40 rotate-[115deg]"></div>
+            
+            {/* Orbital Dotted Circle Path Trace */}
+            <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-dashed border-indigo-500/10 rounded-full z-0 hidden xl:block"></div>
+            
+            {/* Ambient Radial Lights */}
+            <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-indigo-600/10 blur-[130px] rounded-full"></div>
+            <div className="absolute bottom-10 right-12 w-[350px] h-[350px] bg-purple-600/10 blur-[110px] rounded-full"></div>
+          </div>
+
+          <div className="container mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            
+            {/* LEFT COLUMN (Takes up 5 Columns) */}
+            <div className="lg:col-span-5 flex flex-col space-y-5 text-left w-full">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-indigo-400 bg-indigo-950/40 border border-indigo-900/40 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
+                Our Services
+              </span>
+              
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-100 leading-[1.15]">
+                Creative Solutions <br />
+                For <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-blue-400 to-indigo-400">Modern Brands</span>
+              </h2>
+              
+              <div className="relative pb-4 max-w-sm">
+                <p className="text-sm md:text-base text-slate-400 font-light leading-relaxed">
+                  We create fast, scalable, and result-driven websites tailored to your business needs.
+                </p>
+                {/* Custom Painted Neon Splash Underline Effect */}
+                <div className="absolute bottom-0 left-0 w-44 h-[3px] bg-gradient-to-r from-purple-500 via-indigo-500 to-transparent opacity-80 blur-[0.5px] rounded-full"></div>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: Asymmetric Dynamic Cluster Grid Layout (Takes up 7 Columns) */}
+            <div className="lg:col-span-7 relative w-full h-auto min-h-[580px] mt-12 lg:mt-0 flex flex-wrap lg:block justify-center gap-6">
+              
+              {/* Style Injection for Universal Custom Geometric Shapes */}
+              <style dangerouslySetInnerHTML={{__html: `
+                .shape-asymmetric {
+                  clip-path: polygon(12% 0%, 88% 5%, 100% 85%, 78% 100%, 0% 90%, 5% 15%);
+                }
+              `}} />
+
+              {/* CARD 1: Custom Development (Large Neon Hero Banner Card) */}
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.01 }}
+                className="shape-asymmetric bg-gradient-to-br from-[#241152]/90 via-[#0e072b]/95 to-[#050212]/98 border border-purple-500/30 shadow-[0_0_40px_rgba(147,51,234,0.15)] p-8 w-[285px] min-h-[300px] flex flex-col justify-between group cursor-pointer lg:absolute lg:top-0 lg:left-14 z-20 transition-all duration-300"
+              >
+                <div>
+                  <div className="text-indigo-400 mb-6 font-mono text-2xl tracking-wider font-bold opacity-90">&lt;/&gt;</div>
+                  <h3 className="text-xl font-bold text-slate-100 leading-snug mb-3">Custom<br />Development</h3>
+                  <p className="text-xs text-slate-400 leading-relaxed font-light pr-2">Tailored solutions built with modern technologies for unique business needs.</p>
+                </div>
+                <div className="w-8 h-8 rounded-full border border-slate-700 group-hover:border-indigo-400 text-slate-400 group-hover:text-indigo-300 flex items-center justify-center transition-colors mt-6">
+                  <ArrowRight size={14} />
+                </div>
+              </motion.div>
+
+              {/* CARD 2: E-Commerce (White Card - Top Right) */}
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="shape-asymmetric bg-white text-slate-800 p-6 w-[210px] min-h-[220px] flex flex-col justify-start lg:absolute lg:top-[-40px] lg:left-[330px] z-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-blue-600 mb-4 border border-slate-100">
+                  <ShoppingCart size={18} strokeWidth={2.5} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] mb-2">E-Commerce</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Powerful online stores that drive sales and customer satisfaction.</p>
+              </motion.div>
+
+              {/* CARD 3: Responsive Design (White Card - Far Right) */}
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="shape-asymmetric bg-white text-slate-800 p-6 w-[210px] min-h-[230px] flex flex-col justify-start lg:absolute lg:top-[60px] lg:left-[510px] z-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-blue-600 mb-4 border border-slate-100">
+                  <MonitorSmartphone size={18} strokeWidth={2} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] mb-2">Responsive Design</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Seamless experiences across all devices and screen sizes.</p>
+              </motion.div>
+
+              {/* CARD 4: Business Websites (White Card - Bottom Left Offset) */}
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="shape-asymmetric bg-white text-slate-800 p-6 w-[210px] min-h-[220px] flex flex-col justify-start lg:absolute lg:top-[280px] lg:left-[-10px] z-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-blue-600 mb-4 border border-slate-100">
+                  <Globe size={18} strokeWidth={2} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] mb-2">Business Websites</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Professional websites that represent your brand perfectly.</p>
+              </motion.div>
+
+              {/* CARD 5: SEO Optimized (White Card - Bottom Middle) */}
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="shape-asymmetric bg-white text-slate-800 p-6 w-[210px] min-h-[220px] flex flex-col justify-start lg:absolute lg:top-[350px] lg:left-[220px] z-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-blue-600 mb-4 border border-slate-100">
+                  <Search size={18} strokeWidth={2.5} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] mb-2">SEO Optimized</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Built with best SEO practices to rank higher on search.</p>
+              </motion.div>
+
+              {/* CARD 6: Performance Focused (White Card - Bottom Right) */}
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="shape-asymmetric bg-white text-slate-800 p-6 w-[210px] min-h-[230px] flex flex-col justify-start lg:absolute lg:top-[270px] lg:left-[440px] z-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-blue-600 mb-4 border border-slate-100">
+                  <Rocket size={18} strokeWidth={2} />
+                </div>
+                <h4 className="text-sm font-bold text-[#071739] mb-2">Performance Focused</h4>
+                <p className="text-[11px] text-gray-500 leading-relaxed font-normal">Lightning-fast websites optimized for speed and performance.</p>
+              </motion.div>
+
+            </div>
+          </div>
+        </section>
+
+      {/* OUR SOLUTIONS */}
         <section className="relative overflow-hidden bg-[#F8FAFF] py-16 md:py-20">
 
           <div className="container mx-auto px-6 relative z-10">
@@ -544,7 +671,7 @@ export default function WebDevelopmentPage() {
 
         </section>
 
-        {/* WHY CHOOSE US */}
+      {/* WHY CHOOSE US */}
         <section className="relative overflow-hidden bg-[#071739] py-16 md:py-20">
 
           {/* GLOW */}
