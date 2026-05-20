@@ -796,7 +796,91 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
+      <section className="relative w-full bg-[#F8FAFF] py-20 px-6 md:px-16 overflow-hidden font-sans">
+        <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
+          
+          {/* LEFT COLUMN: Content */}
+          <div className="max-w-xl flex flex-col space-y-5 text-left w-full lg:w-2/5 shrink-0">
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#3B82F6] bg-white border border-[#dbe7ff] px-4 py-1.5 rounded-full w-fit shadow-sm">
+              Our Process
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#071739] leading-[1.15]">
+              A Simple Process To <br />
+              Deliver <span className="text-[#3B82F6]">Exceptional Results</span>
+            </h2>
+            <p className="text-sm md:text-base text-gray-500 max-w-sm font-normal leading-relaxed">
+              Our proven process ensures your project is delivered on time, on budget, and beyond expectations.
+            </p>
+          </div>
 
+          {/* RIGHT COLUMN: Timeline Steps */}
+          <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
+            
+            {/* SVG Dotted Connecting Wave Line (Desktop Backdrop) */}
+            <div className="absolute top-10 left-12 right-12 h-10 pointer-events-none hidden sm:block z-0">
+              <svg className="w-full h-full" viewBox="0 0 500 40" fill="none" preserveAspectRatio="none">
+                <path 
+                  d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20" 
+                  stroke="#3B82F6" 
+                  strokeWidth="1.5" 
+                  strokeDasharray="4 4" 
+                  opacity="0.25"
+                />
+              </svg>
+            </div>
+
+            {/* STEP 1: Discover */}
+            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#3B82F6] shadow-[0_10px_30px_rgba(59,130,246,0.08)] border border-slate-100/80 mb-5 relative group hover:scale-105 transition-transform duration-300">
+                <Search size={22} strokeWidth={2.5} />
+              </div>
+              <span className="text-[11px] font-bold tracking-wider text-[#3B82F6] uppercase">01</span>
+              <h3 className="text-base font-bold text-[#071739] mt-1.5 mb-2">Discover</h3>
+              <p className="text-[11px] md:text-xs text-gray-400 max-w-[150px] leading-relaxed font-light">
+                We understand your goals, requirements, and target audience.
+              </p>
+            </div>
+
+            {/* STEP 2: Design */}
+            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#3B82F6] shadow-[0_10px_30px_rgba(59,130,246,0.08)] border border-slate-100/80 mb-5 relative group hover:scale-105 transition-transform duration-300">
+                <PenTool size={21} strokeWidth={2.5} className="rotate-90" />
+              </div>
+              <span className="text-[11px] font-bold tracking-wider text-[#3B82F6] uppercase">02</span>
+              <h3 className="text-base font-bold text-[#071739] mt-1.5 mb-2">Design</h3>
+              <p className="text-[11px] md:text-xs text-gray-400 max-w-[150px] leading-relaxed font-light">
+                We create wireframes and designs focused on user experience.
+              </p>
+            </div>
+
+            {/* STEP 3: Develop */}
+            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#3B82F6] shadow-[0_10px_30px_rgba(59,130,246,0.08)] border border-slate-100/80 mb-5 relative group hover:scale-105 transition-transform duration-300">
+                <Code2 size={22} strokeWidth={2.5} />
+              </div>
+              <span className="text-[11px] font-bold tracking-wider text-[#3B82F6] uppercase">03</span>
+              <h3 className="text-base font-bold text-[#071739] mt-1.5 mb-2">Develop</h3>
+              <p className="text-[11px] md:text-xs text-gray-400 max-w-[150px] leading-relaxed font-light">
+                Our team builds fast, secure, and scalable solutions.
+              </p>
+            </div>
+
+            {/* STEP 4: Launch */}
+            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#3B82F6] shadow-[0_10px_30px_rgba(59,130,246,0.08)] border border-slate-100/80 mb-5 relative group hover:scale-105 transition-transform duration-300">
+                <Rocket size={21} strokeWidth={2.5} />
+              </div>
+              <span className="text-[11px] font-bold tracking-wider text-[#3B82F6] uppercase">04</span>
+              <h3 className="text-base font-bold text-[#071739] mt-1.5 mb-2">Launch</h3>
+              <p className="text-[11px] md:text-xs text-gray-400 max-w-[150px] leading-relaxed font-light">
+                We test, optimize, and launch your website with support.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
       {/* TECHNOLOGIES WE USE */}
       <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 px-6 flex items-center">
