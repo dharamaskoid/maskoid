@@ -799,171 +799,110 @@ export default function WebDevelopmentPage() {
 
 
       {/* TECHNOLOGIES WE USE */}
-      <section className="relative overflow-hidden bg-[#0B0827] py-16 md:py-20 text-white font-sans">
-        
-        <div className="container mx-auto px-6 relative z-10">
-              {/* Ambient Decorative Orbit Graphics */}
-              <div className="relative mt-16 w-full max-w-[420px] h-[220px] hidden md:block opacity-40 pointer-events-none">
-                <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-15deg] scale-110"></div>
-                <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-10deg]"></div>
-                <div className="absolute inset-10 border border-blue-500/20 rounded-[50%] rotate-[-5deg] scale-90"></div>
-                <div className="absolute top-1/4 left-1/3 w-48 h-48 bg-blue-600/30 blur-[80px] rounded-full"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-600/20 blur-[80px] rounded-full"></div>
-              </div>
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative w-full min-h-[500px] bg-[#0B0827] text-white overflow-hidden py-20 px-6 md:px-16 font-sans flex items-center">
+      
+        <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
+          
+          {/* Background Decorative Rings / Orbits (Matches your image backdrop) */}
+          <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[850px] h-[450px] opacity-50 pointer-events-none z-0 hidden lg:block">
+            <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
+            <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-7deg]"></div>
+            <div className="absolute inset-12 border border-blue-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
             
-            {/* LEFT */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
-              <p className="inline-flex px-5 py-2 rounded-full bg-[#120E36]/50 border border-indigo-800/40 text-indigo-400 text-xs font-semibold uppercase tracking-[0.2em]">
-                Technologies We Use
-              </p>
-
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-100 leading-tight">
-                Modern Technologies For
-                <span className="block text-indigo-400">
-                  Modern Solutions
-                </span>
-              </h2>
-
-              <p className="mt-6 text-slate-400 text-lg leading-relaxed max-w-xl font-light">
-                We leverage cutting-edge frameworks and tools to build
-                fast, scalable, and future-ready websites.
-              </p>
-
-
-            </motion.div>
-
-            {/* RIGHT */}
-            <div className="space-y-5">
-              
-              {/* Row 1 */}
-              <div className="grid grid-cols-2 gap-4">
-                {/* React */}
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.0 }}
-                  whileHover={{ x: 8 }}
-                  className="group bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-[28px] p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 text-cyan-400 flex items-center justify-center shrink-0">
-                    <Atom size={24} strokeWidth={2} className="animate-[spin_12s_linear_infinite]" />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-slate-100">React</h3>
-                    <p className="mt-1 text-slate-400 text-xs font-light leading-relaxed">Frontend Library</p>
-                  </div>
-                </motion.div>
-
-                {/* Next.js */}
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.12 }}
-                  whileHover={{ x: 8 }}
-                  className="group bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-[28px] p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 text-white flex items-center justify-center shrink-0">
-                    <Code2 size={24} strokeWidth={2} />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-slate-100">Next.js</h3>
-                    <p className="mt-1 text-slate-400 text-xs font-light leading-relaxed">React Framework</p>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Row 2 */}
-              <div className="grid grid-cols-2 gap-4">
-                {/* TypeScript */}
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.24 }}
-                  whileHover={{ x: 8 }}
-                  className="group bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-[28px] p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 text-blue-400 flex items-center justify-center shrink-0">
-                    <Layers3 size={24} strokeWidth={2} />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-slate-100">TypeScript</h3>
-                    <p className="mt-1 text-slate-400 text-xs font-light leading-relaxed">Static Typing</p>
-                  </div>
-                </motion.div>
-
-                {/* Node.js */}
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.36 }}
-                  whileHover={{ x: 8 }}
-                  className="group bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-[28px] p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 text-green-400 flex items-center justify-center shrink-0">
-                    <Server size={24} strokeWidth={2} />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-slate-100">Node.js</h3>
-                    <p className="mt-1 text-slate-400 text-xs font-light leading-relaxed">Runtime System</p>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Row 3 */}
-              <div className="grid grid-cols-2 gap-4">
-                {/* Tailwind CSS */}
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.48 }}
-                  whileHover={{ x: 8 }}
-                  className="group bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-[28px] p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 text-sky-400 flex items-center justify-center shrink-0">
-                    <PenTool size={24} strokeWidth={2} />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-slate-100">Tailwind</h3>
-                    <p className="mt-1 text-slate-400 text-xs font-light leading-relaxed">CSS Framework</p>
-                  </div>
-                </motion.div>
-
-                {/* MongoDB */}
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.60 }}
-                  whileHover={{ x: 8 }}
-                  className="group bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-[28px] p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-950/60 text-emerald-500 flex items-center justify-center shrink-0">
-                    <Database size={24} strokeWidth={2} />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-slate-100">MongoDB</h3>
-                    <p className="mt-1 text-slate-400 text-xs font-light leading-relaxed">Database Core</p>
-                  </div>
-                </motion.div>
-              </div>
-
-            </div>
-
+            {/* Ambient Purple/Blue Blurred Light Visuals */}
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/20 blur-[100px] rounded-full"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-purple-600/15 blur-[100px] rounded-full"></div>
+            
+            {/* Glowing Lens Flare Stars */}
+            <div className="absolute top-1/3 left-6 w-2 h-2 bg-purple-300 rounded-full animate-pulse shadow-[0_0_12px_#c084fc]"></div>
+            <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse shadow-[0_0_8px_#60a5fa]"></div>
+            <div className="absolute top-1/2 right-12 w-2.5 h-2.5 bg-indigo-400 rounded-full animate-pulse shadow-[0_0_14px_#818cf8]"></div>
           </div>
 
-        </div>
+          {/* LEFT COLUMN: Content */}
+          <div className="max-w-xl z-10 flex flex-col space-y-5 text-left w-full lg:w-1/2">
+            <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-indigo-300 bg-indigo-950/40 border border-indigo-800/30 px-4 py-1.5 rounded-full w-fit backdrop-blur-sm">
+              Technologies We Use
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-100 leading-[1.15]">
+              Modern Technologies For <br /> Modern Solutions
+            </h2>
+            <p className="text-sm md:text-base text-slate-400 max-w-md font-light leading-relaxed">
+              We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
+            </p>
+          </div>
 
+          {/* RIGHT COLUMN: Precise Staggered Cards (Perfect Design Match) */}
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
+            
+            {/* Card 1: React (Row 1, Pos 1) */}
+            <motion.div 
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-1 md:row-start-1"
+            >
+              <div className="flex items-center justify-center w-6 h-6 text-cyan-400 shrink-0">
+                <Atom size={22} strokeWidth={2} className="animate-[spin_15s_linear_infinite]" />
+              </div>
+              <span className="text-sm font-medium text-slate-200 tracking-wide">React</span>
+            </motion.div>
+
+            {/* Card 2: Next.js (Row 1, Pos 2 Offset) */}
+            <motion.div 
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-3 md:row-start-1"
+            >
+              <div className="flex items-center justify-center w-6 h-6 text-white shrink-0">
+                <Code2 size={21} strokeWidth={2.5} />
+              </div>
+              <span className="text-sm font-medium text-slate-200 tracking-wide">Next.js</span>
+            </motion.div>
+
+            {/* Card 3: TypeScript (Row 1, Pos 3 Offset) */}
+            <motion.div 
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-5 md:row-start-1"
+            >
+              <div className="flex items-center justify-center w-6 h-6 text-blue-400 shrink-0">
+                <Layers3 size={21} strokeWidth={2} />
+              </div>
+              <span className="text-sm font-medium text-slate-200 tracking-wide">TypeScript</span>
+            </motion.div>
+
+            {/* Card 4: Node.js (Row 2, Pos 1 Staggered) */}
+            <motion.div 
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-2 md:row-start-2"
+            >
+              <div className="flex items-center justify-center w-6 h-6 text-green-400 shrink-0">
+                <Server size={21} strokeWidth={2} />
+              </div>
+              <span className="text-sm font-medium text-slate-200 tracking-wide">Node.js</span>
+            </motion.div>
+
+            {/* Card 5: Tailwind CSS (Row 2, Pos 2 Staggered) */}
+            <motion.div 
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-4 md:row-start-2"
+            >
+              <div className="flex items-center justify-center w-6 h-6 text-sky-400 shrink-0">
+                <PenTool size={21} strokeWidth={2} />
+              </div>
+              <span className="text-sm font-medium text-slate-200 tracking-wide">Tailwind CSS</span>
+            </motion.div>
+
+            {/* Card 6: MongoDB (Row 2, Pos 3 Staggered) */}
+            <motion.div 
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="flex items-center gap-3 bg-[#0A0520]/80 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors duration-300 rounded-xl px-5 py-3.5 w-40 h-14 shadow-[0_4px_25px_rgba(0,0,0,0.5)] md:col-start-6 md:row-start-2"
+            >
+              <div className="flex items-center justify-center w-6 h-6 text-emerald-500 shrink-0">
+                <Database size={21} strokeWidth={2} />
+              </div>
+              <span className="text-sm font-medium text-slate-200 tracking-wide">MongoDB</span>
+            </motion.div>
+
+          </div>
+        </div>   
       </section>
 
       {/* CTA */}
