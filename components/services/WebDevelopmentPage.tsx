@@ -964,43 +964,37 @@ export default function WebDevelopmentPage() {
 
             {[
               {
-                icon: (
-                  <Atom
-                    size={22}
-                    strokeWidth={2}
-                    className="animate-[spin_15s_linear_infinite]"
-                  />
-                ),
+                icon: <Atom size={30} strokeWidth={2} />,
                 title: "React",
                 color: "text-cyan-400",
                 position: "md:col-start-1 md:row-start-1",
               },
               {
-                icon: <Code2 size={21} strokeWidth={2.5} />,
+                icon: <Code2 size={30} strokeWidth={2} />,
                 title: "Next.js",
                 color: "text-white",
                 position: "md:col-start-3 md:row-start-1",
               },
               {
-                icon: <Layers3 size={21} strokeWidth={2} />,
+                icon: <Layers3 size={30} strokeWidth={2} />,
                 title: "TypeScript",
                 color: "text-blue-400",
                 position: "md:col-start-5 md:row-start-1",
               },
               {
-                icon: <Server size={21} strokeWidth={2} />,
+                icon: <Server size={30} strokeWidth={2} />,
                 title: "Node.js",
                 color: "text-green-400",
                 position: "md:col-start-2 md:row-start-2",
               },
               {
-                icon: <PenTool size={21} strokeWidth={2} />,
+                icon: <PenTool size={30} strokeWidth={2} />,
                 title: "Tailwind CSS",
                 color: "text-sky-400",
                 position: "md:col-start-4 md:row-start-2",
               },
               {
-                icon: <Database size={21} strokeWidth={2} />,
+                icon: <Database size={30} strokeWidth={2} />,
                 title: "MongoDB",
                 color: "text-emerald-500",
                 position: "md:col-start-6 md:row-start-2",
