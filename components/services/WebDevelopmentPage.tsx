@@ -814,7 +814,7 @@ export default function WebDevelopmentPage() {
       <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 px-6 flex items-center">
 
         {/* BG GRID */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
 
         {/* BG GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
