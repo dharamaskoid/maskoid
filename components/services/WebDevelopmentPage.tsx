@@ -646,161 +646,19 @@ export default function WebDevelopmentPage() {
 
       {/* OUR PROCESS */}
 
-      <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
-
-        {/* BG SHAPES */}
-        <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
-
-        </div>
-
-        <div className="container px-6 mx-auto relative z-10">
-
-          {/* HEADER */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center max-w-3xl mx-auto"
-          >
-
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-              Our Process
-            </p>
-
-            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              Web Development 
-              <span className="text-[#2b4c9a]"> Process</span>
-            </h2>
-
-            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-              Our proven process ensures your project is delivered on time,
-              on budget, and exceeds expectations.
-            </p>
-
-          </motion.div>
-
-          {/* PROCESS STEPS */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-20 mt-20 relative">
-
-            {[
-              {
-                step: "01",
-                title: "Discovery & Planning",
-                icon: <Search size={26} />,
-                text: "We understand your goals, audience, and requirements to create a solid plan.",
-              },
-
-              {
-                step: "02",
-                title: "Design & Prototyping",
-                icon: <PenTool size={26} />,
-                text: "We design intuitive UI/UX prototypes that align with your brand and users.",
-              },
-
-              {
-                step: "03",
-                title: "Development",
-                icon: <MonitorSmartphone size={26} />,
-                text: "Our developers build scalable, secure, and high-performance solutions.",
-              },
-
-              {
-                step: "04",
-                title: "Testing & Launch",
-                icon: <Rocket size={26} />,
-                text: "We test thoroughly and launch your website with full support.",
-              },
-            ].map((item, index) => (
-
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.12 }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="
-                  relative
-                  bg-white
-                  border border-[#e8efff]
-                  rounded-[30px]
-                  p-8
-                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
-                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
-                "
-              >
-
-                {/* STEP NUMBER */}
-                <div className="
-                  absolute top-6 right-6
-                  text-6xl font-bold
-                  text-[#EEF4FF]
-                ">
-                  {item.step}
-                </div>
-
-                {/* ICON */}
-                <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 5,
-                  }}
-                  className="
-                    relative z-10
-                    w-16 h-16
-                    rounded-2xl
-                    bg-[#EEF4FF]
-                    text-[#2b4c9a]
-                    flex items-center justify-center
-                  "
-                >
-                  {item.icon}
-                </motion.div>
-
-                {/* TITLE */}
-                <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">
-                  {item.title}
-                </h3>
-
-                {/* TEXT */}
-                <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                  {item.text}
-                </p>
-
-                {/* ARROW LINE */}
-                {index !== 3 && (
-                  <div className="hidden lg:flex absolute top-1/2 -right-20 z-20 items-center">
-
-                    <div className="w-12 border-t-2 border-dashed border-[#c8d8ff]"></div>
-
-                    <ArrowRight className="w-5 h-5 text-[#3B82F6]" />
-
-                  </div>
-                )}
-
-              </motion.div>
-
-            ))}
-
-          </div>
-
-        </div>
-      </section>
-
       <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
+
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+        {/* GRID PATTERN */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
         <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
           
           {/* LEFT COLUMN: Content */}
-          {/* HEADER */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -809,13 +667,18 @@ export default function WebDevelopmentPage() {
             className="max-w-md"
           >
 
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
+            <motion.p
+              whileHover={{
+                scale: 1.04,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+            >
               Our Process
-            </p>
+            </motion.p>
 
             <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-               A Simple Process To <br />
-            Deliver 
+              A Simple Process To <br />
+              Deliver
               <span className="text-[#2b4c9a]"> Exceptional Results</span>
             </h2>
 
@@ -826,73 +689,150 @@ export default function WebDevelopmentPage() {
 
           </motion.div>
 
-          {/* RIGHT COLUMN: Timeline Steps */}
+          {/* RIGHT COLUMN */}
           <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
             
-            {/* SVG Dotted Connecting Wave Line (Desktop Backdrop) */}
-            <div className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0">
-              <svg className="w-full h-full" viewBox="0 0 500 40" fill="none" preserveAspectRatio="none">
-                <path 
-                  d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20" 
-                  stroke="#3B82F6" 
-                  strokeWidth="1.5" 
-                  strokeDasharray="4 4" 
+            {/* SVG LINE */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0"
+            >
+              <svg
+                className="w-full h-full"
+                viewBox="0 0 500 40"
+                fill="none"
+                preserveAspectRatio="none"
+              >
+                <motion.path
+                  d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20"
+                  stroke="#3B82F6"
+                  strokeWidth="1.5"
+                  strokeDasharray="4 4"
                   opacity="0.25"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 2,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: true }}
                 />
               </svg>
-            </div>
+            </motion.div>
 
-            {/* STEP 1: Discover */}
-            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                <Search size={30} strokeWidth={2.5} />
-              </div>
-              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">01</span>
-              <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Discovery & Planning</h3>
-              <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                We understand your goals, audience, and requirements to create a solid plan.
-              </p>
-            </div>
+            {[
+              {
+                step: "01",
+                icon: <Search size={30} strokeWidth={2.5} />,
+                title: "Discovery & Planning",
+                text: "We understand your goals, audience, and requirements to create a solid plan.",
+              },
+              {
+                step: "02",
+                icon: (
+                  <PenTool
+                    size={30}
+                    strokeWidth={2.5}
+                    className="rotate-90"
+                  />
+                ),
+                title: "Design & Prototyping",
+                text: "We design intuitive UI/UX prototypes that align with your brand and users.",
+              },
+              {
+                step: "03",
+                icon: <Code2 size={30} strokeWidth={2.5} />,
+                title: "Development",
+                text: "Our developers build scalable, secure, and high-performance solutions.",
+              },
+              {
+                step: "04",
+                icon: <Rocket size={30} strokeWidth={2.5} />,
+                title: "Testing & Launch",
+                text: "We test thoroughly and launch your website with full support.",
+              },
+            ].map((item, index) => (
 
-            {/* STEP 2: Design */}
-            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                <PenTool size={30} strokeWidth={2.5} className="rotate-90" />
-              </div>
-              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">02</span>
-              <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Design & Prototyping</h3>
-              <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                We design intuitive UI/UX prototypes that align with your brand and users.
-              </p>
-            </div>
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.15,
+                }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10 group"
+              >
 
-            {/* STEP 3: Develop */}
-            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                <Code2 size={30} strokeWidth={2.5} />
-              </div>
-              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">03</span>
-              <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Development</h3>
-              <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                Our developers build scalable, secure, and high-performance solutions.
-              </p>
-            </div>
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 220,
+                  }}
+                  className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shadow-[0_10px_30px_rgba(43,76,154,0.08)] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
+                >
 
-            {/* STEP 4: Launch */}
-            <div className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10">
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                <Rocket size={30} strokeWidth={2.5} />
-              </div>
-              <span className="text-xl mt-2 font-bold text-[#2b4c9a]">04</span>
-              <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">Testing & Launch</h3>
-              <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                We test thoroughly and launch your website with full support.
-              </p>
-            </div>
+                  {/* HOVER GLOW */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                    <div className="absolute -top-4 -right-4 w-14 h-14 bg-blue-500/20 blur-2xl rounded-full"></div>
+
+                  </div>
+
+                  {item.icon}
+
+                </motion.div>
+
+                {/* NUMBER */}
+                <motion.span
+                  animate={{
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                  }}
+                  className="text-xl mt-4 font-bold text-[#2b4c9a]"
+                >
+                  {item.step}
+                </motion.span>
+
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* TEXT */}
+                <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
+                  {item.text}
+                </p>
+
+              </motion.div>
+
+            ))}
 
           </div>
 
         </div>
+
       </section>
 
       {/* TECHNOLOGIES WE USE */}
