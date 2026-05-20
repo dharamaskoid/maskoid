@@ -829,7 +829,7 @@ export default function WebDevelopmentPage() {
           <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
             
             {/* SVG Dotted Connecting Wave Line (Desktop Backdrop) */}
-            <div className="absolute top-10 left-12 h-20 pointer-events-none hidden sm:block z-0">
+            <div className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0">
               <svg className="w-full h-full" viewBox="0 0 500 40" fill="none" preserveAspectRatio="none">
                 <path 
                   d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20" 
