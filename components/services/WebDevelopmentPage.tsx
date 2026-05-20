@@ -24,7 +24,6 @@ import {
   Waypoints,
   Atom,
   Server, 
-  TechCard,
 } from "lucide-react";
 
 const solutions = [
