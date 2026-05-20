@@ -26,6 +26,16 @@ import {
   Server, 
 } from "lucide-react";
 
+// Sample icons data matching your image layout
+const techIcons = [
+  { name: 'React', icon: '⚛️', gridPos: 'md:col-start-1 md:row-start-1' },
+  { name: 'Next.js', icon: 'N', gridPos: 'md:col-start-3 md:row-start-1' },
+  { name: 'TypeScript', icon: 'TS', gridPos: 'md:col-start-5 md:row-start-1' },
+  { name: 'Node.js', icon: '⬢', gridPos: 'md:col-start-2 md:row-start-2' },
+  { name: 'Tailwind CSS', icon: '≈', gridPos: 'md:col-start-4 md:row-start-2' },
+  { name: 'MongoDB', icon: '🍃', gridPos: 'md:col-start-6 md:row-start-2' },
+];
+
 const solutions = [
   {
     icon: <MonitorSmartphone size={34} />,
@@ -797,260 +807,55 @@ export default function WebDevelopmentPage() {
 
 
       {/* TECHNOLOGIES WE USE */}
-      {/* TECHNOLOGIES WE USE */}
-      <section className="relative py-24 overflow-hidden bg-[#050816]">
-
-        {/* BG EFFECTS */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#4f7cff]/20 blur-[140px] rounded-full"></div>
-
-          <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#7c3aed]/20 blur-[140px] rounded-full"></div>
-
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:26px_26px]"></div>
-
+      <section className="relative w-full min-h-[400px] bg-[#0B0827] text-white overflow-hidden py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between font-sans">
+      
+        {/* Background Decorative Rings / Orbits */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[400px] opacity-40 pointer-events-none">
+          <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-15deg] scale-110"></div>
+          <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-10deg]"></div>
+          <div className="absolute inset-10 border border-blue-500/20 rounded-[50%] rotate-[-5deg] scale-90"></div>
+          {/* Glowing Ambient Lights */}
+          <div className="absolute top-1/4 left-1/3 w-48 h-48 bg-blue-600/30 blur-[80px] rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-600/20 blur-[80px] rounded-full"></div>
+          {/* Tiny Sparkles */}
+          <div className="absolute top-12 left-12 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_8px_#c084fc]"></div>
+          <div className="absolute bottom-20 left-1/2 w-1 h-1 bg-blue-400 rounded-full animate-pulse shadow-[0_0_6px_#60a5fa]"></div>
+          <div className="absolute top-1/3 right-12 w-2 h-2 bg-indigo-400 rounded-full animate-pulse shadow-[0_0_10px_#818cf8]"></div>
         </div>
 
-        <div className="container px-6 mx-auto relative z-10">
+        {/* Left Content Column */}
+        <div className="max-w-xl z-10 flex flex-col space-y-4 text-left">
+          <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-indigo-400 bg-indigo-950/50 border border-indigo-800/40 px-3 py-1 rounded-full w-fit">
+            Technologies We Use
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-100 leading-tight">
+            Modern Technologies For <br className="hidden md:inline" /> Modern Solutions
+          </h2>
+          <p className="text-sm md:text-base text-slate-400 max-w-md font-light leading-relaxed">
+            We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
+          </p>
+        </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-            {/* LEFT CONTENT */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
+        {/* Right Grid Column (Staggered Floating Cards) */}
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-4 gap-y-5 mt-12 md:mt-0 z-10 w-full md:w-auto pr-0 md:pr-12">
+          {techIcons.map((tech, idx) => (
+            <div
+              key={idx}
+              className={`flex items-center gap-3 bg-[#120E36]/80 backdrop-blur-md border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 rounded-xl px-5 py-3 w-40 shadow-[0_4px_20px_rgba(0,0,0,0.4)] ${tech.gridPos}`}
             >
-
-              <p className="inline-flex items-center px-5 py-2 rounded-full border border-[#4f7cff]/20 bg-[#4f7cff]/10 text-[#7EA6FF] text-xs font-semibold uppercase tracking-[0.25em]">
-                Technologies We Use
-              </p>
-
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
-                Modern Technologies For
-                <span className="block text-[#7EA6FF]">
-                  Modern Solutions
-                </span>
-              </h2>
-
-              <p className="mt-6 text-[#A8B3CF] text-lg leading-relaxed max-w-xl">
-                We leverage cutting-edge frameworks and technologies to build scalable,
-                secure, and future-ready digital products.
-              </p>
-
-              {/* STATS */}
-              <div className="grid grid-cols-2 gap-5 mt-10">
-
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[24px] p-6"
-                >
-
-                  <h3 className="text-4xl font-bold text-white">
-                    10+
-                  </h3>
-
-                  <p className="mt-2 text-[#A8B3CF]">
-                    Modern Technologies
-                  </p>
-
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[24px] p-6"
-                >
-
-                  <h3 className="text-4xl font-bold text-white">
-                    100%
-                  </h3>
-
-                  <p className="mt-2 text-[#A8B3CF]">
-                    Scalable Solutions
-                  </p>
-
-                </motion.div>
-
+              {/* Icon Wrapper */}
+              <div className="flex items-center justify-center w-7 h-7 text-lg font-bold rounded-md">
+                {tech.name === 'React' && <span className="text-cyan-400 font-normal animate-[spin_10s_linear_infinite]">{tech.icon}</span>}
+                {tech.name === 'Next.js' && <span className="text-white bg-black px-1 rounded-sm text-xs font-black">{tech.icon}</span>}
+                {tech.name === 'TypeScript' && <span className="text-white bg-[#3178C6] text-[10px] px-1 rounded-sm font-bold">{tech.icon}</span>}
+                {tech.name === 'Node.js' && <span className="text-green-500 font-normal">{tech.icon}</span>}
+                {tech.name === 'Tailwind CSS' && <span className="text-sky-400 font-bold">{tech.icon}</span>}
+                {tech.name === 'MongoDB' && <span className="text-emerald-500 font-normal">{tech.icon}</span>}
               </div>
-
-            </motion.div>
-
-            {/* RIGHT TECHNOLOGY STACK */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="relative flex items-center justify-center mt-16 lg:mt-0"
-            >
-
-              {/* BG GLOW */}
-              <div className="absolute w-[500px] h-[500px] bg-[#4f7cff]/20 blur-[140px] rounded-full"></div>
-
-              {/* CENTER IMAGE */}
-              <motion.div
-                animate={{
-                  y: [0, -12, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative z-20"
-              >
-
-                <img
-                  src="/images/tech-laptop.png"
-                  alt="Technology"
-                  className="w-[280px] md:w-[360px] drop-shadow-[0_30px_80px_rgba(79,124,255,0.35)]"
-                />
-
-              </motion.div>
-
-              {/* TOP */}
-              <motion.div
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                className="absolute top-0 left-1/2 -translate-x-1/2 z-30"
-              >
-
-                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[210px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                    <Atom size={28} />
-                  </div>
-
-                  <h3 className="text-white font-semibold text-lg">
-                    React
-                  </h3>
-
-                </div>
-
-              </motion.div>
-
-              {/* RIGHT TOP */}
-              <motion.div
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                className="absolute top-24 right-0 z-30"
-              >
-
-                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[220px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                    <Layers3 size={28} />
-                  </div>
-
-                  <h3 className="text-white font-semibold text-lg">
-                    Next.js
-                  </h3>
-
-                </div>
-
-              </motion.div>
-
-              {/* RIGHT BOTTOM */}
-              <motion.div
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                className="absolute bottom-24 right-0 z-30"
-              >
-
-                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[240px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                    <Code2 size={28} />
-                  </div>
-
-                  <h3 className="text-white font-semibold text-lg">
-                    TypeScript
-                  </h3>
-
-                </div>
-
-              </motion.div>
-
-              {/* BOTTOM */}
-              <motion.div
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30"
-              >
-
-                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[220px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                    <Server size={28} />
-                  </div>
-
-                  <h3 className="text-white font-semibold text-lg">
-                    Node.js
-                  </h3>
-
-                </div>
-
-              </motion.div>
-
-              {/* LEFT BOTTOM */}
-              <motion.div
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                className="absolute bottom-24 left-0 z-30"
-              >
-
-                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[230px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                    <Database size={28} />
-                  </div>
-
-                  <h3 className="text-white font-semibold text-lg">
-                    MongoDB
-                  </h3>
-
-                </div>
-
-              </motion.div>
-
-              {/* LEFT TOP */}
-              <motion.div
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                className="absolute top-24 left-0 z-30"
-              >
-
-                <div className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 min-w-[250px] shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#10182E] text-[#7EA6FF] flex items-center justify-center">
-                    <MonitorSmartphone size={28} />
-                  </div>
-
-                  <h3 className="text-white font-semibold text-lg">
-                    Tailwind CSS
-                  </h3>
-
-                </div>
-
-              </motion.div>
-
-            </motion.div>
-
-          </div>
-
+              {/* Label */}
+              <span className="text-sm font-medium text-slate-200 tracking-wide">{tech.name}</span>
+            </div>
+          ))}
         </div>
 
       </section>
