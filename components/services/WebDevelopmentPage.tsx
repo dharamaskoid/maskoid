@@ -827,19 +827,16 @@ export default function WebDevelopmentPage() {
                 viewport={{ once: true }}
                 variants={fadeUp}
               >
-
-                <p className="inline-flex px-5 py-2 rounded-full bg-white border border-[#dbe7ff] text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+                <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
                   Technologies We Use
                 </p>
 
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#071739] leading-tight">
+                <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
                   Modern Technologies For
-                  <span className="block text-[#3B82F6]">
-                    Modern Solutions
-                  </span>
+                  <span className="text-[#2b4c9a]"> Modern Solutions</span>
                 </h2>
 
-                <p className="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+                <p className="mt-5 text-gray-500 text-lg leading-relaxed">
                   We leverage cutting-edge frameworks and tools to build fast, scalable, and future-ready websites.
                 </p>
 
