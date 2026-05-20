@@ -473,16 +473,16 @@ export default function WebDevelopmentPage() {
           </motion.div>
 
 
-          {/* CONTENT ROW LIST LAYOUT (No Boxes) */}
+          {/* CONTENT ROW LIST LAYOUT (No Boxes, 2 Columns per item, No Arrows) */}
           <div className="flex flex-col w-full border-t border-gray-200/60">
             {solution.map((item, index) => (
               <div 
                 key={index}
-                className="group flex flex-col md:flex-row items-start md:items-center justify-between py-7 border-b border-gray-200/60 transition-all duration-300 hover:px-4 cursor-pointer"
+                className="group grid grid-cols-1 md:grid-cols-2 items-start md:items-center py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-4 md:gap-8"
               >
-                {/* Left Block: Icon & Title */}
-                <div className="flex items-center gap-6 md:w-1/3 shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                {/* COLUMN 1: Icon & Title */}
+                <div className="flex items-center gap-6 text-left">
+                  <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold text-[#071739] tracking-tight group-hover:text-blue-600 transition-colors">
@@ -490,18 +490,11 @@ export default function WebDevelopmentPage() {
                   </h3>
                 </div>
 
-                {/* Middle Block: Description Paragraph */}
-                <div className="flex-1 mt-3 md:mt-0 md:px-8">
-                  <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed max-w-2xl">
+                {/* COLUMN 2: Description Paragraph */}
+                <div className="text-left">
+                  <p className="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
                     {item.desc}
                   </p>
-                </div>
-
-                {/* Right Block: Minimalist Action Link Indicator */}
-                <div className="mt-4 md:mt-0 shrink-0 self-end md:self-center">
-                  <div className="w-8 h-8 rounded-full border border-gray-200 group-hover:border-blue-600 text-gray-400 group-hover:text-blue-600 flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
-                    <ArrowUpRight size={16} strokeWidth={2.5} />
-                  </div>
                 </div>
 
               </div>
