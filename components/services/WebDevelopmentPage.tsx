@@ -1333,7 +1333,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
       </section>
 
       {/* FAQ SECTION */}
-      <section className="relative py-24 px-6 bg-[#EEF2FF] overflow-hidden">
+      <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
 
         {/* BG EFFECTS */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
@@ -1342,7 +1342,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
         <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-        <div className="container mx-auto relative z-10">
+        <div className="container px-6 mx-auto relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-20 items-start">
 
