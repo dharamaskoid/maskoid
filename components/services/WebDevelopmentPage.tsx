@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 import "swiper/css";
@@ -28,9 +28,6 @@ import {
   ArrowRight,
   MessageCircleMore,
   Minus,
-  Star,
-  Quote,
-  ExternalLink,
 } from "lucide-react";
 
 
@@ -144,20 +141,6 @@ const slideVariants: Variants = {
     transition: { duration: 0.4, ease: "easeInOut" }
   })
 };
-interface Review {
-  author_name: string;
-  rating: number;
-  text: string;
-  relative_time_description: string;
-  profile_photo_url: string;
-}
-
-interface GoogleData {
-  name: string;
-  rating: number;
-  user_ratings_total: number;
-  reviews: Review[];
-}
 
 export default function WebDevelopmentPage() {
 
@@ -195,21 +178,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
  const prevRef = useRef<HTMLButtonElement | null>(null);
  const nextRef = useRef<HTMLButtonElement | null>(null);
-
-const [data, setData] = useState<GoogleData | null>(null);
-useEffect(() => {
-
-    fetch("/api/google-reviews")
-      .then((res) => res.json())
-      .then((result) => {
-        setData(result);
-      });
-
-  }, []);
-
-  if (!data) {
-    return null;
-  }
 
 const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
@@ -1706,274 +1674,6 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
         </div>
 
       </section>
-
-      <section className="relative py-20 bg-[#EEF2FF] overflow-hidden">
-
-            {/* BG EFFECTS */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]" />
-
-            <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full" />
-
-            <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full" />
-
-            <div className="container px-4 sm:px-6 mx-auto relative z-10">
-
-              {/* HEADER */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="text-center max-w-3xl mx-auto"
-              >
-
-                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                  GOOGLE REVIEWS
-                </p>
-
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-                  Trusted By
-                  <span className="text-[#2b4c9a]"> Happy Clients</span>
-                </h2>
-
-                <p className="mt-6 text-lg text-gray-500 leading-relaxed">
-                  Real reviews from businesses and brands we’ve helped grow online.
-                </p>
-
-              </motion.div>
-
-              {/* TOP REVIEW BAR */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="
-                  mt-14
-                  rounded-[32px]
-                  border border-white/60
-                  bg-white/70
-                  backdrop-blur-2xl
-                  shadow-[0_20px_60px_rgba(43,76,154,0.08)]
-                  p-6 sm:p-8
-                "
-              >
-
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-
-                  {/* LEFT */}
-                  <div className="flex items-center gap-5">
-
-                    <div className="
-                      w-20 h-20
-                      rounded-3xl
-                      bg-[#EEF4FF]
-                      flex items-center justify-center
-                      shadow-[0_10px_30px_rgba(43,76,154,0.08)]
-                    ">
-
-                      <img
-                        src="https://www.gstatic.com/images/branding/product/2x/google_g_48dp.png"
-                        alt="Google"
-                        className="w-10 h-10 object-contain"
-                      />
-
-                    </div>
-
-                    <div>
-
-                      <h3 className="text-2xl font-bold text-[#1a2e5e]">
-                        {data.name}
-                      </h3>
-
-                      <div className="flex items-center gap-3 mt-2">
-
-                        <div className="flex items-center gap-1">
-
-                          {[...Array(5)].map((_, i) => (
-
-                            <Star
-                              key={i}
-                              size={18}
-                              className={`
-                                ${i < Math.round(data.rating)
-                                  ? "fill-yellow-400 text-yellow-400"
-                                  : "text-gray-300"}
-                              `}
-                            />
-
-                          ))}
-
-                        </div>
-
-                        <span className="font-semibold text-[#1a2e5e]">
-                          {data.rating}
-                        </span>
-
-                      </div>
-
-                      <p className="mt-2 text-gray-500">
-                        Based on {data.user_ratings_total}+ Google Reviews
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                  {/* BUTTON */}
-                  <Link
-                    href="https://google.com"
-                    target="_blank"
-                    className="
-                      inline-flex
-                      items-center
-                      justify-center
-                      gap-3
-                      px-7 py-4
-                      rounded-2xl
-                      bg-[#1a2e5e]
-                      text-white
-                      font-semibold
-                      hover:bg-[#2b4c9a]
-                      hover:scale-[1.03]
-                      transition-all duration-300
-                      whitespace-nowrap
-                    "
-                  >
-
-                    View All Reviews
-                    <ExternalLink size={18} />
-
-                  </Link>
-
-                </div>
-
-              </motion.div>
-
-              {/* REVIEW CARDS */}
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
-
-                {data.reviews?.slice(0, 6).map((review, index) => (
-
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.6,
-                      delay: index * 0.08,
-                    }}
-                    whileHover={{
-                      y: -8,
-                    }}
-                    className="
-                      group
-                      relative
-                      overflow-hidden
-                      rounded-[32px]
-                      border border-white/60
-                      bg-white/70
-                      backdrop-blur-2xl
-                      p-8
-                      shadow-[0_20px_60px_rgba(43,76,154,0.08)]
-                      hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
-                      transition-all duration-500
-                    "
-                  >
-
-                    {/* HOVER GLOW */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                      <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-                    </div>
-
-                    <div className="relative z-10">
-
-                      {/* USER */}
-                      <div className="flex items-start justify-between gap-4">
-
-                        <div className="flex items-center gap-4">
-
-                          <img
-                            src={review.profile_photo_url}
-                            alt={review.author_name}
-                            className="
-                              w-14 h-14
-                              rounded-2xl
-                              object-cover
-                              border border-white
-                              shadow-md
-                            "
-                          />
-
-                          <div>
-
-                            <h3 className="text-lg font-bold text-[#1a2e5e]">
-                              {review.author_name}
-                            </h3>
-
-                            <p className="text-sm text-gray-400 mt-1">
-                              {review.relative_time_description}
-                            </p>
-
-                          </div>
-
-                        </div>
-
-                        <div className="
-                          w-12 h-12
-                          rounded-2xl
-                          bg-[#EEF4FF]
-                          text-[#2b4c9a]
-                          flex items-center justify-center
-                          flex-shrink-0
-                        ">
-
-                          <Quote size={20} />
-
-                        </div>
-
-                      </div>
-
-                      {/* STARS */}
-                      <div className="flex items-center gap-1 mt-6">
-
-                        {[...Array(review.rating)].map((_, i) => (
-
-                          <Star
-                            key={i}
-                            size={16}
-                            className="fill-yellow-400 text-yellow-400"
-                          />
-
-                        ))}
-
-                      </div>
-
-                      {/* TEXT */}
-                      <p className="
-                        mt-5
-                        text-gray-500
-                        leading-relaxed
-                        line-clamp-5
-                      ">
-                        {review.text}
-                      </p>
-
-                    </div>
-
-                  </motion.div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-      </section>
-
       {/* CTA */}
       <section className="py-16 px-6 overflow-hidden">
 
