@@ -24,6 +24,7 @@ import {
   Server, 
   Layers,
   CheckCircle2,
+  Plus,
 } from "lucide-react";
 
 
@@ -1112,10 +1113,10 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
       </section>
 
+      {/* Case Study */}
       <section className="relative w-full bg-[#F8FAFF] overflow-hidden py-16 flex items-center">
             
-
-            <div className="container mx-auto px-6 relative z-10 w-full">
+          <div className="container mx-auto px-6 relative z-10 w-full">
               
               {/* SECTION HEADER BLOCK */}
 
@@ -1289,8 +1290,155 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 </div>
 
               </motion.div>
-            </div>
-          </section>
+          </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="relative py-16  overflow-hidden bg-[#EEF2FF]">
+
+        {/* BG EFFECTS */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        <div className="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-[100px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[320px] h-[320px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+        <div className="container px-6 mx-auto relative z-10">
+
+          {/* HEADER */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+              Frequently Asked Questions
+            </p>
+
+            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              Everything You Need To Know
+              <span className="text-[#2b4c9a]"> About Our Services</span>
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              Answers to common questions about our web development process,
+              technologies, timelines, and support services.
+            </p>
+
+          </motion.div>
+
+          {/* FAQ LIST */}
+          <div className="max-w-5xl mx-auto mt-16 space-y-5">
+
+            {[
+              {
+                question: "How long does it take to build a website?",
+                answer:
+                  "Project timelines depend on features, pages, and complexity. Most business websites are completed within 2–6 weeks, while advanced custom platforms may take longer.",
+              },
+              {
+                question: "Do you create custom website designs?",
+                answer:
+                  "Yes. Every website is designed based on your business goals, brand identity, audience, and user experience requirements for a unique digital presence.",
+              },
+              {
+                question: "Will my website be mobile responsive?",
+                answer:
+                  "Absolutely. All websites are fully responsive and optimized for mobile, tablet, and desktop devices to ensure a seamless user experience.",
+              },
+              {
+                question: "Which technologies do you use?",
+                answer:
+                  "We use modern technologies like React, Next.js, TypeScript, Tailwind CSS, Node.js, WordPress, and scalable backend solutions based on project requirements.",
+              },
+              {
+                question: "Do you provide SEO optimization?",
+                answer:
+                  "Yes. We implement technical SEO best practices including fast loading speed, clean structure, schema optimization, and mobile performance improvements.",
+              },
+              {
+                question: "Do you offer website maintenance and support?",
+                answer:
+                  "Yes. We provide ongoing support, security updates, maintenance, performance monitoring, and future scalability improvements after launch.",
+              },
+            ].map((faq, index) => (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.08,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[26px]
+                  border border-[#dbe7ff]
+                  bg-white/80
+                  backdrop-blur-xl
+                  shadow-[0_10px_40px_rgba(43,76,154,0.06)]
+                  hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)]
+                  transition-all duration-500
+                "
+              >
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                </div>
+
+                <details className="relative z-10 group p-8 cursor-pointer">
+
+                  <summary className="list-none flex items-center justify-between gap-6">
+
+                    <h3 className="text-xl md:text-2xl font-bold text-[#1a2e5e]">
+                      {faq.question}
+                    </h3>
+
+                    <div className="
+                      flex-shrink-0
+                      w-12 h-12
+                      rounded-2xl
+                      bg-[#EEF4FF]
+                      flex items-center justify-center
+                      text-[#2b4c9a]
+                      group-open:rotate-45
+                      transition-all duration-500
+                    ">
+                      <Plus size={22} strokeWidth={2.5} />
+                    </div>
+
+                  </summary>
+
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-6 text-gray-500 leading-relaxed text-lg pr-10"
+                  >
+                    {faq.answer}
+                  </motion.p>
+
+                </details>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
 
       {/* CTA */}
       <section className="py-16 px-6 overflow-hidden">
