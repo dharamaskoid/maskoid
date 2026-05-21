@@ -1355,7 +1355,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
               className="lg:sticky lg:top-28"
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.25em]">
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
                 FAQ SECTION
               </p>
 
@@ -1501,8 +1501,8 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                         items-center
                         justify-center
                         gap-3
-                        px-6 py-3.5
-                        rounded-2xl
+                        px-6 py-3
+                        rounded-xl
                         bg-[#1a2e5e]
                         text-white
                         font-semibold
