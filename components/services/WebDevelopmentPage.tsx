@@ -1418,75 +1418,108 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
               {/* FLOATING CARD */}
               <motion.div
-                animate={{
-                  y: [0, -12, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                  mt-8
-                  rounded-[32px]
-                  overflow-hidden
-                  border border-white/50
-                  bg-white/60
-                  backdrop-blur-xl
-                  shadow-[0_30px_80px_rgba(43,76,154,0.10)]
-                "
-              >
+                  animate={{
+                    y: [0, -12, 0],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.01,
+                  }}
+                  className="
+                    mt-8
+                    rounded-[32px]
+                    overflow-hidden
+                    border border-white/50
+                    bg-white/60
+                    backdrop-blur-xl
+                    shadow-[0_30px_80px_rgba(43,76,154,0.10)]
+                    hover:shadow-[0_35px_100px_rgba(43,76,154,0.16)]
+                    transition-all duration-500
+                  "
+                >
 
-                <div className="p-8">
+                  <div className="relative p-8 overflow-hidden">
 
-                  <div className="flex items-center gap-4">
+                    {/* HOVER GLOW */}
+                    <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
 
-                    <div className="
-                      w-16 h-16
-                      rounded-2xl
-                      bg-[#EEF4FF]
-                      text-[#2b4c9a]
-                      flex items-center justify-center
-                    ">
-                      <MessageCircleMore size={30} />
+                      <div className="absolute -top-24 right-0 w-60 h-60 bg-blue-500/10 blur-3xl rounded-full"></div>
+
                     </div>
 
-                    <div>
+                    {/* CONTENT */}
+                    <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
 
-                      <h4 className="text-2xl font-bold text-[#1a2e5e]">
-                        Need More Help?
-                      </h4>
+                      {/* LEFT */}
+                      <div className="flex items-center gap-4">
 
-                      <p className="text-gray-500 mt-1">
-                        Our team is ready to assist you.
-                      </p>
+                        <motion.div
+                          whileHover={{
+                            rotate: 8,
+                            scale: 1.08,
+                          }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 220,
+                          }}
+                          className="
+                            w-16 h-16
+                            rounded-2xl
+                            bg-[#EEF4FF]
+                            text-[#2b4c9a]
+                            flex items-center justify-center
+                            flex-shrink-0
+                          "
+                        >
+                          <MessageCircleMore size={30} />
+                        </motion.div>
+
+                        <div>
+
+                          <h4 className="text-2xl font-bold text-[#1a2e5e] whitespace-nowrap">
+                            Need More Help?
+                          </h4>
+
+                          <p className="text-gray-500 mt-1 whitespace-nowrap">
+                            Our team is ready to assist you.
+                          </p>
+
+                        </div>
+
+                      </div>
+
+                      {/* BUTTON */}
+                      <Link
+                        href="/contact-us"
+                        className="
+                          inline-flex
+                          items-center
+                          justify-center
+                          gap-3
+                          px-7 py-4
+                          rounded-2xl
+                          bg-[#1a2e5e]
+                          text-white
+                          font-semibold
+                          hover:bg-[#2b4c9a]
+                          hover:scale-[1.03]
+                          transition-all duration-300
+                          whitespace-nowrap
+                        "
+                      >
+                        Contact Us
+                      </Link>
 
                     </div>
 
                   </div>
 
-                  <Link
-                    href="/contact-us"
-                    className="
-                      mt-8
-                      inline-flex
-                      items-center
-                      gap-3
-                      px-7 py-4
-                      rounded-2xl
-                      bg-[#1a2e5e]
-                      text-white
-                      font-semibold
-                      hover:bg-[#2b4c9a]
-                      transition-all duration-300
-                    "
-                  >
-                    Contact Us
-                  </Link>
-
-                </div>
-
-              </motion.div>
+                </motion.div>
 
             </motion.div>
 
