@@ -1359,7 +1359,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                 FAQ SECTION
               </p>
 
-              <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              <h2 className="mt-6 text-3xl sm:text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
                 Frequently Asked
                 <span className="text-[#2b4c9a]"> Questions</span>
               </h2>
@@ -1555,7 +1555,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                       group
                       relative
                       overflow-hidden
-                      rounded-2xl
+                      rounded-xl
                       border border-white/60
                       bg-white/70
                       backdrop-blur-2xl
@@ -1581,7 +1581,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                         relative z-10
                         w-full
                         px-5 sm:px-8
-                        py-5
+                        py-4
                         text-left
                         flex items-center justify-between gap-4
                       "
