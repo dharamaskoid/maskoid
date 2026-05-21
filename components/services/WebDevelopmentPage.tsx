@@ -1368,7 +1368,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 >
 
                   <h3 className="text-4xl font-bold text-white">
-                    13+
+                    10+
                   </h3>
 
                   <p className="mt-2 text-blue-100">
@@ -1529,7 +1529,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
                   </div>
 
-                  <details className="relative z-10 p-8 md:p-10 cursor-pointer group">
+                  <details className="relative z-10 px-8 py-4 cursor-pointer group">
 
                     <summary className="list-none flex items-start justify-between gap-6">
 
@@ -1542,8 +1542,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
                       </div>
 
                       <div className="
-                        w-12 h-12
-                        rounded-2xl
+                        w-8 h-8
+                        rounded-xl
                         bg-[#EEF4FF]
                         text-[#2b4c9a]
                         flex items-center justify-center
