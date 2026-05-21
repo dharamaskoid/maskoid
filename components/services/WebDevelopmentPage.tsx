@@ -1554,7 +1554,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
                       <div>
 
-                        <h3 className="text-2xl font-bold text-[#1a2e5e] leading-snug">
+                        <h3 className="text-xl font-bold text-[#1a2e5e] leading-snug">
                           {faq.question}
                         </h3>
 
@@ -1614,11 +1614,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
                           <div className="px-8 pb-6 pr-14">
 
-                            <p className="
-                              text-gray-500
-                              leading-relaxed
-                              text-lg
-                            ">
+                            <p className="text-gray-500 leading-relaxed">
                               {faq.answer}
                             </p>
 
