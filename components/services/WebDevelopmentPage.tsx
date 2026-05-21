@@ -1482,7 +1482,6 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                     "
                   >
                     Contact Us
-                    <ArrowRight size={18} />
                   </Link>
 
                 </div>
@@ -1547,7 +1546,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                       className="
                         relative z-10
                         w-full
-                        px-8 py-6
+                        px-8 py-4
                         text-left
                         flex items-start justify-between gap-6
                       "
