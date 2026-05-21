@@ -1512,7 +1512,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     group
                     relative
                     overflow-hidden
-                    rounded-[30px]
+                    rounded-2xl
                     border border-white/60
                     bg-white/70
                     backdrop-blur-2xl
