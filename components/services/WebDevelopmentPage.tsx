@@ -1198,12 +1198,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
                       {/* Dynamic Outcome Checklist items */}
                       <div className="space-y-2.5 border-t border-gray-200/60 pt-5">
-                        <h4 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">Key Outcomes:</h4>
+                        <h4 className="mt-5 text-2xl md:text-2xl font-bold text-[#1a2e5e] leading-tight">Key Outcomes:</h4>
                         {active.outcomes.map((outcome, idx) => (
                           <motion.div 
                             key={idx}
                             variants={itemVariants}
-                            className="flex items-center gap-3 text-sm text-gray-500"
+                            className="flex items-center gap-3"
                           >
                             <CheckCircle2 size={16} className="text-[#2b4c9a] shrink-0" />
                             <p className="text-gray-500 leading-relaxed">{outcome}</p>
