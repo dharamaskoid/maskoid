@@ -1569,7 +1569,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                           duration: 0.3,
                         }}
                         className="
-                          w-10 h-10
+                          w-8 h-8
                           rounded-xl
                           bg-[#EEF4FF]
                           text-[#2b4c9a]
