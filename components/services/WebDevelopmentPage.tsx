@@ -1125,21 +1125,13 @@ const [currentIndex, setCurrentIndex] = useState(0);
             <div className="container mx-auto px-6 relative z-10 w-full">
               
               {/* SECTION HEADER BLOCK */}
-              <div className="flex flex-col items-center text-center mb-16 space-y-3">
-                <span className="text-[10px] uppercase tracking-[0.25em] font-extrabold text-[#2b4c9a] bg-white border border-[#2b4c9a]/15 px-4 py-1.5 rounded-full shadow-sm w-fit">
-                  Case Study Showcase
-                </span>
-                <h2 className="text-3xl sm:text-4xl md:text-[44px] font-black tracking-tight text-[#1a2e5e] leading-tight">
-                  Our Recent Web Success Stories
-                </h2>
-                <div className="w-16 h-1 bg-[#2b4c9a] rounded-full mt-2" />
-              </div>
 
               <motion.div
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
+                className="text-center max-w-3xl mx-auto"
               >
 
                 <motion.p
