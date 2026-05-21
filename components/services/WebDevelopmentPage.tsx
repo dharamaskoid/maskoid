@@ -1112,15 +1112,17 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
       </section>
 
-      <section className="relative w-full min-h-[800px] bg-[#EEF2FF] text-[#1a2e5e] overflow-hidden py-20 px-4 sm:px-6 md:px-16 font-sans flex items-center">
+      <section className="relative w-full bg-[#EEF2FF] text-[#1a2e5e] overflow-hidden py-16 flex items-center">
             
-            {/* BACKGROUND ABSTRACT GEOMETRIC ORBS */}
-            <div className="absolute inset-0 pointer-events-none z-0 opacity-40">
-              <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
-              <div className="absolute bottom-[-10%] left-[-5%] w-[450px] h-[450px] bg-[#1a2e5e]/10 blur-[100px] rounded-full"></div>
-            </div>
+           {/* BG GRID */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
 
-            <div className="container mx-auto relative z-10 w-full max-w-7xl">
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
+
+            <div className="container mx-auto px-6 relative z-10 w-full">
               
               {/* SECTION HEADER BLOCK */}
               <div className="flex flex-col items-center text-center mb-16 space-y-3">
