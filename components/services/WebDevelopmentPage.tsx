@@ -1114,7 +1114,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
       <section className="relative w-full bg-[#EEF2FF] text-[#1a2e5e] overflow-hidden py-16 flex items-center">
             
-           {/* BG GRID */}
+        {/* BG GRID */}
         <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
 
         {/* BG GLOW */}
@@ -1160,7 +1160,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full"
+                className="grid grid-cols-1 mt-10 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full"
               >
                 
                 {/* LEFT INNER PANEL: Dynamic Typography Content (Spans 5 Columns) */}
