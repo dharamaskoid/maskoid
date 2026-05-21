@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 import "swiper/css";
@@ -1540,26 +1540,18 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     </div>
 
                     {/* FAQ BUTTON */}
-                      {/* ICON */}
-                      <div
-                        className="
-                          w-10 h-10
-                          rounded-xl
-                          bg-[#EEF4FF]
-                          text-[#2b4c9a]
-                          flex items-center justify-center
-                          flex-shrink-0
-                          transition-all duration-300
-                        "
-                      >
-
-                        {isActive ? (
-                          <Minus size={20} strokeWidth={2.5} />
-                        ) : (
-                          <Plus size={20} strokeWidth={2.5} />
-                        )}
-
-                      </div>
+                    <button
+                      onClick={() =>
+                        setActiveFAQ(isActive ? null : index)
+                      }
+                      className="
+                        relative z-10
+                        w-full
+                        px-8 py-6
+                        text-left
+                        flex items-start justify-between gap-6
+                      "
+                    >
 
                       <div>
 
