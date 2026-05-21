@@ -1554,7 +1554,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
                       <div>
 
-                        <h3 className="text-xl font-bold text-[#1a2e5e] justify-between leading-snug">
+                        <h3 className="text-xl font-bold text-[#1a2e5e] leading-snug">
                           {faq.question}
                         </h3>
 
