@@ -1177,7 +1177,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                       className="space-y-6"
                     >
                       {/* Domain & Sub-Industry */}
-                      <div className="border-l-4 border-[#2b4c9a] pl-4 py-1">
+                      <div>
                         <h3 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">{active.domain}</h3>
                         <p className="text-xs text-[#2b4c9a] font-mono tracking-wider mt-1 uppercase font-semibold">{active.industry}</p>
                       </div>
@@ -1197,8 +1197,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
                       </p>
 
                       {/* Dynamic Outcome Checklist items */}
-                      <div className="space-y-2.5 border-t border-gray-200/60 pt-5">
-                        <h4 className="mt-5 text-2xl md:text-2xl font-bold text-[#1a2e5e] leading-tight">Key Outcomes:</h4>
+                      <div className="space-y-2.5 border-t border-gray-200/60">
+                        <h4 className="mt-5 text-xl md:text-xl font-bold text-[#1a2e5e] leading-tight">Key Outcomes:</h4>
                         {active.outcomes.map((outcome, idx) => (
                           <motion.div 
                             key={idx}
