@@ -240,13 +240,13 @@ export default function WebDevelopmentPage() {
         </section>
       
       {/* OUR SERVICES */}
-      <section className="relative bg-[#EEF2FF] py-16 px-6 overflow-hidden">
+      <section className="relative bg-[#EEF2FF] py-16 overflow-hidden">
         {/* BG PATTERN */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
         {/* GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
-        <div className="container mx-auto relative z-10">
+        <div className="container px-6 mx-auto relative z-10">
             {/* HEADER */}
               <motion.div
                 initial="hidden"
@@ -377,13 +377,13 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* OUR SOLUTIONS */}      
-      <section className="relative bg-[#F8FAFF] py-16 px-6 overflow-hidden">
+      <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
         
         {/* Soft Light Blur Accents in Background */}
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-        <div className="container mx-auto relative z-10 max-w-5xl">
+        <div className="container px-6 mx-auto relative z-10 max-w-5xl">
 
           {/* HEADER */}
           <motion.div
@@ -615,7 +615,7 @@ export default function WebDevelopmentPage() {
       </section>      
 
       {/* OUR PROCESS */}
-      <section className="relative w-full bg-[#F8FAFF] py-16 px-6 md:px-16 overflow-hidden font-sans">
+      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden font-sans">
 
         {/* BG GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
@@ -625,7 +625,7 @@ export default function WebDevelopmentPage() {
         {/* GRID PATTERN */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-        <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
           
           {/* LEFT COLUMN: Content */}
           <motion.div
@@ -804,7 +804,7 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* TECHNOLOGIES WE USE */}
-      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 px-6 flex items-center">
+      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 flex items-center">
 
         {/* BG GRID */}
         <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
@@ -814,7 +814,7 @@ export default function WebDevelopmentPage() {
 
         <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
 
-        <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
           
           {/* Background Decorative Rings */}
           <motion.div
