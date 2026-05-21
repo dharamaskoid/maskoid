@@ -1140,7 +1140,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="max-w-md"
               >
 
                 <motion.p
