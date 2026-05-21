@@ -1375,7 +1375,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                 <motion.div
                   whileHover={{ y: -6 }}
                   className="
-                    rounded-[28px]
+                    rounded-xl
                     bg-white/70
                     backdrop-blur-xl
                     border border-white/60
@@ -1397,7 +1397,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                 <motion.div
                   whileHover={{ y: -6 }}
                   className="
-                    rounded-[28px]
+                    rounded-xl
                     bg-[#1a2e5e]
                     p-6
                     shadow-[0_20px_50px_rgba(43,76,154,0.12)]
@@ -1432,7 +1432,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                 }}
                 className="
                   mt-8
-                  rounded-[32px]
+                  rounded-xl
                   overflow-hidden
                   border border-white/50
                   bg-white/60
@@ -1469,7 +1469,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                         }}
                         className="
                           w-14 h-14 sm:w-16 sm:h-16
-                          rounded-2xl
+                          rounded-xl
                           bg-[#EEF4FF]
                           text-[#2b4c9a]
                           flex items-center justify-center
