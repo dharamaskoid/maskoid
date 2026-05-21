@@ -383,7 +383,7 @@ export default function WebDevelopmentPage() {
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-        <div className="container px-6 mx-auto relative z-10 max-w-5xl">
+        <div className="container px-6 mx-auto relative z-10">
 
           {/* HEADER */}
           <motion.div
