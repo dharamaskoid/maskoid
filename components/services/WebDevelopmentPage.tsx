@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React, { useState } from 'react';
+import { useState } from "react";
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 import "swiper/css";
