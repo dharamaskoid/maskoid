@@ -1178,7 +1178,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     >
                       {/* Domain & Sub-Industry */}
                       <div className="border-l-4 border-[#2b4c9a] pl-4 py-1">
-                        <h3 className="text-2xl md:text-2xl text-[#1a2e5e] tracking-tight">{active.domain}</h3>
+                        <h3 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">{active.domain}</h3>
                         <p className="text-xs text-[#2b4c9a] font-mono tracking-wider mt-1 uppercase font-semibold">{active.industry}</p>
                       </div>
 
@@ -1192,13 +1192,13 @@ const [currentIndex, setCurrentIndex] = useState(0);
                       </div>
 
                       {/* Main Muted Paragraph Description */}
-                      <p className="text-sm text-gray-500 font-normal leading-relaxed">
+                      <p className="text-gray-500 leading-relaxed">
                         {active.desc}
                       </p>
 
                       {/* Dynamic Outcome Checklist items */}
                       <div className="space-y-2.5 border-t border-gray-200/60 pt-5">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-[#1a2e5e]/70 mb-2">Key Outcomes:</h4>
+                        <h4 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">Key Outcomes:</h4>
                         {active.outcomes.map((outcome, idx) => (
                           <motion.div 
                             key={idx}
@@ -1206,7 +1206,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                             className="flex items-center gap-3 text-sm text-gray-500"
                           >
                             <CheckCircle2 size={16} className="text-[#2b4c9a] shrink-0" />
-                            <span className="font-light">{outcome}</span>
+                            <p className="text-gray-500 leading-relaxed">{outcome}</p>
                           </motion.div>
                         ))}
                       </div>
