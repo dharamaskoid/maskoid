@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -98,19 +98,44 @@ const caseStudies = [
   }
 ];
 
-// Scroll animation variants
-const containerVariants = {
+// Explicitly type your objects to satisfy Framer Motion's strict types
+const containerVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.15 }
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut", 
+      staggerChildren: 0.15 
+    }
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: -20 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { duration: 0.4, ease: "easeOut" } 
+  }
+};
+
+const slideVariants: Variants = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 100 : -100,
+    opacity: 0
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  },
+  exit: (dir: number) => ({
+    x: dir < 0 ? 100 : -100,
+    opacity: 0,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  })
 };
 
 export default function WebDevelopmentPage() {
@@ -132,23 +157,7 @@ export default function WebDevelopmentPage() {
 const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
 
-    // TypeScript typed variants
-    const slideVariants = {
-      enter: (dir: number) => ({
-        x: dir > 0 ? 100 : -100,
-        opacity: 0
-      }),
-      center: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.4, ease: "easeInOut" }
-      },
-      exit: (dir: number) => ({
-        x: dir < 0 ? 100 : -100,
-        opacity: 0,
-        transition: { duration: 0.4, ease: "easeInOut" }
-      })
-    };
+ 
 
   const handleNext = () => {
     setDirection(1);
