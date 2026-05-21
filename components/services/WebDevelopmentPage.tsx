@@ -535,7 +535,7 @@ export default function WebDevelopmentPage() {
                 {
                   number: "01",
                   title: "Proven Industry Experience",
-                  text: "With 13+ years of expertise, Maskoid Technology delivers high-performance digital solutions tailored to diverse business industries and growth goals.",
+                  text: "With 10+ years of expertise, Maskoid Technology delivers high-performance digital solutions tailored to diverse business industries and growth goals.",
                 },
                 {
                   number: "02",
