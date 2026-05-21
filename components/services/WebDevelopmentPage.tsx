@@ -132,22 +132,23 @@ export default function WebDevelopmentPage() {
 const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
 
-  const slideVariants = {
-    enter: (dir) => ({
-      x: dir > 0 ? 100 : -100,
-      opacity: 0
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.4, ease: "easeInOut" }
-    },
-    exit: (dir) => ({
-      x: dir < 0 ? 100 : -100,
-      opacity: 0,
-      transition: { duration: 0.4, ease: "easeInOut" }
-    })
-  };
+    // TypeScript typed variants
+    const slideVariants = {
+      enter: (dir: number) => ({
+        x: dir > 0 ? 100 : -100,
+        opacity: 0
+      }),
+      center: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.4, ease: "easeInOut" }
+      },
+      exit: (dir: number) => ({
+        x: dir < 0 ? 100 : -100,
+        opacity: 0,
+        transition: { duration: 0.4, ease: "easeInOut" }
+      })
+    };
 
   const handleNext = () => {
     setDirection(1);
