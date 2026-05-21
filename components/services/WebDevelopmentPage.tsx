@@ -179,7 +179,41 @@ const [currentIndex, setCurrentIndex] = useState(0);
  const prevRef = useRef<HTMLButtonElement | null>(null);
  const nextRef = useRef<HTMLButtonElement | null>(null);
 
- const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
+const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "Most business websites are completed within 2–6 weeks depending on project complexity and required functionality.",
+    },
+    {
+      question: "Do you create custom website designs?",
+      answer:
+        "Yes. Every project is uniquely designed according to your brand identity, goals, and user experience strategy.",
+    },
+    {
+      question: "Will my website be mobile responsive?",
+      answer:
+        "Absolutely. All websites are optimized for desktop, tablet, and mobile devices for seamless performance.",
+    },
+    {
+      question: "Which technologies do you use?",
+      answer:
+        "We use React, Next.js, TypeScript, Tailwind CSS, Node.js, WordPress, and scalable backend technologies.",
+    },
+    {
+      question: "Do you provide SEO optimization?",
+      answer:
+        "Yes. We implement technical SEO, performance optimization, and fast-loading architecture for better rankings.",
+    },
+    {
+      question: "Do you offer long-term support?",
+      answer:
+        "Yes. We provide maintenance, updates, scalability improvements, and long-term technical support.",
+    },
+  ];
+
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
@@ -1458,9 +1492,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </motion.div>
 
             {/* RIGHT SIDE FAQ */}
-
-
-            {/* RIGHT SIDE FAQ */}
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1469,38 +1500,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
               className="space-y-6"
             >
 
-              {[
-                {
-                  question: "How long does it take to build a website?",
-                  answer:
-                    "Most business websites are completed within 2–6 weeks depending on project complexity and required functionality.",
-                },
-                {
-                  question: "Do you create custom website designs?",
-                  answer:
-                    "Yes. Every project is uniquely designed according to your brand identity, goals, and user experience strategy.",
-                },
-                {
-                  question: "Will my website be mobile responsive?",
-                  answer:
-                    "Absolutely. All websites are optimized for desktop, tablet, and mobile devices for seamless performance.",
-                },
-                {
-                  question: "Which technologies do you use?",
-                  answer:
-                    "We use React, Next.js, TypeScript, Tailwind CSS, Node.js, WordPress, and scalable backend technologies.",
-                },
-                {
-                  question: "Do you provide SEO optimization?",
-                  answer:
-                    "Yes. We implement technical SEO, performance optimization, and fast-loading architecture for better rankings.",
-                },
-                {
-                  question: "Do you offer long-term support?",
-                  answer:
-                    "Yes. We provide maintenance, updates, scalability improvements, and long-term technical support.",
-                },
-              ].map((faq, index) => {
+              {faqs.map((faq, index) => {
 
                 const isActive = activeFAQ === index;
 
@@ -1564,7 +1564,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                       {/* ICON */}
                       <motion.div
                         animate={{
-                          rotate: isActive ? 45 : 0,
+                          rotate: isActive ? 180 : 0,
                         }}
                         transition={{
                           duration: 0.3,
@@ -1578,7 +1578,13 @@ const [currentIndex, setCurrentIndex] = useState(0);
                           flex-shrink-0
                         "
                       >
-                        <Plus size={20} strokeWidth={2.5} />
+
+                        {isActive ? (
+                          <Minus size={20} strokeWidth={2.5} />
+                        ) : (
+                          <Plus size={20} strokeWidth={2.5} />
+                        )}
+
                       </motion.div>
 
                     </button>
