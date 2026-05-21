@@ -408,7 +408,7 @@ export default function WebDevelopmentPage() {
 
 
           {/* CONTENT ROW LIST LAYOUT (No Boxes, 2 Columns per item, No Arrows) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
+            <div className="grid grid-cols-1 mt-6 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
               
               {/* LEFT COLUMN: Contains the First 3 Items */}
               <div className="flex flex-col w-full">
