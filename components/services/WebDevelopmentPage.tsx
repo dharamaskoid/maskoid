@@ -1135,6 +1135,34 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 <div className="w-16 h-1 bg-[#2b4c9a] rounded-full mt-2" />
               </div>
 
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="max-w-md"
+              >
+
+                <motion.p
+                  whileHover={{
+                    scale: 1.04,
+                  }}
+                  className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+                >
+                   Case Study Showcase
+                </motion.p>
+
+                <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                  Our Recent
+                  <span className="text-[#2b4c9a]"> Web Success</span> Stories
+                </h2>
+
+                <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+                  Real results. Real impact. See how we help businesses grow with powerful web solutions.
+                </p>
+
+              </motion.div>
+
               {/* INTERACTIVE SPLIT ANCHOR VIEWPORT */}
               <motion.div 
                 variants={containerVariants}
