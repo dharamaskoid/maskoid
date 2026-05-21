@@ -622,9 +622,6 @@ export default function WebDevelopmentPage() {
 
         <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-        {/* GRID PATTERN */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
-
         <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
           
           {/* LEFT COLUMN: Content */}
@@ -755,7 +752,7 @@ export default function WebDevelopmentPage() {
                     type: "spring",
                     stiffness: 220,
                   }}
-                  className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shadow-[0_10px_30px_rgba(43,76,154,0.08)] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
+                  className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
                 >
 
                   {/* HOVER GLOW */}
