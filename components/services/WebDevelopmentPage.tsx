@@ -1112,15 +1112,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
       </section>
 
-      <section className="relative w-full bg-[#EEF2FF] text-[#1a2e5e] overflow-hidden py-16 flex items-center">
+      <section className="relative w-full bg-[#F8FAFF] overflow-hidden py-16 flex items-center">
             
-        {/* BG GRID */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
-
-        {/* BG GLOW */}
-        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
 
             <div className="container mx-auto px-6 relative z-10 w-full">
               
@@ -1185,7 +1178,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                       {/* Tech Stack Button Badges */}
                       <div className="flex flex-wrap gap-2 pt-1">
                         {active.techStack.map((tech, idx) => (
-                          <span key={idx} className="text-[11px] font-semibold text-[#1a2e5e] bg-white border border-[#2b4c9a]/10 px-3 py-1 rounded-lg shadow-sm">
+                          <span key={idx} className="text-[11px] font-semibold text-[#1a2e5e] bg-[#EEF2FF] border border-[#2b4c9a]/10 px-3 py-1 rounded-lg shadow-sm">
                             {tech}
                           </span>
                         ))}
