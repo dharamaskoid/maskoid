@@ -178,6 +178,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
  const prevRef = useRef<HTMLButtonElement | null>(null);
  const nextRef = useRef<HTMLButtonElement | null>(null);
 
+ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
+
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
@@ -1455,6 +1457,9 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </motion.div>
 
             {/* RIGHT SIDE FAQ */}
+
+
+            {/* RIGHT SIDE FAQ */}
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1494,44 +1499,58 @@ const [currentIndex, setCurrentIndex] = useState(0);
                   answer:
                     "Yes. We provide maintenance, updates, scalability improvements, and long-term technical support.",
                 },
-              ].map((faq, index) => (
+              ].map((faq, index) => {
 
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.7,
-                    delay: index * 0.08,
-                  }}
-                  whileHover={{
-                    y: -6,
-                  }}
-                  className="
-                    group
-                    relative
-                    overflow-hidden
-                    rounded-2xl
-                    border border-white/60
-                    bg-white/70
-                    backdrop-blur-2xl
-                    shadow-[0_20px_60px_rgba(43,76,154,0.08)]
-                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
-                    transition-all duration-500
-                  "
-                >
+                const isActive = activeFAQ === index;
 
-                  {/* GLOW */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+                return (
 
-                    <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.7,
+                      delay: index * 0.08,
+                    }}
+                    whileHover={{
+                      y: -6,
+                    }}
+                    className="
+                      group
+                      relative
+                      overflow-hidden
+                      rounded-2xl
+                      border border-white/60
+                      bg-white/70
+                      backdrop-blur-2xl
+                      shadow-[0_20px_60px_rgba(43,76,154,0.08)]
+                      hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                      transition-all duration-500
+                    "
+                  >
 
-                  </div>
+                    {/* GLOW */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
-                  <details className="relative z-10 px-8 py-4 cursor-pointer group">
+                      <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
 
-                    <summary className="list-none flex items-start justify-between gap-6">
+                    </div>
+
+                    {/* FAQ BUTTON */}
+                    <button
+                      onClick={() =>
+                        setActiveFAQ(isActive ? null : index)
+                      }
+                      className="
+                        relative z-10
+                        w-full
+                        px-8 py-6
+                        text-left
+                        flex items-start justify-between gap-6
+                      "
+                    >
 
                       <div>
 
@@ -1541,35 +1560,75 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
                       </div>
 
-                      <div className="
-                        w-8 h-8
-                        rounded-xl
-                        bg-[#EEF4FF]
-                        text-[#2b4c9a]
-                        flex items-center justify-center
-                        group-open:rotate-45
-                        transition-all duration-500
-                      ">
-                        <Plus size={22} strokeWidth={2.5} />
-                      </div>
+                      {/* ICON */}
+                      <motion.div
+                        animate={{
+                          rotate: isActive ? 45 : 0,
+                        }}
+                        transition={{
+                          duration: 0.3,
+                        }}
+                        className="
+                          w-10 h-10
+                          rounded-xl
+                          bg-[#EEF4FF]
+                          text-[#2b4c9a]
+                          flex items-center justify-center
+                          flex-shrink-0
+                        "
+                      >
+                        <Plus size={20} strokeWidth={2.5} />
+                      </motion.div>
 
-                    </summary>
+                    </button>
 
-                    <p className="
-                      mt-6
-                      text-gray-500
-                      leading-relaxed
-                      text-lg
-                      pr-6
-                    ">
-                      {faq.answer}
-                    </p>
+                    {/* ANSWER */}
+                    <AnimatePresence>
 
-                  </details>
+                      {isActive && (
 
-                </motion.div>
+                        <motion.div
+                          initial={{
+                            height: 0,
+                            opacity: 0,
+                          }}
+                          animate={{
+                            height: "auto",
+                            opacity: 1,
+                          }}
+                          exit={{
+                            height: 0,
+                            opacity: 0,
+                          }}
+                          transition={{
+                            duration: 0.4,
+                          }}
+                          className="overflow-hidden"
+                        >
 
-              ))}
+                          <div className="px-8 pb-6 pr-14">
+
+                            <p className="
+                              text-gray-500
+                              leading-relaxed
+                              text-lg
+                            ">
+                              {faq.answer}
+                            </p>
+
+                          </div>
+
+                        </motion.div>
+
+                      )}
+
+                    </AnimatePresence>
+
+                  </motion.div>
+
+                );
+
+              })}
 
             </motion.div>
 
