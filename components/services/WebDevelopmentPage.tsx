@@ -1342,9 +1342,9 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
         <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-        <div className="container px-6 mx-auto relative z-10">
+        <div className="container px-4 sm:px-6 mx-auto relative z-10">
 
-          <div className="grid lg:grid-cols-2 gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-start">
 
             {/* LEFT SIDE */}
             <motion.div
@@ -1352,25 +1352,25 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="sticky top-28"
+              className="lg:sticky lg:top-28"
             >
 
               <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.25em]">
                 FAQ SECTION
               </p>
 
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
                 Frequently Asked
                 <span className="text-[#2b4c9a]"> Questions</span>
               </h2>
 
-              <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-xl">
+              <p className="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl">
                 Everything you need to know about our services, technologies,
                 timelines, pricing, support, and scalable web solutions.
               </p>
 
               {/* STATS */}
-              <div className="mt-12 grid grid-cols-2 gap-5">
+              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
 
                 <motion.div
                   whileHover={{ y: -6 }}
@@ -1384,11 +1384,11 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                   "
                 >
 
-                  <h3 className="text-4xl font-bold text-[#1a2e5e]">
+                  <h3 className="text-3xl sm:text-4xl font-bold text-[#1a2e5e]">
                     120+
                   </h3>
 
-                  <p className="mt-2 text-gray-500">
+                  <p className="mt-2 text-gray-500 text-sm sm:text-base">
                     Successful Projects Delivered
                   </p>
 
@@ -1404,11 +1404,11 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                   "
                 >
 
-                  <h3 className="text-4xl font-bold text-white">
+                  <h3 className="text-3xl sm:text-4xl font-bold text-white">
                     10+
                   </h3>
 
-                  <p className="mt-2 text-blue-100">
+                  <p className="mt-2 text-blue-100 text-sm sm:text-base">
                     Years Industry Experience
                   </p>
 
@@ -1418,108 +1418,109 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
               {/* FLOATING CARD */}
               <motion.div
-                  animate={{
-                    y: [0, -12, 0],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.01,
-                  }}
-                  className="
-                    mt-8
-                    rounded-[32px]
-                    overflow-hidden
-                    border border-white/50
-                    bg-white/60
-                    backdrop-blur-xl
-                    shadow-[0_30px_80px_rgba(43,76,154,0.10)]
-                    hover:shadow-[0_35px_100px_rgba(43,76,154,0.16)]
-                    transition-all duration-500
-                  "
-                >
+                animate={{
+                  y: [0, -12, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.01,
+                }}
+                className="
+                  mt-8
+                  rounded-[32px]
+                  overflow-hidden
+                  border border-white/50
+                  bg-white/60
+                  backdrop-blur-xl
+                  shadow-[0_30px_80px_rgba(43,76,154,0.10)]
+                  hover:shadow-[0_35px_100px_rgba(43,76,154,0.16)]
+                  transition-all duration-500
+                "
+              >
 
-                  <div className="relative p-8 overflow-hidden">
+                <div className="relative p-6 sm:p-8 overflow-hidden">
 
-                    {/* HOVER GLOW */}
-                    <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
+                  {/* HOVER GLOW */}
+                  <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
 
-                      <div className="absolute -top-24 right-0 w-60 h-60 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-                    </div>
-
-                    {/* CONTENT */}
-                    <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-
-                      {/* LEFT */}
-                      <div className="flex items-center gap-4">
-
-                        <motion.div
-                          whileHover={{
-                            rotate: 8,
-                            scale: 1.08,
-                          }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 220,
-                          }}
-                          className="
-                            w-16 h-16
-                            rounded-2xl
-                            bg-[#EEF4FF]
-                            text-[#2b4c9a]
-                            flex items-center justify-center
-                            flex-shrink-0
-                          "
-                        >
-                          <MessageCircleMore size={30} />
-                        </motion.div>
-
-                        <div>
-
-                          <h4 className="text-2xl font-bold text-[#1a2e5e] whitespace-nowrap">
-                            Need More Help?
-                          </h4>
-
-                          <p className="text-gray-500 mt-1 whitespace-nowrap">
-                            Our team is ready to assist you.
-                          </p>
-
-                        </div>
-
-                      </div>
-
-                      {/* BUTTON */}
-                      <Link
-                        href="/contact-us"
-                        className="
-                          inline-flex
-                          items-center
-                          justify-center
-                          gap-3
-                          px-7 py-4
-                          rounded-2xl
-                          bg-[#1a2e5e]
-                          text-white
-                          font-semibold
-                          hover:bg-[#2b4c9a]
-                          hover:scale-[1.03]
-                          transition-all duration-300
-                          whitespace-nowrap
-                        "
-                      >
-                        Contact Us
-                      </Link>
-
-                    </div>
+                    <div className="absolute -top-24 right-0 w-60 h-60 bg-blue-500/10 blur-3xl rounded-full"></div>
 
                   </div>
 
-                </motion.div>
+                  {/* CONTENT */}
+                  <div className="relative z-10 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
+
+                    {/* LEFT */}
+                    <div className="flex items-center gap-4 min-w-0">
+
+                      <motion.div
+                        whileHover={{
+                          rotate: 8,
+                          scale: 1.08,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 220,
+                        }}
+                        className="
+                          w-14 h-14 sm:w-16 sm:h-16
+                          rounded-2xl
+                          bg-[#EEF4FF]
+                          text-[#2b4c9a]
+                          flex items-center justify-center
+                          flex-shrink-0
+                        "
+                      >
+                        <MessageCircleMore size={28} />
+                      </motion.div>
+
+                      <div className="min-w-0">
+
+                        <h4 className="text-xl sm:text-2xl font-bold text-[#1a2e5e] leading-tight">
+                          Need More Help?
+                        </h4>
+
+                        <p className="text-gray-500 mt-1 text-sm sm:text-base leading-relaxed">
+                          Our team is ready to assist you.
+                        </p>
+
+                      </div>
+
+                    </div>
+
+                    {/* BUTTON */}
+                    <Link
+                      href="/contact-us"
+                      className="
+                        inline-flex
+                        items-center
+                        justify-center
+                        gap-3
+                        px-6 py-3.5
+                        rounded-2xl
+                        bg-[#1a2e5e]
+                        text-white
+                        font-semibold
+                        hover:bg-[#2b4c9a]
+                        hover:scale-[1.03]
+                        transition-all duration-300
+                        whitespace-nowrap
+                        w-full sm:w-auto
+                      "
+                    >
+                      Contact Us
+                    </Link>
+
+                  </div>
+
+                </div>
+
+              </motion.div>
 
             </motion.div>
 
@@ -1529,7 +1530,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-5 sm:space-y-6"
             >
 
               {faqs.map((faq, index) => {
@@ -1579,15 +1580,16 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                       className="
                         relative z-10
                         w-full
-                        px-8 py-4
+                        px-5 sm:px-8
+                        py-5
                         text-left
-                        flex items-start justify-between gap-6
+                        flex items-center justify-between gap-4
                       "
                     >
 
-                      <div>
+                      <div className="flex-1">
 
-                        <h3 className="text-xl font-bold text-[#1a2e5e] leading-snug">
+                        <h3 className="text-lg sm:text-xl font-bold text-[#1a2e5e] leading-snug">
                           {faq.question}
                         </h3>
 
@@ -1612,9 +1614,9 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                       >
 
                         {isActive ? (
-                          <Minus size={20} strokeWidth={2.5} />
+                          <Minus size={18} strokeWidth={2.5} />
                         ) : (
-                          <Plus size={20} strokeWidth={2.5} />
+                          <Plus size={18} strokeWidth={2.5} />
                         )}
 
                       </motion.div>
@@ -1645,9 +1647,9 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                           className="overflow-hidden"
                         >
 
-                          <div className="px-8 pb-6 pr-14">
+                          <div className="px-5 sm:px-8 pb-6 sm:pr-14">
 
-                            <p className="text-gray-500 leading-relaxed">
+                            <p className="text-gray-500 leading-relaxed text-sm sm:text-base">
                               {faq.answer}
                             </p>
 
@@ -1672,7 +1674,6 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
         </div>
 
       </section>
-
       {/* CTA */}
       <section className="py-16 px-6 overflow-hidden">
 
