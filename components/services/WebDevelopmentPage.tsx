@@ -25,6 +25,8 @@ import {
   Layers,
   CheckCircle2,
   Plus,
+  ArrowRight,
+  MessageCircleMore,
 } from "lucide-react";
 
 
@@ -1294,145 +1296,282 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </section>
 
       {/* FAQ SECTION */}
-      <section className="relative py-16  overflow-hidden bg-[#EEF2FF]">
+      <section className="relative py-24 px-6 bg-[#EEF2FF] overflow-hidden">
 
         {/* BG EFFECTS */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-        <div className="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-[100px] rounded-full"></div>
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-        <div className="absolute bottom-0 right-0 w-[320px] h-[320px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-        <div className="container px-6 mx-auto relative z-10">
+        <div className="container mx-auto relative z-10">
 
-          {/* HEADER */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <div className="grid lg:grid-cols-2 gap-20 items-start">
 
-            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-              Frequently Asked Questions
-            </p>
+            {/* LEFT SIDE */}
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="sticky top-28"
+            >
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-              Everything You Need To Know
-              <span className="text-[#2b4c9a]"> About Our Services</span>
-            </h2>
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.25em]">
+                FAQ SECTION
+              </p>
 
-            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-              Answers to common questions about our web development process,
-              technologies, timelines, and support services.
-            </p>
+              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+                Frequently Asked
+                <span className="text-[#2b4c9a]"> Questions</span>
+              </h2>
 
-          </motion.div>
+              <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-xl">
+                Everything you need to know about our services, technologies,
+                timelines, pricing, support, and scalable web solutions.
+              </p>
 
-          {/* FAQ LIST */}
-          <div className="max-w-5xl mx-auto mt-16 space-y-5">
+              {/* STATS */}
+              <div className="mt-12 grid grid-cols-2 gap-5">
 
-            {[
-              {
-                question: "How long does it take to build a website?",
-                answer:
-                  "Project timelines depend on features, pages, and complexity. Most business websites are completed within 2–6 weeks, while advanced custom platforms may take longer.",
-              },
-              {
-                question: "Do you create custom website designs?",
-                answer:
-                  "Yes. Every website is designed based on your business goals, brand identity, audience, and user experience requirements for a unique digital presence.",
-              },
-              {
-                question: "Will my website be mobile responsive?",
-                answer:
-                  "Absolutely. All websites are fully responsive and optimized for mobile, tablet, and desktop devices to ensure a seamless user experience.",
-              },
-              {
-                question: "Which technologies do you use?",
-                answer:
-                  "We use modern technologies like React, Next.js, TypeScript, Tailwind CSS, Node.js, WordPress, and scalable backend solutions based on project requirements.",
-              },
-              {
-                question: "Do you provide SEO optimization?",
-                answer:
-                  "Yes. We implement technical SEO best practices including fast loading speed, clean structure, schema optimization, and mobile performance improvements.",
-              },
-              {
-                question: "Do you offer website maintenance and support?",
-                answer:
-                  "Yes. We provide ongoing support, security updates, maintenance, performance monitoring, and future scalability improvements after launch.",
-              },
-            ].map((faq, index) => (
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="
+                    rounded-[28px]
+                    bg-white/70
+                    backdrop-blur-xl
+                    border border-white/60
+                    p-6
+                    shadow-[0_20px_50px_rgba(43,76,154,0.08)]
+                  "
+                >
 
+                  <h3 className="text-4xl font-bold text-[#1a2e5e]">
+                    120+
+                  </h3>
+
+                  <p className="mt-2 text-gray-500">
+                    Successful Projects Delivered
+                  </p>
+
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="
+                    rounded-[28px]
+                    bg-[#1a2e5e]
+                    p-6
+                    shadow-[0_20px_50px_rgba(43,76,154,0.12)]
+                  "
+                >
+
+                  <h3 className="text-4xl font-bold text-white">
+                    13+
+                  </h3>
+
+                  <p className="mt-2 text-blue-100">
+                    Years Industry Experience
+                  </p>
+
+                </motion.div>
+
+              </div>
+
+              {/* FLOATING CARD */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{
+                  y: [0, -12, 0],
+                }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
                 className="
-                  group
-                  relative
+                  mt-8
+                  rounded-[32px]
                   overflow-hidden
-                  rounded-[26px]
-                  border border-[#dbe7ff]
-                  bg-white/80
+                  border border-white/50
+                  bg-white/60
                   backdrop-blur-xl
-                  shadow-[0_10px_40px_rgba(43,76,154,0.06)]
-                  hover:shadow-[0_20px_60px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
+                  shadow-[0_30px_80px_rgba(43,76,154,0.10)]
                 "
               >
 
-                {/* HOVER GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+                <div className="p-8">
 
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+                  <div className="flex items-center gap-4">
+
+                    <div className="
+                      w-16 h-16
+                      rounded-2xl
+                      bg-[#EEF4FF]
+                      text-[#2b4c9a]
+                      flex items-center justify-center
+                    ">
+                      <MessageCircleMore size={30} />
+                    </div>
+
+                    <div>
+
+                      <h4 className="text-2xl font-bold text-[#1a2e5e]">
+                        Need More Help?
+                      </h4>
+
+                      <p className="text-gray-500 mt-1">
+                        Our team is ready to assist you.
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <Link
+                    href="/contact-us"
+                    className="
+                      mt-8
+                      inline-flex
+                      items-center
+                      gap-3
+                      px-7 py-4
+                      rounded-2xl
+                      bg-[#1a2e5e]
+                      text-white
+                      font-semibold
+                      hover:bg-[#2b4c9a]
+                      transition-all duration-300
+                    "
+                  >
+                    Contact Us
+                    <ArrowRight size={18} />
+                  </Link>
 
                 </div>
 
-                <details className="relative z-10 group p-8 cursor-pointer">
-
-                  <summary className="list-none flex items-center justify-between gap-6">
-
-                    <h3 className="text-xl md:text-2xl font-bold text-[#1a2e5e]">
-                      {faq.question}
-                    </h3>
-
-                    <div className="
-                      flex-shrink-0
-                      w-12 h-12
-                      rounded-2xl
-                      bg-[#EEF4FF]
-                      flex items-center justify-center
-                      text-[#2b4c9a]
-                      group-open:rotate-45
-                      transition-all duration-500
-                    ">
-                      <Plus size={22} strokeWidth={2.5} />
-                    </div>
-
-                  </summary>
-
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="mt-6 text-gray-500 leading-relaxed text-lg pr-10"
-                  >
-                    {faq.answer}
-                  </motion.p>
-
-                </details>
-
               </motion.div>
 
-            ))}
+            </motion.div>
+
+            {/* RIGHT SIDE FAQ */}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+
+              {[
+                {
+                  question: "How long does it take to build a website?",
+                  answer:
+                    "Most business websites are completed within 2–6 weeks depending on project complexity and required functionality.",
+                },
+                {
+                  question: "Do you create custom website designs?",
+                  answer:
+                    "Yes. Every project is uniquely designed according to your brand identity, goals, and user experience strategy.",
+                },
+                {
+                  question: "Will my website be mobile responsive?",
+                  answer:
+                    "Absolutely. All websites are optimized for desktop, tablet, and mobile devices for seamless performance.",
+                },
+                {
+                  question: "Which technologies do you use?",
+                  answer:
+                    "We use React, Next.js, TypeScript, Tailwind CSS, Node.js, WordPress, and scalable backend technologies.",
+                },
+                {
+                  question: "Do you provide SEO optimization?",
+                  answer:
+                    "Yes. We implement technical SEO, performance optimization, and fast-loading architecture for better rankings.",
+                },
+                {
+                  question: "Do you offer long-term support?",
+                  answer:
+                    "Yes. We provide maintenance, updates, scalability improvements, and long-term technical support.",
+                },
+              ].map((faq, index) => (
+
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.08,
+                  }}
+                  whileHover={{
+                    y: -6,
+                  }}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-[30px]
+                    border border-white/60
+                    bg-white/70
+                    backdrop-blur-2xl
+                    shadow-[0_20px_60px_rgba(43,76,154,0.08)]
+                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                    transition-all duration-500
+                  "
+                >
+
+                  {/* GLOW */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                    <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                  </div>
+
+                  <details className="relative z-10 p-8 md:p-10 cursor-pointer group">
+
+                    <summary className="list-none flex items-start justify-between gap-6">
+
+                      <div>
+
+                        <h3 className="text-2xl font-bold text-[#1a2e5e] leading-snug">
+                          {faq.question}
+                        </h3>
+
+                      </div>
+
+                      <div className="
+                        w-12 h-12
+                        rounded-2xl
+                        bg-[#EEF4FF]
+                        text-[#2b4c9a]
+                        flex items-center justify-center
+                        group-open:rotate-45
+                        transition-all duration-500
+                      ">
+                        <Plus size={22} strokeWidth={2.5} />
+                      </div>
+
+                    </summary>
+
+                    <p className="
+                      mt-6
+                      text-gray-500
+                      leading-relaxed
+                      text-lg
+                      pr-6
+                    ">
+                      {faq.answer}
+                    </p>
+
+                  </details>
+
+                </motion.div>
+
+              ))}
+
+            </motion.div>
 
           </div>
 
