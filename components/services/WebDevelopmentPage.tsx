@@ -1171,7 +1171,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     >
                       {/* Domain & Sub-Industry */}
                       <div>
-                        <h3 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">{active.domain}</h3>
+                        <h3 className="mt-5 text-3xl md:text-3xl font-bold text-[#1a2e5e] leading-tight">{active.domain}</h3>
                         <p className="text-xs text-[#2b4c9a] font-mono tracking-wider mt-1 uppercase font-semibold">{active.industry}</p>
                       </div>
 
