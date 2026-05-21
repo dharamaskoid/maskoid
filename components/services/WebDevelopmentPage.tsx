@@ -1,11 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,6 +23,7 @@ import {
   Atom,
   Server, 
   Layers,
+  CheckCircle2,
 } from "lucide-react";
 
 
@@ -76,6 +78,40 @@ const solution = [
     desc: "Secure, highly reliable, and optimized APIs built to connect your distinct software systems flawlessly.",
   }
 ];
+// Sample Case Studies Array matching your theme parameters
+const caseStudies = [
+  {
+    domain: "GajanandMotors.com",
+    industry: "Automotive / Vehicle Dealership",
+    techStack: ['WordPress', 'Inventory System', 'Google Maps', 'CTA Optimization', 'Mobile-Friendly UX'],
+    desc: "Gajanand Motors needed a digital storefront for showcasing their inventory and services. We developed a fast-loading, clean, and search-optimized website with vehicle listing capabilities and easy inquiry options. Google Maps and click-to-call integration made it easier for local customers to connect.",
+    outcomes: ["Boost in local discovery", "More service inquiries", "Improved digital presence"],
+    image: "/images/gajanand-preview.jpg"
+  },
+  {
+    domain: "ApexLogistics.io",
+    industry: "Supply Chain & Transportation",
+    techStack: ['React', 'Next.js', 'Tailwind CSS', 'Real-time Tracking API', 'Mapbox GL'],
+    desc: "Apex Logistics required an enterprise portal to manage complex fleet dispatch operations. We engineered a high-performance headless client dashboard integrated with live telemetry data loops, yielding sharp drops in system latency and manual status cross-checking overhead.",
+    outcomes: ["40% Faster dispatch latency", "Real-time tracking updates", "Seamless custom dashboard UI"],
+    image: "/images/logistics-preview.jpg"
+  }
+];
+
+// Scroll animation variants
+const containerVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.15 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }
+};
 
 export default function WebDevelopmentPage() {
 
@@ -92,6 +128,38 @@ export default function WebDevelopmentPage() {
   "/images/Client-1-13.png",
   "/images/Client-1-14.png",
 ];
+
+const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+
+  const slideVariants = {
+    enter: (dir) => ({
+      x: dir > 0 ? 100 : -100,
+      opacity: 0
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.4, ease: "easeInOut" }
+    },
+    exit: (dir) => ({
+      x: dir < 0 ? 100 : -100,
+      opacity: 0,
+      transition: { duration: 0.4, ease: "easeInOut" }
+    })
+  };
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % caseStudies.length);
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
+  };
+
+  const active = caseStudies[currentIndex];
 
 
  const prevRef = useRef<HTMLButtonElement | null>(null);
@@ -1033,6 +1101,172 @@ export default function WebDevelopmentPage() {
         </div>
 
       </section>
+
+      <section className="relative w-full min-h-[800px] bg-[#EEF2FF] text-[#1a2e5e] overflow-hidden py-20 px-4 sm:px-6 md:px-16 font-sans flex items-center">
+            
+            {/* BACKGROUND ABSTRACT GEOMETRIC ORBS */}
+            <div className="absolute inset-0 pointer-events-none z-0 opacity-40">
+              <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+              <div className="absolute bottom-[-10%] left-[-5%] w-[450px] h-[450px] bg-[#1a2e5e]/10 blur-[100px] rounded-full"></div>
+            </div>
+
+            <div className="container mx-auto relative z-10 w-full max-w-7xl">
+              
+              {/* SECTION HEADER BLOCK */}
+              <div className="flex flex-col items-center text-center mb-16 space-y-3">
+                <span className="text-[10px] uppercase tracking-[0.25em] font-extrabold text-[#2b4c9a] bg-white border border-[#2b4c9a]/15 px-4 py-1.5 rounded-full shadow-sm w-fit">
+                  Case Study Showcase
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-[44px] font-black tracking-tight text-[#1a2e5e] leading-tight">
+                  Our Recent Web Success Stories
+                </h2>
+                <div className="w-16 h-1 bg-[#2b4c9a] rounded-full mt-2" />
+              </div>
+
+              {/* INTERACTIVE SPLIT ANCHOR VIEWPORT */}
+              <motion.div 
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full"
+              >
+                
+                {/* LEFT INNER PANEL: Dynamic Typography Content (Spans 5 Columns) */}
+                <div className="lg:col-span-5 flex flex-col space-y-6 text-left w-full order-2 lg:order-1">
+                  
+                  <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div
+                      key={currentIndex}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      className="space-y-6"
+                    >
+                      {/* Domain & Sub-Industry */}
+                      <div className="border-l-4 border-[#2b4c9a] pl-4 py-1">
+                        <h3 className="text-2xl md:text-3xl font-black text-[#1a2e5e] tracking-tight">{active.domain}</h3>
+                        <p className="text-xs text-[#2b4c9a] font-mono tracking-wider mt-1 uppercase font-semibold">{active.industry}</p>
+                      </div>
+
+                      {/* Tech Stack Button Badges */}
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        {active.techStack.map((tech, idx) => (
+                          <span key={idx} className="text-[11px] font-semibold text-[#1a2e5e] bg-white border border-[#2b4c9a]/10 px-3 py-1 rounded-lg shadow-sm">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Main Muted Paragraph Description */}
+                      <p className="text-sm text-gray-500 font-normal leading-relaxed">
+                        {active.desc}
+                      </p>
+
+                      {/* Dynamic Outcome Checklist items */}
+                      <div className="space-y-2.5 border-t border-gray-200/60 pt-5">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-[#1a2e5e]/70 mb-2">Key Outcomes:</h4>
+                        {active.outcomes.map((outcome, idx) => (
+                          <motion.div 
+                            key={idx}
+                            variants={itemVariants}
+                            className="flex items-center gap-3 text-sm text-gray-500"
+                          >
+                            <CheckCircle2 size={16} className="text-[#2b4c9a] shrink-0" />
+                            <span className="font-light">{outcome}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* LOWER CONTAINER CONTROLLERS: Navigation Buttons & Indicators */}
+                  <div className="flex items-center justify-between pt-6 border-t border-gray-200/60">
+                    <div className="flex items-center gap-2">
+                      <button 
+                        onClick={handlePrev}
+                        className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#1a2e5e] hover:bg-[#2b4c9a] hover:text-white transition-all shadow-sm flex items-center justify-center active:scale-95"
+                      >
+                        <ChevronLeft size={18} strokeWidth={2.5} />
+                      </button>
+                      <button 
+                        onClick={handleNext}
+                        className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#1a2e5e] hover:bg-[#2b4c9a] hover:text-white transition-all shadow-sm flex items-center justify-center active:scale-95"
+                      >
+                        <ChevronRight size={18} strokeWidth={2.5} />
+                      </button>
+                    </div>
+
+                    {/* Progress Bullet Indicators */}
+                    <div className="flex gap-1.5">
+                      {caseStudies.map((_, idx) => (
+                        <div 
+                          key={idx} 
+                          className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-[#2b4c9a]' : 'w-2 bg-gray-300'}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* RIGHT INNER PANEL: Layered Desktop Viewport Device Asset Mockup (Spans 7 Columns) */}
+                <div className="lg:col-span-7 relative w-full flex items-center justify-center min-h-[350px] sm:min-h-[440px] md:min-h-[480px] order-1 lg:order-2">
+                  
+                  <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div 
+                      key={currentIndex}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      className="w-full max-w-[580px] bg-white rounded-2xl border border-gray-200 p-2.5 shadow-[0_30px_70px_rgba(26,46,94,0.08)] relative z-10 group"
+                    >
+                      {/* Browser Top Window Tool Bar Bar details */}
+                      <div className="flex items-center gap-1.5 pb-2.5 px-1.5 border-b border-gray-100">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                        <div className="w-48 h-3.5 bg-gray-50 rounded-md ml-4 border border-gray-200/60 flex items-center px-2 text-[8px] text-gray-400 font-mono">
+                          https://{active.domain}
+                        </div>
+                      </div>
+
+                      {/* Core Live Image Snapshot Display Box */}
+                      <div className="w-full h-[240px] sm:h-[320px] md:h-[350px] rounded-xl overflow-hidden mt-2.5 bg-gray-50 relative border border-gray-100">
+                        <img 
+                          src={active.image} 
+                          alt={`${active.domain} Live Device Browser Preview UI`} 
+                          className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
+                        />
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* Floating Contextual Secondary Widget (Tucks nicely on Tablet layouts) */}
+                  <motion.div 
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-[-15px] right-[2%] w-[160px] bg-white border border-gray-200/80 rounded-xl p-4 shadow-[0_20px_40px_rgba(26,46,94,0.06)]历史 z-20 hidden sm:block text-left"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-[#F0F4FF] border border-blue-100 text-[#2b4c9a] flex items-center justify-center mb-2.5 shadow-sm">
+                      <Globe size={14} strokeWidth={2.5} />
+                    </div>
+                    <div className="text-[9px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">Device Sync</div>
+                    <h4 className="text-xs font-black text-[#1a2e5e] flex items-center gap-1.5">
+                      Fully Responsive
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                    </h4>
+                  </motion.div>
+
+                </div>
+
+              </motion.div>
+            </div>
+          </section>
 
       {/* CTA */}
       <section className="py-16 px-6 overflow-hidden">
