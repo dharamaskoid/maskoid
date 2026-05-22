@@ -301,7 +301,7 @@ export default function ProcessChart() {
   }, []);
 
   return (
-    <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
+    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
   
   {/* BLUR EFFECTS */}
   <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-300/20 blur-[120px] rounded-full"></div>
@@ -321,7 +321,7 @@ export default function ProcessChart() {
         <span className="text-[#2b4c9a]"> Flow</span>
       </h2>
 
-      <p className="mt-5 text-lg text-[#42526b] max-w-2xl mx-auto leading-relaxed">
+      <p className="mt-5 max-w-2xl mx-auto leading-relaxed">
         A premium modern process section with interactive active states,
         smooth animations, and a clean enterprise UI.
       </p>
