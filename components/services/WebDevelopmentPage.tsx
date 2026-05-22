@@ -734,7 +734,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
       </section>      
 
       {/* OUR PROCESS */}
-      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden font-sans">
+      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
 
         {/* BG GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>

@@ -620,109 +620,136 @@ export default function SEOServicePage() {
       </section>
 
       {/* OUR SEO PROCESS */}
-      {/* OUR PROCESS */}
+      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
 
-      <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
 
-        {/* BG SHAPES */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-          <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
 
-          <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
-
-        </div>
-
-        <div className="container px-6 mx-auto relative z-10">
-
-          {/* HEADER */}
+          {/* LEFT COLUMN */}
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-md"
           >
 
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-              Our Process
-            </p>
+            <motion.p
+              whileHover={{
+                scale: 1.04,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+            >
+              SEO Process
+            </motion.p>
 
-            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              SEO Optimization 
-              <span className="text-[#2b4c9a]"> Process</span>
+            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a2e5e] leading-tight">
+              Our Proven SEO Strategy
+              <span className="text-[#2b4c9a]"> For Sustainable Growth</span>
             </h2>
 
-            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-              Our proven SEO strategy helps improve rankings,
-              increase organic traffic, and grow your online visibility.
+            <p className="mt-5 text-base sm:text-lg text-gray-500 leading-relaxed">
+              We follow a structured SEO process focused on improving visibility,
+              driving targeted traffic, and delivering measurable long-term results.
             </p>
 
           </motion.div>
 
-          {/* PROCESS STEPS */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-20 mt-20 relative">
+          {/* RIGHT COLUMN */}
+          <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
+
+            {/* SVG LINE */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0"
+            >
+
+              <svg
+                className="w-full h-full"
+                viewBox="0 0 500 40"
+                fill="none"
+                preserveAspectRatio="none"
+              >
+
+                <motion.path
+                  d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20"
+                  stroke="#3B82F6"
+                  strokeWidth="1.5"
+                  strokeDasharray="4 4"
+                  opacity="0.25"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 2,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: true }}
+                />
+
+              </svg>
+
+            </motion.div>
 
             {[
               {
                 step: "01",
+                icon: <Search size={30} strokeWidth={2.5} />,
                 title: "SEO Audit & Research",
-                icon: <Search size={26} />,
-                text: "We analyze your website, competitors, and keywords to create a strong SEO strategy.",
+                text: "We analyze your website, competitors, and keywords to identify growth opportunities and SEO improvements.",
               },
-
               {
                 step: "02",
+                icon: (
+                  <PenTool
+                    size={30}
+                    strokeWidth={2.5}
+                    className="rotate-90"
+                  />
+                ),
                 title: "On-Page Optimization",
-                icon: <PenTool size={26} />,
-                text: "We optimize content, meta tags, structure, and internal linking for better rankings.",
+                text: "We optimize content, metadata, internal linking, and website structure for better search visibility.",
               },
-
               {
                 step: "03",
+                icon: <Code2 size={30} strokeWidth={2.5} />,
                 title: "Technical SEO",
-                icon: <MonitorSmartphone size={26} />,
-                text: "We improve website speed, mobile responsiveness, indexing, and technical performance.",
+                text: "We improve site speed, mobile performance, indexing, and crawlability to boost overall SEO performance.",
               },
-
               {
                 step: "04",
-                title: "Growth & Reporting",
-                icon: <Rocket size={26} />,
-                text: "We monitor rankings, track traffic, and continuously optimize for long-term growth.",
+                icon: <Rocket size={30} strokeWidth={2.5} />,
+                title: "Monitoring & Growth",
+                text: "We track rankings, traffic, and performance metrics while continuously optimizing for long-term success.",
               },
             ].map((item, index) => (
 
               <motion.div
                 key={index}
-                initial="hidden"
-                whileInView="show"
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
                 viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.12 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.15,
+                }}
                 whileHover={{
                   y: -10,
                 }}
-                className="
-                  relative
-                  bg-white
-                  border border-[#e8efff]
-                  rounded-[30px]
-                  p-8
-                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
-                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
-                "
+                className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10 group"
               >
-
-                {/* STEP NUMBER */}
-                <div className="
-                  absolute top-6 right-6
-                  text-6xl font-bold
-                  text-[#EEF4FF]
-                ">
-                  {item.step}
-                </div>
 
                 {/* ICON */}
                 <motion.div
@@ -730,38 +757,47 @@ export default function SEOServicePage() {
                     scale: 1.08,
                     rotate: 5,
                   }}
-                  className="
-                    relative z-10
-                    w-16 h-16
-                    rounded-2xl
-                    bg-[#EEF4FF]
-                    text-[#2b4c9a]
-                    flex items-center justify-center
-                  "
+                  transition={{
+                    type: "spring",
+                    stiffness: 220,
+                  }}
+                  className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
                 >
+
+                  {/* HOVER GLOW */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                    <div className="absolute -top-4 -right-4 w-14 h-14 bg-blue-500/20 blur-2xl rounded-full"></div>
+
+                  </div>
+
                   {item.icon}
+
                 </motion.div>
 
+                {/* NUMBER */}
+                <motion.span
+                  animate={{
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                  }}
+                  className="text-xl mt-4 font-bold text-[#2b4c9a]"
+                >
+                  {item.step}
+                </motion.span>
+
                 {/* TITLE */}
-                <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">
+                <h3 className="relative z-10 mt-2 text-lg sm:text-xl font-bold text-[#1a2e5e] leading-snug">
                   {item.title}
                 </h3>
 
                 {/* TEXT */}
-                <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm sm:text-base">
                   {item.text}
                 </p>
-
-                {/* ARROW LINE */}
-                {index !== 3 && (
-                  <div className="hidden lg:flex absolute top-1/2 -right-20 z-20 items-center">
-
-                    <div className="w-12 border-t-2 border-dashed border-[#c8d8ff]"></div>
-
-                    <ArrowRight className="w-5 h-5 text-[#3B82F6]" />
-
-                  </div>
-                )}
 
               </motion.div>
 
@@ -770,6 +806,7 @@ export default function SEOServicePage() {
           </div>
 
         </div>
+
       </section>
 
       {/* TECHNOLOGIES */}
