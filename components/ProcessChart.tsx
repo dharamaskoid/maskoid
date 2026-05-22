@@ -8,21 +8,21 @@ const steps = [
     title: "Discovery Call",
     subtitle: "Understanding Your Vision",
     description:
-      "We start with a deep-dive strategy session to understand your business goals, target audience, and growth challenges.",
+      "We start with a strategy session to understand your business goals, audience, and growth opportunities.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.7"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
     ),
-    color: "#FF6B35",
-    bg: "#FF6B3515",
+    color: "#2b4c9a",
+    glow: "rgba(43,76,154,0.22)",
   },
 
   {
@@ -30,58 +30,58 @@ const steps = [
     title: "Strategy & Planning",
     subtitle: "Roadmap to Growth",
     description:
-      "Our team crafts a custom digital growth blueprint aligned with your ROI targets.",
+      "We craft a custom digital roadmap focused on branding, SEO, ads, and scalable marketing growth.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.7"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    color: "#3B82F6",
-    bg: "#3B82F615",
+    color: "#4f7cff",
+    glow: "rgba(79,124,255,0.22)",
   },
 
   {
     id: "03",
     title: "Design & Build",
-    subtitle: "Crafting the Experience",
+    subtitle: "Crafting Experiences",
     description:
-      "We design high-performance conversion-focused websites and digital assets.",
+      "We build premium UI/UX experiences with conversion-focused development and smooth interactions.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.7"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        <path d="M16.5 3.5a2.121 2 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
-    color: "#8B5CF6",
-    bg: "#8B5CF615",
+    color: "#7c4dff",
+    glow: "rgba(124,77,255,0.22)",
   },
 
   {
     id: "04",
     title: "Launch & Optimize",
-    subtitle: "Go Live, Grow Faster",
+    subtitle: "Scale Faster",
     description:
-      "We deploy your digital system and continuously optimize campaigns.",
+      "After launch we monitor analytics, optimize funnels, and improve conversions continuously.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.7"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
@@ -89,22 +89,22 @@ const steps = [
         <path d="M6 22l4-4" />
       </svg>
     ),
-    color: "#10B981",
-    bg: "#10B98115",
+    color: "#00b894",
+    glow: "rgba(0,184,148,0.22)",
   },
 
   {
     id: "05",
     title: "Report & Scale",
-    subtitle: "Data-Driven Scaling",
+    subtitle: "Data-Driven Growth",
     description:
-      "Monthly reporting with measurable KPIs and growth-focused scaling.",
+      "Monthly reports, KPI tracking, and growth-focused strategies that scale your business faster.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.7"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
@@ -113,31 +113,31 @@ const steps = [
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
-    color: "#F59E0B",
-    bg: "#F59E0B15",
+    color: "#f59e0b",
+    glow: "rgba(245,158,11,0.22)",
   },
 ];
 
-function useInView(threshold = 0.15) {
+function useInView() {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true);
+          setVisible(true);
         }
       },
-      { threshold }
+      { threshold: 0.15 }
     );
 
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, [threshold]);
+  }, []);
 
-  return [ref, inView] as const;
+  return [ref, visible] as const;
 }
 
 function StepCard({
@@ -151,51 +151,58 @@ function StepCard({
   active: boolean;
   onClick: (index: number) => void;
 }) {
-  const [ref, inView] = useInView();
+  const [ref, visible] = useInView();
 
   return (
     <div
       ref={ref}
       onClick={() => onClick(index)}
+      className={`
+        relative group cursor-pointer transition-all duration-700
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+      `}
       style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(40px)",
-        transition: `all 0.6s ease ${index * 0.12}s`,
-        cursor: "pointer",
-        position: "relative",
+        transitionDelay: `${index * 120}ms`,
       }}
     >
+
+      {/* CONNECTOR */}
+      {index !== steps.length - 1 && (
+        <div className="hidden xl:block absolute top-1/2 -right-6 w-12 h-[2px] z-0">
+          <div
+            className="w-full h-full rounded-full"
+            style={{
+              background: `linear-gradient(to right, ${step.color}, #dbe5ff)`,
+            }}
+          />
+        </div>
+      )}
+
+      {/* CARD */}
       <div
+        className="relative h-full overflow-hidden rounded-[30px] border border-[#dbe5ff] bg-white p-8 transition-all duration-500 hover:-translate-y-2"
         style={{
-          background: active
-            ? `linear-gradient(135deg, ${step.color}18, ${step.color}08)`
-            : "rgba(255,255,255,0.03)",
-          border: `1px solid ${
-            active ? step.color + "60" : "rgba(255,255,255,0.08)"
-          }`,
-          borderRadius: "20px",
-          padding: "28px 24px",
-          position: "relative",
-          overflow: "hidden",
-          transition: "all 0.35s ease",
           boxShadow: active
-            ? `0 8px 40px ${step.color}20`
-            : "0 2px 12px rgba(0,0,0,0.2)",
+            ? `0 25px 60px ${step.glow}`
+            : "0 10px 35px rgba(43,76,154,0.08)",
         }}
       >
+
+        {/* TOP GLOW */}
+        <div
+          className="absolute -top-16 -right-16 w-40 h-40 rounded-full blur-3xl opacity-20"
+          style={{
+            background: step.color,
+          }}
+        />
+
         {/* WATERMARK */}
         <div
+          className="absolute right-4 bottom-0 text-[90px] font-black leading-none select-none"
           style={{
-            position: "absolute",
-            right: "12px",
-            bottom: "-8px",
-            fontSize: "80px",
-            fontWeight: 900,
             color: active
               ? `${step.color}12`
-              : "rgba(255,255,255,0.04)",
-            pointerEvents: "none",
-            userSelect: "none",
+              : "rgba(43,76,154,0.05)",
           }}
         >
           {step.id}
@@ -203,166 +210,125 @@ function StepCard({
 
         {/* ICON */}
         <div
+          className="relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center"
           style={{
-            width: "48px",
-            height: "48px",
-            borderRadius: "12px",
-            background: active ? step.bg : "rgba(255,255,255,0.06)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "16px",
-            color: active ? step.color : "rgba(255,255,255,0.5)",
+            background: `${step.color}12`,
+            color: step.color,
           }}
         >
-          <div style={{ width: "22px", height: "22px" }}>
+          <div className="w-7 h-7">
             {step.icon}
           </div>
         </div>
 
-        {/* STEP BADGE */}
+        {/* BADGE */}
         <div
+          className="relative z-10 inline-flex items-center px-3 py-1 rounded-full border text-[11px] font-bold uppercase tracking-[0.15em] mt-6"
           style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px",
-            background: active
-              ? `${step.color}22`
-              : "rgba(255,255,255,0.06)",
-            border: `1px solid ${
-              active ? step.color + "40" : "rgba(255,255,255,0.1)"
-            }`,
-            borderRadius: "100px",
-            padding: "3px 10px",
-            marginBottom: "10px",
+            background: `${step.color}10`,
+            borderColor: `${step.color}30`,
+            color: step.color,
           }}
         >
-          <span
-            style={{
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.06em",
-              color: active ? step.color : "rgba(255,255,255,0.4)",
-              textTransform: "uppercase",
-            }}
-          >
-            Step {step.id}
-          </span>
+          Step {step.id}
         </div>
 
         {/* TITLE */}
-        <h3
-          style={{
-            fontSize: "17px",
-            fontWeight: 700,
-            color: active ? "#ffffff" : "rgba(255,255,255,0.75)",
-            marginBottom: "4px",
-          }}
-        >
+        <h3 className="relative z-10 mt-5 text-[24px] font-black text-[#10204b] leading-tight">
           {step.title}
         </h3>
 
         {/* SUBTITLE */}
         <p
+          className="relative z-10 mt-2 text-sm font-semibold"
           style={{
-            fontSize: "12px",
-            color: active ? step.color : "rgba(255,255,255,0.35)",
-            marginBottom: "12px",
+            color: step.color,
           }}
         >
           {step.subtitle}
         </p>
 
         {/* DESCRIPTION */}
-        <p
-          style={{
-            fontSize: "13.5px",
-            color: "rgba(255,255,255,0.55)",
-            lineHeight: 1.65,
-            margin: 0,
-          }}
-        >
+        <p className="relative z-10 mt-5 text-[15px] leading-[1.9] text-[#5b6785]">
           {step.description}
         </p>
+
+        {/* ACTIVE BAR */}
+        <div
+          className="absolute left-0 top-0 h-full w-[5px] rounded-full transition-all duration-500"
+          style={{
+            background: active
+              ? step.color
+              : "transparent",
+          }}
+        />
+
       </div>
     </div>
   );
 }
 
 export default function ProcessChart() {
-  const [activeStep, setActiveStep] = useState(0);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 3200);
+      setActive((prev) => (prev + 1) % steps.length);
+    }, 3500);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section
-      style={{
-        background: "#0A0A0F",
-        minHeight: "100vh",
-        padding: "100px 24px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
+    <section className="relative py-28 bg-[#EEF2FF] overflow-hidden">
+
+      {/* GRID BG */}
+      <div className="absolute inset-0 opacity-[0.35] bg-[radial-gradient(circle,#2b4c9a_1px,transparent_1px)] [background-size:26px_26px]"></div>
+
+      {/* GLOW EFFECTS */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/10 blur-[140px] rounded-full"></div>
+
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[140px] rounded-full"></div>
+
+      <div className="relative z-10 container max-w-[1320px] mx-auto px-6">
+
         {/* HEADER */}
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "60px",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "clamp(32px,5vw,54px)",
-              fontWeight: 900,
-              color: "#ffffff",
-              marginBottom: "20px",
-            }}
-          >
-            Modern Process Flow
+        <div className="max-w-3xl mx-auto text-center">
+
+          <div className="inline-flex items-center px-5 py-2 rounded-full bg-white border border-[#dfe7ff] shadow-sm">
+            <span className="text-[11px] tracking-[0.2em] uppercase font-bold text-[#2b4c9a]">
+              Our Process
+            </span>
+          </div>
+
+          <h2 className="mt-7 text-4xl md:text-6xl font-black text-[#10204b] leading-tight">
+            From Strategy to
+            <span className="text-[#2b4c9a]"> Measurable Growth</span>
           </h2>
 
-          <p
-            style={{
-              color: "rgba(255,255,255,0.6)",
-              maxWidth: "700px",
-              margin: "0 auto",
-              lineHeight: 1.7,
-            }}
-          >
-            A premium modern process section with animated active states.
+          <p className="mt-6 text-[#5b6785] text-lg leading-relaxed">
+            A premium growth system designed to scale modern businesses
+            with high-converting design, performance marketing, and
+            data-driven execution.
           </p>
+
         </div>
 
-        {/* GRID */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit,minmax(280px,1fr))",
-            gap: "20px",
-          }}
-        >
+        {/* PROCESS GRID */}
+        <div className="relative mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+
           {steps.map((step, index) => (
             <StepCard
               key={step.id}
               step={step}
               index={index}
-              active={activeStep === index}
-              onClick={setActiveStep}
+              active={active === index}
+              onClick={setActive}
             />
           ))}
+
         </div>
+
       </div>
     </section>
   );
