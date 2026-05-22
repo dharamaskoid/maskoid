@@ -365,7 +365,7 @@ export default function SEOServicePage() {
               SEO Solutions
             </p>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Results Driven
               <span className="text-[#2b4c9a]"> SEO Services</span>
             </h2>
