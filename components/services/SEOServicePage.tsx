@@ -229,11 +229,11 @@ export default function SEOServicePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="relative py-20 px-6 md:px-10 lg:px-16 overflow-hidden">
+      <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
 
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-        <div className="container mx-auto relative z-10">
+        <div className="container px-6 mx-auto relative z-10">
 
           <div className="text-center max-w-3xl mx-auto">
 
