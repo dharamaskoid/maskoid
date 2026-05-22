@@ -237,7 +237,7 @@ export default function SEOServicePage() {
 
           <div className="text-center max-w-3xl mx-auto">
 
-            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
               Our SEO Services
             </p>
 
