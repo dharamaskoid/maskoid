@@ -1000,13 +1000,17 @@ export default function SEOServicePage() {
                   group
                   relative
                   overflow-hidden
-                  flex items-center gap-3
+                  inline-flex
+                  items-center
+                  gap-3
                   bg-[#1a2e5e]
                   backdrop-blur-xl
                   border border-slate-800/80
                   rounded-xl
                   px-5 py-3.5
-                  w-40 h-14
+                  w-max
+                  h-14
+                  whitespace-nowrap
                   transition-all duration-500
                   ${item.position}
                 `}
