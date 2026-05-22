@@ -446,7 +446,7 @@ export default function SEOServicePage() {
                     </h3>
 
                     <p className="text-gray-500 leading-relaxed">
-                      {item.description}
+                      {item.text}
                     </p>
 
                   </div>
