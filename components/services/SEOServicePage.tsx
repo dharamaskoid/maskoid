@@ -1030,7 +1030,7 @@ export default function SEOServicePage() {
                 </motion.div>
 
                 {/* TEXT */}
-                <span className="relative z-10 text-xl font-medium text-slate-200 tracking-wide">
+                <span className="relative z-10 text-lg font-medium text-slate-200 tracking-wide">
                   {item.title}
                 </span>
 
