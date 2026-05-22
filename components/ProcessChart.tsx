@@ -301,7 +301,7 @@ export default function ProcessChart() {
   }, []);
 
   return (
-    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+    <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
   
   {/* BLUR EFFECTS */}
   <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-300/20 blur-[120px] rounded-full"></div>
