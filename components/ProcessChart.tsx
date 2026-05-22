@@ -228,7 +228,7 @@ function StepCard({
 
         {/* ICON */}
         <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 relative z-10"
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 relative z-10"
           style={{
             background: active ? "rgba(255,255,255,0.15)" : "#f4f7ff",
             color: "#2b4c9a",
@@ -311,7 +311,7 @@ export default function ProcessChart() {
         </div>
 
         {/* PROCESS GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
           {steps.map((step, index) => (
             <StepCard
               key={step.id}
