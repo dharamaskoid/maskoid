@@ -345,18 +345,15 @@ export default function SEOServicePage() {
       </section>
 
       {/* OUR SOLUTIONS */}
-      <section className="relative py-20 bg-[#EEF2FF] overflow-hidden">
+      <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
 
-        <div className="absolute inset-0 pointer-events-none">
-
-          <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-          <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
-
-        </div>
+        {/* Soft Light Blur Accents */}
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
         <div className="container px-6 mx-auto relative z-10">
 
+          {/* HEADER */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -364,67 +361,101 @@ export default function SEOServicePage() {
             variants={fadeUp}
             className="text-center max-w-3xl mx-auto"
           >
-
-            <p className="inline-block px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
               SEO Solutions
             </p>
 
-            <h2 className="mt-5 text-4xl md:text-5xl font-bold text-[#1a2e5e]">
+            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
               Results Driven
               <span className="text-[#2b4c9a]"> SEO Services</span>
             </h2>
 
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              We help businesses improve search visibility, increase organic traffic,
+              and drive long-term growth through strategic SEO solutions.
+            </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+          {/* CONTENT LIST LAYOUT */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 mt-10 w-full items-start">
 
-            {solutions.map((item, index) => (
+            {/* LEFT COLUMN */}
+            <div className="flex flex-col w-full">
 
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{
-                  y: -12,
-                  scale: 1.02,
-                }}
-                className="group relative bg-white border border-[#e8efff] rounded-[28px] p-8 text-center overflow-hidden shadow-[0_10px_30px_rgba(43,76,154,0.04)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
-              >
-
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-                </div>
+              {solutions.slice(0, 3).map((item, index) => (
 
                 <motion.div
-                  whileHover={{
-                    scale: 1.08,
-                    rotate: 4,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 220,
-                  }}
-                  className="relative z-10 w-20 h-20 mx-auto rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
+                  key={index}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  transition={{ delay: index * 0.1 }}
+                  className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
                 >
-                  {item.icon}
+
+                  {/* ICON */}
+                  <div className="w-14 h-14 rounded-2xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
+                    {item.icon}
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="space-y-2 flex-1">
+
+                    <h3 className="text-xl font-bold text-[#1a2e5e] tracking-tight">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-500 leading-relaxed">
+                      {item.text}
+                    </p>
+
+                  </div>
+
                 </motion.div>
 
-                <h3 className="relative z-10 mt-7 text-xl font-bold text-[#1a2e5e]">
-                  {item.title}
-                </h3>
+              ))}
 
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
-                  {item.text}
-                </p>
+            </div>
 
-              </motion.div>
+            {/* RIGHT COLUMN */}
+            <div className="flex flex-col w-full">
 
-            ))}
+              {solutions.slice(3, 6).map((item, index) => (
+
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  transition={{ delay: index * 0.1 }}
+                  className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                >
+
+                  {/* ICON */}
+                  <div className="w-14 h-14 rounded-2xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
+                    {item.icon}
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="space-y-2 flex-1">
+
+                    <h3 className="text-xl font-bold text-[#1a2e5e] tracking-tight">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-500 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </div>
 
           </div>
 
