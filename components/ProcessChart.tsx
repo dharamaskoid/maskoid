@@ -1,24 +1,49 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
-
 const steps = [
   {
     id: "01",
     title: "Secure Login",
-    subtitle: "Protected User Access",
+    subtitle: "Protected User Authentication",
     description:
-      "Users can securely access the license management system using email or username authentication with Google reCAPTCHA protection.",
-    icon: "🔐",
+      "Access the platform securely using your email or username with advanced password protection and Google reCAPTCHA verification for enhanced account safety.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M12 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+        <path d="M6 10V7a6 6 0 1 1 12 0v3" />
+        <rect x="4" y="10" width="16" height="10" rx="2" />
+      </svg>
+    ),
   },
 
   {
     id: "02",
-    title: "Dashboard Analytics",
-    subtitle: "Real-Time Insights",
+    title: "Smart Dashboard",
+    subtitle: "Real-Time Analytics Overview",
     description:
-      "Track active licenses, expired keys, unused licenses, and overall software usage statistics from one centralized dashboard.",
-    icon: "📊",
+      "Monitor active licenses, expired keys, pending activations, and system performance through an intelligent analytics-driven dashboard interface.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <rect x="3" y="3" width="7" height="9" rx="1" />
+        <rect x="14" y="3" width="7" height="5" rx="1" />
+        <rect x="14" y="12" width="7" height="9" rx="1" />
+        <rect x="3" y="16" width="7" height="5" rx="1" />
+      </svg>
+    ),
   },
 
   {
@@ -26,280 +51,186 @@ const steps = [
     title: "Create Software",
     subtitle: "Add New Applications",
     description:
-      "Register new software applications by adding software name, application ID, and management details into the system.",
-    icon: "💻",
+      "Register and manage your software products effortlessly by adding software names, application IDs, and licensing configurations.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M12 5v14" />
+        <path d="M5 12h14" />
+      </svg>
+    ),
   },
 
   {
     id: "04",
-    title: "Software Listing",
-    subtitle: "Manage Applications",
+    title: "Software Management",
+    subtitle: "Track All Applications",
     description:
-      "View all registered software products with complete license statistics including issued, active, and pending keys.",
-    icon: "📁",
+      "View complete software listings with total license counts, issued keys, pending licenses, and overall software activity status.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M4 6h16" />
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+      </svg>
+    ),
   },
 
   {
     id: "05",
-    title: "Generate License Key",
-    subtitle: "Instant Key Creation",
+    title: "Generate License Keys",
+    subtitle: "Automated Key Creation",
     description:
-      "Create secure 24-character software license keys assigned to users with custom software access permissions.",
-    icon: "🗝️",
+      "Instantly generate secure 24-character software license keys with user allocation and advanced activation management.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M21 2l-2 2" />
+        <path d="M7.5 7.5l9-9" />
+        <path d="M7 14l-5 5v3h3l5-5" />
+      </svg>
+    ),
   },
 
   {
     id: "06",
-    title: "License Key Management",
-    subtitle: "Track Every License",
+    title: "License Key List",
+    subtitle: "Centralized License Tracking",
     description:
-      "Monitor active, inactive, and expired software licenses with advanced search and filtering functionality.",
-    icon: "📜",
+      "Manage and filter all software licenses including active, inactive, expired, and suspended license holders in one place.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M8 6h13" />
+        <path d="M8 12h13" />
+        <path d="M8 18h13" />
+        <path d="M3 6h.01" />
+        <path d="M3 12h.01" />
+        <path d="M3 18h.01" />
+      </svg>
+    ),
   },
 
   {
     id: "07",
     title: "Verification Logs",
-    subtitle: "Activation Monitoring",
+    subtitle: "Activation Activity Records",
     description:
-      "Track software activation attempts, API requests, device information, activation dates, and validation history.",
-    icon: "✅",
+      "Track software activations with complete API verification logs including system information, activation time, and first-use records.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M9 11l3 3L22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </svg>
+    ),
   },
 
   {
     id: "08",
     title: "Re-Verification Logs",
-    subtitle: "Usage Tracking",
+    subtitle: "Usage Monitoring System",
     description:
-      "Monitor how often software is accessed including login time, usage history, and repeated license validations.",
-    icon: "🔄",
+      "Monitor every software login and re-verification attempt with accurate user activity timestamps and usage insights.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M23 4v6h-6" />
+        <path d="M1 20v-6h6" />
+        <path d="M3.51 9a9 9 0 0 1 14.13-3.36L23 10" />
+        <path d="M20.49 15A9 9 0 0 1 6.36 18.36L1 14" />
+      </svg>
+    ),
   },
 
   {
     id: "09",
     title: "Create Users",
-    subtitle: "User Registration",
+    subtitle: "Advanced User Management",
     description:
-      "Add and manage software users with usernames, software assignments, application IDs, and access permissions.",
-    icon: "👤",
+      "Add and manage software users by assigning usernames, software applications, and application IDs with flexible permissions.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="8.5" cy="7" r="4" />
+        <path d="M20 8v6" />
+        <path d="M23 11h-6" />
+      </svg>
+    ),
   },
 
   {
     id: "10",
-    title: "All Users Management",
-    subtitle: "Complete User Records",
+    title: "All Users",
+    subtitle: "Complete User Database",
     description:
-      "Access a complete list of active and previous users registered within the software licensing ecosystem.",
-    icon: "👥",
+      "View all registered users, previous customers, active license holders, and account history from a centralized management panel.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
   },
 ];
-
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return [ref, inView] as const;
-}
-
-function StepCard({
-  step,
-  index,
-  active,
-  onClick,
-}: {
-  step: (typeof steps)[0];
-  index: number;
-  active: boolean;
-  onClick: (index: number) => void;
-}) {
-  const [ref, inView] = useInView();
-
-  return (
-    <div
-      ref={ref}
-      onClick={() => onClick(index)}
-      className={`
-        relative
-        cursor-pointer
-        transition-all
-        duration-700
-        ${
-          index % 2 === 0
-            ? "lg:translate-y-0"
-            : "lg:translate-y-16"
-        }
-      `}
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView
-          ? "translateY(0px)"
-          : "translateY(60px)",
-      }}
-    >
-      {/* LINE */}
-      <div className="hidden lg:block absolute top-16 -right-10 w-20 h-[2px] bg-gradient-to-r from-[#2b4c9a] to-[#6EA8FF] z-0" />
-
-      <div
-        className={`
-          relative
-          rounded-[28px]
-          p-7
-          h-full
-          overflow-hidden
-          border
-          backdrop-blur-xl
-          transition-all
-          duration-500
-          ${
-            active
-              ? "bg-white shadow-[0_25px_80px_rgba(43,76,154,0.18)] border-[#2b4c9a]/20 scale-[1.03]"
-              : "bg-white/70 border-white hover:bg-white hover:shadow-[0_20px_60px_rgba(43,76,154,0.10)]"
-          }
-        `}
-      >
-        {/* WATERMARK */}
-        <div className="absolute right-4 bottom-0 text-[90px] font-black text-[#EEF2FF] leading-none select-none">
-          {step.id}
-        </div>
-
-        {/* STEP NUMBER */}
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#EEF2FF] text-[#2b4c9a] text-lg font-black shadow-sm">
-          {step.id}
-        </div>
-
-        {/* ICON */}
-        <div
-          className={`
-            mt-6
-            w-16
-            h-16
-            rounded-2xl
-            flex
-            items-center
-            justify-center
-            text-3xl
-            transition-all
-            duration-500
-            ${
-              active
-                ? "bg-[#2b4c9a] text-white shadow-[0_15px_40px_rgba(43,76,154,0.25)]"
-                : "bg-[#EEF2FF] text-[#2b4c9a]"
-            }
-          `}
-        >
-          {step.icon}
-        </div>
-
-        {/* CONTENT */}
-        <div className="relative z-10">
-          <h3 className="mt-6 text-[22px] font-black text-[#1a2e5e] leading-tight">
-            {step.title}
-          </h3>
-
-          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#2b4c9a]">
-            {step.subtitle}
-          </p>
-
-          <p className="mt-4 text-[15px] leading-[1.9] text-[#5f6b85]">
-            {step.description}
-          </p>
-        </div>
-
-        {/* ACTIVE BAR */}
-        <div
-          className={`
-            absolute
-            left-0
-            top-0
-            h-full
-            bg-gradient-to-b
-            from-[#2b4c9a]
-            to-[#6EA8FF]
-            transition-all
-            duration-500
-            ${
-              active
-                ? "w-[6px]"
-                : "w-0"
-            }
-          `}
-        />
-      </div>
-    </div>
-  );
-}
-
-export default function ProcessChart() {
-  const [activeStep, setActiveStep] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
-
-      {/* BLUR EFFECTS */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-300/20 blur-[140px] rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-300/20 blur-[140px] rounded-full"></div>
-
-      {/* GRID PATTERN */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:26px_26px]" />
-
-      <div className="relative z-10 max-w-[1320px] mx-auto px-6">
-
-        {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto">
-          <span className="inline-flex px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-black uppercase tracking-[0.2em]">
-            Software Workflow
-          </span>
-
-          <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-black text-[#1a2e5e] leading-tight">
-            Smart License Key
-            <span className="text-[#2b4c9a]"> Management Process</span>
-          </h2>
-
-          <p className="mt-6 text-lg leading-[1.9] text-[#5f6b85]">
-            A complete premium workflow system for software licensing,
-            verification, user management, and analytics — designed for
-            enterprise-level control and scalability.
-          </p>
-        </div>
-
-        {/* STEPS */}
-        <div className="relative mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-
-          {steps.map((step, index) => (
-            <StepCard
-              key={step.id}
-              step={step}
-              index={index}
-              active={activeStep === index}
-              onClick={setActiveStep}
-            />
-          ))}
-
-        </div>
-      </div>
-    </section>
-  );
-}
