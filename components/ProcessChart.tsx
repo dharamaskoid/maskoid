@@ -5,111 +5,92 @@ import { useState, useEffect, useRef } from "react";
 const steps = [
   {
     id: "01",
-    title: "Discovery Call",
-    subtitle: "Understanding Your Vision",
+    title: "Secure Login",
+    subtitle: "Protected User Access",
     description:
-      "We start with a deep-dive strategy session to understand your business goals, target audience, and growth challenges.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6"
-      >
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      </svg>
-    ),
+      "Users can securely access the license management system using email or username authentication with Google reCAPTCHA protection.",
+    icon: "🔐",
   },
 
   {
     id: "02",
-    title: "Strategy & Planning",
-    subtitle: "Roadmap to Growth",
+    title: "Dashboard Analytics",
+    subtitle: "Real-Time Insights",
     description:
-      "Our team crafts a custom digital growth blueprint aligned with your ROI targets.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6"
-      >
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-      </svg>
-    ),
+      "Track active licenses, expired keys, unused licenses, and overall software usage statistics from one centralized dashboard.",
+    icon: "📊",
   },
 
   {
     id: "03",
-    title: "Design & Build",
-    subtitle: "Crafting the Experience",
+    title: "Create Software",
+    subtitle: "Add New Applications",
     description:
-      "We design high-performance conversion-focused websites and digital assets.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6"
-      >
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-      </svg>
-    ),
+      "Register new software applications by adding software name, application ID, and management details into the system.",
+    icon: "💻",
   },
 
   {
     id: "04",
-    title: "Launch & Optimize",
-    subtitle: "Go Live, Grow Faster",
+    title: "Software Listing",
+    subtitle: "Manage Applications",
     description:
-      "We deploy your digital system and continuously optimize campaigns.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6"
-      >
-        <path d="M2 20l4-4" />
-        <path d="M6 22l4-4" />
-      </svg>
-    ),
+      "View all registered software products with complete license statistics including issued, active, and pending keys.",
+    icon: "📁",
   },
 
   {
     id: "05",
-    title: "Report & Scale",
-    subtitle: "Data-Driven Scaling",
+    title: "Generate License Key",
+    subtitle: "Instant Key Creation",
     description:
-      "Monthly reporting with measurable KPIs and growth-focused scaling.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6"
-      >
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
+      "Create secure 24-character software license keys assigned to users with custom software access permissions.",
+    icon: "🗝️",
+  },
+
+  {
+    id: "06",
+    title: "License Key Management",
+    subtitle: "Track Every License",
+    description:
+      "Monitor active, inactive, and expired software licenses with advanced search and filtering functionality.",
+    icon: "📜",
+  },
+
+  {
+    id: "07",
+    title: "Verification Logs",
+    subtitle: "Activation Monitoring",
+    description:
+      "Track software activation attempts, API requests, device information, activation dates, and validation history.",
+    icon: "✅",
+  },
+
+  {
+    id: "08",
+    title: "Re-Verification Logs",
+    subtitle: "Usage Tracking",
+    description:
+      "Monitor how often software is accessed including login time, usage history, and repeated license validations.",
+    icon: "🔄",
+  },
+
+  {
+    id: "09",
+    title: "Create Users",
+    subtitle: "User Registration",
+    description:
+      "Add and manage software users with usernames, software assignments, application IDs, and access permissions.",
+    icon: "👤",
+  },
+
+  {
+    id: "10",
+    title: "All Users Management",
+    subtitle: "Complete User Records",
+    description:
+      "Access a complete list of active and previous users registered within the software licensing ecosystem.",
+    icon: "👥",
   },
 ];
 
@@ -153,103 +134,111 @@ function StepCard({
       ref={ref}
       onClick={() => onClick(index)}
       className={`
-        relative cursor-pointer transition-all duration-700
-        ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-        ${index % 2 === 0 ? "lg:mt-0" : "lg:mt-14"}
+        relative
+        cursor-pointer
+        transition-all
+        duration-700
+        ${
+          index % 2 === 0
+            ? "lg:translate-y-0"
+            : "lg:translate-y-16"
+        }
       `}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView
+          ? "translateY(0px)"
+          : "translateY(60px)",
+      }}
     >
-      {/* LINE CONNECTOR */}
-      {index !== steps.length - 1 && (
-        <div className="hidden lg:block absolute top-14 -right-10 w-20 h-[2px] bg-gradient-to-r from-[#2b4c9a] to-[#9fb4ef] z-0"></div>
-      )}
+      {/* LINE */}
+      <div className="hidden lg:block absolute top-16 -right-10 w-20 h-[2px] bg-gradient-to-r from-[#2b4c9a] to-[#6EA8FF] z-0" />
 
-      {/* CARD */}
       <div
         className={`
-          relative z-10 rounded-[28px] border overflow-hidden
-          p-8 transition-all duration-500 group
+          relative
+          rounded-[28px]
+          p-7
+          h-full
+          overflow-hidden
+          border
+          backdrop-blur-xl
+          transition-all
+          duration-500
           ${
             active
-              ? "bg-white border-[#2b4c9a]/20 shadow-[0_20px_60px_rgba(43,76,154,0.15)]"
-              : "bg-white/70 border-white hover:bg-white"
+              ? "bg-white shadow-[0_25px_80px_rgba(43,76,154,0.18)] border-[#2b4c9a]/20 scale-[1.03]"
+              : "bg-white/70 border-white hover:bg-white hover:shadow-[0_20px_60px_rgba(43,76,154,0.10)]"
           }
         `}
       >
         {/* WATERMARK */}
-        <div className="absolute -bottom-5 right-3 text-[90px] font-black text-[#2b4c9a]/[0.05] leading-none select-none">
+        <div className="absolute right-4 bottom-0 text-[90px] font-black text-[#EEF2FF] leading-none select-none">
           {step.id}
         </div>
 
-        {/* TOP */}
-        <div className="flex items-center justify-between relative z-10">
-          {/* ICON */}
-          <div
-            className={`
-              w-14 h-14 rounded-2xl flex items-center justify-center
-              transition-all duration-500
-              ${
-                active
-                  ? "bg-[#2b4c9a] text-white shadow-lg"
-                  : "bg-[#EEF2FF] text-[#2b4c9a]"
-              }
-            `}
-          >
-            {step.icon}
-          </div>
+        {/* STEP NUMBER */}
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#EEF2FF] text-[#2b4c9a] text-lg font-black shadow-sm">
+          {step.id}
+        </div>
 
-          {/* STEP NUMBER */}
-          <div
-            className={`
-              px-4 py-2 rounded-full text-xs font-bold tracking-[0.15em]
-              transition-all duration-500
-              ${
-                active
-                  ? "bg-[#2b4c9a] text-white"
-                  : "bg-[#EEF2FF] text-[#2b4c9a]"
-              }
-            `}
-          >
-            STEP {step.id}
-          </div>
+        {/* ICON */}
+        <div
+          className={`
+            mt-6
+            w-16
+            h-16
+            rounded-2xl
+            flex
+            items-center
+            justify-center
+            text-3xl
+            transition-all
+            duration-500
+            ${
+              active
+                ? "bg-[#2b4c9a] text-white shadow-[0_15px_40px_rgba(43,76,154,0.25)]"
+                : "bg-[#EEF2FF] text-[#2b4c9a]"
+            }
+          `}
+        >
+          {step.icon}
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 mt-7">
-          <h3
-            className={`
-              text-2xl font-black transition-all duration-500
-              ${
-                active
-                  ? "text-[#1a2e5e]"
-                  : "text-[#1a2e5e]"
-              }
-            `}
-          >
+        <div className="relative z-10">
+          <h3 className="mt-6 text-[22px] font-black text-[#1a2e5e] leading-tight">
             {step.title}
           </h3>
 
-          <p
-            className={`
-              mt-2 text-sm font-semibold transition-all duration-500
-              ${
-                active
-                  ? "text-[#2b4c9a]"
-                  : "text-[#4f6db5]"
-              }
-            `}
-          >
+          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#2b4c9a]">
             {step.subtitle}
           </p>
 
-          <p className="mt-5 text-[15px] leading-[1.9] text-[#5f6b85]">
+          <p className="mt-4 text-[15px] leading-[1.9] text-[#5f6b85]">
             {step.description}
           </p>
         </div>
 
-        {/* ACTIVE GLOW */}
-        {active && (
-          <div className="absolute inset-0 rounded-[28px] border border-[#2b4c9a]/20 pointer-events-none"></div>
-        )}
+        {/* ACTIVE BAR */}
+        <div
+          className={`
+            absolute
+            left-0
+            top-0
+            h-full
+            bg-gradient-to-b
+            from-[#2b4c9a]
+            to-[#6EA8FF]
+            transition-all
+            duration-500
+            ${
+              active
+                ? "w-[6px]"
+                : "w-0"
+            }
+          `}
+        />
       </div>
     </div>
   );
@@ -269,36 +258,36 @@ export default function ProcessChart() {
   return (
     <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
 
-      {/* BLUR BACKGROUND */}
+      {/* BLUR EFFECTS */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-300/20 blur-[140px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-300/20 blur-[140px] rounded-full"></div>
 
       {/* GRID PATTERN */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:24px_24px]"></div>
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:26px_26px]" />
 
-      <div className="max-w-[1280px] mx-auto px-6 relative z-10">
+      <div className="relative z-10 max-w-[1320px] mx-auto px-6">
 
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-
-          <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.18em]">
-            Our Process
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="inline-flex px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-black uppercase tracking-[0.2em]">
+            Software Workflow
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-6xl font-black text-[#1a2e5e] leading-tight">
-            Premium Digital
-            <span className="text-[#2b4c9a]"> Growth Process</span>
+          <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-black text-[#1a2e5e] leading-tight">
+            Smart License Key
+            <span className="text-[#2b4c9a]"> Management Process</span>
           </h2>
 
-          <p className="mt-6 text-lg text-[#5f6b85] leading-relaxed">
-            A modern enterprise workflow designed to transform brands into
-            scalable digital growth machines with strategy, creativity,
-            technology, and performance.
+          <p className="mt-6 text-lg leading-[1.9] text-[#5f6b85]">
+            A complete premium workflow system for software licensing,
+            verification, user management, and analytics — designed for
+            enterprise-level control and scalability.
           </p>
         </div>
 
-        {/* PROCESS GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-7 items-start">
+        {/* STEPS */}
+        <div className="relative mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+
           {steps.map((step, index) => (
             <StepCard
               key={step.id}
@@ -308,8 +297,8 @@ export default function ProcessChart() {
               onClick={setActiveStep}
             />
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );
