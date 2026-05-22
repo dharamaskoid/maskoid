@@ -8,7 +8,7 @@ export async function GET() {
   try {
 
     const response = await fetch(
-      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,reviews,user_ratings_total&key=${API_KEY}`,
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${ChIJhctcyJDIXzkRuY5oJeQI-Hk}&fields=name,rating,reviews,user_ratings_total&key=${API_KEY}`,
       {
         next: {
           revalidate: 3600,
