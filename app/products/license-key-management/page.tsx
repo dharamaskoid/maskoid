@@ -428,169 +428,140 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
-    {/* UNIQUE ZIG-ZAG PROCESS SECTION */}
-<section className="relative py-24 bg-white overflow-hidden">
+    {/* PREMIUM COMPACT PROCESS SECTION */}
+        <section className="relative py-24 bg-white overflow-hidden">
 
-  {/* BG EFFECTS */}
-  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        {/* BG EFFECTS */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:26px_26px]"></div>
 
-  <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-  <div className="container px-6 mx-auto max-w-[1280px] relative z-10">
+        <div className="container px-6 mx-auto max-w-[1320px] relative z-10">
 
-    {/* HEADER */}
-    <div className="text-center max-w-3xl mx-auto">
+            {/* HEADER */}
+            <div className="text-center max-w-3xl mx-auto">
 
-      <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
-        How It Works
-      </p>
-
-      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
-        Powerful Features.
-        <span className="text-[#2b4c9a]"> Smart Workflow.</span>
-      </h2>
-
-      <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-        A premium process flow designed for modern license management systems.
-      </p>
-
-    </div>
-
-    {/* FLOW WRAPPER */}
-    <div className="relative mt-24">
-
-      {/* CONNECTING PATH */}
-      <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
-
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 1200 900"
-          fill="none"
-          preserveAspectRatio="none"
-        >
-
-          <path
-            d="
-              M150 80
-              C350 80 350 250 550 250
-              S750 420 950 420
-              S750 700 550 700
-              S350 850 150 850
-            "
-            stroke="url(#lineGradient)"
-            strokeWidth="4"
-            strokeDasharray="10 10"
-            opacity="0.25"
-          />
-
-          <defs>
-            <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#2b4c9a" />
-              <stop offset="100%" stopColor="#7c4dff" />
-            </linearGradient>
-          </defs>
-
-        </svg>
-
-      </div>
-
-      {/* PROCESS GRID */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        {steps.map((item, index) => (
-
-          <motion.div
-            key={index}
-            initial={{
-              opacity: 0,
-              y: 50,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              delay: index * 0.08,
-            }}
-            whileHover={{
-              y: -10,
-            }}
-            className={`
-              relative
-              group
-              rounded-[32px]
-              border border-[#EEF2FF]
-              bg-white/80
-              backdrop-blur-2xl
-              p-8
-              shadow-[0_25px_80px_rgba(43,76,154,0.08)]
-              hover:shadow-[0_35px_100px_rgba(43,76,154,0.14)]
-              transition-all duration-500
-              overflow-hidden
-
-              ${index % 3 === 1 ? "lg:translate-y-24" : ""}
-              ${index % 3 === 2 ? "lg:translate-y-48" : ""}
-            `}
-          >
-
-            {/* HOVER GLOW */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-              <div className="absolute -top-24 right-0 w-60 h-60 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-            </div>
-
-            {/* STEP NUMBER */}
-            <div className="relative z-10 flex items-center justify-between">
-
-              <div className="w-14 h-14 rounded-2xl bg-[#2b4c9a] text-white flex items-center justify-center text-lg font-black shadow-[0_20px_40px_rgba(43,76,154,0.25)]">
-                {item.number}
-              </div>
-
-              <div className="text-[#2b4c9a]/10 text-6xl font-black">
-                {item.number}
-              </div>
-
-            </div>
-
-            {/* ICON */}
-            <div className="relative z-10 mt-8 w-20 h-20 rounded-3xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shadow-inner">
-              {item.icon}
-            </div>
-
-            {/* CONTENT */}
-            <h3 className="relative z-10 mt-8 text-2xl font-black text-[#10204b] leading-tight">
-              {item.title}
-            </h3>
-
-            <p className="relative z-10 mt-4 text-gray-500 leading-relaxed">
-              {item.desc}
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
+                How It Works
             </p>
 
-            {/* BOTTOM TAG */}
-            <div className="relative z-10 mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EEF4FF] border border-[#dbe7ff] text-[#2b4c9a] text-xs font-bold uppercase tracking-wider">
+            <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
+                Powerful Features.
+                <span className="text-[#2b4c9a]"> Smart Workflow.</span>
+            </h2>
 
-              <span className="w-2 h-2 rounded-full bg-[#2b4c9a] animate-pulse"></span>
-
-              Smart Automation
+            <p className="mt-5 text-lg text-gray-500 leading-relaxed">
+                Modern streamlined license management process built for scalability.
+            </p>
 
             </div>
 
-          </motion.div>
+            {/* PROCESS FLOW */}
+            <div className="relative mt-20">
 
-        ))}
+            {/* CENTER CONNECTOR */}
+            <div className="hidden xl:block absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2px] bg-gradient-to-r from-transparent via-[#dbe7ff] to-transparent z-0"></div>
 
-      </div>
+            {/* ITEMS */}
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
 
-    </div>
+                {steps.map((item, index) => (
 
-  </div>
+                <motion.div
+                    key={index}
+                    initial={{
+                    opacity: 0,
+                    y: 40,
+                    }}
+                    whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    }}
+                    viewport={{ once: true }}
+                    transition={{
+                    duration: 0.7,
+                    delay: index * 0.08,
+                    }}
+                    whileHover={{
+                    y: -10,
+                    }}
+                    className={`
+                    relative
+                    group
+                    rounded-[28px]
+                    border border-[#EEF2FF]
+                    bg-white/80
+                    backdrop-blur-xl
+                    p-6
+                    shadow-[0_20px_60px_rgba(43,76,154,0.06)]
+                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                    transition-all duration-500
+                    overflow-hidden
+                    min-h-[280px]
+                    flex
+                    flex-col
 
-</section>
+                    ${index % 2 === 1 ? "xl:mt-16" : ""}
+                    `}
+                >
+
+                    {/* HOVER GLOW */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                    <div className="absolute -top-24 right-0 w-56 h-56 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                    </div>
+
+                    {/* STEP TOP */}
+                    <div className="relative z-10 flex items-start justify-between">
+
+                    {/* ICON */}
+                    <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shadow-inner border border-[#dbe7ff]">
+                        {item.icon}
+                    </div>
+
+                    {/* NUMBER */}
+                    <div className="text-[#2b4c9a] text-sm font-black w-10 h-10 rounded-full bg-[#EEF4FF] border border-[#dbe7ff] flex items-center justify-center">
+                        {item.number}
+                    </div>
+
+                    </div>
+
+                    {/* CONTENT */}
+                    <div className="relative z-10 mt-8 flex-1">
+
+                    <h3 className="text-xl font-black text-[#10204b] leading-snug">
+                        {item.title}
+                    </h3>
+
+                    <p className="mt-4 text-gray-500 leading-relaxed text-sm">
+                        {item.desc}
+                    </p>
+
+                    </div>
+
+                    {/* BOTTOM LINE */}
+                    <div className="relative z-10 mt-6 flex items-center gap-2">
+
+                    <div className="w-2 h-2 rounded-full bg-[#2b4c9a] animate-pulse"></div>
+
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-[#2b4c9a]/40 to-transparent"></div>
+
+                    </div>
+
+                </motion.div>
+
+                ))}
+
+            </div>
+
+            </div>
+
+        </div>
+
+        </section>
 
       {/* PROCESS SECTION */}
       <section className="relative py-24 bg-white">
