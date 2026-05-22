@@ -465,77 +465,153 @@ export default function SEOServicePage() {
 
 
       {/* WHY CHOOSE US */}
-      <section className="relative py-16 overflow-hidden bg-[#1a2e5e]">
+      <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
 
+        {/* BG EFFECTS */}
         <div className="absolute inset-0 pointer-events-none">
 
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+          <motion.div
+            animate={{
+              scale: [1, 1.15, 1],
+              opacity: [0.15, 0.3, 0.15],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[100px] rounded-full"
+          />
 
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+          <motion.div
+            animate={{
+              scale: [1.1, 1, 1.1],
+              opacity: [0.2, 0.35, 0.2],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/20 blur-[100px] rounded-full"
+          />
 
         </div>
 
-        <div className="container px-6 mx-auto relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
 
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider">
-              Why Choose Us
-            </p>
+            {/* LEFT CONTENT */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
 
-            <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white">
-              Features of Our
-              <span className="text-[#6EA8FF]"> SEO Services</span>
-            </h2>
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-xl">
+                Why Choose Us
+              </p>
 
-          </div>
+              <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
+                SEO Strategies That
+                <span className="text-[#6EA8FF]"> Deliver Real Results</span>
+              </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
+                We help businesses improve online visibility, attract qualified
+                traffic, and achieve sustainable growth through data-driven SEO
+                strategies tailored to your goals.
+              </p>
 
-            {[
-              {
-                icon: <Target size={30} />,
-                title: "Targeted SEO Strategy",
-                text: "SEO strategies tailored to your audience and business goals.",
-              },
-              {
-                icon: <LineChart size={30} />,
-                title: "Performance Tracking",
-                text: "Detailed reporting and analytics to measure SEO growth.",
-              },
-              {
-                icon: <ShieldCheck size={30} />,
-                title: "Long-Term Growth",
-                text: "Sustainable SEO techniques that improve rankings over time.",
-              },
-            ].map((item, index) => (
+            </motion.div>
 
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.15 }}
-                whileHover={{ y: -10 }}
-                className="group relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[28px] p-8 overflow-hidden hover:border-[#3B82F6]/30 transition-all duration-500"
-              >
+            {/* RIGHT POINTS */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="space-y-8"
+            >
 
-                <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/10 text-[#6EA8FF] flex items-center justify-center">
-                  {item.icon}
-                </div>
+              {[
+                {
+                  number: "01",
+                  title: "Data-Driven SEO Strategies",
+                  text: "We create customized SEO campaigns based on keyword research, competitor analysis, and search trends to maximize organic growth.",
+                },
+                {
+                  number: "02",
+                  title: "Technical SEO Expertise",
+                  text: "From site speed optimization to indexing and crawlability improvements, we ensure your website performs flawlessly for search engines.",
+                },
+                {
+                  number: "03",
+                  title: "Content & On-Page Optimization",
+                  text: "We optimize website content, metadata, and page structure to improve rankings, engagement, and user experience.",
+                },
+                {
+                  number: "04",
+                  title: "Long-Term Organic Growth",
+                  text: "Our SEO solutions focus on sustainable traffic, higher search visibility, and measurable business growth over time.",
+                },
+              ].map((item, index) => (
 
-                <h3 className="mt-7 text-2xl font-bold text-white">
-                  {item.title}
-                </h3>
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{
+                    x: 12,
+                  }}
+                  transition={{
+                    duration: 0.35,
+                  }}
+                  className="group flex items-start gap-6 pb-8 border-b border-white/10"
+                >
 
-                <p className="mt-5 text-[#B7C2D8] leading-relaxed">
-                  {item.text}
-                </p>
+                  {/* NUMBER */}
+                  <div className="flex-shrink-0">
 
-              </motion.div>
+                    <motion.div
+                      whileHover={{
+                        scale: 1.08,
+                        rotate: 4,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 220,
+                      }}
+                      className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500"
+                    >
 
-            ))}
+                      <span className="text-xl font-bold text-[#6EA8FF] group-hover:text-white transition-all duration-500">
+                        {item.number}
+                      </span>
+
+                    </motion.div>
+
+                  </div>
+
+                  {/* CONTENT */}
+                  <div>
+
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-[#B7C2D8] leading-relaxed">
+                      {item.text}
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </motion.div>
 
           </div>
 
