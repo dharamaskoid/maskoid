@@ -300,7 +300,7 @@ export default function Header() {
               <div className="flex justify-between items-center">
 
                 <Link
-                  href="/products"
+                  href="#"
                   className="text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
                 >
                   Products
