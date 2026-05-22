@@ -1,6 +1,18 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import {
+  User,
+  LayoutDashboard,
+  Plus,
+  List,
+  Key,
+  Search,
+  CheckCircle2,
+  RefreshCw,
+  UserPlus,
+  Users,
+} from "lucide-react";
 
 interface Step {
   id: string;
@@ -19,17 +31,7 @@ const steps: Step[] = [
     subtitle: "Secure Access Control",
     description:
       "Users can securely log in using email or username with Google reCAPTCHA protection for enhanced security.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M12 12a5 5 0 100-10 5 5 0 000 10z" />
-        <path d="M4 22a8 8 0 0116 0" />
-      </svg>
-    ),
+    icon: <User />,
     color: "#2563eb",
     bg: "#DBEAFE",
   },
@@ -40,19 +42,7 @@ const steps: Step[] = [
     subtitle: "Track Everything",
     description:
       "Monitor active licenses, expired keys, pending activations and overall software statistics in one place.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <rect x="3" y="3" width="7" height="7" rx="2" />
-        <rect x="14" y="3" width="7" height="7" rx="2" />
-        <rect x="14" y="14" width="7" height="7" rx="2" />
-        <rect x="3" y="14" width="7" height="7" rx="2" />
-      </svg>
-    ),
+    icon: <LayoutDashboard />,
     color: "#7C3AED",
     bg: "#EDE9FE",
   },
@@ -63,17 +53,7 @@ const steps: Step[] = [
     subtitle: "Add Applications",
     description:
       "Create new software products by entering software name, app ID and other required details.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M12 5v14" />
-        <path d="M5 12h14" />
-      </svg>
-    ),
+    icon: <Plus />,
     color: "#EC4899",
     bg: "#FCE7F3",
   },
@@ -84,21 +64,7 @@ const steps: Step[] = [
     subtitle: "Manage Products",
     description:
       "View all registered software with total issued keys, pending licenses and application details.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M8 6h13" />
-        <path d="M8 12h13" />
-        <path d="M8 18h13" />
-        <path d="M3 6h.01" />
-        <path d="M3 12h.01" />
-        <path d="M3 18h.01" />
-      </svg>
-    ),
+    icon: <List />,
     color: "#F97316",
     bg: "#FFEDD5",
   },
@@ -109,19 +75,7 @@ const steps: Step[] = [
     subtitle: "Generate Keys",
     description:
       "Generate secure 24-character license keys and assign them to customers and software products.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M21 2l-2 2" />
-        <path d="M7.5 7.5l9-9" />
-        <path d="M14 7l3 3" />
-        <path d="M5 13l6 6" />
-      </svg>
-    ),
+    icon: <Key />,
     color: "#10B981",
     bg: "#D1FAE5",
   },
@@ -132,17 +86,7 @@ const steps: Step[] = [
     subtitle: "View All Keys",
     description:
       "Search and filter active, inactive and expired license keys with complete user information.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <circle cx="11" cy="11" r="7" />
-        <path d="M21 21l-4.3-4.3" />
-      </svg>
-    ),
+    icon: <Search />,
     color: "#06B6D4",
     bg: "#CFFAFE",
   },
@@ -153,17 +97,7 @@ const steps: Step[] = [
     subtitle: "Activation Tracking",
     description:
       "Track software activations, API requests, system details and first-time key verification records.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M9 11l3 3L22 4" />
-        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-      </svg>
-    ),
+    icon: <CheckCircle2 />,
     color: "#6366F1",
     bg: "#E0E7FF",
   },
@@ -174,19 +108,7 @@ const steps: Step[] = [
     subtitle: "Usage Monitoring",
     description:
       "Monitor every login session, software usage activity and recurring license verification requests.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M3 3v5h5" />
-        <path d="M21 21v-5h-5" />
-        <path d="M21 8a9 9 0 00-15-5L3 8" />
-        <path d="M3 16a9 9 0 0015 5l3-5" />
-      </svg>
-    ),
+    icon: <RefreshCw />,
     color: "#8B5CF6",
     bg: "#EDE9FE",
   },
@@ -197,17 +119,7 @@ const steps: Step[] = [
     subtitle: "Add New Members",
     description:
       "Add new users to the system by assigning username, software details and application permissions.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M12 5v14" />
-        <path d="M5 12h14" />
-      </svg>
-    ),
+    icon: <UserPlus />,
     color: "#EF4444",
     bg: "#FEE2E2",
   },
@@ -218,23 +130,12 @@ const steps: Step[] = [
     subtitle: "Manage Accounts",
     description:
       "View all current and former users registered in the software licensing management system.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87" />
-        <path d="M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
+    icon: <Users />,
     color: "#0EA5E9",
     bg: "#E0F2FE",
   },
 ];
+
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement | null>(null);
