@@ -96,9 +96,8 @@ const steps = [
 
 export default function LicenseKeyManagementPage() {
   return (
-    <main className="bg-white overflow-hidden">
+    <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
-      {/* HERO SECTION */}
       {/* HERO SECTION */}
       <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
