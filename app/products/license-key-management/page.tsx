@@ -345,114 +345,137 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
-    {/* PROCESS / TIMELINE SECTION (HORIZONTAL VIEW) */}
-    <section className="relative py-24 bg-white overflow-hidden">
+   {/* PROCESS / TIMELINE SECTION */}
+<section className="relative py-24 bg-white overflow-hidden">
 
-    {/* BG EFFECTS */}
-    <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
-    <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-    <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+  {/* BG EFFECTS */}
+  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-    <div className="container px-6 mx-auto max-w-[1240px] relative z-10">
+  <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-        {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto">
-        <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
-            How It Works
-        </p>
-        <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
-            Powerful Features.
-            <span className="text-[#2b4c9a]"> Simple Process.</span>
-        </h2>
-        <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-            Everything needed to manage software licenses efficiently from creation to validation.
-        </p>
-        </div>
+  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-        {/* TIMELINE TRACK */}
-        <div className="relative mt-24">
-        
-        {/* HORIZONTAL CONNECTOR LINE */}
-        <div className="hidden md:block absolute left-0 right-0 top-[44px] h-[2px] bg-gradient-to-r from-[#2b4c9a] via-[#7c4dff] to-[#2b4c9a] z-0"></div>
+  <div className="container px-6 mx-auto max-w-[1440px] relative z-10">
 
-        {/* HORIZONTAL OVERFLOW WRAPPER */}
-        <div className="flex overflow-x-auto pb-8 pt-4 gap-8 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent">
-            
-            {steps.map((item, index) => {
-            return (
-                <motion.div
-                key={index}
-                initial={{
-                    opacity: 0,
-                    x: 60,
-                }}
-                whileInView={{
-                    opacity: 1,
-                    x: 0,
-                }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{
-                    duration: 0.6,
-                    delay: index * 0.05,
-                }}
-                className="relative flex flex-col items-center min-w-[300px] md:min-w-[340px] max-w-[360px] flex-shrink-0 snap-start select-none"
-                >
-                
-                {/* TIMELINE DOT / INDEX COUNTER */}
-                <div className="relative flex items-center justify-center mb-8 z-10">
-                    {/* PULSE GLOW EFFECT */}
-                    <div className="absolute w-12 h-12 rounded-full bg-[#2b4c9a]/10 animate-pulse"></div>
+    {/* HEADER */}
+    <div className="text-center max-w-3xl mx-auto">
+      <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
+        How It Works
+      </p>
 
-                    {/* MAIN BADGE */}
-                    <div className="w-12 h-12 rounded-full bg-[#2b4c9a] border-[4px] border-white shadow-[0_10px_25px_rgba(43,76,154,0.2)] flex items-center justify-center text-white font-bold text-sm">
-                    {item.number}
-                    </div>
-                </div>
+      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
+        Powerful Features.
+        <span className="text-[#2b4c9a]"> Simple Process.</span>
+      </h2>
 
-                {/* INTERACTIVE COMPONENT CARD */}
-                <motion.div
-                    whileHover={{
-                    y: -8,
-                    }}
-                    className="
-                    relative
-                    w-full
-                    h-full
-                    rounded-3xl
-                    border border-[#EEF2FF]
-                    bg-white/90
-                    backdrop-blur-xl
-                    p-8
-                    shadow-[0_20px_60px_rgba(43,76,154,0.04)]
-                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.1)]
-                    transition-all duration-500
-                    flex flex-col items-start
-                    "
-                >
-                    {/* ICON COMPONENT LAYER */}
-                    <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl shadow-sm">
-                    {item.icon}
-                    </div>
+      <p className="mt-5 text-lg text-gray-500 leading-relaxed">
+        Everything needed to manage software licenses efficiently from creation to validation.
+      </p>
+    </div>
 
-                    {/* COPY TEXT FIELDS */}
-                    <h3 className="mt-6 text-xl font-bold text-[#1a2e5e] tracking-tight">
-                    {item.title}
-                    </h3>
+    {/* HORIZONTAL PROCESS FLOW */}
+    <div className="relative mt-24">
 
-                    <p className="mt-3 text-sm text-gray-500 leading-relaxed">
-                    {item.desc}
-                    </p>
-                </motion.div>
+      {/* CONNECTOR LINE */}
+      <div className="hidden lg:block absolute top-14 left-0 w-full h-[2px] bg-gradient-to-r from-[#2b4c9a] via-[#7c4dff] to-[#2b4c9a]"></div>
 
-                </motion.div>
-            );
-            })}
+      {/* SCROLL CONTAINER */}
+      <div className="flex gap-7 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
 
-        </div>
-        </div>
+        {steps.map((item, index) => (
+
+          <motion.div
+            key={index}
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.08,
+            }}
+            className="
+              relative
+              min-w-[280px]
+              sm:min-w-[320px]
+              lg:min-w-[260px]
+              xl:min-w-[280px]
+              snap-start
+              flex-shrink-0
+            "
+          >
+
+            {/* NUMBER */}
+            <div className="relative z-10 flex justify-center mb-8">
+
+              {/* GLOW */}
+              <div className="absolute w-14 h-14 rounded-full bg-[#2b4c9a]/15 blur-xl"></div>
+
+              {/* BADGE */}
+              <div className="w-14 h-14 rounded-full bg-[#2b4c9a] border-[6px] border-white shadow-[0_10px_30px_rgba(43,76,154,0.25)] flex items-center justify-center text-white font-bold text-sm">
+                {item.number}
+              </div>
+
+            </div>
+
+            {/* CARD */}
+            <motion.div
+              whileHover={{
+                y: -8,
+              }}
+              className="
+                relative
+                rounded-3xl
+                border border-[#EEF2FF]
+                bg-white/90
+                backdrop-blur-xl
+                p-8
+                shadow-[0_20px_60px_rgba(43,76,154,0.05)]
+                hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)]
+                transition-all duration-500
+                h-full
+              "
+            >
+
+              {/* HOVER GLOW */}
+              <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
+
+                <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+              </div>
+
+              {/* ICON */}
+              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl shadow-sm">
+                {item.icon}
+              </div>
+
+              {/* TITLE */}
+              <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] tracking-tight">
+                {item.title}
+              </h3>
+
+              {/* DESC */}
+              <p className="relative z-10 mt-3 text-sm text-gray-500 leading-relaxed">
+                {item.desc}
+              </p>
+
+            </motion.div>
+
+          </motion.div>
+
+        ))}
+
+      </div>
 
     </div>
-    </section>
+
+  </div>
+</section>
 
      {/* PROCESS SECTION */}
       <section className="relative py-24 bg-white">
