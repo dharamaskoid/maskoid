@@ -195,7 +195,7 @@ function StepCard({
       <div
         className="absolute -top-5 left-6 z-20 w-12 h-12 rounded-2xl flex items-center justify-center text-sm font-black shadow-lg border-4 border-[#EEF2FF]"
         style={{
-          background: step.color,
+          background: "#2b4c9a",
           color: "#fff",
         }}
       >
@@ -206,11 +206,12 @@ function StepCard({
       <div
         className={`relative h-full rounded-[28px] border overflow-hidden p-7 transition-all duration-500 ${
           active
-            ? "bg-white shadow-[0_25px_80px_rgba(43,76,154,0.18)]"
+            ? "shadow-[0_25px_80px_rgba(43,76,154,0.35)]"
             : "bg-white/70 backdrop-blur-xl"
         }`}
         style={{
-          borderColor: active ? `${step.color}40` : "#dbe4ff",
+          background: active ? "#2b4c9a" : "#ffffffb3",
+          borderColor: active ? "#2b4c9a" : "#dbe4ff",
         }}
       >
         {/* WATERMARK */}
@@ -218,7 +219,7 @@ function StepCard({
           className="absolute right-4 bottom-0 text-[90px] font-black leading-none pointer-events-none"
           style={{
             color: active
-              ? `${step.color}15`
+              ? "rgba(255,255,255,0.08)"
               : "rgba(43,76,154,0.05)",
           }}
         >
@@ -229,22 +230,30 @@ function StepCard({
         <div
           className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 relative z-10"
           style={{
-            background: active ? step.bg : "#f4f7ff",
-            color: step.color,
+            background: active ? "rgba(255,255,255,0.15)" : "#f4f7ff",
+            color: "#2b4c9a",
           }}
         >
           <div className="w-7 h-7">{step.icon}</div>
         </div>
 
-
-
         {/* TITLE */}
-        <h3 className="text-[22px] font-black text-[#1a2e5e] leading-tight relative z-10">
+        <h3
+          className="text-[22px] font-black leading-tight relative z-10"
+          style={{
+            color: active ? "#ffffff" : "#1a2e5e",
+          }}
+        >
           {step.title}
         </h3>
 
         {/* DESC */}
-        <p className="mt-4 text-[15px] leading-[1.8] text-[#5c6b8a] relative z-10">
+        <p
+          className="mt-4 text-[15px] leading-[1.8] relative z-10"
+          style={{
+            color: active ? "rgba(255,255,255,0.85)" : "#5c6b8a",
+          }}
+        >
           {step.description}
         </p>
 
@@ -254,7 +263,7 @@ function StepCard({
             active ? "w-full" : "w-0"
           }`}
           style={{
-            background: `linear-gradient(to right, ${step.color}, ${step.color}80)`,
+            background: "#ffffff",
           }}
         />
       </div>
