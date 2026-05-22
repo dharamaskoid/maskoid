@@ -876,11 +876,18 @@ export default function LicenseKeyManagementPage() {
   );
 }
 
+
 interface ProcessCardProps {
-  item: { number: string; title: string; desc: string; icon: string };
+  item: { 
+    number: string; 
+    title: string; 
+    desc: string; 
+    icon: React.ReactNode; // Changed from 'string' to 'React.ReactNode'
+  };
   index: number;
   isTopTier: boolean;
 }
+
 
 function ProcessCard({ item, index, isTopTier }: ProcessCardProps) {
   return (
