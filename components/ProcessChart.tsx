@@ -236,16 +236,7 @@ function StepCard({
           <div className="w-7 h-7">{step.icon}</div>
         </div>
 
-        {/* BADGE */}
-        <div
-          className="inline-flex items-center rounded-full px-4 py-1 text-[11px] font-bold uppercase tracking-[0.15em] mb-4"
-          style={{
-            background: active ? step.bg : "#EEF2FF",
-            color: step.color,
-          }}
-        >
-          {step.subtitle}
-        </div>
+
 
         {/* TITLE */}
         <h3 className="text-[22px] font-black text-[#1a2e5e] leading-tight relative z-10">
