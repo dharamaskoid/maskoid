@@ -193,10 +193,11 @@ function StepCard({
     >
       {/* TOP NUMBER */}
       <div
-        className="absolute -top-5 left-6 z-20 w-12 h-12 rounded-2xl flex items-center justify-center text-sm font-black shadow-lg border-4 border-[#EEF2FF]"
+        className="absolute -top-5 left-6 z-20 w-12 h-12 rounded-2xl flex items-center justify-center text-sm font-black shadow-md border"
         style={{
-          background: "#2b4c9a",
-          color: "#fff",
+          background: "#ffffff",
+          color: "#2b4c9a",
+          borderColor: "#2b4c9a20",
         }}
       >
         {step.id}
@@ -204,13 +205,9 @@ function StepCard({
 
       {/* CARD */}
       <div
-        className={`relative h-full rounded-[28px] border overflow-hidden p-7 transition-all duration-500 ${
-          active
-            ? "shadow-[0_25px_80px_rgba(43,76,154,0.35)]"
-            : "bg-white/70 backdrop-blur-xl"
-        }`}
+        className="relative h-full rounded-[28px] border overflow-hidden p-7 transition-all duration-500"
         style={{
-          background: active ? "#2b4c9a" : "#ffffffb3",
+          background: active ? "#2b4c9a" : "rgba(255,255,255,0.75)",
           borderColor: active ? "#2b4c9a" : "#dbe4ff",
         }}
       >
@@ -226,20 +223,24 @@ function StepCard({
           {step.id}
         </div>
 
-        {/* ICON */}
+        {/* ICON (low visible always, even active) */}
         <div
-          className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 relative z-10"
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
           style={{
-            background: active ? "rgba(255,255,255,0.15)" : "#f4f7ff",
-            color: "#2b4c9a",
+            background: active
+              ? "rgba(255,255,255,0.12)"
+              : "#f4f7ff",
+            color: active
+              ? "rgba(255,255,255,0.6)"
+              : "#2b4c9a",
           }}
         >
-          <div className="w-7 h-7">{step.icon}</div>
+          <div className="w-6 h-6 opacity-70">{step.icon}</div>
         </div>
 
         {/* TITLE */}
         <h3
-          className="text-[22px] font-black leading-tight relative z-10"
+          className="text-[22px] font-black leading-tight"
           style={{
             color: active ? "#ffffff" : "#1a2e5e",
           }}
@@ -249,9 +250,9 @@ function StepCard({
 
         {/* DESC */}
         <p
-          className="mt-4 text-[15px] leading-[1.8] relative z-10"
+          className="mt-4 text-[15px] leading-[1.8]"
           style={{
-            color: active ? "rgba(255,255,255,0.85)" : "#5c6b8a",
+            color: active ? "rgba(255,255,255,0.75)" : "#5c6b8a",
           }}
         >
           {step.description}
