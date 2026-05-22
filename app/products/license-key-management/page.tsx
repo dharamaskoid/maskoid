@@ -95,6 +95,13 @@ const steps = [
 ];
 
 export default function LicenseKeyManagementPage() {
+
+      // Split data into two rows
+  const rowOne = steps.slice(0, 5);
+  // Reverse the second row visually (10 to 06) so the grid renders from left to right matching the path
+  const rowTwo = steps.slice(5, 10).reverse();
+
+
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
@@ -178,6 +185,105 @@ export default function LicenseKeyManagementPage() {
         </div>
       </section>      
       
+    {/* PROCESS SECTION */}
+    <section className="relative py-24 bg-white overflow-hidden">
+
+      <div className="container px-6 mx-auto max-w-[1240px]">
+
+        {/* Header Block */}
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
+            How It Works
+          </p>
+          <h2 className="mt-6 text-5xl font-black text-[#10204b]">
+            Powerful Features.
+            <span className="text-[#2b4c9a]"> Simple Process.</span>
+          </h2>
+          <p className="mt-5 text-lg text-gray-500">
+            Everything needed to manage software licenses efficiently.
+          </p>
+        </div>
+
+        {/* Flow Diagram Outer Container */}
+        <div className="relative mt-24 flex flex-col gap-24">
+          
+          {/* SVG Vector Connecting Lines (Hidden on small viewports when cards stack) */}
+          <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
+            <svg className="w-full h-full" fill="none" xmlns="http://w3.org">
+              {/* Row 1 horizontal connector line */}
+              <line x1="10%" y1="0px" x2="90%" y2="0px" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+              
+              {/* Right S-curve drop connector between step 05 and step 06 */}
+              <path d="M 90% 0 A 20 20 0 0 1 93.5% 20 L 93.5% 210 A 20 20 0 0 1 90% 230" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+              
+              {/* Row 2 horizontal connector line */}
+              <line x1="90%" y1="230px" x2="10%" y2="230px" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+              
+              {/* Left outbound tail line dropping down from step 10 */}
+              <path d="M 10% 230 A 20 20 0 0 0 6.5% 250 L 6.5% 300" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+            </svg>
+          </div>
+
+          {/* Row 1 Layout Grid (Steps 01 - 05) */}
+          <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {rowOne.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -8 }}
+                className="relative bg-white border border-[#EEF2FF] rounded-3xl p-8 shadow-[0_20px_60px_rgba(43,76,154,0.05)] flex flex-col items-start"
+              >
+                {/* Number Badge with background match ring to cut the connecting line cleanly */}
+                <div className="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#2b4c9a] text-white text-sm font-bold flex items-center justify-center ring-[6px] ring-white">
+                  {item.number}
+                </div>
+
+                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-2xl">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-6 text-xl font-bold text-[#1a2e5e]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-gray-500 leading-relaxed text-sm">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Row 2 Layout Grid (Steps 10 - 06) */}
+          <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {rowTwo.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -8 }}
+                className="relative bg-white border border-[#EEF2FF] rounded-3xl p-8 shadow-[0_20px_60px_rgba(43,76,154,0.05)] flex flex-col items-start"
+              >
+                {/* Number Badge with background match ring */}
+                <div className="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#2b4c9a] text-white text-sm font-bold flex items-center justify-center ring-[6px] ring-white">
+                  {item.number}
+                </div>
+
+                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-2xl">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-6 text-xl font-bold text-[#1a2e5e]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-gray-500 leading-relaxed text-sm">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
       {/* PROCESS SECTION */}
       <section className="relative py-24 bg-white">
