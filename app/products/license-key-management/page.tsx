@@ -425,7 +425,7 @@ export default function LicenseKeyManagementPage() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="relative py-24 bg-white">
+      <section className="relative py-16 bg-white">
 
         <div className="container px-6 mx-auto">
 
