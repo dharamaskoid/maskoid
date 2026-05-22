@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useRef } from 'react';
+import { motion,  useScroll, useTransform } from "framer-motion";
 import {
   ShieldCheck,
   LayoutDashboard,
@@ -100,6 +101,20 @@ export default function LicenseKeyManagementPage() {
   const rowOne = steps.slice(0, 5);
   // Reverse the second row visually (10 to 06) so the grid renders from left to right matching the path
   const rowTwo = steps.slice(5, 10).reverse();
+  const containerRef = useRef(null);
+  
+  // Connects page scrolling directly into our background svg line animation
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Controls the drawing path animation of the connecting track dynamically
+  const pathLength = useTransform(scrollYProgress, [0.1, 0.8], [0, 1]);
+
+  // Splits the data array into layout tiers
+  const tierOne = steps.slice(0, 5);
+  const tierTwo = steps.slice(5, 10).reverse(); // Reverses visually to close the loop naturally
 
 
   return (
@@ -562,6 +577,142 @@ export default function LicenseKeyManagementPage() {
         </div>
 
         </section>
+
+<section ref={containerRef} className="relative py-32 bg-[#F8FAFC] overflow-hidden">
+      
+      {/* --- CURRENT TREND: ADVANCED ACCENTUATED LAYERING --- */}
+      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#0f172a_1px,transparent_1px)] [background-size:32px_32px]"></div>
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#3b82f6]/10 blur-[140px] rounded-full pointer-events-none"></div>
+      <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-[#6366f1]/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+      <div className="container px-6 mx-auto max-w-[1440px] relative z-10">
+        
+        {/* --- HEADER BLOCK --- */}
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-32">
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/80 shadow-sm text-slate-800 text-[11px] font-semibold uppercase tracking-[0.25em]"
+          >
+            <span className="flex h-1.5 w-1.5 rounded-full bg-[#2b4c9a] animate-pulse"></span>
+            Orchestration Flow
+          </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight text-[#10204b] leading-[1.1]"
+          >
+            Powerful Features. <br className="hidden sm:inline" />
+            <span className="bg-gradient-to-r from-[#2b4c9a] via-[#4f7cff] to-[#6366f1] bg-clip-text text-transparent">Simple Process.</span>
+          </motion.h2>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-6 text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed"
+          >
+            Everything needed to provision, audit, and scale native software environments within a high-performance framework.
+          </motion.p>
+        </div>
+
+        {/* --- BENTO TRACK CONTAINER --- */}
+        <div className="relative flex flex-col gap-28 lg:gap-36">
+          
+          {/* --- CURRENT TREND: INTERACTIVE VECTOR PATH RAILS --- */}
+          <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
+            <svg className="w-full h-full" fill="none" xmlns="http://w3.org">
+              {/* Static background trace guide */}
+              <path d="M 10% 0 L 90% 0 A 32 32 0 0 1 93% 32 L 93% 284 A 32 32 0 0 1 90% 316 L 10% 316" stroke="#E2E8F0" strokeWidth="2" strokeLinecap="round" />
+              {/* Active scroll-driven animated path overlay */}
+              <motion.path 
+                style={{ pathLength }}
+                d="M 10% 0 L 90% 0 A 32 32 0 0 1 93% 32 L 93% 284 A 32 32 0 0 1 90% 316 L 10% 316" 
+                stroke="url(#gradient-line)" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+              />
+              <defs>
+                <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#2b4c9a" />
+                  <stop offset="50%" stopColor="#6366f1" />
+                  <stop offset="100%" stopColor="#4f7cff" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* --- TIER 01 TRACK (01 -> 05) --- */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+            {tierOne.map((item, idx) => (
+              <ProcessCard key={item.number} item={item} index={idx} isTopTier={true} />
+            ))}
+          </div>
+
+          {/* --- TIER 02 TRACK (10 <- 06) --- */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+            {tierTwo.map((item, idx) => (
+              <ProcessCard key={item.number} item={item} index={idx} isTopTier={false} />
+            ))}
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+{/* --- CARD COMPONENT EXTRACTION FOR STRUCTURAL SANITY --- */}
+function ProcessCard({ item, index, isTopTier }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, delay: index * 0.06 }}
+      whileHover={{ y: -6, scale: 1.01 }}
+      className="group relative bg-white border border-slate-200/70 rounded-2xl p-6 shadow-[0_2px_8px_rgba(15,23,42,0.01),0_16px_48px_-12px_rgba(15,23,42,0.03)] hover:shadow-[0_30px_64px_-12px_rgba(43,76,154,0.1)] hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between min-h-[260px]"
+    >
+      <div>
+        {/* Top utilities row */}
+        <div className="flex items-center justify-between w-full">
+          {/* Trend: Minimal glassmorphic micro icon framing */}
+          <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-xl shadow-sm group-hover:bg-[#EEF4FF] group-hover:border-[#c7d2fe]/40 transition-colors duration-300">
+            {item.icon}
+          </div>
+          
+          {/* Trend: Micro index counter pills */}
+          <div className="text-[10px] tracking-widest font-mono font-bold text-slate-400 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded-md group-hover:text-[#2b4c9a] group-hover:bg-[#EEF4FF] transition-colors duration-300">
+            STEP_/{item.number}
+          </div>
+        </div>
+
+        {/* Structural Copy */}
+        <h3 className="mt-6 text-lg font-bold text-[#10204b] tracking-tight group-hover:text-[#2b4c9a] transition-colors duration-300">
+          {item.title}
+        </h3>
+        
+        <p className="mt-2.5 text-xs text-slate-500 leading-relaxed font-normal">
+          {item.desc}
+        </p>
+      </div>
+
+      {/* Dynamic status highlight pin tucked clean at the bottom */}
+      <div className="mt-6 pt-3 border-t border-slate-50 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#4f7cff]"></span>
+        <span className="text-[9px] font-mono font-medium tracking-wider text-slate-400 uppercase">Initialize entitlement</span>
+      </div>
+
+      {/* Dynamic Background Tracking Pins */}
+      <div className={`hidden lg:block absolute left-12 w-3 h-3 rounded-full bg-white border-2 border-slate-300 group-hover:border-[#2b4c9a] group-hover:scale-110 transition-all duration-300 z-20 ${
+        isTopTier ? "-top-1.5" : "-bottom-1.5"
+      }`} />
+    </motion.div>
 
       {/* PROCESS SECTION */}
       <section className="relative py-24 bg-white">
