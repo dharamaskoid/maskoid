@@ -977,44 +977,46 @@ export default function SEOServicePage() {
               },
             ].map((item, index) => (
 
-              <motion.div
-                key={index}
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -6,
-                  scale: 1.03,
-                }}
-                className={`
-                  group
-                  relative
-                  overflow-hidden
-                  inline-flex
-                  items-center
-                  gap-3
-                  bg-[#1a2e5e]
-                  backdrop-blur-xl
-                  border border-slate-800/80
-                  rounded-xl
-                  px-5 py-3.5
-                  w-max
-                  h-14
-                  whitespace-nowrap
-                  transition-all duration-500
-                  ${item.position}
-                `}
-              >
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+              whileHover={{
+                y: -6,
+                scale: 1.03,
+              }}
+              className={`
+                group
+                relative
+                overflow-hidden
+                inline-flex
+                items-center
+                justify-center
+                gap-2 sm:gap-3
+                bg-[#1a2e5e]
+                backdrop-blur-xl
+                border border-slate-800/80
+                rounded-xl
+                px-4 sm:px-5
+                py-3
+                w-full sm:w-max
+                min-h-[56px]
+                whitespace-nowrap
+                transition-all duration-500
+                ${item.position}
+              `}
+            >
 
                 {/* HOVER GLOW */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
