@@ -301,69 +301,49 @@ export default function ProcessChart() {
   }, []);
 
   return (
-    <section
-      style={{
-        background: "#0A0A0F",
-        minHeight: "100vh",
-        padding: "100px 24px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        {/* HEADER */}
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "60px",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "clamp(32px,5vw,54px)",
-              fontWeight: 900,
-              color: "#ffffff",
-              marginBottom: "20px",
-            }}
-          >
-            Modern Process Flow
-          </h2>
+    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+  
+  {/* BLUR EFFECTS */}
+  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-300/20 blur-[120px] rounded-full"></div>
+  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-300/20 blur-[120px] rounded-full"></div>
 
-          <p
-            style={{
-              color: "rgba(255,255,255,0.6)",
-              maxWidth: "700px",
-              margin: "0 auto",
-              lineHeight: 1.7,
-            }}
-          >
-            A premium modern process section with animated active states.
-          </p>
-        </div>
+  <div className="max-w-[1240px] mx-auto px-6 relative z-10">
 
-        {/* GRID */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit,minmax(280px,1fr))",
-            gap: "20px",
-          }}
-        >
-          {steps.map((step, index) => (
-            <StepCard
-              key={step.id}
-              step={step}
-              index={index}
-              active={activeStep === index}
-              onClick={setActiveStep}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+    {/* HEADER */}
+    <div className="text-center mb-16">
+      
+      <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.18em]">
+        Our Process
+      </span>
+
+      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#1a2e5e] leading-tight">
+        Modern Process
+        <span className="text-[#2b4c9a]"> Flow</span>
+      </h2>
+
+      <p className="mt-5 text-lg text-[#42526b] max-w-2xl mx-auto leading-relaxed">
+        A premium modern process section with interactive active states,
+        smooth animations, and a clean enterprise UI.
+      </p>
+
+    </div>
+
+    {/* GRID */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+      
+      {steps.map((step, index) => (
+        <StepCard
+          key={step.id}
+          step={step}
+          index={index}
+          active={activeStep === index}
+          onClick={setActiveStep}
+        />
+      ))}
+
+    </div>
+
+  </div>
+</section>
   );
 }
