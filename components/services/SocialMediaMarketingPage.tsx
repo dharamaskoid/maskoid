@@ -184,8 +184,6 @@ export default function SocialMediaMarketingPage() {
         </div>
       </section>
 
-
-
       {/* CLIENT LOGOS */}
         <section className="py-16 bg-white border-y border-[#dbe7ff]">
             <div className="container mx-auto px-6 relative">
