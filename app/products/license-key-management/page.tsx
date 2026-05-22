@@ -115,7 +115,9 @@ export default function LicenseKeyManagementPage() {
   // Splits the data array into layout tiers
   const tierOne = steps.slice(0, 5);
   const tierTwo = steps.slice(5, 10).reverse(); // Reverses visually to close the loop naturally
-
+ // Slicing out rows for the 5-column wide 'Snake Flow' desktop layout
+  const desktopRowOne = steps.slice(0, 5);
+  const desktopRowTwo = steps.slice(5, 10).reverse(); // Reverse 06-10 so visual layout flows right-to-left
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
@@ -345,118 +347,90 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
-{/* PROCESS / TIMELINE SECTION */}
-<section className="relative py-24 bg-white overflow-hidden">
-
-  {/* BG EFFECTS */}
-  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
-  <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
-
-  <div className="container px-6 mx-auto max-w-[1240px] relative z-10">
-
-    {/* HEADER */}
-    <div className="text-center max-w-3xl mx-auto">
-      <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
-        How It Works
-      </p>
-      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
-        Powerful Features.
-        <span className="text-[#2b4c9a]"> Simple Process.</span>
-      </h2>
-      <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-        Everything needed to manage software licenses efficiently from creation to validation.
-      </p>
-    </div>
-
-    {/* SNAKE DIAGRAM CORE GRID FRAMEWORK */}
-    <div className="relative mt-28 flex flex-col gap-28 lg:gap-36">
+ <section className="relative py-24 bg-white overflow-hidden">
       
-      {/* PERFECT VECTOR PATH RAILS (Hidden on mobile breakdown viewports) */}
-      <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
-        <svg className="w-full h-full" fill="none" xmlns="http://w3.org">
-          {/* Top linear guide rail tracking across row 1 numbers */}
-          <line x1="10%" y1="-16px" x2="90%" y2="-16px" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+      {/* BG EFFECTS */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+      <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+      <div className="container px-6 mx-auto max-w-[1240px] relative z-10">
+
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
+            How It Works
+          </p>
+          <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
+            Powerful Features.
+            <span className="text-[#2b4c9a]"> Simple Process.</span>
+          </h2>
+          <p className="mt-5 text-lg text-gray-500 leading-relaxed">
+            Everything needed to manage software licenses efficiently from creation to validation.
+          </p>
+        </div>
+
+        {/* --- DESKTOP VIEWPORTS (lg and above: Exact 5-Column Snake Flow) --- */}
+        <div className="hidden lg:flex flex-col gap-32 relative mt-28">
           
-          {/* Right S-Curve loop connecting drop link between step 05 and step 06 */}
-          <path d="M 90% -16 A 24 24 0 0 1 93% 8 L 93% 284 A 24 24 0 0 1 90% 308" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+          {/* STATIC VECTOR BACKGROUND PATH (SNAKE LINE) */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <svg className="w-full h-full" fill="none" xmlns="http://w3.org">
+              {/* Top horizontal tracking bar across numbers 01 to 05 */}
+              <line x1="10%" y1="-16px" x2="90%" y2="-16px" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+              
+              {/* Right side S-curve loop wrapper dropping down between step 05 and step 06 */}
+              <path d="M 90% -16 A 24 24 0 0 1 93.5% 8 L 93.5% 268 A 24 24 0 0 1 90% 292" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+              
+              {/* Bottom horizontal tracking bar across numbers 10 to 06 */}
+              <line x1="90%" y1="292px" x2="10%" y2="292px" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+              
+              {/* Left outbound structural line drop indicator leaving Card 10 */}
+              <path d="M 10% 292 A 24 24 0 0 0 6.5% 316 L 6.5% 360" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
+            </svg>
+          </div>
+
+          {/* DESKTOP ROW 1 (01 to 05) */}
+          <div className="grid grid-cols-5 gap-6 relative z-10">
+            {desktopRowOne.map((item, index) => (
+              <ProcessCard key={item.number} item={item} index={index} />
+            ))}
+          </div>
+
+          {/* DESKTOP ROW 2 (10 down to 06) */}
+          <div className="grid grid-cols-5 gap-6 relative z-10">
+            {desktopRowTwo.map((item, index) => (
+              <ProcessCard key={item.number} item={item} index={index} />
+            ))}
+          </div>
+
+        </div>
+
+        {/* --- MOBILE & TABLET VIEWPORTS (xs to md: Clean Responsive Adaptation) --- */}
+        <div className="lg:hidden relative mt-20">
           
-          {/* Bottom linear guide rail tracking across row 2 numbers */}
-          <line x1="90%" y1="308px" x2="10%" y2="308px" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
-          
-          {/* Tail element drop indicator exiting left edge out from card step 10 */}
-          <path d="M 10% 308 A 24 24 0 0 0 6.5% 332 L 6.5% 380" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="4 4" />
-        </svg>
+          {/* VERTICAL CORE TIMELINE GUIDE LINE */}
+          <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-dashed border-l-2 border-dashed border-[#c7d2fe] z-0"></div>
+
+          {/* STANDARD SEQUENTIAL GRID LIST */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10 pl-4 sm:pl-0">
+            {steps.map((item, index) => (
+              <div key={item.number} className="relative pl-12 md:pl-16">
+                
+                {/* Mobile absolute left position badge */}
+                <div className="absolute left-0 top-1 w-10 h-10 rounded-full bg-[#2b4c9a] text-white text-sm font-bold flex items-center justify-center shadow-md">
+                  {item.number}
+                </div>
+
+                <ProcessCard item={item} index={index} isMobile={true} />
+              </div>
+            ))}
+          </div>
+
+        </div>
+
       </div>
-
-      {/* ROW 1: CARDS 01 TO 05 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-        {steps.slice(0, 5).map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.06 }}
-            whileHover={{ y: -8 }}
-            className="relative bg-white border border-[#EEF2FF] rounded-3xl p-6 shadow-[0_20px_60px_rgba(43,76,154,0.04)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.1)] transition-all duration-500 flex flex-col items-start"
-          >
-            {/* Index Pin with background-matching cutout ring protection */}
-            <div className="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#2b4c9a] text-white text-sm font-bold flex items-center justify-center ring-[6px] ring-white shadow-md">
-              {item.number}
-            </div>
-
-            <div className="w-14 h-14 mt-4 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-2xl shadow-sm">
-              {item.icon}
-            </div>
-
-            <h3 className="mt-6 text-lg font-bold text-[#1a2e5e]">
-              {item.title}
-            </h3>
-
-            <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-              {item.desc}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* ROW 2: CARDS 10 DOWN TO 06 (Reversed dynamically to match snake image path sequencing) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-        {steps.slice(5, 10).reverse().map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.06 }}
-            whileHover={{ y: -8 }}
-            className="relative bg-white border border-[#EEF2FF] rounded-3xl p-6 shadow-[0_20px_60px_rgba(43,76,154,0.04)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.1)] transition-all duration-500 flex flex-col items-start"
-          >
-            {/* Index Pin with background-matching cutout ring protection */}
-            <div className="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#2b4c9a] text-white text-sm font-bold flex items-center justify-center ring-[6px] ring-white shadow-md">
-              {item.number}
-            </div>
-
-            <div className="w-14 h-14 mt-4 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-2xl shadow-sm">
-              {item.icon}
-            </div>
-
-            <h3 className="mt-6 text-lg font-bold text-[#1a2e5e]">
-              {item.title}
-            </h3>
-
-            <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-              {item.desc}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
@@ -667,3 +641,44 @@ export default function LicenseKeyManagementPage() {
   );
 }
 
+{/* --- CARD COMPONENT MODULE FOR CLEAN LAYOUT --- */}
+interface ProcessCardProps {
+  item: { number: string; title: string; desc: string; icon: React.ReactNode };
+  index: number;
+  isMobile?: boolean;
+}
+
+function ProcessCard({ item, index, isMobile = false }: ProcessCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: isMobile ? 0.02 : index * 0.05 }}
+      whileHover={{ y: -6 }}
+      className="relative w-full bg-white border border-[#EEF2FF] rounded-3xl p-6 shadow-[0_20px_60px_rgba(43,76,154,0.03)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.09)] transition-all duration-500 flex flex-col items-center text-center"
+    >
+      {/* Absolute Top Badge Circle - Only shows up on Desktop Layout Grid */}
+      {!isMobile && (
+        <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#2b4c9a] text-white text-sm font-bold flex items-center justify-center ring-[6px] ring-white shadow-md">
+          {item.number}
+        </div>
+      )}
+
+      {/* Styled Icon Window Container */}
+      <div className={`w-14 h-14 ${!isMobile ? 'mt-4' : ''} rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-2xl shadow-sm`}>
+        {item.icon}
+      </div>
+
+      {/* Header Fields */}
+      <h3 className="mt-5 text-lg font-bold text-[#1a2e5e] tracking-tight">
+        {item.title}
+      </h3>
+
+      {/* Description Content Block */}
+      <p className="mt-2.5 text-xs text-gray-400 font-medium leading-relaxed">
+        {item.desc}
+      </p>
+    </motion.div>
+  );
+}
