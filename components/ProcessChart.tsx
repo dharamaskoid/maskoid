@@ -8,21 +8,21 @@ const steps = [
     title: "Discovery Call",
     subtitle: "Understanding Your Vision",
     description:
-      "We start with a strategy session to understand your business goals, audience, and growth opportunities.",
+      "We start with a deep-dive strategy session to understand your business goals, target audience, and growth challenges.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
     ),
-    color: "#2b4c9a",
-    glow: "rgba(43,76,154,0.25)",
+    color: "#FF6B35",
+    bg: "#FF6B3515",
   },
 
   {
@@ -30,58 +30,58 @@ const steps = [
     title: "Strategy & Planning",
     subtitle: "Roadmap to Growth",
     description:
-      "We craft a custom digital roadmap focused on ROI, branding, SEO, and scalable marketing.",
+      "Our team crafts a custom digital growth blueprint aligned with your ROI targets.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    color: "#4f7cff",
-    glow: "rgba(79,124,255,0.25)",
+    color: "#3B82F6",
+    bg: "#3B82F615",
   },
 
   {
     id: "03",
     title: "Design & Build",
-    subtitle: "Crafting Experiences",
+    subtitle: "Crafting the Experience",
     description:
-      "We build premium UI/UX experiences with performance-focused development.",
+      "We design high-performance conversion-focused websites and digital assets.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
-    color: "#7c4dff",
-    glow: "rgba(124,77,255,0.25)",
+    color: "#8B5CF6",
+    bg: "#8B5CF615",
   },
 
   {
     id: "04",
     title: "Launch & Optimize",
-    subtitle: "Scale Faster",
+    subtitle: "Go Live, Grow Faster",
     description:
-      "After launch we monitor analytics, optimize funnels, and improve conversions.",
+      "We deploy your digital system and continuously optimize campaigns.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
@@ -89,22 +89,22 @@ const steps = [
         <path d="M6 22l4-4" />
       </svg>
     ),
-    color: "#00b894",
-    glow: "rgba(0,184,148,0.25)",
+    color: "#10B981",
+    bg: "#10B98115",
   },
 
   {
     id: "05",
     title: "Report & Scale",
-    subtitle: "Data-Driven Growth",
+    subtitle: "Data-Driven Scaling",
     description:
-      "Monthly reports, KPI tracking, and scaling strategies that drive long-term success.",
+      "Monthly reporting with measurable KPIs and growth-focused scaling.",
     icon: (
       <svg
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
@@ -113,34 +113,34 @@ const steps = [
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
-    color: "#f59e0b",
-    glow: "rgba(245,158,11,0.25)",
+    color: "#F59E0B",
+    bg: "#F59E0B15",
   },
 ];
 
-function useInView() {
+function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [visible, setVisible] = useState(false);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
+          setInView(true);
         }
       },
-      { threshold: 0.15 }
+      { threshold }
     );
 
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
-  return [ref, visible] as const;
+  return [ref, inView] as const;
 }
 
-function Card({
+function StepCard({
   step,
   index,
   active,
@@ -151,188 +151,215 @@ function Card({
   active: boolean;
   onClick: (index: number) => void;
 }) {
-  const [ref, visible] = useInView();
+  const [ref, inView] = useInView();
 
   return (
     <div
       ref={ref}
       onClick={() => onClick(index)}
-      className={`
-        relative cursor-pointer group
-        transition-all duration-700
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-      `}
       style={{
-        transitionDelay: `${index * 120}ms`,
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(40px)",
+        transition: `all 0.6s ease ${index * 0.12}s`,
+        cursor: "pointer",
+        position: "relative",
       }}
     >
-      {/* Connector Line */}
-      {index !== steps.length - 1 && (
-        <div className="hidden lg:block absolute top-1/2 -right-10 w-20 h-[2px] z-0">
-          <div
-            className="w-full h-full rounded-full"
-            style={{
-              background: `linear-gradient(to right, ${step.color}, rgba(255,255,255,0.08))`,
-            }}
-          />
-        </div>
-      )}
-
-      {/* Card */}
       <div
-        className={`
-          relative overflow-hidden rounded-[28px]
-          border backdrop-blur-xl
-          p-8 h-full
-          transition-all duration-500
-          hover:-translate-y-2
-        `}
         style={{
           background: active
-            ? `linear-gradient(180deg, ${step.color}15, rgba(255,255,255,0.03))`
-            : "rgba(255,255,255,0.04)",
-
-          borderColor: active
-            ? `${step.color}55`
-            : "rgba(255,255,255,0.08)",
-
+            ? `linear-gradient(135deg, ${step.color}18, ${step.color}08)`
+            : "rgba(255,255,255,0.03)",
+          border: `1px solid ${
+            active ? step.color + "60" : "rgba(255,255,255,0.08)"
+          }`,
+          borderRadius: "20px",
+          padding: "28px 24px",
+          position: "relative",
+          overflow: "hidden",
+          transition: "all 0.35s ease",
           boxShadow: active
-            ? `0 25px 60px ${step.glow}`
-            : "0 10px 30px rgba(0,0,0,0.25)",
+            ? `0 8px 40px ${step.color}20`
+            : "0 2px 12px rgba(0,0,0,0.2)",
         }}
       >
-        {/* Glow */}
+        {/* WATERMARK */}
         <div
-          className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-20"
           style={{
-            background: step.color,
-          }}
-        />
-
-        {/* Watermark */}
-        <div
-          className="absolute right-4 bottom-0 text-[90px] font-black leading-none select-none"
-          style={{
+            position: "absolute",
+            right: "12px",
+            bottom: "-8px",
+            fontSize: "80px",
+            fontWeight: 900,
             color: active
-              ? `${step.color}15`
-              : "rgba(255,255,255,0.03)",
+              ? `${step.color}12`
+              : "rgba(255,255,255,0.04)",
+            pointerEvents: "none",
+            userSelect: "none",
           }}
         >
           {step.id}
         </div>
 
-        {/* Top */}
-        <div className="relative z-10">
-          {/* Icon */}
-          <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5"
-            style={{
-              background: `${step.color}15`,
-              color: step.color,
-            }}
-          >
-            <div className="w-6 h-6">{step.icon}</div>
+        {/* ICON */}
+        <div
+          style={{
+            width: "48px",
+            height: "48px",
+            borderRadius: "12px",
+            background: active ? step.bg : "rgba(255,255,255,0.06)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "16px",
+            color: active ? step.color : "rgba(255,255,255,0.5)",
+          }}
+        >
+          <div style={{ width: "22px", height: "22px" }}>
+            {step.icon}
           </div>
+        </div>
 
-          {/* Badge */}
-          <div
-            className="inline-flex items-center px-3 py-1 rounded-full border text-[11px] font-bold uppercase tracking-[0.15em]"
+        {/* STEP BADGE */}
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+            background: active
+              ? `${step.color}22`
+              : "rgba(255,255,255,0.06)",
+            border: `1px solid ${
+              active ? step.color + "40" : "rgba(255,255,255,0.1)"
+            }`,
+            borderRadius: "100px",
+            padding: "3px 10px",
+            marginBottom: "10px",
+          }}
+        >
+          <span
             style={{
-              background: `${step.color}10`,
-              borderColor: `${step.color}30`,
-              color: step.color,
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.06em",
+              color: active ? step.color : "rgba(255,255,255,0.4)",
+              textTransform: "uppercase",
             }}
           >
             Step {step.id}
-          </div>
-
-          {/* Title */}
-          <h3 className="mt-5 text-[22px] font-bold text-white leading-tight">
-            {step.title}
-          </h3>
-
-          {/* Subtitle */}
-          <p
-            className="mt-2 text-sm font-medium"
-            style={{
-              color: step.color,
-            }}
-          >
-            {step.subtitle}
-          </p>
-
-          {/* Description */}
-          <p className="mt-5 text-[15px] leading-[1.9] text-white/60">
-            {step.description}
-          </p>
+          </span>
         </div>
 
-        {/* Active Bar */}
-        <div
-          className="absolute left-0 top-0 w-[4px] h-full rounded-full transition-all duration-500"
+        {/* TITLE */}
+        <h3
           style={{
-            background: active ? step.color : "transparent",
+            fontSize: "17px",
+            fontWeight: 700,
+            color: active ? "#ffffff" : "rgba(255,255,255,0.75)",
+            marginBottom: "4px",
           }}
-        />
+        >
+          {step.title}
+        </h3>
+
+        {/* SUBTITLE */}
+        <p
+          style={{
+            fontSize: "12px",
+            color: active ? step.color : "rgba(255,255,255,0.35)",
+            marginBottom: "12px",
+          }}
+        >
+          {step.subtitle}
+        </p>
+
+        {/* DESCRIPTION */}
+        <p
+          style={{
+            fontSize: "13.5px",
+            color: "rgba(255,255,255,0.55)",
+            lineHeight: 1.65,
+            margin: 0,
+          }}
+        >
+          {step.description}
+        </p>
       </div>
     </div>
   );
 }
 
 export default function ProcessChart() {
-  const [active, setActive] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % steps.length);
-    }, 3500);
+      setActiveStep((prev) => (prev + 1) % steps.length);
+    }, 3200);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative py-28 bg-[#071028] overflow-hidden">
-
-      {/* BG Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(43,76,154,0.18),transparent_40%)]"></div>
-
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:26px_26px]"></div>
-
-      {/* Glow */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/20 blur-[140px] rounded-full"></div>
-
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/20 blur-[140px] rounded-full"></div>
-
-      <div className="relative z-10 container max-w-[1320px] mx-auto px-6">
-
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl">
-            <span className="text-[11px] tracking-[0.2em] uppercase font-bold text-[#7ea6ff]">
-              Our Process
-            </span>
-          </div>
-
-          <h2 className="mt-7 text-4xl md:text-6xl font-black text-white leading-tight">
-            From Strategy to
-            <span className="text-[#7ea6ff]"> Measurable Growth</span>
+    <section
+      style={{
+        background: "#0A0A0F",
+        minHeight: "100vh",
+        padding: "100px 24px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+        }}
+      >
+        {/* HEADER */}
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "60px",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "clamp(32px,5vw,54px)",
+              fontWeight: 900,
+              color: "#ffffff",
+              marginBottom: "20px",
+            }}
+          >
+            Modern Process Flow
           </h2>
 
-          <p className="mt-6 text-white/60 text-lg leading-relaxed">
-            A premium growth system designed to scale modern businesses
-            with high-converting design, performance marketing, and data-driven execution.
+          <p
+            style={{
+              color: "rgba(255,255,255,0.6)",
+              maxWidth: "700px",
+              margin: "0 auto",
+              lineHeight: 1.7,
+            }}
+          >
+            A premium modern process section with animated active states.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="relative mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+        {/* GRID */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(280px,1fr))",
+            gap: "20px",
+          }}
+        >
           {steps.map((step, index) => (
-            <Card
+            <StepCard
               key={step.id}
               step={step}
               index={index}
-              active={active === index}
-              onClick={setActive}
+              active={activeStep === index}
+              onClick={setActiveStep}
             />
           ))}
         </div>
