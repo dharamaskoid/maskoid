@@ -1,9 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
+import { useRef } from "react";
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import GoogleReviews from "@/components/GoogleReviews";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,6 +31,7 @@ import {
   Database,
   Code2,
   Server,
+  CheckCircle2,
 } from "lucide-react";
 
 const fadeUp = {
@@ -81,6 +85,86 @@ const solutions = [
   },
 ];
 
+// SEO CASE STUDIES DATA
+const caseStudies = [
+  {
+    domain: "organicgrowth.io",
+    industry: "SEO & DIGITAL MARKETING",
+    techStack: ["SEO Audit", "Keyword Research", "On-Page SEO"],
+    desc: "We improved organic visibility and search rankings through a strategic SEO campaign focused on technical optimization, content improvements, and keyword targeting.",
+    outcomes: [
+      "320% increase in organic traffic",
+      "Top 3 rankings for competitive keywords",
+      "Improved Core Web Vitals performance",
+    ],
+    image: "/images/case-study-seo-1.jpg",
+  },
+  {
+    domain: "localboostmarketing.com",
+    industry: "LOCAL SEO STRATEGY",
+    techStack: ["Google Business", "Local SEO", "Content SEO"],
+    desc: "Our local SEO strategy helped the business dominate local search results and attract highly targeted nearby customers.",
+    outcomes: [
+      "180% increase in local search visibility",
+      "Higher Google Maps rankings",
+      "More qualified local leads generated",
+    ],
+    image: "/images/case-study-seo-2.jpg",
+  },
+  {
+    domain: "searchscalehub.com",
+    industry: "TECHNICAL SEO",
+    techStack: ["Technical SEO", "Site Speed", "Analytics"],
+    desc: "We optimized the website structure, indexing, and technical performance to improve search engine crawlability and rankings.",
+    outcomes: [
+      "Faster page load speed",
+      "Improved mobile SEO performance",
+      "Significant increase in indexed pages",
+    ],
+    image: "/images/case-study-seo-3.jpg",
+  },
+];
+
+// Explicitly type your objects to satisfy Framer Motion's strict types
+const containerVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut", 
+      staggerChildren: 0.15 
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { duration: 0.4, ease: "easeOut" } 
+  }
+};
+
+const slideVariants: Variants = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 100 : -100,
+    opacity: 0
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  },
+  exit: (dir: number) => ({
+    x: dir < 0 ? 100 : -100,
+    opacity: 0,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  })
+};
+
 export default function SEOServicePage() {
   const logos = [
     "/images/Client-1-1.png",
@@ -94,6 +178,23 @@ export default function SEOServicePage() {
     "/images/Client-1-13.png",
     "/images/Client-1-14.png",
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  
+   
+  
+    const handleNext = () => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % caseStudies.length);
+    };
+  
+    const handlePrev = () => {
+      setDirection(-1);
+      setCurrentIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
+    };
+  
+    const active = caseStudies[currentIndex];
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px]">
@@ -1044,6 +1145,188 @@ export default function SEOServicePage() {
 
       </section>
 
+      {/* Case Study */}
+      <section className="relative w-full bg-[#F8FAFF] overflow-hidden py-16 flex items-center">
+            
+          <div className="container mx-auto px-6 relative z-10 w-full">
+              
+              {/* SECTION HEADER BLOCK */}
+
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="text-center max-w-3xl mx-auto"
+              >
+
+                <motion.p
+                  whileHover={{
+                    scale: 1.04,
+                  }}
+                  className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+                >
+                  SEO Success Stories
+                </motion.p>
+
+                <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                  Our Recent
+                  <span className="text-[#2b4c9a]"> SEO Growth</span> Results
+                </h2>
+
+                <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+                  Real SEO strategies. Real rankings. Real business growth through organic search optimization.
+                </p>
+
+              </motion.div>
+
+              {/* INTERACTIVE SPLIT ANCHOR VIEWPORT */}
+              <motion.div 
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className="grid grid-cols-1 mt-10 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full"
+              >
+                
+                {/* LEFT INNER PANEL: Dynamic Typography Content (Spans 5 Columns) */}
+                <div className="lg:col-span-5 flex flex-col space-y-6 text-left w-full order-2 lg:order-1">
+                  
+                  <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div
+                      key={currentIndex}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      className="space-y-6"
+                    >
+                      {/* Domain & Sub-Industry */}
+                      <div>
+                        <h3 className="mt-5 text-3xl md:text-3xl font-bold text-[#1a2e5e] leading-tight">{active.domain}</h3>
+                        <p className="text-xs text-[#2b4c9a] font-mono tracking-wider mt-1 uppercase font-semibold">{active.industry}</p>
+                      </div>
+
+                      {/* Tech Stack Button Badges */}
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        {active.techStack.map((tech, idx) => (
+                          <span key={idx} className="text-[11px] font-semibold text-[#1a2e5e] bg-[#EEF2FF] border border-[#2b4c9a]/10 px-3 py-1 rounded-lg shadow-sm">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Main Muted Paragraph Description */}
+                      <p className="text-gray-500 leading-relaxed">
+                        {active.desc}
+                      </p>
+
+                      {/* Dynamic Outcome Checklist items */}
+                      <div className="space-y-2.5 border-t border-gray-200/60">
+                        <h4 className="mt-5 text-xl md:text-xl font-bold text-[#1a2e5e] leading-tight">SEO Results:</h4>
+                        {active.outcomes.map((outcome, idx) => (
+                          <motion.div 
+                            key={idx}
+                            variants={itemVariants}
+                            className="flex items-center gap-3"
+                          >
+                            <CheckCircle2 size={16} className="text-[#2b4c9a] shrink-0" />
+                            <p className="text-gray-500 leading-relaxed">{outcome}</p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* LOWER CONTAINER CONTROLLERS: Navigation Buttons & Indicators */}
+                  <div className="flex items-center justify-between pt-6 border-t border-gray-200/60">
+                    <div className="flex items-center gap-2">
+                      <button 
+                        onClick={handlePrev}
+                        className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#1a2e5e] hover:bg-[#2b4c9a] hover:text-white transition-all shadow-sm flex items-center justify-center active:scale-95"
+                      >
+                        <ChevronLeft size={18} strokeWidth={2.5} />
+                      </button>
+                      <button 
+                        onClick={handleNext}
+                        className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#1a2e5e] hover:bg-[#2b4c9a] hover:text-white transition-all shadow-sm flex items-center justify-center active:scale-95"
+                      >
+                        <ChevronRight size={18} strokeWidth={2.5} />
+                      </button>
+                    </div>
+
+                    {/* Progress Bullet Indicators */}
+                    <div className="flex gap-1.5">
+                      {caseStudies.map((_, idx) => (
+                        <div 
+                          key={idx} 
+                          className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-[#2b4c9a]' : 'w-2 bg-gray-300'}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* RIGHT INNER PANEL: Layered Desktop Viewport Device Asset Mockup (Spans 7 Columns) */}
+                <div className="lg:col-span-7 relative w-full flex items-center justify-center min-h-[350px] sm:min-h-[440px] md:min-h-[480px] order-1 lg:order-2">
+                  
+                  <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div 
+                      key={currentIndex}
+                      custom={direction}
+                      variants={slideVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      className="w-full max-w-[580px] bg-white rounded-2xl border border-gray-200 p-2.5 shadow-[0_30px_70px_rgba(26,46,94,0.08)] relative z-10 group"
+                    >
+                      {/* Browser Top Window Tool Bar Bar details */}
+                      <div className="flex items-center gap-1.5 pb-2.5 px-1.5 border-b border-gray-100">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                        <div className="w-48 h-3.5 bg-gray-50 rounded-md ml-4 border border-gray-200/60 flex items-center px-2 text-[8px] text-gray-400 font-mono">
+                          https://{active.domain}
+                        </div>
+                      </div>
+
+                      {/* Core Live Image Snapshot Display Box */}
+                      <div className="w-full h-[240px] sm:h-[320px] md:h-[350px] rounded-xl overflow-hidden mt-2.5 bg-gray-50 relative border border-gray-100">
+                        <img 
+                          src={active.image} 
+                          alt={`${active.domain} SEO Performance Preview`} 
+                          className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
+                        />
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* Floating Contextual Secondary Widget */}
+                  <motion.div 
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-[-15px] right-[2%] w-[160px] bg-white border border-gray-200/80 rounded-xl p-4 shadow-[0_20px_40px_rgba(26,46,94,0.06)] z-20 hidden sm:block text-left"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-[#F0F4FF] border border-blue-100 text-[#2b4c9a] flex items-center justify-center mb-2.5 shadow-sm">
+                      <TrendingUp size={14} strokeWidth={2.5} />
+                    </div>
+                    <div className="text-[9px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">SEO Growth</div>
+                    <h4 className="text-xs font-black text-[#1a2e5e] flex items-center gap-1.5">
+                      Higher Rankings
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                    </h4>
+                  </motion.div>
+
+                </div>
+
+              </motion.div>
+          </div>
+      </section>
+
+       <GoogleReviews />
+
       {/* CTA */}
       <section className="py-16 px-6 lg:px-16">
 
@@ -1071,7 +1354,6 @@ export default function SEOServicePage() {
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#1a2e5e] font-semibold hover:bg-[#dbe7ff] transition-all duration-300 whitespace-nowrap"
             >
               Start SEO Project
-              <ArrowRight size={18} />
             </Link>
 
           </div>
