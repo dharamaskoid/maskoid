@@ -201,161 +201,17 @@ export default function LicenseKeyManagementPage() {
       </section>      
       
 
-    {/* PROCESS / TIMELINE SECTION */}
-    <section className="relative py-24 bg-white overflow-hidden">
-
-    {/* BG EFFECTS */}
-    <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
-
-    <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-    <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
-
-    <div className="container px-6 mx-auto max-w-[1240px] relative z-10">
-
-        {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto">
-
-        <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
-            How It Works
-        </p>
-
-        <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
-            Powerful Features.
-            <span className="text-[#2b4c9a]"> Simple Process.</span>
-        </h2>
-
-        <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-            Everything needed to manage software licenses efficiently from creation to validation.
-        </p>
-
-        </div>
-
-        {/* TIMELINE */}
-        <div className="relative mt-24">
-
-        {/* CENTER LINE */}
-        <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-[#2b4c9a] via-[#7c4dff] to-[#2b4c9a]"></div>
-
-        {/* ITEMS */}
-        <div className="space-y-16">
-
-            {steps.map((item, index) => {
-
-            const isLeft = index % 2 === 0;
-
-            return (
-
-                <motion.div
-                key={index}
-                initial={{
-                    opacity: 0,
-                    y: 60,
-                }}
-                whileInView={{
-                    opacity: 1,
-                    y: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                    duration: 0.7,
-                    delay: index * 0.08,
-                }}
-                className={`relative flex flex-col lg:flex-row items-center ${
-                    isLeft ? "lg:justify-start" : "lg:justify-end"
-                }`}
-                >
-
-                {/* CENTER DOT */}
-                <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-
-                    <div className="relative flex items-center justify-center">
-
-                    {/* PULSE */}
-                    <div className="absolute w-14 h-14 rounded-full bg-[#2b4c9a]/10 animate-ping"></div>
-
-                    {/* MAIN */}
-                    <div className="w-14 h-14 rounded-full bg-[#2b4c9a] border-[6px] border-white shadow-[0_20px_40px_rgba(43,76,154,0.25)] flex items-center justify-center text-white font-bold text-sm">
-                        {item.number}
-                    </div>
-
-                    </div>
-
-                </div>
-
-                {/* CARD */}
-                <motion.div
-                    whileHover={{
-                    y: -8,
-                    }}
-                    className={`
-                    relative
-                    w-full
-                    lg:w-[46%]
-                    rounded-3xl
-                    border border-[#EEF2FF]
-                    bg-white/90
-                    backdrop-blur-xl
-                    p-8
-                    shadow-[0_20px_60px_rgba(43,76,154,0.06)]
-                    hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)]
-                    transition-all duration-500
-                    `}
-                >
-
-                    {/* MOBILE NUMBER */}
-                    <div className="lg:hidden mb-6 w-12 h-12 rounded-full bg-[#2b4c9a] text-white flex items-center justify-center text-sm font-bold shadow-lg">
-                    {item.number}
-                    </div>
-
-                    {/* CONNECTOR */}
-                    <div
-                    className={`hidden lg:block absolute top-1/2 -translate-y-1/2 w-16 h-[2px] bg-[#c7d2fe] ${
-                        isLeft ? "-right-16" : "-left-16"
-                    }`}
-                    ></div>
-
-                    {/* ICON */}
-                    <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl shadow-sm">
-                    {item.icon}
-                    </div>
-
-                    {/* CONTENT */}
-                    <h3 className="mt-6 text-2xl font-bold text-[#1a2e5e]">
-                    {item.title}
-                    </h3>
-
-                    <p className="mt-4 text-gray-500 leading-relaxed">
-                    {item.desc}
-                    </p>
-
-                </motion.div>
-
-                </motion.div>
-
-            );
-
-            })}
-
-        </div>
-
-        </div>
-
-    </div>
-
-    </section>
-
-{/* SNAKE PROCESS SECTION */}
+{/* PREMIUM SNAKE PROCESS SECTION */}
 <section className="relative py-24 bg-white overflow-hidden">
 
   {/* BG EFFECTS */}
-  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]" />
 
-  <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+  <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full" />
 
-  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+  <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#7c4dff]/10 blur-[140px] rounded-full" />
 
-  <div className="container px-6 mx-auto max-w-[1300px] relative z-10">
+  <div className="container mx-auto px-6 max-w-[1350px] relative z-10">
 
     {/* HEADER */}
     <div className="text-center max-w-3xl mx-auto">
@@ -365,59 +221,53 @@ export default function LicenseKeyManagementPage() {
       </p>
 
       <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
-        Smart Workflow.
-        <span className="text-[#2b4c9a]"> Modern Execution.</span>
+        Powerful Workflow.
+        <span className="text-[#2b4c9a]"> Built To Scale.</span>
       </h2>
 
       <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-        A premium workflow process designed for speed, automation,
-        scalability, and modern SaaS experiences.
+        Modern snake-style workflow experience designed for premium SaaS products and enterprise systems.
       </p>
 
     </div>
 
-    {/* PROCESS WRAPPER */}
-    <div className="relative mt-24">
+    {/* PROCESS AREA */}
+    <div className="relative mt-28">
 
-      {/* DESKTOP SNAKE CONNECTOR */}
+      {/* SVG CONNECTOR */}
       <svg
-        className="hidden lg:block absolute top-0 left-0 w-full h-full pointer-events-none z-0"
-        viewBox="0 0 1200 500"
+        className="hidden xl:block absolute inset-0 w-full h-full pointer-events-none z-0"
+        viewBox="0 0 1400 650"
         fill="none"
         preserveAspectRatio="none"
       >
+
         <path
           d="
-            M100 90
-            C250 90 250 90 400 90
-            C550 90 550 220 700 220
-            C850 220 850 220 1000 220
-            C850 220 850 360 700 360
-            C550 360 550 360 400 360
+            M120 120
+            C300 120 300 120 480 120
+            C650 120 650 280 820 280
+            C980 280 980 280 1160 280
+            C980 280 980 470 820 470
+            C650 470 650 470 480 470
           "
-          stroke="url(#paint0_linear)"
-          strokeWidth="3"
-          strokeDasharray="8 10"
-          opacity="0.25"
+          stroke="url(#snakeGradient)"
+          strokeWidth="4"
+          strokeDasharray="10 12"
+          opacity="0.22"
         />
 
         <defs>
-          <linearGradient
-            id="paint0_linear"
-            x1="0"
-            y1="0"
-            x2="1200"
-            y2="0"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#2b4c9a" />
-            <stop offset="1" stopColor="#7c4dff" />
+          <linearGradient id="snakeGradient">
+            <stop offset="0%" stopColor="#2b4c9a" />
+            <stop offset="100%" stopColor="#7c4dff" />
           </linearGradient>
         </defs>
+
       </svg>
 
-      {/* PROCESS GRID */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10">
+      {/* GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-16 relative z-10">
 
         {steps.map((item, index) => (
 
@@ -437,27 +287,27 @@ export default function LicenseKeyManagementPage() {
               delay: index * 0.08,
             }}
             whileHover={{
-              y: -10,
+              y: -12,
             }}
             className={`
               relative
               group
-              ${index === 1 || index === 4 ? "lg:mt-24" : ""}
+              ${index === 1 || index === 4 ? "xl:translate-y-24" : ""}
             `}
           >
 
             {/* STEP BADGE */}
-            <div className="absolute -top-5 left-8 z-20">
+            <div className="absolute -top-6 left-10 z-20">
 
               <div className="relative">
 
                 {/* GLOW */}
-                <div className="absolute inset-0 bg-[#2b4c9a]/20 blur-xl rounded-full scale-150"></div>
+                <div className="absolute inset-0 bg-[#2b4c9a]/30 blur-2xl rounded-full scale-150" />
 
                 {/* BADGE */}
-                <div className="relative w-12 h-12 rounded-full bg-[#2b4c9a] border-[5px] border-white flex items-center justify-center shadow-[0_15px_35px_rgba(43,76,154,0.25)]">
+                <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[#2b4c9a] to-[#4f7cff] border-[6px] border-white shadow-[0_20px_40px_rgba(43,76,154,0.25)] flex items-center justify-center">
 
-                  <span className="text-white text-sm font-bold">
+                  <span className="text-white text-sm font-black tracking-wide">
                     {item.number}
                   </span>
 
@@ -472,48 +322,75 @@ export default function LicenseKeyManagementPage() {
               className="
                 relative
                 overflow-hidden
-                rounded-[30px]
+                rounded-[32px]
                 border border-[#EEF2FF]
                 bg-white/80
-                backdrop-blur-xl
+                backdrop-blur-2xl
                 p-8
-                pt-12
+                pt-14
                 shadow-[0_25px_80px_rgba(43,76,154,0.05)]
-                hover:shadow-[0_35px_100px_rgba(43,76,154,0.12)]
+                hover:shadow-[0_35px_120px_rgba(43,76,154,0.12)]
                 transition-all duration-500
+                h-full
               "
             >
 
               {/* HOVER GLOW */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
-                <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
+                <div className="absolute -top-24 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full" />
 
               </div>
 
               {/* ICON */}
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl shadow-sm">
+              <motion.div
+                whileHover={{
+                  rotate: 6,
+                  scale: 1.08,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 220,
+                }}
+                className="
+                  relative z-10
+                  w-18 h-18
+                  rounded-3xl
+                  bg-[#EEF4FF]
+                  text-[#2b4c9a]
+                  flex items-center justify-center
+                  shadow-sm
+                "
+              >
 
                 {item.icon}
 
-              </div>
+              </motion.div>
 
               {/* TITLE */}
-              <h3 className="relative z-10 mt-6 text-2xl font-bold text-[#1a2e5e] tracking-tight leading-snug">
+              <h3 className="relative z-10 mt-7 text-2xl font-black text-[#10204b] leading-snug">
 
                 {item.title}
 
               </h3>
 
-              {/* DESCRIPTION */}
-              <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm md:text-base">
+              {/* DESC */}
+              <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-[15px]">
 
                 {item.desc}
 
               </p>
 
-              {/* BOTTOM LINE */}
-              <div className="relative z-10 mt-6 w-16 h-[3px] rounded-full bg-gradient-to-r from-[#2b4c9a] to-[#7c4dff]"></div>
+              {/* BOTTOM INFO */}
+              <div className="relative z-10 mt-8 flex items-center justify-between">
+
+                <div className="w-20 h-[4px] rounded-full bg-gradient-to-r from-[#2b4c9a] to-[#7c4dff]" />
+
+                <div className="text-[#2b4c9a] text-sm font-bold">
+                  Step {item.number}
+                </div>
+
+              </div>
 
             </div>
 
@@ -528,6 +405,7 @@ export default function LicenseKeyManagementPage() {
   </div>
 
 </section>
+
 
       {/* DASHBOARD SECTION */}
       <section
