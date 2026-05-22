@@ -345,7 +345,7 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
-   {/* PROCESS / TIMELINE SECTION */}
+   {/* PREMIUM SNAKE PROCESS SECTION */}
 <section className="relative py-24 bg-white overflow-hidden">
 
   {/* BG EFFECTS */}
@@ -355,32 +355,71 @@ export default function LicenseKeyManagementPage() {
 
   <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-  <div className="container px-6 mx-auto max-w-[1440px] relative z-10">
+  <div className="container px-6 mx-auto max-w-[1320px] relative z-10">
 
     {/* HEADER */}
     <div className="text-center max-w-3xl mx-auto">
+
       <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
         How It Works
       </p>
 
       <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
         Powerful Features.
-        <span className="text-[#2b4c9a]"> Simple Process.</span>
+        <span className="text-[#2b4c9a]"> Smart Workflow.</span>
       </h2>
 
       <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-        Everything needed to manage software licenses efficiently from creation to validation.
+        Streamlined software license management process built for modern SaaS platforms.
       </p>
+
     </div>
 
-    {/* HORIZONTAL PROCESS FLOW */}
+    {/* SNAKE FLOW */}
     <div className="relative mt-24">
 
       {/* CONNECTOR LINE */}
-      <div className="hidden lg:block absolute top-14 left-0 w-full h-[2px] bg-gradient-to-r from-[#2b4c9a] via-[#7c4dff] to-[#2b4c9a]"></div>
+      <div className="hidden xl:block absolute top-1/2 left-0 w-full h-[2px] -translate-y-1/2 z-0">
 
-      {/* SCROLL CONTAINER */}
-      <div className="flex gap-7 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+        <svg
+          className="w-full h-[500px]"
+          viewBox="0 0 1200 500"
+          fill="none"
+          preserveAspectRatio="none"
+        >
+
+          <path
+            d="
+              M 50 120
+              C 250 120, 250 120, 450 120
+              S 650 120, 850 120
+              S 1050 120, 1150 120
+
+              L 1150 260
+
+              C 950 260, 950 260, 750 260
+              S 550 260, 350 260
+              S 150 260, 50 260
+            "
+            stroke="url(#gradient)"
+            strokeWidth="2"
+            strokeDasharray="7 7"
+          />
+
+          <defs>
+            <linearGradient id="gradient">
+              <stop offset="0%" stopColor="#2b4c9a" />
+              <stop offset="50%" stopColor="#7c4dff" />
+              <stop offset="100%" stopColor="#2b4c9a" />
+            </linearGradient>
+          </defs>
+
+        </svg>
+
+      </div>
+
+      {/* GRID */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8">
 
         {steps.map((item, index) => (
 
@@ -399,72 +438,69 @@ export default function LicenseKeyManagementPage() {
               duration: 0.6,
               delay: index * 0.08,
             }}
-            className="
+            whileHover={{
+              y: -10,
+            }}
+            className={`
               relative
-              min-w-[280px]
-              sm:min-w-[320px]
-              lg:min-w-[260px]
-              xl:min-w-[280px]
-              snap-start
-              flex-shrink-0
-            "
+              group
+              rounded-[28px]
+              border border-[#EEF2FF]
+              bg-white/80
+              backdrop-blur-xl
+              p-7
+              shadow-[0_20px_60px_rgba(43,76,154,0.06)]
+              hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+              transition-all duration-500
+              overflow-hidden
+
+              ${index === 1 || index === 3 ? "xl:mt-28" : ""}
+            `}
           >
 
-            {/* NUMBER */}
-            <div className="relative z-10 flex justify-center mb-8">
+            {/* GLOW */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
-              {/* GLOW */}
-              <div className="absolute w-14 h-14 rounded-full bg-[#2b4c9a]/15 blur-xl"></div>
+              <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
 
-              {/* BADGE */}
-              <div className="w-14 h-14 rounded-full bg-[#2b4c9a] border-[6px] border-white shadow-[0_10px_30px_rgba(43,76,154,0.25)] flex items-center justify-center text-white font-bold text-sm">
+            </div>
+
+            {/* TOP */}
+            <div className="relative z-10 flex items-center justify-between">
+
+              {/* ICON */}
+              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl border border-[#dbe7ff] shadow-inner">
+                {item.icon}
+              </div>
+
+              {/* NUMBER */}
+              <div className="w-11 h-11 rounded-full bg-[#2b4c9a] text-white text-sm font-black flex items-center justify-center shadow-[0_10px_25px_rgba(43,76,154,0.2)]">
                 {item.number}
               </div>
 
             </div>
 
-            {/* CARD */}
-            <motion.div
-              whileHover={{
-                y: -8,
-              }}
-              className="
-                relative
-                rounded-3xl
-                border border-[#EEF2FF]
-                bg-white/90
-                backdrop-blur-xl
-                p-8
-                shadow-[0_20px_60px_rgba(43,76,154,0.05)]
-                hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)]
-                transition-all duration-500
-                h-full
-              "
-            >
+            {/* CONTENT */}
+            <div className="relative z-10 mt-7">
 
-              {/* HOVER GLOW */}
-              <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
-
-                <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-              </div>
-
-              {/* ICON */}
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl shadow-sm">
-                {item.icon}
-              </div>
-
-              {/* TITLE */}
-              <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] tracking-tight">
+              <h3 className="text-xl font-black text-[#10204b] leading-snug">
                 {item.title}
               </h3>
 
-              {/* DESC */}
-              <p className="relative z-10 mt-3 text-sm text-gray-500 leading-relaxed">
+              <p className="mt-4 text-sm text-gray-500 leading-relaxed">
                 {item.desc}
               </p>
 
-            </motion.div>
+            </div>
+
+            {/* BOTTOM INDICATOR */}
+            <div className="relative z-10 mt-7 flex items-center gap-2">
+
+              <div className="w-2 h-2 rounded-full bg-[#2b4c9a] animate-pulse"></div>
+
+              <div className="h-[2px] flex-1 bg-gradient-to-r from-[#2b4c9a]/40 to-transparent"></div>
+
+            </div>
 
           </motion.div>
 
@@ -475,6 +511,7 @@ export default function LicenseKeyManagementPage() {
     </div>
 
   </div>
+
 </section>
 
      {/* PROCESS SECTION */}
