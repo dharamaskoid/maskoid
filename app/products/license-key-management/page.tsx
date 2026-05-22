@@ -17,6 +17,20 @@ import {
   Mail,
 } from "lucide-react";
 
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
 const steps = [
   {
     number: "01",
@@ -85,121 +99,86 @@ export default function LicenseKeyManagementPage() {
     <main className="bg-white overflow-hidden">
 
       {/* HERO SECTION */}
-      <section className="relative pt-36 pb-24 bg-[#F8FAFF] overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full"></div>
+        {/* BACKGROUND */}
+        <div className="absolute inset-0 pointer-events-none">
 
-        <div className="container px-6 mx-auto relative z-10">
+          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+
+
+        </div>
+
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT */}
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
+              <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
                 Secure • Reliable • Scalable
               </p>
 
-              <h1 className="mt-7 text-5xl md:text-6xl font-black leading-tight text-[#10204b]">
+              <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
                 License Key
-                <span className="text-[#2b4c9a]"> Management</span>
+                <span className="block text-[#6EA8FF]">
+                  Management
+                </span>
               </h1>
 
-              <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-xl">
+              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
                 Powerful software license management system to generate,
                 validate, track, and manage software licenses securely.
               </p>
 
-              <div className="flex flex-wrap gap-4 mt-10">
 
-                <Link
-                  href="/contact-us"
-                  className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-[#2b4c9a] text-white font-semibold shadow-lg hover:scale-[1.03] transition"
-                >
-                  Request Demo
-                  <ChevronRight size={18} />
-                </Link>
-
-                <Link
-                  href="#features"
-                  className="inline-flex items-center gap-3 px-7 py-4 rounded-xl border border-[#dce7ff] text-[#2b4c9a] font-semibold hover:bg-[#EEF4FF] transition"
-                >
-                  Explore Features
-                </Link>
-
-              </div>
-
-              {/* FEATURES */}
-              <div className="grid grid-cols-3 gap-6 mt-14">
-
-                {[
-                  {
-                    title: "Secure",
-                    desc: "Encrypted validation",
-                    icon: <ShieldCheck size={26} />,
-                  },
-                  {
-                    title: "Easy",
-                    desc: "Simple management",
-                    icon: <LayoutDashboard size={26} />,
-                  },
-                  {
-                    title: "Analytics",
-                    desc: "Realtime tracking",
-                    icon: <BarChart3 size={26} />,
-                  },
-                ].map((item, index) => (
-                  <div key={index}>
-
-                    <div className="w-14 h-14 rounded-2xl bg-white shadow-md border border-[#EEF2FF] text-[#2b4c9a] flex items-center justify-center">
-                      {item.icon}
-                    </div>
-
-                    <h3 className="mt-4 text-lg font-bold text-[#1a2e5e]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-1 text-sm text-gray-500">
-                      {item.desc}
-                    </p>
-
-                  </div>
-                ))}
-
-              </div>
 
             </motion.div>
 
-            {/* RIGHT IMAGE */}
+            {/* RIGHT */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
               className="relative"
             >
 
-              <div className="absolute inset-0 bg-blue-500/10 blur-[120px] rounded-full"></div>
+              {/* GLOW */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
 
-              <Image
-                src="/images/license-hero.png"
-                alt="License Key"
-                width={900}
-                height={900}
-                className="relative z-10"
-              />
+              {/* IMAGE */}
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative overflow-hidden rounded-[32px]"
+              >
+
+                <img
+                src="/images/webdev.png"
+                alt="Contact"
+                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
+                />
+
+              </motion.div>
 
             </motion.div>
 
           </div>
-
         </div>
-
-      </section>
+      </section>      
+      
 
       {/* PROCESS SECTION */}
       <section className="relative py-24 bg-white">
