@@ -1,125 +1,91 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const steps = [
   {
     id: "01",
-    title: "Discovery Call",
-    subtitle: "Understanding Your Vision",
+    title: "Secure Login",
+    subtitle: "Protected Authentication",
     description:
-      "We start with a deep-dive strategy session to understand your business goals, target audience, and growth challenges.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      </svg>
-    ),
-    color: "#FF6B35",
-    bg: "#FF6B3515",
+      "Users securely log in using email or username with advanced password protection and Google reCAPTCHA verification.",
   },
 
   {
     id: "02",
-    title: "Strategy & Planning",
-    subtitle: "Roadmap to Growth",
+    title: "Dashboard Overview",
+    subtitle: "Analytics & Insights",
     description:
-      "Our team crafts a custom digital growth blueprint aligned with your ROI targets.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-      </svg>
-    ),
-    color: "#3B82F6",
-    bg: "#3B82F615",
+      "Monitor active licenses, expired keys, pending activations, and overall system performance in real-time.",
   },
 
   {
     id: "03",
-    title: "Design & Build",
-    subtitle: "Crafting the Experience",
+    title: "Create Software",
+    subtitle: "Add Applications",
     description:
-      "We design high-performance conversion-focused websites and digital assets.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-      </svg>
-    ),
-    color: "#8B5CF6",
-    bg: "#8B5CF615",
+      "Register software products by entering software names, application IDs, and license configurations.",
   },
 
   {
     id: "04",
-    title: "Launch & Optimize",
-    subtitle: "Go Live, Grow Faster",
+    title: "Software Listing",
+    subtitle: "Manage Applications",
     description:
-      "We deploy your digital system and continuously optimize campaigns.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M2 20l4-4" />
-        <path d="M6 22l4-4" />
-      </svg>
-    ),
-    color: "#10B981",
-    bg: "#10B98115",
+      "View all registered software products along with issued keys, pending licenses, and usage statistics.",
   },
 
   {
     id: "05",
-    title: "Report & Scale",
-    subtitle: "Data-Driven Scaling",
+    title: "Generate License Keys",
+    subtitle: "Secure Key Generation",
     description:
-      "Monthly reporting with measurable KPIs and growth-focused scaling.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    color: "#F59E0B",
-    bg: "#F59E0B15",
+      "Generate highly secure 24-character software license keys with user assignment and activation management.",
+  },
+
+  {
+    id: "06",
+    title: "License Key List",
+    subtitle: "Track All Keys",
+    description:
+      "Manage active, inactive, expired, and suspended software licenses from one centralized dashboard.",
+  },
+
+  {
+    id: "07",
+    title: "Verification Logs",
+    subtitle: "Activation Tracking",
+    description:
+      "Track software activations, API verification requests, device details, and activation timestamps.",
+  },
+
+  {
+    id: "08",
+    title: "Re-Verification Logs",
+    subtitle: "Usage Monitoring",
+    description:
+      "Monitor every software login attempt, re-verification process, and user activity in real-time.",
+  },
+
+  {
+    id: "09",
+    title: "Create Users",
+    subtitle: "User Management",
+    description:
+      "Create and assign software users with usernames, application access, and license permissions.",
+  },
+
+  {
+    id: "10",
+    title: "All Users",
+    subtitle: "Complete User Database",
+    description:
+      "View all registered users, active license holders, customer history, and software account details.",
   },
 ];
 
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement | null>(null);
+function useInView(threshold = 0.2) {
+  const ref = useRef(null);
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
@@ -137,153 +103,82 @@ function useInView(threshold = 0.15) {
     return () => observer.disconnect();
   }, [threshold]);
 
-  return [ref, inView] as const;
+  return [ref, inView];
 }
 
-function StepCard({
-  step,
-  index,
-  active,
-  onClick,
-}: {
-  step: (typeof steps)[0];
-  index: number;
-  active: boolean;
-  onClick: (index: number) => void;
-}) {
+function StepCard({ step, index, active, onClick }) {
   const [ref, inView] = useInView();
 
   return (
     <div
       ref={ref}
       onClick={() => onClick(index)}
+      className={`
+        relative transition-all duration-700 cursor-pointer
+        ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        ${index % 2 === 0 ? "lg:mt-0" : "lg:mt-20"}
+      `}
       style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(40px)",
-        transition: `all 0.6s ease ${index * 0.12}s`,
-        cursor: "pointer",
-        position: "relative",
+        transitionDelay: `${index * 120}ms`,
       }}
     >
+      {/* CONNECTOR */}
+      {index !== steps.length - 1 && (
+        <div className="hidden lg:block absolute top-14 -right-10 w-20 h-[2px] bg-gradient-to-r from-[#2b4c9a] to-[#6EA8FF]"></div>
+      )}
+
+      {/* CARD */}
       <div
-        style={{
-          background: active
-            ? `linear-gradient(135deg, ${step.color}18, ${step.color}08)`
-            : "rgba(255,255,255,0.03)",
-          border: `1px solid ${
-            active ? step.color + "60" : "rgba(255,255,255,0.08)"
-          }`,
-          borderRadius: "20px",
-          padding: "28px 24px",
-          position: "relative",
-          overflow: "hidden",
-          transition: "all 0.35s ease",
-          boxShadow: active
-            ? `0 8px 40px ${step.color}20`
-            : "0 2px 12px rgba(0,0,0,0.2)",
-        }}
+        className={`
+          relative rounded-[30px] p-8 overflow-hidden border transition-all duration-500
+          ${
+            active
+              ? "bg-white border-[#2b4c9a]/20 shadow-[0_25px_80px_rgba(43,76,154,0.15)]"
+              : "bg-white/70 border-white hover:bg-white hover:shadow-[0_20px_60px_rgba(43,76,154,0.08)]"
+          }
+        `}
       >
         {/* WATERMARK */}
-        <div
-          style={{
-            position: "absolute",
-            right: "12px",
-            bottom: "-8px",
-            fontSize: "80px",
-            fontWeight: 900,
-            color: active
-              ? `${step.color}12`
-              : "rgba(255,255,255,0.04)",
-            pointerEvents: "none",
-            userSelect: "none",
-          }}
-        >
+        <div className="absolute -bottom-6 right-3 text-[90px] font-black text-[#2b4c9a]/[0.04] leading-none">
           {step.id}
-        </div>
-
-        {/* ICON */}
-        <div
-          style={{
-            width: "48px",
-            height: "48px",
-            borderRadius: "12px",
-            background: active ? step.bg : "rgba(255,255,255,0.06)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "16px",
-            color: active ? step.color : "rgba(255,255,255,0.5)",
-          }}
-        >
-          <div style={{ width: "22px", height: "22px" }}>
-            {step.icon}
-          </div>
         </div>
 
         {/* STEP BADGE */}
         <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px",
-            background: active
-              ? `${step.color}22`
-              : "rgba(255,255,255,0.06)",
-            border: `1px solid ${
-              active ? step.color + "40" : "rgba(255,255,255,0.1)"
-            }`,
-            borderRadius: "100px",
-            padding: "3px 10px",
-            marginBottom: "10px",
-          }}
+          className={`
+            inline-flex items-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.15em]
+            ${
+              active
+                ? "bg-[#2b4c9a] text-white"
+                : "bg-[#EEF2FF] text-[#2b4c9a]"
+            }
+          `}
         >
-          <span
-            style={{
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.06em",
-              color: active ? step.color : "rgba(255,255,255,0.4)",
-              textTransform: "uppercase",
-            }}
-          >
-            Step {step.id}
-          </span>
+          Step {step.id}
         </div>
 
         {/* TITLE */}
-        <h3
-          style={{
-            fontSize: "17px",
-            fontWeight: 700,
-            color: active ? "#ffffff" : "rgba(255,255,255,0.75)",
-            marginBottom: "4px",
-          }}
-        >
+        <h3 className="mt-6 text-[24px] font-black text-[#1a2e5e] leading-snug">
           {step.title}
         </h3>
 
         {/* SUBTITLE */}
-        <p
-          style={{
-            fontSize: "12px",
-            color: active ? step.color : "rgba(255,255,255,0.35)",
-            marginBottom: "12px",
-          }}
-        >
+        <p className="mt-2 text-sm font-semibold text-[#2b4c9a]">
           {step.subtitle}
         </p>
 
         {/* DESCRIPTION */}
-        <p
-          style={{
-            fontSize: "13.5px",
-            color: "rgba(255,255,255,0.55)",
-            lineHeight: 1.65,
-            margin: 0,
-          }}
-        >
+        <p className="mt-5 text-[15px] leading-[1.9] text-gray-500">
           {step.description}
         </p>
+
+        {/* ACTIVE BAR */}
+        <div
+          className={`
+            absolute left-0 top-0 w-[5px] h-full bg-[#2b4c9a] transition-all duration-500
+            ${active ? "opacity-100" : "opacity-0"}
+          `}
+        ></div>
       </div>
     </div>
   );
@@ -295,55 +190,54 @@ export default function ProcessChart() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 3200);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
-  
-  {/* BLUR EFFECTS */}
-  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-300/20 blur-[120px] rounded-full"></div>
-  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-300/20 blur-[120px] rounded-full"></div>
+    <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
+      {/* BACKGROUND GLOW */}
+      <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-blue-300/20 blur-[120px] rounded-full"></div>
 
-  <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-indigo-300/20 blur-[120px] rounded-full"></div>
 
-    {/* HEADER */}
-    <div className="text-center mb-16">
-      
-      <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.18em]">
-        Our Process
-      </span>
+      {/* GRID PATTERN */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#1a2e5e] leading-tight">
-        Modern Process
-        <span className="text-[#2b4c9a]"> Flow</span>
-      </h2>
+      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.18em]">
+            Software License Workflow
+          </span>
 
-      <p className="mt-5 max-w-2xl mx-auto leading-relaxed">
-        A premium modern process section with interactive active states,
-        smooth animations, and a clean enterprise UI.
-      </p>
+          <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-black text-[#1a2e5e] leading-tight">
+            Complete License Key
+            <span className="block text-[#2b4c9a]">
+              Management Process
+            </span>
+          </h2>
 
-    </div>
+          <p className="mt-6 text-lg leading-[1.9] text-gray-500">
+            Manage software licenses, activations, users, and verification
+            systems with a modern enterprise-grade workflow.
+          </p>
+        </div>
 
-    {/* GRID */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-      
-      {steps.map((step, index) => (
-        <StepCard
-          key={step.id}
-          step={step}
-          index={index}
-          active={activeStep === index}
-          onClick={setActiveStep}
-        />
-      ))}
-
-    </div>
-
-  </div>
-</section>
+        {/* PROCESS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-7">
+          {steps.map((step, index) => (
+            <StepCard
+              key={step.id}
+              step={step}
+              index={index}
+              active={activeStep === index}
+              onClick={setActiveStep}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
