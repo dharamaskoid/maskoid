@@ -364,7 +364,7 @@ export default function LicenseKeyManagementPage() {
               <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
 
               <Image
-                src="/images/dashboard-preview.png"
+                src="/images/license-key2.png"
                 alt="Dashboard"
                 width={1000}
                 height={700}
