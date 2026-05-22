@@ -620,7 +620,7 @@ export default function SEOServicePage() {
       </section>
 
       {/* OUR SEO PROCESS */}
-      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
+      <section className="relative w-full bg-[#F8FAFF] py-16 overflow-hidden">
 
         {/* BG GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
@@ -647,7 +647,7 @@ export default function SEOServicePage() {
               SEO Process
             </motion.p>
 
-            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-5 text-4xl sm:text-4xl lg:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Our Proven SEO Strategy
               <span className="text-[#2b4c9a]"> For Sustainable Growth</span>
             </h2>
