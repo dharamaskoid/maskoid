@@ -135,13 +135,14 @@ export default function Header() {
 
                       {[
                         {
+                          name: "Variable Data Printing Software",
+                          link: "/products/variable-data-printing-software",
+                        },
+                        {
                           name: "License Key Management",
                           link: "/products/license-key-management",
                         },
-                        {
-                          name: "CRM Software",
-                          link: "/products/crm-software",
-                        },
+                        
                       ].map((product, i) => (
                         <li key={i}>
                           <Link
@@ -332,13 +333,14 @@ export default function Header() {
                   >
                     {[
                       {
+                        name: "Variable Data Printing Software",
+                        link: "/products/variable-data-printing-software",
+                      },
+                      {
                         name: "License Key Management",
                         link: "/products/license-key-management",
                       },
-                      {
-                        name: "CRM Software",
-                        link: "/products/crm-software",
-                      },
+
                     ].map((product, i) => (
                       <Link
                         key={i}
