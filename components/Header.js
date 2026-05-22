@@ -292,6 +292,66 @@ export default function Header() {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* 🔥 PRODUCTS DROPDOWN */}
+            <div>
+              <div className="flex justify-between items-center">
+
+                <Link
+                  href="/products"
+                  className="text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
+                >
+                  Products
+                </Link>
+
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpenProducts(!openProducts);
+                  }}
+                  className="text-[#1a2e5e] text-xl ml-2"
+                >
+                  <span
+                    className={`ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-gray-400 transition-transform duration-300 ${
+                      openProducts ? "rotate-[225deg]" : "rotate-45"
+                    }`}
+                  ></span>
+                </button>
+
+              </div>
+
+              {/* PRODUCTS SUBMENU */}
+              <AnimatePresence>
+                {openProducts && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="ml-4 mt-3 space-y-3 overflow-hidden"
+                  >
+                    {[
+                      {
+                        name: "License Key Management",
+                        link: "/products/license-key-management",
+                      },
+                      {
+                        name: "CRM Software",
+                        link: "/products/crm-software",
+                      },
+                    ].map((product, i) => (
+                      <Link
+                        key={i}
+                        href={product.link}
+                        className="block text-base text-[#42526b] hover:text-[#2b4c9a] transition"
+                      >
+                        {product.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {/* OTHER LINKS */}
             <Link href="/projects" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Projects
