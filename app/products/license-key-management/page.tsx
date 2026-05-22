@@ -667,52 +667,7 @@ export default function LicenseKeyManagementPage() {
     </section>
 
 
-{/* --- CARD COMPONENT EXTRACTION FOR STRUCTURAL SANITY --- */}
-function ProcessCard({ item, index, isTopTier }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay: index * 0.06 }}
-      whileHover={{ y: -6, scale: 1.01 }}
-      className="group relative bg-white border border-slate-200/70 rounded-2xl p-6 shadow-[0_2px_8px_rgba(15,23,42,0.01),0_16px_48px_-12px_rgba(15,23,42,0.03)] hover:shadow-[0_30px_64px_-12px_rgba(43,76,154,0.1)] hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between min-h-[260px]"
-    >
-      <div>
-        {/* Top utilities row */}
-        <div className="flex items-center justify-between w-full">
-          {/* Trend: Minimal glassmorphic micro icon framing */}
-          <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-xl shadow-sm group-hover:bg-[#EEF4FF] group-hover:border-[#c7d2fe]/40 transition-colors duration-300">
-            {item.icon}
-          </div>
-          
-          {/* Trend: Micro index counter pills */}
-          <div className="text-[10px] tracking-widest font-mono font-bold text-slate-400 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded-md group-hover:text-[#2b4c9a] group-hover:bg-[#EEF4FF] transition-colors duration-300">
-            STEP_/{item.number}
-          </div>
-        </div>
 
-        {/* Structural Copy */}
-        <h3 className="mt-6 text-lg font-bold text-[#10204b] tracking-tight group-hover:text-[#2b4c9a] transition-colors duration-300">
-          {item.title}
-        </h3>
-        
-        <p className="mt-2.5 text-xs text-slate-500 leading-relaxed font-normal">
-          {item.desc}
-        </p>
-      </div>
-
-      {/* Dynamic status highlight pin tucked clean at the bottom */}
-      <div className="mt-6 pt-3 border-t border-slate-50 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#4f7cff]"></span>
-        <span className="text-[9px] font-mono font-medium tracking-wider text-slate-400 uppercase">Initialize entitlement</span>
-      </div>
-
-      {/* Dynamic Background Tracking Pins */}
-      <div className={`hidden lg:block absolute left-12 w-3 h-3 rounded-full bg-white border-2 border-slate-300 group-hover:border-[#2b4c9a] group-hover:scale-110 transition-all duration-300 z-20 ${
-        isTopTier ? "-top-1.5" : "-bottom-1.5"
-      }`} />
-    </motion.div>
 
       {/* PROCESS SECTION */}
       <section className="relative py-24 bg-white">
@@ -918,5 +873,53 @@ function ProcessCard({ item, index, isTopTier }) {
       </section>
 
     </main>
+  );
+}
+
+interface ProcessCardProps {
+  item: { number: string; title: string; desc: string; icon: string };
+  index: number;
+  isTopTier: boolean;
+}
+
+function ProcessCard({ item, index, isTopTier }: ProcessCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, delay: index * 0.06 }}
+      whileHover={{ y: -6, scale: 1.01 }}
+      className="group relative bg-white border border-slate-200/70 rounded-2xl p-6 shadow-[0_2px_8px_rgba(15,23,42,0.01),0_16px_48px_-12px_rgba(15,23,42,0.03)] hover:shadow-[0_30px_64px_-12px_rgba(43,76,154,0.1)] hover:border-slate-300/80 transition-all duration-300 flex flex-col justify-between min-h-[260px]"
+    >
+      <div>
+        <div className="flex items-center justify-between w-full">
+          <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-xl shadow-sm group-hover:bg-[#EEF4FF] group-hover:border-[#c7d2fe]/40 transition-colors duration-300">
+            {item.icon}
+          </div>
+          
+          <div className="text-[10px] tracking-widest font-mono font-bold text-slate-400 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded-md group-hover:text-[#2b4c9a] group-hover:bg-[#EEF4FF] transition-colors duration-300">
+            STEP_/{item.number}
+          </div>
+        </div>
+
+        <h3 className="mt-6 text-lg font-bold text-[#10204b] tracking-tight group-hover:text-[#2b4c9a] transition-colors duration-300">
+          {item.title}
+        </h3>
+        
+        <p className="mt-2.5 text-xs text-slate-500 leading-relaxed font-normal">
+          {item.desc}
+        </p>
+      </div>
+
+      <div className="mt-6 pt-3 border-t border-slate-50 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#4f7cff]"></span>
+        <span className="text-[9px] font-mono font-medium tracking-wider text-slate-400 uppercase">Initialize entitlement</span>
+      </div>
+
+      <div className={`hidden lg:block absolute left-12 w-3 h-3 rounded-full bg-white border-2 border-slate-300 group-hover:border-[#2b4c9a] group-hover:scale-110 transition-all duration-300 z-20 ${
+        isTopTier ? "-top-1.5" : "-bottom-1.5"
+      }`} />
+    </motion.div>
   );
 }
