@@ -345,7 +345,189 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
+{/* SNAKE PROCESS SECTION */}
+<section className="relative py-24 bg-white overflow-hidden">
 
+  {/* BG EFFECTS */}
+  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+  <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+  <div className="container px-6 mx-auto max-w-[1300px] relative z-10">
+
+    {/* HEADER */}
+    <div className="text-center max-w-3xl mx-auto">
+
+      <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
+        Process Flow
+      </p>
+
+      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
+        Smart Workflow.
+        <span className="text-[#2b4c9a]"> Modern Execution.</span>
+      </h2>
+
+      <p className="mt-5 text-lg text-gray-500 leading-relaxed">
+        A premium workflow process designed for speed, automation,
+        scalability, and modern SaaS experiences.
+      </p>
+
+    </div>
+
+    {/* PROCESS WRAPPER */}
+    <div className="relative mt-24">
+
+      {/* DESKTOP SNAKE CONNECTOR */}
+      <svg
+        className="hidden lg:block absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+        viewBox="0 0 1200 500"
+        fill="none"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="
+            M100 90
+            C250 90 250 90 400 90
+            C550 90 550 220 700 220
+            C850 220 850 220 1000 220
+            C850 220 850 360 700 360
+            C550 360 550 360 400 360
+          "
+          stroke="url(#paint0_linear)"
+          strokeWidth="3"
+          strokeDasharray="8 10"
+          opacity="0.25"
+        />
+
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="0"
+            y1="0"
+            x2="1200"
+            y2="0"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#2b4c9a" />
+            <stop offset="1" stopColor="#7c4dff" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* PROCESS GRID */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10">
+
+        {steps.map((item, index) => (
+
+          <motion.div
+            key={index}
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.08,
+            }}
+            whileHover={{
+              y: -10,
+            }}
+            className={`
+              relative
+              group
+              ${index === 1 || index === 4 ? "lg:mt-24" : ""}
+            `}
+          >
+
+            {/* STEP BADGE */}
+            <div className="absolute -top-5 left-8 z-20">
+
+              <div className="relative">
+
+                {/* GLOW */}
+                <div className="absolute inset-0 bg-[#2b4c9a]/20 blur-xl rounded-full scale-150"></div>
+
+                {/* BADGE */}
+                <div className="relative w-12 h-12 rounded-full bg-[#2b4c9a] border-[5px] border-white flex items-center justify-center shadow-[0_15px_35px_rgba(43,76,154,0.25)]">
+
+                  <span className="text-white text-sm font-bold">
+                    {item.number}
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* CARD */}
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[30px]
+                border border-[#EEF2FF]
+                bg-white/80
+                backdrop-blur-xl
+                p-8
+                pt-12
+                shadow-[0_25px_80px_rgba(43,76,154,0.05)]
+                hover:shadow-[0_35px_100px_rgba(43,76,154,0.12)]
+                transition-all duration-500
+              "
+            >
+
+              {/* HOVER GLOW */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+              </div>
+
+              {/* ICON */}
+              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl shadow-sm">
+
+                {item.icon}
+
+              </div>
+
+              {/* TITLE */}
+              <h3 className="relative z-10 mt-6 text-2xl font-bold text-[#1a2e5e] tracking-tight leading-snug">
+
+                {item.title}
+
+              </h3>
+
+              {/* DESCRIPTION */}
+              <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm md:text-base">
+
+                {item.desc}
+
+              </p>
+
+              {/* BOTTOM LINE */}
+              <div className="relative z-10 mt-6 w-16 h-[3px] rounded-full bg-gradient-to-r from-[#2b4c9a] to-[#7c4dff]"></div>
+
+            </div>
+
+          </motion.div>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* DASHBOARD SECTION */}
       <section
