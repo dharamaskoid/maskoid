@@ -14,15 +14,14 @@ const steps = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="w-6 h-6"
       >
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
     ),
-    color: "#FF6B35",
-    bg: "#FF6B3515",
   },
 
   {
@@ -36,15 +35,14 @@ const steps = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="w-6 h-6"
       >
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    color: "#3B82F6",
-    bg: "#3B82F615",
   },
 
   {
@@ -58,16 +56,15 @@ const steps = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="w-6 h-6"
       >
         <path d="M12 20h9" />
         <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
-    color: "#8B5CF6",
-    bg: "#8B5CF615",
   },
 
   {
@@ -81,16 +78,15 @@ const steps = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="w-6 h-6"
       >
         <path d="M2 20l4-4" />
         <path d="M6 22l4-4" />
       </svg>
     ),
-    color: "#10B981",
-    bg: "#10B98115",
   },
 
   {
@@ -104,17 +100,16 @@ const steps = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="w-6 h-6"
       >
         <line x1="18" y1="20" x2="18" y2="10" />
         <line x1="12" y1="20" x2="12" y2="4" />
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
-    color: "#F59E0B",
-    bg: "#F59E0B15",
   },
 ];
 
@@ -157,133 +152,104 @@ function StepCard({
     <div
       ref={ref}
       onClick={() => onClick(index)}
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(40px)",
-        transition: `all 0.6s ease ${index * 0.12}s`,
-        cursor: "pointer",
-        position: "relative",
-      }}
+      className={`
+        relative cursor-pointer transition-all duration-700
+        ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        ${index % 2 === 0 ? "lg:mt-0" : "lg:mt-14"}
+      `}
     >
+      {/* LINE CONNECTOR */}
+      {index !== steps.length - 1 && (
+        <div className="hidden lg:block absolute top-14 -right-10 w-20 h-[2px] bg-gradient-to-r from-[#2b4c9a] to-[#9fb4ef] z-0"></div>
+      )}
+
+      {/* CARD */}
       <div
-        style={{
-          background: active
-            ? `linear-gradient(135deg, ${step.color}18, ${step.color}08)`
-            : "rgba(255,255,255,0.03)",
-          border: `1px solid ${
-            active ? step.color + "60" : "rgba(255,255,255,0.08)"
-          }`,
-          borderRadius: "20px",
-          padding: "28px 24px",
-          position: "relative",
-          overflow: "hidden",
-          transition: "all 0.35s ease",
-          boxShadow: active
-            ? `0 8px 40px ${step.color}20`
-            : "0 2px 12px rgba(0,0,0,0.2)",
-        }}
+        className={`
+          relative z-10 rounded-[28px] border overflow-hidden
+          p-8 transition-all duration-500 group
+          ${
+            active
+              ? "bg-white border-[#2b4c9a]/20 shadow-[0_20px_60px_rgba(43,76,154,0.15)]"
+              : "bg-white/70 border-white hover:bg-white"
+          }
+        `}
       >
         {/* WATERMARK */}
-        <div
-          style={{
-            position: "absolute",
-            right: "12px",
-            bottom: "-8px",
-            fontSize: "80px",
-            fontWeight: 900,
-            color: active
-              ? `${step.color}12`
-              : "rgba(255,255,255,0.04)",
-            pointerEvents: "none",
-            userSelect: "none",
-          }}
-        >
+        <div className="absolute -bottom-5 right-3 text-[90px] font-black text-[#2b4c9a]/[0.05] leading-none select-none">
           {step.id}
         </div>
 
-        {/* ICON */}
-        <div
-          style={{
-            width: "48px",
-            height: "48px",
-            borderRadius: "12px",
-            background: active ? step.bg : "rgba(255,255,255,0.06)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "16px",
-            color: active ? step.color : "rgba(255,255,255,0.5)",
-          }}
-        >
-          <div style={{ width: "22px", height: "22px" }}>
+        {/* TOP */}
+        <div className="flex items-center justify-between relative z-10">
+          {/* ICON */}
+          <div
+            className={`
+              w-14 h-14 rounded-2xl flex items-center justify-center
+              transition-all duration-500
+              ${
+                active
+                  ? "bg-[#2b4c9a] text-white shadow-lg"
+                  : "bg-[#EEF2FF] text-[#2b4c9a]"
+              }
+            `}
+          >
             {step.icon}
+          </div>
+
+          {/* STEP NUMBER */}
+          <div
+            className={`
+              px-4 py-2 rounded-full text-xs font-bold tracking-[0.15em]
+              transition-all duration-500
+              ${
+                active
+                  ? "bg-[#2b4c9a] text-white"
+                  : "bg-[#EEF2FF] text-[#2b4c9a]"
+              }
+            `}
+          >
+            STEP {step.id}
           </div>
         </div>
 
-        {/* STEP BADGE */}
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px",
-            background: active
-              ? `${step.color}22`
-              : "rgba(255,255,255,0.06)",
-            border: `1px solid ${
-              active ? step.color + "40" : "rgba(255,255,255,0.1)"
-            }`,
-            borderRadius: "100px",
-            padding: "3px 10px",
-            marginBottom: "10px",
-          }}
-        >
-          <span
-            style={{
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.06em",
-              color: active ? step.color : "rgba(255,255,255,0.4)",
-              textTransform: "uppercase",
-            }}
+        {/* CONTENT */}
+        <div className="relative z-10 mt-7">
+          <h3
+            className={`
+              text-2xl font-black transition-all duration-500
+              ${
+                active
+                  ? "text-[#1a2e5e]"
+                  : "text-[#1a2e5e]"
+              }
+            `}
           >
-            Step {step.id}
-          </span>
+            {step.title}
+          </h3>
+
+          <p
+            className={`
+              mt-2 text-sm font-semibold transition-all duration-500
+              ${
+                active
+                  ? "text-[#2b4c9a]"
+                  : "text-[#4f6db5]"
+              }
+            `}
+          >
+            {step.subtitle}
+          </p>
+
+          <p className="mt-5 text-[15px] leading-[1.9] text-[#5f6b85]">
+            {step.description}
+          </p>
         </div>
 
-        {/* TITLE */}
-        <h3
-          style={{
-            fontSize: "17px",
-            fontWeight: 700,
-            color: active ? "#ffffff" : "rgba(255,255,255,0.75)",
-            marginBottom: "4px",
-          }}
-        >
-          {step.title}
-        </h3>
-
-        {/* SUBTITLE */}
-        <p
-          style={{
-            fontSize: "12px",
-            color: active ? step.color : "rgba(255,255,255,0.35)",
-            marginBottom: "12px",
-          }}
-        >
-          {step.subtitle}
-        </p>
-
-        {/* DESCRIPTION */}
-        <p
-          style={{
-            fontSize: "13.5px",
-            color: "rgba(255,255,255,0.55)",
-            lineHeight: 1.65,
-            margin: 0,
-          }}
-        >
-          {step.description}
-        </p>
+        {/* ACTIVE GLOW */}
+        {active && (
+          <div className="absolute inset-0 rounded-[28px] border border-[#2b4c9a]/20 pointer-events-none"></div>
+        )}
       </div>
     </div>
   );
@@ -295,55 +261,56 @@ export default function ProcessChart() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 3200);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
-  
-  {/* BLUR EFFECTS */}
-  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-300/20 blur-[120px] rounded-full"></div>
-  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-300/20 blur-[120px] rounded-full"></div>
+    <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
 
-  <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+      {/* BLUR BACKGROUND */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-300/20 blur-[140px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-300/20 blur-[140px] rounded-full"></div>
 
-    {/* HEADER */}
-    <div className="text-center mb-16">
-      
-      <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.18em]">
-        Our Process
-      </span>
+      {/* GRID PATTERN */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#1a2e5e] leading-tight">
-        Modern Process
-        <span className="text-[#2b4c9a]"> Flow</span>
-      </h2>
+      <div className="max-w-[1280px] mx-auto px-6 relative z-10">
 
-      <p className="mt-5 max-w-2xl mx-auto leading-relaxed">
-        A premium modern process section with interactive active states,
-        smooth animations, and a clean enterprise UI.
-      </p>
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
 
-    </div>
+          <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.18em]">
+            Our Process
+          </span>
 
-    {/* GRID */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-      
-      {steps.map((step, index) => (
-        <StepCard
-          key={step.id}
-          step={step}
-          index={index}
-          active={activeStep === index}
-          onClick={setActiveStep}
-        />
-      ))}
+          <h2 className="mt-6 text-4xl md:text-6xl font-black text-[#1a2e5e] leading-tight">
+            Premium Digital
+            <span className="text-[#2b4c9a]"> Growth Process</span>
+          </h2>
 
-    </div>
+          <p className="mt-6 text-lg text-[#5f6b85] leading-relaxed">
+            A modern enterprise workflow designed to transform brands into
+            scalable digital growth machines with strategy, creativity,
+            technology, and performance.
+          </p>
+        </div>
 
-  </div>
-</section>
+        {/* PROCESS GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-7 items-start">
+          {steps.map((step, index) => (
+            <StepCard
+              key={step.id}
+              step={step}
+              index={index}
+              active={activeStep === index}
+              onClick={setActiveStep}
+            />
+          ))}
+        </div>
+
+      </div>
+    </section>
   );
 }
