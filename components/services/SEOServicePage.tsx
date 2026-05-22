@@ -809,103 +809,234 @@ export default function SEOServicePage() {
 
       </section>
 
-      {/* TECHNOLOGIES */}
-      <section className="relative py-20 md:py-24 bg-white overflow-hidden">
+      {/* TECHNOLOGIES WE USE */}
+      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 flex items-center">
 
-        <div className="absolute inset-0 pointer-events-none">
+        {/* BG GRID */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
 
-          <div className="absolute -top-20 -left-20 w-[350px] md:w-[450px] h-[350px] md:h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-          <div className="absolute bottom-0 right-0 w-[300px] md:w-[420px] h-[300px] md:h-[420px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
 
-        </div>
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">  
+          
+          {/* Background Decorative Rings */}
+          <motion.div
+            animate={{
+              rotate: [0, 3, 0],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block"
+          >
 
-        <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+            <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
 
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-7deg]"></div>
 
-            {/* LEFT */}
+            <div className="absolute inset-12 border border-blue-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
+
+            {/* Ambient Lights */}
             <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
+              animate={{
+                scale: [1, 1.15, 1],
+                opacity: [0.4, 0.7, 0.4],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/4 left-1/4 w-44 h-44 bg-blue-600/20 blur-[70px] rounded-full"
+            ></motion.div>
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                SEO Tools & Platforms
-              </p>
-
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-                Modern SEO
-                <span className="text-[#2b4c9a]"> Technologies</span>
-              </h2>
-
-              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
-                We use advanced SEO tools and analytics platforms to maximize rankings and organic traffic.
-              </p>
-
-            </motion.div>
-
-            {/* RIGHT */}
             <motion.div
-              variants={stagger}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+              }}
+              className="absolute bottom-1/4 right-1/3 w-44 h-44 bg-purple-600/15 blur-[70px] rounded-full"
+            ></motion.div>
+
+            {/* FLOATING STARS */}
+            <motion.div
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.4, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/3 left-6 w-2 h-2 bg-purple-300 rounded-full shadow-[0_0_12px_#c084fc]"
+            ></motion.div>
+
+            <motion.div
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+              }}
+              className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full shadow-[0_0_8px_#60a5fa]"
+            ></motion.div>
+
+            <motion.div
+              animate={{
+                opacity: [0.5, 1, 0.5],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/2 right-12 w-2.5 h-2.5 bg-indigo-400 rounded-full shadow-[0_0_14px_#818cf8]"
+            ></motion.div>
+
+          </motion.div>
+
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="relative z-10"
+          >
+
+            <motion.p
+              whileHover={{
+                scale: 1.05,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
             >
+              SEO Tools & Expertise
+            </motion.p>
 
-              {[
-                {
-                  name: "Google Analytics",
-                  icon: <BarChart3 size={42} />,
-                },
-                {
-                  name: "Google Search Console",
-                  icon: <Search size={42} />,
-                },
-                {
-                  name: "Ahrefs",
-                  icon: <TrendingUp size={42} />,
-                },
-                {
-                  name: "SEMrush",
-                  icon: <Globe size={42} />,
-                },
-                {
-                  name: "Technical SEO",
-                  icon: <Code2 size={42} />,
-                },
-                {
-                  name: "Content Strategy",
-                  icon: <PenTool size={42} />,
-                },
-              ].map((item, index) => (
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Advanced SEO Strategies For
+              <span className="text-[#2b4c9a]"> Higher Search Rankings</span>
+            </h2>
 
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed max-w-xl">
+              We use industry-leading SEO tools and proven optimization techniques to
+              improve visibility, drive organic traffic, and grow your online presence.
+            </p>
+
+          </motion.div>
+
+          {/* RIGHT TECHNOLOGY STACK */}
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
+
+            {[
+              {
+                icon: <Search size={30} strokeWidth={2} />,
+                title: "Keyword Research",
+                color: "text-cyan-400",
+                position: "md:col-start-1 md:row-start-1",
+              },
+              {
+                icon: <TrendingUp size={30} strokeWidth={2} />,
+                title: "On-Page SEO",
+                color: "text-white",
+                position: "md:col-start-3 md:row-start-1",
+              },
+              {
+                icon: <Globe size={30} strokeWidth={2} />,
+                title: "Technical SEO",
+                color: "text-blue-400",
+                position: "md:col-start-5 md:row-start-1",
+              },
+              {
+                icon: <BarChart3 size={30} strokeWidth={2} />,
+                title: "SEO Audit",
+                color: "text-green-400",
+                position: "md:col-start-2 md:row-start-2",
+              },
+              {
+                icon: <Users size={30} strokeWidth={2} />,
+                title: "Local SEO",
+                color: "text-sky-400",
+                position: "md:col-start-4 md:row-start-2",
+              },
+              {
+                icon: <Rocket size={30} strokeWidth={2} />,
+                title: "Growth Strategy",
+                color: "text-emerald-500",
+                position: "md:col-start-6 md:row-start-2",
+              },
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className={`
+                  group
+                  relative
+                  overflow-hidden
+                  flex items-center gap-3
+                  bg-[#1a2e5e]
+                  backdrop-blur-xl
+                  border border-slate-800/80
+                  rounded-xl
+                  px-5 py-3.5
+                  w-40 h-14
+                  transition-all duration-500
+                  ${item.position}
+                `}
+              >
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute -top-10 right-0 w-24 h-24 bg-indigo-500/20 blur-3xl rounded-full"></div>
+
+                </div>
+
+                {/* ICON */}
                 <motion.div
-                  key={index}
-                  variants={fadeUp}
                   whileHover={{
-                    y: -10,
-                    scale: 1.03,
+                    scale: 1.15,
                   }}
-                  className="group relative bg-white border border-[#dbe7ff] rounded-[28px] p-6 md:p-8 flex flex-col items-center justify-center overflow-hidden shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)] transition-all duration-500"
+                  className={`relative z-10 flex items-center justify-center w-6 h-6 shrink-0 ${item.color}`}
                 >
-
-                  <div className="w-20 h-20 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
-                    {item.icon}
-                  </div>
-
-                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-[#1a2e5e] text-center">
-                    {item.name}
-                  </h3>
-
+                  {item.icon}
                 </motion.div>
 
-              ))}
+                {/* TEXT */}
+                <span className="relative z-10 text-xl font-medium text-slate-200 tracking-wide">
+                  {item.title}
+                </span>
 
-            </motion.div>
+              </motion.div>
+
+            ))}
 
           </div>
 
