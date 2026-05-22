@@ -39,7 +39,7 @@ export default function GoogleReviews() {
 
   return (
 
-    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
 
       {/* BG */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]" />
