@@ -241,7 +241,7 @@ export default function SEOServicePage() {
               Our SEO Services
             </p>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Powerful SEO Solutions For
               <span className="text-[#2b4c9a]"> Modern Businesses</span>
             </h2>
@@ -254,27 +254,39 @@ export default function SEOServicePage() {
               {
                 icon: <Search size={30} />,
                 title: "Keyword Research",
+                text:
+                  "Find high-performing keywords that attract targeted traffic and improve search visibility."
               },
               {
                 icon: <TrendingUp size={30} />,
                 title: "On-Page SEO",
+                text:
+                  "Optimize website content, meta tags, and structure to improve rankings and user experience."
               },
               {
                 icon: <Globe size={30} />,
                 title: "Technical SEO",
+                text:
+                  "Fix backend issues like site speed, indexing, and crawlability for better search engine performance."
               },
               {
                 icon: <BarChart3 size={30} />,
                 title: "SEO Audit",
+                text:
+                  "Complete analysis of your website to identify SEO issues and improvement opportunities."
               },
               {
                 icon: <Users size={30} />,
                 title: "Local SEO",
+                text:
+                  "Improve visibility in local search results and attract nearby customers to your business."
               },
               {
                 icon: <Rocket size={30} />,
                 title: "Growth Strategy",
-              },
+                text:
+                  "Data-driven SEO strategies designed to increase traffic, leads, and long-term growth."
+              }
             ].map((item, index) => (
 
               <motion.div
@@ -317,8 +329,9 @@ export default function SEOServicePage() {
                   {item.title}
                 </h3>
 
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
-                  Premium SEO strategies focused on visibility and business growth.
+                {/* TEXT */}
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed">
+                  {item.text}
                 </p>
 
               </motion.div>
