@@ -7,6 +7,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import GoogleReviews from "@/components/GoogleReviews";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -1674,6 +1675,9 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
         </div>
 
       </section>
+
+       <GoogleReviews />
+
       {/* CTA */}
       <section className="py-16 px-6 overflow-hidden">
 
