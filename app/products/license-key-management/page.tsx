@@ -345,69 +345,69 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
-   {/* PREMIUM SNAKE PROCESS SECTION */}
-<section className="relative py-24 bg-white overflow-hidden">
+{/* PREMIUM RESPONSIVE SNAKE PROCESS SECTION */}
+<section className="relative py-20 lg:py-24 bg-white overflow-hidden">
 
   {/* BG EFFECTS */}
   <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-  <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+  <div className="absolute top-0 left-0 w-[320px] sm:w-[420px] h-[320px] sm:h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+  <div className="absolute bottom-0 right-0 w-[320px] sm:w-[420px] h-[320px] sm:h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-  <div className="container px-6 mx-auto max-w-[1320px] relative z-10">
+  <div className="container px-4 sm:px-6 mx-auto max-w-[1320px] relative z-10">
 
     {/* HEADER */}
     <div className="text-center max-w-3xl mx-auto">
 
-      <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase tracking-[0.2em]">
+      <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em]">
         How It Works
       </p>
 
-      <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
+      <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black text-[#10204b] leading-tight">
         Powerful Features.
         <span className="text-[#2b4c9a]"> Smart Workflow.</span>
       </h2>
 
-      <p className="mt-5 text-lg text-gray-500 leading-relaxed">
+      <p className="mt-5 text-sm sm:text-base lg:text-lg text-gray-500 leading-relaxed">
         Streamlined software license management process built for modern SaaS platforms.
       </p>
 
     </div>
 
-    {/* SNAKE FLOW */}
-    <div className="relative mt-24">
+    {/* PROCESS GRID */}
+    <div className="relative mt-16 lg:mt-24">
 
-      {/* CONNECTOR LINE */}
-      <div className="hidden xl:block absolute top-1/2 left-0 w-full h-[2px] -translate-y-1/2 z-0">
+      {/* DESKTOP CONNECTOR */}
+      <div className="hidden xl:block absolute inset-0 z-0 pointer-events-none">
 
         <svg
-          className="w-full h-[500px]"
-          viewBox="0 0 1200 500"
+          className="w-full h-[420px]"
+          viewBox="0 0 1200 420"
           fill="none"
           preserveAspectRatio="none"
         >
 
           <path
             d="
-              M 50 120
-              C 250 120, 250 120, 450 120
-              S 650 120, 850 120
-              S 1050 120, 1150 120
+              M 100 100
+              C 250 100, 250 100, 400 100
+              S 550 100, 700 100
+              S 850 100, 1000 100
 
-              L 1150 260
+              L 1000 260
 
-              C 950 260, 950 260, 750 260
-              S 550 260, 350 260
-              S 150 260, 50 260
+              C 850 260, 850 260, 700 260
+              S 550 260, 400 260
+              S 250 260, 100 260
             "
-            stroke="url(#gradient)"
+            stroke="url(#snakeGradient)"
             strokeWidth="2"
             strokeDasharray="7 7"
           />
 
           <defs>
-            <linearGradient id="gradient">
+            <linearGradient id="snakeGradient">
               <stop offset="0%" stopColor="#2b4c9a" />
               <stop offset="50%" stopColor="#7c4dff" />
               <stop offset="100%" stopColor="#2b4c9a" />
@@ -419,7 +419,7 @@ export default function LicenseKeyManagementPage() {
       </div>
 
       {/* GRID */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6 lg:gap-8">
 
         {steps.map((item, index) => (
 
@@ -448,17 +448,20 @@ export default function LicenseKeyManagementPage() {
               border border-[#EEF2FF]
               bg-white/80
               backdrop-blur-xl
-              p-7
+              p-6 sm:p-7
               shadow-[0_20px_60px_rgba(43,76,154,0.06)]
               hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
               transition-all duration-500
               overflow-hidden
+              min-h-[260px]
+              flex
+              flex-col
 
               ${index === 1 || index === 3 ? "xl:mt-28" : ""}
             `}
           >
 
-            {/* GLOW */}
+            {/* HOVER GLOW */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
               <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -469,32 +472,32 @@ export default function LicenseKeyManagementPage() {
             <div className="relative z-10 flex items-center justify-between">
 
               {/* ICON */}
-              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-3xl border border-[#dbe7ff] shadow-inner">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center text-2xl sm:text-3xl border border-[#dbe7ff] shadow-inner shrink-0">
                 {item.icon}
               </div>
 
               {/* NUMBER */}
-              <div className="w-11 h-11 rounded-full bg-[#2b4c9a] text-white text-sm font-black flex items-center justify-center shadow-[0_10px_25px_rgba(43,76,154,0.2)]">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2b4c9a] text-white text-xs sm:text-sm font-black flex items-center justify-center shadow-[0_10px_25px_rgba(43,76,154,0.2)] shrink-0">
                 {item.number}
               </div>
 
             </div>
 
             {/* CONTENT */}
-            <div className="relative z-10 mt-7">
+            <div className="relative z-10 mt-6 flex-1">
 
-              <h3 className="text-xl font-black text-[#10204b] leading-snug">
+              <h3 className="text-lg sm:text-xl font-black text-[#10204b] leading-snug">
                 {item.title}
               </h3>
 
-              <p className="mt-4 text-sm text-gray-500 leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-sm text-gray-500 leading-relaxed">
                 {item.desc}
               </p>
 
             </div>
 
             {/* BOTTOM INDICATOR */}
-            <div className="relative z-10 mt-7 flex items-center gap-2">
+            <div className="relative z-10 mt-6 flex items-center gap-2">
 
               <div className="w-2 h-2 rounded-full bg-[#2b4c9a] animate-pulse"></div>
 
