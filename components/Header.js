@@ -9,6 +9,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openServices, setOpenServices] = useState(false);
+  const [openProducts, setOpenProducts] = useState(false);
 
   // 🔥 Detect scroll (for shadow effect)
   useEffect(() => {
