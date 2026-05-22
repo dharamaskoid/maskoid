@@ -230,26 +230,18 @@ export default function Header() {
           >
 
             {/* HOME */}
-            {/* MOBILE MENU LINKS */}
-
-            <Link
-              href="/"
-              className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
-            >
+            <Link href="/" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Home
             </Link>
-
-            <Link
-              href="/about-us"
-              className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
-            >
-              About Us
+            <Link href="/about-us" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
+                About Us
             </Link>
 
-            {/* SERVICES DROPDOWN */}
+            {/* 🔥 SERVICES DROPDOWN */}
             <div>
               <div className="flex justify-between items-center">
 
+                {/* 👉 SAME AS DESKTOP (MAIN LINK) */}
                 <Link
                   href="/services"
                   className="text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
@@ -257,6 +249,9 @@ export default function Header() {
                   Services
                 </Link>
 
+
+
+                {/* 👉 DROPDOWN TOGGLE */}
                 <button
                   onClick={(e) => {
                     e.preventDefault();
@@ -264,15 +259,12 @@ export default function Header() {
                   }}
                   className="text-[#1a2e5e] text-xl ml-2"
                 >
-                  <span
-                    className={`ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-gray-400 transition-transform duration-300 ${
-                      openServices ? "rotate-[225deg]" : "rotate-45"
-                    }`}
-                  ></span>
+                <span className="ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-gray-400 rotate-45 transition-transform duration-300 group-hover:rotate-[225deg] group-hover:border-white"></span>
                 </button>
 
               </div>
 
+              {/* 🔥 DROPDOWN */}
               <AnimatePresence>
                 {openServices && (
                   <motion.div
@@ -282,31 +274,16 @@ export default function Header() {
                     className="ml-4 mt-3 space-y-3 overflow-hidden"
                   >
                     {[
-                      {
-                        name: "Social Media Marketing",
-                        link: "/services/social-media-marketing",
-                      },
-                      {
-                        name: "SEO Service",
-                        link: "/services/seo-service",
-                      },
-                      {
-                        name: "PPC Service",
-                        link: "/services/ppc-service",
-                      },
-                      {
-                        name: "Web Design",
-                        link: "/services/web-design",
-                      },
-                      {
-                        name: "Web Development",
-                        link: "/services/web-development",
-                      },
+                      { name: "Social Media Marketing", link: "/services/social-media-marketing" },
+                      { name: "SEO Service", link: "/services/seo-service" },
+                      { name: "PPC Service", link: "/services/ppc-service" },
+                      { name: "Web Design", link: "/services/web-design" },
+                      { name: "Web Development", link: "/services/web-development" },
                     ].map((service, i) => (
                       <Link
                         key={i}
                         href={service.link}
-                        className="block text-base text-[#1a2e5e] hover:text-[#6EA8FF] transition"
+                        className="block text-base text-[#1a2e5e] hover:text-white transition"
                       >
                         {service.name}
                       </Link>
@@ -315,78 +292,15 @@ export default function Header() {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* PRODUCTS DROPDOWN */}
-            <div>
-              <div className="flex justify-between items-center">
-
-                <Link
-                  href="/products"
-                  className="text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
-                >
-                  Products
-                </Link>
-
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenProducts(!openProducts);
-                  }}
-                  className="text-[#1a2e5e] text-xl ml-2"
-                >
-                  <span
-                    className={`ml-2 inline-block w-2 h-2 border-r-2 border-b-2 border-gray-400 transition-transform duration-300 ${
-                      openProducts ? "rotate-[225deg]" : "rotate-45"
-                    }`}
-                  ></span>
-                </button>
-
-              </div>
-
-              <AnimatePresence>
-                {openProducts && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="ml-4 mt-3 space-y-3 overflow-hidden"
-                  >
-                    {[
-                      {
-                        name: "License Key Management",
-                        link: "/products/license-key-management",
-                      },
-                      {
-                        name: "CRM Software",
-                        link: "/products/crm-software",
-                      },
-                    ].map((product, i) => (
-                      <Link
-                        key={i}
-                        href={product.link}
-                        className="block text-base text-[#1a2e5e] hover:text-[#6EA8FF] transition"
-                      >
-                        {product.name}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <Link
-              href="/projects"
-              className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
-            >
+            {/* OTHER LINKS */}
+            <Link href="/projects" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Projects
             </Link>
 
-            <Link
-              href="/contact-us"
-              className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition"
-            >
+            <Link href="/contact-us" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Contact Us
             </Link>
+
               {/* CTA */}
               <Link
               href="https://wa.me/917574084008?text=Hi%20Maskoid,%20I%20want%20to%20grow%20my%20business."
