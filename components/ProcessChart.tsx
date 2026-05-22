@@ -382,7 +382,7 @@ export default function ProcessChart() {
   }, []);
 
   return (
-    <section className="relative py-24 bg-[#EEF2FF] overflow-hidden">
+    <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
       {/* BG EFFECTS */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-300/20 blur-[140px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-300/20 blur-[140px] rounded-full" />
@@ -390,7 +390,7 @@ export default function ProcessChart() {
       {/* GRID PATTERN */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:24px_24px]" />
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6">
+      <div className="relative z-10 container mx-auto px-6">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="inline-flex px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-black uppercase tracking-[0.2em]">
