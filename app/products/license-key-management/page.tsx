@@ -266,7 +266,6 @@ export default function LicenseKeyManagementPage() {
                   whileHover={{ scale: 1.05 }}
                   className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#2b4c9a] mr-2 animate-pulse" />
                   Smarter Licensing
                 </motion.p>
 
