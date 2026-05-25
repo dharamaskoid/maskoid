@@ -429,7 +429,7 @@ export default function LicenseKeyManagementPage() {
 
         <div className="container px-6 mx-auto">
 
-          <div className="bg-[#1a2e5e] border border-[#EEF2FF] rounded-[40px] p-10 lg:p-16">
+          <div className="bg-[#1a2e5e] border border-[#EEF2FF] rounded-2xl p-10 lg:p-16">
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -440,9 +440,9 @@ export default function LicenseKeyManagementPage() {
                   <Mail size={48} />
                 </div>
 
-                <h2 className="mt-8 text-5xl font-black leading-tight text-[#10204b]">
+                <h2 className="mt-8 text-5xl font-black leading-tight text-white">
                   Have Questions?
-                  <span className="text-[#2b4c9a]"> We’re Here To Help!</span>
+                  <span className="text-[#6EA8FF]"> We’re Here To Help!</span>
                 </h2>
 
                 <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
@@ -480,7 +480,7 @@ export default function LicenseKeyManagementPage() {
                 />
 
                 <button
-                  className="w-full h-14 rounded-xl bg-[#2b4c9a] text-white font-semibold hover:bg-[#1f3d84] transition"
+                  className="w-full h-14 rounded-xl bg-[#6EA8FF] text-white font-semibold hover:bg-[#6EA8FF] transition"
                 >
                   Send Message
                 </button>
