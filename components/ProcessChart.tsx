@@ -334,22 +334,31 @@ export default function ProcessChart() {
                     "
                   >
 
-                    {/* ARROW */}
+                  {/* ARROW */}
+                  {index !== steps.length - 1 && (
                     <div
-                      className={`
-                        w-9 h-9 rounded-full flex items-center justify-center
-                        transition-all duration-500
-                        ${
-                          activeStep === index
-                            ? "bg-[#2b4c9a] text-white shadow-[0_10px_30px_rgba(43,76,154,0.35)] scale-110"
-                            : "bg-white text-[#94a3b8] border border-[#dbe4ff]"
-                        }
-                      `}
+                      className="
+                        hidden xl:block
+                        absolute
+                        top-1/2
+                        -translate-y-1/2
+                        -right-[22px]
+                        z-30
+                      "
                     >
-                      <ArrowRight size={16} />
+                      <ArrowRight
+                        size={20}
+                        className={`
+                          transition-all duration-500
+                          ${
+                            activeStep === index
+                              ? "text-[#2b4c9a] scale-125"
+                              : "text-[#cbd5e1]"
+                          }
+                        `}
+                      />
                     </div>
-                  </div>
-                )}
+                  )}
               </div>
             ))}
           </div>
