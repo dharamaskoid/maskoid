@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motion } from 'framer-motion';
 import {
   User,
   LayoutDashboard,
@@ -291,22 +292,96 @@ export default function ProcessChart() {
 
       <div className="relative z-10 container mx-auto px-6">
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center max-w-3xl mx-auto mb-20"
+        >
+          {/* TOP BADGE */}
+          <motion.p
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            whileHover={{
+              scale: 1.05,
+              y: -2,
+            }}
+            className="
+              inline-flex items-center gap-2
+              px-5 py-2 rounded-full
+              bg-gradient-to-r from-blue-500/10 to-indigo-500/10
+              border border-[#2b4c9a]/10
+              text-[#2b4c9a]
+              text-xs font-bold uppercase tracking-[0.18em]
+              shadow-sm backdrop-blur-sm
+              transition-all duration-300
+            "
+          >
+            <span className="w-2 h-2 rounded-full bg-[#2b4c9a] animate-pulse" />
             License Key Management Process
-          </p>
+          </motion.p>
 
-          <h2 className="mt-6 text-4xl md:text-4xl font-black text-[#1a2e5e] leading-tight">
+          {/* HEADING */}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="
+              mt-7
+              text-4xl md:text-5xl
+              font-black
+              text-[#1a2e5e]
+              leading-[1.15]
+              tracking-[-0.03em]
+            "
+          >
             Complete Software
-            <span className="text-[#2b4c9a]"> License Workflow</span>
-          </h2>
+            <br />
 
-          <p className="mt-6 text-lg leading-[1.9] text-[#5c6b8a]">
+            <span className="relative inline-block text-[#2b4c9a]">
+              License Workflow
+
+              {/* UNDERLINE EFFECT */}
+              <motion.span
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                className="
+                  absolute left-0 bottom-1
+                  h-[10px]
+                  bg-blue-200/50
+                  -z-10
+                  rounded-full
+                "
+              />
+            </span>
+          </motion.h2>
+
+          {/* DESCRIPTION */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.35, duration: 0.7 }}
+            className="
+              mt-7
+              text-lg
+              leading-[1.9]
+              text-[#5c6b8a]
+              max-w-2xl
+              mx-auto
+            "
+          >
             A premium enterprise-level workflow system designed to manage
             software products, license activations, users, logs and security
             verification in one powerful dashboard.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* PROCESS GRID */}
         <div className="relative">
