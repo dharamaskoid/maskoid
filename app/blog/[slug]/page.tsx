@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { blogs } from "../../../.next/data/blogs";
+import { blogs } from "@/data/blogs";
 
 export default function BlogDetailPage({
   params,
