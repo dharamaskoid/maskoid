@@ -225,7 +225,7 @@ function StepCard({
 
         {/* ICON */}
         <div
-          className="w-12 h-12 rounded-2xl flex items-center justify-center mt-3 transition-all duration-300"
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mt-3 mb-3 transition-all duration-300"
           style={{
             background: active ? "#ffffff" : "#2b4c9a",
             color: active ? "#2b4c9a" : "#ffffff",
@@ -236,7 +236,7 @@ function StepCard({
 
         {/* TITLE */}
         <h3
-          className="text-[22px] font-black leading-tight"
+          className="text-xl font-black leading-tight"
           style={{
             color: active ? "#ffffff" : "#1a2e5e",
           }}
