@@ -202,7 +202,7 @@ export default function LicenseKeyManagementPage() {
       </section>      
       
 
-    <ProcessChart/>
+      <ProcessChart/>
 
       {/* DASHBOARD SECTION */}
       <section id="features" className="relative py-16 bg-[#F8FAFF]">
@@ -349,64 +349,197 @@ export default function LicenseKeyManagementPage() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="relative py-16 bg-white">
+      <section className="relative py-16 bg-white overflow-hidden">
 
-        <div className="container px-6 mx-auto">
+        {/* BG EFFECTS */}
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-200/20 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-indigo-200/20 blur-[120px] rounded-full animate-pulse" />
 
-          <div className="bg-[#1a2e5e] border border-[#EEF2FF] rounded-2xl p-10 lg:p-16">
+        <div className="container px-6 mx-auto relative z-10">
 
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div
+            className="
+              bg-[#1a2e5e]
+              border border-[#EEF2FF]
+              rounded-2xl
+              p-10 lg:p-16
+              shadow-[0_30px_80px_rgba(26,46,94,0.18)]
+              overflow-hidden
+              relative
+            "
+          >
+
+            {/* GRID PATTERN */}
+            <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
               {/* LEFT */}
-              <div>
+              <div
+                className="
+                  transition-all duration-700
+                  hover:-translate-y-2
+                "
+              >
 
-                <div className="w-28 h-28 rounded-xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
-                  <Mail size={48} />
+                {/* ICON */}
+                <div
+                  className="
+                    relative
+                    w-28 h-28 rounded-2xl
+                    bg-white/10
+                    backdrop-blur-xl
+                    border border-white/10
+                    text-white
+                    flex items-center justify-center
+                    shadow-[0_20px_50px_rgba(0,0,0,0.18)]
+                    group
+                  "
+                >
+
+                  {/* GLOW */}
+                  <div className="absolute inset-0 rounded-2xl bg-blue-400/20 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
+
+                  <Mail
+                    size={48}
+                    className="relative z-10 transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
 
-                <h2 className="mt-8 text-5xl font-black leading-tight text-white">
+                {/* HEADING */}
+                <h2
+                  className="
+                    mt-8 text-5xl font-black leading-tight text-white
+                  "
+                >
                   Have Questions?
                   <span className="text-[#6EA8FF]"> We’re Here To Help!</span>
                 </h2>
 
-                <p className="mt-6 text-lg text-[#B7C2D8] leading-relaxed max-w-lg">
+                {/* TEXT */}
+                <p
+                  className="
+                    mt-6 text-lg text-[#B7C2D8]
+                    leading-relaxed max-w-lg
+                  "
+                >
                   Reach out to our team for licensing management solutions,
                   integrations, and enterprise support.
                 </p>
 
+                {/* FLOATING STATS */}
+                <div className="flex gap-4 mt-10 flex-wrap">
+
+                  <div className="px-5 py-4 rounded-xl bg-white/10 border border-white/10 backdrop-blur-xl">
+                    <p className="text-2xl font-black text-white">24/7</p>
+                    <p className="text-xs text-[#B7C2D8] uppercase tracking-wider">
+                      Support
+                    </p>
+                  </div>
+
+                  <div className="px-5 py-4 rounded-xl bg-white/10 border border-white/10 backdrop-blur-xl">
+                    <p className="text-2xl font-black text-white">99%</p>
+                    <p className="text-xs text-[#B7C2D8] uppercase tracking-wider">
+                      Satisfaction
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
 
               {/* FORM */}
-              <form className="space-y-5">
+              <form
+                className="
+                  space-y-5
+                  bg-white/5
+                  border border-white/10
+                  backdrop-blur-xl
+                  rounded-2xl
+                  p-8
+                  shadow-[0_20px_50px_rgba(0,0,0,0.15)]
+                "
+              >
 
+                {/* INPUT */}
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="
+                    w-full py-4 px-6 rounded-xl
+                    border border-white/10
+                    bg-white/90
+                    outline-none
+                    transition-all duration-300
+                    focus:border-[#6EA8FF]
+                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
+                  "
                 />
 
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="
+                    w-full py-4 px-6 rounded-xl
+                    border border-white/10
+                    bg-white/90
+                    outline-none
+                    transition-all duration-300
+                    focus:border-[#6EA8FF]
+                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
+                  "
                 />
 
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="
+                    w-full py-4 px-6 rounded-xl
+                    border border-white/10
+                    bg-white/90
+                    outline-none
+                    transition-all duration-300
+                    focus:border-[#6EA8FF]
+                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
+                  "
                 />
 
                 <textarea
-                  rows={3}
+                  rows={4}
                   placeholder="Your Message"
-                  className="w-full p-5 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="
+                    w-full p-5 rounded-xl
+                    border border-white/10
+                    bg-white/90
+                    outline-none
+                    resize-none
+                    transition-all duration-300
+                    focus:border-[#6EA8FF]
+                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
+                  "
                 />
 
+                {/* BUTTON */}
                 <button
-                  className="w-full py-3 px-6 rounded-xl bg-[#2b4c9a] text-white font-semibold hover:bg-[#1f3d84] transition"
+                  className="
+                    relative overflow-hidden
+                    w-full py-4 px-6 rounded-xl
+                    bg-[#2b4c9a]
+                    text-white font-semibold
+                    transition-all duration-500
+                    hover:-translate-y-1
+                    hover:shadow-[0_20px_40px_rgba(43,76,154,0.35)]
+                    group
+                  "
                 >
-                  Send Message
+
+                  {/* BUTTON SHINE */}
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+                  <span className="relative z-10">
+                    Send Message
+                  </span>
+
                 </button>
 
               </form>
