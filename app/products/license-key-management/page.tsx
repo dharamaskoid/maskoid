@@ -436,7 +436,7 @@ export default function LicenseKeyManagementPage() {
               {/* LEFT */}
               <div>
 
-                <div className="w-28 h-28 rounded-[32px] bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
+                <div className="w-28 h-28 rounded-xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                   <Mail size={48} />
                 </div>
 
@@ -480,7 +480,7 @@ export default function LicenseKeyManagementPage() {
                 />
 
                 <button
-                  className="w-full h-14 rounded-xl bg-[#6EA8FF] text-white font-semibold hover:bg-[#6EA8FF] transition"
+                  className="w-full h-14 rounded-xl bg-[#2b4c9a] text-white font-semibold hover:bg-[#1f3d84] transition"
                 >
                   Send Message
                 </button>
