@@ -348,209 +348,269 @@ export default function LicenseKeyManagementPage() {
           </div>
       </section>
 
-      {/* CONTACT SECTION */}
+      {/*Contact us */}            
       <section className="relative py-16 bg-white overflow-hidden">
 
-        {/* BACKGROUND GLOW */}
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-200/20 blur-[120px] rounded-full animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-200/20 blur-[120px] rounded-full animate-pulse" />
+        {/* BACKGROUND GRADIENT BLOBS */}
+        <motion.div
+          animate={{
+            y: [0, -40, 0],
+            x: [0, 30, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-0 left-0 w-[450px] h-[450px] bg-blue-100/40 blur-[120px] rounded-full"
+        />
+
+        <motion.div
+          animate={{
+            y: [0, 40, 0],
+            x: [0, -20, 0],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-indigo-100/40 blur-[120px] rounded-full"
+        />
 
         <div className="container px-6 mx-auto">
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+            whileHover={{
+              y: -5,
+            }}
             className="
               relative
               bg-[#1a2e5e]
-              border border-[#EEF2FF]
+              border border-[#EEF2FF]/10
               rounded-2xl
               p-10
               lg:p-16
               overflow-hidden
               shadow-[0_30px_80px_rgba(26,46,94,0.18)]
-              hover:shadow-[0_40px_100px_rgba(26,46,94,0.28)]
-              transition-all
-              duration-500
-              group
+              transition-all duration-500
             "
           >
 
-            {/* TOP LIGHT EFFECT */}
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+            {/* TOP LIGHT */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent" />
 
-            {/* FLOATING CIRCLE */}
-            <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5 blur-3xl animate-float" />
-
-            {/* MOVING GLOW */}
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-400/10 rounded-full blur-3xl animate-pulse" />
+            {/* FLOATING GLOW */}
+            <motion.div
+              animate={{
+                rotate: [0, 20, 0],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 blur-3xl"
+            />
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* LEFT */}
-              <div
-                className="
-                  relative z-10
-                  opacity-0
-                  animate-[fadeInLeft_0.8s_ease_forwards]
-                "
+              <motion.div
+                initial={{ opacity: 0, x: -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
               >
 
-                <div
+                {/* ICON */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 8,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                  }}
                   className="
                     relative
                     w-28 h-28 rounded-xl
                     bg-[#EEF4FF]
                     text-[#2b4c9a]
                     flex items-center justify-center
-                    shadow-[0_15px_40px_rgba(255,255,255,0.12)]
-                    hover:scale-110
-                    hover:rotate-6
-                    transition-all duration-500
                     overflow-hidden
+                    shadow-[0_20px_50px_rgba(255,255,255,0.12)]
                   "
                 >
 
                   {/* ICON SHINE */}
-                  <div
+                  <motion.div
+                    animate={{
+                      x: ["-100%", "200%"],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                     className="
                       absolute inset-0
-                      bg-gradient-to-tr
+                      bg-gradient-to-r
                       from-transparent
-                      via-white/40
+                      via-white/50
                       to-transparent
-                      animate-shimmer
+                      skew-x-12
                     "
                   />
 
                   <Mail size={48} className="relative z-10" />
-                </div>
+                </motion.div>
 
-                <h2 className="mt-8 text-5xl font-black leading-tight text-white">
+                {/* HEADING */}
+                <motion.h2
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.8 }}
+                  className="mt-8 text-5xl font-black leading-tight text-white"
+                >
                   Have Questions?
-                  <span className="text-[#6EA8FF]"> We’re Here To Help!</span>
-                </h2>
+                  <span className="text-[#6EA8FF]">
+                    {" "}We’re Here To Help!
+                  </span>
+                </motion.h2>
 
-                <p className="mt-6 text-lg text-[#B7C2D8] leading-relaxed max-w-lg">
+                {/* TEXT */}
+                <motion.p
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35, duration: 0.8 }}
+                  className="mt-6 text-lg text-[#B7C2D8] leading-relaxed max-w-lg"
+                >
                   Reach out to our team for licensing management solutions,
                   integrations, and enterprise support.
-                </p>
+                </motion.p>
 
-              </div>
+              </motion.div>
 
               {/* FORM */}
-              <form
-                className="
-                  relative z-10
-                  space-y-5
-                  opacity-0
-                  animate-[fadeInRight_0.8s_ease_forwards]
-                "
+              <motion.form
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-5"
               >
 
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="
-                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                    focus:scale-[1.02]
-                    focus:shadow-[0_10px_30px_rgba(110,168,255,0.15)]
-                  "
-                />
+                {[
+                  "Your Name",
+                  "Your Email",
+                  "Phone Number",
+                ].map((item, i) => (
+                  <motion.input
+                    key={i}
+                    type="text"
+                    placeholder={item}
+                    whileFocus={{
+                      scale: 1.02,
+                      y: -2,
+                    }}
+                    whileHover={{
+                      scale: 1.01,
+                    }}
+                    transition={{ duration: 0.2 }}
+                    className="
+                      w-full py-3 px-6 rounded-xl
+                      border border-[#dce7ff]
+                      bg-white outline-none
+                      focus:ring-2 focus:ring-[#6EA8FF]
+                      transition-all duration-300
+                    "
+                  />
+                ))}
 
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="
-                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                    focus:scale-[1.02]
-                    focus:shadow-[0_10px_30px_rgba(110,168,255,0.15)]
-                  "
-                />
-
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="
-                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                    focus:scale-[1.02]
-                    focus:shadow-[0_10px_30px_rgba(110,168,255,0.15)]
-                  "
-                />
-
-                <textarea
+                <motion.textarea
                   rows={3}
                   placeholder="Your Message"
+                  whileFocus={{
+                    scale: 1.02,
+                    y: -2,
+                  }}
+                  whileHover={{
+                    scale: 1.01,
+                  }}
+                  transition={{ duration: 0.2 }}
                   className="
-                    w-full p-5 rounded-xl border border-[#dce7ff]
+                    w-full p-5 rounded-xl
+                    border border-[#dce7ff]
                     bg-white outline-none
                     focus:ring-2 focus:ring-[#6EA8FF]
                     transition-all duration-300
-                    hover:scale-[1.01]
-                    focus:scale-[1.02]
-                    focus:shadow-[0_10px_30px_rgba(110,168,255,0.15)]
                   "
                 />
 
-                <button
+                {/* BUTTON */}
+                <motion.button
+                  whileHover={{
+                    scale: 1.03,
+                    y: -3,
+                  }}
+                  whileTap={{
+                    scale: 0.97,
+                  }}
                   className="
-                    group/btn
-                    relative overflow-hidden
+                    relative
+                    overflow-hidden
                     w-full py-3 px-6 rounded-xl
                     bg-[#2b4c9a]
                     text-white font-semibold
                     hover:bg-[#1f3d84]
                     transition-all duration-500
-                    hover:scale-[1.02]
                     hover:shadow-[0_15px_40px_rgba(43,76,154,0.35)]
                   "
                 >
-                  <span className="relative z-10">Send Message</span>
+
+                  <span className="relative z-10">
+                    Send Message
+                  </span>
 
                   {/* BUTTON SHINE */}
-                  <div
+                  <motion.div
+                    animate={{
+                      x: ["-120%", "150%"],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 1,
+                      ease: "linear",
+                    }}
                     className="
-                      absolute top-0 left-[-100%]
+                      absolute top-0 left-0
                       w-full h-full
-                      bg-gradient-to-r from-transparent via-white/30 to-transparent
+                      bg-gradient-to-r
+                      from-transparent
+                      via-white/30
+                      to-transparent
                       skew-x-12
-                      group-hover/btn:left-[120%]
-                      transition-all duration-1000
                     "
                   />
+                </motion.button>
 
-                  {/* BUTTON GLOW */}
-                  <div
-                    className="
-                      absolute inset-0
-                      opacity-0
-                      group-hover/btn:opacity-100
-                      bg-white/10
-                      blur-xl
-                      transition-all duration-500
-                    "
-                  />
-                </button>
-
-              </form>
+              </motion.form>
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
-
-        
 
       </section>
 
