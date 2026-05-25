@@ -12,6 +12,7 @@ import {
   RefreshCw,
   UserPlus,
   Users,
+  ArrowRight,
 } from "lucide-react";
 
 interface Step {
@@ -308,16 +309,67 @@ export default function ProcessChart() {
         </div>
 
         {/* PROCESS GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
-          {steps.map((step, index) => (
-            <StepCard
-              key={step.id}
-              step={step}
-              index={index}
-              active={activeStep === index}
-              onClick={setActiveStep}
-            />
-          ))}
+        <div className="relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
+            {steps.map((step, index) => (
+              <div key={step.id} className="relative">
+                <StepCard
+                  step={step}
+                  index={index}
+                  active={activeStep === index}
+                  onClick={setActiveStep}
+                />
+
+                {/* ARROW */}
+                {index !== steps.length - 1 && (
+                  <div
+                    className={`
+                      hidden xl:flex
+                      absolute top-1/2 -right-7 z-30
+                      items-center justify-center
+                      transition-all duration-500
+                    `}
+                  >
+                    <div
+                      className={`
+                        flex items-center gap-1
+                        transition-all duration-500
+                        ${
+                          activeStep === index
+                            ? "opacity-100 scale-110"
+                            : "opacity-30"
+                        }
+                      `}
+                    >
+                      {/* LINE */}
+                      <div
+                        className={`h-[2px] w-8 ${
+                          activeStep === index
+                            ? "bg-[#2b4c9a]"
+                            : "bg-[#cbd5e1]"
+                        }`}
+                      />
+
+                      {/* ARROW ICON */}
+                      <div
+                        className={`
+                          w-8 h-8 rounded-full flex items-center justify-center
+                          transition-all duration-500
+                          ${
+                            activeStep === index
+                              ? "bg-[#2b4c9a] text-white shadow-lg"
+                              : "bg-white text-[#94a3b8]"
+                          }
+                        `}
+                      >
+                        <ArrowRight size={16} />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
