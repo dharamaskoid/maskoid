@@ -233,8 +233,6 @@ function StepCard({
         >
           <div className="w-6 h-6">{step.icon}</div>
         </div>
-          <div className="w-6 h-6 opacity-70">{step.icon}</div>
-        </div>
 
         {/* TITLE */}
         <h3
