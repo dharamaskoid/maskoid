@@ -16,16 +16,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-interface Step {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  bg: string;
-}
-
 const fadeUp = {
   hidden: {
     opacity: 0,
@@ -39,6 +29,16 @@ const fadeUp = {
     },
   },
 };
+
+interface Step {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+  bg: string;
+}
 
 const steps: Step[] = [
   {
@@ -306,11 +306,12 @@ export default function ProcessChart() {
 
       <div className="relative z-10 container mx-auto px-6">
         {/* HEADER */}
-        <motion.div
+         <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="show"
             >
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
             License Key Management Process
           </p>
@@ -325,6 +326,7 @@ export default function ProcessChart() {
             software products, license activations, users, logs and security
             verification in one powerful dashboard.
           </p>
+        </div>
         </motion.div>
 
         {/* PROCESS GRID */}
