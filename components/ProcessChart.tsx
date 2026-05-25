@@ -223,18 +223,16 @@ function StepCard({
           {step.id}
         </div>
 
-        {/* ICON (low visible always, even active) */}
+        {/* ICON */}
         <div
-          className="w-12 h-12 rounded-2xl flex items-center justify-center mt-3"
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mt-3 transition-all duration-300"
           style={{
-            background: active
-              ? "rgba(255,255,255,0.12)"
-              : "#f4f7ff",
-            color: active
-              ? "rgba(255,255,255,0.6)"
-              : "#2b4c9a",
+            background: active ? "#ffffff" : "#2b4c9a",
+            color: active ? "#2b4c9a" : "#ffffff",
           }}
         >
+          <div className="w-6 h-6">{step.icon}</div>
+        </div>
           <div className="w-6 h-6 opacity-70">{step.icon}</div>
         </div>
 
