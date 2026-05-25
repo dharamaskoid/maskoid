@@ -349,58 +349,18 @@ export default function LicenseKeyManagementPage() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="relative py-16 bg-white overflow-hidden">
-
-        {/* BACKGROUND GLOW */}
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-200/20 blur-[120px] rounded-full animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-200/20 blur-[120px] rounded-full animate-pulse" />
+      <section className="relative py-16 bg-white">
 
         <div className="container px-6 mx-auto">
 
-          <div
-            className="
-              relative
-              bg-[#1a2e5e]
-              border border-[#EEF2FF]
-              rounded-2xl
-              p-10
-              lg:p-16
-              overflow-hidden
-              shadow-[0_30px_80px_rgba(26,46,94,0.18)]
-              hover:shadow-[0_40px_100px_rgba(26,46,94,0.28)]
-              transition-all
-              duration-500
-            "
-          >
-
-            {/* TOP LIGHT EFFECT */}
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-
-            {/* FLOATING CIRCLE */}
-            <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5 blur-3xl" />
+          <div className="bg-[#1a2e5e] border border-[#EEF2FF] rounded-2xl p-10 lg:p-16">
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* LEFT */}
-              <div
-                className="
-                  relative z-10
-                  opacity-0
-                  animate-[fadeInLeft_0.8s_ease_forwards]
-                "
-              >
+              <div>
 
-                <div
-                  className="
-                    w-28 h-28 rounded-xl
-                    bg-[#EEF4FF]
-                    text-[#2b4c9a]
-                    flex items-center justify-center
-                    shadow-[0_15px_40px_rgba(255,255,255,0.12)]
-                    hover:scale-105
-                    transition-all duration-500
-                  "
-                >
+                <div className="w-28 h-28 rounded-xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center">
                   <Mail size={48} />
                 </div>
 
@@ -417,88 +377,36 @@ export default function LicenseKeyManagementPage() {
               </div>
 
               {/* FORM */}
-              <form
-                className="
-                  relative z-10
-                  space-y-5
-                  opacity-0
-                  animate-[fadeInRight_0.8s_ease_forwards]
-                "
-              >
+              <form className="space-y-5">
 
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="
-                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                  "
+                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="
-                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                  "
+                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="
-                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                  "
+                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <textarea
                   rows={3}
                   placeholder="Your Message"
-                  className="
-                    w-full p-5 rounded-xl border border-[#dce7ff]
-                    bg-white outline-none
-                    focus:ring-2 focus:ring-[#6EA8FF]
-                    transition-all duration-300
-                    hover:scale-[1.01]
-                  "
+                  className="w-full p-5 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <button
-                  className="
-                    relative overflow-hidden
-                    w-full py-3 px-6 rounded-xl
-                    bg-[#2b4c9a]
-                    text-white font-semibold
-                    hover:bg-[#1f3d84]
-                    transition-all duration-500
-                    hover:scale-[1.02]
-                    hover:shadow-[0_15px_40px_rgba(43,76,154,0.35)]
-                  "
+                  className="w-full py-3 px-6 rounded-xl bg-[#2b4c9a] text-white font-semibold hover:bg-[#1f3d84] transition"
                 >
-                  <span className="relative z-10">Send Message</span>
-
-                  {/* BUTTON SHINE */}
-                  <div
-                    className="
-                      absolute top-0 left-[-100%]
-                      w-full h-full
-                      bg-gradient-to-r from-transparent via-white/30 to-transparent
-                      skew-x-12
-                      hover:left-[120%]
-                      transition-all duration-1000
-                    "
-                  />
+                  Send Message
                 </button>
 
               </form>
@@ -508,31 +416,6 @@ export default function LicenseKeyManagementPage() {
           </div>
 
         </div>
-
-        {/* CUSTOM ANIMATION */}
-        <style jsx>{`
-          @keyframes fadeInLeft {
-            from {
-              opacity: 0;
-              transform: translateX(-50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-
-          @keyframes fadeInRight {
-            from {
-              opacity: 0;
-              transform: translateX(50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-        `}</style>
 
       </section>
 
