@@ -445,7 +445,7 @@ export default function LicenseKeyManagementPage() {
                   <span className="text-[#6EA8FF]"> We’re Here To Help!</span>
                 </h2>
 
-                <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
+                <p className="mt-6 text-lg text-[#B7C2D8] leading-relaxed max-w-lg">
                   Reach out to our team for licensing management solutions,
                   integrations, and enterprise support.
                 </p>

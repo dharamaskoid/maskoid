@@ -295,9 +295,9 @@ export default function ProcessChart() {
       <div className="relative z-10 container mx-auto px-6">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-flex px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-black uppercase">
+          <p className="inline-flex px-5 py-2 rounded-full bg-[#2b4c9a]/10 text-[#2b4c9a] text-xs font-black uppercase">
             License Key Management Process
-          </span>
+          </p>
 
           <h2 className="mt-6 text-4xl md:text-4xl font-black text-[#1a2e5e] leading-tight">
             Complete Software
