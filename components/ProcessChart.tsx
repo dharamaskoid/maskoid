@@ -310,7 +310,7 @@ export default function ProcessChart() {
 
         {/* PROCESS GRID */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-10 gap-y-12">
             {steps.map((step, index) => (
               <div key={step.id} className="relative">
                 <StepCard
@@ -323,47 +323,41 @@ export default function ProcessChart() {
                 {/* ARROW */}
                 {index !== steps.length - 1 && (
                   <div
-                    className={`
+                    className="
                       hidden xl:flex
-                      absolute top-1/2 -right-7 z-30
-                      items-center justify-center
-                      transition-all duration-500
-                    `}
+                      absolute
+                      top-1/2
+                      -translate-y-1/2
+                      -right-[34px]
+                      z-30
+                      items-center
+                    "
                   >
+                    {/* LINE */}
                     <div
                       className={`
-                        flex items-center gap-1
-                        transition-all duration-500
+                        h-[2px] w-10 transition-all duration-500
                         ${
-                          activeStep === index
-                            ? "opacity-100 scale-110"
-                            : "opacity-30"
-                        }
-                      `}
-                    >
-                      {/* LINE */}
-                      <div
-                        className={`h-[2px] w-8 ${
                           activeStep === index
                             ? "bg-[#2b4c9a]"
                             : "bg-[#cbd5e1]"
-                        }`}
-                      />
+                        }
+                      `}
+                    />
 
-                      {/* ARROW ICON */}
-                      <div
-                        className={`
-                          w-8 h-8 rounded-full flex items-center justify-center
-                          transition-all duration-500
-                          ${
-                            activeStep === index
-                              ? "bg-[#2b4c9a] text-white shadow-lg"
-                              : "bg-white text-[#94a3b8]"
-                          }
-                        `}
-                      >
-                        <ArrowRight size={16} />
-                      </div>
+                    {/* ARROW */}
+                    <div
+                      className={`
+                        w-9 h-9 rounded-full flex items-center justify-center
+                        transition-all duration-500
+                        ${
+                          activeStep === index
+                            ? "bg-[#2b4c9a] text-white shadow-[0_10px_30px_rgba(43,76,154,0.35)] scale-110"
+                            : "bg-white text-[#94a3b8] border border-[#dbe4ff]"
+                        }
+                      `}
+                    >
+                      <ArrowRight size={16} />
                     </div>
                   </div>
                 )}
