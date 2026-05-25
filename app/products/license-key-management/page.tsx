@@ -203,7 +203,7 @@ export default function LicenseKeyManagementPage() {
       
 
     {/* PROCESS / TIMELINE SECTION */}
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-16 bg-white overflow-hidden">
 
     {/* BG EFFECTS */}
     <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
@@ -221,7 +221,7 @@ export default function LicenseKeyManagementPage() {
             How It Works
         </p>
 
-        <h2 className="mt-6 text-4xl md:text-5xl font-black text-[#10204b] leading-tight">
+        <h2 className="mt-6 text-4xl md:text-4xl font-black text-[#10204b] leading-tight">
             Powerful Features.
             <span className="text-[#2b4c9a]"> Simple Process.</span>
         </h2>
@@ -346,12 +346,12 @@ export default function LicenseKeyManagementPage() {
 
     </section>
 
-<ProcessChart/>
+    <ProcessChart/>
 
       {/* DASHBOARD SECTION */}
       <section
         id="features"
-        className="relative py-24 bg-[#F8FAFF]"
+        className="relative py-16 bg-[#F8FAFF]"
       >
 
         <div className="container px-6 mx-auto">
@@ -380,7 +380,7 @@ export default function LicenseKeyManagementPage() {
                 Smarter Licensing
               </p>
 
-              <h2 className="mt-6 text-5xl font-black leading-tight text-[#10204b]">
+              <h2 className="mt-6 text-4xl font-black leading-tight text-[#10204b]">
                 Everything You Need
                 <span className="text-[#2b4c9a]"> For License Control</span>
               </h2>
@@ -395,7 +395,7 @@ export default function LicenseKeyManagementPage() {
                 ].map((item, index) => (
                   <div key={index} className="flex gap-5">
 
-                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shrink-0">
                       <ShieldCheck size={26} />
                     </div>
 
@@ -429,7 +429,7 @@ export default function LicenseKeyManagementPage() {
 
         <div className="container px-6 mx-auto">
 
-          <div className="bg-[#F8FAFF] border border-[#EEF2FF] rounded-[40px] p-10 lg:p-16">
+          <div className="bg-[#1a2e5e] border border-[#EEF2FF] rounded-[40px] p-10 lg:p-16">
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
