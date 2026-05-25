@@ -332,17 +332,7 @@ export default function ProcessChart() {
                       items-center
                     "
                   >
-                    {/* LINE */}
-                    <div
-                      className={`
-                        h-[2px] w-10 transition-all duration-500
-                        ${
-                          activeStep === index
-                            ? "bg-[#2b4c9a]"
-                            : "bg-[#cbd5e1]"
-                        }
-                      `}
-                    />
+
 
                     {/* ARROW */}
                     <div
