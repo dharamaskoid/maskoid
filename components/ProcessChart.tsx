@@ -225,7 +225,7 @@ function StepCard({
 
         {/* ICON (low visible always, even active) */}
         <div
-          className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mt-3"
           style={{
             background: active
               ? "rgba(255,255,255,0.12)"
