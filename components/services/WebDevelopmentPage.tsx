@@ -94,12 +94,12 @@ const caseStudies = [
     image: "/images/gajanand-preview.png"
   },
   {
-    domain: "ApexLogistics.io",
-    industry: "Supply Chain & Transportation",
-    techStack: ['React', 'Next.js', 'Tailwind CSS', 'Real-time Tracking API', 'Mapbox GL'],
-    desc: "Apex Logistics required an enterprise portal to manage complex fleet dispatch operations. We engineered a high-performance headless client dashboard integrated with live telemetry data loops, yielding sharp drops in system latency and manual status cross-checking overhead.",
-    outcomes: ["40% Faster dispatch latency", "Real-time tracking updates", "Seamless custom dashboard UI"],
-    image: "/images/logistics-preview.jpg"
+    domain: "KleanTouch.co.uk",
+    industry: "Commercial Cleaning Services (UK)",
+    techStack: ['Wordpress CMS', 'Responsive Design', 'Speed Optimization', 'SEO-Friendly Architecture', 'Contact Integrations'],
+    desc: " UK Tech Studies needed a platform to attract and inform aspiring students planning to study abroad. We created a content-driven website with dedicated sections for courses, visa guidance, and admission processes. With blog capabilities and lead capture forms, the platform became a powerful marketing tool for educational consultants.", 
+    outcomes: ["Increased user time-on-site", "steady lead capture", "scalable content expansion potential"],
+    image: "/images/KleanTouch.png"
   }
 ];
 
