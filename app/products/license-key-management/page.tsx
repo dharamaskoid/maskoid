@@ -550,59 +550,7 @@ export default function LicenseKeyManagementPage() {
 
         </div>
 
-        {/* CUSTOM ANIMATION */}
-        <style jsx>{`
-          @keyframes fadeInLeft {
-            from {
-              opacity: 0;
-              transform: translateX(-50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-
-          @keyframes fadeInRight {
-            from {
-              opacity: 0;
-              transform: translateX(50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-
-          @keyframes float {
-            0% {
-              transform: translateY(0px);
-            }
-            50% {
-              transform: translateY(-20px);
-            }
-            100% {
-              transform: translateY(0px);
-            }
-          }
-
-          @keyframes shimmer {
-            0% {
-              transform: translateX(-100%);
-            }
-            100% {
-              transform: translateX(200%);
-            }
-          }
-
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-          }
-
-          .animate-shimmer {
-            animation: shimmer 3s linear infinite;
-          }
-        `}</style>
+        
 
       </section>
 
