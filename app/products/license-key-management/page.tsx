@@ -458,29 +458,29 @@ export default function LicenseKeyManagementPage() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full h-14 px-5 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full h-14 px-5 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="w-full h-14 px-5 rounded-xl border border-[#dce7ff] bg-white outline-none"
+                  className="w-full py-3 px-6 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <textarea
-                  rows={5}
+                  rows={3}
                   placeholder="Your Message"
                   className="w-full p-5 rounded-xl border border-[#dce7ff] bg-white outline-none"
                 />
 
                 <button
-                  className="w-full h-14 rounded-xl bg-[#2b4c9a] text-white font-semibold hover:bg-[#1f3d84] transition"
+                  className="w-full py-3 px-6 rounded-xl bg-[#2b4c9a] text-white font-semibold hover:bg-[#1f3d84] transition"
                 >
                   Send Message
                 </button>
