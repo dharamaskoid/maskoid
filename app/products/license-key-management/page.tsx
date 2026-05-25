@@ -205,41 +205,93 @@ export default function LicenseKeyManagementPage() {
     <ProcessChart/>
 
       {/* DASHBOARD SECTION */}
-      <section
-        id="features"
-        className="relative py-16 bg-[#F8FAFF]"
-      >
-
+      <section id="features" className="relative py-16 bg-[#F8FAFF]">
         <div className="container px-6 mx-auto">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* IMAGE */}
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
 
-              <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
-
-              <Image
-                src="/images/license-key2.png"
-                alt="Dashboard"
-                width={1000}
-                height={700}
-                className="relative z-10 rounded-3xl shadow-[0_30px_80px_rgba(43,76,154,0.12)]"
+              <motion.div
+                animate={{
+                  scale: [1, 1.05, 1],
+                  opacity: [0.4, 0.6, 0.4],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"
               />
 
-            </div>
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  rotate: -1,
+                }}
+                transition={{ duration: 0.4 }}
+              >
+                <Image
+                  src="/images/license-key2.png"
+                  alt="Dashboard"
+                  width={1000}
+                  height={700}
+                  className="relative z-10 rounded-3xl shadow-[0_30px_80px_rgba(43,76,154,0.12)]"
+                />
+              </motion.div>
+
+            </motion.div>
 
             {/* CONTENT */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
+              <motion.p
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#2b4c9a] mr-2 animate-pulse" />
                 Smarter Licensing
-              </p>
+              </motion.p>
 
-              <h2 className="mt-6 text-4xl font-black leading-tight text-[#10204b]">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, duration: 0.7 }}
+                className="mt-6 text-4xl font-black leading-tight text-[#10204b]"
+              >
                 Everything You Need
-                <span className="text-[#2b4c9a]"> For License Control</span>
-              </h2>
+                <span className="relative inline-block text-[#2b4c9a]">
+
+                  {" "}For License Control
+
+                  <motion.span
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.7, duration: 0.8 }}
+                    className="absolute left-0 bottom-1 h-[8px] bg-blue-200/50 rounded-full -z-10"
+                  />
+
+                </span>
+              </motion.h2>
 
               <div className="space-y-8 mt-10">
 
@@ -249,11 +301,29 @@ export default function LicenseKeyManagementPage() {
                   "Realtime monitoring & tracking",
                   "Scalable architecture for enterprise use",
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-5">
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: 0.2 + index * 0.15,
+                      duration: 0.6,
+                    }}
+                    whileHover={{ x: 8 }}
+                    className="flex gap-5"
+                  >
 
-                    <div className="w-14 h-14 rounded-xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shrink-0">
+                    <motion.div
+                      whileHover={{
+                        rotate: 8,
+                        scale: 1.08,
+                      }}
+                      transition={{ duration: 0.3 }}
+                      className="w-14 h-14 rounded-xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center shrink-0 shadow-sm"
+                    >
                       <ShieldCheck size={26} />
-                    </div>
+                    </motion.div>
 
                     <div>
 
@@ -267,17 +337,16 @@ export default function LicenseKeyManagementPage() {
 
                     </div>
 
-                  </div>
+                  </motion.div>
                 ))}
 
               </div>
 
-            </div>
+            </motion.div>
 
           </div>
 
         </div>
-
       </section>
 
       {/* CONTACT SECTION */}
