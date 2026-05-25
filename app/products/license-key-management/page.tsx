@@ -352,8 +352,8 @@ export default function LicenseKeyManagementPage() {
       <section className="relative py-16 bg-white overflow-hidden">
 
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-200/20 blur-[120px] rounded-full animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-indigo-200/20 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-200/20 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-200/20 blur-[120px] rounded-full animate-pulse" />
 
         <div className="container px-6 mx-auto">
 
@@ -363,19 +363,32 @@ export default function LicenseKeyManagementPage() {
               bg-[#1a2e5e]
               border border-[#EEF2FF]
               rounded-2xl
-              p-10 lg:p-16
+              p-10
+              lg:p-16
               overflow-hidden
-              shadow-[0_30px_80px_rgba(26,46,94,0.15)]
+              shadow-[0_30px_80px_rgba(26,46,94,0.18)]
+              hover:shadow-[0_40px_100px_rgba(26,46,94,0.28)]
+              transition-all
+              duration-500
             "
           >
 
-            {/* GRID PATTERN */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
+            {/* TOP LIGHT EFFECT */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
 
-            <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            {/* FLOATING CIRCLE */}
+            <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5 blur-3xl" />
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* LEFT */}
-              <div className="transition-all duration-700 hover:-translate-y-1">
+              <div
+                className="
+                  relative z-10
+                  opacity-0
+                  animate-[fadeInLeft_0.8s_ease_forwards]
+                "
+              >
 
                 <div
                   className="
@@ -383,9 +396,9 @@ export default function LicenseKeyManagementPage() {
                     bg-[#EEF4FF]
                     text-[#2b4c9a]
                     flex items-center justify-center
+                    shadow-[0_15px_40px_rgba(255,255,255,0.12)]
+                    hover:scale-105
                     transition-all duration-500
-                    hover:scale-105 hover:rotate-3
-                    shadow-[0_20px_50px_rgba(255,255,255,0.08)]
                   "
                 >
                   <Mail size={48} />
@@ -404,19 +417,24 @@ export default function LicenseKeyManagementPage() {
               </div>
 
               {/* FORM */}
-              <form className="space-y-5">
+              <form
+                className="
+                  relative z-10
+                  space-y-5
+                  opacity-0
+                  animate-[fadeInRight_0.8s_ease_forwards]
+                "
+              >
 
                 <input
                   type="text"
                   placeholder="Your Name"
                   className="
-                    w-full py-3 px-6 rounded-xl
-                    border border-[#dce7ff]
+                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
                     bg-white outline-none
+                    focus:ring-2 focus:ring-[#6EA8FF]
                     transition-all duration-300
-                    focus:border-[#6EA8FF]
-                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
-                    hover:shadow-md
+                    hover:scale-[1.01]
                   "
                 />
 
@@ -424,13 +442,11 @@ export default function LicenseKeyManagementPage() {
                   type="email"
                   placeholder="Your Email"
                   className="
-                    w-full py-3 px-6 rounded-xl
-                    border border-[#dce7ff]
+                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
                     bg-white outline-none
+                    focus:ring-2 focus:ring-[#6EA8FF]
                     transition-all duration-300
-                    focus:border-[#6EA8FF]
-                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
-                    hover:shadow-md
+                    hover:scale-[1.01]
                   "
                 />
 
@@ -438,13 +454,11 @@ export default function LicenseKeyManagementPage() {
                   type="text"
                   placeholder="Phone Number"
                   className="
-                    w-full py-3 px-6 rounded-xl
-                    border border-[#dce7ff]
+                    w-full py-3 px-6 rounded-xl border border-[#dce7ff]
                     bg-white outline-none
+                    focus:ring-2 focus:ring-[#6EA8FF]
                     transition-all duration-300
-                    focus:border-[#6EA8FF]
-                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
-                    hover:shadow-md
+                    hover:scale-[1.01]
                   "
                 />
 
@@ -452,13 +466,11 @@ export default function LicenseKeyManagementPage() {
                   rows={3}
                   placeholder="Your Message"
                   className="
-                    w-full p-5 rounded-xl
-                    border border-[#dce7ff]
+                    w-full p-5 rounded-xl border border-[#dce7ff]
                     bg-white outline-none
+                    focus:ring-2 focus:ring-[#6EA8FF]
                     transition-all duration-300
-                    focus:border-[#6EA8FF]
-                    focus:shadow-[0_0_0_4px_rgba(110,168,255,0.15)]
-                    hover:shadow-md
+                    hover:scale-[1.01]
                   "
                 />
 
@@ -468,21 +480,25 @@ export default function LicenseKeyManagementPage() {
                     w-full py-3 px-6 rounded-xl
                     bg-[#2b4c9a]
                     text-white font-semibold
-                    transition-all duration-500
                     hover:bg-[#1f3d84]
-                    hover:-translate-y-1
-                    hover:shadow-[0_20px_40px_rgba(43,76,154,0.35)]
-                    active:scale-[0.98]
+                    transition-all duration-500
+                    hover:scale-[1.02]
+                    hover:shadow-[0_15px_40px_rgba(43,76,154,0.35)]
                   "
                 >
+                  <span className="relative z-10">Send Message</span>
 
-                  {/* BUTTON SHINE EFFECT */}
-                  <span className="absolute inset-0 -translate-x-full hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-                  <span className="relative z-10">
-                    Send Message
-                  </span>
-
+                  {/* BUTTON SHINE */}
+                  <div
+                    className="
+                      absolute top-0 left-[-100%]
+                      w-full h-full
+                      bg-gradient-to-r from-transparent via-white/30 to-transparent
+                      skew-x-12
+                      hover:left-[120%]
+                      transition-all duration-1000
+                    "
+                  />
                 </button>
 
               </form>
@@ -492,6 +508,31 @@ export default function LicenseKeyManagementPage() {
           </div>
 
         </div>
+
+        {/* CUSTOM ANIMATION */}
+        <style jsx>{`
+          @keyframes fadeInLeft {
+            from {
+              opacity: 0;
+              transform: translateX(-50px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+
+          @keyframes fadeInRight {
+            from {
+              opacity: 0;
+              transform: translateX(50px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        `}</style>
 
       </section>
 
