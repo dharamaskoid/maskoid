@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -5,7 +7,7 @@ import { blogs } from "@/data/blogs";
 
 export default function BlogPage() {
   return (
-    <section className="bg-[#f8fafc] min-h-screen py-24">
+    <section className="bg-[#f8fafc] min-h-screen py-16">
 
       <div className="container mx-auto px-6">
 
