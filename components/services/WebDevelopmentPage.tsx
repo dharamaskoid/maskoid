@@ -91,7 +91,7 @@ const caseStudies = [
     techStack: ['WordPress', 'Inventory System', 'Google Maps', 'CTA Optimization', 'Mobile-Friendly UX'],
     desc: "Gajanand Motors needed a digital storefront for showcasing their inventory and services. We developed a fast-loading, clean, and search-optimized website with vehicle listing capabilities and easy inquiry options. Google Maps and click-to-call integration made it easier for local customers to connect.",
     outcomes: ["Boost in local discovery", "More service inquiries", "Improved digital presence"],
-    image: "/images/gajanand-preview.jpg"
+    image: "/images/gajanand-preview.png"
   },
   {
     domain: "ApexLogistics.io",
