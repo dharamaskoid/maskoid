@@ -328,11 +328,11 @@ export default function ProcessChart() {
                       absolute
                       top-1/2
                       -translate-y-1/2
+                      -right-[34px]
                       z-30
                       items-center
                     "
                   >
-
 
                     {/* ARROW */}
                     <div
