@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import GoogleReviews from "@/components/GoogleReviews";
 
@@ -174,7 +174,17 @@ const [currentIndex, setCurrentIndex] = useState(0);
     setCurrentIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
   };
 
+    // AUTO SLIDE
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const active = caseStudies[currentIndex];
+  
 
 
  const prevRef = useRef<HTMLButtonElement | null>(null);
