@@ -1390,7 +1390,7 @@ const formatNumber = (num: number, suffix: string) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="max-w-7xl mx-auto bg-[#0B1F4D] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14 rounded-2xl relative z-10 overflow-hidden"
+                  className="max-w-7xl mx-auto bg-[#1a2e5e] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14 rounded-2xl relative z-10 overflow-hidden"
                 >
 
                   {/* INNER TOP LIGHT */}
