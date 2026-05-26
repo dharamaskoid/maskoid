@@ -593,9 +593,9 @@ const formatNumber = (num: number, suffix: string) => {
                   >
 
                     {/* BADGE */}
-                    <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#3B82F6] text-xs font-semibold uppercase">
+                    <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#3B82F6] text-xs font-semibold uppercase">
                       About Maskoid
-                    </span>
+                    </p>
 
                     {/* HEADING */}
                     <h2 className="mt-6 text-4xl md:text-4xl font-bold leading-tight tracking-tight">
