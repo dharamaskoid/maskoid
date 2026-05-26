@@ -38,7 +38,7 @@ export default function Footer() {
         className="container mx-auto px-6 pt-12 pb-6 relative z-10"
       >
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 md:gap-12">
 
           {/* BRAND */}
           <motion.div variants={fadeUp}>
@@ -119,7 +119,7 @@ export default function Footer() {
           <motion.div variants={fadeUp}>
             <h3 className="font-semibold mb-5 text-white uppercase">Quick Links</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
-              {["Home", "About Us", "Services", "Projects", "Contact Us"].map((item, i) => (
+              {["Home", "About Us", "Blogs", "Contact Us"].map((item, i) => (
                 <li key={i}>
                   <a
                     href={`/${item.toLowerCase()}`}
@@ -162,40 +162,66 @@ export default function Footer() {
               </ul>
             </motion.div>
 
+            {/*Products */}
+
+            <motion.div variants={fadeUp}>
+              <h3 className="font-semibold mb-5 text-white uppercase">Products</h3>
+
+              <ul className="space-y-3 text-gray-300 text-sm">
+
+                {[
+                  { name: "Variable Data Printing Software", link: "/products/variable-data-printing-software" },
+                  { name: "License Key Management", link: "/products/license-key-management" },
+                ].map((item, i) => (
+                  <li key={i} className="group">
+
+                    <Link
+                      href={item.link}
+                      className="inline-block text-gray-300 hover:text-white transition"
+                    >
+                      {item.name}
+                    </Link>
+
+                  </li>
+                ))}
+
+              </ul>
+            </motion.div>
+
         <motion.div variants={fadeUp}>
-        <h3 className="font-semibold mb-4 text-white uppercase">Get in Touch</h3>
+            <h3 className="font-semibold mb-4 text-white uppercase">Get in Touch</h3>
 
-        <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-sm">
 
-            <div className="flex justify-between border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">India</span>
-            <div className="text-right text-gray-300 space-x-2">
-                <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
-                <span className="text-gray-600">•</span>
-                <a href="tel:+919898292466" className="hover:text-white">989 829 2466</a>
+                <div className="flex justify-between border-b border-white/5 pb-2">
+                <span className="text-gray-300 font-bold">India</span>
+                <div className="text-right text-gray-300 space-x-2">
+                    <a href="tel:+917574084008" className="hover:text-white">757 408 4008</a>
+                    <span className="text-gray-600">•</span>
+                    <a href="tel:+919898292466" className="hover:text-white">989 829 2466</a>
+                </div>
+                </div>
+
+                <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
+                <span className="text-gray-300 font-bold">USA</span>
+                <div className="text-right text-gray-300 space-x-2">
+                    <a href="tel:+17867721488" className="hover:text-white">+1 786 772 1488</a>
+                    <span className="text-gray-600">•</span>
+                    <a href="tel:+17869612992" className="hover:text-white">961 2992</a>
+                </div>
+                </div>
+
+                <div className="flex justify-between">
+                <span className="text-gray-300 font-bold">Email</span>
+                <a
+                    href="mailto:contact@maskoid.com"
+                    className="text-[#6EA8FF] hover:text-white"
+                >
+                    contact@maskoid.com
+                </a>
+                </div>        
+
             </div>
-            </div>
-
-            <div className="flex items-start justify-between gap-2 border-b border-white/5 pb-2">
-            <span className="text-gray-300 font-bold">USA</span>
-            <div className="text-right text-gray-300 space-x-2">
-                <a href="tel:+17867721488" className="hover:text-white">+1 786 772 1488</a>
-                <span className="text-gray-600">•</span>
-                <a href="tel:+17869612992" className="hover:text-white">961 2992</a>
-            </div>
-            </div>
-
-            <div className="flex justify-between">
-            <span className="text-gray-300 font-bold">Email</span>
-            <a
-                href="mailto:contact@maskoid.com"
-                className="text-[#6EA8FF] hover:text-white"
-            >
-                contact@maskoid.com
-            </a>
-            </div>        
-
-        </div>
         </motion.div>
 
 
