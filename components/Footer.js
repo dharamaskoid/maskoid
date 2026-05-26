@@ -119,7 +119,7 @@ export default function Footer() {
           <motion.div variants={fadeUp}>
             <h3 className="font-semibold mb-5 text-white uppercase">Quick Links</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
-              {["Home", "About Us", "Blogs", "Contact Us"].map((item, i) => (
+              {["Home", "About Us", "Projects", "Blogs", "Contact Us"].map((item, i) => (
                 <li key={i}>
                   <a
                     href={`/${item.toLowerCase()}`}
