@@ -885,136 +885,54 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* ================= COUNTER SECTION ================= */}
-              <section
-                ref={sectionRef}
-                className="relative py-20 overflow-hidden z-20 border-y border-[#dbe7ff] bg-gradient-to-b from-[#f8fbff] via-[#eef4ff] to-[#f8fbff]"
-              >
-
-                {/* PREMIUM BACKGROUND EFFECTS */}
-                <div className="absolute inset-0 overflow-hidden">
-
-                  {/* BLUR ORB 1 */}
-                  <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
-
-                  {/* BLUR ORB 2 */}
-                  <div className="absolute bottom-[-120px] right-[-120px] w-[280px] h-[280px] bg-indigo-300/30 rounded-full blur-3xl animate-pulse" />
-
-                  {/* GRID EFFECT */}
-                  <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
-
-                </div>
+              <section ref={sectionRef} className="relative py-16 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]">
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                  <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    transition={{ staggerChildren: 0.15 }}
-                    className="grid md:grid-cols-4 grid-cols-1 rounded-3xl overflow-hidden border border-white/40 bg-white/60 backdrop-blur-xl shadow-[0_10px_50px_rgba(43,76,154,0.08)]"
-                  >
+                  <div className="grid md:grid-cols-4 grid-cols-1">
 
                     {counterData.map((item, i) => (
-
-                      <motion.div
+                      <div
                         key={i}
-                        variants={{
-                          hidden: {
-                            opacity: 0,
-                            y: 40,
-                          },
-                          show: {
-                            opacity: 1,
-                            y: 0,
-                            transition: {
-                              duration: 0.7,
-                              ease: "easeOut",
-                            },
-                          },
-                        }}
-                        whileHover={{
-                          y: -8,
-                        }}
-                        className={`
-                          group relative flex items-center gap-5 px-8 py-10
-                          transition-all duration-500
-                          hover:bg-white/80
-                          hover:shadow-[0_15px_50px_rgba(43,76,154,0.10)]
-                          ${i !== counterData.length - 1
-                            ? "md:border-r border-[#dbe7ff]"
-                            : ""}
+                        className={`relative flex items-center gap-4 px-6 py-4
+                        ${i !== counterData.length - 1 ? "md:border-r border-[#dbe7ff]" : ""}
                         `}
                       >
 
-                        {/* HOVER GLOW */}
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-100/40 to-transparent pointer-events-none" />
-
                         {/* ICON */}
-                        <motion.div
-                          whileHover={{
-                            rotate: 6,
-                            scale: 1.08,
-                          }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 300,
-                          }}
-                          className="
-                            relative w-16 h-16 rounded-2xl
-                            bg-gradient-to-br from-white to-[#eef4ff]
-                            border border-white/70
-                            flex items-center justify-center
-                            text-[#2b4c9a]
-                            shadow-[0_8px_25px_rgba(43,76,154,0.10)]
-                            backdrop-blur-md
-                          "
-                        >
-
-                          {/* ICON RING */}
-                          <div className="absolute inset-0 rounded-2xl border border-blue-200/40" />
+                        <div className="w-16 h-16 rounded-2xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] shadow-sm">
 
                           {item.icon}
 
-                        </motion.div>
+                        </div>
 
                         {/* CONTENT */}
-                        <div className="relative z-10">
+                        <div>
 
                           {/* NUMBER */}
                           <div className="flex items-end gap-1 leading-none">
 
-                            <motion.span
-                              initial={{ opacity: 0, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ delay: i * 0.15 }}
-                              className="
-                                text-4xl md:text-5xl
-                                font-bold tracking-tight
-                                bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff]
-                                bg-clip-text text-transparent
-                              "
-                            >
+                            <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a]">
                               {formatNumber(counts[i], item.suffix)}
-                            </motion.span>
+                            </span>
 
-                            <span className="text-2xl font-bold text-[#2b4c9a] mb-1">
+                            <span className="text-2xl font-bold text-[#2b4c9a]">
                               {item.suffix}
                             </span>
 
                           </div>
 
                           {/* LABEL */}
-                          <p className="mt-2 text-sm text-[#5b6475] font-medium tracking-wide">
+                          <p className="mt-1 text-sm text-[#5b6475] font-medium">
                             {item.label}
                           </p>
 
                         </div>
 
-                      </motion.div>
-
+                      </div>
                     ))}
 
-                  </motion.div>
+                  </div>
 
                 </div>
 
