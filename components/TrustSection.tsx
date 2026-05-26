@@ -1,4 +1,7 @@
+
+
 import React from "react";
+import { motion } from "framer-motion";
 
 // ROW 1 LOGOS
 const logosRow1 = [
@@ -38,7 +41,13 @@ const BrandMarquee = () => {
     <section className="py-16 bg-[#EEF2FF] overflow-hidden">
 
         <div className="max-w-6xl mx-auto px-6 text-center mb-12">
-
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
             <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
                 Trusted by brands
             </p>
@@ -52,7 +61,7 @@ const BrandMarquee = () => {
             <p className="text-[#5b6475] mt-4 max-w-xl mx-auto animate-titleSub">
                 We help companies scale with high-performing digital systems.
             </p>
-
+          </motion.div>
         </div>
 
       <div className="space-y-10">
