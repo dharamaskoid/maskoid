@@ -1306,7 +1306,15 @@ const formatNumber = (num: number, suffix: string) => {
 
                 </div>
               </div>
-              <div className="text-center">
+              
+              {/* BOTTOM BUTTON */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center relative z-10"
+              >
 
                 <a
                   href="/projects"
@@ -1315,8 +1323,7 @@ const formatNumber = (num: number, suffix: string) => {
                   View More Projects
                 </a>
 
-
-              </div>
+              </motion.div>
               </section>
 
               {/* Testimonial */}
