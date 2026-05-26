@@ -1611,8 +1611,8 @@ export default function SEOServicePage() {
                       className="
                         relative z-10
                         w-full
-                        px-5 sm:px-8
-                        py-4
+                        px-6
+                        py-3
                         text-left
                         flex items-center justify-between gap-4
                       "
