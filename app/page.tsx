@@ -1410,7 +1410,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                       <motion.p
                         whileHover={{ scale: 1.03 }}
-                        className="inline-flex items-center px-4 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em]"
+                        className="inline-flex items-center px-4 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-[10px] sm:text-xs font-semibold uppercase"
                       >
                         Contact Us
                       </motion.p>
