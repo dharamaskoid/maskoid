@@ -1030,44 +1030,58 @@ const formatNumber = (num: number, suffix: string) => {
 
               <div className="max-w-6xl mx-auto px-6">
 
-                {/* HEADER */}
-                <div className="text-center mb-10">
-                  <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-                      Recent Work
-                  </p>
+              {/* HEADER */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="text-center mb-10"
+              >
 
+                <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
+                  Recent Work
+                </p>
 
-                  <h2 className="text-4xl font-bold text-[#1a2e5e] mt-3">
-                    Latest Completed <span className="text-[#2b4c9a]">Projects</span>
-                  </h2>
+                <h2 className="text-4xl font-bold text-[#1a2e5e] mt-3">
+                  Latest Completed <span className="text-[#2b4c9a]">Projects</span>
+                </h2>
 
-                  <p className="text-[#5b6475] mt-4 max-w-2xl mx-auto">
-                    We design and develop high-performance websites and marketing systems.
-                  </p>
-                </div>
+                <p className="text-[#5b6475] mt-4 max-w-2xl mx-auto">
+                  We design and develop high-performance websites and marketing systems.
+                </p>
 
-                {/* 🔥 TABS */}
-                 <div className="flex justify-center gap-4 mb-12 flex-wrap">
+              </motion.div>
 
-                  {["all", "web", "seo"].map((tab) => (
+              {/* 🔥 TABS */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex justify-center gap-4 mb-12 flex-wrap"
+              >
 
-                    <button
-                      key={tab}
-                      onClick={() => setActiveTab(tab)}
-                      className={`px-5 py-2 rounded-xl text-sm border transition-all duration-300 font-semibold ${
-                        activeTab === tab
-                          ? "bg-[#2b4c9a] text-white border-[#2b4c9a] shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
-                          : "bg-white text-[#5b6475] border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white"
-                      }`}
-                    >
+                {["all", "web", "seo"].map((tab) => (
 
-                      {tab.toUpperCase()}
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`px-5 py-2 rounded-xl text-sm border transition-all duration-300 font-semibold ${
+                      activeTab === tab
+                        ? "bg-[#2b4c9a] text-white border-[#2b4c9a] shadow-[0_10px_30px_rgba(43,76,154,0.25)]"
+                        : "bg-white text-[#5b6475] border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white"
+                    }`}
+                  >
 
-                    </button>
+                    {tab.toUpperCase()}
 
-                  ))}
+                  </button>
 
-                </div>
+                ))}
+
+              </motion.div>
+
 
                 {/* SLIDER WRAPPER */}
                 <div className="relative">
