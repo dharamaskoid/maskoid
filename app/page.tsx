@@ -885,40 +885,115 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* ================= COUNTER SECTION ================= */}
-              <section ref={sectionRef} className="relative py-16 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]">
+              {/* ================= COUNTER SECTION ================= */}
+              <section
+                ref={sectionRef}
+                className="relative py-16 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]"
+              >
+
+                {/* SUBTLE PREMIUM BACKGROUND GLOW */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-200/20 blur-3xl rounded-full pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
 
                   <motion.div
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true }}
-                    transition={{ staggerChildren: 0.15 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={{
+                      hidden: {},
+                      show: {
+                        transition: {
+                          staggerChildren: 0.15,
+                        },
+                      },
+                    }}
                     className="grid md:grid-cols-4 grid-cols-1"
                   >
 
                     {counterData.map((item, i) => (
-                      <div
+
+                      <motion.div
                         key={i}
-                        className={`relative flex items-center gap-4 px-6 py-4
-                        ${i !== counterData.length - 1 ? "md:border-r border-[#dbe7ff]" : ""}
+                        variants={{
+                          hidden: {
+                            opacity: 0,
+                            y: 50,
+                          },
+                          show: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                              duration: 0.7,
+                              ease: [0.25, 1, 0.5, 1],
+                            },
+                          },
+                        }}
+                        whileHover={{
+                          y: -8,
+                          transition: {
+                            duration: 0.3,
+                          },
+                        }}
+                        className={`
+                          relative flex items-center gap-4 px-6 py-6
+                          rounded-2xl
+                          transition-all duration-500
+                          hover:bg-white/50
+                          hover:shadow-[0_10px_35px_rgba(43,76,154,0.12)]
+                          group
+                          ${i !== counterData.length - 1
+                            ? "md:border-r border-[#dbe7ff]"
+                            : ""}
                         `}
                       >
 
+                        {/* HOVER GLOW */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl bg-gradient-to-br from-white/40 to-transparent pointer-events-none" />
+
                         {/* ICON */}
-                        <div className="w-16 h-16 rounded-2xl bg-[#eef4ff] border border-[#dbe7ff] flex items-center justify-center text-[#2b4c9a] shadow-sm">
+                        <motion.div
+                          whileHover={{
+                            scale: 1.08,
+                            rotate: 5,
+                          }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                          }}
+                          className="
+                            relative
+                            w-16 h-16 rounded-2xl
+                            bg-[#eef4ff]
+                            border border-[#dbe7ff]
+                            flex items-center justify-center
+                            text-[#2b4c9a]
+                            shadow-sm
+                          "
+                        >
+
+                          {/* ICON INNER GLOW */}
+                          <div className="absolute inset-0 rounded-2xl bg-white/40 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                           {item.icon}
 
-                        </div>
+                        </motion.div>
 
                         {/* CONTENT */}
-                        <div>
+                        <div className="relative z-10">
 
                           {/* NUMBER */}
-                          <div className="flex items-end gap-1 leading-none">
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                              delay: i * 0.15,
+                              duration: 0.5,
+                            }}
+                            className="flex items-end gap-1 leading-none"
+                          >
 
-                            <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a]">
+                            <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a] tracking-tight">
                               {formatNumber(counts[i], item.suffix)}
                             </span>
 
@@ -926,16 +1001,17 @@ const formatNumber = (num: number, suffix: string) => {
                               {item.suffix}
                             </span>
 
-                          </div>
+                          </motion.div>
 
                           {/* LABEL */}
-                          <p className="mt-1 text-sm text-[#5b6475] font-medium">
+                          <p className="mt-1 text-sm text-[#5b6475] font-medium transition-all duration-300 group-hover:text-[#2b4c9a]">
                             {item.label}
                           </p>
 
                         </div>
 
-                      </div>
+                      </motion.div>
+
                     ))}
 
                   </motion.div>
