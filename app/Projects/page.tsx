@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import { useState, useEffect, useRef } from "react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
