@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { useState, useEffect, useRef } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,7 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import type { ReactNode } from "react";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -33,6 +34,8 @@ const stagger = {
 
 
 export default function ProjectsPage() {
+
+const [activeTab, setActiveTab] = useState("all");
 
     return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
