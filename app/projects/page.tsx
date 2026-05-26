@@ -110,6 +110,8 @@ const [activeTab, setActiveTab] = useState("all");
           </div>
         </div>
       </section>
+
+
         {/*  RECENT LIVE PROJECTS (PREMIUM LAYOUT) */}
 
               <section className="relative py-16 bg-[#EEF2FF] text-white overflow-hidden">
@@ -121,29 +123,6 @@ const [activeTab, setActiveTab] = useState("all");
               </div>
 
               <div className="max-w-6xl mx-auto px-6">
-
-              {/* HEADER */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-                className="text-center mb-10"
-              >
-
-                <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-                  Recent Work
-                </p>
-
-                <h2 className="text-4xl font-bold text-[#1a2e5e] mt-3">
-                  Latest Completed <span className="text-[#2b4c9a]">Projects</span>
-                </h2>
-
-                <p className="text-[#5b6475] mt-4 max-w-2xl mx-auto">
-                  We design and develop high-performance websites and marketing systems.
-                </p>
-
-              </motion.div>
 
               {/* 🔥 TABS */}
               <motion.div
@@ -399,24 +378,7 @@ const [activeTab, setActiveTab] = useState("all");
                 </div>
               </div>
               
-              {/* BOTTOM BUTTON */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center relative z-10"
-              >
-
-                <a
-                  href="/projects"
-                  className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-[#2b4c9a] hover:bg-white hover:text-[#2b4c9a] transition-all duration-300 text-white font-semibold shadow-sm"
-                >
-                  View More Projects
-                </a>
-
-              </motion.div>
-              </section>         
+            </section>         
     </main>
   );
 }
