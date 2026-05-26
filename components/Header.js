@@ -55,7 +55,6 @@ export default function Header() {
             "About Us",
             "Services",
             "Products",
-            "Projects",
             "Blogs",
             "Contact Us",
           ].map((item) => {
@@ -356,10 +355,10 @@ export default function Header() {
               </AnimatePresence>
             </div>
 
-            {/* OTHER LINKS */}
+            {/* OTHER LINKS 
             <Link href="/projects" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Projects
-            </Link>
+            </Link>*/}
 
             <Link href="/blogs" className="block text-base font-semibold text-[#1a2e5e] hover:text-[#6EA8FF] transition">
               Blogs
