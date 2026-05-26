@@ -21,7 +21,7 @@ export default function Testimonials() {
                 scale: [1, 1.08, 1],
               }}
               transition={{
-                duration: 12,
+                duration: 22,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -36,7 +36,7 @@ export default function Testimonials() {
                 scale: [1, 1.05, 1],
               }}
               transition={{
-                duration: 14,
+                duration: 26,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -51,7 +51,7 @@ export default function Testimonials() {
                 x: [0, 15, 0],
               }}
               transition={{
-                duration: 8,
+                duration: 18,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -64,7 +64,7 @@ export default function Testimonials() {
                 x: [0, -20, 0],
               }}
               transition={{
-                duration: 10,
+                duration: 20,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -78,7 +78,7 @@ export default function Testimonials() {
                 scale: [1, 1.1, 1],
               }}
               transition={{
-                duration: 6,
+                duration: 14,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
