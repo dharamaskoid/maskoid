@@ -43,9 +43,7 @@ export default function Testimonials() {
               className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full"
             />
 
-            {/* GRID */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:32px_32px]"></div>
-
+            
             {/* FLOATING ORBS */}
             <motion.div
               animate={{
