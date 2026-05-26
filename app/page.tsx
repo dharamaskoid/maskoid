@@ -1336,25 +1336,84 @@ const formatNumber = (num: number, suffix: string) => {
               <section className="relative py-12 sm:py-16 lg:py-16 px-4 sm:px-6 bg-[#EEF2FF] overflow-hidden">
 
                 {/* 🌌 BACKGROUND */}
-                <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute -top-40 left-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#2b4c9a]/20 blur-[120px] rounded-full"></div>
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-                  <div className="absolute bottom-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#1a2e5e]/10 blur-[120px] rounded-full"></div>
+                  {/* LEFT GLOW */}
+                  <motion.div
+                    animate={{
+                      x: [0, 30, 0],
+                      y: [0, -20, 0],
+                    }}
+                    transition={{
+                      duration: 22,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute -top-40 left-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#2b4c9a]/20 blur-[120px] rounded-full"
+                  />
 
+                  {/* RIGHT GLOW */}
+                  <motion.div
+                    animate={{
+                      x: [0, -20, 0],
+                      y: [0, 30, 0],
+                    }}
+                    transition={{
+                      duration: 26,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute bottom-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#1a2e5e]/10 blur-[120px] rounded-full"
+                  />
+
+                  {/* GRID */}
                   <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:34px_34px]"></div>
+
+                  {/* CENTER LIGHT */}
+                  <motion.div
+                    animate={{
+                      opacity: [0.2, 0.4, 0.2],
+                      scale: [1, 1.05, 1],
+                    }}
+                    transition={{
+                      duration: 14,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/5 blur-3xl rounded-full"
+                  />
+
                 </div>
 
-                <div className="max-w-7xl mx-auto bg-[#0B1F4D] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14 rounded-2xl relative z-10 overflow-hidden">
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="max-w-7xl mx-auto bg-[#0B1F4D] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14 rounded-2xl relative z-10 overflow-hidden"
+                >
+
+                  {/* INNER TOP LIGHT */}
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
 
                   {/* GRID */}
                   <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                     {/* LEFT SIDE */}
-                    <div className="text-center lg:text-left">
+                    <motion.div
+                      initial={{ opacity: 0, x: -40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8 }}
+                      viewport={{ once: true }}
+                      className="text-center lg:text-left"
+                    >
 
-                      <p className="inline-flex items-center px-4 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em]">
+                      <motion.p
+                        whileHover={{ scale: 1.03 }}
+                        className="inline-flex items-center px-4 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#6ea8ff] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em]"
+                      >
                         Contact Us
-                      </p>
+                      </motion.p>
 
                       <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
                         Let’s Build Something{" "}
@@ -1368,37 +1427,70 @@ const formatNumber = (num: number, suffix: string) => {
                         designed to generate real business growth.
                       </p>
 
-                    </div>
+                    </motion.div>
 
                     {/* RIGHT SIDE */}
-                    <div className="relative w-full">
+                    <motion.div
+                      initial={{ opacity: 0, x: 40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8 }}
+                      viewport={{ once: true }}
+                      className="relative w-full"
+                    >
 
                       {/* FORM GLOW */}
-                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/20 blur-xl"></div>
+                      <motion.div
+                        animate={{
+                          opacity: [0.5, 0.8, 0.5],
+                        }}
+                        transition={{
+                          duration: 8,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
+                        className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/20 blur-xl"
+                      />
 
                       {/* FORM CARD */}
-                      <div className="relative bg-[#EEF2FF] border border-white/10 rounded-2xl p-5 sm:p-7 lg:p-8 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                      <motion.div
+                        whileHover={{
+                          y: -4,
+                        }}
+                        transition={{
+                          duration: 0.4,
+                        }}
+                        className="relative bg-[#EEF2FF] border border-white/10 rounded-2xl p-5 sm:p-7 lg:p-8 backdrop-blur-2xl shadow-[0_30px_80px_rgba(0,0,0,0.35)] overflow-hidden"
+                      >
 
-                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                        {/* SHINE EFFECT */}
+                        <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-1000 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent)] translate-x-[-100%] hover:translate-x-[100%]"></div>
+
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 relative z-10">
 
                           {/* INPUTS */}
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
 
-                            <input
+                            <motion.input
+                              whileFocus={{
+                                scale: 1.01,
+                              }}
                               name="name"
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Your Name"
-                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base transition-all duration-300"
                               required
                             />
 
-                            <input
+                            <motion.input
+                              whileFocus={{
+                                scale: 1.01,
+                              }}
                               name="email"
                               value={form.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base transition-all duration-300"
                               required
                             />
 
@@ -1407,52 +1499,71 @@ const formatNumber = (num: number, suffix: string) => {
                           {/* INPUTS */}
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
 
-                            <input
+                            <motion.input
+                              whileFocus={{
+                                scale: 1.01,
+                              }}
                               name="phone"
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="Phone Number"
-                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base transition-all duration-300"
                               required
                             />
 
-                            <input
+                            <motion.input
+                              whileFocus={{
+                                scale: 1.01,
+                              }}
                               name="subject"
                               value={form.subject}
                               onChange={handleChange}
                               placeholder="Project Type"
-                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base"
+                              className="h-11 sm:h-12 px-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] text-sm sm:text-base transition-all duration-300"
                             />
 
                           </div>
 
                           {/* TEXTAREA */}
-                          <textarea
+                          <motion.textarea
+                            whileFocus={{
+                              scale: 1.01,
+                            }}
                             name="message"
                             value={form.message}
                             onChange={handleChange}
                             rows={4}
                             placeholder="Tell us about your project..."
-                            className="w-full p-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] resize-none text-sm sm:text-base"
+                            className="w-full p-4 rounded-lg bg-white border border-[#dbe4ff] focus:border-[#2b4c9a] outline-none text-[#1a2e5e] resize-none text-sm sm:text-base transition-all duration-300"
                             required
                           />
 
                           {/* BUTTON */}
-                          <button
+                          <motion.button
+                            whileHover={{
+                              scale: 1.02,
+                              y: -2,
+                            }}
+                            whileTap={{
+                              scale: 0.98,
+                            }}
                             type="submit"
                             disabled={loading}
-                            className="w-full h-11 sm:h-12 cursor-pointer rounded-lg bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] hover:scale-[1.02] transition-all duration-300 font-semibold text-sm sm:text-base text-white shadow-lg"
+                            className="w-full h-11 sm:h-12 cursor-pointer rounded-lg bg-gradient-to-r from-[#2b4c9a] to-[#4f7cff] transition-all duration-300 font-semibold text-sm sm:text-base text-white shadow-lg"
                           >
                             {loading ? "Sending..." : "Send Message →"}
-                          </button>
+                          </motion.button>
 
                         </form>
 
-                      </div>
-                    </div>
+                      </motion.div>
+
+                    </motion.div>
 
                   </div>
-                </div>
+
+                </motion.div>
+
               </section>
 
 </main>
