@@ -889,7 +889,13 @@ const formatNumber = (num: number, suffix: string) => {
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                  <div className="grid md:grid-cols-4 grid-cols-1">
+                  <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    transition={{ staggerChildren: 0.15 }}
+                    className="grid md:grid-cols-4 grid-cols-1"
+                  >
 
                     {counterData.map((item, i) => (
                       <div
@@ -932,7 +938,7 @@ const formatNumber = (num: number, suffix: string) => {
                       </div>
                     ))}
 
-                  </div>
+                  </motion.div>
 
                 </div>
 
