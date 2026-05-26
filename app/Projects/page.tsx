@@ -9,11 +9,7 @@ import { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import {
-
-  ChevronLeft, 
-  ChevronRight,
-} from "lucide-react";
+import {ChevronLeft, ChevronRight,} from "lucide-react";
 
 
 
