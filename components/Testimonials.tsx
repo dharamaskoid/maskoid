@@ -5,10 +5,6 @@ import { Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 
 import "swiper/css";
-const fadeUp = {
-  hidden: { opacity: 0, y: 60 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
 
 export default function Testimonials() {
   return (
@@ -33,11 +29,8 @@ export default function Testimonials() {
 
           </div>
 
+          <div className="max-w-7xl mx-auto text-center relative z-10">
 
-          <motion.div
-            variants={fadeUp}
-            className="max-w-7xl mx-auto text-center relative z-10"
-          >
             {/* BADGE */}
             <p className="inline-flex items-center px-5 py-2 rounded-full bg-[#102347] border border-[#1f3d84] text-[#3B82F6] text-xs font-semibold uppercase">
               About Maskoid
@@ -148,7 +141,7 @@ export default function Testimonials() {
               </Swiper>
 
             </div>
-          </motion.div>
+          </div>
 
           <style jsx>{`
             .testimonial-swiper {
