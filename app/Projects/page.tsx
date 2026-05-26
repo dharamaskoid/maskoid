@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+
 import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import {ChevronLeft, ChevronRight,} from "lucide-react";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
 
@@ -69,7 +70,7 @@ const [activeTab, setActiveTab] = useState("all");
             />
 
             {/* GRID */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#1a2e5e_1px,transparent_1px),linear-gradient(to_bottom,#1a2e5e_1px,transparent_1px)] bg-[size:40px_40px]" />
+            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:40px_40px]" />
 
         </div>
 
