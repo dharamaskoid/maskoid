@@ -1089,17 +1089,29 @@ const formatNumber = (num: number, suffix: string) => {
                   {/* CUSTOM NAVIGATION */}
                   <div className="absolute inset-y-0 -left-6 -right-6 flex items-center justify-between z-30 pointer-events-none">
 
-                    <button className="projects-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
+                    <motion.button
+                      whileHover={{
+                        scale: 1.08,
+                        y: -2,
+                      }}
+                      className="projects-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]"
+                    >
 
                       <ChevronLeft size={20} />
 
-                    </button>
+                    </motion.button>
 
-                    <button className="projects-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
+                    <motion.button
+                      whileHover={{
+                        scale: 1.08,
+                        y: -2,
+                      }}
+                      className="projects-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]"
+                    >
 
                       <ChevronRight size={20} />
 
-                    </button>
+                    </motion.button>
 
                   </div>
 
@@ -1306,7 +1318,7 @@ const formatNumber = (num: number, suffix: string) => {
 
                 </div>
               </div>
-              
+
               {/* BOTTOM BUTTON */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
