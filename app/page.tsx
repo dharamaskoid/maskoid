@@ -885,7 +885,6 @@ const formatNumber = (num: number, suffix: string) => {
 
 
               {/* ================= COUNTER SECTION ================= */}
-              {/* ================= COUNTER SECTION ================= */}
               <section
                 ref={sectionRef}
                 className="relative py-16 bg-[#EEF4FF] overflow-hidden z-20 border-y border-[#dbe7ff]"
