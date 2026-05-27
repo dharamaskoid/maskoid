@@ -192,7 +192,7 @@ export default function SocialMediaMarketingPage() {
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
   const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
-  
+
   const faqs = [
     {
       question: "Which social media platforms do you manage?",
@@ -1739,7 +1739,7 @@ export default function SocialMediaMarketingPage() {
                         relative z-10
                         w-full
                         px-6
-                        py-5
+                        py-3
                         text-left
                         flex items-center justify-between gap-4
                       "
