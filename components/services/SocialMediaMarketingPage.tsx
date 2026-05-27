@@ -185,102 +185,67 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* CLIENT LOGOS */}
-      <section className="relative -mt-6 z-20">
+        <section className="py-8 bg-white border-y border-[#dbe7ff]">
+            <div className="container mx-auto px-6 relative">
 
-        <div className="container mx-auto px-6">
+                {/* NAV BUTTONS */}
+                <button
+                className="client-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition"
+                >
+                <ChevronLeft size={20} />
+                </button>
 
-          <div className="
-            relative
-            rounded-[32px]
-            border border-white/10
-            bg-white/80
-            backdrop-blur-2xl
-            shadow-[0_20px_80px_rgba(15,23,42,0.08)]
-            px-8 py-8
-            overflow-hidden
-          ">
+                <button
+                className="client-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white shadow-xl border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition"
+                >
+                <ChevronRight size={20} />
+                </button>
 
-            {/* BACKGROUND GLOW */}
-            <div className="absolute inset-0 pointer-events-none">
-
-              <div className="absolute top-0 left-20 w-40 h-40 bg-blue-100 blur-3xl rounded-full opacity-60"></div>
-
-              <div className="absolute bottom-0 right-20 w-40 h-40 bg-indigo-100 blur-3xl rounded-full opacity-60"></div>
-
-            </div>
-
-            {/* TOP TEXT */}
-            <div className="relative z-10 text-center mb-8">
-
-              <p className="text-sm font-semibold tracking-[0.25em] uppercase text-[#2b4c9a]">
-                Trusted Technologies
-              </p>
-
-            </div>
-
-            {/* SLIDER */}
-            <div className="relative">
-
-              {/* NAV */}
-              <button className="client-prev absolute left-0 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white shadow-lg border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition">
-                <ChevronLeft size={18} />
-              </button>
-
-              <button className="client-next absolute right-0 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white shadow-lg border flex items-center justify-center text-[#2b4c9a] hover:bg-[#2b4c9a] hover:text-white transition">
-                <ChevronRight size={18} />
-              </button>
-
-              {/* SWIPER */}
-              <Swiper
+                {/* SWIPER */}
+                <Swiper
                 modules={[Autoplay, Navigation]}
                 className="px-14"
                 loop={true}
                 speed={800}
                 spaceBetween={20}
+
                 autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                 }}
+
                 navigation={{
-                  prevEl: ".client-prev",
-                  nextEl: ".client-next",
+                    prevEl: ".client-prev",
+                    nextEl: ".client-next",
                 }}
+
                 breakpoints={{
-                  320: { slidesPerView: 2 },
-                  640: { slidesPerView: 4 },
-                  1024: { slidesPerView: 7 },
+                    320: { slidesPerView: 2 },
+                    640: { slidesPerView: 4 },
+                    1024: { slidesPerView: 7 },
                 }}
-              >
+                >
 
                 {logos.map((logo, i) => (
-                  <SwiperSlide key={i}>
-
-                    <div className="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0">
-
-                      <img
+                    <SwiperSlide key={i}>
+                    <div className="flex items-center justify-center h-16">
+                        <img
                         src={logo}
-                        alt="logo"
-                        className="h-10 md:h-12 object-contain"
-                      />
-
+                        alt="client logo"
+                        className="h-14 md:h-16 object-contain transition"
+                        />
                     </div>
-
-                  </SwiperSlide>
+                    </SwiperSlide>
                 ))}
 
-              </Swiper>
+                </Swiper>
 
             </div>
-
-          </div>
-
-        </div>
-
-      </section>
+        </section>
 
       {/* SERVICES */}
-        <section className="relative py-16 px-6 overflow-hidden">
+        <section className="relative py-8 px-6 overflow-hidden">
 
         {/* BG PATTERN */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
