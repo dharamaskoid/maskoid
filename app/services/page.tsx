@@ -2,6 +2,20 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { services } from "@/lib/services";
+import { motion } from 'framer-motion';
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
 
 export const metadata = {
   title: "Our Services | Maskoid",
@@ -11,6 +25,8 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
+         <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
+
             {/* HERO SECTION */}
             <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
@@ -165,5 +181,6 @@ export default function ServicesPage() {
 
       </div>
     </section>
+    </main>
   );
 }
