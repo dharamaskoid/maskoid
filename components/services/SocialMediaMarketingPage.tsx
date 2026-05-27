@@ -559,109 +559,155 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="relative py-16 overflow-hidden bg-[#1a2e5e]">
+      <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
 
+        {/* BACKGROUND EFFECTS */}
         <div className="absolute inset-0 pointer-events-none">
 
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+          <motion.div
+            animate={{
+              scale: [1, 1.15, 1],
+              opacity: [0.15, 0.3, 0.15],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[100px] rounded-full"
+          />
 
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+          <motion.div
+            animate={{
+              scale: [1.1, 1, 1.1],
+              opacity: [0.2, 0.35, 0.2],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/20 blur-[100px] rounded-full"
+          />
 
         </div>
 
-        <div className="container px-6 mx-auto relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
 
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider">
-              Why Choose Us
-            </p>
+            {/* LEFT CONTENT */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
 
-            <h2 className="mt-5 text-3xl md:text-4xl font-bold text-white leading-tight">
-              Features of Our
-              <span className="text-[#6EA8FF]"> Social Media Marketing</span>
-            </h2>
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-xl">
+                Why Choose Us
+              </p>
 
-            <p className="mt-5 text-[#B7C2D8] text-lg leading-relaxed">
-              We help businesses build strong social media presence through
-              creative strategies and data-driven campaigns.
-            </p>
+              <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
+                Social Media Marketing
+                <span className="text-[#6EA8FF]"> That Builds Real Brand Growth</span>
+              </h2>
 
-          </motion.div>
+              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
+                We help businesses grow through strategic social media marketing,
+                engaging content, paid campaigns, and data-driven audience targeting
+                designed to increase visibility, engagement, and conversions.
+              </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+            </motion.div>
 
-            {[
-              {
-                icon: <TrendingUp size={30} />,
-                title: "Growth Focused Strategies",
-                text: "We focus on strategies that increase followers, engagement, and conversions.",
-              },
-              {
-                icon: <ShieldCheck size={30} />,
-                title: "Brand Building",
-                text: "We create a consistent and powerful brand identity across all platforms.",
-              },
-              {
-                icon: <Users size={30} />,
-                title: "Audience Engagement",
-                text: "We help your business connect and engage with the right audience.",
-              },
-            ].map((item, index) => (
+            {/* RIGHT POINTS */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="space-y-8"
+            >
 
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.15 }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="group relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[28px] p-8 overflow-hidden hover:border-[#3B82F6]/30 hover:bg-white/[0.07] transition-all duration-500"
-              >
+              {[
+                {
+                  number: "01",
+                  title: "Platform-Specific Marketing Strategies",
+                  text: "We create customized social media strategies for Instagram, Facebook, LinkedIn, and other platforms based on your audience and business goals.",
+                },
+                {
+                  number: "02",
+                  title: "Creative Content & Brand Engagement",
+                  text: "Our team designs engaging visuals, reels, stories, and social content that strengthen brand identity and increase audience interaction.",
+                },
+                {
+                  number: "03",
+                  title: "Performance-Driven Paid Campaigns",
+                  text: "We run optimized social media advertising campaigns focused on reach, lead generation, conversions, and measurable business growth.",
+                },
+                {
+                  number: "04",
+                  title: "Analytics, Optimization & Scaling",
+                  text: "Using real-time analytics and performance tracking, we continuously optimize campaigns to improve engagement, ROI, and long-term growth.",
+                },
+              ].map((item, index) => (
 
-                <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/10 text-[#6EA8FF] flex items-center justify-center">
-                  {item.icon}
-                </div>
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{
+                    x: 12,
+                  }}
+                  transition={{
+                    duration: 0.35,
+                  }}
+                  className="group flex items-start gap-6 pb-8 border-b border-white/10"
+                >
 
-                <h3 className="mt-7 text-2xl font-bold text-white leading-snug">
-                  {item.title}
-                </h3>
+                  {/* NUMBER */}
+                  <div className="flex-shrink-0">
 
-                <p className="mt-5 text-[#B7C2D8] leading-relaxed">
-                  {item.text}
-                </p>
+                    <motion.div
+                      whileHover={{
+                        scale: 1.08,
+                        rotate: 4,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 220,
+                      }}
+                      className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500"
+                    >
 
-              </motion.div>
+                      <span className="text-xl font-bold text-[#6EA8FF] group-hover:text-white transition-all duration-500">
+                        {item.number}
+                      </span>
 
-            ))}
+                    </motion.div>
+
+                  </div>
+
+                  {/* CONTENT */}
+                  <div>
+
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-[#B7C2D8] leading-relaxed">
+                      {item.text}
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </motion.div>
 
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex justify-center mt-16"
-          >
-
-            <Link
-              href="/contact-us"
-              className="group inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold hover:-translate-y-1 transition-all duration-300"
-            >
-              Discuss Your Project
-            </Link>
-
-          </motion.div>
 
         </div>
 
