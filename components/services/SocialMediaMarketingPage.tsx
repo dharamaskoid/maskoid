@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
@@ -61,6 +61,66 @@ const stagger = {
   },
 };
 
+// Sample Case Studies Array matching your theme parameters
+const caseStudies = [
+  {
+    domain: "GajanandMotors.com",
+    industry: "Automotive / Vehicle Dealership",
+    techStack: ['WordPress', 'Inventory System', 'Google Maps', 'CTA Optimization', 'Mobile-Friendly UX'],
+    desc: "Gajanand Motors needed a digital storefront for showcasing their inventory and services. We developed a fast-loading, clean, and search-optimized website with vehicle listing capabilities and easy inquiry options. Google Maps and click-to-call integration made it easier for local customers to connect.",
+    outcomes: ["Boost in local discovery", "More service inquiries", "Improved digital presence"],
+    image: "/images/gajanand-preview.png"
+  },
+  {
+    domain: "KleanTouch.co.uk",
+    industry: "Commercial Cleaning Services (UK)",
+    techStack: ['Wordpress CMS', 'Responsive Design', 'Speed Optimization', 'SEO-Friendly Architecture', 'Contact Integrations'],
+    desc: " UK Tech Studies needed a platform to attract and inform aspiring students planning to study abroad. We created a content-driven website with dedicated sections for courses, visa guidance, and admission processes. With blog capabilities and lead capture forms, the platform became a powerful marketing tool for educational consultants.", 
+    outcomes: ["Increased user time-on-site", "steady lead capture", "scalable content expansion potential"],
+    image: "/images/KleanTouch.png"
+  }
+];
+
+// Explicitly type your objects to satisfy Framer Motion's strict types
+const containerVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut", 
+      staggerChildren: 0.15 
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { duration: 0.4, ease: "easeOut" } 
+  }
+};
+
+const slideVariants: Variants = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 100 : -100,
+    opacity: 0
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  },
+  exit: (dir: number) => ({
+    x: dir < 0 ? 100 : -100,
+    opacity: 0,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  })
+};
+
 const solutions = [
   {
     icon: <FaInstagram size={34} />,
@@ -102,6 +162,32 @@ export default function SocialMediaMarketingPage() {
     "/images/Client-1-13.png",
     "/images/Client-1-14.png",
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  
+   
+  
+    const handleNext = () => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % caseStudies.length);
+    };
+  
+    const handlePrev = () => {
+      setDirection(-1);
+      setCurrentIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
+    };
+  
+      // AUTO SLIDE
+    useEffect(() => {
+      const interval = setInterval(() => {
+        handleNext();
+      }, 4000);
+  
+      return () => clearInterval(interval);
+    }, []);
+  
+    const active = caseStudies[currentIndex];
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
@@ -1103,6 +1189,262 @@ export default function SocialMediaMarketingPage() {
             ))}
 
           </div>
+
+        </div>
+
+      </section>
+
+      {/* CASE STUDY SHOWCASE */}
+      <section className="relative w-full bg-[#F8FAFF] overflow-hidden py-16 flex items-center">
+
+        {/* BG EFFECTS */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-pink-500/5 blur-[120px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+        <div className="container mx-auto px-6 relative z-10 w-full">
+
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+
+            <motion.p
+              whileHover={{
+                scale: 1.04,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+            >
+              Campaign Success Stories
+            </motion.p>
+
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Social Media Campaigns That
+              <span className="text-[#2b4c9a]"> Delivered Results</span>
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              Explore how our social media marketing strategies helped brands
+              increase engagement, generate leads, and grow online visibility.
+            </p>
+
+          </motion.div>
+
+          {/* MAIN CONTENT */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 mt-10 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full"
+          >
+
+            {/* LEFT CONTENT */}
+            <div className="lg:col-span-5 flex flex-col space-y-6 text-left w-full order-2 lg:order-1">
+
+              <AnimatePresence mode="wait" custom={direction}>
+
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  className="space-y-6"
+                >
+
+                  {/* BRAND */}
+                  <div>
+
+                    <h3 className="mt-5 text-3xl md:text-3xl font-bold text-[#1a2e5e] leading-tight">
+                      {active.domain}
+                    </h3>
+
+                    <p className="text-xs text-[#2b4c9a] font-mono tracking-wider mt-1 uppercase font-semibold">
+                      {active.industry}
+                    </p>
+
+                  </div>
+
+                  {/* PLATFORMS */}
+                  <div className="flex flex-wrap gap-2 pt-1">
+
+                    {active.techStack.map((tech, idx) => (
+
+                      <span
+                        key={idx}
+                        className="text-[11px] font-semibold text-[#1a2e5e] bg-[#EEF2FF] border border-[#2b4c9a]/10 px-3 py-1 rounded-lg shadow-sm"
+                      >
+                        {tech}
+                      </span>
+
+                    ))}
+
+                  </div>
+
+                  {/* DESCRIPTION */}
+                  <p className="text-gray-500 leading-relaxed">
+                    {active.desc}
+                  </p>
+
+                  {/* OUTCOMES */}
+                  <div className="space-y-2.5 border-t border-gray-200/60">
+
+                    <h4 className="mt-5 text-xl md:text-xl font-bold text-[#1a2e5e] leading-tight">
+                      Campaign Results:
+                    </h4>
+
+                    {active.outcomes.map((outcome, idx) => (
+
+                      <motion.div
+                        key={idx}
+                        variants={itemVariants}
+                        className="flex items-center gap-3"
+                      >
+
+                        <CheckCircle2
+                          size={16}
+                          className="text-[#2b4c9a] shrink-0"
+                        />
+
+                        <p className="text-gray-500 leading-relaxed">
+                          {outcome}
+                        </p>
+
+                      </motion.div>
+
+                    ))}
+
+                  </div>
+
+                </motion.div>
+
+              </AnimatePresence>
+
+              {/* NAVIGATION */}
+              <div className="flex items-center justify-between pt-6 border-t border-gray-200/60">
+
+                <div className="flex items-center gap-2">
+
+                  <button
+                    onClick={handlePrev}
+                    className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#1a2e5e] hover:bg-[#2b4c9a] hover:text-white transition-all shadow-sm flex items-center justify-center active:scale-95"
+                  >
+                    <ChevronLeft size={18} strokeWidth={2.5} />
+                  </button>
+
+                  <button
+                    onClick={handleNext}
+                    className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#1a2e5e] hover:bg-[#2b4c9a] hover:text-white transition-all shadow-sm flex items-center justify-center active:scale-95"
+                  >
+                    <ChevronRight size={18} strokeWidth={2.5} />
+                  </button>
+
+                </div>
+
+                {/* DOTS */}
+                <div className="flex gap-1.5">
+
+                  {caseStudies.map((_, idx) => (
+
+                    <div
+                      key={idx}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        idx === currentIndex
+                          ? "w-6 bg-[#2b4c9a]"
+                          : "w-2 bg-gray-300"
+                      }`}
+                    />
+
+                  ))}
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* RIGHT PREVIEW */}
+            <div className="lg:col-span-7 relative w-full flex items-center justify-center min-h-[350px] sm:min-h-[440px] md:min-h-[480px] order-1 lg:order-2">
+
+              <AnimatePresence mode="wait" custom={direction}>
+
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  className="w-full max-w-[580px] bg-white rounded-2xl border border-gray-200 p-2.5 shadow-[0_30px_70px_rgba(26,46,94,0.08)] relative z-10 group"
+                >
+
+                  {/* TOP BAR */}
+                  <div className="flex items-center gap-1.5 pb-2.5 px-1.5 border-b border-gray-100">
+
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+
+                    <div className="w-48 h-3.5 bg-gray-50 rounded-md ml-4 border border-gray-200/60 flex items-center px-2 text-[8px] text-gray-400 font-mono">
+                      https://{active.domain}
+                    </div>
+
+                  </div>
+
+                  {/* IMAGE */}
+                  <div className="w-full h-[240px] sm:h-[320px] md:h-[350px] rounded-xl overflow-hidden mt-2.5 bg-gray-50 relative border border-gray-100">
+
+                    <img
+                      src={active.image}
+                      alt={`${active.domain} Social Media Campaign`}
+                      className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
+                    />
+
+                  </div>
+
+                </motion.div>
+
+              </AnimatePresence>
+
+              {/* FLOATING CARD */}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute bottom-[-15px] right-[2%] w-[170px] bg-white border border-gray-200/80 rounded-xl p-4 shadow-[0_20px_40px_rgba(26,46,94,0.06)] z-20 hidden sm:block text-left"
+              >
+
+                <div className="w-7 h-7 rounded-lg bg-[#F0F4FF] border border-blue-100 text-[#2b4c9a] flex items-center justify-center mb-2.5 shadow-sm">
+
+                  <TrendingUp size={14} strokeWidth={2.5} />
+
+                </div>
+
+                <div className="text-[9px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">
+                  Campaign Growth
+                </div>
+
+                <h4 className="text-xs font-black text-[#1a2e5e] flex items-center gap-1.5">
+                  High Engagement
+                  <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                </h4>
+
+              </motion.div>
+
+            </div>
+
+          </motion.div>
 
         </div>
 
