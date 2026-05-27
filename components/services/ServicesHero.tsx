@@ -19,7 +19,7 @@ const fadeUp = {
 
 export default function ServicesHero() {
   return (
-    
+
     <section className="relative bg-[#1a2e5e] text-white overflow-hidden">
 
       {/* BACKGROUND */}
@@ -58,32 +58,6 @@ export default function ServicesHero() {
               we create premium digital solutions focused on growth, visibility, and conversions.
             </p>
 
-            {/* BUTTONS */}
-            <div className="mt-10 flex flex-wrap gap-4">
-
-              {/* PRIMARY */}
-              <Link href="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-7 py-3 rounded-xl bg-[#2b4c9a] hover:bg-[#244286] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300"
-                >
-                  Start Your Project
-                </motion.button>
-              </Link>
-
-              {/* SECONDARY */}
-              <Link href="/work">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-7 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-semibold transition-all duration-300"
-                >
-                  See Our Results
-                </motion.button>
-              </Link>
-
-            </div>
 
           </motion.div>
 
