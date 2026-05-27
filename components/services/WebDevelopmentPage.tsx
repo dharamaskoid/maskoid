@@ -1060,49 +1060,48 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
           {/* RIGHT TECHNOLOGY STACK */}
           <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
 
-           {[
-            {
-              icon: <Globe size={30} strokeWidth={2} />,
-              title: "WordPress",
-              color: "text-[#21759B]",
-              position: "md:col-start-1 md:row-start-1",
-            },
+            {[
+              {
+                icon: <Globe size={30} strokeWidth={2} />,
+                title: "WordPress",
+                color: "text-[#21759B]",
+                position: "md:col-start-1 md:row-start-1",
+              },
 
-            {
-              icon: <ShoppingBag size={30} strokeWidth={2} />,
-              title: "Shopify",
-              color: "text-[#95BF47]",
-              position: "md:col-start-3 md:row-start-1",
-            },
+              {
+                icon: <ShoppingBag size={30} strokeWidth={2} />,
+                title: "Shopify",
+                color: "text-[#95BF47]",
+                position: "md:col-start-3 md:row-start-1",
+              },
 
-            {
-              icon: <FileCode2 size={30} strokeWidth={2} />,
-              title: "PHP",
-              color: "text-[#777BB4]",
-              position: "md:col-start-5 md:row-start-1",
-            },
+              {
+                icon: <FileCode2 size={30} strokeWidth={2} />,
+                title: "PHP",
+                color: "text-[#777BB4]",
+                position: "md:col-start-5 md:row-start-1",
+              },
 
-            {
-              icon: <LayoutDashboard size={30} strokeWidth={2} />,
-              title: "Elementor",
-              color: "text-pink-500",
-              position: "md:col-start-2 md:row-start-2",
-            },
+              {
+                icon: <LayoutDashboard size={30} strokeWidth={2} />,
+                title: "Elementor",
+                color: "text-pink-500",
+                position: "md:col-start-2 md:row-start-2",
+              },
 
-            {
-              icon: <Store size={30} strokeWidth={2} />,
-              title: "WooCommerce",
-              color: "text-purple-500",
-              position: "md:col-start-4 md:row-start-2",
-            },
+              {
+                icon: <Store size={30} strokeWidth={2} />,
+                title: "WooCommerce",
+                color: "text-purple-500",
+                position: "md:col-start-4 md:row-start-2",
+              },
 
-            {
-              icon: <ServerCog size={30} strokeWidth={2} />,
-              title: "Custom CMS",
-              color: "text-orange-400",
-              position: "md:col-start-6 md:row-start-2",
-            },
-          ]}
+              {
+                icon: <ServerCog size={30} strokeWidth={2} />,
+                title: "Custom CMS",
+                color: "text-orange-400",
+                position: "md:col-start-6 md:row-start-2",
+              },
             ].map((item, index) => (
 
               <motion.div
