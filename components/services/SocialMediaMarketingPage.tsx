@@ -19,6 +19,7 @@ import {
   Users,
   HeartHandshake,
   TrendingUp,
+  CheckCircle2,
   ShieldCheck,
   Rocket,
   PenTool,
