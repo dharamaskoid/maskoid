@@ -95,7 +95,6 @@ export default function ServicesPage() {
 
                     <span className="text-[#2b4c9a] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
                         Explore Service
-                        <span>→</span>
                     </span>
 
                     {/* ICON BOX */}
