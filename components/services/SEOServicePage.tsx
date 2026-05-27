@@ -300,7 +300,7 @@ export default function SEOServicePage() {
                 <img
                   src="/images/seo.png"
                   alt="SEO"
-                  className="h-[220px] sm:h-[360px] md:h-[340px] lg:h-[360px] w-auto max-w-full object-contain"
+                  className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
 
               </motion.div>
