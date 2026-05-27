@@ -905,95 +905,202 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* TECHNOLOGIES */}
-      <section className="relative py-16 bg-white overflow-hidden">
+      <section className="relative w-full bg-[#EEF2FF] overflow-hidden py-16 flex items-center">
 
-        <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+        {/* BG GRID */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
 
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-            {/* LEFT */}
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
+
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
+
+          {/* DECORATIVE RINGS */}
+          <motion.div
+            animate={{
+              rotate: [0, 3, 0],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block"
+          >
+
+            <div className="absolute inset-0 border border-pink-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
+
+            <div className="absolute inset-0 border border-blue-500/30 rounded-[50%] rotate-[-7deg]"></div>
+
+            <div className="absolute inset-12 border border-indigo-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
+
+            {/* LIGHTS */}
             <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
+              animate={{
+                scale: [1, 1.15, 1],
+                opacity: [0.4, 0.7, 0.4],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+              }}
+              className="absolute top-1/4 left-1/4 w-44 h-44 bg-pink-500/20 blur-[70px] rounded-full"
+            ></motion.div>
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                Platforms We Use
-              </p>
-
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1a2e5e] leading-tight">
-                Powerful Social Platforms
-                <span className="text-[#2b4c9a]"> For Brand Growth</span>
-              </h2>
-
-              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
-                We use the latest social media tools and platforms to maximize
-                engagement, leads, and ROI.
-              </p>
-
-            </motion.div>
-
-            {/* RIGHT */}
             <motion.div
-              variants={stagger}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+              }}
+              className="absolute bottom-1/4 right-1/3 w-44 h-44 bg-blue-500/15 blur-[70px] rounded-full"
+            ></motion.div>
+
+          </motion.div>
+
+          {/* LEFT CONTENT */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="relative z-10"
+          >
+
+            <motion.p
+              whileHover={{
+                scale: 1.05,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
             >
+              Platforms We Use
+            </motion.p>
 
-              {[
-                {
-                  name: "Instagram",
-                  icon: <FaInstagram size={42} />,
-                },
-                {
-                  name: "Facebook",
-                  icon: <FaFacebookF size={42} />,
-                },
-                {
-                  name: "LinkedIn",
-                  icon: <FaLinkedinIn size={42} />,
-                },
-                {
-                  name: "YouTube",
-                  icon: <FaYoutube size={42} />,
-                },
-                {
-                  name: "WhatsApp",
-                  icon: <MessageCircle size={42} />,
-                },
-                {
-                  name: "Google Ads",
-                  icon: <Globe size={42} />,
-                },
-              ].map((item, index) => (
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Powerful Social Platforms For
+              <span className="text-[#2b4c9a]"> Brand Growth</span>
+            </h2>
 
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed max-w-xl">
+              We use high-performing social media platforms and advertising channels
+              to increase engagement, reach the right audience, and generate
+              measurable business growth.
+            </p>
+
+          </motion.div>
+
+          {/* RIGHT PLATFORM STACK */}
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
+
+            {[
+              {
+                icon: <FaInstagram size={30} />,
+                title: "Instagram",
+                color: "text-pink-500",
+                position: "md:col-start-1 md:row-start-1",
+              },
+
+              {
+                icon: <FaFacebookF size={28} />,
+                title: "Facebook",
+                color: "text-blue-500",
+                position: "md:col-start-3 md:row-start-1",
+              },
+
+              {
+                icon: <FaLinkedinIn size={28} />,
+                title: "LinkedIn",
+                color: "text-sky-500",
+                position: "md:col-start-5 md:row-start-1",
+              },
+
+              {
+                icon: <FaYoutube size={30} />,
+                title: "YouTube",
+                color: "text-red-500",
+                position: "md:col-start-2 md:row-start-2",
+              },
+
+              {
+                icon: <MessageCircle size={30} strokeWidth={2} />,
+                title: "WhatsApp",
+                color: "text-green-500",
+                position: "md:col-start-4 md:row-start-2",
+              },
+
+              {
+                icon: <Globe size={30} strokeWidth={2} />,
+                title: "Google Ads",
+                color: "text-orange-400",
+                position: "md:col-start-6 md:row-start-2",
+              },
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className={`
+                  group
+                  relative
+                  overflow-hidden
+                  inline-flex whitespace-nowrap items-center gap-3
+                  bg-[#1a2e5e]
+                  backdrop-blur-xl
+                  border border-slate-800/80
+                  rounded-xl
+                  px-5 py-3
+                  w-fit h-14
+                  transition-all duration-500
+                  ${item.position}
+                `}
+              >
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                  <div className="absolute -top-10 right-0 w-24 h-24 bg-indigo-500/20 blur-3xl rounded-full"></div>
+
+                </div>
+
+                {/* ICON */}
                 <motion.div
-                  key={index}
-                  variants={fadeUp}
                   whileHover={{
-                    y: -10,
-                    scale: 1.03,
+                    scale: 1.15,
                   }}
-                  className="group relative bg-white border border-[#dbe7ff] rounded-[28px] p-6 md:p-8 flex flex-col items-center justify-center overflow-hidden shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)] transition-all duration-500"
+                  className={`relative z-10 flex items-center justify-center w-6 h-6 shrink-0 ${item.color}`}
                 >
-
-                  <div className="w-20 h-20 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
-                    {item.icon}
-                  </div>
-
-                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-[#1a2e5e] text-center">
-                    {item.name}
-                  </h3>
-
+                  {item.icon}
                 </motion.div>
 
-              ))}
+                {/* TEXT */}
+                <span className="relative z-10 text-lg font-medium text-slate-200 tracking-wide">
+                  {item.title}
+                </span>
 
-            </motion.div>
+              </motion.div>
+
+            ))}
 
           </div>
 
