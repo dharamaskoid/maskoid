@@ -387,18 +387,16 @@ export default function SocialMediaMarketingPage() {
         </section>
 
       {/* OUR SOLUTIONS */}
-      <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
+      <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
 
-        <div className="absolute inset-0 pointer-events-none">
+        {/* BACKGROUND BLUR */}
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-          <div className="absolute -top-40 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
-
-          <div className="absolute bottom-0 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
-
-        </div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
         <div className="container px-6 mx-auto relative z-10">
 
+          {/* HEADER */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -407,11 +405,11 @@ export default function SocialMediaMarketingPage() {
             className="text-center max-w-3xl mx-auto"
           >
 
-            <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider">
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-wider">
               Our Solutions
             </p>
 
-            <h2 className="mt-4 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
               Social Media Marketing
               <span className="text-[#2b4c9a]"> Solutions</span>
             </h2>
@@ -423,40 +421,136 @@ export default function SocialMediaMarketingPage() {
 
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+          {/* SOLUTIONS LIST */}
+          <div className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
 
-            {solutions.map((item, index) => (
+            {/* LEFT COLUMN */}
+            <div className="flex flex-col w-full">
 
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{
-                  y: -12,
-                }}
-                className="group relative bg-white border border-[#e8efff] rounded-[28px] p-8 text-center overflow-hidden shadow-[0_10px_30px_rgba(43,76,154,0.04)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.12)] transition-all duration-500"
-              >
+              {solutions.slice(0, 3).map((item, index) => (
 
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3B82F6] to-[#6EA8FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{
+                    x: 6,
+                  }}
+                  className="
+                    group
+                    relative
+                    flex items-start
+                    gap-6
+                    py-7
+                    border-b border-gray-200/70
+                    transition-all duration-300
+                    hover:pl-4
+                    cursor-pointer
+                  "
+                >
 
-                <div className="w-20 h-20 mx-auto rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
-                  {item.icon}
-                </div>
+                  {/* ICON */}
+                  <div className="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-white
+                    border border-gray-100
+                    shadow-[0_10px_30px_rgba(43,76,154,0.06)]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    shrink-0
+                    transition-all duration-300
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                  ">
+                    {item.icon}
+                  </div>
 
-                <h3 className="mt-7 text-xl font-bold text-[#1a2e5e]">
-                  {item.title}
-                </h3>
+                  {/* CONTENT */}
+                  <div className="flex-1">
 
-                <p className="mt-4 text-gray-500 leading-relaxed text-[15px]">
-                  {item.text}
-                </p>
+                    <h3 className="text-xl font-bold text-[#1a2e5e] tracking-tight">
+                      {item.title}
+                    </h3>
 
-              </motion.div>
+                    <p className="mt-3 text-gray-500 leading-relaxed text-[15px]">
+                      {item.text}
+                    </p>
 
-            ))}
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="flex flex-col w-full">
+
+              {solutions.slice(3, 5).map((item, index) => (
+
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{
+                    x: 6,
+                  }}
+                  className="
+                    group
+                    relative
+                    flex items-start
+                    gap-6
+                    py-7
+                    border-b border-gray-200/70
+                    transition-all duration-300
+                    hover:pl-4
+                    cursor-pointer
+                  "
+                >
+
+                  {/* ICON */}
+                  <div className="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-white
+                    border border-gray-100
+                    shadow-[0_10px_30px_rgba(43,76,154,0.06)]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    shrink-0
+                    transition-all duration-300
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                  ">
+                    {item.icon}
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="flex-1">
+
+                    <h3 className="text-xl font-bold text-[#1a2e5e] tracking-tight">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-gray-500 leading-relaxed text-[15px]">
+                      {item.text}
+                    </p>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </div>
 
           </div>
 
