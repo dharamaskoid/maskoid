@@ -40,7 +40,7 @@ export default function ServicesPage() {
                 <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group bg-white border border-[#EEF2FF] rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500"
+                className="group bg-white border border-[#EEF2FF] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500"
                 >
                 <div className="relative overflow-hidden">
                     <Image
