@@ -264,7 +264,7 @@ const formatNumber = (num: number, suffix: string) => {
                     >
 
                       {/* PRIMARY BUTTON */}
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
