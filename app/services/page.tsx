@@ -1,10 +1,9 @@
-"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 
 import { services } from "@/lib/services";
-import { motion } from 'framer-motion';
+
 const fadeUp = {
   hidden: {
     opacity: 0,
@@ -46,7 +45,7 @@ export default function ServicesPage() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
                 {/* LEFT */}
-                <motion.div
+                <div
                     variants={fadeUp}
                     initial="hidden"
                     animate="show"
@@ -73,32 +72,32 @@ export default function ServicesPage() {
 
                     {/* PRIMARY */}
                     <Link href="/contact">
-                        <motion.button
+                        <button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-7 py-3 rounded-xl bg-[#2b4c9a] hover:bg-[#244286] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300"
                         >
                         Start Your Project
-                        </motion.button>
+                        </button>
                     </Link>
 
                     {/* SECONDARY */}
                     <Link href="/work">
-                        <motion.button
+                        <button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-7 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-semibold transition-all duration-300"
                         >
                         See Our Results
-                        </motion.button>
+                        </button>
                     </Link>
 
                     </div>
 
-                </motion.div>
+                </div>
 
                 {/* RIGHT */}
-                <motion.div
+                <div
                     variants={fadeUp}
                     initial="hidden"
                     animate="show"
@@ -109,7 +108,7 @@ export default function ServicesPage() {
                     <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
 
                     {/* IMAGE */}
-                    <motion.div
+                    <div
                     animate={{ y: [0, -12, 0] }}
                     transition={{
                         duration: 4,
@@ -125,9 +124,9 @@ export default function ServicesPage() {
                         className="h-[240px] sm:h-[350px] md:h-[380px] lg:h-[400px] w-auto max-w-full object-contain mx-auto"
                     />
 
-                    </motion.div>
+                    </div>
 
-                </motion.div>
+                </div>
 
                 </div>
             </div>
