@@ -245,7 +245,7 @@ export default function SocialMediaMarketingPage() {
         </section>
 
       {/* SERVICES */}
-        <section className="relative py-8 px-6 overflow-hidden">
+        <section className="relative bg-[#EEF2FF] py-16 overflow-hidden">
 
         {/* BG PATTERN */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
