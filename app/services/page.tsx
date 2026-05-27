@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { services } from "@/lib/services";
+import ServicesHero from "@/components/services/ServicesHero";
 
 const fadeUp = {
   hidden: {
@@ -27,6 +28,8 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
+
+        <ServicesHero />
 
         <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -78,7 +81,7 @@ export default function ServicesPage() {
 
         </div>
         </section>
-        
+
     </main>
   );
 }
