@@ -235,9 +235,9 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
         {/* BACKGROUND */}
         <div className="absolute inset-0 pointer-events-none">
 
-          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
+          <div className="absolute -top-40 left-0 w-[420px] h-[420px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
 
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-blue-500/10 blur-[140px] rounded-full"></div>
 
 
         </div>
