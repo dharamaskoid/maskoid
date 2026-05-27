@@ -31,19 +31,9 @@ export default function ServicesPage() {
 
         <ServicesHero />
 
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-[#EEF2FF] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
 
-            <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-[#1a2e5e]">
-                Our Services
-            </h1>
-
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                We build premium digital experiences that help brands
-                grow, scale, and dominate online.
-            </p>
-            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
