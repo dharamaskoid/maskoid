@@ -241,15 +241,15 @@ export default function SEOServicePage() {
 
         <div className="absolute inset-0 pointer-events-none">
 
-          <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
+          <div className="absolute -top-40 left-0 w-[420px] h-[420px] bg-[#2b4c9a]/30 blur-[140px] rounded-full"></div>
 
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-blue-500/10 blur-[140px] rounded-full"></div>
 
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
         </div>
 
-        <div className="container mx-auto px-6 py-12 lg:py-14 relative z-10">
+        <div className="container mx-auto px-6 py-10 lg:py-10 relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
