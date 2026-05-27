@@ -685,9 +685,9 @@ const formatNumber = (num: number, suffix: string) => {
                     <div className="mt-10 flex flex-nowrap justify-center md:justify-start gap-3 sm:gap-4">
 
                       {/* PRIMARY BUTTON */}
-                      <Link href="/contact-us">
+                      <Link href="/about-us">
                         <button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl cursor-pointer bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300">
-                          Start Your Project
+                          Learn More About Us
                         </button>
                       </Link>
 
