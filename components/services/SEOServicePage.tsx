@@ -1143,7 +1143,7 @@ export default function SEOServicePage() {
                   backdrop-blur-xl
                   border border-slate-800/80
                   rounded-xl
-                  px-5 py-3.5
+                  px-5 py-3
                   w-fit h-14
                   transition-all duration-500
                   ${item.position}
