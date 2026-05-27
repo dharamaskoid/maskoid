@@ -86,7 +86,7 @@ export default function ServicesHero() {
               <img
                 src="/images/services/services-banner.png"
                 alt="Services"
-                className="h-[240px] sm:h-[350px] md:h-[380px] lg:h-[400px] w-auto max-w-full object-contain mx-auto"
+                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
               />
 
             </motion.div>
