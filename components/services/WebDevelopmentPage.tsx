@@ -1127,7 +1127,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                   group
                   relative
                   overflow-hidden
-                  inline-flex items-center gap-3
+                  inline-flex whitespace-nowrap items-center gap-3
                   bg-[#1a2e5e]
                   backdrop-blur-xl
                   border border-slate-800/80
