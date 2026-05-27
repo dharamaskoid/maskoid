@@ -298,7 +298,7 @@ export default function SEOServicePage() {
               >
 
                 <img
-                  src="/images/seo.png"
+                  src="/images/SEOBanner.png"
                   alt="SEO"
                   className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
                 />
