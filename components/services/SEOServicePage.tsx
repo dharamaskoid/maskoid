@@ -1138,13 +1138,13 @@ export default function SEOServicePage() {
                   group
                   relative
                   overflow-hidden
-                  flex items-center gap-3
+                  inline-flex whitespace-nowrap items-center gap-3
                   bg-[#1a2e5e]
                   backdrop-blur-xl
                   border border-slate-800/80
                   rounded-xl
                   px-5 py-3.5
-                  w-40 h-14
+                  w-fit h-14
                   transition-all duration-500
                   ${item.position}
                 `}
