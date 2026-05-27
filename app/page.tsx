@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import Testimonials from "@/components/Testimonials";
 import BrandMarquee from "@/components/TrustSection";
@@ -263,22 +264,26 @@ const formatNumber = (num: number, suffix: string) => {
                     >
 
                       {/* PRIMARY BUTTON */}
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl cursor-pointer bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300"
-                      >
-                        Book Strategy Call
-                      </motion.button>
+                      <Link href="/contact">
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl cursor-pointer bg-[#2b4c9a] hover:bg-[#1f3d84] text-white font-semibold shadow-[0_10px_30px_rgba(43,76,154,0.25)] transition-all duration-300"
+                        >
+                          Book Strategy Call
+                        </motion.button>
+                      </Link>
 
                       {/* SECONDARY BUTTON */}
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm cursor-pointer"
-                      >
-                        View Work
-                      </motion.button>
+                      <Link href="/projects">
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#2b4c9a]/20 bg-white hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 text-[#2b4c9a] font-semibold shadow-sm cursor-pointer"
+                        >
+                          View Work
+                        </motion.button>
+                      </Link>
 
                     </motion.div>
 
