@@ -48,7 +48,7 @@ export default function ServicesPage() {
                     alt={service.title}
                     width={600}
                     height={250}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+                    className="w-full h-50 object-cover group-hover:scale-105 transition duration-700"
                     />
                 </div>
 
