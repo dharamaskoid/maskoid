@@ -1071,7 +1071,7 @@ export default function SocialMediaMarketingPage() {
                 duration: 5,
                 repeat: Infinity,
               }}
-              className="absolute top-1/4 left-1/4 w-44 h-44 bg-pink-500/20 blur-[70px] rounded-full"
+              className="absolute top-1/4 left-1/4 w-44 h-44 bg-blue-500/20 blur-[70px] rounded-full"
             ></motion.div>
 
             <motion.div
