@@ -16,18 +16,16 @@ import {
   ChevronRight,
   Megaphone,
   BarChart3,
-  Users,
-  HeartHandshake,
   TrendingUp,
   CheckCircle2,
-  ShieldCheck,
   Rocket,
   PenTool,
   Search,
   Globe,
-  Layers3,
-  Smartphone,
+  Plus,
+  MessageCircleMore,
   Camera,
+  Minus,
   MessageCircle,
 
 } from "lucide-react";
@@ -192,6 +190,46 @@ export default function SocialMediaMarketingPage() {
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
+
+  const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
+  
+  const faqs = [
+    {
+      question: "Which social media platforms do you manage?",
+      answer:
+        "We manage Instagram, Facebook, LinkedIn, YouTube, WhatsApp, and other platforms based on your business goals and target audience.",
+    },
+
+    {
+      question: "Do you create social media content?",
+      answer:
+        "Yes. We create engaging graphics, captions, reels, ad creatives, and complete content strategies tailored to your brand.",
+    },
+
+    {
+      question: "Can you run paid advertising campaigns?",
+      answer:
+        "Absolutely. We manage Facebook Ads, Instagram Ads, retargeting campaigns, lead generation ads, and performance marketing campaigns.",
+    },
+
+    {
+      question: "How long does it take to see results?",
+      answer:
+        "Organic growth usually takes a few months, while paid advertising campaigns can generate traffic, leads, and engagement much faster.",
+    },
+
+    {
+      question: "Do you provide monthly reports?",
+      answer:
+        "Yes. We provide detailed monthly performance reports including reach, engagement, leads, conversions, and campaign insights.",
+    },
+
+    {
+      question: "Can you help grow followers and engagement?",
+      answer:
+        "Yes. Our strategies are focused on building real audience engagement, improving brand visibility, and increasing high-quality followers.",
+    },
+  ];
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px]">
@@ -1446,6 +1484,350 @@ export default function SocialMediaMarketingPage() {
             </div>
 
           </motion.div>
+
+        </div>
+
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+
+        {/* BG EFFECTS */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-pink-500/10 blur-[120px] rounded-full"></div>
+
+        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+        <div className="container px-4 sm:px-6 mx-auto relative z-10">
+
+          <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-start">
+
+            {/* LEFT SIDE */}
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:sticky lg:top-28"
+            >
+
+              <p className="inline-flex px-5 py-2 rounded-full bg-pink-500/10 text-pink-500 text-xs font-semibold uppercase">
+                FAQ SECTION
+              </p>
+
+              <h2 className="mt-6 text-3xl sm:text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                Social Media Marketing
+                <span className="text-[#2b4c9a]"> Questions</span>
+              </h2>
+
+              <p className="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl">
+                Learn more about our social media marketing services,
+                campaign strategies, content creation, ad management,
+                reporting, and business growth solutions.
+              </p>
+
+              {/* STATS */}
+              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="
+                    rounded-xl
+                    bg-white/70
+                    backdrop-blur-xl
+                    border border-white/60
+                    p-6
+                    shadow-[0_20px_50px_rgba(43,76,154,0.08)]
+                  "
+                >
+
+                  <h3 className="text-3xl sm:text-4xl font-bold text-[#1a2e5e]">
+                    250+
+                  </h3>
+
+                  <p className="mt-2 text-gray-500 text-sm sm:text-base">
+                    Successful Campaigns Managed
+                  </p>
+
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="
+                    rounded-xl
+                    bg-[#1a2e5e]
+                    p-6
+                    shadow-[0_20px_50px_rgba(43,76,154,0.12)]
+                  "
+                >
+
+                  <h3 className="text-3xl sm:text-4xl font-bold text-white">
+                    5M+
+                  </h3>
+
+                  <p className="mt-2 text-blue-100 text-sm sm:text-base">
+                    Audience Reach Generated
+                  </p>
+
+                </motion.div>
+
+              </div>
+
+              {/* FLOATING CARD */}
+              <motion.div
+                animate={{
+                  y: [0, -12, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.01,
+                }}
+                className="
+                  mt-8
+                  rounded-xl
+                  overflow-hidden
+                  border border-white/50
+                  bg-white/60
+                  backdrop-blur-xl
+                  shadow-[0_30px_80px_rgba(43,76,154,0.10)]
+                  hover:shadow-[0_35px_100px_rgba(43,76,154,0.16)]
+                  transition-all duration-500
+                "
+              >
+
+                <div className="relative p-6 sm:p-8 overflow-hidden">
+
+                  {/* HOVER GLOW */}
+                  <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
+
+                    <div className="absolute -top-24 right-0 w-60 h-60 bg-pink-500/10 blur-3xl rounded-full"></div>
+
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="relative z-10 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
+
+                    {/* LEFT */}
+                    <div className="flex items-center gap-4 min-w-0">
+
+                      <motion.div
+                        whileHover={{
+                          rotate: 8,
+                          scale: 1.08,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 220,
+                        }}
+                        className="
+                          w-14 h-14 sm:w-16 sm:h-16
+                          rounded-xl
+                          bg-[#EEF4FF]
+                          text-[#2b4c9a]
+                          flex items-center justify-center
+                          flex-shrink-0
+                        "
+                      >
+                        <MessageCircleMore size={28} />
+                      </motion.div>
+
+                      <div className="min-w-0">
+
+                        <h4 className="text-xl sm:text-2xl font-bold text-[#1a2e5e] leading-tight">
+                          Need Marketing Help?
+                        </h4>
+
+                        <p className="text-gray-500 mt-1 text-sm sm:text-base leading-relaxed">
+                          Our social media experts are ready to grow your brand.
+                        </p>
+
+                      </div>
+
+                    </div>
+
+                    {/* BUTTON */}
+                    <Link
+                      href="/contact"
+                      className="
+                        inline-flex
+                        items-center
+                        justify-center
+                        gap-3
+                        px-6 py-3
+                        rounded-xl
+                        bg-[#1a2e5e]
+                        text-white
+                        font-semibold
+                        hover:bg-[#2b4c9a]
+                        hover:scale-[1.03]
+                        transition-all duration-300
+                        whitespace-nowrap
+                        w-full sm:w-auto
+                      "
+                    >
+                      Start Your Campaign
+                    </Link>
+
+                  </div>
+
+                </div>
+
+              </motion.div>
+
+            </motion.div>
+
+            {/* RIGHT SIDE FAQ */}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-5 sm:space-y-6"
+            >
+
+              {faqs.map((faq, index) => {
+
+                const isActive = activeFAQ === index;
+
+                return (
+
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.7,
+                      delay: index * 0.08,
+                    }}
+                    whileHover={{
+                      y: -6,
+                    }}
+                    className="
+                      group
+                      relative
+                      overflow-hidden
+                      rounded-xl
+                      border border-white/60
+                      bg-white/70
+                      backdrop-blur-2xl
+                      shadow-[0_20px_60px_rgba(43,76,154,0.08)]
+                      hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                      transition-all duration-500
+                    "
+                  >
+
+                    {/* GLOW */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                      <div className="absolute -top-20 right-0 w-52 h-52 bg-pink-500/10 blur-3xl rounded-full"></div>
+
+                    </div>
+
+                    {/* FAQ BUTTON */}
+                    <button
+                      onClick={() =>
+                        setActiveFAQ(isActive ? null : index)
+                      }
+                      className="
+                        relative z-10
+                        w-full
+                        px-6
+                        py-5
+                        text-left
+                        flex items-center justify-between gap-4
+                      "
+                    >
+
+                      <div className="flex-1">
+
+                        <h3 className="text-lg sm:text-xl font-bold text-[#1a2e5e] leading-snug">
+                          {faq.question}
+                        </h3>
+
+                      </div>
+
+                      {/* ICON */}
+                      <motion.div
+                        animate={{
+                          rotate: isActive ? 180 : 0,
+                        }}
+                        transition={{
+                          duration: 0.3,
+                        }}
+                        className="
+                          w-8 h-8
+                          rounded-xl
+                          bg-[#EEF4FF]
+                          text-[#2b4c9a]
+                          flex items-center justify-center
+                          flex-shrink-0
+                        "
+                      >
+
+                        {isActive ? (
+                          <Minus size={18} strokeWidth={2.5} />
+                        ) : (
+                          <Plus size={18} strokeWidth={2.5} />
+                        )}
+
+                      </motion.div>
+
+                    </button>
+
+                    {/* ANSWER */}
+                    <AnimatePresence>
+
+                      {isActive && (
+
+                        <motion.div
+                          initial={{
+                            height: 0,
+                            opacity: 0,
+                          }}
+                          animate={{
+                            height: "auto",
+                            opacity: 1,
+                          }}
+                          exit={{
+                            height: 0,
+                            opacity: 0,
+                          }}
+                          transition={{
+                            duration: 0.4,
+                          }}
+                          className="overflow-hidden"
+                        >
+
+                          <div className="px-5 sm:px-8 pb-6 sm:pr-14">
+
+                            <p className="text-gray-500 leading-relaxed text-sm sm:text-base">
+                              {faq.answer}
+                            </p>
+
+                          </div>
+
+                        </motion.div>
+
+                      )}
+
+                    </AnimatePresence>
+
+                  </motion.div>
+
+                );
+
+              })}
+
+            </motion.div>
+
+          </div>
 
         </div>
 
