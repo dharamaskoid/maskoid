@@ -29,6 +29,8 @@ import {
   MessageCircleMore,
   Plus,
   Minus,
+  MonitorPlay,
+  ShoppingCart,
 } from "lucide-react";
 
 /* ANIMATION (UNCHANGED) */
@@ -59,31 +61,42 @@ const stagger = {
 
 /* PPC SOLUTIONS DATA */
 const solutions = [
-  {
-    icon: <Target size={34} />,
-    title: "Google Ads Campaigns",
-    text: "High-converting search ads that generate instant leads and sales.",
-  },
-  {
-    icon: <MousePointerClick size={34} />,
-    title: "Meta Ads Management",
-    text: "Facebook & Instagram ads optimized for conversions and ROI.",
-  },
-  {
-    icon: <BarChart3 size={34} />,
-    title: "Conversion Tracking",
-    text: "Track every click, lead, and sale with advanced analytics setup.",
-  },
-  {
-    icon: <Megaphone size={34} />,
-    title: "Ad Copy Optimization",
-    text: "High-performing creatives that improve CTR and reduce CPC.",
-  },
-  {
-    icon: <TrendingUp size={34} />,
-    title: "ROI Optimization",
-    text: "Continuous campaign optimization to maximize return on ad spend.",
-  },
+{
+icon: <Target size={30} />,
+title: "Google Ads Management",
+description:
+"Strategic Google Ads campaigns designed to maximize visibility, conversions, and ROI.",
+},
+{
+icon: <Search size={30} />,
+title: "Search Advertising",
+description:
+"Capture high-intent customers actively searching for your products and services.",
+},
+{
+icon: <MonitorPlay size={30} />,
+title: "Display Advertising",
+description:
+"Increase brand awareness through visually engaging display campaigns across the web.",
+},
+{
+icon: <ShoppingCart size={30} />,
+title: "Shopping Ads",
+description:
+"Drive qualified traffic and online sales with optimized Google Shopping campaigns.",
+},
+{
+icon: <Users size={30} />,
+title: "Remarketing Campaigns",
+description:
+"Reconnect with previous visitors and turn lost opportunities into conversions.",
+},
+{
+icon: <BarChart3 size={30} />,
+title: "Conversion Optimization",
+description:
+"Improve campaign performance through continuous testing, tracking, and optimization.",
+},
 ];
 
 // Sample Case Studies Array matching your theme parameters
