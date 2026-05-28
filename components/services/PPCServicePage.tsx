@@ -650,7 +650,7 @@ export default function PPCServicePage() {
               variants={fadeUp}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-xl">
+              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase backdrop-blur-xl">
                 Why Choose Our PPC Services
               </p>
 
