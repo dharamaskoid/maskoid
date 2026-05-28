@@ -607,160 +607,158 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
         </div>
         </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
+        {/* WHY CHOOSE US - WEB DESIGN SERVICE */}
+        <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
 
         {/* BG EFFECTS */}
         <div className="absolute inset-0 pointer-events-none">
 
-          <motion.div
+            <motion.div
             animate={{
-              scale: [1, 1.15, 1],
-              opacity: [0.15, 0.3, 0.15],
+                scale: [1, 1.15, 1],
+                opacity: [0.15, 0.3, 0.15],
             }}
             transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
             }}
             className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[100px] rounded-full"
-          />
+            />
 
-          <motion.div
+            <motion.div
             animate={{
-              scale: [1.1, 1, 1.1],
-              opacity: [0.2, 0.35, 0.2],
+                scale: [1.1, 1, 1.1],
+                opacity: [0.2, 0.35, 0.2],
             }}
             transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
             }}
             className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/20 blur-[100px] rounded-full"
-          />
+            />
 
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT CONTENT */}
             <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fadeUp}
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-xl">
+                <p className="inline-flex px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase backdrop-blur-xl">
                 Why Choose Us
-              </p>
+                </p>
 
-              <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
-                Trusted Digital Partner
-                <span className="text-[#6EA8FF]"> For Modern Brands</span>
-              </h2>
+                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
+                Designs That Inspire
+                <span className="text-[#6EA8FF]"> Trust & Conversions</span>
+                </h2>
 
-              <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We create premium digital experiences with modern technologies,
-                performance-driven strategies, and scalable solutions designed
-                for business growth.
-              </p>
+                <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
+                We create visually stunning, user-focused website designs that strengthen your brand, enhance user experience, and turn visitors into loyal customers.
+                </p>
 
             </motion.div>
 
             {/* RIGHT POINTS */}
             <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={stagger}
-              className="space-y-8"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={stagger}
+                className="space-y-8"
             >
 
-              {[
+                {[
                 {
-                  number: "01",
-                  title: "Proven Industry Experience",
-                  text: "With 10+ years of expertise, Maskoid Technology delivers high-performance digital solutions tailored to diverse business industries and growth goals.",
+                    number: "01",
+                    title: "User-Centered Design",
+                    text: "Every design is crafted around user behavior, ensuring intuitive navigation and exceptional user experiences.",
                 },
                 {
-                  number: "02",
-                  title: "Agile & Adaptive Approach",
-                  text: "Our agile methodology ensures faster delivery, flexibility, and continuous improvements aligned with evolving market trends and business needs.",
+                    number: "02",
+                    title: "Modern & Premium Aesthetics",
+                    text: "We create visually engaging designs that reflect your brand identity and leave a lasting impression.",
                 },
                 {
-                  number: "03",
-                  title: "End-to-End Development",
-                  text: "From planning and UI/UX design to deployment and long-term support, we manage the complete web development lifecycle seamlessly.",
+                    number: "03",
+                    title: "Mobile-First Approach",
+                    text: "Our responsive designs deliver seamless experiences across desktops, tablets, and mobile devices.",
                 },
                 {
-                  number: "04",
-                  title: "Expert Team & Modern Technologies",
-                  text: "Our skilled developers and designers leverage cutting-edge frameworks and scalable technologies to build future-ready digital experiences.",
+                    number: "04",
+                    title: "Conversion-Focused Layouts",
+                    text: "Strategic design elements and clear user journeys help maximize engagement, leads, and conversions.",
                 },
-              ].map((item, index) => (
+                ].map((item, index) => (
 
                 <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  whileHover={{
+                    key={index}
+                    variants={fadeUp}
+                    whileHover={{
                     x: 12,
-                  }}
-                  transition={{
+                    }}
+                    transition={{
                     duration: 0.35,
-                  }}
-                  className="group flex items-start gap-6 pb-8 border-b border-white/10"
+                    }}
+                    className="group flex items-start gap-6 pb-8 border-b border-white/10"
                 >
 
-                  {/* NUMBER */}
-                  <div className="flex-shrink-0">
+                    {/* NUMBER */}
+                    <div className="flex-shrink-0">
 
                     <motion.div
-                      whileHover={{
+                        whileHover={{
                         scale: 1.08,
                         rotate: 4,
-                      }}
-                      transition={{
+                        }}
+                        transition={{
                         type: "spring",
                         stiffness: 220,
-                      }}
-                      className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500"
+                        }}
+                        className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center group-hover:bg-[#2b4c9a] transition-all duration-500"
                     >
 
-                      <span className="text-xl font-bold text-[#6EA8FF] group-hover:text-white transition-all duration-500">
+                        <span className="text-xl font-bold text-[#6EA8FF] group-hover:text-white transition-all duration-500">
                         {item.number}
-                      </span>
+                        </span>
 
                     </motion.div>
 
-                  </div>
+                    </div>
 
-                  {/* CONTENT */}
-                  <div>
+                    {/* CONTENT */}
+                    <div>
 
                     <h3 className="text-xl font-bold text-white">
-                      {item.title}
+                        {item.title}
                     </h3>
 
                     <p className="mt-3 text-[#B7C2D8] leading-relaxed">
-                      {item.text}
+                        {item.text}
                     </p>
 
-                  </div>
+                    </div>
 
                 </motion.div>
 
-              ))}
+                ))}
 
             </motion.div>
 
-          </div>
+            </div>
 
         </div>
 
-      </section>      
+        </section>   
 
       {/* OUR PROCESS */}
       <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
