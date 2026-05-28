@@ -1,11 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import GoogleReviews from "@/components/GoogleReviews";
 
 import "swiper/css/navigation";
 import "swiper/css";
@@ -24,6 +26,9 @@ import {
   ArrowRight,
   Globe,
   LineChart,
+  MessageCircleMore,
+  Plus,
+  Minus,
 } from "lucide-react";
 
 /* ANIMATION (UNCHANGED) */
@@ -50,6 +55,7 @@ const stagger = {
     },
   },
 };
+
 
 /* PPC SOLUTIONS DATA */
 const solutions = [
@@ -80,6 +86,66 @@ const solutions = [
   },
 ];
 
+// Sample Case Studies Array matching your theme parameters
+const caseStudies = [
+  {
+    domain: "GajanandMotors.com",
+    industry: "Automotive / Vehicle Dealership",
+    techStack: ['WordPress', 'Inventory System', 'Google Maps', 'CTA Optimization', 'Mobile-Friendly UX'],
+    desc: "Gajanand Motors needed a digital storefront for showcasing their inventory and services. We developed a fast-loading, clean, and search-optimized website with vehicle listing capabilities and easy inquiry options. Google Maps and click-to-call integration made it easier for local customers to connect.",
+    outcomes: ["Boost in local discovery", "More service inquiries", "Improved digital presence"],
+    image: "/images/gajanand-preview.png"
+  },
+  {
+    domain: "KleanTouch.co.uk",
+    industry: "Commercial Cleaning Services (UK)",
+    techStack: ['Wordpress CMS', 'Responsive Design', 'Speed Optimization', 'SEO-Friendly Architecture', 'Contact Integrations'],
+    desc: " UK Tech Studies needed a platform to attract and inform aspiring students planning to study abroad. We created a content-driven website with dedicated sections for courses, visa guidance, and admission processes. With blog capabilities and lead capture forms, the platform became a powerful marketing tool for educational consultants.", 
+    outcomes: ["Increased user time-on-site", "steady lead capture", "scalable content expansion potential"],
+    image: "/images/KleanTouch.png"
+  }
+];
+
+// Explicitly type your objects to satisfy Framer Motion's strict types
+const containerVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut", 
+      staggerChildren: 0.15 
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { duration: 0.4, ease: "easeOut" } 
+  }
+};
+
+const slideVariants: Variants = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 100 : -100,
+    opacity: 0
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  },
+  exit: (dir: number) => ({
+    x: dir < 0 ? 100 : -100,
+    opacity: 0,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  })
+};
+
 export default function PPCServicePage() {
 
   const logos = [
@@ -94,9 +160,88 @@ export default function PPCServicePage() {
     "/images/Client-1-13.png",
     "/images/Client-1-14.png",
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  
+   
+  
+    const handleNext = () => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % caseStudies.length);
+    };
+  
+    const handlePrev = () => {
+      setDirection(-1);
+      setCurrentIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
+    };
+  
+      // AUTO SLIDE
+    useEffect(() => {
+      const interval = setInterval(() => {
+        handleNext();
+      }, 4000);
+  
+      return () => clearInterval(interval);
+    }, []);
+  
+    const active = caseStudies[currentIndex];
   
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
+
+  const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
+
+
+  const faqs = [
+  {
+    question: "What PPC advertising services do you offer?",
+    answer:
+      "We provide Google Ads, Search Ads, Display Ads, Shopping Ads, YouTube Ads, Remarketing Campaigns, and Performance Max campaigns designed to generate qualified leads and sales.",
+  },
+
+  {
+    question: "How quickly can PPC generate results?",
+    answer:
+      "Unlike SEO, PPC campaigns can start generating traffic and leads almost immediately after launch. Most campaigns begin showing measurable results within days.",
+  },
+
+  {
+    question: "Do you manage Google Ads budgets?",
+    answer:
+      "Yes. We help determine the ideal budget based on your industry, competition, business goals, and target audience to maximize return on investment.",
+  },
+
+  {
+    question: "Can you improve existing PPC campaigns?",
+    answer:
+      "Absolutely. We audit existing campaigns, optimize keywords, improve ad copy, refine targeting, reduce wasted spend, and increase conversions.",
+  },
+
+  {
+    question: "How do you measure PPC success?",
+    answer:
+      "We track key metrics such as clicks, conversions, cost per lead (CPL), return on ad spend (ROAS), click-through rate (CTR), and overall campaign performance.",
+  },
+
+  {
+    question: "Do you create landing pages for PPC campaigns?",
+    answer:
+      "Yes. We can design and optimize high-converting landing pages that improve Quality Score, increase conversions, and maximize campaign ROI.",
+  },
+
+  {
+    question: "Will I receive campaign reports?",
+    answer:
+      "Yes. We provide detailed performance reports with transparent insights on ad spend, leads generated, conversion rates, and optimization recommendations.",
+  },
+
+  {
+    question: "Which industries do you work with?",
+    answer:
+      "We manage PPC campaigns for service businesses, eCommerce stores, healthcare, education, real estate, manufacturing, technology, and many other industries.",
+  },
+];
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
@@ -708,7 +853,349 @@ export default function PPCServicePage() {
 
         </section>
 
+        {/* FAQ SECTION */}
+        <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
 
+          {/* BG EFFECTS */}
+          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+          <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+          <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
+
+          <div className="container px-4 sm:px-6 mx-auto relative z-10">
+
+            <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-start">
+
+              {/* LEFT SIDE */}
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:sticky lg:top-28"
+              >
+
+                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
+                  FAQ SECTION
+                </p>
+
+                <h2 className="mt-6 text-3xl sm:text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                  Frequently Asked
+                  <span className="text-[#2b4c9a]"> Questions</span>
+                </h2>
+
+                <p className="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl">
+                  Everything you need to know about our services, technologies,
+                  timelines, pricing, support, and scalable web solutions.
+                </p>
+
+                {/* STATS */}
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    className="
+                      rounded-xl
+                      bg-white/70
+                      backdrop-blur-xl
+                      border border-white/60
+                      p-6
+                      shadow-[0_20px_50px_rgba(43,76,154,0.08)]
+                    "
+                  >
+
+                    <h3 className="text-3xl sm:text-4xl font-bold text-[#1a2e5e]">
+                      120+
+                    </h3>
+
+                    <p className="mt-2 text-gray-500 text-sm sm:text-base">
+                      Successful Projects Delivered
+                    </p>
+
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    className="
+                      rounded-xl
+                      bg-[#1a2e5e]
+                      p-6
+                      shadow-[0_20px_50px_rgba(43,76,154,0.12)]
+                    "
+                  >
+
+                    <h3 className="text-3xl sm:text-4xl font-bold text-white">
+                      10+
+                    </h3>
+
+                    <p className="mt-2 text-blue-100 text-sm sm:text-base">
+                      Years Industry Experience
+                    </p>
+
+                  </motion.div>
+
+                </div>
+
+                {/* FLOATING CARD */}
+                <motion.div
+                  animate={{
+                    y: [0, -12, 0],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.01,
+                  }}
+                  className="
+                    mt-8
+                    rounded-xl
+                    overflow-hidden
+                    border border-white/50
+                    bg-white/60
+                    backdrop-blur-xl
+                    shadow-[0_30px_80px_rgba(43,76,154,0.10)]
+                    hover:shadow-[0_35px_100px_rgba(43,76,154,0.16)]
+                    transition-all duration-500
+                  "
+                >
+
+                  <div className="relative p-6 sm:p-8 overflow-hidden">
+
+                    {/* HOVER GLOW */}
+                    <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
+
+                      <div className="absolute -top-24 right-0 w-60 h-60 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                    </div>
+
+                    {/* CONTENT */}
+                    <div className="relative z-10 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
+
+                      {/* LEFT */}
+                      <div className="flex items-center gap-4 min-w-0">
+
+                        <motion.div
+                          whileHover={{
+                            rotate: 8,
+                            scale: 1.08,
+                          }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 220,
+                          }}
+                          className="
+                            w-14 h-14 sm:w-16 sm:h-16
+                            rounded-xl
+                            bg-[#EEF4FF]
+                            text-[#2b4c9a]
+                            flex items-center justify-center
+                            flex-shrink-0
+                          "
+                        >
+                          <MessageCircleMore size={28} />
+                        </motion.div>
+
+                        <div className="min-w-0">
+
+                          <h4 className="text-xl sm:text-2xl font-bold text-[#1a2e5e] leading-tight">
+                            Need More Help?
+                          </h4>
+
+                          <p className="text-gray-500 mt-1 text-sm sm:text-base leading-relaxed">
+                            Our team is ready to assist you.
+                          </p>
+
+                        </div>
+
+                      </div>
+
+                      {/* BUTTON */}
+                      <Link
+                        href="/contact-us"
+                        className="
+                          inline-flex
+                          items-center
+                          justify-center
+                          gap-3
+                          px-6 py-3
+                          rounded-xl
+                          bg-[#1a2e5e]
+                          text-white
+                          font-semibold
+                          hover:bg-[#2b4c9a]
+                          hover:scale-[1.03]
+                          transition-all duration-300
+                          whitespace-nowrap
+                          w-full sm:w-auto
+                        "
+                      >
+                        Contact Us
+                      </Link>
+
+                    </div>
+
+                  </div>
+
+                </motion.div>
+
+              </motion.div>
+
+              {/* RIGHT SIDE FAQ */}
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-5 sm:space-y-6"
+              >
+
+                {faqs.map((faq, index) => {
+
+                  const isActive = activeFAQ === index;
+
+                  return (
+
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.7,
+                        delay: index * 0.08,
+                      }}
+                      whileHover={{
+                        y: -6,
+                      }}
+                      className="
+                        group
+                        relative
+                        overflow-hidden
+                        rounded-xl
+                        border border-white/60
+                        bg-white/70
+                        backdrop-blur-2xl
+                        shadow-[0_20px_60px_rgba(43,76,154,0.08)]
+                        hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)]
+                        transition-all duration-500
+                      "
+                    >
+
+                      {/* GLOW */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+
+                        <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
+
+                      </div>
+
+                      {/* FAQ BUTTON */}
+                      <button
+                        onClick={() =>
+                          setActiveFAQ(isActive ? null : index)
+                        }
+                        className="
+                          relative z-10
+                          w-full
+                          px-6
+                          py-3
+                          text-left
+                          flex items-center justify-between gap-4
+                        "
+                      >
+
+                        <div className="flex-1">
+
+                          <h3 className="text-lg sm:text-xl font-bold text-[#1a2e5e] leading-snug">
+                            {faq.question}
+                          </h3>
+
+                        </div>
+
+                        {/* ICON */}
+                        <motion.div
+                          animate={{
+                            rotate: isActive ? 180 : 0,
+                          }}
+                          transition={{
+                            duration: 0.3,
+                          }}
+                          className="
+                            w-8 h-8
+                            rounded-xl
+                            bg-[#EEF4FF]
+                            text-[#2b4c9a]
+                            flex items-center justify-center
+                            flex-shrink-0
+                          "
+                        >
+
+                          {isActive ? (
+                            <Minus size={18} strokeWidth={2.5} />
+                          ) : (
+                            <Plus size={18} strokeWidth={2.5} />
+                          )}
+
+                        </motion.div>
+
+                      </button>
+
+                      {/* ANSWER */}
+                      <AnimatePresence>
+
+                        {isActive && (
+
+                          <motion.div
+                            initial={{
+                              height: 0,
+                              opacity: 0,
+                            }}
+                            animate={{
+                              height: "auto",
+                              opacity: 1,
+                            }}
+                            exit={{
+                              height: 0,
+                              opacity: 0,
+                            }}
+                            transition={{
+                              duration: 0.4,
+                            }}
+                            className="overflow-hidden"
+                          >
+
+                            <div className="px-5 sm:px-8 pb-6 sm:pr-14">
+
+                              <p className="text-gray-500 leading-relaxed text-sm sm:text-base">
+                                {faq.answer}
+                              </p>
+
+                            </div>
+
+                          </motion.div>
+
+                        )}
+
+                      </AnimatePresence>
+
+                    </motion.div>
+
+                  );
+
+                })}
+
+              </motion.div>
+
+            </div>
+
+          </div>
+
+        </section>
+        
         {/* CTA */}
         <section className="py-16 px-6">
 
