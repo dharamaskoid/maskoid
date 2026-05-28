@@ -553,7 +553,7 @@ export default function PPCServicePage() {
 
             {/* LEFT COLUMN */}
             <div className="flex flex-col w-full">
-              {solution.slice(0, 3).map((item, index) => (
+              {solutions.slice(0, 3).map((item, index) => (
                 <div
                   key={index}
                   className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
