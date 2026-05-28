@@ -121,9 +121,9 @@ export default function PPCServicePage() {
               </p>
 
               <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-                Strategic PPC Campaigns
+                High-Performance PPC
                 <span className="block text-[#6EA8FF]">
-                  That Turn Clicks Into Customers
+                  That Drive ROI
                 </span>
               </h1>
 
