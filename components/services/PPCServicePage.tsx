@@ -61,42 +61,31 @@ const stagger = {
 
 /* PPC SOLUTIONS DATA */
 const solutions = [
-{
-icon: <Target size={30} />,
-title: "Google Ads Management",
-description:
-"Strategic Google Ads campaigns designed to maximize visibility, conversions, and ROI.",
-},
-{
-icon: <Search size={30} />,
-title: "Search Advertising",
-description:
-"Capture high-intent customers actively searching for your products and services.",
-},
-{
-icon: <MonitorPlay size={30} />,
-title: "Display Advertising",
-description:
-"Increase brand awareness through visually engaging display campaigns across the web.",
-},
-{
-icon: <ShoppingCart size={30} />,
-title: "Shopping Ads",
-description:
-"Drive qualified traffic and online sales with optimized Google Shopping campaigns.",
-},
-{
-icon: <Users size={30} />,
-title: "Remarketing Campaigns",
-description:
-"Reconnect with previous visitors and turn lost opportunities into conversions.",
-},
-{
-icon: <BarChart3 size={30} />,
-title: "Conversion Optimization",
-description:
-"Improve campaign performance through continuous testing, tracking, and optimization.",
-},
+  {
+    icon: <Target size={34} />,
+    title: "Google Ads Campaigns",
+    text: "High-converting search ads that generate instant leads and sales.",
+  },
+  {
+    icon: <MousePointerClick size={34} />,
+    title: "Meta Ads Management",
+    text: "Facebook & Instagram ads optimized for conversions and ROI.",
+  },
+  {
+    icon: <BarChart3 size={34} />,
+    title: "Conversion Tracking",
+    text: "Track every click, lead, and sale with advanced analytics setup.",
+  },
+  {
+    icon: <Megaphone size={34} />,
+    title: "Ad Copy Optimization",
+    text: "High-performing creatives that improve CTR and reduce CPC.",
+  },
+  {
+    icon: <TrendingUp size={34} />,
+    title: "ROI Optimization",
+    text: "Continuous campaign optimization to maximize return on ad spend.",
+  },
 ];
 
 // Sample Case Studies Array matching your theme parameters
@@ -386,52 +375,69 @@ export default function PPCServicePage() {
             </div>
         </section>
 
-      {/* SERVICES */}
-      <section className="relative py-16 px-6 overflow-hidden">
+      {/* PPC SERVICES */}
+      <section className="relative bg-[#EEF2FF] py-16 overflow-hidden">
 
+        {/* BG PATTERN */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-        <div className="container mx-auto relative z-10">
+        {/* GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
 
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="container px-6 mx-auto relative z-10">
 
-            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-              Our PPC Services
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
+              PPC Services
             </p>
 
             <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              Powerful PPC Solutions For
-              <span className="text-[#2b4c9a]"> Modern Businesses</span>
+              Strategic PPC Solutions
+              <span className="text-[#2b4c9a]"> Built For Growth</span>
             </h2>
+          </motion.div>
 
-          </div>
-
+          {/* GRID */}
           <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
 
             {[
               {
                 icon: <Target size={30} />,
                 title: "Google Ads",
+                text: "Strategic campaigns designed to maximize visibility, leads, and ROI.",
               },
               {
-                icon: <MousePointerClick size={30} />,
+                icon: <Search size={30} />,
                 title: "Search Ads",
+                text: "Capture high-intent customers actively searching for your services.",
               },
               {
-                icon: <Megaphone size={30} />,
+                icon: <MonitorPlay size={30} />,
                 title: "Display Ads",
+                text: "Increase brand awareness through targeted visual advertising campaigns.",
               },
               {
-                icon: <BarChart3 size={30} />,
-                title: "Campaign Audit",
+                icon: <ShoppingCart size={30} />,
+                title: "Shopping Ads",
+                text: "Drive qualified traffic and boost online sales with optimized product ads.",
               },
               {
                 icon: <Users size={30} />,
-                title: "Audience Targeting",
+                title: "Remarketing",
+                text: "Reconnect with previous visitors and convert missed opportunities.",
               },
               {
-                icon: <Rocket size={30} />,
-                title: "Lead Generation",
+                icon: <BarChart3 size={30} />,
+                title: "Conversion Tracking",
+                text: "Track performance and optimize campaigns using real business data.",
               },
             ].map((item, index) => (
 
@@ -448,15 +454,26 @@ export default function PPCServicePage() {
                   y: -12,
                   scale: 1.02,
                 }}
-                className="group relative overflow-hidden rounded-[28px] border border-[#dbe7ff] bg-white p-6 shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)] transition-all duration-500"
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[28px]
+                  border border-[#dbe7ff]
+                  bg-white
+                  p-6
+                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
+                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
+                  transition-all duration-500
+                "
               >
 
+                {/* HOVER GLOW */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
                   <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-
                 </div>
 
+                {/* ICON */}
                 <motion.div
                   whileHover={{
                     scale: 1.08,
@@ -466,23 +483,34 @@ export default function PPCServicePage() {
                     type: "spring",
                     stiffness: 220,
                   }}
-                  className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
+                  className="
+                    relative z-10
+                    w-16 h-16
+                    rounded-2xl
+                    bg-[#EEF4FF]
+                    text-[#2b4c9a]
+                    flex items-center justify-center
+                    group-hover:bg-[#2b4c9a]
+                    group-hover:text-white
+                    transition-all duration-500
+                  "
                 >
                   {item.icon}
                 </motion.div>
 
-                <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e]">
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
                   {item.title}
                 </h3>
 
+                {/* TEXT */}
                 <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
-                  Premium PPC campaigns focused on leads, conversions, and ROI.
+                  {item.text}
                 </p>
 
               </motion.div>
 
             ))}
-
           </div>
 
         </div>
