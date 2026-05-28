@@ -388,7 +388,7 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                 className="text-center max-w-3xl mx-auto"
               >
                 <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
-                  Core Services
+                  Web Development Services
                 </p>
                 <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
                   Premium Digital Experiences
