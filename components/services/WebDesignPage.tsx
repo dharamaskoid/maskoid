@@ -257,18 +257,18 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
             >
 
               <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
-                Web Development Service
+                Web Design Service
               </p>
 
               <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-                Premium Websites That
+                 Exceptional Web Design
                 <span className="block text-[#6EA8FF]">
-                  Drive Growth
+                 For Modern Brands
                 </span>
               </h1>
 
               <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
-                We build modern high-converting websites focused on SEO, performance, premium UI/UX, and long-term business growth.
+                We craft visually compelling, user-focused website designs that elevate your brand, engage visitors, and turn more traffic into customers.
               </p>
 
 
