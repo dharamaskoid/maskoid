@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import GoogleReviews from "@/components/GoogleReviews";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -1832,6 +1833,8 @@ export default function SocialMediaMarketingPage() {
         </div>
 
       </section>
+
+      <GoogleReviews />
 
       {/* CTA */}
       <section className="py-16 px-6">
