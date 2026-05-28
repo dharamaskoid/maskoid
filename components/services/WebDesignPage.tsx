@@ -146,7 +146,7 @@ const slideVariants: Variants = {
   })
 };
 
-export default function WebDevelopmentPage() {
+export default function WebDesignPage() {
 
 
   const logos = [
