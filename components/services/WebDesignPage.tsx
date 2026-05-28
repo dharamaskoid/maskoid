@@ -371,113 +371,115 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
             </div>
         </section>
       
-      {/* OUR SERVICES */}
-      <section className="relative bg-[#EEF2FF] py-16 overflow-hidden">
+        {/* WEB DESIGN SERVICES */}
+        <section className="relative bg-[#EEF2FF] py-16 overflow-hidden">
+
         {/* BG PATTERN */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
         {/* GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
-        <div className="container px-6 mx-auto relative z-10">
-            {/* HEADER */}
-              <motion.div
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="text-center max-w-3xl mx-auto"
-              >
-                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
-                  Core Services
-                </p>
-                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                  Premium Digital Experiences
-                  <span className="text-[#2b4c9a]"> Built For Growth</span>
-                </h2>
-              </motion.div>
 
-          {/* GRID */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
+        <div className="container px-6 mx-auto relative z-10">
+
+            {/* HEADER */}
+            <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+            >
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
+                Web Design Services
+            </p>
+
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+                Creative Design Solutions
+                <span className="text-[#2b4c9a]"> Built To Impress</span>
+            </h2>
+            </motion.div>
+
+            {/* GRID */}
+            <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-5 mt-16">
 
             {[
-              {
-                icon: <Globe size={30} />,
-                title: "Business Websites",
-                text: "Custom business websites designed to strengthen your online presence and drive customer engagement.",
-              },
-              {
-                icon: <ShoppingCart size={30} />,
-                title: "E-Commerce",
-                text: "Scalable eCommerce solutions with secure payments, seamless shopping experiences, and high conversions.",
-              },
-              {
+                {
+                icon: <Palette size={30} />,
+                title: "UI Design",
+                text: "Modern and visually engaging interfaces crafted to enhance user experiences.",
+                },
+                {
+                icon: <LayoutDashboard size={30} />,
+                title: "UX Strategy",
+                text: "User-centered design strategies focused on engagement and conversions.",
+                },
+                {
                 icon: <MonitorSmartphone size={30} />,
                 title: "Responsive Design",
-                text: "Mobile-first responsive designs optimized for flawless experiences across all devices and screen sizes.",
-              },
-              {
-                icon: <Code2 size={30} />,
-                title: "Custom Development",
-                text: "Tailored web applications and advanced functionalities built specifically for your business workflows.",
-              },
-              {
-                icon: <Search size={30} />,
-                title: "SEO Optimized",
-                text: "Performance-focused websites optimized for search engines to improve rankings and organic visibility.",
-              },
-              {
-                icon: <Rocket size={30} />,
-                title: "Performance Focused",
-                text: "Fast-loading, scalable, and secure web solutions engineered for speed, growth, and user satisfaction.",
-              },
+                text: "Pixel-perfect designs optimized for desktops, tablets, and mobile devices.",
+                },
+                {
+                icon: <PenTool size={30} />,
+                title: "Brand Identity",
+                text: "Consistent visual experiences that strengthen your brand recognition.",
+                },
+                {
+                icon: <Layers3 size={30} />,
+                title: "Landing Pages",
+                text: "High-converting landing page designs tailored for campaigns and lead generation.",
+                },
+                {
+                icon: <Sparkles size={30} />,
+                title: "Design Systems",
+                text: "Scalable design frameworks that ensure consistency across digital products.",
+                },
             ].map((item, index) => (
 
-
-              <motion.div
+                <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
+                    duration: 0.6,
+                    delay: index * 0.08,
                 }}
                 whileHover={{
-                  y: -12,
-                  scale: 1.02,
+                    y: -12,
+                    scale: 1.02,
                 }}
                 className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[28px]
-                  border border-[#dbe7ff]
-                  bg-white
-                  p-6
-                  shadow-[0_10px_40px_rgba(43,76,154,0.05)]
-                  hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
-                  transition-all duration-500
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-[28px]
+                    border border-[#dbe7ff]
+                    bg-white
+                    p-6
+                    shadow-[0_10px_40px_rgba(43,76,154,0.05)]
+                    hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
+                    transition-all duration-500
                 "
-              >
+                >
 
                 {/* HOVER GLOW */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
-                  <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
-
+                    <div className="absolute -top-20 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full"></div>
                 </div>
 
                 {/* ICON */}
                 <motion.div
-                  whileHover={{
+                    whileHover={{
                     scale: 1.08,
                     rotate: 5,
-                  }}
-                  transition={{
+                    }}
+                    transition={{
                     type: "spring",
                     stiffness: 220,
-                  }}
-                  className="
+                    }}
+                    className="
                     relative z-10
                     w-16 h-16
                     rounded-2xl
@@ -487,26 +489,29 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
                     group-hover:bg-[#2b4c9a]
                     group-hover:text-white
                     transition-all duration-500
-                  "
+                    "
                 >
-                  {item.icon}
+                    {item.icon}
                 </motion.div>
 
                 {/* TITLE */}
                 <h3 className="relative z-10 mt-6 text-xl font-bold text-[#1a2e5e] leading-snug">
-                  {item.title}
+                    {item.title}
                 </h3>
 
                 {/* TEXT */}
-                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed">
-                  {item.text}
+                <p className="relative z-10 mt-4 text-gray-500 leading-relaxed text-sm">
+                    {item.text}
                 </p>
 
-              </motion.div>
+                </motion.div>
+
             ))}
-          </div>
+            </div>
+
         </div>
-      </section>
+
+        </section>
 
       {/* OUR SOLUTIONS */}      
       <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
