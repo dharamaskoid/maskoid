@@ -27,7 +27,7 @@ export default async function ServicePage({
     if (slug === "social-media-marketing") {
     return <SocialMediaMarketingPage />;
   }
-     if (slug === "social-media-marketing") {
+     if (slug === "web-design") {
     return <WebDesignPage />;
   }
 
