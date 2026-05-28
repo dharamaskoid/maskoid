@@ -568,7 +568,7 @@ export default function PPCServicePage() {
                     </h3>
 
                     <p className="text-gray-500 font-light leading-relaxed">
-                      {item.desc}
+                      {item.text}
                     </p>
                   </div>
                 </div>
