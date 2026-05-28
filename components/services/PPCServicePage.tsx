@@ -1195,7 +1195,9 @@ export default function PPCServicePage() {
           </div>
 
         </section>
-        
+
+        <GoogleReviews />
+
         {/* CTA */}
         <section className="py-16 px-6">
 
