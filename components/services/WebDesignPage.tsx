@@ -62,31 +62,37 @@ const stagger = {
 
 const solution = [
   {
-    icon: <MonitorSmartphone size={30} />,
-    title: "Custom Websites",
-    desc: "Tailored websites designed to reflect your brand identity and engage your targeted audience seamlessly.",
+    icon: <Palette size={24} />,
+    title: "UI Design",
+    desc: "Modern and visually engaging user interfaces designed to enhance brand perception and usability.",
   },
   {
-    icon: <ShoppingCart size={30} />,
-    title: "E-Commerce",
-    desc: "Powerful, high-conversion online stores built to optimize sales workflows and drive customer satisfaction.",
+    icon: <LayoutDashboard size={24} />,
+    title: "UX Strategy",
+    desc: "User-centered experiences crafted to improve engagement, navigation, and conversions.",
   },
   {
-    icon: <Layers size={30} />,
-    title: "Web Applications",
-    desc: "Scalable enterprise web applications designed to streamline internal processes and boost productivity.",
+    icon: <MonitorSmartphone size={24} />,
+    title: "Responsive Design",
+    desc: "Pixel-perfect designs optimized for desktops, tablets, and mobile devices.",
   },
   {
-    icon: <Database size={30} />,
-    title: "CMS Solutions",
-    desc: "Easy-to-manage, customizable content management websites that grant you complete operational control.",
+    icon: <PenTool size={24} />,
+    title: "Brand Identity",
+    desc: "Consistent visual experiences that strengthen brand recognition and credibility.",
   },
   {
-    icon: <Code2 size={30} />,
-    title: "API Development",
-    desc: "Secure, highly reliable, and optimized APIs built to connect your distinct software systems flawlessly.",
-  }
+    icon: <Layers3 size={24} />,
+    title: "Landing Page Design",
+    desc: "High-converting landing pages designed to maximize leads and campaign performance.",
+  },
+  {
+    icon: <Sparkles size={24} />,
+    title: "Design Systems",
+    desc: "Scalable design frameworks that maintain consistency across your digital presence.",
+  },
 ];
+
 // Sample Case Studies Array matching your theme parameters
 const caseStudies = [
   {
@@ -514,88 +520,92 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
         </section>
 
-      {/* OUR SOLUTIONS */}      
-      <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
-        
+        {/* OUR WEB DESIGN SOLUTIONS */}
+        <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
+
         {/* Soft Light Blur Accents in Background */}
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
         <div className="container px-6 mx-auto relative z-10">
 
-          {/* HEADER */}
-          <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="text-center max-w-3xl mx-auto"
-          >
+            {/* HEADER */}
+            <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+            >
             <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
-              Our Solutions
+                Web Design Solutions
             </p>
+
             <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              Digital Solutions That
-              <span className="text-[#2b4c9a]"> Create Real Impact</span>
+                Design Experiences That
+                <span className="text-[#2b4c9a]"> Inspire Action</span>
             </h2>
 
             <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-            We combine creativity with technology to deliver solutions that are fast, scalable, secure, and built to perform.
+                We create visually stunning, user-focused website designs that elevate your brand, improve engagement, and turn visitors into customers.
             </p>
-          </motion.div>
+            </motion.div>
 
-
-          {/* CONTENT ROW LIST LAYOUT (No Boxes, 2 Columns per item, No Arrows) */}
+            {/* CONTENT ROW LIST LAYOUT */}
             <div className="grid grid-cols-1 mt-6 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
-              
-              {/* LEFT COLUMN: Contains the First 3 Items */}
-              <div className="flex flex-col w-full">
-                {solution.slice(0, 3).map((item, index) => (
-                  <div 
-                    key={index}
-                    className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
-                      {item.icon}
-                    </div>
-                    <div className="space-y-1.5 flex-1">
-                      <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-500 font-light leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
 
-              {/* RIGHT COLUMN: Contains the Remaining 2 Items */}
-              <div className="flex flex-col w-full mt-0">
-                {solution.slice(3, 5).map((item, index) => (
-                  <div 
+            {/* LEFT COLUMN */}
+            <div className="flex flex-col w-full">
+                {solution.slice(0, 3).map((item, index) => (
+                <div
                     key={index}
                     className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
-                  >
+                >
                     <div className="w-12 h-12 rounded-xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
-                      {item.icon}
+                    {item.icon}
                     </div>
+
                     <div className="space-y-1.5 flex-1">
-                      <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
+                    <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight">
                         {item.title}
-                      </h3>
-                      <p className="text-gray-500 font-light leading-relaxed">
+                    </h3>
+
+                    <p className="text-gray-500 font-light leading-relaxed">
                         {item.desc}
-                      </p>
+                    </p>
                     </div>
-                  </div>
+                </div>
                 ))}
-              </div>
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="flex flex-col w-full mt-0">
+                {solution.slice(3, 6).map((item, index) => (
+                <div
+                    key={index}
+                    className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                >
+                    <div className="w-12 h-12 rounded-xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
+                    {item.icon}
+                    </div>
+
+                    <div className="space-y-1.5 flex-1">
+                    <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight">
+                        {item.title}
+                    </h3>
+
+                    <p className="text-gray-500 font-light leading-relaxed">
+                        {item.desc}
+                    </p>
+                    </div>
+                </div>
+                ))}
+            </div>
 
             </div>
 
         </div>
-      </section>
+        </section>
 
       {/* WHY CHOOSE US */}
       <section className="relative py-16 bg-[#1a2e5e] overflow-hidden">
