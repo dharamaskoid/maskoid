@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import WebDevelopmentPage from "@/components/services/WebDevelopmentPage";
+import WebDesignPage from "@/components/services/WebDesignPage";
 import SEOServicePage from "@/components/services/SEOServicePage";
 import PPCServicePage from "@/components/services/PPCServicePage";
 import SocialMediaMarketingPage from "@/components/services/SocialMediaMarketingPage";
@@ -25,6 +26,9 @@ export default async function ServicePage({
 
     if (slug === "social-media-marketing") {
     return <SocialMediaMarketingPage />;
+  }
+     if (slug === "social-media-marketing") {
+    return <WebDesignPage />;
   }
 
   return notFound();
