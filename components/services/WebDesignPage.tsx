@@ -32,6 +32,7 @@ import {
   LayoutDashboard,
   Store,
   ServerCog,
+  Palette,
 } from "lucide-react";
 
 
