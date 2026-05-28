@@ -758,156 +758,182 @@ export default function PPCServicePage() {
       </section>
 
 
-        {/* OUR PPC PROCESS */}
-        <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
+      {/* OUR PPC PROCESS */}
+      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
 
-          {/* BG SHAPES */}
-          <div className="absolute inset-0 pointer-events-none">
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
 
-            <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
-            <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[100px] rounded-full"></div>
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
 
-          </div>
+          {/* LEFT COLUMN */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="max-w-md"
+          >
 
-          <div className="container px-6 mx-auto relative z-10">
-
-            {/* HEADER */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="text-center max-w-3xl mx-auto"
+            <motion.p
+              whileHover={{
+                scale: 1.04,
+              }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
             >
+              Our PPC Process
+            </motion.p>
 
-              <p className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition">
-                Our Process
-              </p>
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              A Proven Process To
+              <span className="text-[#2b4c9a]"> Maximize ROI</span>
+            </h2>
 
-              <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                PPC Advertising
-                <span className="text-[#2b4c9a]"> Process</span>
-              </h2>
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              From audience research and campaign setup to optimization and reporting, we follow a data-driven process that delivers measurable growth and profitable results.
+            </p>
 
-              <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-                Our proven PPC process helps generate quality leads,
-                improve conversions, and maximize ROI.
-              </p>
+          </motion.div>
 
+          {/* RIGHT COLUMN */}
+          <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
+
+            {/* SVG LINE */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0"
+            >
+              <svg
+                className="w-full h-full"
+                viewBox="0 0 500 40"
+                fill="none"
+                preserveAspectRatio="none"
+              >
+                <motion.path
+                  d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20"
+                  stroke="#3B82F6"
+                  strokeWidth="1.5"
+                  strokeDasharray="4 4"
+                  opacity="0.25"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 2,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: true }}
+                />
+              </svg>
             </motion.div>
 
-            {/* PROCESS STEPS */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-20 mt-20 relative">
+            {[
+              {
+                step: "01",
+                icon: <Search size={30} strokeWidth={2.5} />,
+                title: "Research & Planning",
+                text: "We analyze your market, competitors, keywords, and audience to create a winning PPC strategy.",
+              },
+              {
+                step: "02",
+                icon: <Target size={30} strokeWidth={2.5} />,
+                title: "Campaign Setup",
+                text: "Our team builds highly targeted campaigns with optimized ad groups, keywords, and bidding strategies.",
+              },
+              {
+                step: "03",
+                icon: <BarChart3 size={30} strokeWidth={2.5} />,
+                title: "Optimization",
+                text: "We continuously monitor, test, and refine campaigns to improve conversions and lower acquisition costs.",
+              },
+              {
+                step: "04",
+                icon: <TrendingUp size={30} strokeWidth={2.5} />,
+                title: "Scale & Reporting",
+                text: "We scale successful campaigns and provide transparent reports focused on growth, leads, and ROI.",
+              },
+            ].map((item, index) => (
 
-              {[
-                {
-                  step: "01",
-                  title: "Research & Strategy",
-                  icon: <Search size={26} />,
-                  text: "We analyze competitors, audience behavior, and keywords to create a winning PPC strategy.",
-                },
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.15,
+                }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10 group"
+              >
 
-                {
-                  step: "02",
-                  title: "Campaign Setup",
-                  icon: <PenTool size={26} />,
-                  text: "We build optimized campaigns with compelling ad copy and high-converting targeting.",
-                },
-
-                {
-                  step: "03",
-                  title: "Optimization",
-                  icon: <MonitorSmartphone size={26} />,
-                  text: "We continuously optimize bids, ads, and targeting for better performance and lower CPC.",
-                },
-
-                {
-                  step: "04",
-                  title: "Reporting & Scaling",
-                  icon: <Rocket size={26} />,
-                  text: "We track conversions, generate reports, and scale campaigns for maximum ROI.",
-                },
-              ].map((item, index) => (
-
+                {/* ICON */}
                 <motion.div
-                  key={index}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  transition={{ delay: index * 0.12 }}
                   whileHover={{
-                    y: -10,
+                    scale: 1.08,
+                    rotate: 5,
                   }}
-                  className="
-                    relative
-                    bg-white
-                    border border-[#e8efff]
-                    rounded-[30px]
-                    p-8
-                    shadow-[0_10px_40px_rgba(43,76,154,0.05)]
-                    hover:shadow-[0_25px_60px_rgba(43,76,154,0.12)]
-                    transition-all duration-500
-                  "
+                  transition={{
+                    type: "spring",
+                    stiffness: 220,
+                  }}
+                  className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
                 >
 
-                  {/* STEP NUMBER */}
-                  <div className="
-                    absolute top-6 right-6
-                    text-6xl font-bold
-                    text-[#EEF4FF]
-                  ">
-                    {item.step}
+                  {/* HOVER GLOW */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+                    <div className="absolute -top-4 -right-4 w-14 h-14 bg-blue-500/20 blur-2xl rounded-full"></div>
                   </div>
 
-                  {/* ICON */}
-                  <motion.div
-                    whileHover={{
-                      scale: 1.08,
-                      rotate: 5,
-                    }}
-                    className="
-                      relative z-10
-                      w-16 h-16
-                      rounded-2xl
-                      bg-[#EEF4FF]
-                      text-[#2b4c9a]
-                      flex items-center justify-center
-                    "
-                  >
-                    {item.icon}
-                  </motion.div>
-
-                  {/* TITLE */}
-                  <h3 className="relative z-10 mt-8 text-2xl font-bold text-[#1a2e5e] leading-snug">
-                    {item.title}
-                  </h3>
-
-                  {/* TEXT */}
-                  <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                    {item.text}
-                  </p>
-
-                  {/* ARROW LINE */}
-                  {index !== 3 && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-20 z-20 items-center">
-
-                      <div className="w-12 border-t-2 border-dashed border-[#c8d8ff]"></div>
-
-                      <ArrowRight className="w-5 h-5 text-[#3B82F6]" />
-
-                    </div>
-                  )}
+                  {item.icon}
 
                 </motion.div>
 
-              ))}
+                {/* NUMBER */}
+                <motion.span
+                  animate={{
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                  }}
+                  className="text-xl mt-4 font-bold text-[#2b4c9a]"
+                >
+                  {item.step}
+                </motion.span>
 
-            </div>
+                {/* TITLE */}
+                <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* TEXT */}
+                <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
+                  {item.text}
+                </p>
+
+              </motion.div>
+
+            ))}
 
           </div>
-        </section>
+
+        </div>
+
+      </section>
 
 
         {/* TECHNOLOGIES */}

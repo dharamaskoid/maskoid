@@ -20,8 +20,7 @@ import {
   Rocket,
   Code2,
   PenTool,
-  Database, 
-  Layers,
+  Layout,
   CheckCircle2,
   Plus,
   Sparkles,
@@ -760,8 +759,8 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
 
         </section>   
 
-      {/* OUR PROCESS */}
-      <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
+        {/* OUR WEB DESIGN PROCESS */}
+        <section className="relative w-full bg-[#F8FAFF] py-16 md:px-16 overflow-hidden">
 
         {/* BG GLOW */}
         <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
@@ -769,182 +768,172 @@ const [activeFAQ, setActiveFAQ] = useState<number | null>(0);
         <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
         <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
-          
-          {/* LEFT COLUMN: Content */}
-          <motion.div
+
+            {/* LEFT COLUMN */}
+            <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
             className="max-w-md"
-          >
+            >
 
             <motion.p
-              whileHover={{
+                whileHover={{
                 scale: 1.04,
-              }}
-              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+                }}
+                className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
             >
-              Our Process
+                Our Design Process
             </motion.p>
 
             <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-              A Simple Process To Deliver
-              <span className="text-[#2b4c9a]"> Exceptional Results</span>
+                A Creative Process For
+                <span className="text-[#2b4c9a]"> Exceptional Designs</span>
             </h2>
 
             <p className="mt-5 text-gray-500 text-lg leading-relaxed">
-              Our proven process ensures your project is delivered on time,
-              on budget, and exceeds expectations.
+                We follow a strategic design process that combines creativity, user experience, and modern design principles to create websites that engage and convert.
             </p>
 
-          </motion.div>
+            </motion.div>
 
-          {/* RIGHT COLUMN */}
-          <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
-            
+            {/* RIGHT COLUMN */}
+            <div className="relative w-full lg:w-3/5 flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4 mt-8 lg:mt-0">
+
             {/* SVG LINE */}
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="absolute left-12 h-20 pointer-events-none hidden sm:block z-0"
             >
-              <svg
+                <svg
                 className="w-full h-full"
                 viewBox="0 0 500 40"
                 fill="none"
                 preserveAspectRatio="none"
-              >
+                >
                 <motion.path
-                  d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20"
-                  stroke="#3B82F6"
-                  strokeWidth="1.5"
-                  strokeDasharray="4 4"
-                  opacity="0.25"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  transition={{
+                    d="M 10,20 Q 80,0 150,20 T 290,20 T 430,20"
+                    stroke="#3B82F6"
+                    strokeWidth="1.5"
+                    strokeDasharray="4 4"
+                    opacity="0.25"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
                     duration: 2,
                     ease: "easeInOut",
-                  }}
-                  viewport={{ once: true }}
+                    }}
+                    viewport={{ once: true }}
                 />
-              </svg>
+                </svg>
             </motion.div>
 
             {[
-              {
+                {
                 step: "01",
                 icon: <Search size={30} strokeWidth={2.5} />,
-                title: "Discovery & Planning",
-                text: "We understand your goals, audience, and requirements to create a solid plan.",
-              },
-              {
+                title: "Research & Discovery",
+                text: "We analyze your brand, audience, and competitors to understand design goals and project requirements.",
+                },
+                {
                 step: "02",
-                icon: (
-                  <PenTool
-                    size={30}
-                    strokeWidth={2.5}
-                    className="rotate-90"
-                  />
-                ),
-                title: "Design & Prototyping",
-                text: "We design intuitive UI/UX prototypes that align with your brand and users.",
-              },
-              {
+                icon: <PenTool size={30} strokeWidth={2.5} />,
+                title: "Wireframe & UI Design",
+                text: "We create wireframes and visually appealing user interfaces focused on usability and engagement.",
+                },
+                {
                 step: "03",
-                icon: <Code2 size={30} strokeWidth={2.5} />,
-                title: "Development",
-                text: "Our developers build scalable, secure, and high-performance solutions.",
-              },
-              {
+                icon: <Layout size={30} strokeWidth={2.5} />,
+                title: "Responsive Design",
+                text: "Every layout is optimized for desktops, tablets, and mobile devices to ensure seamless experiences.",
+                },
+                {
                 step: "04",
                 icon: <Rocket size={30} strokeWidth={2.5} />,
-                title: "Testing & Launch",
-                text: "We test thoroughly and launch your website with full support.",
-              },
+                title: "Review & Launch",
+                text: "After feedback and refinements, we deliver a polished design ready for development and growth.",
+                },
             ].map((item, index) => (
 
-              <motion.div
+                <motion.div
                 key={index}
                 initial={{
-                  opacity: 0,
-                  y: 40,
+                    opacity: 0,
+                    y: 40,
                 }}
                 whileInView={{
-                  opacity: 1,
-                  y: 0,
+                    opacity: 1,
+                    y: 0,
                 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.7,
-                  delay: index * 0.15,
+                    duration: 0.7,
+                    delay: index * 0.15,
                 }}
                 whileHover={{
-                  y: -10,
+                    y: -10,
                 }}
                 className="flex flex-col items-center text-center flex-1 min-w-[120px] z-10 group"
-              >
+                >
 
                 {/* ICON */}
                 <motion.div
-                  whileHover={{
+                    whileHover={{
                     scale: 1.08,
                     rotate: 5,
-                  }}
-                  transition={{
+                    }}
+                    transition={{
                     type: "spring",
                     stiffness: 220,
-                  }}
-                  className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
+                    }}
+                    className="relative z-10 w-16 h-16 rounded-2xl bg-[#EEF4FF] text-[#2b4c9a] flex items-center justify-center group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500"
                 >
 
-                  {/* HOVER GLOW */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
                     <div className="absolute -top-4 -right-4 w-14 h-14 bg-blue-500/20 blur-2xl rounded-full"></div>
+                    </div>
 
-                  </div>
-
-                  {item.icon}
+                    {item.icon}
 
                 </motion.div>
 
                 {/* NUMBER */}
                 <motion.span
-                  animate={{
+                    animate={{
                     opacity: [0.6, 1, 0.6],
-                  }}
-                  transition={{
+                    }}
+                    transition={{
                     duration: 3,
                     repeat: Infinity,
-                  }}
-                  className="text-xl mt-4 font-bold text-[#2b4c9a]"
+                    }}
+                    className="text-xl mt-4 font-bold text-[#2b4c9a]"
                 >
-                  {item.step}
+                    {item.step}
                 </motion.span>
 
                 {/* TITLE */}
                 <h3 className="relative z-10 mt-2 text-xl font-bold text-[#1a2e5e] leading-snug">
-                  {item.title}
+                    {item.title}
                 </h3>
 
                 {/* TEXT */}
                 <p className="relative z-10 mt-5 text-gray-500 leading-relaxed">
-                  {item.text}
+                    {item.text}
                 </p>
 
-              </motion.div>
+                </motion.div>
 
             ))}
 
-          </div>
+            </div>
 
         </div>
 
-      </section>
+        </section>
 
       {/* TECHNOLOGIES WE USE */}
       <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 flex items-center">
