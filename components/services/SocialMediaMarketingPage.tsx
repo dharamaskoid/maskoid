@@ -1055,7 +1055,7 @@ export default function SocialMediaMarketingPage() {
             className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block"
           >
 
-            <div className="absolute inset-0 border border-pink-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
+            <div className="absolute inset-0 border border-blue-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
 
             <div className="absolute inset-0 border border-blue-500/30 rounded-[50%] rotate-[-7deg]"></div>
 
@@ -1237,7 +1237,7 @@ export default function SocialMediaMarketingPage() {
       <section className="relative w-full bg-[#F8FAFF] overflow-hidden py-16 flex items-center">
 
         {/* BG EFFECTS */}
-        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-pink-500/5 blur-[120px] rounded-full"></div>
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full"></div>
 
         <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
@@ -1495,7 +1495,7 @@ export default function SocialMediaMarketingPage() {
         {/* BG EFFECTS */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#1a2e5e_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-pink-500/10 blur-[120px] rounded-full"></div>
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
         <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#4f7cff]/10 blur-[120px] rounded-full"></div>
 
@@ -1512,7 +1512,7 @@ export default function SocialMediaMarketingPage() {
               className="lg:sticky lg:top-28"
             >
 
-              <p className="inline-flex px-5 py-2 rounded-full bg-pink-500/10 text-pink-500 text-xs font-semibold uppercase">
+              <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-blue-500 text-xs font-semibold uppercase">
                 FAQ SECTION
               </p>
 
@@ -1606,7 +1606,7 @@ export default function SocialMediaMarketingPage() {
                   {/* HOVER GLOW */}
                   <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
 
-                    <div className="absolute -top-24 right-0 w-60 h-60 bg-pink-500/10 blur-3xl rounded-full"></div>
+                    <div className="absolute -top-24 right-0 w-60 h-60 bg-blue-500/10 blur-3xl rounded-full"></div>
 
                   </div>
 
@@ -1726,7 +1726,7 @@ export default function SocialMediaMarketingPage() {
                     {/* GLOW */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
 
-                      <div className="absolute -top-20 right-0 w-52 h-52 bg-pink-500/10 blur-3xl rounded-full"></div>
+                      <div className="absolute -top-20 right-0 w-52 h-52 bg-blue-500/10 blur-3xl rounded-full"></div>
 
                     </div>
 
