@@ -24,7 +24,7 @@ import {
   Layers,
   CheckCircle2,
   Plus,
-  ArrowRight,
+  Sparkles,
   MessageCircleMore,
   Minus,
   ShoppingBag,
