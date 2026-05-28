@@ -936,109 +936,154 @@ export default function PPCServicePage() {
       </section>
 
 
-        {/* TECHNOLOGIES */}
-        <section className="relative py-16 bg-white overflow-hidden">
+      {/* TECHNOLOGIES WE USE */}
+      <section className="relative w-full bg-[#EEF2FF] text-white overflow-hidden py-16 flex items-center">
 
-          <div className="absolute inset-0 pointer-events-none">
+        {/* BG GRID */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[#1a2e5e] [background-size:28px_28px]"></div>
 
-            <div className="absolute -top-20 -left-20 w-[350px] md:w-[450px] h-[350px] md:h-[450px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+        {/* BG GLOW */}
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-            <div className="absolute bottom-0 right-0 w-[300px] md:w-[420px] h-[300px] md:h-[420px] bg-[#2b4c9a]/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#7c4dff]/10 blur-[120px] rounded-full"></div>
 
-          </div>
+        <div className="container px-6 mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
 
-          <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+          {/* Background Decorative Rings */}
+          <motion.div
+            animate={{ rotate: [0, 3, 0] }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[320px] opacity-50 pointer-events-none z-0 hidden lg:block"
+          >
 
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="absolute inset-0 border border-purple-500/20 rounded-[50%] rotate-[-12deg] scale-110"></div>
+            <div className="absolute inset-0 border border-indigo-500/30 rounded-[50%] rotate-[-7deg]"></div>
+            <div className="absolute inset-12 border border-blue-500/15 rounded-[50%] rotate-[-3deg] scale-95"></div>
 
-              {/* LEFT */}
+          </motion.div>
+
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="relative z-10"
+          >
+
+            <motion.p
+              whileHover={{ scale: 1.05 }}
+              className="inline-block w-auto px-5 py-1.5 rounded-full text-xs font-medium border border-blue-400/20 bg-blue-500/10 text-[#3B82F6] uppercase tracking-wider hover:bg-blue-500/20 transition"
+            >
+              PPC Platforms & Tools
+            </motion.p>
+
+            <h2 className="mt-5 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Industry-Leading Tools For
+              <span className="text-[#2b4c9a]"> Better Results</span>
+            </h2>
+
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed max-w-xl">
+              We use powerful advertising and analytics platforms to create, optimize, and scale PPC campaigns that deliver measurable ROI.
+            </p>
+
+          </motion.div>
+
+          {/* RIGHT TECHNOLOGY STACK */}
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-x-4 gap-y-6 mt-8 lg:mt-0 z-10 w-full lg:w-auto pr-0 lg:pr-8">
+
+            {[
+              {
+                icon: <Search size={30} />,
+                title: "Google Ads",
+                color: "text-blue-500",
+                position: "md:col-start-1 md:row-start-1",
+              },
+              {
+                icon: <Target size={30} />,
+                title: "Google Analytics",
+                color: "text-orange-500",
+                position: "md:col-start-3 md:row-start-1",
+              },
+              {
+                icon: <BarChart3 size={30} />,
+                title: "Tag Manager",
+                color: "text-sky-500",
+                position: "md:col-start-5 md:row-start-1",
+              },
+              {
+                icon: <MousePointerClick size={30} />,
+                title: "Meta Ads",
+                color: "text-blue-600",
+                position: "md:col-start-2 md:row-start-2",
+              },
+              {
+                icon: <LineChart size={30} />,
+                title: "Looker Studio",
+                color: "text-green-500",
+                position: "md:col-start-4 md:row-start-2",
+              },
+              {
+                icon: <Globe size={30} />,
+                title: "Keyword Research",
+                color: "text-purple-500",
+                position: "md:col-start-6 md:row-start-2",
+              },
+            ].map((item, index) => (
+
               <motion.div
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className={`
+                  group
+                  relative
+                  overflow-hidden
+                  inline-flex whitespace-nowrap items-center gap-3
+                  bg-[#1a2e5e]
+                  border border-slate-800/80
+                  rounded-xl
+                  px-5 py-3
+                  w-fit h-14
+                  transition-all duration-500
+                  ${item.position}
+                `}
               >
 
-                <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase tracking-[0.2em]">
-                  PPC Tools & Platforms
-                </p>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+                  <div className="absolute -top-10 right-0 w-24 h-24 bg-indigo-500/20 blur-3xl rounded-full"></div>
+                </div>
 
-                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
-                  Advanced PPC
-                  <span className="text-[#2b4c9a]"> Technologies</span>
-                </h2>
+                <div className={`relative z-10 flex items-center justify-center w-6 h-6 shrink-0 ${item.color}`}>
+                  {item.icon}
+                </div>
 
-                <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
-                  We use powerful advertising and analytics platforms to maximize campaign performance and conversions.
-                </p>
+                <span className="relative z-10 text-lg font-medium text-slate-200 tracking-wide">
+                  {item.title}
+                </span>
 
               </motion.div>
 
-              {/* RIGHT */}
-              <motion.div
-                variants={stagger}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6"
-              >
-
-                {[
-                  {
-                    name: "Google Ads",
-                    icon: <Target size={42} />,
-                  },
-                  {
-                    name: "Google Analytics",
-                    icon: <BarChart3 size={42} />,
-                  },
-                  {
-                    name: "Meta Ads",
-                    icon: <Globe size={42} />,
-                  },
-                  {
-                    name: "Keyword Planner",
-                    icon: <Search size={42} />,
-                  },
-                  {
-                    name: "Conversion Tracking",
-                    icon: <LineChart size={42} />,
-                  },
-                  {
-                    name: "Campaign Scaling",
-                    icon: <TrendingUp size={42} />,
-                  },
-                ].map((item, index) => (
-
-                  <motion.div
-                    key={index}
-                    variants={fadeUp}
-                    whileHover={{
-                      y: -10,
-                      scale: 1.03,
-                    }}
-                    className="group relative bg-white border border-[#dbe7ff] rounded-[28px] p-6 md:p-8 flex flex-col items-center justify-center overflow-hidden shadow-[0_10px_40px_rgba(43,76,154,0.05)] hover:shadow-[0_30px_80px_rgba(43,76,154,0.14)] transition-all duration-500"
-                  >
-
-                    <div className="w-20 h-20 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-[#2b4c9a] group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-500">
-                      {item.icon}
-                    </div>
-
-                    <h3 className="mt-5 text-lg md:text-xl font-semibold text-[#1a2e5e] text-center">
-                      {item.name}
-                    </h3>
-
-                  </motion.div>
-
-                ))}
-
-              </motion.div>
-
-            </div>
+            ))}
 
           </div>
 
-        </section>
+        </div>
+
+      </section>
 
         {/* FAQ SECTION */}
         <section className="relative py-16 bg-[#EEF2FF] overflow-hidden">
