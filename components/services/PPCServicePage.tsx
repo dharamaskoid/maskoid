@@ -517,52 +517,91 @@ export default function PPCServicePage() {
 
       </section>
 
-      {/* OUR SOLUTION */}
-      <section className="py-16 bg-[#EEF2FF] relative overflow-hidden">
+      {/* OUR PPC SOLUTIONS */}
+      <section className="relative bg-[#F8FAFF] py-16 overflow-hidden">
+
+        {/* Soft Light Blur Accents in Background */}
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/30 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
         <div className="container px-6 mx-auto relative z-10">
 
-          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-
-            <p className="inline-block px-5 py-1.5 rounded-full text-xs font-medium bg-blue-500/10 text-[#3B82F6] uppercase">
-              Our PPC Solutions
+          {/* HEADER */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#3B82F6] text-xs font-semibold uppercase">
+              PPC Solutions
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold text-[#1a2e5e]">
-              PPC Strategy
-              <span className="text-[#2b4c9a]"> Solutions</span>
+            <h2 className="mt-6 text-4xl md:text-4xl font-bold text-[#1a2e5e] leading-tight">
+              Performance Marketing That
+              <span className="text-[#2b4c9a]"> Delivers Results</span>
             </h2>
 
+            <p className="mt-5 text-gray-500 text-lg leading-relaxed">
+              We create data-driven PPC strategies that attract qualified customers, maximize ad spend, and generate measurable business growth.
+            </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+          {/* CONTENT ROW LIST LAYOUT */}
+          <div className="grid grid-cols-1 mt-6 md:grid-cols-2 gap-x-12 lg:gap-x-16 w-full items-start">
 
-            {solutions.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                whileHover={{ y: -12 }}
-                className="bg-white p-8 rounded-[28px] border border-[#e8efff] text-center"
-              >
-                <div className="text-[#2b4c9a] flex justify-center">
-                  {item.icon}
+            {/* LEFT COLUMN */}
+            <div className="flex flex-col w-full">
+              {solution.slice(0, 3).map((item, index) => (
+                <div
+                  key={index}
+                  className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
+                    {item.icon}
+                  </div>
+
+                  <div className="space-y-1.5 flex-1">
+                    <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-500 font-light leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
 
-                <h3 className="mt-6 text-xl font-bold text-[#1a2e5e]">
-                  {item.title}
-                </h3>
+            {/* RIGHT COLUMN */}
+            <div className="flex flex-col w-full mt-0">
+              {solutions.slice(3, 6).map((item, index) => (
+                <div
+                  key={index}
+                  className="group flex items-start py-7 border-b border-gray-200/60 transition-all duration-300 hover:bg-gray-50/50 hover:px-4 cursor-pointer gap-6 text-left"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white text-[#2b4c9a] flex items-center justify-center shadow-sm border border-gray-100 group-hover:bg-[#2b4c9a] group-hover:text-white transition-all duration-300 shrink-0">
+                    {item.icon}
+                  </div>
 
-                <p className="mt-4 text-gray-500 text-sm">
-                  {item.text}
-                </p>
+                  <div className="space-y-1.5 flex-1">
+                    <h3 className="text-xl font-bold text-[#2b4c9a] tracking-tight group-hover:text-[#2b4c9a] transition-colors">
+                      {item.title}
+                    </h3>
 
-              </motion.div>
-            ))}
+                    <p className="text-gray-500 font-light leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
           </div>
 
         </div>
-
       </section>
       
       {/* WHY CHOOSE US */}
