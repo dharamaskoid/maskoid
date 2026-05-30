@@ -7,15 +7,13 @@ import { motion,  useScroll, useTransform } from "framer-motion";
 import ProcessChart from "@/components/ProcessChart";
 import {
   ShieldCheck,
-  LayoutDashboard,
-  RefreshCcw,
-  Lock,
-  List,
-  Users,
-  UserPlus,
+  Upload,
   BarChart3,
-  KeyRound,
-  ChevronRight,
+  Layout,
+  Database,
+  Eye,
+  FileText,
+  Printer,
   Mail,
 } from "lucide-react";
 
@@ -34,66 +32,41 @@ const fadeUp = {
 };
 
 const steps = [
-  {
-    number: "01",
-    title: "Login",
-    desc: "Secure access with authentication.",
-    icon: <Lock size={30} />,
-  },
-  {
-    number: "02",
-    title: "Dashboard",
-    desc: "Overview of licenses & analytics.",
-    icon: <LayoutDashboard size={30} />,
-  },
-  {
-    number: "03",
-    title: "Create Softwares",
-    desc: "Add products & generate keys.",
-    icon: <ShieldCheck size={30} />,
-  },
-  {
-    number: "04",
-    title: "List Softwares",
-    desc: "Manage software products easily.",
-    icon: <List size={30} />,
-  },
-  {
-    number: "05",
-    title: "Create License Key",
-    desc: "Generate unique validation keys.",
-    icon: <KeyRound size={30} />,
-  },
-  {
-    number: "06",
-    title: "License Key List",
-    desc: "Track all generated keys.",
-    icon: <List size={30} />,
-  },
-  {
-    number: "07",
-    title: "Verification Logs",
-    desc: "Monitor validations in real-time.",
-    icon: <BarChart3 size={30} />,
-  },
-  {
-    number: "08",
-    title: "Re-Verification Logs",
-    desc: "Review re-validation attempts.",
-    icon: <RefreshCcw size={30} />,
-  },
-  {
-    number: "09",
-    title: "Create User",
-    desc: "Add users with permissions.",
-    icon: <UserPlus size={30} />,
-  },
-  {
-    number: "10",
-    title: "All Users",
-    desc: "Manage all team members.",
-    icon: <Users size={30} />,
-  },
+{
+number:"01",
+title:"Upload Data",
+icon:<Upload size={30} />
+},
+{
+number:"02",
+title:"Select Template",
+icon:<Layout size={30} />
+},
+{
+number:"03",
+title:"Map Fields",
+icon:<Database size={30} />
+},
+{
+number:"04",
+title:"Generate Preview",
+icon:<Eye size={30} />
+},
+{
+number:"05",
+title:"Generate PDF",
+icon:<FileText size={30} />
+},
+{
+number:"06",
+title:"Print Output",
+icon:<Printer size={30} />
+},
+{
+number:"07",
+title:"Export Reports",
+icon:<BarChart3 size={30} />
+}
 ];
 
 export default function LicenseKeyManagementPage() {
