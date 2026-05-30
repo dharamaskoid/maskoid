@@ -309,7 +309,7 @@ export default function VariableDataPrintingSoftwarePage() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                src="/images/variable.png"
+                src="/images/variable2.png"
                 alt="Variable Data Printer"
                 className="
                   relative
