@@ -121,12 +121,10 @@ export default function VariableDataPrintingSoftwarePage() {
                 className="relative flex items-center justify-center"
               >
 
-                {/* Pink Center Glow */}
-                <div className="absolute w-[180px] h-[180px] rounded-full bg-pink-500/20 blur-3xl" />
 
                 {/* Rings */}
-                <div className="absolute w-[280px] h-[240px] border border-white/10 rounded-full" />
-                <div className="absolute w-[380px] h-[320px] border border-white/10 rounded-full" />
+                <div className="absolute w-[280px] h-[280px] border border-white/10 rounded-full" />
+                <div className="absolute w-[320px] h-[320px] border border-white/10 rounded-full" />
                 
 
                 {/* Printer Image */}
