@@ -7,15 +7,9 @@ import { motion,  useScroll, useTransform } from "framer-motion";
 import ProcessChart from "@/components/VariableProcessChart";
 import {
   ShieldCheck,
-  Upload,
-  BarChart3,
-  Layout,
-  Database,
-  Eye,
-  FileText,
-  Printer,
   Mail,
 } from "lucide-react";
+import { FaLock, FaUserCircle, FaCog } from "react-icons/fa";
 
 const fadeUp = {
   hidden: {
@@ -88,13 +82,35 @@ export default function VariableDataPrintingSoftwarePage() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="relative"
+              className="relative flex items-center justify-center min-h-[450px]"
             >
 
-              {/* GLOW */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#2b4c9a]/30 to-blue-500/10 blur-3xl rounded-[40px]"></div>
+              {/* Glow Background */}
+              <div className="absolute w-[420px] h-[420px] bg-[#2b4c9a]/20 blur-[120px] rounded-full" />
 
-              {/* IMAGE */}
+              {/* Floating Dots */}
+              {[
+                { w: 8, h: 8, t: "12%", l: "5%" },
+                { w: 6, h: 6, t: "40%", l: "2%" },
+                { w: 10, h: 10, b: "18%", l: "6%" },
+                { w: 8, h: 8, t: "8%", r: "4%" },
+                { w: 10, h: 10, b: "25%", r: "3%" },
+              ].map((d, i) => (
+                <div
+                  key={i}
+                  className="absolute rounded-full bg-white/40"
+                  style={{
+                    width: d.w,
+                    height: d.h,
+                    top: d.t,
+                    left: d.l,
+                    right: d.r,
+                    bottom: d.b,
+                  }}
+                />
+              ))}
+
+              {/* Main Circle Wrapper */}
               <motion.div
                 animate={{ y: [0, -12, 0] }}
                 transition={{
@@ -102,14 +118,96 @@ export default function VariableDataPrintingSoftwarePage() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative overflow-hidden rounded-[32px]"
+                className="relative flex items-center justify-center"
               >
 
-                <img
-                src="/images/Banner Web.png"
-                alt="Contact"
-                className="h-[200px] sm:h-[350px] md:h-[320px] lg:h-[320px] w-auto max-w-full object-contain"
+                {/* Pink Center Glow */}
+                <div className="absolute w-[180px] h-[180px] rounded-full bg-pink-500/20 blur-3xl" />
+
+                {/* Rings */}
+                <div className="absolute w-[240px] h-[240px] border border-white/10 rounded-full" />
+                <div className="absolute w-[320px] h-[320px] border border-white/10 rounded-full" />
+                <div className="absolute w-[400px] h-[400px] border border-white/10 rounded-full" />
+
+                {/* Printer Image */}
+                <motion.img
+                  whileHover={{ scale: 1.05 }}
+                  src="/images/Banner Web.png"
+                  alt="Variable Data Printing Software"
+                  className="relative z-20 w-[320px] lg:w-[380px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
                 />
+
+                {/* Lock Badge */}
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                  }}
+                  className="
+                  absolute
+                  top-[18%]
+                  left-[10%]
+                  w-14 h-14
+                  bg-white
+                  rounded-full
+                  flex items-center justify-center
+                  shadow-xl
+                  z-30
+                "
+                >
+                  <FaLock size={22} color="#1a75ce" />
+                </motion.div>
+
+                {/* User Badge */}
+                <motion.div
+                  animate={{
+                    y: [0, 12, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                  }}
+                  className="
+                  absolute
+                  top-[15%]
+                  right-[8%]
+                  w-16 h-16
+                  bg-white
+                  rounded-full
+                  flex items-center justify-center
+                  shadow-xl
+                  z-30
+                "
+                >
+                  <FaUserCircle size={28} color="#e91e8c" />
+                </motion.div>
+
+                {/* Settings Badge */}
+                <motion.div
+                  animate={{
+                    y: [0, -8, 0],
+                  }}
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                  }}
+                  className="
+                  absolute
+                  bottom-[12%]
+                  right-[15%]
+                  w-14 h-14
+                  bg-white
+                  rounded-full
+                  flex items-center justify-center
+                  shadow-xl
+                  z-30
+                "
+                >
+                  <FaCog size={24} color="#00bcd4" />
+                </motion.div>
 
               </motion.div>
 
