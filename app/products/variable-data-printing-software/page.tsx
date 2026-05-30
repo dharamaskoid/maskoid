@@ -35,6 +35,17 @@ const fadeUp = {
 
 export default function VariableDataPrintingSoftwarePage() {
 
+  const refs = useRef([]);
+  const add = (el) => { if (el && !refs.current.includes(el)) refs.current.push(el); };
+ 
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); }),
+      { threshold: 0.1 }
+    );
+    refs.current.forEach(el => el && obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
