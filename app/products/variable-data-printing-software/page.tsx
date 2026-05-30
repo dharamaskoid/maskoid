@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from 'react';
 import { motion,  useScroll, useTransform } from "framer-motion";
-import ProcessChart from "@/components/ProcessChart";
+import ProcessChart from "@/components/VariableProcessChart";
 import {
   ShieldCheck,
   Upload,
