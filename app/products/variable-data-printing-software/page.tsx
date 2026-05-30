@@ -137,53 +137,7 @@ export default function VariableDataPrintingSoftwarePage() {
                   className="relative z-20 w-[320px] lg:w-[380px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
                 />
 
-                {/* Lock Badge */}
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                  }}
-                  className="
-                  absolute
-                  top-[18%]
-                  left-[10%]
-                  w-14 h-14
-                  bg-white
-                  rounded-full
-                  flex items-center justify-center
-                  shadow-xl
-                  z-30
-                "
-                >
-                  <FaLock size={22} color="#1a75ce" />
-                </motion.div>
 
-                {/* User Badge */}
-                <motion.div
-                  animate={{
-                    y: [0, 12, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                  }}
-                  className="
-                  absolute
-                  top-[15%]
-                  right-[8%]
-                  w-16 h-16
-                  bg-white
-                  rounded-full
-                  flex items-center justify-center
-                  shadow-xl
-                  z-30
-                "
-                >
-                  <FaUserCircle size={28} color="#e91e8c" />
-                </motion.div>
 
                 {/* Settings Badge */}
                 <motion.div
