@@ -209,8 +209,8 @@ export default function VariableDataPrintingSoftwarePage() {
           </p>
 
           <h2 className="mt-6 text-4xl md:text-4xl font-black text-[#1a2e5e] leading-tight">
-            Complete Variable Data
-            <span className="text-[#2b4c9a]"> Printing Workflow</span>
+            Variable Data Printing 
+            <span className="text-[#2b4c9a]"> Software</span>
           </h2>
 
           <p className="mt-6 text-lg leading-[1.9] text-[#5c6b8a]">
