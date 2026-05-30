@@ -288,8 +288,7 @@ export default function VariableDataPrintingSoftwarePage() {
               {/* Glow */}
               <div className="
                 absolute
-                w-[320px]
-                h-[320px]
+
                 bg-blue-500/10
                 rounded-full
                 blur-3xl
