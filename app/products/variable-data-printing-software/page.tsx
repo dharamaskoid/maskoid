@@ -188,7 +188,7 @@ export default function VariableDataPrintingSoftwarePage() {
         <ProcessChart/>
 
       {/* FEATURES SECTION */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      <section className="relative py-16 bg-white overflow-hidden">
 
         {/* Background Blobs */}
         <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-3xl" />
