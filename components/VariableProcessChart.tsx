@@ -273,10 +273,8 @@ export default function ProcessChart() {
           </h2>
 
           <p className="mt-6 text-lg leading-[1.9] text-[#5c6b8a]">
-            Here is a step-by-step demonstration of our Variable Data Printing Software.
-            Designed for businesses handling large volumes of system-generated transactions,
-            it enables bulk printing of dynamic data, customizable layouts, barcodes, QR codes,
-            and reports with speed, accuracy, and security.
+            Enterprise-grade Variable Data Printing Software for bulk document generation, personalized printing, 
+            barcode integration, and accurate data-driven workflows.
           </p>
         </div>
         </motion.div>
