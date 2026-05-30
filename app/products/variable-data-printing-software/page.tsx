@@ -295,9 +295,7 @@ export default function VariableDataPrintingSoftwarePage() {
                 blur-3xl
               " />
 
-              {/* Rings */}
-              <div className="absolute w-[280px] h-[280px] rounded-full border border-blue-100" />
-              <div className="absolute w-[360px] h-[360px] rounded-full border border-blue-100" />
+              
 
               <motion.img
                 animate={{ y: [0, -12, 0] }}
@@ -306,7 +304,7 @@ export default function VariableDataPrintingSoftwarePage() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                src="/images/printer.png"
+                src="/images/variable.png"
                 alt="Variable Data Printer"
                 className="
                   relative
