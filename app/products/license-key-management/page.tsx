@@ -508,6 +508,32 @@ export default function LicenseKeyManagementPage() {
                 transition={{ duration: 0.8 }}
                 className="space-y-5"
               >
+                  {/* Hidden Fields */}
+                <input
+                  type="hidden"
+                  name="project"
+                  value="Liciense Key Management"
+                />
+
+                <input
+                  type="hidden"
+                  name="page"
+                  value={
+                    typeof window !== "undefined"
+                      ? window.location.pathname
+                      : ""
+                  }
+                />
+
+                <input
+                  type="hidden"
+                  name="url"
+                  value={
+                    typeof window !== "undefined"
+                      ? window.location.href
+                      : ""
+                  }
+  />
 
                 {[
                   "Your Name",
