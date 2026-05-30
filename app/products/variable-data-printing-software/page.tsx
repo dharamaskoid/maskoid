@@ -220,7 +220,7 @@ export default function VariableDataPrintingSoftwarePage() {
         </div>
         </motion.div>
 
-          <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
             {/* LEFT FEATURES */}
             <div className="space-y-6">
