@@ -64,7 +64,7 @@ export default function VariableDataPrintingSoftwarePage() {
             >
 
               <p className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[#6EA8FF] text-xs font-semibold uppercase">
-                Secure • Reliable • Scalable
+                Smart Printing • Dynamic Data • Enterprise Ready
               </p>
 
               <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
