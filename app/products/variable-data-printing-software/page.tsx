@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useEffect } from 'react';
-import { motion } from "framer-motion";
+import { useRef } from 'react';
+import { motion,  useScroll, useTransform } from "framer-motion";
 import ProcessChart from "@/components/VariableProcessChart";
 import {
   ShieldCheck,
@@ -35,22 +35,6 @@ const fadeUp = {
 
 export default function VariableDataPrintingSoftwarePage() {
 
-const refs = useRef<HTMLDivElement[]>([]);
-
-const add = (el: HTMLDivElement | null): void => {
-  if (el && !refs.current.includes(el)) {
-    refs.current.push(el);
-  }
-};
- 
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); }),
-      { threshold: 0.1 }
-    );
-    refs.current.forEach(el => el && obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
@@ -138,53 +122,7 @@ const add = (el: HTMLDivElement | null): void => {
 
         <ProcessChart/>
 
-{/* ── FEATURES ── */}
-        <section className="vdp-feat">
-          <div className="vdp-feat-blob" style={{ width:300, height:300, top:-80, left:-80, background:"rgba(26,117,206,0.06)" }} />
-          <div className="vdp-feat-blob" style={{ width:260, height:260, bottom:-60, right:-60, background:"rgba(233,30,140,0.05)" }} />
- 
-          <h2 ref={add} className="vdp-fade">Variable Data Printing Software</h2>
- 
-          <div ref={add} className="vdp-fade vdp-feat-grid" style={{ transitionDelay: "0.12s" }}>
-            {/* Left */}
-            <div className="vdp-feat-col">
-              {features.slice(0, 3).map((f, i) => (
-                <div key={i} className="vdp-feat-card">
-                  <div className="vdp-feat-icon">{f.icon}</div>
-                  <div>
-                    <div className="vdp-feat-title">{f.title}</div>
-                    <div className="vdp-feat-sub">{f.sub}</div>
-                    {f.tag && <div className="vdp-feat-tag">{f.tag}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
- 
-            {/* Center */}
-            <div className="vdp-feat-center">
-              <div className="vdp-feat-center-glow" />
-              <img
-                src={PRINTER_IMG}
-                alt="Printer"
-                onError={e => { e.target.src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80"; }}
-              />
-            </div>
- 
-            {/* Right */}
-            <div className="vdp-feat-col">
-              {features.slice(3).map((f, i) => (
-                <div key={i} className="vdp-feat-card">
-                  <div className="vdp-feat-icon">{f.icon}</div>
-                  <div>
-                    <div className="vdp-feat-title">{f.title}</div>
-                    <div className="vdp-feat-sub">{f.sub}</div>
-                    {f.tag && <div className="vdp-feat-tag">{f.tag}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
       {/* DASHBOARD SECTION */}
       <section id="features" className="relative py-16 bg-[#F8FAFF]">
