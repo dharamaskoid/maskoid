@@ -313,18 +313,19 @@ export default function ProcessChart() {
             >
         <div className="text-center max-w-3xl mx-auto mb-20">
           <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
-            License Key Management Process
+            Variable Data Printing Software
           </p>
 
           <h2 className="mt-6 text-4xl md:text-4xl font-black text-[#1a2e5e] leading-tight">
-            Complete Software
-            <span className="text-[#2b4c9a]"> License Workflow</span>
+            Complete Variable Data
+            <span className="text-[#2b4c9a]"> Printing Workflow</span>
           </h2>
 
           <p className="mt-6 text-lg leading-[1.9] text-[#5c6b8a]">
-            A premium enterprise-level workflow system designed to manage
-            software products, license activations, users, logs and security
-            verification in one powerful dashboard.
+            Here is a step-by-step demonstration of our Variable Data Printing Software.
+            Designed for businesses handling large volumes of system-generated transactions,
+            it enables bulk printing of dynamic data, customizable layouts, barcodes, QR codes,
+            and reports with speed, accuracy, and security.
           </p>
         </div>
         </motion.div>
