@@ -9,7 +9,15 @@ import {
   ShieldCheck,
   Mail,
 } from "lucide-react";
-import { FaLock, FaUserCircle, FaCog } from "react-icons/fa";
+
+import {
+  FaPrint,
+  FaNetworkWired,
+  FaFileAlt,
+  FaStar,
+  FaMobileAlt,
+  FaSmile,
+} from "react-icons/fa";
 
 const fadeUp = {
   hidden: {
@@ -25,7 +33,40 @@ const fadeUp = {
   },
 };
 
-
+const features = [
+  {
+    icon: <FaPrint />,
+    title: "A4 To A0 Size",
+    sub: "A4 to A0 Size Black & White Print",
+    tag: "+ Printing Software",
+  },
+  {
+    icon: <FaNetworkWired />,
+    title: "Copier / Network Printer / Scanner",
+    sub: "Printing Software",
+  },
+  {
+    icon: <FaFileAlt />,
+    title: "Plain Copier / Printer / Scanner",
+    sub: "Printing Software",
+  },
+  {
+    icon: <FaStar />,
+    title: "Excellent Service",
+    sub: "Excellent Service Supports",
+    tag: "Service & Manuals",
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "Also Use In Small Printing",
+    sub: "Printing Software",
+  },
+  {
+    icon: <FaSmile />,
+    title: "User Friendly Software",
+    sub: "Software",
+  },
+];
 
 export default function VariableDataPrintingSoftwarePage() {
 
@@ -135,32 +176,6 @@ export default function VariableDataPrintingSoftwarePage() {
                   className="relative z-20 w-[320px] lg:w-[380px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
                 />
 
-
-
-                {/* Settings Badge */}
-                <motion.div
-                  animate={{
-                    y: [0, -8, 0],
-                  }}
-                  transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                  }}
-                  className="
-                  absolute
-                  bottom-[12%]
-                  right-[15%]
-                  w-14 h-14
-                  bg-white
-                  rounded-full
-                  flex items-center justify-center
-                  shadow-xl
-                  z-30
-                "
-                >
-                  <FaCog size={24} color="#00bcd4" />
-                </motion.div>
-
               </motion.div>
 
             </motion.div>
@@ -172,7 +187,201 @@ export default function VariableDataPrintingSoftwarePage() {
 
         <ProcessChart/>
 
+      {/* FEATURES SECTION */}
+      <section className="relative py-20 bg-white overflow-hidden">
 
+        {/* Background Blobs */}
+        <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-[260px] h-[260px] bg-pink-500/5 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-6 relative z-10">
+
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a2e5e]">
+              Variable Data Printing Software
+            </h2>
+
+            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+              Powerful variable data printing solution for personalized printing,
+              barcode generation, QR codes, invoices, labels, and production workflows.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-10 items-center">
+
+            {/* LEFT FEATURES */}
+            <div className="space-y-6">
+              {features.slice(0, 3).map((f, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 }}
+                  className="
+                    bg-white
+                    rounded-2xl
+                    p-5
+                    border
+                    border-gray-100
+                    shadow-sm
+                    hover:shadow-lg
+                    transition-all
+                  "
+                >
+                  <div className="flex gap-4 items-start">
+                    <div className="
+                      w-14 h-14
+                      rounded-xl
+                      bg-[#EEF4FF]
+                      text-[#2b4c9a]
+                      flex items-center justify-center
+                      text-xl
+                    ">
+                      {f.icon}
+                    </div>
+
+                    <div>
+                      <h3 className="font-bold text-[#1a2e5e]">
+                        {f.title}
+                      </h3>
+
+                      <p className="text-gray-500 text-sm mt-1">
+                        {f.sub}
+                      </p>
+
+                      {f.tag && (
+                        <span className="
+                          inline-block
+                          mt-3
+                          px-3 py-1
+                          rounded-full
+                          bg-blue-50
+                          text-[#2b4c9a]
+                          text-xs
+                          font-medium
+                        ">
+                          {f.tag}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CENTER IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative flex justify-center"
+            >
+              {/* Glow */}
+              <div className="
+                absolute
+                w-[320px]
+                h-[320px]
+                bg-blue-500/10
+                rounded-full
+                blur-3xl
+              " />
+
+              {/* Rings */}
+              <div className="absolute w-[280px] h-[280px] rounded-full border border-blue-100" />
+              <div className="absolute w-[360px] h-[360px] rounded-full border border-blue-100" />
+
+              <motion.img
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                src="/images/printer.png"
+                alt="Variable Data Printer"
+                className="
+                  relative
+                  z-10
+                  w-[280px]
+                  lg:w-[340px]
+                  object-contain
+                "
+              />
+            </motion.div>
+
+            {/* RIGHT FEATURES */}
+            <div className="space-y-6">
+              {features.slice(3).map((f, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 }}
+                  className="
+                    bg-white
+                    rounded-2xl
+                    p-5
+                    border
+                    border-gray-100
+                    shadow-sm
+                    hover:shadow-lg
+                    transition-all
+                  "
+                >
+                  <div className="flex gap-4 items-start">
+                    <div className="
+                      w-14 h-14
+                      rounded-xl
+                      bg-[#EEF4FF]
+                      text-[#2b4c9a]
+                      flex items-center justify-center
+                      text-xl
+                    ">
+                      {f.icon}
+                    </div>
+
+                    <div>
+                      <h3 className="font-bold text-[#1a2e5e]">
+                        {f.title}
+                      </h3>
+
+                      <p className="text-gray-500 text-sm mt-1">
+                        {f.sub}
+                      </p>
+
+                      {f.tag && (
+                        <span className="
+                          inline-block
+                          mt-3
+                          px-3 py-1
+                          rounded-full
+                          bg-blue-50
+                          text-[#2b4c9a]
+                          text-xs
+                          font-medium
+                        ">
+                          {f.tag}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* DASHBOARD SECTION */}
       <section id="features" className="relative py-16 bg-[#F8FAFF]">
