@@ -303,7 +303,7 @@ export default function VariableDataPrintingSoftwarePage() {
               
 
               <motion.img
-                animate={{ y: [0, -12, 0] }}
+                
                 transition={{
                   duration: 4,
                   repeat: Infinity,
