@@ -40,9 +40,9 @@ const steps: Step[] = [
   {
     id: "01",
     title: "Easy Login",
-    subtitle: "Secure Access",
+    subtitle: "Secure User Authentication",
     description:
-      "Login securely using your licensed credentials.",
+      "Access the software securely using your licensed credentials. Advanced authentication ensures that only authorized users can manage and generate variable data printing tasks.",
     icon: <User />,
     color: "#2563eb",
     bg: "#DBEAFE",
@@ -51,9 +51,9 @@ const steps: Step[] = [
   {
     id: "02",
     title: "Dashboard",
-    subtitle: "Centralized Control",
+    subtitle: "Centralized Management",
     description:
-      "Manage templates, folders, and print jobs from one place.",
+      "Manage templates, print jobs, data folders, and transaction records from a powerful dashboard designed for maximum productivity and visibility.",
     icon: <LayoutDashboard />,
     color: "#7C3AED",
     bg: "#EDE9FE",
@@ -62,9 +62,9 @@ const steps: Step[] = [
   {
     id: "03",
     title: "Generate PDF",
-    subtitle: "Bulk Processing",
+    subtitle: "Bulk Document Creation",
     description:
-      "Create personalized PDFs instantly from imported data.",
+      "Import data files, select output destinations, and generate thousands of personalized PDFs instantly with complete control over file structure and volume.",
     icon: <FileText />,
     color: "#EC4899",
     bg: "#FCE7F3",
@@ -73,9 +73,9 @@ const steps: Step[] = [
   {
     id: "04",
     title: "Template Placement",
-    subtitle: "Layout Customization",
+    subtitle: "Flexible Layout Control",
     description:
-      "Adjust template elements for perfect print alignment.",
+      "Customize template positioning by adjusting elements horizontally and vertically, ensuring every field aligns perfectly with your print design.",
     icon: <Layout />,
     color: "#F97316",
     bg: "#FFEDD5",
@@ -84,9 +84,9 @@ const steps: Step[] = [
   {
     id: "05",
     title: "Data Placement",
-    subtitle: "Field Positioning",
+    subtitle: "Precision Data Mapping",
     description:
-      "Configure text, variables, and alignment with precision.",
+      "Configure variable fields, text alignment, fonts, and positioning with X-axis and Y-axis controls for accurate and professional print output.",
     icon: <Move />,
     color: "#10B981",
     bg: "#D1FAE5",
@@ -95,9 +95,9 @@ const steps: Step[] = [
   {
     id: "06",
     title: "Reports & Logs",
-    subtitle: "Activity Tracking",
+    subtitle: "Complete Process Tracking",
     description:
-      "Monitor processing history and generated documents.",
+      "Monitor every printing activity through detailed reports and logs. Track generated files, processing history, and document status in real time.",
     icon: <BarChart3 />,
     color: "#06B6D4",
     bg: "#CFFAFE",
@@ -283,7 +283,7 @@ export default function ProcessChart() {
 
         {/* PROCESS GRID */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-x-10 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {steps.map((step, index) => (
               <div key={step.id} className="relative">
                 <StepCard
