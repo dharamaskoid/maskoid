@@ -31,64 +31,13 @@ const fadeUp = {
   },
 };
 
-const steps = [
-{
-number:"01",
-title:"Upload Data",
-icon:<Upload size={30} />
-},
-{
-number:"02",
-title:"Select Template",
-icon:<Layout size={30} />
-},
-{
-number:"03",
-title:"Map Fields",
-icon:<Database size={30} />
-},
-{
-number:"04",
-title:"Generate Preview",
-icon:<Eye size={30} />
-},
-{
-number:"05",
-title:"Generate PDF",
-icon:<FileText size={30} />
-},
-{
-number:"06",
-title:"Print Output",
-icon:<Printer size={30} />
-},
-{
-number:"07",
-title:"Export Reports",
-icon:<BarChart3 size={30} />
-}
-];
+
 
 export default function LicenseKeyManagementPage() {
 
-      // Split data into two rows
-  const rowOne = steps.slice(0, 5);
-  // Reverse the second row visually (10 to 06) so the grid renders from left to right matching the path
-  const rowTwo = steps.slice(5, 10).reverse();
-  const containerRef = useRef(null);
-  
-  // Connects page scrolling directly into our background svg line animation
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
 
-  // Controls the drawing path animation of the connecting track dynamically
-  const pathLength = useTransform(scrollYProgress, [0.1, 0.8], [0, 1]);
 
-  // Splits the data array into layout tiers
-  const tierOne = steps.slice(0, 5);
-  const tierTwo = steps.slice(5, 10).reverse(); // Reverses visually to close the loop naturally
+
 
 
   return (
