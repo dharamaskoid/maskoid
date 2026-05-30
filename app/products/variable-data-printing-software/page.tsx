@@ -196,23 +196,29 @@ export default function VariableDataPrintingSoftwarePage() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          {/* Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a2e5e]">
-              Variable Data Printing Software
-            </h2>
 
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Powerful variable data printing solution for personalized printing,
+        {/* HEADER */}
+         <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+            >
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
+            Variable Data Printing Software
+          </p>
+
+          <h2 className="mt-6 text-4xl md:text-4xl font-black text-[#1a2e5e] leading-tight">
+            Complete Variable Data
+            <span className="text-[#2b4c9a]"> Printing Workflow</span>
+          </h2>
+
+          <p className="mt-6 text-lg leading-[1.9] text-[#5c6b8a]">
+            Powerful variable data printing solution for personalized printing,
               barcode generation, QR codes, invoices, labels, and production workflows.
-            </p>
-          </motion.div>
+          </p>
+        </div>
+        </motion.div>
 
           <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-10 items-center">
 
