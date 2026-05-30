@@ -314,8 +314,6 @@ export default function VariableDataPrintingSoftwarePage() {
                 className="
                   relative
                   z-10
-                  w-[280px]
-                  lg:w-[340px]
                   object-contain
                 "
               />
