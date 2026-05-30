@@ -5,15 +5,11 @@ import { motion } from "framer-motion";
 import {
   User,
   LayoutDashboard,
-  Plus,
-  List,
-  Key,
-  Search,
-  CheckCircle2,
-  RefreshCw,
-  UserPlus,
-  Users,
+  BarChart3,
+  FileText,
   ArrowRight,
+  Layout,
+  Move,
 } from "lucide-react";
 
 const fadeUp = {
@@ -43,10 +39,10 @@ interface Step {
 const steps: Step[] = [
   {
     id: "01",
-    title: "Login",
-    subtitle: "Secure Access Control",
+    title: "Easy Login",
+    subtitle: "Secure User Authentication",
     description:
-      "Users can securely log in using email or username with Google reCAPTCHA protection for enhanced security.",
+      "Access the software securely using your licensed credentials. Advanced authentication ensures that only authorized users can manage and generate variable data printing tasks.",
     icon: <User />,
     color: "#2563eb",
     bg: "#DBEAFE",
@@ -55,9 +51,9 @@ const steps: Step[] = [
   {
     id: "02",
     title: "Dashboard",
-    subtitle: "Track Everything",
+    subtitle: "Centralized Management",
     description:
-      "Monitor active licenses, expired keys, pending activations and overall software statistics in one place.",
+      "Manage templates, print jobs, data folders, and transaction records from a powerful dashboard designed for maximum productivity and visibility.",
     icon: <LayoutDashboard />,
     color: "#7C3AED",
     bg: "#EDE9FE",
@@ -65,93 +61,48 @@ const steps: Step[] = [
 
   {
     id: "03",
-    title: "Create Software",
-    subtitle: "Add Applications",
+    title: "Generate PDF",
+    subtitle: "Bulk Document Creation",
     description:
-      "Create new software products by entering software name, app ID and other required details.",
-    icon: <Plus />,
+      "Import data files, select output destinations, and generate thousands of personalized PDFs instantly with complete control over file structure and volume.",
+    icon: <FileText />,
     color: "#EC4899",
     bg: "#FCE7F3",
   },
 
   {
     id: "04",
-    title: "Software List",
-    subtitle: "Manage Products",
+    title: "Template Placement",
+    subtitle: "Flexible Layout Control",
     description:
-      "View all registered software with total issued keys, pending licenses and application details.",
-    icon: <List />,
+      "Customize template positioning by adjusting elements horizontally and vertically, ensuring every field aligns perfectly with your print design.",
+    icon: <Layout />,
     color: "#F97316",
     bg: "#FFEDD5",
   },
 
   {
     id: "05",
-    title: "Create License Key",
-    subtitle: "Generate Keys",
+    title: "Data Placement",
+    subtitle: "Precision Data Mapping",
     description:
-      "Generate secure 24-character license keys and assign them to customers and software products.",
-    icon: <Key />,
+      "Configure variable fields, text alignment, fonts, and positioning with X-axis and Y-axis controls for accurate and professional print output.",
+    icon: <Move />,
     color: "#10B981",
     bg: "#D1FAE5",
   },
 
   {
     id: "06",
-    title: "License Key List",
-    subtitle: "View All Keys",
+    title: "Reports & Logs",
+    subtitle: "Complete Process Tracking",
     description:
-      "Search and filter active, inactive and expired license keys with complete user information.",
-    icon: <Search />,
+      "Monitor every printing activity through detailed reports and logs. Track generated files, processing history, and document status in real time.",
+    icon: <BarChart3 />,
     color: "#06B6D4",
     bg: "#CFFAFE",
   },
-
-  {
-    id: "07",
-    title: "Verification Logs",
-    subtitle: "Activation Tracking",
-    description:
-      "Track software activations, API requests, system details and first-time key verification records.",
-    icon: <CheckCircle2 />,
-    color: "#6366F1",
-    bg: "#E0E7FF",
-  },
-
-  {
-    id: "08",
-    title: "Re-Verification Logs",
-    subtitle: "Usage Monitoring",
-    description:
-      "Monitor every login session, software usage activity and recurring license verification requests.",
-    icon: <RefreshCw />,
-    color: "#8B5CF6",
-    bg: "#EDE9FE",
-  },
-
-  {
-    id: "09",
-    title: "Create User",
-    subtitle: "Add New Members",
-    description:
-      "Add new users to the system by assigning username, software details and application permissions.",
-    icon: <UserPlus />,
-    color: "#EF4444",
-    bg: "#FEE2E2",
-  },
-
-  {
-    id: "10",
-    title: "All Users",
-    subtitle: "Manage Accounts",
-    description:
-      "View all current and former users registered in the software licensing management system.",
-    icon: <Users />,
-    color: "#0EA5E9",
-    bg: "#E0F2FE",
-  },
 ];
-
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement | null>(null);
