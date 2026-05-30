@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from 'react';
-import { motion,  useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect } from 'react';
+import { motion } from "framer-motion";
 import ProcessChart from "@/components/VariableProcessChart";
 import {
   ShieldCheck,
@@ -35,8 +35,13 @@ const fadeUp = {
 
 export default function VariableDataPrintingSoftwarePage() {
 
-  const refs = useRef([]);
-  const add = (el) => { if (el && !refs.current.includes(el)) refs.current.push(el); };
+const refs = useRef<HTMLDivElement[]>([]);
+
+const add = (el: HTMLDivElement | null): void => {
+  if (el && !refs.current.includes(el)) {
+    refs.current.push(el);
+  }
+};
  
   useEffect(() => {
     const obs = new IntersectionObserver(
