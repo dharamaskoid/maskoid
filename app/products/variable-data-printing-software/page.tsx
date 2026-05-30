@@ -86,7 +86,7 @@ export default function VariableDataPrintingSoftwarePage() {
             >
 
               {/* Glow Background */}
-              <div className="absolute w-[420px] h-[420px] bg-[#2b4c9a]/20 blur-[120px] rounded-full" />
+              <div className="absolute w-[320px] h-[320px] bg-[#2b4c9a]/20 blur-[120px] rounded-full" />
 
               {/* Floating Dots */}
               {[
