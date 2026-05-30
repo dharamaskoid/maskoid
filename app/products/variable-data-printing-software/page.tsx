@@ -125,8 +125,8 @@ export default function LicenseKeyManagementPage() {
               <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
                 Variable Data
                 <span className="block text-[#6EA8FF]">
-                  Printing
-                </span>Software
+                  Printing Software
+                </span>
               </h1>
 
               <p className="mt-6 text-[#B7C2D8] text-lg leading-relaxed max-w-xl">
