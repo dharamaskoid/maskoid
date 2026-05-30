@@ -262,7 +262,7 @@ export default function ProcessChart() {
               initial="hidden"
               animate="show"
             >
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-7xl mx-auto mb-20">
           <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 text-[#2b4c9a] text-xs font-bold uppercase">
             Variable Data Printing Software
           </p>
