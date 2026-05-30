@@ -283,7 +283,7 @@ export default function ProcessChart() {
 
         {/* PROCESS GRID */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-10 gap-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-x-10 gap-y-12">
             {steps.map((step, index) => (
               <div key={step.id} className="relative">
                 <StepCard
