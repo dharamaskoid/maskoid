@@ -359,23 +359,27 @@ const fadeRight: Variants = {
             {[
               {
                 icon: <Clock3 size={30} />,
+                number: "24h",
                 title: "Quick Response",
                 text: "We respond within 24 hours guaranteed.",
               },
               {
                 icon: <Users size={30} />,
+                number: "50+",
                 title: "Expert Team",
-                text: "Our experts are ready to help you grow.",
+                text: "Experienced professionals helping brands grow.",
               },
               {
                 icon: <ShieldCheck size={30} />,
-                title: "Secure & Trusted",
-                text: "Your data is 100% safe and confidential.",
+                number: "500+",
+                title: "Projects Delivered",
+                text: "Successfully completed projects across industries.",
               },
               {
                 icon: <Target size={30} />,
-                title: "Results Driven",
-                text: "We focus on strategies that deliver results.",
+                number: "98%",
+                title: "Client Retention",
+                text: "Long-term partnerships built on trust and results.",
               },
             ].map((item, index) => (
               <motion.div
@@ -390,8 +394,13 @@ const fadeRight: Variants = {
                   {item.icon}
                 </div>
 
+                {/* NUMBER */}
+                <h2 className="mt-5 text-4xl md:text-5xl font-extrabold text-white">
+                  {item.number}
+                </h2>
+
                 {/* TITLE */}
-                <h3 className="mt-5 text-xl font-bold text-[#FFFFFF]">
+                <h3 className="mt-2 text-xl font-bold text-white">
                   {item.title}
                 </h3>
 
