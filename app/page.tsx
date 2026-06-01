@@ -173,39 +173,29 @@ const formatNumber = (num: number, suffix: string) => {
   }, []);
 
   // ================= SMOOTH COUNT =================
- useEffect(() => {
-  if (!startCount) return;
+  useEffect(() => {
+    if (!startCount) return;
 
-  const duration = 2500;
-  let animationFrame: number;
-  let startTime: number | null = null;
+    const duration = 1500;
+    const startTime = Date.now();
 
-  const animate = (timestamp: number) => {
-    if (!startTime) startTime = timestamp;
+    const animate = () => {
+      const progress = Math.min((Date.now() - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
 
-    const progress = Math.min(
-      (timestamp - startTime) / duration,
-      1
-    );
+      setCounts(
+        counterData.map((item) =>
+          Math.floor(item.value * ease)
+        )
+      );
 
-    // Premium smooth ease-out
-    const ease = 1 - Math.pow(1 - progress, 4);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
 
-    setCounts(
-      counterData.map((item) =>
-        Math.floor(item.value * ease)
-      )
-    );
-
-    if (progress < 1) {
-      animationFrame = requestAnimationFrame(animate);
-    }
-  };
-
-  animationFrame = requestAnimationFrame(animate);
-
-  return () => cancelAnimationFrame(animationFrame);
-}, [startCount]);
+    animate();
+  }, [startCount]);
 
 
 
