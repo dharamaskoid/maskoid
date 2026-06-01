@@ -115,19 +115,30 @@ export default function Footer() {
 
           </motion.div>
 
+
           {/* LINKS */}
           <motion.div variants={fadeUp}>
-            <h3 className="font-semibold mb-5 text-white uppercase">Quick Links</h3>
+            <h3 className="font-semibold mb-5 text-white uppercase">
+              Quick Links
+            </h3>
+
             <ul className="space-y-3 text-gray-300 text-sm">
-              {["Home", "About Us", "Projects", "Blogs", "Contact Us"].map((item, i) => (
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/about-us" },
+                { name: "Projects", href: "/projects" },
+                { name: "Blogs", href: "/blogs" },
+                { name: "Contact Us", href: "/contact-us" },
+              ].map((item, i) => (
                 <li key={i}>
-                  <a
-                    href={`/${item.toLowerCase()}`}
-                    className="relative inline-block hover:text-white transition"
+                  <Link
+                    href={item.href}
+                    className="relative inline-block transition hover:text-white group"
                   >
-                    {item}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#6EA8FF] transition-all duration-300 hover:w-full"></span>
-                  </a>
+                    {item.name}
+
+                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#6EA8FF] transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
                 </li>
               ))}
             </ul>
