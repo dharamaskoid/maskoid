@@ -350,7 +350,7 @@ const fadeRight: Variants = {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.0 }}
           className="container mx-auto bg-[#1a2e5e] rounded-2xl border border-[#dbe7ff] p-10"
         >
 
