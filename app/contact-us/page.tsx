@@ -205,7 +205,7 @@ export default function ContactPage() {
                 Get In <span className="text-[#2b4c9a]">Touch</span>
               </h2>
 
-              <div className="mt-10 space-y-5">
+              <div className="mt-16 grid lg:grid-cols-2 gap-10">
                 {[
                   {
                     icon: Phone,
