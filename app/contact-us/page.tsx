@@ -148,13 +148,13 @@ export default function ContactPage() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="h-14 px-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
+                    className="py-3 px-6 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
                   />
 
                   <input
                     type="email"
                     placeholder="Email Address"
-                    className="h-14 px-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
+                    className="py-3 px-6 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
                   />
 
                 </div>
@@ -164,19 +164,19 @@ export default function ContactPage() {
                   <input
                     type="text"
                     placeholder="Phone Number"
-                    className="h-14 px-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
+                    className="py-3 px-6 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
                   />
 
                   <input
                     type="text"
                     placeholder="Subject"
-                    className="h-14 px-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
+                    className="py-3 px-6 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a]"
                   />
 
                 </div>
 
                 <textarea
-                  rows={5}
+                  rows={3}
                   placeholder="Tell us about your project..."
                   className="w-full p-5 rounded-xl bg-white border border-[#dbe7ff] outline-none focus:border-[#2b4c9a] resize-none"
                 ></textarea>
