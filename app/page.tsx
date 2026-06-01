@@ -1002,6 +1002,12 @@ const formatNumber = (num: number, suffix: string) => {
 
                           {/* NUMBER */}
                           <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                              delay: i * 0.15,
+                              duration: 0.5,
+                            }}
                             className="flex items-end gap-1 leading-none"
                           >
 
