@@ -23,6 +23,40 @@ export default function ContactPage() {
     },
   };
 
+  const fadeLeft = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+    scale: 0.95,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const fadeRight = {
+  hidden: {
+    opacity: 0,
+    x: 100,
+    scale: 0.95,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
   return (
     <main className="bg-white overflow-hidden pt-[81.5px] lg:pt-[81.5px]">
 
@@ -401,7 +435,13 @@ export default function ContactPage() {
               <div className="grid lg:grid-cols-[70%_30%] items-center">
 
                   {/* LEFT SIDE - MAP */}
-                  <div className="relative h-full">
+                  <motion.div
+                    variants={fadeLeft}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="relative h-full"
+                  >
 
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6267.920822954264!2d73.17486261049172!3d22.307488551278368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc890c85ccb85%3A0x79f808e425688eb9!2sMaskoid%20Technologies!5e0!3m2!1sen!2sin!4v1778925243270!5m2!1sen!2sin"
                     width="100%" 
@@ -415,10 +455,16 @@ export default function ContactPage() {
                     </iframe>
 
 
-                  </div>
+                  </motion.div>
 
                   {/* RIGHT SIDE - CONTENT */}
-                  <div className="px-8">
+                  <motion.div
+                    variants={fadeRight}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="px-8"
+                  >
 
                   {/* TAG */}
                   <p className="inline-flex px-4 py-1.5 rounded-full bg-blue-500/10 text-[#2563EB] text-xs font-semibold uppercase tracking-[0.2em]">
@@ -479,7 +525,7 @@ export default function ContactPage() {
 
                   </div>
 
-                  </div>
+                </motion.div>
 
               </div>
 
