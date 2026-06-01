@@ -393,13 +393,7 @@ export default function VariableDataPrintingSoftwarePage() {
         <div className="container px-6 mx-auto">
 
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
-            whileHover={{
-              y: -5,
-            }}
+
             className="
               relative
               bg-[#1a2e5e]
