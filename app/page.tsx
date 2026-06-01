@@ -1136,7 +1136,7 @@ const formatNumber = (num: number, suffix: string) => {
                   >
 
                     {/* ================= CATER SPOON ================= */}
-                    {(activeTab === "all" || activeTab === "web") && (
+                    {(activeTab === "All" || activeTab === "Web Development") && (
                       <SwiperSlide>
 
                         <a
@@ -1180,7 +1180,7 @@ const formatNumber = (num: number, suffix: string) => {
                     )}
 
                     {/* ================= PAKHTOONS ================= */}
-                    {(activeTab === "all" || activeTab === "seo") && (
+                    {(activeTab === "All" || activeTab === "SEO") && (
                       <SwiperSlide>
 
                         <a
@@ -1224,7 +1224,7 @@ const formatNumber = (num: number, suffix: string) => {
                     )}
 
                     {/* ================= VAYORAA ================= */}
-                    {(activeTab === "all" || activeTab === "web") && (
+                    {(activeTab === "All" || activeTab === "Web Design") && (
                       <SwiperSlide>
 
                         <a
@@ -1268,7 +1268,7 @@ const formatNumber = (num: number, suffix: string) => {
                     )}
 
                     {/* ================= VAYORAA ================= */}
-                    {(activeTab === "all" || activeTab === "web") && (
+                    {(activeTab === "All" || activeTab === "Web development") && (
                       <SwiperSlide>
 
                         <a
