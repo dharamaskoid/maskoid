@@ -211,23 +211,53 @@ export default function ContactPage() {
                 {[
                   {
                     icon: Phone,
-                    title: "Phone",
-                    text: "+91 78747 14688",
+                    title: "Speak With Our Team",
+                    links: [
+                      {
+                        label: "+91 757 408 4008",
+                        href: "tel:+917574084008",
+                      },
+                      {
+                        label: "+91 989 829 2466",
+                        href: "tel:+919898292466",
+                      },
+                    ],
                   },
+
                   {
                     icon: Mail,
-                    title: "Email",
-                    text: "hello@maskoid.com",
+                    title: "Connect By Email",
+                    links: [
+                      {
+                        label: "contact@maskoid.com",
+                        href: "mailto:contact@maskoid.com",
+                      },
+                      {
+                        label: "hr@maskoid.com",
+                        href: "mailto:hr@maskoid.com",
+                      },
+                    ],
                   },
+
                   {
                     icon: MapPin,
-                    title: "Office",
-                    text: "123 Digital Street, Mumbai, India",
+                    title: "Our Headquarters",
+                    links: [
+                      {
+                        label: "1008, One Indiabulls Park, Jetalpur Rd, Vadodara, Gujarat 390020, India",
+                        href: "https://maps.app.goo.gl/uVC6SBroFSnLynf77",
+                      },
+                    ],
                   },
+
                   {
                     icon: Headphones,
-                    title: "Support",
-                    text: "Mon - Fri, 10:00 AM - 7:00 PM",
+                    title: "Client Success Desk",
+                    links: [
+                      {
+                        label: "Monday – Saturday | 10 AM – 7 PM",
+                      },
+                    ],
                   },
                 ].map((item, index) => (
                   <motion.div
