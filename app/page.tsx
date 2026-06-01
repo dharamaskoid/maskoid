@@ -50,7 +50,7 @@ const stagger = {
 
 
 export default function Home() {
-const [activeTab, setActiveTab] = useState("all");
+const [activeTab, setActiveTab] = useState("All");
 
 
 
