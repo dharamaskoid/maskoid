@@ -1071,7 +1071,7 @@ const formatNumber = (num: number, suffix: string) => {
                 className="flex justify-center gap-4 mb-12 flex-wrap"
               >
 
-                {["all", "web", "seo"].map((tab) => (
+                {["All", "Social Media Marketing", "SEO", "PPC", "Web Design", "Web Development"].map((tab) => (
 
                   <button
                     key={tab}
