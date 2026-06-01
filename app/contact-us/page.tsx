@@ -197,7 +197,6 @@ export default function ContactPage() {
               whileInView="show"
               viewport={{ once: true }}
             >
-
               <p className="inline-flex px-5 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-[#3B82F6] text-xs font-semibold uppercase">
                 Contact Information
               </p>
@@ -207,7 +206,6 @@ export default function ContactPage() {
               </h2>
 
               <div className="mt-10 space-y-5">
-
                 {[
                   {
                     icon: Phone,
@@ -244,7 +242,8 @@ export default function ContactPage() {
                     title: "Our Headquarters",
                     links: [
                       {
-                        label: "1008, One Indiabulls Park, Jetalpur Rd, Vadodara, Gujarat 390020, India",
+                        label:
+                          "1008, One Indiabulls Park, Jetalpur Rd, Vadodara, Gujarat 390020, India",
                         href: "https://maps.app.goo.gl/uVC6SBroFSnLynf77",
                       },
                     ],
@@ -265,30 +264,47 @@ export default function ContactPage() {
                     whileHover={{ y: -5 }}
                     className="bg-white rounded-2xl p-6 border border-[#dbe7ff] shadow-[0_10px_40px_rgba(59,89,152,0.06)]"
                   >
-
                     <div className="flex items-start gap-5">
-
-                      <div className="w-14 h-14 rounded-xl bg-[#2b4c9a] flex items-center justify-center text-white shadow-lg">
+                      <div className="w-14 h-14 rounded-xl bg-[#2b4c9a] flex items-center justify-center text-white shadow-lg flex-shrink-0">
                         <item.icon size={24} />
                       </div>
 
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-xl font-bold text-[#102347]">
                           {item.title}
                         </h3>
 
-                        <p className="mt-2 text-[#5B6475] leading-relaxed">
-                          {item.text}
-                        </p>
+                        <div className="mt-3 space-y-2">
+                          {item.links.map((link, i) =>
+                            "href" in link ?  (
+                              <a
+                                key={i}
+                                href={link.href}
+                                target={
+                                  link.href.startsWith("http")
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel="noopener noreferrer"
+                                className="block text-[#5B6475] hover:text-[#2b4c9a] transition-colors duration-300 leading-relaxed"
+                              >
+                                {link.label}
+                              </a>
+                            ) : (
+                              <p
+                                key={i}
+                                className="text-[#5B6475] leading-relaxed"
+                              >
+                                {link.label}
+                              </p>
+                            )
+                          )}
+                        </div>
                       </div>
-
                     </div>
-
                   </motion.div>
                 ))}
-
               </div>
-
             </motion.div>
 
           </div>
