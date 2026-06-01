@@ -26,7 +26,7 @@ export default function ContactPage() {
  const fadeLeft: Variants = {
   hidden: {
     opacity: 0,
-    x: -80,
+    x: -180,
   },
   show: {
     opacity: 1,
