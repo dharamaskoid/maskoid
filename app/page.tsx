@@ -173,29 +173,39 @@ const formatNumber = (num: number, suffix: string) => {
   }, []);
 
   // ================= SMOOTH COUNT =================
-  useEffect(() => {
-    if (!startCount) return;
+ useEffect(() => {
+  if (!startCount) return;
 
-    const duration = 1500;
-    const startTime = Date.now();
+  const duration = 2500;
+  let animationFrame: number;
+  let startTime: number | null = null;
 
-    const animate = () => {
-      const progress = Math.min((Date.now() - startTime) / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
+  const animate = (timestamp: number) => {
+    if (!startTime) startTime = timestamp;
 
-      setCounts(
-        counterData.map((item) =>
-          Math.floor(item.value * ease)
-        )
-      );
+    const progress = Math.min(
+      (timestamp - startTime) / duration,
+      1
+    );
 
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
+    // Premium smooth ease-out
+    const ease = 1 - Math.pow(1 - progress, 4);
 
-    animate();
-  }, [startCount]);
+    setCounts(
+      counterData.map((item) =>
+        Math.floor(item.value * ease)
+      )
+    );
+
+    if (progress < 1) {
+      animationFrame = requestAnimationFrame(animate);
+    }
+  };
+
+  animationFrame = requestAnimationFrame(animate);
+
+  return () => cancelAnimationFrame(animationFrame);
+}, [startCount]);
 
 
 
@@ -1001,13 +1011,13 @@ const formatNumber = (num: number, suffix: string) => {
                             className="flex items-end gap-1 leading-none"
                           >
 
-                            <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a] tracking-tight">
-                              {formatNumber(counts[i], item.suffix)}
-                            </span>
+                          <span className="text-3xl md:text-4xl font-bold text-[#2b4c9a] tracking-tight">
+                            {counts[i].toLocaleString()}
+                          </span>
 
-                            <span className="text-2xl font-bold text-[#2b4c9a]">
-                              {item.suffix}
-                            </span>
+                          <span className="text-2xl font-bold text-[#2b4c9a]">
+                            {item.suffix}
+                          </span>
 
                           </motion.div>
 
