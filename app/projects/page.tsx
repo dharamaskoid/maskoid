@@ -35,7 +35,7 @@ const projects = [
 
   {
     title: "Pakhtoons",
-    category: "SEO",
+    category: ["Web Development", "SEO", "PPC"],
     url: "https://pakhtoons.development-site.maskoid.net/",
     description: "SEO optimized business website with performance focus.",
     images: {
@@ -48,6 +48,17 @@ const projects = [
   {
     title: "Vayoraa",
     category: "Web Design",
+    url: "https://vayoraa.in/",
+    description: "Conversion-focused modern website with branding & SEO.",
+    images: {
+      left: "/images/Vayoraa-about.png",
+      center: "/images/Vayoraa-home.png",
+      right: "/images/Vayoraa-contact.png",
+    },
+  },
+  {
+    title: "Vayoraa",
+    category: "PPC",
     url: "https://vayoraa.in/",
     description: "Conversion-focused modern website with branding & SEO.",
     images: {
