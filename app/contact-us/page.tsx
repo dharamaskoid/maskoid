@@ -346,22 +346,15 @@ const fadeRight: Variants = {
 
       <section className="pb-20 px-6 md:px-10 lg:px-16">
 
-        <div className="container mx-auto bg-[#1a2e5e] rounded-2xl border border-[#dbe7ff] p-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="container mx-auto bg-[#1a2e5e] rounded-2xl border border-[#dbe7ff] p-10"
+        >
 
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.15,
-                },
-              },
-            }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-10"
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
             {[
               {
@@ -410,9 +403,9 @@ const fadeRight: Variants = {
               </motion.div>
             ))}
 
-          </motion.div>
+          </div>
 
-        </div>
+        </motion.div>
       </section>
 
         {/* MAP SECTION */}
