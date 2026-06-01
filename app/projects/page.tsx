@@ -23,7 +23,7 @@ const fadeUp = {
 const projects = [
   {
     title: "Cater Spoon Mumbai",
-    category: "web",
+    category: "Web Development",
     url: "https://caterspoonmumbai.com/",
     description: "Luxury catering website with premium UI & SEO system.",
     images: {
@@ -35,7 +35,7 @@ const projects = [
 
   {
     title: "Pakhtoons",
-    category: "seo",
+    category: "SEO",
     url: "https://pakhtoons.development-site.maskoid.net/",
     description: "SEO optimized business website with performance focus.",
     images: {
@@ -47,7 +47,7 @@ const projects = [
 
   {
     title: "Vayoraa",
-    category: "web",
+    category: "Web Design",
     url: "https://vayoraa.in/",
     description: "Conversion-focused modern website with branding & SEO.",
     images: {
@@ -190,7 +190,7 @@ const [activeTab, setActiveTab] = useState("All");
                   {projects
                     .filter(
                       (project) =>
-                        activeTab === "all" ||
+                        activeTab === "All" ||
                         project.category === activeTab
                     )
                     .map((project, index) => (
