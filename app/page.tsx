@@ -198,6 +198,44 @@ const formatNumber = (num: number, suffix: string) => {
   }, [startCount]);
 
 
+  /* Case study section*/
+  const tabs = [
+    "All",
+    "Websites",
+    "SEO",
+    "Paid Ads",
+    "Social Media",
+  ];
+
+  const projects = [
+    {
+      title: "Cater Spoon Mumbai",
+      category: "Websites",
+      url: "https://caterspoonmumbai.com/",
+      description: "Luxury catering website with premium UI & SEO system.",
+      left: "/images/caterspoon-about.png",
+      center: "/images/caterspoon-home.png",
+      right: "/images/caterspoon-contact.png",
+    },
+    {
+      title: "Pakhtoons",
+      category: "SEO",
+      url: "https://pakhtoons.development-site.maskoid.net/",
+      description: "SEO optimized business website with performance focus.",
+      left: "/images/pakhtoons-about.png",
+      center: "/images/pakhtoons-home.png",
+      right: "/images/pakhtoons-contact.png",
+    },
+    {
+      title: "Vayoraa",
+      category: "Websites",
+      url: "https://vayoraa.in/",
+      description: "Conversion-focused modern website with branding & SEO.",
+      left: "/images/Vayoraa-about.png",
+      center: "/images/Vayoraa-home.png",
+      right: "/images/Vayoraa-contact.png",
+    },
+  ];
 
 
   return (
@@ -1062,7 +1100,6 @@ const formatNumber = (num: number, suffix: string) => {
 
               </motion.div>
 
-              {/* 🔥 TABS */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1070,9 +1107,7 @@ const formatNumber = (num: number, suffix: string) => {
                 viewport={{ once: true }}
                 className="flex justify-center gap-4 mb-12 flex-wrap"
               >
-
-                {["All", "Social Media Marketing", "SEO", "PPC", "Web Design", "Web Development"].map((tab) => (
-
+                {tabs.map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
@@ -1082,238 +1117,58 @@ const formatNumber = (num: number, suffix: string) => {
                         : "bg-white text-[#5b6475] border-[#dbe4ff] hover:bg-[#2b4c9a] hover:text-white"
                     }`}
                   >
-
                     {tab.toUpperCase()}
-
                   </button>
-
                 ))}
-
               </motion.div>
 
 
-                {/* SLIDER WRAPPER */}
-                <div className="relative">
+              {projects
+                .filter(
+                  (project) =>
+                    activeTab === "All" ||
+                    project.category === activeTab
+                )
+                .map((project, index) => (
+                  <SwiperSlide key={index}>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
+                    >
+                      <div className="relative h-[320px] flex items-center justify-center">
+                        <img
+                          src={project.left}
+                          alt=""
+                          className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
+                        />
 
-                  {/* CUSTOM NAVIGATION */}
-                  <div className="absolute inset-y-0 -left-6 -right-6 flex items-center justify-between z-30 pointer-events-none">
+                        <img
+                          src={project.center}
+                          alt=""
+                          className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
+                        />
 
-                    <button className="projects-prev pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
+                        <img
+                          src={project.right}
+                          alt=""
+                          className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
+                        />
+                      </div>
 
-                      <ChevronLeft size={20} />
+                      <div className="p-6 text-center">
+                        <h3 className="text-xl text-[#1a2e5e] font-semibold">
+                          {project.title}
+                        </h3>
 
-                    </button>
-
-                    <button className="projects-next pointer-events-auto w-12 h-12 rounded-full bg-white shadow-xl border border-[#e8ecf5] hover:bg-[#2b4c9a] hover:text-white transition-all duration-300 flex items-center justify-center text-[#2b4c9a]">
-
-                      <ChevronRight size={20} />
-
-                    </button>
-
-                  </div>
-
-                  <Swiper
-                    modules={[Navigation, Autoplay]}
-                    spaceBetween={30}
-                    slidesPerView={1}
-                    autoplay={{
-                      delay: 3000,
-                      disableOnInteraction: false,
-                    }}
-                    navigation={{
-                      prevEl: ".projects-prev",
-                      nextEl: ".projects-next",
-                    }}
-                    breakpoints={{
-                      768: {
-                        slidesPerView: 2,
-                      },
-                      1024: {
-                        slidesPerView: 3,
-                      },
-                    }}
-                    className="projects-slider"
-                  >
-
-                    {/* ================= CATER SPOON ================= */}
-                    {(activeTab === "All" || activeTab === "Web Development") && (
-                      <SwiperSlide>
-
-                        <a
-                          href="https://caterspoonmumbai.com/"
-                          rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                        >
-
-                          <div className="relative h-[320px] flex items-center justify-center">
-
-                            <img
-                              src="/images/caterspoon-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                            />
-
-                            <img
-                              src="/images/caterspoon-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                            />
-
-                            <img
-                              src="/images/caterspoon-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                            />
-
-                          </div>
-
-                          <div className="p-6 text-center">
-                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
-                              Cater Spoon Mumbai
-                            </h3>
-
-                            <p className="text-[#5b6475] text-sm mt-2">
-                              Luxury catering website with premium UI & SEO system.
-                            </p>
-                          </div>
-
-                        </a>
-
-                      </SwiperSlide>
-                    )}
-
-                    {/* ================= PAKHTOONS ================= */}
-                    {(activeTab === "All" || activeTab === "SEO") && (
-                      <SwiperSlide>
-
-                        <a
-                          href="https://pakhtoons.development-site.maskoid.net/"
-                          rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                        >
-
-                          <div className="relative h-[320px] flex items-center justify-center">
-
-                            <img
-                              src="/images/pakhtoons-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                            />
-
-                            <img
-                              src="/images/pakhtoons-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                            />
-
-                            <img
-                              src="/images/pakhtoons-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                            />
-
-                          </div>
-
-                          <div className="p-6 text-center">
-                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
-                              Pakhtoons
-                            </h3>
-
-                            <p className="text-[#5b6475] text-sm mt-2">
-                              SEO optimized business website with performance focus.
-                            </p>
-                          </div>
-
-                        </a>
-
-                      </SwiperSlide>
-                    )}
-
-                    {/* ================= VAYORAA ================= */}
-                    {(activeTab === "All" || activeTab === "Web Design") && (
-                      <SwiperSlide>
-
-                        <a
-                          href="https://vayoraa.in/"
-                          rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                        >
-
-                          <div className="relative h-[320px] flex items-center justify-center">
-
-                            <img
-                              src="/images/Vayoraa-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                            />
-
-                            <img
-                              src="/images/Vayoraa-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                            />
-
-                            <img
-                              src="/images/Vayoraa-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                            />
-
-                          </div>
-
-                          <div className="p-6 text-center">
-                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
-                              Vayoraa
-                            </h3>
-
-                            <p className="text-[#5b6475] text-sm mt-2">
-                              Conversion-focused modern website with branding & SEO.
-                            </p>
-                          </div>
-
-                        </a>
-
-                      </SwiperSlide>
-                    )}
-
-                    {/* ================= VAYORAA ================= */}
-                    {(activeTab === "All" || activeTab === "Web Development") && (
-                      <SwiperSlide>
-
-                        <a
-                          href="https://vayoraa.in/"
-                          rel="noopener noreferrer"
-                          className="group relative rounded-2xl overflow-hidden hover:scale-[1.02] transition block"
-                        >
-
-                          <div className="relative h-[320px] flex items-center justify-center">
-
-                            <img
-                              src="/images/Vayoraa-about.png"
-                              className="absolute left-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[-5deg]"
-                            />
-
-                            <img
-                              src="/images/Vayoraa-home.png"
-                              className="relative z-20 w-52 h-[230px] object-cover object-top rounded-xl shadow-2xl border border-white/10 transition-all duration-500 group-hover:scale-105"
-                            />
-
-                            <img
-                              src="/images/Vayoraa-contact.png"
-                              className="absolute right-10 w-40 h-[200px] object-cover object-top rounded-xl shadow-2xl border border-white/10 opacity-80 z-0 transition-all duration-500 group-hover:translate-y-4 group-hover:rotate-[5deg]"
-                            />
-
-                          </div>
-
-                          <div className="p-6 text-center">
-                            <h3 className="text-xl text-[#1a2e5e] font-semibold">
-                              Vayoraa
-                            </h3>
-
-                            <p className="text-[#5b6475] text-sm mt-2">
-                              Conversion-focused modern website with branding & SEO.
-                            </p>
-                          </div>
-
-                        </a>
-
-                      </SwiperSlide>
-                    )}
-
-                  </Swiper>
-
-                </div>
+                        <p className="text-[#5b6475] text-sm mt-2">
+                          {project.description}
+                        </p>
+                      </div>
+                    </a>
+                  </SwiperSlide>
+              ))}
               </div>
               
               {/* BOTTOM BUTTON */}
