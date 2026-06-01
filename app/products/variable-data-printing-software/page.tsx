@@ -138,11 +138,6 @@ export default function VariableDataPrintingSoftwarePage() {
                 }}
                 className="relative flex items-center justify-center"
               >
-
-
-                {/* Rings */}
-                <div className="absolute w-[280px] h-[280px] border border-white/10 rounded-full" />
-                <div className="absolute w-[320px] h-[320px] border border-white/10 rounded-full" />
                 
 
                 {/* Printer Image */}
