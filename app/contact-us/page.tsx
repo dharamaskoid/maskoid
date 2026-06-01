@@ -346,61 +346,74 @@ const fadeRight: Variants = {
 
       <section className="pb-20 px-6 md:px-10 lg:px-16">
 
-      <div className="container mx-auto bg-[#1a2e5e] rounded-2xl border border-[#dbe7ff] p-10">
+        <div className="container mx-auto bg-[#1a2e5e] rounded-2xl border border-[#dbe7ff] p-10">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-10"
+          >
 
-          {[
-            {
-              icon: <Clock3 size={30} />,
-              title: "Quick Response",
-              text: "We respond within 24 hours guaranteed.",
-            },
-            {
-              icon: <Users size={30} />,
-              title: "Expert Team",
-              text: "Our experts are ready to help you grow.",
-            },
-            {
-              icon: <ShieldCheck size={30} />,
-              title: "Secure & Trusted",
-              text: "Your data is 100% safe and confidential.",
-            },
-            {
-              icon: <Target size={30} />,
-              title: "Results Driven",
-              text: "We focus on strategies that deliver results.",
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
-              className="text-center"
-            >
+            {[
+              {
+                icon: <Clock3 size={30} />,
+                title: "Quick Response",
+                text: "We respond within 24 hours guaranteed.",
+              },
+              {
+                icon: <Users size={30} />,
+                title: "Expert Team",
+                text: "Our experts are ready to help you grow.",
+              },
+              {
+                icon: <ShieldCheck size={30} />,
+                title: "Secure & Trusted",
+                text: "Your data is 100% safe and confidential.",
+              },
+              {
+                icon: <Target size={30} />,
+                title: "Results Driven",
+                text: "We focus on strategies that deliver results.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="text-center"
+              >
 
-              {/* ICON */}
-              <div className="w-16 h-16 rounded-xl mx-auto bg-white flex items-center justify-center text-[#1a2e5e] shadow-lg">
-                {item.icon}
-              </div>
+                {/* ICON */}
+                <div className="w-16 h-16 rounded-xl mx-auto bg-white flex items-center justify-center text-[#1a2e5e] shadow-lg">
+                  {item.icon}
+                </div>
 
-              {/* TITLE */}
-              <h3 className="mt-5 text-xl font-bold text-[#FFFFFF]">
-                {item.title}
-              </h3>
+                {/* TITLE */}
+                <h3 className="mt-5 text-xl font-bold text-[#FFFFFF]">
+                  {item.title}
+                </h3>
 
-              {/* TEXT */}
-              <p className="mt-3 text-gray-300 leading-relaxed">
-                {item.text}
-              </p>
+                {/* TEXT */}
+                <p className="mt-3 text-gray-300 leading-relaxed">
+                  {item.text}
+                </p>
 
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+
+          </motion.div>
 
         </div>
-
-      </div>
-    </section>
+      </section>
 
         {/* MAP SECTION */}
        {/* <section className="bg-[#EEF4FF] py-10">
