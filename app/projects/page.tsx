@@ -202,7 +202,7 @@ const [activeTab, setActiveTab] = useState("All");
                     .filter(
                       (project) =>
                         activeTab === "All" ||
-                        project.category === activeTab
+                        project.category.includes(activeTab)
                     )
                     .map((project, index) => (
                       <a
