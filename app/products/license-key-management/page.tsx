@@ -110,12 +110,7 @@ export default function LicenseKeyManagementPage() {
     offset: ["start end", "end start"]
   });
 
-  // Controls the drawing path animation of the connecting track dynamically
-  const pathLength = useTransform(scrollYProgress, [0.1, 0.8], [0, 1]);
 
-  // Splits the data array into layout tiers
-  const tierOne = steps.slice(0, 5);
-  const tierTwo = steps.slice(5, 10).reverse(); // Reverses visually to close the loop naturally
 
 
   return (
@@ -383,13 +378,6 @@ export default function LicenseKeyManagementPage() {
         <div className="container px-6 mx-auto">
 
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
-            whileHover={{
-              y: -5,
-            }}
             className="
               relative
               bg-[#1a2e5e]
