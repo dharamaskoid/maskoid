@@ -461,7 +461,7 @@ const fadeRight: Variants = {
                   >
 
                   {/* TAG */}
-                  <p className="inline-flex px-4 py-1.5 rounded-full bg-blue-500/10 text-[#2563EB] text-xs font-semibold uppercase tracking-[0.2em]">
+                  <p className="inline-flex px-4 py-1.5 rounded-full bg-blue-500/10 text-[#2563EB] text-xs font-semibold uppercase">
                       Our Location
                   </p>
 
