@@ -126,27 +126,7 @@ export default function VariableDataPrintingSoftwarePage() {
               {/* Glow Background */}
               <div className="absolute w-[320px] h-[320px] bg-[#2b4c9a]/20 blur-[120px] rounded-full" />
 
-              {/* Floating Dots */}
-              {[
-                { w: 8, h: 8, t: "12%", l: "5%" },
-                { w: 6, h: 6, t: "40%", l: "2%" },
-                { w: 10, h: 10, b: "18%", l: "6%" },
-                { w: 8, h: 8, t: "8%", r: "4%" },
-                { w: 10, h: 10, b: "25%", r: "3%" },
-              ].map((d, i) => (
-                <div
-                  key={i}
-                  className="absolute rounded-full bg-white/40"
-                  style={{
-                    width: d.w,
-                    height: d.h,
-                    top: d.t,
-                    left: d.l,
-                    right: d.r,
-                    bottom: d.b,
-                  }}
-                />
-              ))}
+
 
               {/* Main Circle Wrapper */}
               <motion.div
