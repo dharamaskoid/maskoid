@@ -1268,7 +1268,7 @@ const formatNumber = (num: number, suffix: string) => {
                     )}
 
                     {/* ================= VAYORAA ================= */}
-                    {(activeTab === "All" || activeTab === "Web development") && (
+                    {(activeTab === "All" || activeTab === "Web Development") && (
                       <SwiperSlide>
 
                         <a
