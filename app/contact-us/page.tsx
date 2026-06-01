@@ -132,7 +132,7 @@ export default function ContactPage() {
                 Send Us A Message
               </p>
 
-              <h2 className="mt-6 text-4xl font-bold text-[#102347]">
+              <h2 className="mt-6 text-4xl font-bold text-[#1a2e5e]">
                 We’d Love To Hear From You
               </h2>
 
@@ -201,8 +201,9 @@ export default function ContactPage() {
                 Contact Information
               </p>
 
-              <h2 className="mt-6 text-4xl font-bold text-[#102347]">
-                Get In <span className="text-[#2b4c9a]">Touch</span>
+              <h2 className="mt-6 text-4xl font-bold text-[#1a2e5e]">
+                Get In 
+                <span className="text-[#2b4c9a]">Touch</span>
               </h2>
 
               <div className="mt-16 grid lg:grid-cols-2 gap-10">
@@ -270,7 +271,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-[#102347]">
+                        <h3 className="text-xl font-bold text-[#1a2e5e]">
                           {item.title}
                         </h3>
 
