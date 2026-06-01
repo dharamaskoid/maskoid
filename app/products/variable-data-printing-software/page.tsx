@@ -150,7 +150,7 @@ export default function VariableDataPrintingSoftwarePage() {
                   whileHover={{ scale: 1.05 }}
                   src="/images/variable.png"
                   alt="Variable Data Printing Software"
-                  className="relative z-20 w-[320px] lg:w-[380px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
+                  className="relative z-20 h-[320px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
                 />
 
               </motion.div>
